@@ -227,7 +227,6 @@
 								    </font>
 								</form>
 								 
-								
 			    				<%--
 				    			<a onClick="setBlockUI(this);" tabindex=-1 href="logout.do?user=${user.user}&password=${user.encryptedPassword}&aes=1">
 				    				<font class="headerMenuGreen"><img src="resources/images/home.gif" border="0">&nbsp;
