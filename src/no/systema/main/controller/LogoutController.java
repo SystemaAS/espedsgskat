@@ -33,7 +33,7 @@ public class LogoutController {
             logger.info("Session invalidated..." + Calendar.getInstance().getTime());       
         }
 		try{
-			//issue a redirect for a fresh start
+			//issue a redirect for a fresh start. POST (and not GET) should be the final version of a sendRedirect (Maybe via RedirectView)
 			response.sendRedirect("/espedsg2/logonDashboard.do?ru=" + URLEncoder.encode(user,"UTF-8") + "&dp=" + URLEncoder.encode(pwd,"UTF-8") + "&aes=" + aes);
 		}catch (Exception e){
 			e.printStackTrace();
