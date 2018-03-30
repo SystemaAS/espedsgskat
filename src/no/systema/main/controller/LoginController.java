@@ -23,10 +23,19 @@ public class LoginController {
 	
 	private ModelAndView loginView = new ModelAndView("login");
 
-	//The [*.do] suffix is just an arbitrary suffix that could be something else. 
-	//If you change it here then it MUST be the same that is used
-	//in the JSP or other view (href or other redirect) that is calling this Controller
-	@RequestMapping("login.do")
+	/**
+	 * This RequestMapping was originally called login.do but there will
+	 * be no need to use this method in case of the absence of the appUser in the sub-module's session.
+	 * 
+	 * The absence of the user in session will cause a default to a login.do not existent giving an error to he end-user. 
+	 * We will handle this later on ... Right now it is imortant to disconnect this RequestMapping since no sub-modules should default to the 
+	 * login form. Only the espedsg2 (dashboard servlet)
+	 * 
+	 * 
+	 * @param model
+	 * @return
+	 */
+	@RequestMapping("loginOBSOLETE.do")
 	public ModelAndView login(Model model){
 		logger.info("Before login controller execution");
 		
