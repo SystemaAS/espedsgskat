@@ -8,7 +8,6 @@ package no.systema.main.util.io;
 import java.io.*;
 import java.util.*;
 
-import no.systema.main.controller.DashboardController;
 
 import org.apache.log4j.Logger;
 /**
