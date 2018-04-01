@@ -43,7 +43,7 @@ public class GeneralTextRenderController {
 	private final String RELATIVE_LOGFILE_PATH = "logs/" + ApplicationPropertiesUtil.getProperty("log4j.logger.file");   //OBSOLETE: resources.getString("log4j.logger.file");
 	private final String SERVLET_CONTEXT_WEBAPPS_ROOT = "webapps";
 	
-	private ModelAndView loginView = new ModelAndView("login");
+	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	private ApplicationContext context;
 	
 	

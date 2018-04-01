@@ -75,7 +75,7 @@ import no.systema.skat.util.SkatConstants;
 public class SkatImportController {
 	private static final JsonDebugger jsonDebugger = new JsonDebugger(800);
 	private static final Logger logger = Logger.getLogger(SkatImportController.class.getName());
-	private ModelAndView loginView = new ModelAndView("login");
+	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	private ApplicationContext context;
 	private LoginValidator loginValidator = new LoginValidator();
 	

@@ -59,7 +59,7 @@ public class GeneralNotisblockController {
 	private final StringManager strMgr = new StringManager();
 	private final DateTimeManager dateMgr = new DateTimeManager();
 		
-	private ModelAndView loginView = new ModelAndView("login");
+	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	private final String ACTION_DO_DELETE = "doDelete";
 	private final String ACTION_DO_UPDATE = "doUpdate";
 	private final String MODE_UPDATE = "U";

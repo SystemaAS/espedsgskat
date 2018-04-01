@@ -65,7 +65,7 @@ import no.systema.skat.util.manager.TaricDirectAccessorMgr;
 public class SkatAdminNorskExportController {
 	
 	private static final Logger logger = Logger.getLogger(SkatAdminNorskExportController.class.getName());
-	private ModelAndView loginView = new ModelAndView("login");
+	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	private ApplicationContext context;
 	private LoginValidator loginValidator = new LoginValidator();
 	private TaricDirectAccessorMgr taricDirectAccessorMgr = new TaricDirectAccessorMgr();

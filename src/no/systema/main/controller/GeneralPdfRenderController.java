@@ -47,7 +47,7 @@ public class GeneralPdfRenderController {
 	private PayloadContentFlusher payloadContentFlusher = new PayloadContentFlusher();
 	private final String FILE_RESOURCE_PATH = AppConstants.RESOURCE_FILES_PATH;
 	
-	private ModelAndView loginView = new ModelAndView("login");
+	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	private ApplicationContext context;
 	
 	

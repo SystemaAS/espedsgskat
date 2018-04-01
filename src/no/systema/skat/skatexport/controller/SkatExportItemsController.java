@@ -87,7 +87,7 @@ public class SkatExportItemsController {
 	private SkatExportCalculator skatExportCalculator = new SkatExportCalculator();
 	private SkatExportTweaker skatExportTweaker = new SkatExportTweaker();
 	
-	private ModelAndView loginView = new ModelAndView("login");
+	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	private final String NOT_FOUND = "NOT FOUND";
 	private final String MATCH = "MATCH";
 	

@@ -81,7 +81,7 @@ public class SkatExportHeaderController {
 	NumberFormatterLocaleAware numFormatter = new NumberFormatterLocaleAware();
 	StringManager strMgr = new StringManager();
 	
-	private ModelAndView loginView = new ModelAndView("login");
+	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	private ApplicationContext context;
 	
 	@InitBinder

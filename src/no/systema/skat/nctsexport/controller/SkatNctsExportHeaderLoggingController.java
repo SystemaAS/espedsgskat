@@ -57,7 +57,7 @@ public class SkatNctsExportHeaderLoggingController {
 	private static final Logger logger = Logger.getLogger(SkatNctsExportHeaderLoggingController.class.getName());
 	private PayloadContentFlusher payloadContentFlusher = new PayloadContentFlusher();
 	private StackTraceUtil stackTraceUtil = new StackTraceUtil();
-	private ModelAndView loginView = new ModelAndView("login");
+	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	private ApplicationContext context;
 	
 	@InitBinder

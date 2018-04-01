@@ -86,7 +86,7 @@ public class SkatImportItemsController {
 	private SkatImportCalculator skatImportCalculator = new SkatImportCalculator();
 	private SkatImportTweaker skatImportTweaker = new SkatImportTweaker();
 	private SkatAutoCopyItemLinesMgr skatAutoCopyMgr = null;
-	private ModelAndView loginView = new ModelAndView("login");
+	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	private final String NOT_FOUND = "NOT FOUND";
 	private final String MATCH = "MATCH";
 	

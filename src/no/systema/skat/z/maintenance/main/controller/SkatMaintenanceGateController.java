@@ -36,7 +36,7 @@ import no.systema.main.util.AppConstants;
 @Controller
 public class SkatMaintenanceGateController {
 	private static final Logger logger = Logger.getLogger(SkatMaintenanceGateController.class.getName());
-	private ModelAndView loginView = new ModelAndView("login");
+	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	
 	/**
 	 * 

@@ -40,7 +40,7 @@ import no.systema.main.model.SystemaWebUser;
 public class GeneralFileUploadController {
 	
 	private static final Logger logger = Logger.getLogger(GeneralFileUploadController.class.getName());
-	private ModelAndView loginView = new ModelAndView("login");
+	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	private ApplicationContext context;
 	private LoginValidator loginValidator = new LoginValidator();
 	

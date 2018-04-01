@@ -57,7 +57,7 @@ public class GeneralEdiFtpLogController {
 	private static final JsonDebugger jsonDebugger = new JsonDebugger();
 	
 	private UrlRequestParameterMapper urlRequestParameterMapper = new UrlRequestParameterMapper();
-	private ModelAndView loginView = new ModelAndView("login");
+	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	
 
 	@InitBinder

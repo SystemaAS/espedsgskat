@@ -75,7 +75,7 @@ public class SkatNctsImportHeaderControllerChildWindow {
 	private final String GENERAL_CODE_107_CURRENCY = "107";
 	
 	
-	private ModelAndView loginView = new ModelAndView("login");
+	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	private ApplicationContext context;
 	private LoginValidator loginValidator = new LoginValidator();
 	//private CodeDropDownMgr codeDropDownMgr = new CodeDropDownMgr();

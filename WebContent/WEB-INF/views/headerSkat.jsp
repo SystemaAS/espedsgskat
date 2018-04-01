@@ -215,7 +215,7 @@
 						          		
 			    				<font class="text11User" >${user.user}&nbsp;</font>${user.usrLang}</font>
 			    				<font color="#FFFFFF"; style="font-weight: bold;">&nbsp;|&nbsp;&nbsp;</font>
-			    				
+			    				<%--
 			    				<form style="display:inline" action="logout.do" method="post">
 								    <input type="hidden" name="user" value="${user.user}" />
 								    <input type="hidden" name="password" value="${user.encryptedPassword}" />
@@ -226,14 +226,14 @@
 								    	<button onClick="setBlockUI(this);" style="border:0; padding:0; background: none; display: inline; cursor: pointer;"><font class="text11User"><spring:message code="dashboard.menu.button"/>&nbsp;</font></button>
 								    </font>
 								</form>
-								 
-			    				<%--
-				    			<a onClick="setBlockUI(this);" tabindex=-1 href="logout.do?user=${user.user}&password=${user.encryptedPassword}&aes=1">
+								--%>
+			    				
+				    			<a onClick="setBlockUI(this);" tabindex=-1 href="logout.do">
 				    				<font class="headerMenuGreen"><img src="resources/images/home.gif" border="0">&nbsp;
 				    					<font class="text11User" ><spring:message code="dashboard.menu.button"/>&nbsp;</font>
 				    				</font>
 				    			</a>
-				    			 --%>
+				    			
 				    			 
 				    			<font color="#FFFFFF"; style="font-weight: bold;">&nbsp;&nbsp;|&nbsp;</font>
 				    			<font class="text12LightGreen" style="cursor:pointer;" onClick="showPop('versionInfo');">${user.versionSpring}&nbsp;</font>
@@ -276,6 +276,7 @@
 				    			</font>
 				    			<font color="#FFFFFF"; style="font-weight: bold;">&nbsp;|&nbsp;</font>
 				    			
+				    			<%-- 
 				    			<form style="display:inline" action="logout.do" method="post">
 								    <input type="hidden" name="user" value="${user.user}"  />
 								    <input type="hidden" name="password" value="${user.encryptedPassword}"  />
@@ -284,15 +285,14 @@
 								    	<button onClick="setBlockUI(this);" style="border:0; padding:0; background: none; display: inline; cursor: pointer;"><font style="color:#000000;" ><spring:message code="dashboard.menu.button"/>&nbsp;</font></button>
 								    </font>
 								</form>
-								 
+								--%> 
 								
-								<%-- 
-				    			<a onClick="setBlockUI(this);" tabindex=-1 href="logout.do?user=${user.user}&password=${user.encryptedPassword}&aes=1">
+				    			<a onClick="setBlockUI(this);" tabindex=-1 href="logout.do">
 				    				<font class="headerMenuGreen"><img src="resources/images/home.gif" border="0">&nbsp;
 				    					<font style="color:#000000;" ><spring:message code="dashboard.menu.button"/>&nbsp;</font>
 				    				</font>
 				    			</a>
-				    			--%>
+				    			
 				    			
 				    			<font color="#FFFFFF"; style="font-weight: bold;">&nbsp;&nbsp;|&nbsp;</font>
 				    			<font class="text12LightGreen" style="cursor:pointer;" onClick="showPop('versionInfo');">${user.versionSpring}&nbsp;</font>

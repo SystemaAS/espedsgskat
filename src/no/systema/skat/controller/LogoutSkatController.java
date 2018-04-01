@@ -22,6 +22,12 @@ import no.systema.skat.util.SkatConstants;
 @Controller
 @SessionAttributes(AppConstants.SYSTEMA_WEB_USER_KEY)
 @Scope("session")
+/**
+ * OBSOLETE after espedsg2-porting. All logout happens in LogoutController
+ * 
+ * @author oscardelatorre
+ *
+ */
 public class LogoutSkatController {
 	private static final Logger logger = Logger.getLogger(LogoutSkatController.class.getName());
 	private ModelAndView successView = new ModelAndView("dashboard");

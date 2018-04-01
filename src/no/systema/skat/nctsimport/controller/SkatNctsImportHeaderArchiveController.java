@@ -51,7 +51,7 @@ public class SkatNctsImportHeaderArchiveController {
 	private static final Logger logger = Logger.getLogger(SkatNctsImportHeaderArchiveController.class.getName());
 	private PayloadContentFlusher payloadContentFlusher = new PayloadContentFlusher();
 	
-	private ModelAndView loginView = new ModelAndView("login");
+	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	private ApplicationContext context;
 	
 	@InitBinder

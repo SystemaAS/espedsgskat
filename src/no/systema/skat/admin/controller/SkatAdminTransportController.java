@@ -64,7 +64,7 @@ import no.systema.skat.model.jsonjackson.avdsignature.JsonSkatSignatureRecord;
 public class SkatAdminTransportController {
 	
 	private static final Logger logger = Logger.getLogger(SkatAdminTransportController.class.getName());
-	private ModelAndView loginView = new ModelAndView("login");
+	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	private ApplicationContext context;
 	private LoginValidator loginValidator = new LoginValidator();
 	

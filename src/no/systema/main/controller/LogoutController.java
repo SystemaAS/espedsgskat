@@ -20,11 +20,19 @@ import no.systema.main.util.AppConstants;
 public class LogoutController {
 	private static final Logger logger = Logger.getLogger(LogoutController.class.getName());
 	
-	@RequestMapping(value="logout.do", method=RequestMethod.POST)
+	
+	/**
+	 * 
+	 * @param session
+	 * @param response
+	 * @param request
+	 */
+	@RequestMapping(value="logout.do", method={RequestMethod.POST, RequestMethod.GET} )
 	public void logout(HttpSession session, HttpServletResponse response, HttpServletRequest request){
-		String user = request.getParameter("user");
-		String pwd = request.getParameter("password");
-		String aes = request.getParameter("aes");
+		
+		//String user = request.getParameter("user");
+		//String pwd = request.getParameter("password");
+		//String aes = request.getParameter("aes");
 		
 		
 		if (session!=null){ 
@@ -34,7 +42,8 @@ public class LogoutController {
         }
 		try{
 			//issue a redirect for a fresh start. POST (and not GET) should be the final version of a sendRedirect (Maybe via RedirectView)
-			response.sendRedirect("/espedsg2/logonDashboard.do?ru=" + URLEncoder.encode(user,"UTF-8") + "&dp=" + URLEncoder.encode(pwd,"UTF-8") + "&aes=" + aes);
+			//response.sendRedirect("/espedsg2/logonDashboard.do?ru=" + URLEncoder.encode(user,"UTF-8") + "&dp=" + URLEncoder.encode(pwd,"UTF-8") + "&aes=" + aes);
+			response.sendRedirect("/espedsg2/dashboard.do");
 		}catch (Exception e){
 			e.printStackTrace();
 		}

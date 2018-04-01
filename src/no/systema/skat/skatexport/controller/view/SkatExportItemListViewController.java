@@ -39,7 +39,7 @@ import no.systema.skat.util.SkatConstants;
 @Controller
 public class SkatExportItemListViewController {
 	private static final Logger logger = Logger.getLogger(SkatExportItemListViewController.class.getName());
-	private ModelAndView loginView = new ModelAndView("login");
+	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	
 	/**
 	 * 

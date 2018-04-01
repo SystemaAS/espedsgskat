@@ -56,7 +56,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Scope("session")
 public class SkatAdminNorskImportController {
 	private static final Logger logger = Logger.getLogger(SkatAdminNorskImportController.class.getName());
-	private ModelAndView loginView = new ModelAndView("login");
+	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	private ApplicationContext context;
 	private LoginValidator loginValidator = new LoginValidator();
 	

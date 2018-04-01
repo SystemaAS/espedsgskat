@@ -49,7 +49,7 @@ import no.systema.skat.z.maintenance.skatncts.validator.MaintSkatMainDkx001rVali
 public class MaintSkatNctsImportKoderDkx001rController {
 	private static final JsonDebugger jsonDebugger = new JsonDebugger();
 	private static final Logger logger = Logger.getLogger(MaintSkatNctsImportKoderDkx001rController.class.getName());
-	private ModelAndView loginView = new ModelAndView("login");
+	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	private ApplicationContext context;
 	private LoginValidator loginValidator = new LoginValidator();
 	private UrlRequestParameterMapper urlRequestParameterMapper = new UrlRequestParameterMapper();

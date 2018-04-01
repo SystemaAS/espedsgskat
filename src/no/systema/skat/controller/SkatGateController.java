@@ -43,8 +43,7 @@ import no.systema.main.util.AppConstants;
 @Controller
 public class SkatGateController {
 	private static final Logger logger = Logger.getLogger(SkatGateController.class.getName());
-	private ModelAndView loginView = new ModelAndView("login");
-	
+	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	/**
 	 * 
 	 * @param user

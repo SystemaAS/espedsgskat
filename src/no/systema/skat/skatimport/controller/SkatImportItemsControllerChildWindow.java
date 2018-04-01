@@ -75,7 +75,7 @@ public class SkatImportItemsControllerChildWindow {
 	private final String GENERAL_CODE_008_COUNTRY = "008";
 	private final String GENERAL_CODE_020_CURRENCY = "020";
 	
-	private ModelAndView loginView = new ModelAndView("login");
+	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	private ApplicationContext context;
 	private LoginValidator loginValidator = new LoginValidator();
 	//private CodeDropDownMgr codeDropDownMgr = new CodeDropDownMgr();
