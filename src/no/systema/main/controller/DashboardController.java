@@ -166,7 +166,7 @@ public class DashboardController {
 				    			}else{
 				    				this.setDashboardMenuObjectsInSession(session, jsonSystemaUserContainer);
 				    				//hand-over to appUser from JsonUser
-				    				this.doHandOverToSystemaWebUser(request, appUser, jsonSystemaUserContainer, companyCode);
+				    				this.doHandOverToSystemaWebUser(request, null, appUser, jsonSystemaUserContainer, companyCode);
 				    			}
 				    		}
 				    	}else{
@@ -282,7 +282,7 @@ public class DashboardController {
 			    			}else{
 			    				this.setDashboardMenuObjectsInSession(session, jsonSystemaUserContainer);
 			    				//hand-over to appUser from JsonUser
-			    				this.doHandOverToSystemaWebUser(request, appUser, jsonSystemaUserContainer, null);
+			    				this.doHandOverToSystemaWebUser(request, appUserLocal, appUser, jsonSystemaUserContainer, null);
 			    			}
 			    		}
 			    	}else{
@@ -396,15 +396,14 @@ public class DashboardController {
 	 * @param companyCode
 	 * 
 	 */
-	private void doHandOverToSystemaWebUser(HttpServletRequest request, SystemaWebUser appUser, JsonSystemaUserContainer jsonSystemaUserContainer, String companyCode){
+	private void doHandOverToSystemaWebUser(HttpServletRequest request, SystemaWebUser appUserLocal, SystemaWebUser appUser, JsonSystemaUserContainer jsonSystemaUserContainer, String companyCode){
 		
 		//user values
 		appUser.setOs(System.getProperty("os.name").toLowerCase());
 		//logger.info("OS:" + appUser.getOs());
 		if(appUser.getPassword() == null){
-			String pwd = request.getParameter("dp");
-			if(pwd !=null ){
-				appUser.setPassword(pwd.toUpperCase());
+			if(appUserLocal!=null && appUserLocal.getPassword() !=null ){
+				appUser.setPassword(appUserLocal.getPassword());
 			}
 		}
 		appUser.setUser(jsonSystemaUserContainer.getUser().toUpperCase());
