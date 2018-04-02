@@ -117,7 +117,9 @@ public class DashboardController {
 		    	return loginView;
 	
 		    }else{
-		    	//decrypt password to be able to work with it
+		    	//Decrypt password to be able to work with it. 
+		    	//All sub-modules will be passed an encrypted password (from the dashboard). ALWAYS!
+		    	appUser.setEncryptedPassword(appUser.getPassword());
 		    	appUser.setPassword(this.aesManager.decrypt(appUser.getPassword()));
 		    	//logger.info("DECRYPT...:" + appUser.getPassword());
 		    	
@@ -166,7 +168,7 @@ public class DashboardController {
 				    			}else{
 				    				this.setDashboardMenuObjectsInSession(session, jsonSystemaUserContainer);
 				    				//hand-over to appUser from JsonUser
-				    				this.doHandOverToSystemaWebUser(request, null, appUser, jsonSystemaUserContainer, companyCode);
+				    				this.doHandOverToSystemaWebUser(request, appUser, jsonSystemaUserContainer, companyCode);
 				    			}
 				    		}
 				    	}else{
@@ -177,9 +179,9 @@ public class DashboardController {
 						
 	    					return loginView;
 				    	}
-				    	//Encrypt the password so late as possible
-				    	appUser.setEncryptedPassword(this.aesManager.encrypt(appUser.getPassword()));
+				    	
 				    	session.setAttribute(AppConstants.SYSTEMA_WEB_USER_KEY, appUser);
+				    	
 			    	}catch(Exception e){
 			    		String msg = "NO CONNECTION:" + e.toString();
 			    		logger.info("[ERROR Fatal] NO CONNECTION ");
@@ -226,10 +228,10 @@ public class DashboardController {
 		
 		String user = request.getParameter("ru");
 		String pwd = request.getParameter("dp");
-		//create new
-		SystemaWebUser appUserLocal = new SystemaWebUser();
-		appUserLocal.setUser(user);
-		appUserLocal.setPassword(pwd);
+		//set attributes since the method call do not uses those fields' names
+		appUser.setUser(user);
+		appUser.setEncryptedPassword(pwd);
+		appUser.setPassword(this.aesManager.decrypt(pwd));
 		
 		if(appUser==null){
 			return this.loginView;
@@ -250,7 +252,7 @@ public class DashboardController {
 			
 			//url params
 			String firmaCode = null; //always null in this method (because of multi-firm redirection)
-			String urlRequestParamsKeys = this.getRequestUrlKeyParameters(appUserLocal, firmaCode);
+			String urlRequestParamsKeys = this.getRequestUrlKeyParameters(appUser, firmaCode);
 			
 			logger.info(Calendar.getInstance().getTime() + " CGI-start timestamp");
 		    	logger.info("URL: " + BASE_URL);
@@ -282,7 +284,7 @@ public class DashboardController {
 			    			}else{
 			    				this.setDashboardMenuObjectsInSession(session, jsonSystemaUserContainer);
 			    				//hand-over to appUser from JsonUser
-			    				this.doHandOverToSystemaWebUser(request, appUserLocal, appUser, jsonSystemaUserContainer, null);
+			    				this.doHandOverToSystemaWebUser(request, appUser, jsonSystemaUserContainer, null);
 			    			}
 			    		}
 			    	}else{
@@ -294,7 +296,7 @@ public class DashboardController {
 						return loginView;
 			    	}
 			    	//Encrypt the password so late as possible
-			    	appUser.setEncryptedPassword(this.aesManager.encrypt(appUser.getPassword()));
+			    	//appUser.setEncryptedPassword(this.aesManager.encrypt(appUser.getPassword()));
 			    	session.setAttribute(AppConstants.SYSTEMA_WEB_USER_KEY, appUser);
 			    	
 		    	}catch(Exception e){
@@ -359,11 +361,9 @@ public class DashboardController {
 				logger.info("HTTP host with protocol and port: " + hostRaw);
 			}
 		}
-		//POST not working (with change of port-TOTEN) - OBSOLETE 
-		//retval = hostRaw + "/espedsg/logonWRedDashboard.do";
 		
 		//We must user GET until we get Spring 4 (in order to send params on POST)
-		retval = hostRaw + request.getContextPath() + "/logonWRedDashboard.do?" + "ru=" + appUser.getUser() + "&dp=" + appUser.getPassword();
+		retval = hostRaw + request.getContextPath() + "/logonWRedDashboard.do?" + "ru=" + appUser.getUser() + "&dp=" + appUser.getEncryptedPassword();
 		
 		return retval;
 	}
@@ -396,16 +396,12 @@ public class DashboardController {
 	 * @param companyCode
 	 * 
 	 */
-	private void doHandOverToSystemaWebUser(HttpServletRequest request, SystemaWebUser appUserLocal, SystemaWebUser appUser, JsonSystemaUserContainer jsonSystemaUserContainer, String companyCode){
+	private void doHandOverToSystemaWebUser(HttpServletRequest request, SystemaWebUser appUser, JsonSystemaUserContainer jsonSystemaUserContainer, String companyCode){
 		
 		//user values
 		appUser.setOs(System.getProperty("os.name").toLowerCase());
 		//logger.info("OS:" + appUser.getOs());
-		if(appUser.getPassword() == null){
-			if(appUserLocal!=null && appUserLocal.getPassword() !=null ){
-				appUser.setPassword(appUserLocal.getPassword());
-			}
-		}
+		
 		appUser.setUser(jsonSystemaUserContainer.getUser().toUpperCase());
 		appUser.setUserName(jsonSystemaUserContainer.getUserName());
 		appUser.setCompanyCode(companyCode);//fifirm in firm
