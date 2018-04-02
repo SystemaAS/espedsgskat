@@ -1,6 +1,7 @@
 package no.systema.main.controller;
 
 
+import java.net.URLEncoder;
 import java.util.*;
 
 import org.apache.log4j.Logger;
@@ -197,6 +198,7 @@ public class DashboardController {
 			    	//Note: To allow for a correct Company Tomcat from a Holding Company Web Portal.
 			    	//TOTEN AS triggered this requirement
 			    	//------------------------------------------------------------------------------------------------------
+			    	
 			    	if(appUser.getTomcatPort()!=null && !"".equals(appUser.getTomcatPort())){
 				    	String urlRedirectTomcatToSubsidiaryCompany = this.getTomcatServerRedirectionUrl(appUser, request);
 				    	RedirectView rw = new RedirectView();
@@ -363,8 +365,11 @@ public class DashboardController {
 		}
 		
 		//We must user GET until we get Spring 4 (in order to send params on POST)
-		retval = hostRaw + request.getContextPath() + "/logonWRedDashboard.do?" + "ru=" + appUser.getUser() + "&dp=" + appUser.getEncryptedPassword();
-		
+		try{
+			retval = hostRaw + request.getContextPath() + "/logonWRedDashboard.do?" + "ru=" + appUser.getUser() + "&dp=" + URLEncoder.encode(appUser.getEncryptedPassword(), "UTF-8");
+		}catch(Exception e){
+			//logger.info("XXXXX:" + request.getContextPath());
+		}
 		return retval;
 	}
 	/**
