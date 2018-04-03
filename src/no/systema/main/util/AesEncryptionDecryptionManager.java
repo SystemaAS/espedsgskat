@@ -15,7 +15,7 @@ import java.util.Base64;
 
 
 /**
- * Utility class to manage encryption with SHA-algorithm
+ * Utility class to manage encryption with AES-algorithm
  * 
  * @author oscardelatorre
  * @date Mar 27, 2018
