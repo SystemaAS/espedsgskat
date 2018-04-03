@@ -51,7 +51,7 @@ import no.systema.main.service.FirmLoginService;
 
 import no.systema.main.url.store.MainUrlDataStore;
 import no.systema.main.util.AppConstants;
-import no.systema.main.util.AesEncryptionDecryptionManager;
+import no.systema.jservices.common.util.AesEncryptionDecryptionManager;
 
 
 
