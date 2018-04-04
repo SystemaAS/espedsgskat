@@ -103,6 +103,7 @@
 				            </tr> 
 				            </c:forEach>
 				            </tbody>
+				            <%--
 				            <tfoot>
 							<tr>
 							    <th align="center" width="2%" class="tableHeaderFieldWhiteBg11" >&nbsp;Ændre&nbsp;</th>
@@ -113,6 +114,7 @@
 			                    <th align="center" class="tableHeaderFieldWhiteBg11" >&nbsp;DKSE_442A&nbsp;</th>
 			                    <th align="center" class="tableHeaderFieldWhiteBg11">Fjern</th>
 			                </tr>  
+			                --%>
 			                </tfoot> 
 			            </table>
 					</td>	
