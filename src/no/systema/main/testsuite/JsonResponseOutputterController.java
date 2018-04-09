@@ -24,15 +24,7 @@ import no.systema.skat.z.maintenance.skatexport.url.store.MaintenanceSkatExportU
 import no.systema.skat.z.maintenance.skatimport.url.store.MaintenanceSkatImportUrlDataStore;
 import no.systema.skat.z.maintenance.skatnctsexport.url.store.MaintenanceNctsExportUrlDataStore;
 
-/*import no.systema.tds.tdsexport.url.store.TdsExportUrlDataStore;
-import no.systema.tds.tdsimport.url.store.TdsImportUrlDataStore;
-import no.systema.tds.url.store.TdsUrlDataStore;
-import no.systema.tvinn.sad.nctsexport.url.store.SadNctsExportUrlDataStore;
-import no.systema.tvinn.sad.nctsimport.url.store.SadNctsImportUrlDataStore;
-import no.systema.tvinn.sad.sadexport.url.store.SadExportUrlDataStore;
-import no.systema.tvinn.sad.sadimport.url.store.SadImportUrlDataStore;
-import no.systema.tvinn.sad.url.store.TvinnSadUrlDataStore;
-*/
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
