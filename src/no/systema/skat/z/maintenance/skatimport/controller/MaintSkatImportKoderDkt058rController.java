@@ -34,8 +34,8 @@ import no.systema.skat.z.maintenance.skatimport.model.jsonjackson.dbtable.JsonMa
 import no.systema.skat.z.maintenance.skatimport.service.MaintSkatImportDktseService;
 import no.systema.skat.z.maintenance.skatimport.url.store.MaintenanceSkatImportUrlDataStore;
 import no.systema.skat.z.maintenance.skatimport.validator.MaintSkatImportDkt058rValidator;
-import no.systema.z.main.maintenance.model.JsonMaintMainCundfContainer;
-import no.systema.z.main.maintenance.model.JsonMaintMainCundfRecord;
+import no.systema.z.main.maintenance.model.jsonjackson.dbtable.JsonMaintMainCundfContainer;
+import no.systema.z.main.maintenance.model.jsonjackson.dbtable.JsonMaintMainCundfRecord;
 import no.systema.z.main.maintenance.service.MaintMainCundfService;
 import no.systema.z.main.maintenance.url.store.MaintenanceMainUrlDataStore;
 

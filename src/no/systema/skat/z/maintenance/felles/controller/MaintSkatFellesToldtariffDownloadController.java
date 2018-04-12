@@ -24,29 +24,24 @@ import org.springframework.context.annotation.Scope;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import org.springframework.web.bind.ServletRequestDataBinder;
-import org.springframework.web.bind.WebDataBinder;
+
 
 //application imports
-import no.systema.main.context.TdsAppContext;
+
 import no.systema.main.service.UrlCgiProxyService;
 import no.systema.main.validator.LoginValidator;
 import no.systema.main.util.AppConstants;
 import no.systema.main.util.JsonDebugger;
 import no.systema.main.util.StringManager;
 import no.systema.main.model.SystemaWebUser;
-import no.systema.z.main.maintenance.model.JsonMaintMainEdiiContainer;
-import no.systema.z.main.maintenance.model.JsonMaintMainEdiiRecord;
+
 import no.systema.z.main.maintenance.service.MaintMainEdiiService;
-import no.systema.z.main.maintenance.url.store.MaintenanceMainUrlDataStore;
 import no.systema.skat.z.maintenance.main.mapper.url.request.UrlRequestParameterMapper;
 import no.systema.skat.z.maintenance.main.model.jsonjackson.dbtable.JsonMaintDktfiContainer;
-import no.systema.skat.z.maintenance.main.model.jsonjackson.dbtable.JsonMaintDktfiRecord;
 import no.systema.skat.z.maintenance.main.service.MaintDktfiService;
 import no.systema.skat.z.maintenance.main.service.html.dropdown.SkatMaintMainDropDownListPopulationService;
 import no.systema.skat.z.maintenance.main.url.store.MaintenanceUrlDataStore;
 import no.systema.skat.z.maintenance.main.util.SkatMaintenanceConstants;
-import no.systema.skat.z.maintenance.felles.validator.MaintSkatFellesDkt055rValidator;
 
 
 /**

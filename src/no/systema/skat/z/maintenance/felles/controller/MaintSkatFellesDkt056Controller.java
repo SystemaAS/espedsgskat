@@ -38,8 +38,8 @@ import no.systema.skat.z.maintenance.main.service.MaintDkthaService;
 import no.systema.skat.z.maintenance.main.url.store.MaintenanceUrlDataStore;
 import no.systema.skat.z.maintenance.main.util.SkatMaintenanceConstants;
 import no.systema.skat.z.maintenance.felles.validator.MaintSkatFellesDkt056Validator;
-import no.systema.z.main.maintenance.model.JsonMaintMainKodtsfSyparfContainer;
-import no.systema.z.main.maintenance.model.JsonMaintMainKodtsfSyparfRecord;
+import no.systema.z.main.maintenance.model.jsonjackson.dbtable.JsonMaintMainKodtsfSyparfContainer;
+import no.systema.z.main.maintenance.model.jsonjackson.dbtable.JsonMaintMainKodtsfSyparfRecord;
 import no.systema.z.main.maintenance.service.MaintMainKodtsfSyparfService;
 import no.systema.z.main.maintenance.url.store.MaintenanceMainUrlDataStore;
 
