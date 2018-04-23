@@ -27,13 +27,13 @@
 						<table>
 						<form name="skatImportTolltariffForm" id="skatImportTolltariffForm" action="skatimport_edit_items_childwindow_tolltariff.do?action=doInit" method="post">
 						<tr>
-							<td class="text11">&nbsp;Varekod</td>
-							<td class="text11">&nbsp;<input type="text" class="inputText" name="vkod" id="vkod" size="10" maxlength="10" value="${model.vkod}"></td>
+							<td class="text14">&nbsp;Varekod</td>
+							<td class="text14">&nbsp;<input type="text" class="inputText" name="vkod" id="vkod" size="10" maxlength="10" value="${model.vkod}"></td>
 							<%--
-							<td class="text11">&nbsp;Beskrivning</td>
-							<td class="text11">&nbsp;<input type="text" class="inputText" name="tekst" id="tekst" size="30" maxlength="50" value="${model.tekst}"></td>
+							<td class="text14">&nbsp;Beskrivning</td>
+							<td class="text14">&nbsp;<input type="text" class="inputText" name="tekst" id="tekst" size="30" maxlength="50" value="${model.tekst}"></td>
 							 --%>
-							<td class="text11">&nbsp;</td>
+							<td class="text14">&nbsp;</td>
 	           				<td align="right">&nbsp;<input class="inputFormSubmit" type="submit" name="submit" value='<spring:message code="systema.skat.search"/>'>
 		           		</tr>
 		           		
@@ -49,9 +49,9 @@
 					<%-- this is the datatables grid (content)--%>
 					<table id="tolltariffList" class="display compact cell-border" width="100%" >
 						<thead>
-						<tr style="background-color:#EEEEEE">
-							<th class="text11" title="adunnr">&nbsp;Varekod&nbsp;</th>
-		                    <th class="text11" title="adembg">&nbsp;Beskrivelse&nbsp;</th>
+						<tr class="tableHeaderField">
+							<th class="text14" title="adunnr">&nbsp;Varekod&nbsp;</th>
+		                    <th class="text14" title="adembg">&nbsp;Beskrivelse&nbsp;</th>
 		                </tr> 
 		                </thead>
 		                
@@ -59,17 +59,17 @@
 		                <c:forEach var="record" items="${model.tolltariffList}" varStatus="counter">    
 			               <c:choose>           
 			                   <c:when test="${counter.count%2==0}">
-			                       <tr class="text11">
+			                       <tr class="text14">
 			                   </c:when>
 			                   <c:otherwise>   
-			                       <tr class="text11">
+			                       <tr class="text14">
 			                   </c:otherwise>
 			               </c:choose>
 			               
-		               	   <td nowrap style="cursor:pointer;" class="text11MediumBlue" id="vkod${record.dktara02}@text${record.dktara64}@ctype${model.callerType}" >
+		               	   <td nowrap style="cursor:pointer;" class="text14MediumBlue" id="vkod${record.dktara02}@text${record.dktara64}@ctype${model.callerType}" >
 			               		<img title="select" style="vertical-align:top;" src="resources/images/bebullet.gif" border="0" alt="edit">&nbsp;${record.dktara02}
 			               	</td>
-		               	   <td class="text11">&nbsp;${record.dktara64}</td>
+		               	   <td class="text14">&nbsp;${record.dktara64}</td>
 			            </tr> 
 			            </c:forEach>
 			            </tbody>

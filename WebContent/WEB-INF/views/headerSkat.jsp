@@ -37,12 +37,12 @@
 	<script type="text/javascript" src="//cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
 	
 	
-    <table class="noBg" width="1200" border="0" cellspacing="0" cellpadding="0">
+    <table class="noBg" width="100%" border="0" cellspacing="0" cellpadding="0">
 		<%--Banner --%>
 	 	<tr>
 	 		 <%-- class="grayTitanBg" --%>
     		<td height="60" class="headerTdsBannerAreaBg" width="100%" align="left" colspan="3"> 
-    			 <table width="1200" border="0" cellspacing="0" cellpadding="0">
+    			 <table width="100%" border="0" cellspacing="0" cellpadding="0">
     			 	<tr>
 			        	<td>&nbsp;</td>
 			        	<td>&nbsp;</td>
@@ -53,20 +53,20 @@
 					 		<c:when test="${not empty user.logo}">
 				 				<c:choose>
 					 				<c:when test="${fn:contains(user.logo, '/')}">
-					 					<td class="text12" width="10%" align="center" valign="middle" >
+					 					<td class="text14" width="10%" align="center" valign="middle" >
 											<img src="${user.logo}" border="0" width="30px" height="20px">
 										</td>
 									</c:when>
 									<c:otherwise>
 										<c:choose>
 											<c:when test="${fn:contains(user.logo, 'systema')}">
-											<td class="text12white" width="10%" align=left valign="bottom" >&nbsp;
+											<td class="text14white" width="10%" align=left valign="bottom" >&nbsp;
 												<img src="resources/images/${user.logo}" border="0" width=80px height=50px>
 											</td>
 											</c:when>
 											<c:otherwise>
 												<c:if test="${fn:contains(user.logo, 'logo')}">
-													<td class="text12white" width="10%" align=left valign="bottom" >&nbsp;
+													<td class="text14white" width="10%" align=left valign="bottom" >&nbsp;
 														<img src="resources/images/${user.logo}" border="0" >
 													</td>
 												</c:if>
@@ -76,16 +76,16 @@
 								</c:choose>
    			 				</c:when> 
    			 				<c:otherwise>
-						 		<td class="text12white" width="10%" align=left valign="bottom" >&nbsp;</td>
+						 		<td class="text14white" width="10%" align=left valign="bottom" >&nbsp;</td>
 						 		<%-- <td class="text12white" width="10%" align=right valign="bottom" >&nbsp;</td>--%>
 					 		</c:otherwise>
 				 		</c:choose>
-				 		<td class="text22Bold" width="80%" align="middle" valign="middle" style="color:#778899;" >
+				 		<td class="text32Bold" width="100%" align="center" valign="middle" style="color:#778899;" >
 				 			eSped<font style="color:#003300;">sg</font> - SKAT
 				 			
 				 		</td>
 				 		 
-			    		<td class="text12" width="10%" align="center" valign="middle" ><img src="resources/images/systema_logo.png" border="0" width=80px height=50px ></td>
+			    		<td class="text14" width="10%" align="center" valign="middle" ><img src="resources/images/systema_logo.png" border="0" width=80px height=50px ></td>
 			      		<%-- <td class="text12white" width="10%" align=right valign="bottom" >&nbsp;</td>--%>
 			        </tr>
 			        <tr>
@@ -101,8 +101,8 @@
 		<c:choose>
 		<c:when test="${user.authorizedSkatUserAS400 == 'Y'}">
 		<tr >
-			<td height="23" class="tabThinBorderLightSlateGray" width="100%" align="left" colspan="3"> 
-    			 <table width="1200" border="0" cellspacing="0" cellpadding="0">
+			<td height="23" class="tabThinBorderLightGreenLogoutE2" width="100%" align="left" colspan="3"> 
+    			 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 				 	<tr >
 			    		<td class="text11" width="70%" align="left" >&nbsp;&nbsp;
 			    			<%-- --------------- --%>
@@ -207,13 +207,13 @@
 		                   	&nbsp;&nbsp;Vedligehold&nbsp;&nbsp;</font>
 			    			</a>
 	      				</td>		      				
-	      				<td  class="text11" width="50%" align="right">
+	      				<td  class="text14" width="50%" align="right">
 	      					<img valign="bottom" src="resources/images/countryFlags/Flag_DK.gif" height="12" border="0" alt="country">
 		      				&nbsp;
 		      				<font class="headerMenuGreen">
 			    				<img src="resources/images/appUser.gif" border="0" onClick="showPop('specialInformationAdmin');" > 
 						          		
-			    				<font class="text11User" >${user.user}&nbsp;</font>${user.usrLang}</font>
+			    				<font class="text14User" >${user.user}&nbsp;</font>${user.usrLang}</font>
 			    				<font color="#FFFFFF"; style="font-weight: bold;">&nbsp;|&nbsp;&nbsp;</font>
 			    				<%--
 			    				<form style="display:inline" action="logout.do" method="post">
@@ -230,13 +230,13 @@
 			    				
 				    			<a onClick="setBlockUI(this);" tabindex=-1 href="logout.do">
 				    				<font class="headerMenuGreen"><img src="resources/images/home.gif" border="0">&nbsp;
-				    					<font class="text11User" ><spring:message code="dashboard.menu.button"/>&nbsp;</font>
+				    					<font class="text14User" ><spring:message code="dashboard.menu.button"/>&nbsp;</font>
 				    				</font>
 				    			</a>
 				    			
 				    			 
 				    			<font color="#FFFFFF"; style="font-weight: bold;">&nbsp;&nbsp;|&nbsp;</font>
-				    			<font class="text12LightGreen" style="cursor:pointer;" onClick="showPop('versionInfo');">${user.versionSpring}&nbsp;</font>
+				    			<font class="text14LightGreen" style="cursor:pointer;" onClick="showPop('versionInfo');">${user.versionSpring}&nbsp;</font>
 		    				     
 				    		</td>
 				    		<div class="text11" style="position: relative;" align="left">
@@ -248,13 +248,15 @@
 				           			<button name="versionInformationButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('versionInfo');">Close</button> 
 				           		</span>
 							</div>
-							<span style="position:absolute; left:100px; top:150px; width:1000px; height:400px;" id="specialInformationAdmin" class="popupWithInputText"  >
+							<div class="text11" style="position: relative;" align="left">
+								<span style="position:absolute; left:5px; top:30px; width:250px" id="specialInformationAdmin" class="popupWithInputText"  >	
 				           		<div class="text11" align="left">
 				           			${activeUrlRPG_Skat}
 				           			<br/><br/>
 				           			<button name="specialInformationButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('specialInformationAdmin');">Close</button> 
 				           		</div>
-					        </span> 	
+					        	</span> 
+					        </div>	
 			        </tr>
 			     </table> 
 			</td>
@@ -263,8 +265,8 @@
 	    
 	    <c:otherwise>
 	    	    		<tr>
-				<td height="23" class="tabThinBorderLightSlateGray" width="100%" align="left" colspan="3"> 
-	    			 <table width="1200" border="0" cellspacing="1" cellpadding="1">
+				<td height="23" class="tabThinBorderLightGreenLogoutE2" width="100%" align="left" colspan="3"> 
+	    			 <table width="100%" border="0" cellspacing="1" cellpadding="1">
 					 	<tr >
 				    		<td nowrap class="text11" width="50%" align="left" >&nbsp;&nbsp;</td>
 	      					<td nowrap class="text11" width="50%" align="right">
@@ -298,12 +300,14 @@
 				    			<font class="text12LightGreen" style="cursor:pointer;" onClick="showPop('versionInfo');">${user.versionSpring}&nbsp;</font>
 						         
 				    		</td>
-				    		<span style="position:absolute; left:800px; top:105px; width:150px; height:50px;" id="versionInfo" class="popupWithInputText"  >
+				    		<div class="text11" style="position: relative;display: inline;" align="left">
+								<span style="position:absolute; left:-150px; top:3px; width:150;" id="versionInfo" class="popupWithInputText"  >
 					           		<div class="text11" align="left">
 					           			<b>${user.versionEspedsg}</b></br></br>
 					           			<button name="versionInformationButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('versionInfo');">Close</button> 
 					           		</div>
-					        </span> 
+					        	</span> 
+					        </div>
 		      	        </tr>
 		      	     </table> 
 				</td>
@@ -314,7 +318,7 @@
 					<form action="skatgate.do" name="loginSkatForm" id="loginSkatForm" method="POST" > 
     			 		<table width="250" border="0" cellspacing="1" cellpadding="0">
     			 		<tr >
-				    		<td colspan="2" class="text12" >&nbsp;
+				    		<td colspan="2" class="text14" >&nbsp;
 				    			<img onMouseOver="showPop('skatBehorighet_info');" onMouseOut="hidePop('skatBehorighet_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 				    			<b>SKAT Brugertilladelse</b>
 								<span style="position:absolute; left:300px; top:120px; width:250px; height:200px;" id="skatBehorighet_info" class="popupWithInputText"  >
@@ -331,8 +335,8 @@
 	      	        </tr>
 	      	        <tr class="text" height="5"><td></td></tr>
 				 	<tr >
-				    		<td class="text12" >&nbsp;&nbsp;BrugerId</td>
-		      				<td class="text12" >
+				    		<td class="text14" >&nbsp;&nbsp;BrugerId</td>
+		      				<td class="text14" >
 		      					<input readonly type="text" class="inputTextReadOnly" name=userAS400 id="userAS400" size="10" maxlength="10" value='${user.userAS400}'>	
 		      					<input type="hidden" name=formSubmit id="formSubmit" value="Y">	
 				    		</td>

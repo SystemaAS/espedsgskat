@@ -85,25 +85,28 @@
 			<tr>
 				<td>
 				<table width="100%" cellspacing="0" border="0" cellpadding="0">
+					<thead>
 					<tr class="tableHeaderField" height="20" valign="left">
 					
-	                    <td class="tableHeaderFieldFirst">&nbsp;<spring:message code="systema.skat.import.logging.list.label.topicNr"/>&nbsp;</td>
-	                    <td class="tableHeaderField">&nbsp;Interch.nr&nbsp;</td>
-						<td class="tableHeaderField">&nbsp;<spring:message code="systema.skat.import.logging.list.label.messageNr"/>&nbsp;</td> 
-	                    <td class="tableHeaderField">&nbsp;<spring:message code="systema.skat.import.logging.list.label.type"/>&nbsp;</td> 
+	                    <th class="tableHeaderFieldFirst">&nbsp;<spring:message code="systema.skat.import.logging.list.label.topicNr"/>&nbsp;</th>
+	                    <th class="tableHeaderField">&nbsp;Interch.nr&nbsp;</th>
+						<th class="tableHeaderField">&nbsp;<spring:message code="systema.skat.import.logging.list.label.messageNr"/>&nbsp;</th> 
+	                    <th class="tableHeaderField">&nbsp;<spring:message code="systema.skat.import.logging.list.label.type"/>&nbsp;</th> 
 	                      
-	                    <td class="tableHeaderField">&nbsp;<spring:message code="systema.skat.import.logging.list.label.date"/>&nbsp;</td>
-	                    <td class="tableHeaderField">&nbsp;<spring:message code="systema.skat.import.logging.list.label.time"/>&nbsp;</td>
-	                    <td class="tableHeaderField">&nbsp;<spring:message code="systema.skat.import.logging.list.label.sentReceive"/>&nbsp;</td>
-	                    <td class="tableHeaderField">&nbsp;<spring:message code="systema.skat.import.logging.list.label.text"/>
+	                    <th class="tableHeaderField">&nbsp;<spring:message code="systema.skat.import.logging.list.label.date"/>&nbsp;</th>
+	                    <th class="tableHeaderField">&nbsp;<spring:message code="systema.skat.import.logging.list.label.time"/>&nbsp;</th>
+	                    <th class="tableHeaderField">&nbsp;<spring:message code="systema.skat.import.logging.list.label.sentReceive"/>&nbsp;</th>
+	                    <th class="tableHeaderField">&nbsp;<spring:message code="systema.skat.import.logging.list.label.text"/>
 	                    &nbsp;&nbsp;&nbsp;&nbsp;
 			 				<font class="text10">Rules and Conditions</font>
 			 				<%-- SKAT_EDI_EDIFACT_rules and conditions v4.xlsx --%>
 			 				<a tabindex=-1 href="renderLocalPdf.do?fn=SKAT_EDI_EDIFACT_rules_and_conditions_v4.xlsx" target="_blank">
 			 					<img valign="bottom" width="14px" height="14px" src="resources/images/pdf.png" border="0" alt="pdf">
 			 				</a>
-	                    </td>
-	               </tr>     
+	                    </th>
+	               </tr> 
+	               </thead>
+	               <tbody>    
 		           	<c:forEach items="${list}" var="record" varStatus="counter">    
 		               <c:choose>           
 		                   <c:when test="${record.msr == 'R'}">
@@ -141,6 +144,7 @@
 		               </td>
 		            </tr> 
 		            </c:forEach>
+		            </tbody>
 	            </table>
 			</td>	
 			</tr>

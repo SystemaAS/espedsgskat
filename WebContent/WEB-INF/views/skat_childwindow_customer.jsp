@@ -45,20 +45,20 @@
 													           		
 	           		<tr height="10"><td></td></tr>
 					
-					<tr class="text12" >
+					<tr class="text14" >
 					<td class="ownScrollableSubWindowDynamicWidthHeight" width="100%" style="height:30em;">
 					<%-- this is the datatables grid (content)--%>
 					<table id="customerList" class="display compact cell-border" width="100%" >
 						<thead>
-						<tr style="background-color:#EEEEEE">
-							<th class="text11" >&nbsp;Kundenr.&nbsp;</th>
-		                    <th class="text11" >&nbsp;Navn&nbsp;</th>
-		                    <th class="text11" >&nbsp;CVR/SE-nr&nbsp;</th>
-		                    <th class="text11" >&nbsp;Adresse&nbsp;</th>
-		                    <th class="text11" >&nbsp;By&nbsp;</th>
-		                    <th class="text11" >&nbsp;Postnr&nbsp;</th>
-		                    <th class="text11" >&nbsp;Land&nbsp;</th>
-		                    <%--<th class="text11" >&nbsp;Tollkredit&nbsp;</th>  --%>
+						<tr class="tableHeaderField">
+							<th class="text14" >&nbsp;Kundenr.&nbsp;</th>
+		                    <th class="text14" >&nbsp;Navn&nbsp;</th>
+		                    <th class="text14" >&nbsp;CVR/SE-nr&nbsp;</th>
+		                    <th class="text14" >&nbsp;Adresse&nbsp;</th>
+		                    <th class="text14" >&nbsp;By&nbsp;</th>
+		                    <th class="text14" >&nbsp;Postnr&nbsp;</th>
+		                    <th class="text14" >&nbsp;Land&nbsp;</th>
+		                    <%--<th class="text14" >&nbsp;Tollkredit&nbsp;</th>  --%>
 		                </tr> 
 		                </thead>
 		                
@@ -66,23 +66,23 @@
 		                <c:forEach var="record" items="${model.customerList}" varStatus="counter">    
 			               <c:choose>           
 			                   <c:when test="${counter.count%2==0}">
-			                       <tr class="text11">
+			                       <tr class="text14">
 			                   </c:when>
 			                   <c:otherwise>   
-			                       <tr class="text11">
+			                       <tr class="text14">
 			                   </c:otherwise>
 			               </c:choose>
-			               <td style="cursor:pointer;" class="text11MediumBlue" id="knr${record.kundnr}@knavn${record.knavn}@kadr1${record.adr1}@kadr3${record.adr3}@kpostnr${record.postnr}@kland${record.syland}@keori${record.eori}@ctype${model.ctype}@kadr2${record.adr2}" >
+			               <td style="cursor:pointer;" class="text14MediumBlue" id="knr${record.kundnr}@knavn${record.knavn}@kadr1${record.adr1}@kadr3${record.adr3}@kpostnr${record.postnr}@kland${record.syland}@keori${record.eori}@ctype${model.ctype}@kadr2${record.adr2}" >
 			               		<img title="select" style="vertical-align:top;" src="resources/images/bebullet.gif" border="0" alt="edit">&nbsp;${record.kundnr}
 			               	</td>
-		               	   <td class="text11">&nbsp;${record.knavn}</td>
-		               	   <td class="text11">&nbsp;${record.eori}</td>
-		               	   <td class="text11">&nbsp;${record.adr1}</td>
-		               	   <td class="text11">&nbsp;${record.adr3}</td>
-		               	   <td class="text11">&nbsp;${record.postnr}</td>
-		               	   <td class="text11">&nbsp;${record.syland}</td>
+		               	   <td class="text14">&nbsp;${record.knavn}</td>
+		               	   <td class="text14">&nbsp;${record.eori}</td>
+		               	   <td class="text14">&nbsp;${record.adr1}</td>
+		               	   <td class="text14">&nbsp;${record.adr3}</td>
+		               	   <td class="text14">&nbsp;${record.postnr}</td>
+		               	   <td class="text14">&nbsp;${record.syland}</td>
 		               	   <%--
-		               	   <td class="text11">&nbsp;${record.wsktc}&nbsp;${record.wskta}&nbsp;${record.wsktb}</td>
+		               	   <td class="text14">&nbsp;${record.wsktc}&nbsp;${record.wskta}&nbsp;${record.wsktb}</td>
 		               	    --%>
 			            </tr> 
 			            </c:forEach>

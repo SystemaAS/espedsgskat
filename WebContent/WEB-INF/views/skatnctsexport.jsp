@@ -152,20 +152,23 @@
 			<tr>
 				<td>
 				<table width="100%" cellspacing="0" border="0" cellpadding="0">
+					<thead>
 					<tr class="tableHeaderField" height="20" valign="left">
-	                    <td class="tableHeaderFieldFirst" align="left" >&nbsp;&nbsp;&nbsp;<spring:message code="systema.skat.ncts.export.list.search.label.avd"/></td>
-                		<td class="tableHeaderField" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.export.list.search.label.signatur"/></td>
-                		<td class="tableHeaderField" align="center" >&nbsp;<spring:message code="systema.skat.ncts.export.list.search.label.update"/></td>
-                		<td class="tableHeaderField" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.export.list.search.label.arende"/></td>
-                		<td class="tableHeaderField" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.export.list.search.label.lrnNr"/></td>
-                		<td class="tableHeaderField" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.export.list.search.label.mrnNr"/></td>
-                		<td class="tableHeaderField" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.export.list.search.label.datum"/></td>
-                		<td class="tableHeaderField" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.export.list.search.label.status"/></td>
-                		<td class="tableHeaderField" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.export.list.search.label.mottagare"/></td>
-                		<td class="tableHeaderField" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.export.list.search.label.bruttovikt"/></td>
-                		<td class="tableHeaderField">&nbsp;Kopiera Ärende&nbsp;</td>
+	                    <th class="tableHeaderFieldFirst" align="left" >&nbsp;&nbsp;&nbsp;<spring:message code="systema.skat.ncts.export.list.search.label.avd"/></th>
+                		<th class="tableHeaderField" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.export.list.search.label.signatur"/></th>
+                		<th class="tableHeaderField" align="center" >&nbsp;<spring:message code="systema.skat.ncts.export.list.search.label.update"/></th>
+                		<th class="tableHeaderField" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.export.list.search.label.arende"/></th>
+                		<th class="tableHeaderField" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.export.list.search.label.lrnNr"/></th>
+                		<th class="tableHeaderField" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.export.list.search.label.mrnNr"/></th>
+                		<th class="tableHeaderField" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.export.list.search.label.datum"/></th>
+                		<th class="tableHeaderField" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.export.list.search.label.status"/></th>
+                		<th class="tableHeaderField" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.export.list.search.label.mottagare"/></th>
+                		<th class="tableHeaderField" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.export.list.search.label.bruttovikt"/></th>
+                		<th class="tableHeaderField">&nbsp;Kopiera Ärende&nbsp;</th>
 	                    
-                	</tr>     
+                	</tr> 
+                	</thead>
+                	<tbody>    
 		           	<c:forEach items="${list}" var="topic" varStatus="counter">    
 		               <c:choose>           
 		                   <c:when test="${counter.count%2==0}">
@@ -248,6 +251,7 @@
 		               
 		            </tr> 
 		            </c:forEach>
+		            </tbody>
 	            </table>
 			</td>	
 			</tr>

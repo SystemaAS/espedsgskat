@@ -206,12 +206,13 @@
 			<tr>
 				<td>
 				<table width="100%" cellspacing="0" border="0" cellpadding="0">
+					<thead>
 					<tr class="tableHeaderField" height="20" valign="left">
-	                    <td class="tableHeaderFieldFirst">&nbsp;<spring:message code="systema.skat.import.list.search.label.avd"/>&nbsp;
+	                    <th class="tableHeaderFieldFirst">&nbsp;<spring:message code="systema.skat.import.list.search.label.avd"/>&nbsp;
 	                    		
-	                    </td>   
-	                    <td class="tableHeaderField" nowrap>&nbsp;<spring:message code="systema.skat.import.list.search.label.signatur"/>&nbsp;</td>
-	                    <td class="tableHeaderField" nowrap>
+	                    </th>   
+	                    <th class="tableHeaderField" nowrap>&nbsp;<spring:message code="systema.skat.import.list.search.label.signatur"/>&nbsp;</th>
+	                    <th class="tableHeaderField" nowrap>
 	                    		<img onMouseOver="showPop('update_info');" onMouseOut="hidePop('update_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 		 					<spring:message code="systema.skat.import.list.search.label.update"/>
 	 			
@@ -224,23 +225,25 @@
 				           		</ul>
 						</span>	
 						</div>
-						</td>
+						</th>
 	                    
-	                    <td class="tableHeaderField">&nbsp;<spring:message code="systema.skat.import.list.search.label.arende"/>&nbsp;</td>
-	                    <td class="tableHeaderField" nowrap>&nbsp;<spring:message code="systema.skat.import.list.search.label.refnr"/>&nbsp;</td>
-	                    <td class="tableHeaderField" nowrap>&nbsp;<spring:message code="systema.skat.import.list.search.label.xrefnr"/>&nbsp;</td>
-	                    <td class="tableHeaderField" nowrap>&nbsp;<spring:message code="systema.skat.import.list.search.label.aart"/>&nbsp;</td>
-	                    <td class="tableHeaderField" nowrap>&nbsp;<spring:message code="systema.skat.import.list.search.label.datum"/>&nbsp;</td>
-	                    <td class="tableHeaderField">&nbsp;<spring:message code="systema.skat.import.list.search.label.status"/>&nbsp;</td>
-	                    <td class="tableHeaderField">&nbsp;<spring:message code="systema.skat.import.list.search.label.avsandare"/>&nbsp;</td>
-	                    <td class="tableHeaderField">&nbsp;<spring:message code="systema.skat.import.list.search.label.mottagare"/>&nbsp;</td>
+	                    <th class="tableHeaderField">&nbsp;<spring:message code="systema.skat.import.list.search.label.arende"/>&nbsp;</th>
+	                    <th class="tableHeaderField" nowrap>&nbsp;<spring:message code="systema.skat.import.list.search.label.refnr"/>&nbsp;</th>
+	                    <th class="tableHeaderField" nowrap>&nbsp;<spring:message code="systema.skat.import.list.search.label.xrefnr"/>&nbsp;</th>
+	                    <th class="tableHeaderField" nowrap>&nbsp;<spring:message code="systema.skat.import.list.search.label.aart"/>&nbsp;</th>
+	                    <th class="tableHeaderField" nowrap>&nbsp;<spring:message code="systema.skat.import.list.search.label.datum"/>&nbsp;</th>
+	                    <th class="tableHeaderField">&nbsp;<spring:message code="systema.skat.import.list.search.label.status"/>&nbsp;</th>
+	                    <th class="tableHeaderField">&nbsp;<spring:message code="systema.skat.import.list.search.label.avsandare"/>&nbsp;</th>
+	                    <th class="tableHeaderField">&nbsp;<spring:message code="systema.skat.import.list.search.label.mottagare"/>&nbsp;</th>
             				<%--
-	                    <td class="tableHeaderField">&nbsp;<spring:message code="systema.skat.import.list.search.label.begaranOmKlarering"/></td>
+	                    <th class="tableHeaderField">&nbsp;<spring:message code="systema.skat.import.list.search.label.begaranOmKlarering"/></th>
 	                     --%>
-	                    <td class="tableHeaderField" nowrap>&nbsp;<spring:message code="systema.skat.import.list.search.label.kopieraArende"/></td>
-	                    <td class="tableHeaderField" nowrap>&nbsp;<spring:message code="systema.skat.import.list.search.label.deleteArende"/></td>
+	                    <th class="tableHeaderField" nowrap>&nbsp;<spring:message code="systema.skat.import.list.search.label.kopieraArende"/></th>
+	                    <th class="tableHeaderField" nowrap>&nbsp;<spring:message code="systema.skat.import.list.search.label.deleteArende"/></th>
 	                    
-	                </tr>     
+	                </tr> 
+	                </thead>
+	                <tbody>    
 		            <c:forEach items="${list}" var="topic" varStatus="counter">    
 		               <c:choose>           
 		                   <c:when test="${counter.count%2==0}">
@@ -333,6 +336,7 @@
 
 		            </tr> 
 		            </c:forEach>
+		            </tbody>
 	            </table>
 			</td>	
 			</tr>

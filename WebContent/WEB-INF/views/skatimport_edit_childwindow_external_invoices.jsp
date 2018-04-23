@@ -35,14 +35,14 @@
 						<td colspan="3" >
 							<table id="tblInvoices" class="display compact cell-border" width="100%">
 								<thead>
-								<tr style="background-color:#DDDDDD">
-									<th class="text12">&nbsp;Vælg&nbsp;</th>
-								    <th class="text12">&nbsp;Fakturanr.&nbsp;</th>   
+								<tr class="tableHeaderField">
+									<th class="text14">&nbsp;Vælg&nbsp;</th>
+								    <th class="text14">&nbsp;Fakturanr.&nbsp;</th>   
 				                    <%--
-				                    <th class="text12">&nbsp;Type&nbsp;</th>
+				                    <th class="text14">&nbsp;Type&nbsp;</th>
 				                     --%>
-				                    <th align="right" class="text12">&nbsp;Beløb&nbsp;</th> 
-				                    <th class="text12">&nbsp;Møntsort&nbsp;</th> 
+				                    <th align="right" class="text14">&nbsp;Beløb&nbsp;</th> 
+				                    <th class="text14">&nbsp;Møntsort&nbsp;</th> 
 				                    
 			                    </tr>
 			                    </thead>
@@ -56,15 +56,15 @@
 					                       <tr class="tableOddRow" height="15" >
 					                   </c:otherwise>
 					               </c:choose>
-					               <td class="text11" align="center">
+					               <td class="text14" align="center">
 					               		<input class="clazzInvoiceAware" type="checkbox" value="J" id="id${record.dkef_reff}_unik${record.dkef_unik}" name="id${record.dkef_reff}_unik${record.dkef_unik}" >
 					               </td>
-					               <td width="10%" class="text11" align="center">&nbsp;<span title="reff/unik:${record.dkef_reff}/${record.dkef_unik}">${record.dkef_fatx}</span></td>
+					               <td width="10%" class="text14" align="center">&nbsp;<span title="reff/unik:${record.dkef_reff}/${record.dkef_unik}">${record.dkef_fatx}</span></td>
 					               <%--
-					               <td class="text11" >&nbsp;${record.dkef_faty}</td>
+					               <td class="text14" >&nbsp;${record.dkef_faty}</td>
 					                --%>
-					               <td align="right" class="text11" >&nbsp;${record.dkef_fabl}&nbsp;</td>
-					               <td class="text11" >&nbsp;${record.dkef_vakd}</td>
+					               <td align="right" class="text14" >&nbsp;${record.dkef_fabl}&nbsp;</td>
+					               <td class="text14" >&nbsp;${record.dkef_vakd}</td>
 					               
 				               </tr>
 				               </c:forEach>

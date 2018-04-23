@@ -29,24 +29,24 @@
 					<td colspan="3" >
 						<table id="tblList" class="display compact cell-border" width="100%">
 							<thead>
-							<tr style="background-color:#DDDDDD">
-								<th class="text12">&nbsp;Ekstern refnr.&nbsp;</th>
-								<th class="text12">&nbsp;Avd.&nbsp;</th>   
-			                    <th class="text12">&nbsp;Dato&nbsp;</th>   
-			                    <th class="text12">&nbsp;Afsender&nbsp;</th> 
-			                    <th class="text12">&nbsp;Modtager&nbsp;</th> 
+							<tr class="tableHeaderField">
+								<th class="text14">&nbsp;Ekstern refnr.&nbsp;</th>
+								<th class="text14">&nbsp;Avd.&nbsp;</th>   
+			                    <th class="text14">&nbsp;Dato&nbsp;</th>   
+			                    <th class="text14">&nbsp;Afsender&nbsp;</th> 
+			                    <th class="text14">&nbsp;Modtager&nbsp;</th> 
 		                    </tr>
 		                    </thead>
 		                    <tbody>
 		                    <c:forEach items="${model.listExternalRef}" var="record" varStatus="counter">    
-				               <td  style="cursor:pointer;" class="text11MediumBlue" id="ref${record.fssok}" >
+				               <td  style="cursor:pointer;" class="text14MediumBlue" id="ref${record.fssok}" >
 			               		&nbsp;<img title="select" style="vertical-align:top;" src="resources/images/bebullet.gif" border="0" alt="edit">
 			               		&nbsp;&nbsp;${record.fssok}
 			               		</td>
-				               <td class="text11" >&nbsp;${record.fsavd}&nbsp;</td>
-				               <td class="text11" >&nbsp;${record.fsdtop}&nbsp;</td>
-				               <td class="text11" >&nbsp;${record.henas}</td>
-				               <td class="text11" >&nbsp;${record.henak}</td>
+				               <td class="text14" >&nbsp;${record.fsavd}&nbsp;</td>
+				               <td class="text14" >&nbsp;${record.fsdtop}&nbsp;</td>
+				               <td class="text14" >&nbsp;${record.henas}</td>
+				               <td class="text14" >&nbsp;${record.henak}</td>
 				               
 			               </tr>
 			               </c:forEach>

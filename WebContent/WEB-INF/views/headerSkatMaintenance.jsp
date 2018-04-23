@@ -35,26 +35,26 @@
 	<%--datatables grid --%>
 	<script type="text/javascript" src="//cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
 	
-    <table class="noBg" width="1100" border="0" cellspacing="0" cellpadding="0">
+    <table class="noBg" width="100%" border="0" cellspacing="0" cellpadding="0">
 		<%--Banner --%>
 	 	<tr>
 	 		 <%-- class="grayTitanBg" --%>
     		<td height="60" class="headerTdsBannerAreaBg" width="100%" align="left" colspan="3"> 
-    			 <table width="1100" border="0" cellspacing="0" cellpadding="0">
+    			 <table width="100%" border="0" cellspacing="0" cellpadding="0">
     			 	<tr>
 			        	<td>&nbsp;</td>
 			        	<td>&nbsp;</td>
 				 		<td>&nbsp;</td>
 			        </tr>
 				 	<tr>
-				 		<td class="text12white" width="10%" align=left valign="bottom" >&nbsp;</td>
-				 		<td class="text22Bold" width="80%" align="middle" valign="middle" style="color:#778899;" >
+				 		<td class="text14white" width="10%" align=left valign="bottom" >&nbsp;</td>
+				 		<td class="text32Bold" width="100%" align="center" valign="middle" style="color:#778899;" >
 				 			eSped<font style="color:#003300;">sg</font> - SKAT - VEDLIGEHOLD
 				 			
 				 		</td>
 				 		 
-			    		<td class="text12" width="10%" align="center" valign="middle" ><img src="resources/images/systema_logo.png" border="0" width=80px height=50px ></td>
-			      		<%-- <td class="text12white" width="10%" align=right valign="bottom" >&nbsp;</td>--%>
+			    		<td class="text14" width="10%" align="center" valign="middle" ><img src="resources/images/systema_logo.png" border="0" width=80px height=50px ></td>
+			      		<%-- <td class="text14white" width="10%" align=right valign="bottom" >&nbsp;</td>--%>
 			        </tr>
 			        <tr>
 			        	<td>&nbsp;</td>
@@ -68,9 +68,9 @@
 		<%-- Header menu --%>
 		<tr >
 			<td height="22" class="tabThinBorderLightGray" width="100%" align="left" colspan="3"> 
-    			 <table width="1100" border="0" cellspacing="0" cellpadding="0">
+    			 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 				 	<tr >
-			    		<td class="text11" width="70%" align="left" >&nbsp;&nbsp;
+			    		<td class="text14" width="70%" align="left" >&nbsp;&nbsp;
 			    			<%-- --------------------- --%>
 			    			<%-- SKAT EXPORT MENU --%>
 			    			<%-- --------------------- --%>
@@ -167,7 +167,7 @@
 		                   		&nbsp;&nbsp;<spring:message code="systema.skat.main.gate.returnTo.label"/>&nbsp;&nbsp;</font>
 			    			</a>
 	      				</td>		      				
-	      				<td class="text11" width="50%" align="right" valign="middle">
+	      				<td class="text14" width="50%" align="right" valign="middle">
 	      					
 						    <img valign="bottom" src="resources/images/countryFlags/Flag_NO.gif" height="12" border="0" alt="country">
 		      				&nbsp;
@@ -190,16 +190,18 @@
 			    				</font>
 			    			</a>
 			    			<font color="#FF6600"; style="font-weight: bold;">&nbsp;&nbsp;|&nbsp;</font>
-			    			<font class="text12" style="cursor:pointer;" onClick="showPop('versionInfo');">${user.versionSpring}&nbsp;</font>
-		    				    <span style="position:absolute; left:800px; top:105px; width:150px; height:100px;" id="versionInfo" class="popupWithInputText"  >
+			    			<font class="text14" style="cursor:pointer;" onClick="showPop('versionInfo');">${user.versionSpring}&nbsp;</font>
+		    				    <div class="text11" style="position: relative;display: inline;" align="left">
+								<span style="position:absolute; left:-150px; top:3px; width:150;" id="versionInfo" class="popupWithInputText"  >
 					           		<div class="text11" align="left">
 					           			&nbsp;<b>${user.versionEspedsg}</b>
 					           			<br/><br/>
-					           			&nbsp;<a href="renderLocalLog4j.do" target="_blank"><font class="text12Orange">log4j</font></a>
+					           			&nbsp;<a href="renderLocalLog4j.do" target="_blank"><font class="text14Orange">log4j</font></a>
 					           			<br/><br/><br/>
 					           			<button name="versionInformationButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('versionInfo');">Close</button> 
 					           		</div>
-					        </span> 
+					        	</span> 
+					        	</div>
 			    		</td>
 			        </tr>
 			     </table> 
@@ -207,7 +209,7 @@
 	    </tr>
 	    <tr>
 		    <td height="4" class="tabThinBorderOrange" width="100%" align="left" colspan="3"> 
-	   			 <table width="1100" border="0" cellspacing="0" cellpadding="0">
+	   			 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 	   			 </table>
 			</td>
 	    </tr>
