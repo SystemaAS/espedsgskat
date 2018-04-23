@@ -55,7 +55,7 @@
 						<font class="tabLink">
 							&nbsp;<spring:message code="systema.skat.import.created.mastertopic.tab"/>
 						</font>
-						<font class="text12MediumBlue">[${model.record.dkih_syop}]</font>
+						<font class="text14MediumBlue">[${model.record.dkih_syop}]</font>
 						<c:if test="${ model.record.dkih_syst == 'M' || empty  model.record.dkih_syst || model.record.dkih_syst == '10' || model.record.dkih_syst == '20'|| model.record.dkih_syst == '40'}">
 							<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">
 						</c:if>
@@ -163,17 +163,17 @@
 	    	<input type="hidden" name="avd" id="avd" value='${model.record.dkih_syav}'>
 			<input type="hidden" name="sign" id="sign" value='${model.record.dkih_sysg}'>
 			<tr>
-				<td align="left" class="text12MediumBlue">
+				<td align="left" class="text14MediumBlue">
 					&nbsp;&nbsp;<span title="dkih_syav">Afdeling:&nbsp;</span><b>${model.record.dkih_syav}</b>&nbsp;&nbsp;<span title="dkih_syop">Angivelse:&nbsp;</span><b>${model.record.dkih_syop}</b>
 					&nbsp;&nbsp;<span title="dkih_07">Reference-nr:&nbsp;</span><b>${model.record.dkih_07}</b>
 					&nbsp;&nbsp;<span title="dkih_sysg">Sign:&nbsp;</span><b>${model.record.dkih_sysg}</b>
 				</td>
 			</tr>
 			<tr>	
-				<td align="left" class="text12MediumBlue">				
+				<td align="left" class="text14MediumBlue">				
 					&nbsp;&nbsp;<span title="dkih_sydt">Dato:&nbsp;</span><b>${model.record.dkih_sydt}</b>
 					&nbsp;&nbsp;<img onMouseOver="showPop('status_info');" onMouseOut="hidePop('status_info');" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-					<span title="dkih_syst">Stat</span><a id="updateStatusLink" runat="server" href="#"><font class="text12MediumBlue">u</font></a>s:
+					<span title="dkih_syst">Stat</span><a id="updateStatusLink" runat="server" href="#"><font class="text14MediumBlue">u</font></a>s:
 					<b>
 						<c:choose>
 							<c:when test="${empty  model.record.dkih_syst}">
@@ -213,7 +213,7 @@
 				<td align="right" valign="top" >
 					<c:if test="${'1' != isTestAvd}">
 						<%--This checkbox appears only in real production. Otherwise use the Testavdelning --%>
-						<input type="checkbox" name="dkih_0035" id="dkih_0035" value="1" <c:if test="${model.record.dkih_0035 == '1'}"> checked </c:if> ><font class="text12MediumBlue"><b>TEST flag</b></font>&nbsp;&nbsp;&nbsp;						
+						<input type="checkbox" name="dkih_0035" id="dkih_0035" value="1" <c:if test="${model.record.dkih_0035 == '1'}"> checked </c:if> ><font class="text14MediumBlue"><b>TEST flag</b></font>&nbsp;&nbsp;&nbsp;						
 					</c:if>
 					<a tabindex=-1 href="skatimport_edit_printTopic.do?avd=${model.record.dkih_syav}&opd=${model.record.dkih_syop}">
 					 	<img style="vertical-align: bottom;cursor: pointer;"  src="resources/images/printer.png" width="30" hight="30" border="0" alt="Print">
@@ -238,16 +238,16 @@
 		<%-- CREATE MODE --%> 
 		<c:otherwise>
 			<tr >
-				<td align="left" class="text12MediumBlue">
+				<td align="left" class="text14MediumBlue">
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Afdeling:&nbsp;
-           			<select name="avd" id="avd" TABINDEX=1>
+           			<select class="selectMediumBlueE2" name="avd" id="avd" TABINDEX=1>
 	            		<option value="">-vælg-</option>
 	 				  	<c:forEach var="record" items="${model.avdList}" >
                              <option value="${record.avd}"<c:if test="${model.record.dkih_syav == record.avd}"> selected </c:if> >${record.avd}<c:if test="${record.tst == '1'}">&nbsp;(test)</c:if></option>
 						</c:forEach> 
 					</select>
 					&nbsp;Sign:&nbsp;
-           			<select name="sign" id="sign" TABINDEX=2>
+           			<select class="selectMediumBlueE2" name="sign" id="sign" TABINDEX=2>
 	            		<option value="">-vælg-</option>
 	 				  	<c:forEach var="record" items="${model.signList}" >
                              	 	<option value="${record.sign}"<c:if test="${model.record.dkih_sysg == record.sign}"> selected </c:if> >${record.sign}</option>
@@ -272,7 +272,7 @@
 	            	<table align="left" border="0" cellspacing="0" cellpadding="0">
 	            		
 				 		<tr>
-				 			<td class="text12">
+				 			<td class="text14">
 				 				<img onMouseOver="showPop('1_1_info');" onMouseOut="hidePop('1_1_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 			 					<b>1.1</b><font class="text16RedBold" >*</font><span title="dkih_r011">Ang.type&nbsp;</span>
 			 					<div class="text11" style="position: relative;" align="left">
@@ -292,14 +292,14 @@
 								
 				 			</td>
 				 			<td>
-				 				<select name="dkih_r011" id="dkih_r011" TABINDEX=3>
+				 				<select class="selectMediumBlueE2" name="dkih_r011" id="dkih_r011" TABINDEX=3>
 				 				  <option value="">-vælg-</option>
 								  <option value="EU"<c:if test="${model.record.dkih_r011 == 'EU'}"> selected </c:if> >EU</option>
 								  <option value="CO"<c:if test="${model.record.dkih_r011 == 'CO'}"> selected </c:if> >CO</option>
 								  <option value="IM"<c:if test="${model.record.dkih_r011 == 'IM'}"> selected </c:if> >IM</option>
 								</select>
 			 				</td>
-			 				<td class="text12">&nbsp;
+			 				<td class="text14">&nbsp;
 			 				<img onMouseOver="showPop('meddTyp_info');" onMouseOut="hidePop('meddTyp_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 			 				<font class="text16RedBold" >*</font><span title="dkih_aart">Ang.art&nbsp;</span>
 			 				<div class="text11" style="position: relative;" align="left">
@@ -314,7 +314,7 @@
 			 				</td>
 			 				
 				 			<td>
-				 				<select name="dkih_aart" id="dkih_aart" TABINDEX=10>
+				 				<select class="selectMediumBlueE2" name="dkih_aart" id="dkih_aart" TABINDEX=10>
 				 				  <option value="">-vælg-</option>
 					 				  	<c:forEach var="record" items="${model.angivelsesArterCodeList}" >
 					 				  		<option value="${record.dkkd_kd}"<c:if test="${model.record.dkih_aart == record.dkkd_kd}"> selected </c:if> >${record.dkkd_kd}&nbsp;${record.dkkd_kd2}</option>
@@ -324,7 +324,7 @@
 				 			
 		 				</tr>
 		 				<tr>
-		 					<td class="text12">
+		 					<td class="text14">
 		 						<img onMouseOver="showPop('1_2_info');" onMouseOut="hidePop('1_2_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 				 				<b>1.2</b>&nbsp;
 				 				<span title="dkih_r012" id="v_dkih_r012" class="validation">EU ang.art&nbsp;</span>
@@ -354,7 +354,7 @@
 				 				
 				 			</td>
 				 			<td>
-				 				<select name="dkih_r012" id="dkih_r012" >
+				 				<select class="selectMediumBlueE2" name="dkih_r012" id="dkih_r012" >
 				 					<option value="">-vælg-</option>
 								  <option value="A"<c:if test="${ model.record.dkih_r012 == 'A'}"> selected </c:if> >A</option>
 								  <option value="B"<c:if test="${ model.record.dkih_r012 == 'B'}"> selected </c:if> >B</option>
@@ -362,7 +362,7 @@
 								  <option value="Z"<c:if test="${ model.record.dkih_r012 == 'Z'}"> selected </c:if> >Z</option>
 								</select>
 			 				</td>
-			 				<td class="text12">&nbsp;
+			 				<td class="text14">&nbsp;
 			 					<img onMouseOver="showPop('ens_flag_info');" onMouseOut="hidePop('ens_flag_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 				 				<span title="dkih_ensf">ENS-flag&nbsp;</span>
 				 				<div class="text11" style="position: relative;" align="left">
@@ -378,7 +378,7 @@
 				 				
 			 				</td>
 			 				<td>
-				 				<select name="dkih_ensf" id="dkih_ensf" >
+				 				<select class="selectMediumBlueE2" name="dkih_ensf" id="dkih_ensf" >
 				 				  <option selected value="">-vælg-</option>
 								  <option value="1"<c:if test="${model.record.dkih_ensf == 1}"> selected </c:if> >1</option>
 								</select>
@@ -386,13 +386,13 @@
 			 				
 		 				</tr>
 		 				<tr>
-			 				<td class="text12" align="center"><b>A.1</b>
+			 				<td class="text14" align="center"><b>A.1</b>
 				 				<font class="text16RedBold" >*</font>
 			 					<span title="dkih_a">Eksped.sted&nbsp;</span>
 			 						
 			 				</td>
-			 				<td class="text12">
-			            			<select name="dkih_a" id="dkih_a">
+			 				<td class="text14">
+			            			<select class="selectMediumBlueE2" name="dkih_a" id="dkih_a">
 					            		<option value="">-vælg-</option>
 					 				  	<c:forEach var="record" items="${model.toldstedCodeList}" >
 					 				  		<option value="${record.dkkd_kd}"<c:if test="${model.record.dkih_a == record.dkkd_kd}"> selected </c:if> >${record.dkkd_kd}</option>
@@ -402,7 +402,7 @@
 									<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
 								</a>	
 			 				</td> 
-			 				<td class="text12">
+			 				<td class="text14">
 			 					&nbsp;<img onMouseOver="showPop('ajour_info');" onMouseOut="hidePop('ajour_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 				 				<span title="dkih_ajou">Ajour.type&nbsp;</span>
 				 				<div class="text11" style="position: relative;" align="left">
@@ -424,7 +424,7 @@
 								
 				 			</td>
 				 			<td>	
-				 				<select name="dkih_ajou" id="dkih_ajou" >
+				 				<select class="selectMediumBlueE2" name="dkih_ajou" id="dkih_ajou" >
 			 					  <option value="">-vælg-</option>
 								  <option value="1"<c:if test="${ model.record.dkih_ajou == '1'}"> selected </c:if> >1</option>
 								  <option value="8"<c:if test="${ model.record.dkih_ajou == '8'}"> selected </c:if> >8</option>
@@ -434,7 +434,7 @@
 			 				</td>
 		 				</tr>
 						<tr>
-		 					<td class="text12" >
+		 					<td class="text14" >
 		 						<img onMouseOver="showPop('dkih_dtm1_info');" onMouseOut="hidePop('dkih_dtm1_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 				 				<span title="dkih_dtm1" id="v_dkih_dtm1" class="validation">Forventet ank.dato&nbsp;</span>
 				 				<div class="text11" style="position: relative;" align="left">
@@ -445,11 +445,11 @@
 								</span>
 				 				</div>
 				 			</td>
-			 				<td class="text12" align="left">
+			 				<td class="text14" align="left">
 			 					<input onKeyPress="return numberKey(event)" type="text" class="inputTextMediumBlue" name="dkih_dtm1" id="dkih_dtm1" size="16" maxlength="12" value="${model.record.dkih_dtm1}">
 		            			</td>
 				 			
-				 			<td class="text12">
+				 			<td class="text14">
 		 						<img onMouseOver="showPop('dkih_dtm2_info');" onMouseOut="hidePop('dkih_dtm2_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 				 				<span title="dkih_dtm2">Faktisk ank.dato&nbsp;</span>
 				 				<div class="text11" style="position: relative;" align="left">
@@ -461,13 +461,13 @@
 								</span>
 								</div>
 			 				</td>
-			 				<td class="text12" align="left">
+			 				<td class="text14" align="left">
 			            			<input onKeyPress="return numberKey(event)" type="text" class="inputTextMediumBlue" name="dkih_dtm2" id="dkih_dtm2" size="16" maxlength="12" value="${model.record.dkih_dtm2}">
 		            			</td>
 		 				</tr>	
 		 				<tr height="10"><td></td></tr>
 		 				<tr>
-		 					<td align="left" class="text12">&nbsp;
+		 					<td align="left" class="text14">&nbsp;
 		 						<span title="dkih_syav+dkih_syop+dkih_sysg">Intern ref.&nbsp;</span>
 				 			</td>
 				 			<td colspan="4">
@@ -475,7 +475,7 @@
 			 				</td>
 			 			</tr>
 			 			<tr>	
-			 				<td align="left" class="text12">&nbsp;
+			 				<td align="left" class="text14">&nbsp;
 		 						<span title="dkih_xref">Ekstern ref.&nbsp;</span>
 				 			</td>
 				 			<td colspan="4">
@@ -483,7 +483,7 @@
 			 				</td>
 				 		</tr>
 				 		<tr>	
-				 			<td align="left" class="text12">&nbsp;
+				 			<td align="left" class="text14">&nbsp;
 			 					<img onMouseOver="showPop('beg_fasthold_info_MAIN');" onMouseOut="hidePop('beg_fasthold_info_MAIN');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 		 						<span title="dkih_bega" id="dkih_bega_label">Beg. for fastholdelse&nbsp;</span>
 		 						<div class="text11" style="position: relative;" align="left">
@@ -560,7 +560,7 @@
 	 				<%-- SENDER --%>
 	 				<table width="100%" align="left" class="formFrameHeader" border="0" cellspacing="0" cellpadding="0">
 				 		<tr height="15">
-				 			<td class="text12White">
+				 			<td class="text14White">
 								&nbsp;<img onMouseOver="showPop('2_info');" onMouseOut="hidePop('2_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 					 			<b>&nbsp;2.</b>Afsender/Eksportør&nbsp;<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">
 				 				<div class="text11" style="position: relative;" align="left">
@@ -607,9 +607,9 @@
 							        	
 							        	
 							        	
-							            <td class="text12" align="left" >&nbsp;&nbsp;
+							            <td class="text14" align="left" >&nbsp;&nbsp;
 							            <span title="dkih_avkn">Kundenummer</span></td>
-							            <td class="text12" align="left" >&nbsp;&nbsp;
+							            <td class="text14" align="left" >&nbsp;&nbsp;
 							            <span title="dkih_02b" id="v_dkih_02b" class="validation">Navn&nbsp;</span>
 							            	<a tabindex="-1" id="dkih_02bIdLink">
 												<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
@@ -617,15 +617,15 @@
 							            </td>
 							        </tr>
 							        <tr>
-							            <td class="text12" align="left"><input type="text" class="inputTextMediumBlue" name="dkih_avkn" id="dkih_avkn" size="8" maxlength="8" value="${model.record.dkih_avkn}"></td>
-							            <td class="text12" align="left"><input type="text" class="inputTextMediumBlue" name="dkih_02b" id="dkih_02b" size="30" maxlength="35" value="${model.record.dkih_02b}"></td>
+							            <td class="text14" align="left"><input type="text" class="inputTextMediumBlue" name="dkih_avkn" id="dkih_avkn" size="8" maxlength="8" value="${model.record.dkih_avkn}"></td>
+							            <td class="text14" align="left"><input type="text" class="inputTextMediumBlue" name="dkih_02b" id="dkih_02b" size="30" maxlength="35" value="${model.record.dkih_02b}"></td>
 							            
 							        </tr>
 							        
 							        <%--
 							        <tr>
-							            <td class="text12" align="left" >&nbsp;&nbsp;<font class="text16RedBold" >*</font>EORI</td>
-							            <td class="text12" align="left" >&nbsp;&nbsp;</td>
+							            <td class="text14" align="left" >&nbsp;&nbsp;<font class="text16RedBold" >*</font>EORI</td>
+							            <td class="text14" align="left" >&nbsp;&nbsp;</td>
 							        </tr>
 							        <tr>
 							            <td align="left"><input type="text" class="inputTextMediumBlue" name="svih_aveo" id="svih_aveo" size="20" maxlength="17" value='${ svih_aveo}'></td>
@@ -635,9 +635,9 @@
 							         
 							        <tr height="4"><td>&nbsp;</td></tr>
 							        <tr>
-							            <td class="text12" align="left" >&nbsp;&nbsp;
+							            <td class="text14" align="left" >&nbsp;&nbsp;
 							            <span title="dkih_02c" id="v_dkih_02c" class="validation">Adresse</span></td>
-							            <td class="text12" align="left" >&nbsp;&nbsp;
+							            <td class="text14" align="left" >&nbsp;&nbsp;
 						            		<span title="dkih_02d" id="v_dkih_02d" class="validation">Postnummer</span></td>
 								            		
 							        </tr>
@@ -650,22 +650,22 @@
 							        	<td>
 							        		<table>
 								        		<tr>
-								            		<td class="text12" align="left" >&nbsp;&nbsp;
+								            		<td class="text14" align="left" >&nbsp;&nbsp;
 								            		<span title="dkih_02e" id="v_dkih_02e" class="validation">By</span></td>
-								            		<td class="text12" >&nbsp;</td>
+								            		<td class="text14" >&nbsp;</td>
 								            	</tr>
 								        		<tr>
 								            		<td align="left" colspan="2">
 								            			<input type="text" class="inputTextMediumBlue" name="dkih_02e" id="dkih_02e" size="30" maxlength="35" value="${model.record.dkih_02e}">
 								            		</td> 
-								            		<td class="text12" >&nbsp;</td>
+								            		<td class="text14" >&nbsp;</td>
 								        		</tr>    	
 							            	</table>
 						            </td>
 						            <td>
 							            	<table>
 								        		<tr>
-								            		<td class="text12" align="left" >&nbsp;&nbsp;
+								            		<td class="text14" align="left" >&nbsp;&nbsp;
 								            		<span title="dkih_02f" id="v_dkih_02f" class="validation">Land</span>
 																													 			
 								            		</td>
@@ -673,7 +673,7 @@
 								            	</tr>
 								        		<tr>
 								        			<td align="left">
-								            			<select name="dkih_02f" id="dkih_02f">
+								            			<select class="selectMediumBlueE2" name="dkih_02f" id="dkih_02f">
 										            		<option value="">-vælg-</option>
 										 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 										 				  		<option value="${country.dkkd_kd}"<c:if test="${model.record.dkih_02f == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
@@ -691,7 +691,7 @@
 							        </tr>
 							        
 							        <tr height="15">
-							            <td class="text12Bold" align="left" >&nbsp;</td> 
+							            <td class="text14Bold" align="left" >&nbsp;</td> 
 							        </tr>
 						        </table>
 					        </td>
@@ -707,7 +707,7 @@
 	            <td >		
 	 				<table width="100%" align="left" class="formFrameHeader" border="0" cellspacing="0" cellpadding="0">
 				 		<tr height="15">
-				 			<td class="text12White">
+				 			<td class="text14White">
 				 				&nbsp;<img onMouseOver="showPop('8_info');" onMouseOut="hidePop('8_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 				 				<b>&nbsp;8.</b><font class="text16RedBold" >*</font>Modtager&nbsp;<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">
 				 				<div class="text11" style="position: relative;" align="left">
@@ -751,9 +751,9 @@
 							        	<input type="hidden" name="orig_dkih_08e" id="orig_dkih_08e" value="${model.record.dkih_08e}">
 							        	<input type="hidden" name="orig_dkih_08f" id="orig_dkih_08f" value="${model.record.dkih_08f}">
 							        	
-							            <td class="text12" align="left" >&nbsp;&nbsp;
+							            <td class="text14" align="left" >&nbsp;&nbsp;
 							            <span title="dkih_mokn">Kundenummer</span></td>
-							            <td class="text12" align="left" >&nbsp;&nbsp;<span title="dkih_08b">Navn</span>&nbsp;
+							            <td class="text14" align="left" >&nbsp;&nbsp;<span title="dkih_08b">Navn</span>&nbsp;
 							            	<a tabindex="-1" id="dkih_08bIdLink">
 												<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
 											</a>	
@@ -764,9 +764,9 @@
 							            <td align="left"><input type="text" class="inputTextMediumBlue" name="dkih_08b" id="dkih_08b" size="30" maxlength="35" value="${model.record.dkih_08b}"></td>
 							        </tr>
 							        <tr>
-							            <td class="text12" align="left" >&nbsp;&nbsp;<font class="text16RedBold" >*</font>
+							            <td class="text14" align="left" >&nbsp;&nbsp;<font class="text16RedBold" >*</font>
 							            <span title="dkih_08a">CVR/SE-nr</span></td>
-							            <td class="text12" align="left" >&nbsp;&nbsp;</td>
+							            <td class="text14" align="left" >&nbsp;&nbsp;</td>
 							        </tr>
 							        <tr>
 							            <td align="left"><input type="text" class="inputTextMediumBlue" name="dkih_08a" id="dkih_08a" size="20" maxlength="17" value="${model.record.dkih_08a}"></td>
@@ -774,9 +774,9 @@
 							        </tr>
 							        <tr height="4"><td>&nbsp;</td></tr>
 							        <tr>
-							            <td class="text12" align="left" >&nbsp;&nbsp;
+							            <td class="text14" align="left" >&nbsp;&nbsp;
 							            <span title="dkih_08c">Adresse</span></td>
-							            <td class="text12" align="left" >&nbsp;&nbsp;
+							            <td class="text14" align="left" >&nbsp;&nbsp;
 						        			<span title="dkih_08d">Postnummer</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 								            		
 							        </tr>
@@ -788,7 +788,7 @@
 							        	<td>
 							        		<table>
 								        		<tr>
-								            		<td class="text12" align="left" >&nbsp;
+								            		<td class="text14" align="left" >&nbsp;
 								            		<span title="dkih_08e">By</span></td>
 												<td align="left">&nbsp;</td>
 								            	</tr>
@@ -801,14 +801,14 @@
 						            <td>
 							            	<table>
 								        		<tr>
-								        			<td class="text12" align="left" >&nbsp;&nbsp;
+								        			<td class="text14" align="left" >&nbsp;&nbsp;
 								            		<span title="dkih_08f">Land</span>
 																												 			
 												</td>
 								            	</tr>
 								        		<tr>
 								        			<td align="left">
-								            			<select name="dkih_08f" id="dkih_08f">
+								            			<select class="selectMediumBlueE2" name="dkih_08f" id="dkih_08f">
 										            		<option value="">-vælg-</option>
 										 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 										 				  		<option value="${country.dkkd_kd}"<c:if test="${model.record.dkih_08f == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
@@ -823,7 +823,7 @@
 						            </td>
 							        </tr>
 							        <tr height="15">
-							            <td class="text12Bold" align="left" >&nbsp;</td> 
+							            <td class="text14Bold" align="left" >&nbsp;</td> 
 							        </tr>
 							        
 						        </table>
@@ -839,7 +839,7 @@
 	 				<%-- OMBUD --%>
 	 				<table width="100%" align="left" class="formFrameHeader" border="0" cellspacing="0" cellpadding="0">
 				 		<tr height="18px">
-				 			<td class="text12White">
+				 			<td class="text14White">
 				 				&nbsp;<img onMouseOver="showPop('14_b_info');" onMouseOut="hidePop('14_b_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 		 						<b>&nbsp;14.</b><font class="text16RedBold" >*</font>
 				 				Klarereren / Repræsentant&nbsp;<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">
@@ -872,18 +872,18 @@
 					 		<td>
 						 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
 							 		<tr height="15">
-							            <td class="text12" align="left">&nbsp;</td> 
+							            <td class="text14" align="left">&nbsp;</td> 
 							        </tr>
 							        <tr>
-							            <td class="text12" align="left" >&nbsp;&nbsp;<font class="text16RedBold" >*</font>
+							            <td class="text14" align="left" >&nbsp;&nbsp;<font class="text16RedBold" >*</font>
 							            <span title="dkih_14a">Repr. CVR/SE-nr.</span></td>
-							            <td class="text12" align="left" >&nbsp;&nbsp;<font class="text16RedBold" >*</font>
+							            <td class="text14" align="left" >&nbsp;&nbsp;<font class="text16RedBold" >*</font>
 							            <span title="dkih_14b">Repræsentationsstatus</span></td>
 							        </tr>
 							        <tr>
 							            <td align="left"><input type="text" class="inputTextMediumBlue" name="dkih_14a" id="dkih_14a" size="19" maxlength="18" value="${model.record.dkih_14a}"></td>
 							            <td align="left">
-							            	<select name="dkih_14b" id="dkih_14b">
+							            	<select class="selectMediumBlueE2" name="dkih_14b" id="dkih_14b">
 			 									<option value="">-vælg-</option>
 							  					<option value="1"
 								  				<c:if test="${model.record.dkih_14b == '1'}"> selected </c:if> >1-Klarerer</option>
@@ -896,9 +896,9 @@
 							        </tr>
 							        <%--
 							        <tr>
-							            <td align="left" class="text12" align="left" >&nbsp;&nbsp;<font class="text16RedBold" >*</font>
+							            <td align="left" class="text14" align="left" >&nbsp;&nbsp;<font class="text16RedBold" >*</font>
 							            <span title="dkih_??">Handläggare</span></td>
-							            <td align="left"class="text12" align="left" >&nbsp;&nbsp;<font class="text16RedBold" >*</font>
+							            <td align="left"class="text14" align="left" >&nbsp;&nbsp;<font class="text16RedBold" >*</font>
 							            <span title="dkih_??">Telefon</span></td>
 							            <td>&nbsp;</td>
 							        </tr>
@@ -922,7 +922,7 @@
 					<%-- Special section --%>
 					<table align="left" class="formFrameHeader" width="100%" border="0" cellspacing="0" cellpadding="0">
 				 		<tr height="15">
-				 			<td class="text12White">
+				 			<td class="text14White">
 				 				<b>&nbsp;44.</b>&nbsp;Øvrige supplerende oplysninger&nbsp;/&nbsp;Certifikat&nbsp;<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">
 			 				</td>
 		 				</tr>
@@ -938,18 +938,18 @@
 					 		<td>
 						 		<table align="left" border="0" cellspacing="0" cellpadding="0">
 							 		<tr height="15">
-							            <td class="text12Bold" align="left" >&nbsp;</td> 
+							            <td class="text14Bold" align="left" >&nbsp;</td> 
 							        </tr>
 							        <tr>
-							            <td class="text12" align="left" >&nbsp;
+							            <td class="text14" align="left" >&nbsp;
 							            <span title="dkih_28b">Fakt.nr.&nbsp;</span></td>
 							            <td ><input type="text" class="inputTextMediumBlue" name="dkih_28b" id="dkih_28b" size="18" maxlength="17" value='${ model.record.dkih_28b}'></td>
-							            <td class="text12" align="left" >&nbsp;&nbsp;&nbsp;
+							            <td class="text14" align="left" >&nbsp;&nbsp;&nbsp;
 							            <img onMouseOver="showPop('faktTyp_info');" onMouseOut="hidePop('faktTyp_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 						 				<span title="dkih_28a">Fakt.type&nbsp;</span>
 							            <div class="text11" style="position:relative;" align="left">
 							            <span  style="position:absolute; left:0px; top:0px;" id="faktTyp_info" class="popupWithInputText"  >
-						           			<font class="text12">
+						           			<font class="text14">
 						           			<ul>
 							           			<li><b>N380</b> handelsfaktura</li>
 							           			<li><b>N325</b> proformafaktura</li>
@@ -959,20 +959,20 @@
 										</div>
 										</td>
 							            <td>
-							 				<select name="dkih_28a" id="dkih_28a">
+							 				<select class="selectMediumBlueE2" name="dkih_28a" id="dkih_28a">
 							 					<option value="">-vælg-</option><option value="N380"<c:if test="${ model.record.dkih_28a == 'N380'}"> selected </c:if> >N380</option>
 											  	<option value="N325"<c:if test="${ model.record.dkih_28a == 'N325'}"> selected </c:if> >N325</option>
 											</select>
 			 							</td>
-			 							<td class="text12">&nbsp;&nbsp;<span title="dkih_28c">Fakt.dato</span>
+			 							<td class="text14">&nbsp;&nbsp;<span title="dkih_28c">Fakt.dato</span>
 			 								<input onKeyPress="return numberKey(event)" type="text" class="inputTextMediumBlue" name="dkih_28c" id="dkih_28c" size="9" maxlength="8" value="${model.record.dkih_28c}">
 			 							</td>
 							        </tr>
 							        <tr height="5">
-							            <td class="text12Bold" align="left" >&nbsp;</td> 
+							            <td class="text14Bold" align="left" >&nbsp;</td> 
 							        </tr>
 							        <tr>
-							            <td colspan="5" class="text12" align="left" >&nbsp;
+							            <td colspan="5" class="text14" align="left" >&nbsp;
 							            <span title="fakturaListTotSum/fakturaListTotValidCurrency"></span>Fakturasum. fra Fakturaer&nbsp;</span>
 							            <input readonly type="text" class="inputTextReadOnly"  name="fakturaListTotSum" id="fakturaListTotSum" size="15" value='${ model.record.fakturaListTotSum}'>
 							            &nbsp;&nbsp;
@@ -983,7 +983,7 @@
 							        </tr>
 							         
 							        <tr height="5">
-							            <td class="text12Bold" align="left" >&nbsp;</td> 
+							            <td class="text14Bold" align="left" >&nbsp;</td> 
 							        </tr>
 								</table>
 							</td>
@@ -999,18 +999,18 @@
 	            <td >
 	                <table align="left" border="0" cellspacing="0" cellpadding="0">
 				 		<tr>
-				 			<td class="text12">
+				 			<td class="text14">
 				 				<b>&nbsp;22.2</b>&nbsp;
 				 				<span title="dkih_222" id="v_dkih_222" class="validation">Fakturabeløb&nbsp;</span>
 				 			</td>
 				 			<td align="left" >
 				 				<input onKeyPress="return amountKey(event)" type="text" class="inputTextMediumBlue" name="dkih_222" id="dkih_222" size="20" maxlength="20" value="${model.record.dkih_222}">
 				 			</td>
-				 			<td class="text12">
+				 			<td class="text14">
 				 				<b>&nbsp;22.1</b>&nbsp;
 				 				<span title="dkih_221" id="v_dkih_221" class="validation">Fakuramøntsort</span>
 				 				<%-- Note: onChange event in jQuery for this currency list --%>
-				 				<select name="dkih_221" id="dkih_221" >
+				 				<select class="selectMediumBlueE2" name="dkih_221" id="dkih_221" >
 				 				  <option value="">-vælg-</option>	
 				 				  <c:forEach var="currency" items="${model.currencyCodeList}" >
 			 				  		<option value="${currency.dkkd_kd}"<c:if test="${ model.record.dkih_221 == currency.dkkd_kd}"> selected </c:if> >${currency.dkkd_kd}</option>
@@ -1023,11 +1023,11 @@
 			 				</td>
 		 				</tr>
 		 				<tr>
-			 				<td class="text12" align="right">
+			 				<td class="text14" align="right">
 				 				<span title="dkih_221b">Kurs&nbsp;</span>
 				 			</td>
-				 			<td class="text12" align="left" ><input onKeyPress="return amountKey(event)" type="text" class="inputTextMediumBlue" name="dkih_221b" id="dkih_221b" size="20" maxlength="20" value="${model.record.dkih_221b}"></td>
-				 			<td class="text12" align="left" >&nbsp;
+				 			<td class="text14" align="left" ><input onKeyPress="return amountKey(event)" type="text" class="inputTextMediumBlue" name="dkih_221b" id="dkih_221b" size="20" maxlength="20" value="${model.record.dkih_221b}"></td>
+				 			<td class="text14" align="left" >&nbsp;
 					 			<span title="dkih_221c">Faktor</span>
 					 			<input onKeyPress="return numberKey(event)" type="text" class="inputTextMediumBlue" name="dkih_221c" id="dkih_221c" size="8" maxlength="7" value="${model.record.dkih_221c}">
 				 			</td>
@@ -1066,7 +1066,7 @@
 					        </tr>
 					        <tr height="12"><td class="text"></td> </tr>
 					 		<tr>
-					            <td class="text12" align="left" >
+					            <td class="text14" align="left" >
 					            <img onMouseOver="showPop('15_a_info');" onMouseOut="hidePop('15_a_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 			 					<b>15.</b><font class="text16RedBold" >*</font><span title="dkih_15">Afsend.land</span>&nbsp;
 			 					<div class="text11" style="position: relative;" align="left">
@@ -1084,7 +1084,7 @@
 					            </td>
 					            
 					            <td >
-					            	<select name="dkih_15" id="dkih_15">
+					            	<select class="selectMediumBlueE2" name="dkih_15" id="dkih_15">
 				 						<option value="">-vælg-</option>
 					 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 					 				  		<option value="${country.dkkd_kd}"<c:if test="${model.record.dkih_15 == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
@@ -1098,7 +1098,7 @@
 							<tr height="8"><td class="text"></td> </tr>
 							
 							<tr>
-					            <td class="text12" align="left" >
+					            <td class="text14" align="left" >
 					            <img onMouseOver="showPop('18_1_info');" onMouseOut="hidePop('18_1_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 			 					<b>18.1</b><span title="dkih_181" id="v_dkih_181" class="validation">Transp.ID</span>
 			 					<div class="text11" style="position: relative;" align="left">
@@ -1120,7 +1120,7 @@
 								</td>
 							</tr>
 							<tr>
-					            <td class="text12" align="left" >
+					            <td class="text14" align="left" >
 					            <img onMouseOver="showPop('18_a_info');" onMouseOut="hidePop('18_a_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 			 					<b>18.2</b><span title="dkih_18a">Transp.ref.</span>
 			 					<div class="text11" style="position: relative;" align="left">
@@ -1149,7 +1149,7 @@
 			 		<td>
 						<table border="0" cellspacing="1" cellpadding="0">	
 					 		<tr>
-					            <td class="text12" align="left">
+					            <td class="text14" align="left">
 					            <img onMouseOver="showPop('21_info');" onMouseOut="hidePop('21_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 					            <b>21.</b>
 					            <span title="dkih_211">Aktive transp. nationalitet ved grænsen&nbsp;</span>
@@ -1169,7 +1169,7 @@
 								</div>
 								</td>
 								<td>
-					            		<select name="dkih_211" id="dkih_211">
+					            		<select class="selectMediumBlueE2" name="dkih_211" id="dkih_211">
 				 						<option value="">-vælg-</option>
 					 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 					 				  		<option value="${country.dkkd_kd}"<c:if test="${model.record.dkih_211 == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
@@ -1188,7 +1188,7 @@
 			 		<td>
 			 			<table border="0" cellspacing="1" cellpadding="0">
 			 				<tr>
-					            <td class="text12" align="left" >
+					            <td class="text14" align="left" >
 					            <img onMouseOver="showPop('25_info');" onMouseOut="hidePop('25_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 					            <b>25.</b>
 					            <span title="dkih_25" id="v_dkih_25" class="validation">Transp. ved grænsen&nbsp;</span>
@@ -1204,8 +1204,8 @@
 								</span>	
 								</div>
 								</td>	
-					            <td class="text12" >
-			           				<select name="dkih_25" id="dkih_25">
+					            <td class="text14" >
+			           				<select class="selectMediumBlueE2" name="dkih_25" id="dkih_25">
 				 						<option value="">-vælg-</option>
 					 				  	<c:forEach var="code" items="${model.transportR25R26CodeList}" >
 					 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkih_25 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}-${code.dkkf_txt}</option>
@@ -1222,7 +1222,7 @@
 			 			<table border="0" cellspacing="1" cellpadding="0">
 			 				<tr height="8"><td class="text"></td> </tr>
 					 		<tr>
-					            <td class="text12" align="left" >
+					            <td class="text14" align="left" >
 					            <img onMouseOver="showPop('26_info');" onMouseOut="hidePop('26_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 					            <b>26.</b>
 					            <span title="dkih_26" id="v_dkih_26" class="validation">Indenlandsk transp.måde&nbsp;</span>
@@ -1237,8 +1237,8 @@
 								</div>
 								</td>
 					            
-					            <td class="text12" >
-			           				<select name="dkih_26" id="dkih_26">
+					            <td class="text14" >
+			           				<select class="selectMediumBlueE2" name="dkih_26" id="dkih_26">
 				 						<option value="">-vælg-</option>
 					 				  	<c:forEach var="code" items="${model.transportR25R26CodeList}" >
 					 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkih_26 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}-${code.dkkf_txt}</option>
@@ -1256,7 +1256,7 @@
 					<td valign="top">
 			 			<table border="0" cellspacing="0" cellpadding="0">
 					 		<tr>
-					            <td class="text12" align="left" >
+					            <td class="text14" align="left" >
 					            <img onMouseOver="showPop('s29_info');" onMouseOut="hidePop('s29_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 			 					<span title="dkih_s29"><b>S29.</b>&nbsp;Bet.måde for transp.udgifter</span>&nbsp;
 			 					<div class="text11" style="position: relative;" align="left">
@@ -1279,7 +1279,7 @@
 								</div>	
 					            </td>
 					            <td >
-					            		<select name="dkih_s29" id="dkih_s29">
+					            		<select class="selectMediumBlueE2" name="dkih_s29" id="dkih_s29">
 				 						<option value="">-vælg-</option>
 					 				  	<c:forEach var="code" items="${model.betalningForTransportRS29CodeList}" >
 					 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkih_s29 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
@@ -1289,7 +1289,7 @@
 							</tr>
 							<tr height="5"><td>&nbsp;</td> </tr>
 							<tr>
-				            <td class="text12" align="left" >
+				            <td class="text14" align="left" >
 				            <img onMouseOver="showPop('dkih_201_info');" onMouseOut="hidePop('dkih_201_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 		 					<span title="dkih_201">&nbsp;Leveringsbetingelser [kode]</span>&nbsp;
 				            <div class="text11" style="position: relative;" align="left">
@@ -1307,7 +1307,7 @@
 							</div>	
 							</td>
 				            <td >
-					            	<select name="dkih_201" id="dkih_201">
+					            	<select class="selectMediumBlueE2" name="dkih_201" id="dkih_201">
 			 						<option value="">-vælg-</option>
 					 				  	<c:forEach var="code" items="${model.incotermsCodeList}" >
 					 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkih_201 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
@@ -1317,7 +1317,7 @@
 							</tr>
 			 			
 			 				<tr>
-					            <td class="text12" align="left" >
+					            <td class="text14" align="left" >
 					            <img onMouseOver="showPop('dkih_202_info');" onMouseOut="hidePop('dkih_202_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 			 					<span title="dkih_202">&nbsp;Sted</span>&nbsp;
 					            <div class="text11" style="position: relative;" align="left">
@@ -1348,7 +1348,7 @@
 			 				<tr height="1"><td colspan="2" style="border-bottom:1px solid;border-color:#DDDDDD;" class="text">&nbsp;</td> </tr>
 			 				<tr height="10"><td class="text">&nbsp;</td> </tr>
 			 				<tr>
-					            <td class="text12" align="left" >
+					            <td class="text14" align="left" >
 					            <img onMouseOver="showPop('30_info');" onMouseOut="hidePop('30_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">	
 					            <b>30.&nbsp;Varernes placering</b>
 					           
@@ -1364,30 +1364,30 @@
 								</td>	
 					        </tr>
 				            <tr>
-				            		<td class="text12" align="left" >
+				            		<td class="text14" align="left" >
 					            &nbsp;&nbsp;&nbsp;30.1&nbsp;
 					            <span title="dkih_301">Oplagshav. ISO kode</span></td>
 					            <td >
-						            <select name="dkih_301" id="dkih_301">
+						            <select class="selectMediumBlueE2" name="dkih_301" id="dkih_301">
 					 				  <option value="">-vælg-</option>
 									  <option value="DK"<c:if test="${model.record.dkih_301 == 'DK'}"> selected </c:if> >DK</option>
 									</select>
 					            </td>
 	        					</tr>
 	        					<tr>
-				            		<td class="text12" align="left" >
+				            		<td class="text14" align="left" >
 					            &nbsp;&nbsp;&nbsp;30.2&nbsp;
 					            <span title="dkih_302">Oplagshav. SE-nr</span></td>
 					            <td ><input type="text" class="inputTextMediumBlue" name="dkih_302" id="dkih_302" size="17" maxlength="16" value="${model.record.dkih_302}"></td>
 	        					</tr>
 	        					<tr>
-				            		<td class="text12" align="left" >
+				            		<td class="text14" align="left" >
 					            &nbsp;&nbsp;&nbsp;30.3&nbsp;
 					            <span title="dkih_303">Bevillingstype</span></td>
 					            <td ><input type="text" class="inputTextMediumBlue" name="dkih_303" id="dkih_303" size="4" maxlength="3" value="${model.record.dkih_303}"></td>
 	        					</tr>
 	        					<tr>
-				            		<td class="text12" align="left" >
+				            		<td class="text14" align="left" >
 					            &nbsp;&nbsp;&nbsp;30.4&nbsp;
 					            <span title="dkih_304">Adresseløbenr.</span></td>
 					            <td ><input type="text" class="inputTextMediumBlue" name="dkih_304" id="dkih_304" size="4" maxlength="3" value="${model.record.dkih_304}"></td>
@@ -1395,7 +1395,7 @@
 	        					<tr height="8"><td class="text"></td> </tr>
 			 				
 	        					<tr>
-				            		<td class="text12" align="left" >
+				            		<td class="text14" align="left" >
 				            		<img onMouseOver="showPop('49_info');" onMouseOut="hidePop('49_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">	
 					            <b>49.&nbsp;</b>
 					            <span title="dkih_49">Ident. af oplag</span>
@@ -1414,7 +1414,7 @@
 				            
 	        					<tr height="10"><td class="text">&nbsp;</td> </tr>
 	        					<tr>
-					            <td class="text12" align="left" >
+					            <td class="text14" align="left" >
 					            <img onMouseOver="showPop('brut_info');" onMouseOut="hidePop('brut_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">	
 					            <span title="dkih_brut">Bruttovægt</span>
 					            <div class="text11" style="position: relative;" align="left">
@@ -1428,7 +1428,7 @@
 					            </td>
 					        </tr>
 				            <tr>
-					            <td class="text12" align="left" >
+					            <td class="text14" align="left" >
 					            <img onMouseOver="showPop('6_info');" onMouseOut="hidePop('6_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">	
 					            <b>6.&nbsp;</b><span title="dkih_06">Kolli i alt</span>
 					            <div class="text11" style="position: relative;" align="left">
@@ -1446,7 +1446,7 @@
 					        </tr>
 					        
 					        <tr>
-					        		<td class="text12Gray" align="left" >
+					        		<td class="text14Gray" align="left" >
 					        			Antal kollin (i vareposterne)&nbsp;
 					        		</td>
 						        	<td >
@@ -1472,7 +1472,7 @@
 					            </td>
 					        </tr>
 					        <tr>
-					        		<td class="text12Gray" align="left" >
+					        		<td class="text14Gray" align="left" >
 					        			Antal vareposter &nbsp;
 					        		</td>
 						        	<td >
@@ -1491,7 +1491,7 @@
 					            </td>
 					        </tr>
 					        <tr>
-					        		<td class="text12Gray" align="left" >
+					        		<td class="text14Gray" align="left" >
 					        			Sum av varelinjebeløp&nbsp;
 					        		</td>
 						        	<td >
@@ -1508,7 +1508,7 @@
 					        </tr>
 					        <tr height="10"><td class="text">&nbsp;</td> </tr>
 					        <tr>
-			 					<td class="text12" colspan="2" >
+			 					<td class="text14" colspan="2" >
 			 					<img onMouseOver="showPop('dkih_12_info');" onMouseOut="hidePop('dkih_12_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 				 				&nbsp;<b>12.&nbsp;Værdioplysninger&nbsp;</b>
 				 				<div class="text11" style="position: relative;" align="left">
@@ -1527,20 +1527,20 @@
 								</td>
 							</tr> 
 							<tr>
-								<td class="text12" align="right" ><span title="dkih_12">Fragt inden for EU</span>&nbsp;&nbsp;&nbsp;</td>
-			 					<td class="text12">
+								<td class="text14" align="right" ><span title="dkih_12">Fragt inden for EU</span>&nbsp;&nbsp;&nbsp;</td>
+			 					<td class="text14">
 			 						<input onKeyPress="return amountKey(event)" style="text-align: right" type="text" class="inputTextMediumBlue" name="dkih_12" id="dkih_12" size="16" maxlength="15" value="${model.record.dkih_12}">
 			 					</td>
 							</tr>	
 							<tr>
-								<td class="text12" align="right" ><span title="dkih_12e">Fragt uden for EU</span>&nbsp;&nbsp;&nbsp;</td>
-			 					<td class="text12">
+								<td class="text14" align="right" ><span title="dkih_12e">Fragt uden for EU</span>&nbsp;&nbsp;&nbsp;</td>
+			 					<td class="text14">
 			 						<input onKeyPress="return amountKey(event)" style="text-align: right" type="text" class="inputTextMediumBlue" name="dkih_12e" id="dkih_12e" size="16" maxlength="15" value="${model.record.dkih_12e}">
 			 					</td>
 							</tr>					        
 							<tr height="10"><td class="text">&nbsp;</td> </tr>	
 					        <tr>
-					            <td class="text12" align="left" >
+					            <td class="text14" align="left" >
 					            <img onMouseOver="showPop('s17_info');" onMouseOut="hidePop('s17_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">	
 					            <span title="dkih_s17"><b>S17.</b>&nbsp;Lastningssted</span>
 					            <div class="text11" style="position: relative;" align="left">
@@ -1558,7 +1558,7 @@
 					            <td ><input type="text" class="inputTextMediumBlue" name="dkih_s17" id="dkih_s17" size="20" maxlength="35" value="${model.record.dkih_s17}"></td>
 					        </tr>
 					        <tr>
-					            <td class="text12" align="left" >
+					            <td class="text14" align="left" >
 					            <img onMouseOver="showPop('s18_info');" onMouseOut="hidePop('s18_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">	
 					            <span title="dkih_s18"><b>S18.</b>&nbsp;Losningssted</span>
 					            <div class="text11" style="position: relative;" align="left">
@@ -1580,7 +1580,7 @@
 					            <td ><input type="text" class="inputTextMediumBlue" name="dkih_s18" id="dkih_s18" size="20" maxlength="35" value="${model.record.dkih_s18}"></td>
 					        </tr>
 					        <tr>
-					            <td class="text12" align="left" >
+					            <td class="text14" align="left" >
 					            <img onMouseOver="showPop('s28_info');" onMouseOut="hidePop('s28_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">	
 					            <span title="dkih_s28"><b>S28.</b>&nbsp;Segl.ident</span>
 					            <div class="text11" style="position: relative;" align="left">
@@ -1597,7 +1597,7 @@
 					            <td ><input type="text" class="inputTextMediumBlue" name="dkih_s28" id="dkih_s28" size="20" maxlength="35" value="${model.record.dkih_s28}"></td>
 					        </tr>
 					        <tr>
-					            <td class="text12" align="left" >
+					            <td class="text14" align="left" >
 					            <img onMouseOver="showPop('s32_info');" onMouseOut="hidePop('s32_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">	
 					            <span title="dkih_s32"><b>S32.</b>&nbsp;Indikator a.s.o</span>
 					            <div class="text11" style="position: relative;" align="left">
@@ -1612,7 +1612,7 @@
 								</div>
 					            </td>
 					            <td >
-					            		<select name="dkih_s32" id="dkih_s32">
+					            		<select class="selectMediumBlueE2" name="dkih_s32" id="dkih_s32">
 					 				  <option value="">-vælg-</option>
 									  <option value="A"<c:if test="${model.record.dkih_s32 == 'A'}"> selected </c:if> >A-Expresforsendelser</option>
 									  <option value="C"<c:if test="${model.record.dkih_s32 == 'C'}"> selected </c:if> >C-Vejtransport</option>
@@ -1624,13 +1624,13 @@
 					        </tr>
 					        <tr height="15"><td class="text"></td></tr>
 					        <tr>
-				 				<td class="text12" align="left">&nbsp;</td>
-					 			<td class="text12" align="left" >
+				 				<td class="text14" align="left">&nbsp;</td>
+					 			<td class="text14" align="left" >
 				 					<img onMouseOver="showPop('recalculationFlag_info');" onMouseOut="hidePop('recalculationFlag_info');"style="vertical-align:middle;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">	
-				 					<input type="checkbox" name="recalculationFlag" id="recalculationFlag" value="1" <c:if test="${model.record.dkih_genb == '1'}"> checked </c:if> ><font class="text12MediumBlue"><b>Genberegne vareposter</b></font>						
+				 					<input type="checkbox" name="recalculationFlag" id="recalculationFlag" value="1" <c:if test="${model.record.dkih_genb == '1'}"> checked </c:if> ><font class="text14MediumBlue"><b>Genberegne vareposter</b></font>						
 				 					<div class="text11" style="position: relative;" align="left">
 									<span style="position:absolute;top:2px; width:250px;" id="recalculationFlag_info" class="popupWithInputText text11"  >
-					           			<font class="text12">Genberegne den statistiske værdi af alle varer poster</font>
+					           			<font class="text14">Genberegne den statistiske værdi af alle varer poster</font>
 				           			</span>
 									</div>
 					 			</td>
@@ -1724,7 +1724,7 @@
 			 				<%-- =========== --%>	
 			 				<table width="100%" align="left" class="formFrameHeader" border="0" cellspacing="0" cellpadding="0">
 						 		<tr height="18px">
-						 			<td class="text12White">
+						 			<td class="text14White">
 						 				&nbsp;<img onMouseOver="showPop('transportor_info');" onMouseOut="hidePop('transportor_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 				 						Transportør&nbsp;<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">
 				 						<div class="text11" style="position: relative;" align="left">
@@ -1750,7 +1750,7 @@
 							 		<td>
 								 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
 									 		<tr height="15">
-									            <td class="text12" align="left">&nbsp;</td> 
+									            <td class="text14" align="left">&nbsp;</td> 
 									        </tr>
 									        <tr>
 									        	<%-- ================================================================================== --%>
@@ -1766,9 +1766,9 @@
 									        	<input type="hidden" name="orig_dkih_trby" id="orig_dkih_trby" value='${model.record.dkih_trby}'>
 									        	<input type="hidden" name="orig_dkih_trlk" id="orig_dkih_trlk" value='${model.record.dkih_trlk}'>
 							        	
-									            <td class="text12" align="left" >&nbsp;&nbsp;
+									            <td class="text14" align="left" >&nbsp;&nbsp;
 									            <span title="dkih_trkn">Kundenummer</span></td>
-									            <td class="text12" align="left" >&nbsp;&nbsp;<span title="dkih_trna">Navn</span>
+									            <td class="text14" align="left" >&nbsp;&nbsp;<span title="dkih_trna">Navn</span>
 									            	<a tabindex="-1" id="dkih_trnaIdLink">
 													<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
 													</a>
@@ -1779,9 +1779,9 @@
 									            <td align="left"><input type="text" class="inputTextMediumBlue" name="dkih_trna" id="dkih_trna" size="30" maxlength="35" value="${model.record.dkih_trna}"></td>
 									        </tr>
 									        <tr>
-									            <td class="text12" align="left" >&nbsp;&nbsp;
+									            <td class="text14" align="left" >&nbsp;&nbsp;
 									            <span title="dkih_treo">CVR/SE-nr.</span></td>
-									            <td class="text12" align="left" >&nbsp;&nbsp;</td>
+									            <td class="text14" align="left" >&nbsp;&nbsp;</td>
 									        </tr>
 									        <tr>
 									            <td align="left"><input type="text" class="inputTextMediumBlue" name="dkih_treo" id="dkih_treo" size="19" maxlength="18" value="${model.record.dkih_treo}"></td>
@@ -1789,9 +1789,9 @@
 									        </tr>
 									        <tr height="4"><td>&nbsp;</td></tr>
 									        <tr>
-									            <td class="text12" align="left" >&nbsp;&nbsp;
+									            <td class="text14" align="left" >&nbsp;&nbsp;
 									            <span title="dkih_trga">Adresse</span></td>
-									            <td class="text12" align="left" >&nbsp;&nbsp;
+									            <td class="text14" align="left" >&nbsp;&nbsp;
 								        			<span title="dkih_trpo">Postnummer</span></td>
 										            		
 									        </tr>
@@ -1804,7 +1804,7 @@
 									        		<td>
 										        		<table>
 										        		<tr>
-										            		<td class="text12" align="left" >&nbsp;
+										            		<td class="text14" align="left" >&nbsp;
 										            		<span title="dkih_trby">By</span></td>
 										            		<td align="left">&nbsp;</td>
 										            	</tr>
@@ -1819,14 +1819,14 @@
 									            <td >
 										            	<table>
 										        		<tr>
-										        			<td class="text12" align="left" >&nbsp;&nbsp;
+										        			<td class="text14" align="left" >&nbsp;&nbsp;
 										            		<span title="dkih_trlk">Land</span>
 																														 			
 														</td>
 										            	</tr>
 										        		<tr >
 										        			<td align="left">
-										            			<select name="dkih_trlk" id="dkih_trlk">
+										            			<select class="selectMediumBlueE2" name="dkih_trlk" id="dkih_trlk">
 												            		<option value="">-vælg-</option>
 											 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 											 				  		<option value="${country.dkkd_kd}"<c:if test="${model.record.dkih_trlk == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
@@ -1841,8 +1841,8 @@
 									            </td>
 									        </tr>
 									        <tr height="15">
-								            		<td class="text12Bold" align="left" >&nbsp;</td>
-								            		<td class="text12Bold" align="left" >&nbsp;</td> 
+								            		<td class="text14Bold" align="left" >&nbsp;</td>
+								            		<td class="text14Bold" align="left" >&nbsp;</td> 
 									        </tr>
 								        </table>
 							        </td>
@@ -1863,7 +1863,7 @@
 			            <td >		
 			 				<table width="100%" align="left" class="formFrameHeader" border="0" cellspacing="0" cellpadding="0">
 						 		<tr height="18px">
-						 			<td class="text12White">
+						 			<td class="text14White">
 						 				&nbsp;<img onMouseOver="showPop('underettes_info');" onMouseOut="hidePop('underettes_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 				 						Underettes&nbsp;<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">
 				 						<div class="text11" style="position: relative;" align="left">
@@ -1888,7 +1888,7 @@
 							 		<td>
 								 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
 									 		<tr height="15">
-									            <td class="text12" align="left">&nbsp;</td> 
+									            <td class="text14" align="left">&nbsp;</td> 
 									        </tr>
 									        <tr>
 									        	<%-- ================================================================================== --%>
@@ -1904,9 +1904,9 @@
 									        	<input type="hidden" name="orig_dkih_niby" id="orig_dkih_niby" value='${model.record.dkih_niby}'>
 									        	<input type="hidden" name="orig_dkih_nilk" id="orig_dkih_nilk" value='${model.record.dkih_nilk}'>
 							        	
-									            <td class="text12" align="left" >&nbsp;&nbsp;
+									            <td class="text14" align="left" >&nbsp;&nbsp;
 									            <span title="dkih_nikn">Kundenummer</span></td>
-									            <td class="text12" align="left" >&nbsp;&nbsp;
+									            <td class="text14" align="left" >&nbsp;&nbsp;
 									            <span title="dkih_nina">Navn</span>
 									            	<a tabindex="-1" id="dkih_ninaIdLink">
 													<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
@@ -1918,9 +1918,9 @@
 									            <td align="left"><input type="text" class="inputTextMediumBlue" name="dkih_nina" id="dkih_nina" size="30" maxlength="35" value="${model.record.dkih_nina}"></td>
 									        </tr>
 									        <tr>
-									            <td class="text12" align="left" >&nbsp;&nbsp;
+									            <td class="text14" align="left" >&nbsp;&nbsp;
 									            <span title="dkih_nieo">CVR/SE-nr.</span></td>
-									            <td class="text12" align="left" >&nbsp;&nbsp;</td>
+									            <td class="text14" align="left" >&nbsp;&nbsp;</td>
 									        </tr>
 									        <tr>
 									            <td align="left"><input type="text" class="inputTextMediumBlue" name="dkih_nieo" id="dkih_nieo" size="19" maxlength="18" value="${model.record.dkih_nieo}"></td>
@@ -1928,9 +1928,9 @@
 									        </tr>
 									        <tr height="4"><td>&nbsp;</td></tr>
 									        <tr>
-									            <td class="text12" align="left" >&nbsp;&nbsp;
+									            <td class="text14" align="left" >&nbsp;&nbsp;
 									            <span title="dkih_niga">Adresse</span></td>
-									            <td class="text12" align="left" >&nbsp;&nbsp;
+									            <td class="text14" align="left" >&nbsp;&nbsp;
 								        			<span title="dkih_nipo">Postnummer</span></td>
 										            		
 									        </tr>
@@ -1943,7 +1943,7 @@
 									        		<td>
 										        		<table>
 										        		<tr>
-										            		<td class="text12" align="left" >&nbsp;
+										            		<td class="text14" align="left" >&nbsp;
 										            		<span title="dkih_niby">By</span></td>
 										            		<td align="left">&nbsp;</td>
 										            	</tr>
@@ -1958,14 +1958,14 @@
 									            <td >
 										            	<table>
 										        		<tr>
-										        			<td class="text12" align="left" >&nbsp;&nbsp;
+										        			<td class="text14" align="left" >&nbsp;&nbsp;
 										            		<span title="dkih_nilk">Land</span>
 																														 			
 														</td>
 										            	</tr>
 										        		<tr >
 										        			<td align="left">
-										            			<select name="dkih_nilk" id="dkih_nilk">
+										            			<select class="selectMediumBlueE2" name="dkih_nilk" id="dkih_nilk">
 												            		<option value="">-vælg-</option>
 											 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 											 				  		<option value="${country.dkkd_kd}"<c:if test="${model.record.dkih_nilk == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
@@ -1980,8 +1980,8 @@
 									            </td>
 									        </tr>
 									        <tr height="15">
-								            		<td class="text12Bold" align="left" >&nbsp;</td>
-								            		<td class="text12Bold" align="left" >&nbsp;</td> 
+								            		<td class="text14Bold" align="left" >&nbsp;</td>
+								            		<td class="text14Bold" align="left" >&nbsp;</td> 
 									        </tr>
 								        </table>
 							        </td>
@@ -2003,10 +2003,10 @@
 							<td valign="top">
 					 			<table border="0" cellspacing="0" cellpadding="0">
 				                	<tr>
-						 			<td class="text12" >
+						 			<td class="text14" >
 						 				<table align="left" border="0" cellspacing="0" cellpadding="0">
 							 				<tr>
-								 				<td class="text12">
+								 				<td class="text14">
 								 					<img onMouseOver="showPop('beg_fasthold_info');" onMouseOut="hidePop('beg_fasthold_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 								 					<span title="dkih_begb...dkih_begd">Beg. for fastholdelse</span>&nbsp;
 								 					<div class="text11" style="position: relative;" align="left">
@@ -2017,12 +2017,12 @@
 													</span>
 													</div>
 								 				</td>
-								 				<td class="text12" align="left"><button name="beg_fastholdFieldsButton" class="buttonGray" type="button" onClick="showPop('beg_fastholdFields');" >Mere...</button> 
+								 				<td class="text14" align="left"><button name="beg_fastholdFieldsButton" class="buttonGray" type="button" onClick="showPop('beg_fastholdFields');" >Mere...</button> 
 											        <span style="position:absolute; left:600px; top:1100px; width:350px; height:300px;" id="beg_fastholdFields" class="popupWithInputText"  >
 										           		<div class="text10" align="left">
 										           			<table>
 										           				<tr>
-												           			<td class="text12">
+												           			<td class="text14">
 					 												<b>Begrundelse for fastholdelse</b>
 					 												</td>
 																</tr>
@@ -2062,10 +2062,10 @@
 						<tr height="10"><td></td><td></td></tr>
 						<tr>
 							<td width="2">&nbsp;</td>
-				 			<td class="text12" >
+				 			<td class="text14" >
 				 				<table align="left" border="0" cellspacing="0" cellpadding="0">
 								<tr>
-						 			<td colspan="2" class="text12" align="left" >
+						 			<td colspan="2" class="text14" align="left" >
 						 			<img onMouseOver="showPop('7_info');" onMouseOut="hidePop('7_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 						 			<b>7.</b>&nbsp;
 						 			<span title="dkih_07a...dkih_07d"><b>Referencenummer&nbsp;</b></span>
@@ -2131,38 +2131,38 @@
 						<tr height="30"><td>&nbsp;</td><td>&nbsp;</td></tr> 
 						<tr>
 							<td width="2">&nbsp;</td>
-				 			<td class="text12">
+				 			<td class="text14">
 				 				<table align="left" border="0" cellspacing="0" cellpadding="0">
 				 					<tr height="1"><td></td></tr>
 					 				<tr>
-					 					<td class="text12Bold" colspan="2">Systemdatoer&nbsp;</td>
+					 					<td class="text14Bold" colspan="2">Systemdatoer&nbsp;</td>
 									</tr>
 								
 					 				<tr height="1"><td></td></tr>
 					 				<tr>
-					 					<td class="text12" ><span title="dkih_godt">Godkendelsesdato:</span>&nbsp;</td>
-					 					<td class="text12">
+					 					<td class="text14" ><span title="dkih_godt">Godkendelsesdato:</span>&nbsp;</td>
+					 					<td class="text14">
 					 						<input readonly style="text-align: center" type="text" class="inputTextReadOnly" name="dkih_godt" id="dkih_godt" size="10" maxlength="8" value="${model.record.dkih_godt}">
 					 					</td>
 									</tr>
 									<tr height="1"><td></td></tr>
 					 				<tr>
-					 					<td class="text12" ><span title="dkih_sadt">Satsdato:</span>&nbsp;</td>
-					 					<td class="text12">
+					 					<td class="text14" ><span title="dkih_sadt">Satsdato:</span>&nbsp;</td>
+					 					<td class="text14">
 					 						<input readonly style="text-align: center" type="text" class="inputTextReadOnly" name="dkih_sadt" id="dkih_sadt" size="10" maxlength="8" value="${model.record.dkih_sadt}">
 					 					</td>
 									</tr>
 									<tr height="1"><td></td></tr>
 					 				<tr>
-					 					<td class="text12" ><span title="dkih_vadt">Kontroldato:</span>&nbsp;</td>
-					 					<td class="text12">
+					 					<td class="text14" ><span title="dkih_vadt">Kontroldato:</span>&nbsp;</td>
+					 					<td class="text14">
 					 						<input readonly style="text-align: center" type="text" class="inputTextReadOnly" name="dkih_vadt" id="dkih_vadt" size="10" maxlength="8" value="${model.record.dkih_vadt}">
 					 					</td>
 									</tr>
 									<tr height="1"><td></td></tr>
 					 				<tr>
-					 					<td class="text12" ><span title="dkih_andt">Faktisk ankomst:</span>&nbsp;</td>
-					 					<td class="text12">
+					 					<td class="text14" ><span title="dkih_andt">Faktisk ankomst:</span>&nbsp;</td>
+					 					<td class="text14">
 					 						<input readonly style="text-align: center" type="text" class="inputTextReadOnly" name="dkih_andt" id="dkih_andt" size="10" maxlength="8" value="${model.record.dkih_andt}">
 					 					</td>
 									</tr>
@@ -2177,7 +2177,7 @@
 								<table align="left" border="0" cellspacing="0" cellpadding="0">
 				 					<tr height="1"><td></td></tr>
 					 				<tr>
-					 					<td colspan="2" class="text12Bold" align="left" >
+					 					<td colspan="2" class="text14Bold" align="left" >
 						 					<img onMouseOver="showPop('toldvardidekl_info');" onMouseOut="hidePop('toldvardidekl_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 						 					<a style="color:#000000;" target="_blank" href="http://www.skat.dk/SKAT.aspx?oID=2089688&chk=209500&layout=353121">
 							 					TOLDVÆRDIDEKLARATION&nbsp;<b>D.V.1</b>
@@ -2203,7 +2203,7 @@
 							<td >
 								<table align="left" border="0" cellspacing="0" cellpadding="0">
 									<tr>
-										<td colspan="3" class="text12">
+										<td colspan="3" class="text14">
 										<button name="toldvardideklButton" class="buttonGray" type="button" onClick="showPop('toldvardidekl');" >Blankett</button> 
 									        <span style="background-color:#EEEEEE; position:absolute; left:50px; top:1000px; width:1100px; height:600px;" id="toldvardidekl" class="popupWithInputTextThickBorder"  >
 								           		<div class="ownScrollableSubWindow" style="width:1080px; height:480px; margin:10px;">
@@ -2456,12 +2456,12 @@
 			 	<input type="hidden" name="currentAvd" id="currentAvd" value="${model.record.dkih_syav}">
 			 	<input type="hidden" name="currentOpd" id="currentOpd" value="${model.record.dkih_syop}">
 			 		
-				<p class="text12" >Change status as needed.</p>
+				<p class="text14" >Change status as needed.</p>
 				<table>
 					<tr>
-						<td class="text12" align="left" >&nbsp;Status</td>
-						<td class="text12MediumBlue">
-							<select name="selectedStatus" id="selectedStatus">
+						<td class="text14" align="left" >&nbsp;Status</td>
+						<td class="text14MediumBlue">
+							<select class="selectMediumBlueE2" name="selectedStatus" id="selectedStatus">
 			            		<option value="">-vælg-</option>
 			 				  	<c:forEach var="record" items="${model.statusCodeList}" >
 		                            <option value="${record.dkkd_kd}">${record.dkkd_kd}</option>
@@ -2487,9 +2487,9 @@
 			 	<input type="hidden" name="currentOpd" id="currentOpd" value="${model.record.dkih_syop}">
 				<table>
 					<tr>
-						<td class="text12" align="left" >&nbsp;Type</td>
-						<td class="text12MediumBlue">
-							<select name="selectedType" id="selectedType">
+						<td class="text14" align="left" >&nbsp;Type</td>
+						<td class="text14MediumBlue">
+							<select class="selectMediumBlueE2" name="selectedType" id="selectedType">
 			            		<option value="">-velg-</option>
 			            		<c:forEach var="record" items="${model.typeArchiveCodeList}" >
 			 				  		<option value="${record.artype}">${record.artype}&nbsp;${record.artxt}</option>
@@ -2522,7 +2522,7 @@
 						
 							<table id="containerdatatableTable" cellspacing="2" align="left">
 								<tr>
-									<td colspan="3" class="text12Bold">&nbsp;
+									<td colspan="3" class="text14Bold">&nbsp;
 										<img style="vertical-align:bottom;" src="resources/images/upload.png" border="0" width="20" height="20" alt="upload">
 										&nbsp;File Upload&nbsp;							
 									</td>
@@ -2541,7 +2541,7 @@
 									<tr>
 										<td class="text11">&nbsp;Arkiv typen:</td>
 										<td class="text11">&nbsp;
-											<select tabindex=-1 name="wstype" id="wstype">
+											<select class="selectMediumBlueE2" tabindex=-1 name="wstype" id="wstype">
 												<c:forEach var="record" items="${user.arkivKodOpdList}" >
 						                       	 	<option value="${record.arkKod}">${record.arkKod}-${record.arkTxt}</option>
 												</c:forEach> 

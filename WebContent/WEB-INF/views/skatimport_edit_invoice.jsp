@@ -237,17 +237,17 @@
 								<%-- this is the datatables grid (content) --%>
 								<table id="tblInvoices" class="display compact cell-border" >
 									<thead>
-									<tr style="background-color:#DDDDDD">
-									    <th class="text12"><span title="dkif_fatx">&nbsp;Fakturanr.&nbsp;</span></th>   
+									<tr class="tableHeaderField">
+									    <th class="text14"><span title="dkif_fatx">&nbsp;Fakturanr.&nbsp;</span></th>   
 					                    <%--
-					                    <th class="text12" ><span title="dkif_faty">&nbsp;Typ&nbsp;</span></th>
+					                    <th class="text14" ><span title="dkif_faty">&nbsp;Typ&nbsp;</span></th>
 					                     --%>
-					                    <th align="right" class="text12" ><span title="dkif_fabl">&nbsp;Beløb&nbsp;</span></th>
-					                    <th class="text12" ><span title="dkif_vakd">&nbsp;Møntsort&nbsp;</span></th>
-					                    <th align="right" class="text12" ><span title="dkif_vaku">&nbsp;Kurs&nbsp;</span></th>
-					                    <th class="text12" align="left"><span title="dkif_omr">Faktor&nbsp;</span></th> 
+					                    <th align="right" class="text14" ><span title="dkif_fabl">&nbsp;Beløb&nbsp;</span></th>
+					                    <th class="text14" ><span title="dkif_vakd">&nbsp;Møntsort&nbsp;</span></th>
+					                    <th align="right" class="text14" ><span title="dkif_vaku">&nbsp;Kurs&nbsp;</span></th>
+					                    <th class="text14" align="left"><span title="dkif_omr">Faktor&nbsp;</span></th> 
 					                    <c:if test="${ model.status == 'M' || empty  model.status || model.status == '10' || model.status == '20' || model.status == '40'}">
-					                    	<th align="center" class="text12" >Radera</th>
+					                    	<th align="center" class="text14" >Radera</th>
 					                    </c:if>
 					                    
 					               </tr> 
@@ -262,7 +262,7 @@
 							                       <tr class="tableOddRow" height="20" >
 							                   </c:otherwise>
 							               </c:choose>
-							               <td width="20%" class="text11" >
+							               <td width="20%" class="text14" >
 							               		<a tabindex=-1 id="recordUpdate_${record.dkif_fatx}" href="#" onClick="getItemData(this);">
 							               			&nbsp;<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">&nbsp;${record.dkif_fatx}
 							               		</a>
@@ -270,12 +270,12 @@
 							               <%--
 							               <td class="text11" >&nbsp;${record.dkif_faty}</td>
 							                --%>
-							               <td align="right" class="text11" >&nbsp;${record.dkif_fabl}&nbsp;</td>
-							               <td class="text11" >&nbsp;${record.dkif_vakd}</td>
-							               <td align="right" class="text11" >&nbsp;${record.dkif_vaku}&nbsp;</td>
-							               <td class="text11" >&nbsp;${record.dkif_omr}</td>
+							               <td align="right" class="text14" >&nbsp;${record.dkif_fabl}&nbsp;</td>
+							               <td class="text14" >&nbsp;${record.dkif_vakd}</td>
+							               <td align="right" class="text14" >&nbsp;${record.dkif_vaku}&nbsp;</td>
+							               <td class="text14" >&nbsp;${record.dkif_omr}</td>
 							               <c:if test="${ model.status == 'M' || empty  model.status || model.status == '10' || model.status == '20' || model.status == '40'}">
-								               <td width="4%" class="text11" align="center" nowrap>
+								               <td width="4%" class="text14" align="center" nowrap>
 								               	<a onclick="javascript:return confirm('Er du sikker på at du vil slette denne?')" tabindex=-1 href="skatimport_edit_invoice.do?action=doDelete&sign=${model.sign}&avd=${model.avd}&opd=${model.opd}&status=${model.status}&fak=${record.dkif_fatx}">
 								               		<img valign="bottom" src="resources/images/delete.gif" border="0" alt="remove">
 								               	</a>	&nbsp;
@@ -360,7 +360,7 @@
 	 				<input type="hidden" name="totalGrossWeight" id="totalGrossWeight" value='${XrecordTopicSkatImport.todo}'>
 	 				<table width="80%" cellspacing="0" border="0" cellpadding="0">
 						<tr>
-							<td class="text12Bold">
+							<td class="text14Bold">
 								<c:if test="${ model.status == 'M' || empty  model.status || model.status == '10' || model.status == '20' || model.status == '40'}">
 									<input tabindex=-1 class="inputFormSubmitStd" type="submit" name="submit" onclick="javascript: form.action='skatimport_edit_invoice.do';" value="Skabe ny">
 								</c:if>
@@ -392,7 +392,7 @@
 				 	<%-- Topic ITEM CREATE --%>
 	 				<table width="80%" align="left" class="formFrameHeader" border="0" cellspacing="0" cellpadding="0">
 				 		<tr height="15">
-				 			<td class="text12White" align="left" >
+				 			<td class="text14White" align="left" >
 				 				<b>&nbsp;&nbsp;F<label onClick="showPop('debugPrintlnAjaxItemFetchAdmin');" >a</label>ktura&nbsp;</b>
 				 				
 		 									<span style="position:absolute; left:150px; top:200px; width:800px; height:400px;" id="debugPrintlnAjaxItemFetchAdmin" class="popupWithInputText"  >
@@ -409,7 +409,7 @@
 				 				
 				 				<img onClick="showPop('updateInfo');" src="resources/images/update.gif" border="0" alt="edit">
 				 				<span style="position:absolute; left:150px; top:200px; width:800px; height:400px;" id="updateInfo" class="popupWithInputText"  >
-		           		   			<div class="text12" align="left" style="display:block;width:700px;word-break:break-all;">
+		           		   			<div class="text14" align="left" style="display:block;width:700px;word-break:break-all;">
 		           		   				${activeUrlRPGUpdate_Skat}<br/><br/>
 		           		   				<button name="updateInformationButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('updateInfo');">Close</button> 
 		           		   			</div>
@@ -424,14 +424,14 @@
 					 		<td>
 						 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
 							 		<tr>
-							 			<td class="text12" align="left"><span title="dkif_fatx"><font class="text16RedBold" >*</font>Fakturanr.</span></td>
+							 			<td class="text14" align="left"><span title="dkif_fatx"><font class="text16RedBold" >*</font>Fakturanr.</span></td>
 							            <%--
-							            <td class="text12" align="left"><font class="text16RedBold" >*</font><span title="svif_faty">&nbsp;Typ</span></td>
+							            <td class="text14" align="left"><font class="text16RedBold" >*</font><span title="svif_faty">&nbsp;Typ</span></td>
 							             --%>
-							            <td class="text12" align="left"><font class="text16RedBold" >*</font><span title="dkif_fabl">&nbsp;Beløb</span></td>
-							            <td class="text12" align="left"><font class="text16RedBold" >*</font><span title="dkif_vakd">&nbsp;Møntsort</span></td>
-					            		<td class="text12" align="left"><font class="text16RedBold" >*</font><span title="dkif_vaku">&nbsp;Kurs</span></td>
-					            		<td class="text12" align="left"><span title="factor">Faktor&nbsp;</span></td>
+							            <td class="text14" align="left"><font class="text16RedBold" >*</font><span title="dkif_fabl">&nbsp;Beløb</span></td>
+							            <td class="text14" align="left"><font class="text16RedBold" >*</font><span title="dkif_vakd">&nbsp;Møntsort</span></td>
+					            		<td class="text14" align="left"><font class="text16RedBold" >*</font><span title="dkif_vaku">&nbsp;Kurs</span></td>
+					            		<td class="text14" align="left"><span title="factor">Faktor&nbsp;</span></td>
 					            		
 							        </tr>
 							        <tr>
@@ -460,7 +460,7 @@
            									</a>
 			 							</td>
 			 							 --%>
-										<td class="text12" align="left">
+										<td class="text14" align="left">
 							            		<input onKeyPress="return amountKey(event)" type="text" class="inputTextMediumBlueMandatoryField" name="dkif_fabl" id="dkif_fabl" size="13" maxlength="12" value="${model.record.dkif_fabl}">
 							            </td>
 										<td align="left" nowrap>
@@ -476,11 +476,11 @@
 												<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
 											</a>
 										</td>
-						        		<td class="text12" align="left">
+						        		<td class="text14" align="left">
 						            		<input onKeyPress="return amountKey(event)" type="text" class="inputTextMediumBlueMandatoryField" name="dkif_vaku" id="dkif_vaku" size="8" maxlength="8" value="${model.record.dkif_vaku}">
 							            </td>
 							            <%-- this field is only used via Ajax since there is no database field. It is used to disclosed a factor when changing the currency --%>
-							 			<td class="text12Grey" align="left" ><input readonly type="text" class="inputTextReadOnly" name="factor" id="factor" size="6" value=""></td>
+							 			<td class="text14Grey" align="left" ><input readonly type="text" class="inputTextReadOnly" name="factor" id="factor" size="6" value=""></td>
 							        </tr>
 							        <tr height="10"><td class="text" align="left"></td></tr>
 						        </table>

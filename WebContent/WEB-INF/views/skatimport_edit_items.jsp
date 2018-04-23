@@ -19,7 +19,7 @@
 	</style>
 	
 	<%-- tab container component --%>
-	<table width="100%"  class="text11" cellspacing="0" border="0" cellpadding="0">
+	<table width="100%"  class="text12" cellspacing="0" border="0" cellpadding="0">
 		<tr height="2"><td></td></tr>
 		<tr height="25"> 
 			<td width="15%" valign="bottom" class="tabDisabled" align="center" nowrap>
@@ -35,7 +35,7 @@
 						&sysg=${model.sign}&refnr=${dkih_07}&syst=${model.status}&sydt=${model.datum}">
 					
 					<font class="tabDisabledLink">&nbsp;<spring:message code="systema.skat.import.created.mastertopic.tab"/></font>
-					<font class="text12MediumBlue">[${model.opd}]</font>
+					<font class="text14MediumBlue">[${model.opd}]</font>
 					<c:if test="${model.status == 'M' || empty model.status || model.status == '10' || model.status == '20'|| model.status == '40'}">
 						<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">
 					</c:if>
@@ -95,7 +95,7 @@
 	 				<%-- MASTER Topic header --%>
 	 				<table width="100%" align="center" class="formFrameHeaderTransparent" border="0" cellspacing="0" cellpadding="0">
 				 		<tr height="15">
-				 			<td class="text12MediumBlue">
+				 			<td class="text14MediumBlue">
 				 				&nbsp;Avd&nbsp;<b>${model.avd}</b>
 				 				&nbsp;Angivelse&nbsp;<b>${model.opd}</b>
 				 				&nbsp;Sign&nbsp;<b>${model.sign}</b>
@@ -105,8 +105,8 @@
 				 				Status:&nbsp;<b>${model.status}</b>
 				 				&nbsp;&nbsp;Angivelsesart:&nbsp;<b>${recordTopicSkatImport.dkih_aart}</b>
 				 				
-				 				<div class="text11" style="position: relative;" align="left">
-								<span style="position:absolute;top:2px; width:500px;" id="status_info" class="popupWithInputText text11"  >
+				 				<div class="text12" style="position: relative;" align="left">
+								<span style="position:absolute;top:2px; width:500px;" id="status_info" class="popupWithInputText text12"  >
 					           		 Kun status <b>M</b>,<b>10</b>,<b>20</b>eller <b>' '</b> kan redigeres.
 					           		 <br/><br/> 
 					           			<table width="90%" align="center" cellspacing="0" border="0" cellpadding="0">
@@ -139,30 +139,30 @@
 					 		<td width="50%">
 						 		<table width="80%" border="0" cellspacing="1" cellpadding="0">
 							 		<tr>
-							            <td width="30%" class="text11Bold" align="left" >Eksportør</td>
-							            <td class="text11" align="left" >&nbsp;&nbsp;</td>
+							            <td width="30%" class="text12Bold" align="left" >Eksportør</td>
+							            <td class="text12" align="left" >&nbsp;&nbsp;</td>
 							        </tr>
 							        <tr>
-							        		<td width="30%" class="text11" align="left">EORI&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkatImport.dkih_02a}</td>
+							        		<td width="30%" class="text12" align="left">EORI&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_02a}</td>
 							           	
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text11" align="left">Navn&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkatImport.dkih_02b}</td>
+							            <td width="30%" class="text12" align="left">Navn&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_02b}</td>
 							        </tr>
 									<tr>
-							            <td width="30%" class="text11" align="left">Adresse&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkatImport.dkih_02c}</td>
+							            <td width="30%" class="text12" align="left">Adresse&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_02c}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text11" align="left">Postnr.&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkatImport.dkih_02d}&nbsp;${recordTopicSkatImport.dkih_02e}</td>
+							            <td width="30%" class="text12" align="left">Postnr.&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_02d}&nbsp;${recordTopicSkatImport.dkih_02e}</td>
 							        </tr>
 							        
 									<tr>
-							            <td width="30%" class="text11" align="left">Landkode&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkatImport.dkih_02f}</td>
+							            <td width="30%" class="text12" align="left">Landkode&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_02f}</td>
 							        </tr>						        
 							        
 			        	        </table>
@@ -170,34 +170,34 @@
 					        <td width="50%">
 						 		<table width="80%" border="0" cellspacing="1" cellpadding="0">
 							 		<tr>
-							            <td width="30%" class="text11Bold" align="left" >Modtager</td>
-							            <td class="text11" align="left" >&nbsp;&nbsp;</td>
+							            <td width="30%" class="text12Bold" align="left" >Modtager</td>
+							            <td class="text12" align="left" >&nbsp;&nbsp;</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text11" align="left">CVR/SE-nr&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkatImport.dkih_08a}</td>
+							            <td width="30%" class="text12" align="left">CVR/SE-nr&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_08a}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text11" align="left">Navn&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkatImport.dkih_08b}</td>
+							            <td width="30%" class="text12" align="left">Navn&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_08b}</td>
 							        </tr>
 									<tr>
-							            <td width="30%" class="text11" align="left">Adresse&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkatImport.dkih_08c}</td>
+							            <td width="30%" class="text12" align="left">Adresse&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_08c}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text11" align="left">Postnr.&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkatImport.dkih_08d}&nbsp;${recordTopicSkatImport.dkih_08e}</td>
+							            <td width="30%" class="text12" align="left">Postnr.&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_08d}&nbsp;${recordTopicSkatImport.dkih_08e}</td>
 							        </tr>
 							        
 									<tr>
-							            <td width="30%" class="text11" align="left">Landkode&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkatImport.dkih_08f}</td>
+							            <td width="30%" class="text12" align="left">Landkode&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_08f}</td>
 							        </tr>
 							        <%--
 									<tr>
-							            <td width="30%" class="text11" align="left">Handläggare&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${XX.svih_moha}</td>
+							            <td width="30%" class="text12" align="left">Handläggare&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${XX.svih_moha}</td>
 							        </tr>
 							         --%>
 							        
@@ -235,7 +235,7 @@
 				 										
 								<table width="100%" cellspacing="0" border="0" cellpadding="0">
 									<tr>
-										<td class="text12Bold">
+										<td class="text14Bold">
 											<c:if test="${model.status == 'M' || empty model.status || model.status == '10' || model.status == '20'|| model.status == '40'}">
 												<input tabindex=-1 class="inputFormSubmitStd" type="submit" name="submitNew" onclick="javascript: form.action='skatimport_edit_items.do';" value="<spring:message code="systema.skat.import.item.line.init.createnew.submit"/>">
 											</c:if>
@@ -243,28 +243,28 @@
 										       <span style="background-color:#EEEEEE; position:absolute; left:50px; top:200px; width:1200px; height:1000px;" id="allItems" class="popupWithInputTextThickBorder"  >
 									           		<table id="containerdatatableTable" width="98%" align="left" >
 													<tr>
-													<td class="text12">
+													<td class="text14">
 												
 														<table id="tblItemLinesAll" class="display compact cell-border">
 										           			<thead>
-												           	<tr style="background-color:#DDDDDD">	
+												           	<tr class="tableHeaderField">	
 																    <th class="">&nbsp;Linjenr.&nbsp;</th>   
-																    <th class="text11"><spring:message code="systema.skat.import.item.list.label.dkiv_28b.purchaseSellerInvoice"/>&nbsp;</th>
-												                    <th class="text11" ><spring:message code="systema.skat.import.item.list.label.dkiv_32.varepostNr"/>&nbsp;</th>   
-												                    <th class="text11" >&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_34.oprLand"/>&nbsp;</th>
-												                    <th class="text11" >&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_331.varekod"/>&nbsp;</th>
-												                    <th class="text11" >&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_36.preference"/>&nbsp;</th>
-												                    <th class="text11" >&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_37.procedure"/>&nbsp;</th>
-												                    <th class="text11">&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_35.bruttov"/>&nbsp;</th>
-												                    <th class="text11">&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_38.nettov"/>&nbsp;</th>
-												                    <th class="text11">&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_412.supplEnhVerdi"/>&nbsp;</th>
-												                    <th class="text11">&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_313a.kolliAntal"/></th>
-												                    <th class="text11">&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_315a.vareDescription"/>&nbsp;</th>
-												                    <th class="text11">&nbsp;Avg / <spring:message code="systema.skat.import.item.list.label.dkiv_46.statValue"/></th>
-												                    <th class="text11" ><spring:message code="systema.skat.import.item.list.label.dkiv_42.varansPris"/>&nbsp;</th>
-												                    <th class="text12" >&nbsp;<spring:message code="systema.skat.import.item.list.label.dkerr.error"/>&nbsp;</th>
+																    <th class="text14"><spring:message code="systema.skat.import.item.list.label.dkiv_28b.purchaseSellerInvoice"/>&nbsp;</th>
+												                    <th class="text14" ><spring:message code="systema.skat.import.item.list.label.dkiv_32.varepostNr"/>&nbsp;</th>   
+												                    <th class="text14" >&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_34.oprLand"/>&nbsp;</th>
+												                    <th class="text14" >&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_331.varekod"/>&nbsp;</th>
+												                    <th class="text14" >&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_36.preference"/>&nbsp;</th>
+												                    <th class="text14" >&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_37.procedure"/>&nbsp;</th>
+												                    <th class="text14">&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_35.bruttov"/>&nbsp;</th>
+												                    <th class="text14">&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_38.nettov"/>&nbsp;</th>
+												                    <th class="text14">&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_412.supplEnhVerdi"/>&nbsp;</th>
+												                    <th class="text14">&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_313a.kolliAntal"/></th>
+												                    <th class="text14">&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_315a.vareDescription"/>&nbsp;</th>
+												                    <th class="text14">&nbsp;Avg / <spring:message code="systema.skat.import.item.list.label.dkiv_46.statValue"/></th>
+												                    <th class="text14" ><spring:message code="systema.skat.import.item.list.label.dkiv_42.varansPris"/>&nbsp;</th>
+												                    <th class="text14" >&nbsp;<spring:message code="systema.skat.import.item.list.label.dkerr.error"/>&nbsp;</th>
 												                    <c:if test="${model.status == 'M' || empty model.status || model.status == '10' || model.status == '20'|| model.status == '40'}">
-												                    	<th align="center" class="text11" nowrap>Fjern</th>
+												                    	<th align="center" class="text14" nowrap>Fjern</th>
 												                    </c:if>
 												                    
 											               		</tr> 
@@ -279,7 +279,7 @@
 														                       <tr class="tableOddRow" height="20" >
 														                   </c:otherwise>
 														               </c:choose>
-														               <td width="2%" class="text11" align="center">&nbsp;${record.dkiv_syli}
+														               <td width="2%" class="text14" align="center">&nbsp;${record.dkiv_syli}
 														               		<%--
 														               		<a tabindex=-1 id="recordUpdate_${record.dkiv_syli}_${record.dkiv_32}" href="#" onClick="getItemData(this);">${record.dkiv_syli}
 														               			<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">&nbsp;
@@ -287,28 +287,28 @@
 														               		--%>
 														               </td>
 														               
-														               <td class="text11" >&nbsp;${record.dkiv_28b}</td>
-														               <td width="2%" class="text11" >&nbsp;${record.dkiv_32}</td>
-														               <td class="text11" >&nbsp;${record.dkiv_34}</td>
-														               <td class="text11" >&nbsp;${record.dkiv_331}</td>
-														               <td class="text11" >&nbsp;${record.dkiv_36}</td>
-														               <td class="text11" >&nbsp;${record.dkiv_37}</td>
-														               <td class="text11" >&nbsp;${record.dkiv_35}</td>
-														               <td class="text11" >&nbsp;${record.dkiv_38}</td>
-														               <td class="text11" >&nbsp;${record.dkiv_412}</td>
-														               <td class="text11" >&nbsp;${record.dkiv_313a}</td>
-														               <td class="text11" ><div style="width:120px">&nbsp;${record.dkiv_315a}</div></td>
-														               <td class="text11" align="left">&nbsp;&nbsp;${record.dkiv_46}
+														               <td class="text14" >&nbsp;${record.dkiv_28b}</td>
+														               <td width="2%" class="text14" >&nbsp;${record.dkiv_32}</td>
+														               <td class="text14" >&nbsp;${record.dkiv_34}</td>
+														               <td class="text14" >&nbsp;${record.dkiv_331}</td>
+														               <td class="text14" >&nbsp;${record.dkiv_36}</td>
+														               <td class="text14" >&nbsp;${record.dkiv_37}</td>
+														               <td class="text14" >&nbsp;${record.dkiv_35}</td>
+														               <td class="text14" >&nbsp;${record.dkiv_38}</td>
+														               <td class="text14" >&nbsp;${record.dkiv_412}</td>
+														               <td class="text14" >&nbsp;${record.dkiv_313a}</td>
+														               <td class="text14" ><div style="width:120px">&nbsp;${record.dkiv_315a}</div></td>
+														               <td class="text14" align="left">&nbsp;&nbsp;${record.dkiv_46}
 														               
 														               <%--
-														               		<font class="text12OrangeBold" onMouseOver="showPop('avgifterReadOnly_info_${record.dkiv_syli}');" onMouseOut="hidePop('avgifterReadOnly_info_${record.dkiv_syli}');" alt="info">
+														               		<font class="text14OrangeBold" onMouseOver="showPop('avgifterReadOnly_info_${record.dkiv_syli}');" onMouseOut="hidePop('avgifterReadOnly_info_${record.dkiv_syli}');" alt="info">
 														               		 <img valign="bottom" src="resources/images/infoOrange.png" width="12px" height="12px" border="0" alt="avg.info">&nbsp;
 														               		</font>
 														               <span class="popupWithInputTextGrayBg" style="position:absolute; left:620px; top:300px;" id="avgifterReadOnly_info_${record.dkiv_syli}" >
 														           		<div class="text10" align="left" >
 													           				<table cellspacing="0" border="0" cellpadding="0">
 													           					<tr>
-													           						<td colspan="5" class="text12OrangeBold">Afgifter [Sker på SKAT]</td>
+													           						<td colspan="5" class="text14OrangeBold">Afgifter [Sker på SKAT]</td>
 													           					</tr>
 													           					<tr height="10"><td></td></tr>
 													           					<tr>
@@ -372,14 +372,14 @@
 													           			</span>	
 														               	 --%>	
 														               	</td>
-														               <td class="text11">&nbsp;${record.dkiv_42}</td>
-														               <td align="center" class="text11">&nbsp;
+														               <td class="text14">&nbsp;${record.dkiv_42}</td>
+														               <td align="center" class="text14">&nbsp;
 														               		<c:if test="${not empty record.dkiv_err}">
 														               			<img src="resources/images/redFlag.png" width="18px" height="18px" border="0" alt="remove">
 														               		</c:if>
 														               </td>
 														               <c:if test="${model.status == 'M' || empty model.status || model.status == '10' || model.status == '20'|| model.status == '40'}">	
-															               <td class="text11" align="center" nowrap>&nbsp;
+															               <td class="text14" align="center" nowrap>&nbsp;
 															               	<a onclick="javascript:return confirm('Er du sikker på at du vil slette denne?')" tabindex=-1 href="skatimport_edit_items.do?action=doDelete&avd=${record.dkiv_syav}&opd=${record.dkiv_syop}&lin=${record.dkiv_syli}&fabl=${XX.svih_fabl}">
 															               		<img valign="bottom" src="resources/images/delete.gif" border="0" alt="remove">
 															               	</a>	
@@ -402,8 +402,8 @@
 												         	<table >
 															<%-- OK BUTTON --%>
 									           				<tr align="left" >
-																<td class="text11"><button name="allItemsButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('allItems');">&nbsp;Ok</button></td>
-																<td class="text12">&nbsp;&nbsp;&nbsp;
+																<td class="text14"><button name="allItemsButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('allItems');">&nbsp;Ok</button></td>
+																<td class="text14">&nbsp;&nbsp;&nbsp;
 													 	        		<a href="skatImportListExcelView.do" target="_new">
 												                 		<img valign="bottom" id="itemListExcel" src="resources/images/excel.png" border="0" alt="excel">&nbsp;Excel
 													 	        		</a>
@@ -414,27 +414,27 @@
 														</div>	
 								   				</span>	
 								   				<c:if test="${model.status == 'M' || empty model.status || model.status == '10' || model.status == '20'|| model.status == '40'}">		
-													&nbsp;<button title="Kontrollere vareposter" name="itemListControlButton" id="itemListControlButton" class="buttonGrayWithGreenFrame11" type="button" >Kontrollere vareposter</button>
+													&nbsp;<button title="Kontrollere vareposter" name="itemListControlButton" id="itemListControlButton" class="buttonGrayWithGreenFrame" type="button" >Kontrollere vareposter</button>
 												</c:if>	
 										</td>
 									</tr>
 									<tr>
-										<td class="text12Bold">&nbsp;Antal vareposter&nbsp;&nbsp;<font class="text12MediumBlue"><b>${totalNumberOfItemLines}</b></font>
+										<td class="text14Bold">&nbsp;Antal vareposter&nbsp;&nbsp;<font class="text14MediumBlue"><b>${totalNumberOfItemLines}</b></font>
 						            		
 										</td>
-										<td width="10%" class="text12">&nbsp;</td>
+										<td width="10%" class="text14">&nbsp;</td>
 										
-										<td align="right" class="text11">Bruttovægt:&nbsp;
-											<input tabindex=-1 align="right" type="text" readonly class="inputText11BlueBoldReadOnly" size="12" maxlength=11" value='${recordTopicSkatImport.dkih_brut}'>
+										<td align="right" class="text12">Bruttovægt:&nbsp;
+											<input tabindex=-1 align="right" type="text" readonly class="inputText12BlueBoldReadOnly" size="12" maxlength="11" value='${recordTopicSkatImport.dkih_brut}'>
 										</td>
-										<td align="right" class="text11">Faktura beløb:&nbsp;
-											<input tabindex=-1 align="right" type="text" readonly class="inputText11BlueBoldReadOnly" size="12" maxlength=20" value='${recordTopicSkatImport.dkih_222}'>
+										<td align="right" class="text12">Faktura beløb:&nbsp;
+											<input tabindex=-1 align="right" type="text" readonly class="inputText12BlueBoldReadOnly" size="12" maxlength="20" value='${recordTopicSkatImport.dkih_222}'>
 											&nbsp;<font style="color:#000080; font-style: italic;"><b>${recordTopicSkatImport.dkih_221}</b></font>
 										</td>
-										<td align="right" class="text11">Varens pris&nbsp;(&Sigma;):&nbsp;
-											<input tabindex=-1 align="right" type="text" readonly class="inputText11BlueBoldReadOnly" size="12" maxlength=20" value='${model.recordItemContainerTopic.calculatedItemLinesTotalAmount}'>
+										<td align="right" class="text12">Varens pris&nbsp;(&Sigma;):&nbsp;
+											<input tabindex=-1 align="right" type="text" readonly class="inputText12BlueBoldReadOnly" size="12" maxlength="20" value='${model.recordItemContainerTopic.calculatedItemLinesTotalAmount}'>
 										</td>
-										<td align="right" class="text11">Forskel:&nbsp;
+										<td align="right" class="text12">Forskel:&nbsp;
 											<input tabindex=-1 align="right" type="text" readonly
 												<c:choose>
 												<c:when test="${fn:contains(model.recordItemContainerTopic.diffItemLinesTotalAmountWithInvoiceTotalAmount,'-')}">
@@ -460,31 +460,31 @@
 		 						<input type="hidden" name="avdItemList" id="avdItemList" value="${model.avd}"> 
 		 						<input type="hidden" name="applicationUser" id="applicationUser" value="${user.user}">
 								
-								<table id="containerdatatableTable" cellspacing="2" align="left" >
+								<table width="100%" id="containerdatatableTable" cellspacing="2" align="left" >
 								<tr>
-								<td class="text11">
+								<td class="text12">
 							
-								<table id="tblItemLines" class="display compact cell-border">
+								<table id="tblItemLines" class="display compact cell-border" width="100%" >
 									<thead>
-									<tr style="background-color:#DDDDDD">
-									    <th class="text11">&nbsp;Lin&nbsp;</th>
-									    <th class="text11">&nbsp;Opd.&nbsp;</th>   
-									    <th class="text11"><spring:message code="systema.skat.import.item.list.label.dkiv_28b.purchaseSellerInvoice"/>&nbsp;</th>
-					                    <th class="text11" nowrap><spring:message code="systema.skat.import.item.list.label.dkiv_32.varepostNr"/>&nbsp;</th>   
-					                    <th class="text11" nowrap>&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_34.oprLand"/>&nbsp;</th>
-					                    <th class="text11" nowrap>&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_331.varekod"/>&nbsp;</th>
-					                    <th class="text11" nowrap>&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_36.preference"/>&nbsp;</th>
-					                    <th class="text11" nowrap>&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_37.procedure"/>&nbsp;</th>
-					                    <th class="text11">&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_35.bruttov"/>&nbsp;</th>
-					                    <th class="text11">&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_38.nettov"/>&nbsp;</th>
-					                    <th class="text11">&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_412.supplEnhVerdi"/>&nbsp;</th>
-					                    <th class="text11">&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_313a.kolliAntal"/></th>
-					                    <th class="text11">&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_315a.vareDescription"/>&nbsp;</th>
-					                    <th class="text11">&nbsp;Avg / <spring:message code="systema.skat.import.item.list.label.dkiv_46.statValue"/></th>
-					                    <th class="text11" nowrap><spring:message code="systema.skat.import.item.list.label.dkiv_42.varansPris"/>&nbsp;</th>
-					                    <th class="text12" >&nbsp;<spring:message code="systema.skat.import.item.list.label.dkerr.error"/>&nbsp;</th>
+									<tr  class="tableHeaderField">
+									    <th class="text14">&nbsp;Lin&nbsp;</th>
+									    <th class="text14">&nbsp;Opd.&nbsp;</th>   
+									    <th class="text14"><spring:message code="systema.skat.import.item.list.label.dkiv_28b.purchaseSellerInvoice"/>&nbsp;</th>
+					                    <th class="text14" nowrap><spring:message code="systema.skat.import.item.list.label.dkiv_32.varepostNr"/>&nbsp;</th>   
+					                    <th class="text14" nowrap>&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_34.oprLand"/>&nbsp;</th>
+					                    <th class="text14" nowrap>&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_331.varekod"/>&nbsp;</th>
+					                    <th class="text14" nowrap>&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_36.preference"/>&nbsp;</th>
+					                    <th class="text14" nowrap>&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_37.procedure"/>&nbsp;</th>
+					                    <th class="text14">&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_35.bruttov"/>&nbsp;</th>
+					                    <th class="text14">&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_38.nettov"/>&nbsp;</th>
+					                    <th class="text14">&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_412.supplEnhVerdi"/>&nbsp;</th>
+					                    <th class="text14">&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_313a.kolliAntal"/></th>
+					                    <th class="text14">&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_315a.vareDescription"/>&nbsp;</th>
+					                    <th class="text14">&nbsp;Avg / <spring:message code="systema.skat.import.item.list.label.dkiv_46.statValue"/></th>
+					                    <th class="text14" nowrap><spring:message code="systema.skat.import.item.list.label.dkiv_42.varansPris"/>&nbsp;</th>
+					                    <th class="text14" >&nbsp;<spring:message code="systema.skat.import.item.list.label.dkerr.error"/>&nbsp;</th>
 					                    <c:if test="${model.status == 'M' || empty model.status || model.status == '10' || model.status == '20'|| model.status == '40'}">
-				                    		<th align="center" class="text11" nowrap>Fjern</td>
+				                    		<th align="center" class="text14" nowrap>Fjern</td>
 					                    </c:if>
 					               </tr> 
 					               </thead>
@@ -499,27 +499,27 @@
 							                   </c:otherwise>
 							               </c:choose>
 							               
-							               <td width="4%" class="text11" align="center">${record.dkiv_syli}</td>
-							               <td width="4%" class="text11" align="center">&nbsp;
+							               <td width="4%" class="text14" align="center">${record.dkiv_syli}</td>
+							               <td width="4%" class="text14" align="center">&nbsp;
 							               		<%--<a id="recordUpdate_${counter.count}_${record.sviv_vano}" href="#" onClick="getItemData(this);">${record.sviv_syli} --%>
 							               		<a tabindex=-1 title="${counter.count}" id="recordUpdate_${record.dkiv_syli}_${record.dkiv_32}" href="#" onClick="getItemData(this);">
 							               			<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">&nbsp;
 							               		</a>
 							               </td>
-							               <td class="text11" >&nbsp;${record.dkiv_28b}</td>
-							               <td width="2%" class="text11" >&nbsp;${record.dkiv_32}</td>
-							               <td class="text11" >&nbsp;${record.dkiv_34}</td>
-							               <td class="text11" >&nbsp;${record.dkiv_331}</td>
-							               <td class="text11" >&nbsp;${record.dkiv_36}</td>
-							               <td class="text11" >&nbsp;${record.dkiv_37}</td>
-							               <td class="text11" >&nbsp;${record.dkiv_35}</td>
-							               <td class="text11" >&nbsp;${record.dkiv_38}</td>
-							               <td class="text11" >&nbsp;${record.dkiv_412}</td>
-							               <td class="text11" >&nbsp;${record.dkiv_313a}</td>
-							               <td class="text11"><div style="width:120px">&nbsp;${record.dkiv_315a}</div></td>
-							               <td class="text11" align="left">&nbsp;${record.dkiv_46}
+							               <td class="text14" >&nbsp;${record.dkiv_28b}</td>
+							               <td width="2%" class="text14" >&nbsp;${record.dkiv_32}</td>
+							               <td class="text14" >&nbsp;${record.dkiv_34}</td>
+							               <td class="text14" >&nbsp;${record.dkiv_331}</td>
+							               <td class="text14" >&nbsp;${record.dkiv_36}</td>
+							               <td class="text14" >&nbsp;${record.dkiv_37}</td>
+							               <td class="text14" >&nbsp;${record.dkiv_35}</td>
+							               <td class="text14" >&nbsp;${record.dkiv_38}</td>
+							               <td class="text14" >&nbsp;${record.dkiv_412}</td>
+							               <td class="text14" >&nbsp;${record.dkiv_313a}</td>
+							               <td class="text14"><div style="width:120px">&nbsp;${record.dkiv_315a}</div></td>
+							               <td class="text14" align="left">&nbsp;${record.dkiv_46}
 							               		<%--
-							               		<font class="text12OrangeBold" onMouseOver="showPop('avgifterReadOnly_info_${record.dkiv_syli}');" onMouseOut="hidePop('avgifterReadOnly_info_${record.dkiv_syli}');" alt="info">
+							               		<font class="text14OrangeBold" onMouseOver="showPop('avgifterReadOnly_info_${record.dkiv_syli}');" onMouseOut="hidePop('avgifterReadOnly_info_${record.dkiv_syli}');" alt="info">
 							               		 <img valign="bottom" src="resources/images/infoOrange.png" width="12px" height="12px" border="0" alt="avg.info">&nbsp;
 							               		</font>/
 							               	   		
@@ -527,7 +527,7 @@
 								           		<div class="text10" align="left" >
 								           	 		<table cellspacing="0" border="0" cellpadding="0">
 							           					<tr>
-							           						<td colspan="5" class="text12OrangeBold">Afgifter [Sker på SKAT]</td>
+							           						<td colspan="5" class="text14OrangeBold">Afgifter [Sker på SKAT]</td>
 							           					</tr>
 							           					<tr height="10"><td></td></tr>
 							           					<tr>
@@ -591,14 +591,14 @@
 							           			</span>		 
 							           			--%>
 							               	</td>
-							               <td class="text11">&nbsp;${record.dkiv_42}</td>
-							               <td align="center" class="text11">&nbsp;
+							               <td class="text14">&nbsp;${record.dkiv_42}</td>
+							               <td align="center" class="text14">&nbsp;
 							               		<c:if test="${not empty record.dkiv_err}">
 							               			<img src="resources/images/redFlag.png" width="18px" height="18px" border="0" alt="remove">
 							               		</c:if>
 							               </td>
 							               <c:if test="${model.status == 'M' || empty model.status || model.status == '10' || model.status == '20'|| model.status == '40'}">	
-								               <td class="text11" align="center" nowrap>&nbsp;
+								               <td class="text14" align="center" nowrap>&nbsp;
 								               	<a onclick="javascript:return confirm('Er du sikker på at du vil slette denne?')" tabindex=-1 href="skatimport_edit_items.do?action=doDelete&avd=${record.dkiv_syav}&opd=${record.dkiv_syop}&lin=${record.dkiv_syli}&fabl=${XX.svih_fabl}">
 								               		<img valign="bottom" src="resources/images/delete.gif" border="0" alt="remove">
 								               	</a>	
@@ -667,11 +667,11 @@
 				 	<%-- Topic ITEM CREATE --%>
 	 				<table width="100%" align="center" class="formFrameHeader" border="0" cellspacing="0" cellpadding="0">
 				 		<tr height="15">
-				 			<td class="text12White" align="left" >
+				 			<td class="text14White" align="left" >
 				 				<b>&nbsp;&nbsp;V<label onClick="showPop('debugPrintlnAjaxItemFetchAdmin');" >a</label>repost&nbsp;</b>
 				 				
 		 									<span style="position:absolute; left:150px; top:200px; width:800px; height:400px;" id="debugPrintlnAjaxItemFetchAdmin" class="popupWithInputText"  >
-								           		<div class="text11" align="left">
+								           		<div class="text14" align="left">
 								           			<label id="debugPrintlnAjaxItemFetchInfo"></label>
 								           			<br/>
 								           			&nbsp;&nbsp;
@@ -684,7 +684,7 @@
 				 				
 				 				<img onClick="showPop('updateInfo');" src="resources/images/update.gif" border="0" alt="edit">
 				 				<span style="position:absolute; left:150px; top:200px; width:800px; height:400px;" id="updateInfo" class="popupWithInputText"  >
-		           		   			<div class="text12" align="left" style="display:block;width:700px;word-break:break-all;">
+		           		   			<div class="text14" align="left" style="display:block;width:700px;word-break:break-all;">
 		           		   				${activeUrlRPGUpdate_Skat}<br/><br/>
 		           		   				<button name="updateInformationButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('updateInfo');">Close</button> 
 		           		   			</div>
@@ -692,10 +692,10 @@
 				 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				 				<c:choose>
 					 				<c:when test="${not empty model.record.dkiv_syli}">
-						 				<input title="from model" tabindex=-1 align="center" class="text12BoldLightGreenForItemLinenr" readonly type="text" name="lineNr" id="lineNr" size="3" value="${model.record.dkiv_syli}">
+						 				<input title="from model" tabindex=-1 align="center" class="text14BoldLightGreenForItemLinenr" readonly type="text" name="lineNr" id="lineNr" size="3" value="${model.record.dkiv_syli}">
 									</c:when>
 									<c:otherwise>
-				 						<input title="from session" tabindex=-1 align="center" class="text12BoldLightGreenForItemLinenr" readonly type="text" name="lineNr" id="lineNr" size="3" value="${dkiv_syli_SESSION}">
+				 						<input title="from session" tabindex=-1 align="center" class="text14BoldLightGreenForItemLinenr" readonly type="text" name="lineNr" id="lineNr" size="3" value="${dkiv_syli_SESSION}">
 									</c:otherwise>
 								</c:choose>
 			 				</td>
@@ -707,7 +707,7 @@
 					 		<td>
 						 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
 							 		<tr>
-							 			<td class="text12" align="left">
+							 			<td class="text14" align="left">
 							            <img onMouseOver="showPop('33_info');" onMouseOut="hidePop('33_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 							            <b>33.</b>
 							            <c:if test="${recordTopicSkatImport.dkih_aart=='02' || recordTopicSkatImport.dkih_aart=='04' || recordTopicSkatImport.dkih_aart=='07'}">
@@ -715,8 +715,8 @@
 							            </c:if>
 							            <span title="dkiv_331">Varekode</span>
 							            
-							            <div class="text11" style="position: relative;" align="left">
-										<span style="position:absolute;top:2px; width:250px;" id="33_info" class="popupWithInputText text11"  >
+							            <div class="text12" style="position: relative;" align="left">
+										<span style="position:absolute;top:2px; width:250px;" id="33_info" class="popupWithInputText text12"  >
 						           			<b>33. Varekoder</b>
 						           			<br/><br/>
 											Her angiver klarereren den 10-cifrede varekode i henhold tilToldtariffen. I nogle tilfælde skal der yderligere angives op til to 4-cifrede tillægskoder, fx når der er tale om antidumpingtold, landbrugselement mv. 
@@ -730,15 +730,15 @@
 				 						
 							            </td>
 							 			
-							            	<td class="text12" align="left">
+							            	<td class="text14" align="left">
 							            <img onMouseOver="showPop('36_info');" onMouseOut="hidePop('36_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info" >
 				 						<b>36.</b>
 				 						<c:if test="${recordTopicSkatImport.dkih_aart=='03' || recordTopicSkatImport.dkih_aart=='04' || recordTopicSkatImport.dkih_aart=='07'}">
 							            		<font class="text16RedBold" >*</font>
 							            </c:if>
 				 						<span title="dkiv_36">Præference</span>
-				 						<div class="text11" style="position: relative;" align="left">
-										<span style="position:absolute;top:2px; width:250px;" id="36_info" class="popupWithInputText text11"  >
+				 						<div class="text12" style="position: relative;" align="left">
+										<span style="position:absolute;top:2px; width:250px;" id="36_info" class="popupWithInputText text12"  >
 						           			<b>36. Præference</b>
 						           			 <br><br>
 											 Her skal klarereren angive med en trecifret kode, om man anmoder om præferencetoldbehandling, og i givet fald hvilken type præference, 
@@ -747,15 +747,15 @@
 										</div>
 				 						</td>
 							            
-							            <td class="text12" align="left">
+							            <td class="text14" align="left">
 							            <img onMouseOver="showPop('37_1_info');" onMouseOut="hidePop('37_1_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 				 						<b>37.</b>
 				 						<c:if test="${recordTopicSkatImport.dkih_aart=='03' || recordTopicSkatImport.dkih_aart=='04' || recordTopicSkatImport.dkih_aart=='07'}">
 							            		<font class="text16RedBold" >*</font>
 							            </c:if>
 				 						<span title="dkiv_37">Procedure</span>
-							            <div class="text11" style="position: relative;" align="left">
-										<span style="position:absolute;top:2px; width:250px;" id="37_1_info" class="popupWithInputText text11"  >
+							            <div class="text12" style="position: relative;" align="left">
+										<span style="position:absolute;top:2px; width:250px;" id="37_1_info" class="popupWithInputText text12"  >
 						           			<br>
 						           			<b>37. Procedure</b>
 						           			<br/><br/>
@@ -782,14 +782,14 @@
 										</div>
 										</td>
 							            
-							            <td class="text12" align="left"><b>42.</b>
+							            <td class="text14" align="left"><b>42.</b>
 				 						<c:if test="${recordTopicSkatImport.dkih_aart=='03' || recordTopicSkatImport.dkih_aart=='04' || recordTopicSkatImport.dkih_aart=='07'}">
 							            		<font class="text16RedBold" >*</font>
 							            </c:if>
 							            	<span title="dkiv_42">Varens pris:&nbsp;</span>
 						            		</td>
 						            		
-							            <td class="text12" align="left">
+							            <td class="text14" align="left">
 							            <img onMouseOver="showPop('35_info');" onMouseOut="hidePop('35_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 				 						<b>35.</b>
 				 						<c:if test="${recordTopicSkatImport.dkih_aart=='01' || recordTopicSkatImport.dkih_aart=='02' || recordTopicSkatImport.dkih_aart=='04' || 
@@ -797,8 +797,8 @@
 							            		<font class="text16RedBold" >*</font>
 							            </c:if>
 				 						<span title="dkiv_35">Brut.(kg)</span>
-							            <div class="text11" style="position: relative;" align="left">
-										<span style="position:absolute;top:2px; width:250px;" id="35_info" class="popupWithInputText text11"  >
+							            <div class="text12" style="position: relative;" align="left">
+										<span style="position:absolute;top:2px; width:250px;" id="35_info" class="popupWithInputText text12"  >
 							           			<br/>
 							           			<b>35. Bruttomasse (kg)</b>
 							           			<br/><br/>
@@ -813,7 +813,7 @@
 										</span>
 										</div>
 										</td>
-										<td class="text12" align="left">
+										<td class="text14" align="left">
 										<b>&nbsp;38.</b>
 										<c:if test="${recordTopicSkatImport.dkih_aart=='03' || recordTopicSkatImport.dkih_aart=='04' || recordTopicSkatImport.dkih_aart=='05' || 
 				 									  recordTopicSkatImport.dkih_aart=='07' || recordTopicSkatImport.dkih_aart=='08'}">
@@ -821,7 +821,7 @@
 							            </c:if>
 										<span title="dkiv_38">Net.(kg)</span>
 										</td>
-										<td class="text12" align="left" >
+										<td class="text14" align="left" >
 							            <img onMouseOver="showPop('31_gods_info');" onMouseOut="hidePop('31_gods_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 				 						<b>31.1</b>
 				 						<c:if test="${recordTopicSkatImport.dkih_aart=='02' || recordTopicSkatImport.dkih_aart=='04' || 
@@ -829,8 +829,8 @@
 							            		<font class="text16RedBold" >*</font>
 							            </c:if>
 							            <span title="dkiv_311a">Kolli mærke&nbsp;</span>
-							            <div class="text11" style="position: relative;" align="left">
-										<span style="position:absolute;top:2px; width:250px;" id="31_gods_info" class="popupWithInputText text11"  >
+							            <div class="text12" style="position: relative;" align="left">
+										<span style="position:absolute;top:2px; width:250px;" id="31_gods_info" class="popupWithInputText text12"  >
 						           			<br/>
 						           			<b>Kolli Mærke</b>
 											<br/><br/>
@@ -841,7 +841,7 @@
 							        </tr>
 							        <tr>
 							        		
-							        		<td class="text12" align="left">
+							        		<td class="text14" align="left">
 							            		<input onKeyPress="return numberKey(event)" type="text" class="inputText" name="dkiv_331" id="dkiv_331" size="14" maxlength="10" value="${model.record.dkiv_331}">
 							            	<a tabindex="-1" id="dkiv_331IdLink">
 												<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
@@ -851,7 +851,7 @@
 							            </td>
 										
 										
-										<td class="text12" align="left" nowrap>
+										<td class="text14" align="left" nowrap>
 											<select name="dkiv_36" id="dkiv_36">
 						 						<option value="">-vælg-</option>
 							 				  	<c:forEach var="code" items="${model.preferenceCodeList}" >
@@ -875,12 +875,12 @@
 											</a>		
 						 				</td>
 						 				
-						 				<td class="text12" align="left" nowrap>
+						 				<td class="text14" align="left" nowrap>
 							            		<input onKeyPress="return amountKey(event)" type="text" class="inputText" name="dkiv_42" id="dkiv_42" size="14" maxlength="13" value="${model.record.dkiv_42}">
 							            	</td>
-						 				<td class="text12" align="left"><input onKeyPress="return amountKey(event)" type="text" class="inputText" name="dkiv_35" id="dkiv_35" size="10" maxlength="12" value="${model.record.dkiv_35}"></td>
-										<td class="text12" align="left"><input onKeyPress="return amountKey(event)" type="text" class="inputText" name="dkiv_38" id="dkiv_38" size="10" maxlength="9" value="${model.record.dkiv_38}"></td>
-										<td class="text12" align="left" ><input type="text" class="inputText" name="dkiv_311a" id="dkiv_311a" size="16" maxlength="16" value="${model.record.dkiv_311a}"></td>
+						 				<td class="text14" align="left"><input onKeyPress="return amountKey(event)" type="text" class="inputText" name="dkiv_35" id="dkiv_35" size="10" maxlength="12" value="${model.record.dkiv_35}"></td>
+										<td class="text14" align="left"><input onKeyPress="return amountKey(event)" type="text" class="inputText" name="dkiv_38" id="dkiv_38" size="10" maxlength="9" value="${model.record.dkiv_38}"></td>
+										<td class="text14" align="left" ><input type="text" class="inputText" name="dkiv_311a" id="dkiv_311a" size="16" maxlength="16" value="${model.record.dkiv_311a}"></td>
 										
 							        </tr>
 
@@ -888,7 +888,7 @@
 							        
 									<tr>
 										
-										<td class="text12">
+										<td class="text14">
 										<img onMouseOver="showPop('31_kantal_info');" onMouseOut="hidePop('31_kantal_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 										<span id="kotaRubrik">
 											<b>31.3</b>
@@ -897,8 +897,8 @@
 							            		<font class="text16RedBold" >*</font>
 							            </c:if>
 				 						<span title="dkiv_313a">Kolli antal</span>
-										<div class="text11" style="position: relative;" align="left">
-										<span style="position:absolute;top:2px; width:250px;" id="31_kantal_info" class="popupWithInputText text11"  >
+										<div class="text12" style="position: relative;" align="left">
+										<span style="position:absolute;top:2px; width:250px;" id="31_kantal_info" class="popupWithInputText text12"  >
 							           		<b>31.3 Kolliantal</b>
 						           			<br/><br/>
 						           			Her anfører klarereren det samlede antal kolli, der er omfattet af vareposten.
@@ -906,7 +906,7 @@
 										</div>
 							            </td>
 							            
-										<td class="text12">
+										<td class="text14">
 										<img onMouseOver="showPop('31_kslag_info');" onMouseOut="hidePop('31_kslag_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 				 						<b>31.4</b>
 										<c:if test="${recordTopicSkatImport.dkih_aart=='02' || recordTopicSkatImport.dkih_aart=='04' || recordTopicSkatImport.dkih_aart=='07'}">
@@ -914,8 +914,8 @@
 							            </c:if>
 										<span title="dkiv_314a">Kolli art</span>
 										
-										<div class="text11" style="position: relative;" align="left">
-										<span style="position:absolute;top:2px; width:250px;" id="31_kslag_info" class="popupWithInputText text11"  >
+										<div class="text12" style="position: relative;" align="left">
+										<span style="position:absolute;top:2px; width:250px;" id="31_kslag_info" class="popupWithInputText text12"  >
 						           			<br/>
 						           			<b>31.4 Kolli art</b>
 											<br/>
@@ -924,15 +924,15 @@
 										</div>
 										</td>
 							            
-										<td class="text12" align="left" colspan="2">
+										<td class="text14" align="left" colspan="2">
 										<img onMouseOver="showPop('31_varubesk_info');" onMouseOut="hidePop('31_varubesk_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 				 						<b>31.5</b>
 										<c:if test="${recordTopicSkatImport.dkih_aart=='01' || recordTopicSkatImport.dkih_aart=='02' || recordTopicSkatImport.dkih_aart=='04' || recordTopicSkatImport.dkih_aart=='07'}">
 							            		<font class="text16RedBold" >*</font>
 							            </c:if>
 										<span title="dkiv_315a">Varebeskrivelse&nbsp;</span>
-										<div class="text11" style="position: relative;" align="left">
-										<span style="position:absolute;top:2px; width:250px;" id="31_varubesk_info" class="popupWithInputText text11"  >
+										<div class="text12" style="position: relative;" align="left">
+										<span style="position:absolute;top:2px; width:250px;" id="31_varubesk_info" class="popupWithInputText text12"  >
 						           			<br/>
 						           			<b>Varebeskrivelse</b>
 											<br/><br/>
@@ -940,12 +940,12 @@
 										</span>
 										</div>
 										</td>
-										<td class="text12" align="left" colspan="2">
+										<td class="text14" align="left" colspan="2">
 										<img onMouseOver="showPop('41_info');" onMouseOut="hidePop('41_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 				 						<b>41.</b><span title="dkiv_412">Suppl.enh.verdi</span>/<span title="dkiv_411">enh.</span>
 				 							
-											<div class="text11" style="position: relative;" align="left">
-											<span style="position:absolute;top:2px; width:250px;" id="41_info" class="popupWithInputText text11"  >
+											<div class="text12" style="position: relative;" align="left">
+											<span style="position:absolute;top:2px; width:250px;" id="41_info" class="popupWithInputText text12"  >
 						           		
 													<b>41. Supplerende enheder</b>
 													<br/><br/>
@@ -961,10 +961,10 @@
 											</span>
 											</div>
 										</td>
-										<td class="text12" align="left">&nbsp;&nbsp;<span title="dkiv_28b">Køb/Salgsfakt.</span></td>
+										<td class="text14" align="left">&nbsp;&nbsp;<span title="dkiv_28b">Køb/Salgsfakt.</span></td>
 							        </tr>
 									<tr>
-					           			<td class="text11" valign="bottom">
+					           			<td class="text12" valign="bottom">
 											<input onKeyPress="return numberKey(event)" type="text" class="inputText" name="dkiv_313a" id="dkiv_313a" size="7" maxlength="6" value="${model.record.dkiv_313a}">
 										</td>
 										<td align="left" nowrap>
@@ -978,34 +978,34 @@
 												<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
 											</a>											
 				            				</td> 										
-										<td class="text12" align="left" colspan="2"><input type="text" class="inputText" name="dkiv_315a" id="dkiv_315a" size="40" maxlength="45" value="${model.record.dkiv_315a}">
+										<td class="text14" align="left" colspan="2"><input type="text" class="inputText" name="dkiv_315a" id="dkiv_315a" size="40" maxlength="45" value="${model.record.dkiv_315a}">
 							            &nbsp;&nbsp;<button name="itemDescriptionExtraInformationButton" class="buttonGray" type="button" onClick="showPop('itemDescriptionExtraInformation');" >Mere...</button>
 								        <span style="position:absolute; left:280px; top:500px; width:350px; height:300px;" id="itemDescriptionExtraInformation" class="popupWithInputText"  >
 								           		<div class="text10" align="left">
 								           			<table>
 								           				<tr>
-										           			<td class="text12">
+										           			<td class="text14">
 																<b>Flere varebeskrivelser</b>
 															</td>
 														</tr>
 														
 									           			<tr>
-										           			<td class="text11">
+										           			<td class="text12">
 																&nbsp;31.2 Varebeskrivelse<input type="text" class="inputText" name="dkiv_315b" id="dkiv_315b" size="35" maxlength="45" value="${model.record.dkiv_315b}">
 															</td>
 														</tr>
 														<tr>
-										           			<td class="text11">
+										           			<td class="text12">
 																&nbsp;31.3 Varebeskrivelse<input type="text" class="inputText" name="dkiv_315c" id="dkiv_315c" size="35" maxlength="45" value="${model.record.dkiv_315c}">
 															</td>
 														</tr>
 														<tr>
-										           			<td class="text11">
+										           			<td class="text12">
 																&nbsp;31.4 Varebeskrivelse<input type="text" class="inputText" name="dkiv_315d" id="dkiv_315d" size="35" maxlength="45" value="${model.record.dkiv_315d}">
 															</td>
 														</tr>
 														<tr>
-										           			<td class="text11">
+										           			<td class="text12">
 																&nbsp;31.5 Varebeskrivelse<input type="text" class="inputText" name="dkiv_315e" id="dkiv_315e" size="35" maxlength="45" value="${model.record.dkiv_315e}">
 															</td>
 														</tr>
@@ -1013,14 +1013,14 @@
 								           			</table>
 													<table width="100%" align="left" border="0">
 														<tr align="left" >
-															<td class="text11"><button name="itemDescriptionExtraInformationButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('itemDescriptionExtraInformation');">&nbsp;Ok</button> 
+															<td class="text12"><button name="itemDescriptionExtraInformationButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('itemDescriptionExtraInformation');">&nbsp;Ok</button> 
 															</td>
 														</tr>
 													</table>
 												</div>
 										</span>
 										</td>
-										<td class="text12" align="left" colspan="2">
+										<td class="text14" align="left" colspan="2">
 											<input onKeyPress="return numberKey(event)" type="text" class="inputText" name="dkiv_412" id="dkiv_412" size="12" maxlength="9" value="${model.record.dkiv_412}">
 											&nbsp;
 											<select name="dkiv_411" id="dkiv_411">
@@ -1033,7 +1033,7 @@
 												<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
 											</a>
 										</td>
-										<td class="text12" align="left" ><input type="text" class="inputText" name="dkiv_28b" id="dkiv_28b" size="17" maxlength="17" value="${model.record.dkiv_28b}"></td>
+										<td class="text14" align="left" ><input type="text" class="inputText" name="dkiv_28b" id="dkiv_28b" size="17" maxlength="17" value="${model.record.dkiv_28b}"></td>
  							        </tr>
 
  							        <tr height="5"><td ></td></tr>
@@ -1052,7 +1052,7 @@
 							        <input type="hidden" name="model_opd" id="model_opd" value="${model.opd}">
 							        
 							        <tr>
-							        		<td class="text12" align="left">
+							        		<td class="text14" align="left">
 							 			<img onMouseOver="showPop('34a_info');" onMouseOut="hidePop('34a_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 				 						<b>34.</b>
 				 						<c:if test="${recordTopicSkatImport.dkih_aart=='02' || recordTopicSkatImport.dkih_aart=='04' || recordTopicSkatImport.dkih_aart=='07'}">
@@ -1060,8 +1060,8 @@
 							            </c:if>
 				 						<span title="dkiv_34">Opr.land</span>
 										
-							            <div class="text11" style="position: relative;" align="left">
-										<span style="position:absolute;top:2px; width:250px;" id="34a_info" class="popupWithInputText text11"  >
+							            <div class="text12" style="position: relative;" align="left">
+										<span style="position:absolute;top:2px; width:250px;" id="34a_info" class="popupWithInputText text12"  >
 						           			<b>34. Oprindelsesland</b>
 						           			<br/><br/>
 											Klarereren skal angive oprindelsesland med koden for det land, hvor varerne er fremstillet. Hvis fremstillingen er foregået i to eller flere lande, skal klarereren anføre det land, hvor den sidste væsentlige forarbejdning har fundet sted.						           			<br/><br/>
@@ -1081,7 +1081,7 @@
 										</span>
 										</div>
 										</td>
-						        		<td class="text12" align="left">
+						        		<td class="text14" align="left">
 							            <img onMouseOver="showPop('46_info');" onMouseOut="hidePop('46_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 				 						<b>46.</b>
 				 						<c:if test="${recordTopicSkatImport.dkih_aart=='02' || recordTopicSkatImport.dkih_aart=='03' || recordTopicSkatImport.dkih_aart=='04' ||
@@ -1090,8 +1090,8 @@
 							            </c:if>
 							            <span title="dkiv_46">Statistisk værdi:&nbsp;</span>
 							           
-							            <div class="text11" style="position: relative;" align="left">
-										<span style="position:absolute;top:2px; width:250px;" id="46_info" class="popupWithInputText text11"  >
+							            <div class="text12" style="position: relative;" align="left">
+										<span style="position:absolute;top:2px; width:250px;" id="46_info" class="popupWithInputText text12"  >
 							           			<br/>
 							           			<b>46. Statistisk værdi</b>
 												<br/><br/>
@@ -1105,7 +1105,7 @@
 										</div>
 										</td>
 							           	
-							           	<td colspan="4" class="text12" align="left" >
+							           	<td colspan="4" class="text14" align="left" >
 								            <img onMouseOver="showPop('40_info');" onMouseOut="hidePop('40_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 					 						<b>40.</b>
 					 						<c:if test="${recordTopicSkatImport.dkih_aart=='02' || recordTopicSkatImport.dkih_aart=='04' ||
@@ -1113,8 +1113,8 @@
 								            		<font class="text16RedBold" >*</font>
 								            </c:if>
 					 						<span title="dkiv_401/dkiv_402/dkiv_403">Summarisk angivelse / Forudgående dokument:</span>
-								            <div class="text11" style="position: relative;" align="left">
-											<span style="position:absolute;top:2px; width:250px;" id="40_info" class="popupWithInputText text11"  >
+								            <div class="text12" style="position: relative;" align="left">
+											<span style="position:absolute;top:2px; width:250px;" id="40_info" class="popupWithInputText text12"  >
 							           			<b>40. Summarisk angivelse / Forudgående dokument</b>
 												<br/><br/>
 												Rubrikken skal udfyldes med henvisning til eventuelt tidligere udfærdigede dokumenter, der er relevante for indførslen (fx fragtbrev, TIR forsendelse, EU forsendelse mv.).
@@ -1150,11 +1150,11 @@
 												<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
 											</a>																 			
 										</td>
-								        	<td class="text12" align="left"><input onKeyPress="return numberKey(event)" type="text" class="inputText" name="dkiv_46" id="dkiv_46" size="16" maxlength="15" value="${model.record.dkiv_46}"></td>
-										<td colspan="4" class="text12" align="left" nowrap>
+								        	<td class="text14" align="left"><input onKeyPress="return numberKey(event)" type="text" class="inputText" name="dkiv_46" id="dkiv_46" size="16" maxlength="15" value="${model.record.dkiv_46}"></td>
+										<td colspan="4" class="text14" align="left" nowrap>
 							           			<table>
 							           				<tr>
-									           			<td class="text12">&nbsp;&nbsp;&nbsp;&nbsp;<span title="dkiv_401-2">40.2&nbsp;Kat./Type</span>
+									           			<td class="text14">&nbsp;&nbsp;&nbsp;&nbsp;<span title="dkiv_401-2">40.2&nbsp;Kat./Type</span>
 										           			<select name="dkiv_402a" id="dkiv_402a">
 											            		<option value="">-vælg-</option>
 											 				  	<c:forEach var="code" items="${model.transportdocsSummariskadocsCodeList}" >
@@ -1165,47 +1165,47 @@
 																<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
 															</a>										           				
 														</td>
-														<td class="text12" ><span title="dkiv_403a">&nbsp;&nbsp;&nbsp;40.3&nbsp;Id</span>
+														<td class="text14" ><span title="dkiv_403a">&nbsp;&nbsp;&nbsp;40.3&nbsp;Id</span>
 															<input type="text" class="inputText" name="dkiv_403a" id="dkiv_403a" size="25" maxlength="35" value="${model.record.dkiv_403a}">
 															<input class="clazz_copyElement" type="checkbox" name="dkiv_401a_copy@dkiv_402a_copy@dkiv_403a_copy" id="dkiv_401a_copy@dkiv_402a_copy@dkiv_403a_copy" value="1" >
 															<font class="text11MediumBlue" >
 																<label onMouseOver="showPop('dkiv_403a_copy_info');" onMouseOut="hidePop('dkiv_403a_copy_info');">Kopi</label>
 															</font>
-															<div class="text11" style="position: relative;" align="left" >
+															<div class="text12" style="position: relative;" align="left" >
 									 						<span style="position:absolute; left:0px; top:0px;" id="dkiv_403a_copy_info" class="popupWithInputText"  >
-									 							<font class="text11">
+									 							<font class="text12">
 												           			Kopiere værdien til alle efterfølgende vareposter
 											           			</font>
 															</span>
 															</div>
 														</td>
 														
-														<td class="text12" >
+														<td class="text14" >
 															&nbsp;&nbsp;
 															<button name="itemSummariskaDocsExtraFieldsButton" class="buttonGray" type="button" onClick="showPop('itemSummariskaDocsExtraFields');" >Mere...</button>
 													        <span style="position:absolute; left:250px; top:400px; width:800px; height:550px;" id="itemSummariskaDocsExtraFields" class="popupWithInputText"  >
 													           		<div class="text10" align="left">
 													           			<table>
 													           				<tr>
-															           			<td colspan="2" class="text12">
+															           			<td colspan="2" class="text14">
 																					<b>40.</b>Sum.ang./Forudg.dok.
 																				</td>
 																			</tr>
 																			<tr height="8"><td></td></tr>
 																			<tr>
-																				<td class="text11" align="center">
+																				<td class="text12" align="center">
 																					Kat./Type
 																				</td>
-															           			<td class="text11">
+															           			<td class="text12">
 																					&nbsp;&nbsp;&nbsp;Id
 																				</td>
-																				<td class="text11" width="20px">
+																				<td class="text12" width="20px">
 																					&nbsp;
 																				</td>
-																				<td class="text11" align="center">
+																				<td class="text12" align="center">
 																					Kat./Type
 																				</td>
-															           			<td class="text11">
+															           			<td class="text12">
 																					&nbsp;&nbsp;&nbsp;Id
 																				</td>
 																				
@@ -1219,11 +1219,11 @@
 																						</c:forEach> 
 																					</select>
 																				</td>
-															           			<td class="text11">
+															           			<td class="text12">
 																					&nbsp;<input type="text" class="inputText" name="dkiv_403b" id="dkiv_403b" size="30" maxlength="35" value="${model.record.dkiv_403b}">
 																					<input class="clazz_copyElement" type="checkbox" name="dkiv_401b_copy@dkiv_402b_copy@dkiv_403b_copy" id="dkiv_401b_copy@dkiv_402b_copy@dkiv_403b_copy" value="1" ><font class="text11MediumBlue">Kopi</font>
 																				</td>
-																				<td class="text11" width="20px">
+																				<td class="text12" width="20px">
 																					&nbsp;
 																				</td>
 																				
@@ -1235,7 +1235,7 @@
 																						</c:forEach> 
 																					</select>
 																				</td>
-															           			<td class="text11">
+															           			<td class="text12">
 																					&nbsp;<input type="text" class="inputText" name="dkiv_403c" id="dkiv_403c" size="30" maxlength="35" value="${model.record.dkiv_403c}">
 																					<input class="clazz_copyElement" type="checkbox" name="dkiv_401c_copy@dkiv_402c_copy@dkiv_403c_copy" id="dkiv_401c_copy@dkiv_402c_copy@dkiv_403c_copy" value="1" ><font class="text11MediumBlue">Kopi</font>
 																				</td>
@@ -1250,11 +1250,11 @@
 																						</c:forEach> 
 																					</select>
 																				</td>
-															           			<td class="text11">
+															           			<td class="text12">
 																					&nbsp;<input type="text" class="inputText" name="dkiv_403d" id="dkiv_403d" size="30" maxlength="35" value="${model.record.dkiv_403d}">
 																					<input class="clazz_copyElement" type="checkbox" name="dkiv_401d_copy@dkiv_402d_copy@dkiv_403d_copy" id="dkiv_401d_copy@dkiv_402d_copy@dkiv_403d_copy" value="1" ><font class="text11MediumBlue">Kopi</font>
 																				</td>
-																				<td class="text11" width="20px">
+																				<td class="text12" width="20px">
 																					&nbsp;
 																				</td>
 																				<td align="right"><b>5.</b>
@@ -1265,7 +1265,7 @@
 																						</c:forEach> 
 																					</select>
 																				</td>
-															           			<td class="text11">
+															           			<td class="text12">
 																					&nbsp;<input type="text" class="inputText" name="dkiv_403e" id="dkiv_403e" size="30" maxlength="35" value="${model.record.dkiv_403e}">
 																					<input class="clazz_copyElement" type="checkbox" name="dkiv_401e_copy@dkiv_402e_copy@dkiv_403e_copy" id="dkiv_401e_copy@dkiv_402e_copy@dkiv_403e_copy" value="1" ><font class="text11MediumBlue">Kopi</font>
 																				</td>
@@ -1280,11 +1280,11 @@
 																						</c:forEach> 
 																					</select>
 																				</td>
-															           			<td class="text11">
+															           			<td class="text12">
 																					&nbsp;<input type="text" class="inputText" name="dkiv_403f" id="dkiv_403f" size="30" maxlength="35" value="${model.record.dkiv_403f}">
 																					<input class="clazz_copyElement" type="checkbox" name="dkiv_401f_copy@dkiv_402f_copy@dkiv_403f_copy" id="dkiv_401f_copy@dkiv_402f_copy@dkiv_403f_copy" value="1" ><font class="text11MediumBlue">Kopi</font>
 																				</td>
-																				<td class="text11" width="20px">
+																				<td class="text12" width="20px">
 																					&nbsp;
 																				</td>
 																				<td align="right"><b>7.</b>
@@ -1295,7 +1295,7 @@
 																						</c:forEach> 
 																					</select>
 																				</td>
-															           			<td class="text11">
+															           			<td class="text12">
 																					&nbsp;<input type="text" class="inputText" name="dkiv_403g" id="dkiv_403g" size="30" maxlength="35" value="${model.record.dkiv_403g}">
 																					<input class="clazz_copyElement" type="checkbox" name="dkiv_401g_copy@dkiv_402g_copy@dkiv_403g_copy" id="dkiv_401g_copy@dkiv_402g_copy@dkiv_403g_copy" value="1" ><font class="text11MediumBlue">Kopi</font>
 																				</td>
@@ -1310,11 +1310,11 @@
 																						</c:forEach> 
 																					</select>
 																				</td>
-															           			<td class="text11">
+															           			<td class="text12">
 																					&nbsp;<input type="text" class="inputText" name="dkiv_403h" id="dkiv_403h" size="30" maxlength="35" value="${model.record.dkiv_403h}">
 																					<input class="clazz_copyElement" type="checkbox" name="dkiv_401h_copy@dkiv_402h_copy@dkiv_403h_copy" id="dkiv_401h_copy@dkiv_402h_copy@dkiv_403h_copy" value="1" ><font class="text11MediumBlue">Kopi</font>
 																				</td>
-																				<td class="text11" width="20px">
+																				<td class="text12" width="20px">
 																					&nbsp;
 																				</td>
 																				<td align="right"><b>9.</b>
@@ -1325,7 +1325,7 @@
 																						</c:forEach> 
 																					</select>
 																				</td>
-															           			<td class="text11">
+															           			<td class="text12">
 																					&nbsp;<input type="text" class="inputText" name="dkiv_403i" id="dkiv_403i" size="30" maxlength="35" value="${model.record.dkiv_403i}">
 																					<input class="clazz_copyElement" type="checkbox" name="dkiv_401i_copy@dkiv_402i_copy@dkiv_403i_copy" id="dkiv_401i_copy@dkiv_402i_copy@dkiv_403i_copy" value="1" ><font class="text11MediumBlue">Kopi</font>
 																				</td>
@@ -1340,11 +1340,11 @@
 																						</c:forEach> 
 																					</select>
 																				</td>
-															           			<td class="text11">
+															           			<td class="text12">
 																					&nbsp;<input type="text" class="inputText" name="dkiv_403j" id="dkiv_403j" size="30" maxlength="35" value="${model.record.dkiv_403j}">
 																					<input class="clazz_copyElement" type="checkbox" name="dkiv_401j_copy@dkiv_402j_copy@dkiv_403j_copy" id="dkiv_401j_copy@dkiv_402j_copy@dkiv_403j_copy" value="1" ><font class="text11MediumBlue">Kopi</font>
 																				</td>
-																				<td class="text11" width="20px">
+																				<td class="text12" width="20px">
 																					&nbsp;
 																				</td>
 																				<td align="right"><b>11.</b>
@@ -1355,7 +1355,7 @@
 																						</c:forEach> 
 																					</select>
 																				</td>
-															           			<td class="text11">
+															           			<td class="text12">
 																					&nbsp;<input type="text" class="inputText" name="dkiv_403k" id="dkiv_403k" size="30" maxlength="35" value="${model.record.dkiv_403k}">
 																					<input class="clazz_copyElement" type="checkbox" name="dkiv_401k_copy@dkiv_402k_copy@dkiv_403k_copy" id="dkiv_401k_copy@dkiv_402k_copy@dkiv_403k_copy" value="1" ><font class="text11MediumBlue">Kopi</font>
 																				</td>
@@ -1370,11 +1370,11 @@
 																						</c:forEach> 
 																					</select>
 																				</td>
-															           			<td class="text11">
+															           			<td class="text12">
 																					&nbsp;<input type="text" class="inputText" name="dkiv_403l" id="dkiv_403l" size="30" maxlength="35" value="${model.record.dkiv_403l}">
 																					<input class="clazz_copyElement" type="checkbox" name="dkiv_401l_copy@dkiv_402l_copy@dkiv_403l_copy" id="dkiv_401l_copy@dkiv_402l_copy@dkiv_403l_copy" value="1" ><font class="text11MediumBlue">Kopi</font>
 																				</td>
-																				<td class="text11" width="20px">
+																				<td class="text12" width="20px">
 																					&nbsp;
 																				</td>
 																				<td align="right"><b>13.</b>
@@ -1385,7 +1385,7 @@
 																						</c:forEach> 
 																					</select>
 																				</td>
-															           			<td class="text11">
+															           			<td class="text12">
 																					&nbsp;<input type="text" class="inputText" name="dkiv_403m" id="dkiv_403m" size="30" maxlength="35" value="${model.record.dkiv_403m}">
 																					<input class="clazz_copyElement" type="checkbox" name="dkiv_401m_copy@dkiv_402m_copy@dkiv_403m_copy" id="dkiv_401m_copy@dkiv_402m_copy@dkiv_403m_copy" value="1" ><font class="text11MediumBlue">Kopi</font>
 																				</td>
@@ -1400,11 +1400,11 @@
 																						</c:forEach> 
 																					</select>
 																				</td>
-															           			<td class="text11">
+															           			<td class="text12">
 																					&nbsp;<input type="text" class="inputText" name="dkiv_403n" id="dkiv_403n" size="30" maxlength="35" value="${model.record.dkiv_403n}">
 																					<input class="clazz_copyElement" type="checkbox" name="dkiv_401n_copy@dkiv_402n_copy@dkiv_403n_copy" id="dkiv_401n_copy@dkiv_402n_copy@dkiv_403n_copy" value="1" ><font class="text11MediumBlue">Kopi</font>
 																				</td>
-																				<td class="text11" width="20px">
+																				<td class="text12" width="20px">
 																					&nbsp;
 																				</td>
 																				<td align="right"><b>15.</b>
@@ -1415,7 +1415,7 @@
 																						</c:forEach> 
 																					</select>
 																				</td>
-															           			<td class="text11">
+															           			<td class="text12">
 																					&nbsp;<input type="text" class="inputText" name="dkiv_403o" id="dkiv_403o" size="30" maxlength="35" value="${model.record.dkiv_403o}">
 																					<input class="clazz_copyElement" type="checkbox" name="dkiv_401o_copy@dkiv_402o_copy@dkiv_403o_copy" id="dkiv_401o_copy@dkiv_402o_copy@dkiv_403o_copy" value="1" ><font class="text11MediumBlue">Kopi</font>
 																				</td>
@@ -1430,11 +1430,11 @@
 																						</c:forEach> 
 																					</select>
 																				</td>
-															           			<td class="text11">
+															           			<td class="text12">
 																					&nbsp;<input type="text" class="inputText" name="dkiv_403p" id="dkiv_403p" size="30" maxlength="35" value="${model.record.dkiv_403p}">
 																					<input class="clazz_copyElement" type="checkbox" name="dkiv_401p_copy@dkiv_402p_copy@dkiv_403p_copy" id="dkiv_401p_copy@dkiv_402p_copy@dkiv_403p_copy" value="1" ><font class="text11MediumBlue">Kopi</font>
 																				</td>
-																				<td class="text11" width="20px">
+																				<td class="text12" width="20px">
 																					&nbsp;
 																				</td>
 																				<td align="right"><b>17.</b>
@@ -1445,7 +1445,7 @@
 																						</c:forEach> 
 																					</select>
 																				</td>
-															           			<td class="text11">
+															           			<td class="text12">
 																					&nbsp;<input type="text" class="inputText" name="dkiv_403q" id="dkiv_403q" size="30" maxlength="35" value="${model.record.dkiv_403q}">
 																					<input class="clazz_copyElement" type="checkbox" name="dkiv_401q_copy@dkiv_402q_copy@dkiv_403q_copy" id="dkiv_401q_copy@dkiv_402q_copy@dkiv_403q_copy" value="1" ><font class="text11MediumBlue">Kopi</font>
 																				</td>
@@ -1459,11 +1459,11 @@
 																						</c:forEach> 
 																					</select>
 																				</td>
-															           			<td class="text11">
+															           			<td class="text12">
 																					&nbsp;<input type="text" class="inputText" name="dkiv_403r" id="dkiv_403r" size="30" maxlength="35" value="${model.record.dkiv_403r}">
 																					<input class="clazz_copyElement" type="checkbox" name="dkiv_401r_copy@dkiv_402r_copy@dkiv_403r_copy" id="dkiv_401r_copy@dkiv_402r_copy@dkiv_403r_copy" value="1" ><font class="text11MediumBlue">Kopi</font>
 																				</td>
-																				<td class="text11" width="20px">
+																				<td class="text12" width="20px">
 																					&nbsp;
 																				</td>
 																				<td align="right"><b>19.</b>
@@ -1474,7 +1474,7 @@
 																						</c:forEach> 
 																					</select>
 																				</td>
-															           			<td class="text11">
+															           			<td class="text12">
 																					&nbsp;<input type="text" class="inputText" name="dkiv_403s" id="dkiv_403s" size="30" maxlength="35" value="${model.record.dkiv_403s}">
 																					<input class="clazz_copyElement" type="checkbox" name="dkiv_401s_copy@dkiv_402s_copy@dkiv_403s_copy" id="dkiv_401s_copy@dkiv_402s_copy@dkiv_403s_copy" value="1" ><font class="text11MediumBlue">Kopi</font>
 																				</td>
@@ -1482,7 +1482,7 @@
 													           			</table>
 																		<table width="100%" align="left" border="0">
 																			<tr align="left" >
-																				<td class="text11"><button name="itemSummariskaDocsExtraFieldsButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('itemSummariskaDocsExtraFields');">&nbsp;Ok</button> 
+																				<td class="text12"><button name="itemSummariskaDocsExtraFieldsButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('itemSummariskaDocsExtraFields');">&nbsp;Ok</button> 
 																				</td>
 																			</tr>
 																		</table>
@@ -1494,24 +1494,24 @@
 									    </td>
 									    <td align="left" colspan="5">
 											<div style="display: none;" class="clazz_dialog" id="dialogCopy" title="Dialog">
-												<p class="text12" >
+												<p class="text14" >
 													Mindst et <b>kopi-element</b> er blevet valgt.
 												</p>
-												<p class="text12" >
+												<p class="text14" >
 													Du skal angive <b>til</b> hvilken linjenr. du vil kopiere dine værdier.
 												</p>
 												<table>
 													<tr>
-														<td class="text12" align="left" >&nbsp;Fra linjenr.</td>
-				                							<td class="text12" align="left" >&nbsp;Til linjenr.</td>
+														<td class="text14" align="left" >&nbsp;Fra linjenr.</td>
+				                							<td class="text14" align="left" >&nbsp;Til linjenr.</td>
 				                						</tr>
 				 									<tr>
-														<td class="text12MediumBlue">
+														<td class="text14MediumBlue">
 															<%-- this hidden field is required to interact with jQuery Dialog box and the AjaxController --%>
 															<input type="hidden" name="totalNumberOfItemLinesJsp" id="totalNumberOfItemLinesJsp" value="<c:out value="${totalNumberOfItemLines}"/>">
 															<input type="text" class="inputText" name="copyLineStartLineNr" id="copyLineStartLineNr" size="2" maxlength="2" value="">
 														</td>
-														<td class="text12MediumBlue">
+														<td class="text14MediumBlue">
 															<input onKeyPress="return numberKey(event)" type="text" class="inputText" name="copyLineEndLineNr" id="copyLineEndLineNr" size="2" maxlength="2" value="">
 														</td>
 														
@@ -1552,7 +1552,7 @@
 	 				<%-- Item header --%>
 	 				<table width="100%" align="center" class="secondarySectionHeader" border="0" cellspacing="0" cellpadding="0">
 				 		<tr height="15">
-				 			<td class="text12WhiteBold">
+				 			<td class="text14WhiteBold">
 				 				<b>&nbsp;&nbsp;Varepost&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Supplerende oplysninger&nbsp;</b>
 				 				<img src="resources/images/update.gif" border="0" alt="edit">
 				 			</td>
@@ -1572,36 +1572,36 @@
 					 		<td width="50%" valign="top">
 				 			<table border="0" cellspacing="1" cellpadding="0">
 				            		<tr>
-						            <td nowrap colspan="2" class="text12" align="left">
+						            <td nowrap colspan="2" class="text14" align="left">
 						            &nbsp;
 			 						<b>44.&nbsp;Certifikat og bevilling</b></td>
-						           	<td class="text12" align="left">&nbsp;</td>
+						           	<td class="text14" align="left">&nbsp;</td>
 						        </tr>
 						        <tr height="5"><td class="text" align="left"></td></tr>
 								
 								<tr>
-						            <td class="text12" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						            <td class="text14" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						            <img onMouseOver="showPop('44_1_info');" onMouseOut="hidePop('44_1_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 						            <span title="dkiv_441">44.1&nbsp;Bevillingsnr:&nbsp;</span>
-							            <div class="text11" style="position: relative;" align="left">
-										<span style="position:absolute;top:2px; width:250px;" id="44_1_info" class="popupWithInputText text11"  >
+							            <div class="text12" style="position: relative;" align="left">
+										<span style="position:absolute;top:2px; width:250px;" id="44_1_info" class="popupWithInputText text12"  >
 							           			<b>44.1 Bevillinr.[Sags-nr]</b>
 												<br/><br/>
 												Bevillingsnummeret [Sags-nr] er journalnummeret på bevillingen eller tilladelsen.
 										</span>
 										</div>
 									</td>	
-						            <td class="text12" align="left">
+						            <td class="text14" align="left">
 						            		<input type="text" class="inputText" name="dkiv_441" id="dkiv_441" size="15" maxlength="13" value="${model.record.dkiv_441}">
 						            </td>
 						        </tr>
 						        <tr>
 						         
-						            <td class="text12" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						            <td class="text14" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						            <img onMouseOver="showPop('44_2_info');" onMouseOut="hidePop('44_2_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 						            <span title="dkiv_442a">44.2&nbsp;Certifikatnr:&nbsp;</span>
-						            <div class="text11" style="position: relative;" align="left">
-									<span style="position:absolute;top:2px; width:250px;" id="44_2_info" class="popupWithInputText text11"  >
+						            <div class="text12" style="position: relative;" align="left">
+									<span style="position:absolute;top:2px; width:250px;" id="44_2_info" class="popupWithInputText text12"  >
 						           			<b>44.2 Certifikatnr / Certifikatkode</b>
 											<br/><br/>
 											Ved indførsel af varer omfattet af varebestemmelser eller med adgang til en nedsat told ud over de almindelige præferenceordninger er der ofte krav, 
@@ -1619,15 +1619,15 @@
 									</span>
 									</div>
 									</td>
-						            <td class="text12" align="left">
+						            <td class="text14" align="left">
 						            		<input type="text" class="inputText" name="dkiv_442a" id="dkiv_442a" size="25" maxlength="35" value="${model.record.dkiv_442a}">
 						            		<input class="clazz_copyElement" type="checkbox" name="dkiv_442a_copy@dkiv_4421_copy" id="dkiv_442a_copy@dkiv_4421_copy" value="1" >
 						            		<font class="text11MediumBlue">
 						            			<label onMouseOver="showPop('dkiv_442a_copy_info');" onMouseOut="hidePop('dkiv_442a_copy_info');">Kopi</label>
 						            		</font>						
-						            		<div class="text11" style="position: relative;" align="left" >
+						            		<div class="text12" style="position: relative;" align="left" >
 				 						<span style="position:absolute; left:0px; top:0px;" id="dkiv_442a_copy_info" class="popupWithInputText"  >
-				 							<font class="text11" >
+				 							<font class="text12" >
 							           			Kopiere værdien til alle efterfølgende vareposter
 						           			</font>
 										</span>
@@ -1635,11 +1635,11 @@
 						            </td>
 						        </tr>
 						        <tr>
-						            <td class="text12" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						            <td class="text14" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						            <img onMouseOver="showPop('44_2b_info');" onMouseOut="hidePop('44_2b_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 						            <span title="dkiv_4421">44.2&nbsp;Certifikatkode:&nbsp;</span>
-						            <div class="text11" style="position: relative;" align="left">
-									<span style="position:absolute;top:2px; width:250px;" id="44_2b_info" class="popupWithInputText text11"  >
+						            <div class="text12" style="position: relative;" align="left">
+									<span style="position:absolute;top:2px; width:250px;" id="44_2b_info" class="popupWithInputText text12"  >
 						           			<b>44.2 Certifikatnr / Certifikatkode</b>
 											<br/><br/>
 											Ved indførsel af varer omfattet af varebestemmelser eller med adgang til en nedsat told ud over de almindelige præferenceordninger er der ofte krav, 
@@ -1657,7 +1657,7 @@
 									</span>
 									</div>
 									</td>
-						            <td class="text12" >
+						            <td class="text14" >
 				           				<select name="dkiv_4421" id="dkiv_4421">
 					 						<option value="">-vælg-</option>
 						 				  	<c:forEach var="code" items="${model.certifikatKoderR44_2CodeList}" >
@@ -1672,15 +1672,15 @@
 								           		<div class="text10" align="left">
 								           			<table>
 								           			<tr>
-									           			<td class="text11" colspan="3">
+									           			<td class="text12" colspan="3">
 									           				<b>44.2 Certifikatnr. / Certifikatkode</b>
 									           			</td>
 									        			</tr>
 								           			<tr>
-									           			<td class="text11">
+									           			<td class="text12">
 															&nbsp;<span title="dkiv_442b">2. Cert.nr.</span><input type="text" class="inputText" name="dkiv_442b" id="dkiv_442b" size="36" maxlength="35" value="${model.record.dkiv_442b}">
 														</td>
-														<td class="text11"><span title="dkiv_4422">Cert.kode</span>
+														<td class="text12"><span title="dkiv_4422">Cert.kode</span>
 															<select name="dkiv_4422" id="dkiv_4422">
 										 						<option value="">-vælg-</option>
 											 				  	<c:forEach var="code" items="${model.certifikatKoderR44_2CodeList}" >
@@ -1691,10 +1691,10 @@
 														</td>
 													</tr>
 													<tr>
-									           			<td class="text11">
+									           			<td class="text12">
 															&nbsp;<span title="dkiv_442c">3. Cert.nr.<input type="text" class="inputText" name="dkiv_442c" id="dkiv_442c" size="36" maxlength="35" value="${model.record.dkiv_442c}">
 														</td>
-														<td class="text11"><span title="dkiv_4423">Cert.kode</span>
+														<td class="text12"><span title="dkiv_4423">Cert.kode</span>
 															<select name="dkiv_4423" id="dkiv_4423">
 										 						<option value="">-vælg-</option>
 											 				  	<c:forEach var="code" items="${model.certifikatKoderR44_2CodeList}" >
@@ -1705,10 +1705,10 @@
 														</td>
 													</tr>
 													<tr>
-									           			<td class="text11">
+									           			<td class="text12">
 															&nbsp;4. Cert.nr.<input type="text" class="inputText" name="dkiv_442d" id="dkiv_442d" size="36" maxlength="35" value="${model.record.dkiv_442d}">
 														</td>
-														<td class="text11">Cert.kode
+														<td class="text12">Cert.kode
 															<select name="dkiv_4424" id="dkiv_4424">
 										 						<option value="">-vælg-</option>
 											 				  	<c:forEach var="code" items="${model.certifikatKoderR44_2CodeList}" >
@@ -1719,10 +1719,10 @@
 														</td>
 													</tr>
 													<tr>
-									           			<td class="text11">
+									           			<td class="text12">
 															&nbsp;5. Cert.nr.<input type="text" class="inputText" name="dkiv_442e" id="dkiv_442e" size="36" maxlength="35" value="${model.record.dkiv_442e}">
 														</td>
-														<td class="text11">Cert.kode
+														<td class="text12">Cert.kode
 															<select name="dkiv_4425" id="dkiv_4425">
 										 						<option value="">-vælg-</option>
 											 				  	<c:forEach var="code" items="${model.certifikatKoderR44_2CodeList}" >
@@ -1733,10 +1733,10 @@
 														</td>
 													</tr>
 													<tr>
-									           			<td class="text11">
+									           			<td class="text12">
 															&nbsp;6. Cert.nr.<input type="text" class="inputText" name="dkiv_442f" id="dkiv_442f" size="36" maxlength="35" value="${model.record.dkiv_442f}">
 														</td>
-														<td class="text11">Cert.kode
+														<td class="text12">Cert.kode
 															<select name="dkiv_4426" id="dkiv_4426">
 										 						<option value="">-vælg-</option>
 											 				  	<c:forEach var="code" items="${model.certifikatKoderR44_2CodeList}" >
@@ -1747,10 +1747,10 @@
 														</td>
 													</tr>
 													<tr>
-									           			<td class="text11">
+									           			<td class="text12">
 															&nbsp;7. Cert.nr.<input type="text" class="inputText" name="dkiv_442g" id="dkiv_442g" size="36" maxlength="35" value="${model.record.dkiv_442g}">
 														</td>
-														<td class="text11">Cert.kode
+														<td class="text12">Cert.kode
 															<select name="dkiv_4427" id="dkiv_4427">
 										 						<option value="">-vælg-</option>
 											 				  	<c:forEach var="code" items="${model.certifikatKoderR44_2CodeList}" >
@@ -1761,10 +1761,10 @@
 														</td>
 													</tr>
 													<tr>
-									           			<td class="text11">
+									           			<td class="text12">
 															&nbsp;8. Cert.nr.<input type="text" class="inputText" name="dkiv_442h" id="dkiv_442h" size="36" maxlength="35" value="${model.record.dkiv_442h}">
 														</td>
-														<td class="text11">Cert.kode
+														<td class="text12">Cert.kode
 															<select name="dkiv_4428" id="dkiv_4428">
 										 						<option value="">-vælg-</option>
 											 				  	<c:forEach var="code" items="${model.certifikatKoderR44_2CodeList}" >
@@ -1775,10 +1775,10 @@
 														</td>
 													</tr>
 													<tr>
-									           			<td class="text11">
+									           			<td class="text12">
 															&nbsp;<span title="dkiv_442i">9. Cert.nr.</span><input type="text" class="inputText" name="dkiv_442i" id="dkiv_442i" size="36" maxlength="35" value="${model.record.dkiv_442i}">
 														</td>
-														<td class="text11"><span title="dkiv_4429">Cert.kode</span>
+														<td class="text12"><span title="dkiv_4429">Cert.kode</span>
 															<select name="dkiv_4429" id="dkiv_4429">
 										 						<option value="">-vælg-</option>
 											 				  	<c:forEach var="code" items="${model.certifikatKoderR44_2CodeList}" >
@@ -1791,7 +1791,7 @@
 													</table>
 													<table width="100%" align="left" border="0">
 														<tr align="left" >
-															<td class="text12" ><button name="certifikatButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('certifikatKode_Info');">&nbsp;Ok</button> 
+															<td class="text14" ><button name="certifikatButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('certifikatKode_Info');">&nbsp;Ok</button> 
 															</td>
 														</tr>
 													</table>
@@ -1802,11 +1802,11 @@
 				           			</td>
 						        </tr>
 						        <tr>
-						            <td class="text12" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						            <td class="text14" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						            <img onMouseOver="showPop('44_3_info');" onMouseOut="hidePop('44_3_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 						            <span title="dkiv_443">44.3&nbsp;Varebestemmelse:&nbsp;</span>
-						            <div class="text11" style="position: relative;" align="left">
-									<span style="position:absolute;top:2px; width:250px;" id="44_3_info" class="popupWithInputText text11"  >
+						            <div class="text12" style="position: relative;" align="left">
+									<span style="position:absolute;top:2px; width:250px;" id="44_3_info" class="popupWithInputText text12"  >
 						           			<b>44.3 Varebestemmelser</b>
 											<br/><br/>
 											Hvis varerne er omfattet af varebestemmelser, jf. afsnit F.A.11, er det her, 
@@ -1822,7 +1822,7 @@
 									</span>
 									</div>
 									</td>
-						            <td class="text12" >
+						            <td class="text14" >
 				           				<select name="dkiv_443" id="dkiv_443">
 					 						<option value="">-vælg-</option>
 						 				  	<c:forEach var="code" items="${model.vabCertifikatKoderR44_3CodeList}" >
@@ -1836,11 +1836,11 @@
 				           			</td>
 						        </tr>
 						        <tr>
-						            <td class="text12" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						            <td class="text14" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						            <img onMouseOver="showPop('44_4_info');" onMouseOut="hidePop('44_4_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 						            <span title="dkiv_444b">44.4&nbsp;Præferencedok.kode:&nbsp;</span>
-						            <div class="text11" style="position: relative;" align="left">
-									<span style="position:absolute;top:2px; width:250px;" id="44_4_info" class="popupWithInputText text11"  >
+						            <div class="text12" style="position: relative;" align="left">
+									<span style="position:absolute;top:2px; width:250px;" id="44_4_info" class="popupWithInputText text12"  >
 						           			<b>44.4 Præferencedok.kode</b>
 											<br/><br/>
 											Hvis man anmoder om præferencetoldbehandling, er det her, 
@@ -1849,7 +1849,7 @@
 									</span>
 									</div>
 									</td>
-						            <td class="text12" >
+						            <td class="text14" >
 				           				<select name="dkiv_444b" id="dkiv_444b">
 					 						<option value="">-vælg-</option>
 						 				  	<c:forEach var="code" items="${model.pdokumentationsKoderR44_4CodeList}" >
@@ -1863,11 +1863,11 @@
 				           			</td>
 						        </tr>
 						        <tr>
-						            <td class="text12" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						            <td class="text14" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						            <img onMouseOver="showPop('44_4a_info');" onMouseOut="hidePop('44_4a_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 						            <span title="dkiv_444a">44.4a&nbsp;Præferencedok.nr:&nbsp;</span>
-						            <div class="text11" style="position: relative;" align="left">
-									<span style="position:absolute;top:2px; width:250px;" id="44_4a_info" class="popupWithInputText text11"  >
+						            <div class="text12" style="position: relative;" align="left">
+									<span style="position:absolute;top:2px; width:250px;" id="44_4a_info" class="popupWithInputText text12"  >
 						           			<b>44.4a Præferencedok.nr</b>
 											<br/><br/>
 											Her angiver klarereren nummeret på det præferencedokument, der er angivet i rubrik 44.4. 
@@ -1875,19 +1875,19 @@
 									</span>
 									</div>
 									</td>
-						            <td class="text12" align="left">
+						            <td class="text14" align="left">
 					            		<input type="text" class="inputText" name="dkiv_444a" id="dkiv_444a" size="25" maxlength="20" value="${model.record.dkiv_444a}">
 						            </td>
 						        </tr>
 						        
 								<tr height="15"><td></td></tr>
 						        <tr>
-						            <td colspan="5" class="text12">
+						            <td colspan="5" class="text14">
 						            &nbsp;
 			 						<b>44.9&nbsp;Oplysningstype</b>
 						            
-					           		<div class="text11" style="position: relative;" align="left">
-									<span style="position:absolute;top:2px; width:250px;" id="44a_info" class="popupWithInputText text11"  >
+					           		<div class="text12" style="position: relative;" align="left">
+									<span style="position:absolute;top:2px; width:250px;" id="44a_info" class="popupWithInputText text12"  >
 					           			<b>Särskilda upplysningar</b>
 										<br/>
 					           			Fält 44 består av två delfält, ett fritextfält och ett kodfält. Vissa uppgifter ska du alltid fylla i då du deklarerar enligt godkänd exportör, medan ytterligare upplysningar lämnar du vid behov. Det kan exempelvis vara ett tillståndsnummer eller ett licensnummer för exportreglerade varor.
@@ -1907,7 +1907,7 @@
 						        </tr>
 								<tr height="5"><td></td></tr>
 			           			<tr>
-				           			<td class="text11">
+				           			<td class="text12">
 				           				<span title="dkiv_449a">&nbsp;&nbsp;&nbsp;&nbsp;Kode</span>
 				           				<select name="dkiv_449a" id="dkiv_449a">
 					 						<option value="">-vælg-</option>
@@ -1923,7 +1923,7 @@
 											</c:forEach>  
 										</select>
 				           			</td>
-				           			<td class="text11">
+				           			<td class="text12">
 										<span title="dkiv_449b">&nbsp;Værdi</span>
 											<c:choose>
 												<c:when test="${not empty dkiv_449b}">
@@ -1937,13 +1937,13 @@
 								</tr>
 								<tr height="15"><td></td></tr>
 						        <tr>
-						            <td colspan="2" class="text12">
+						            <td colspan="2" class="text14">
 						            &nbsp;
 			 						<b>44.6&nbsp;Supplerende vareoplysninger</b></td>
 						        </tr>
 								<tr height="5"><td></td></tr>
 								<tr>
-				           			<td class="text11" >
+				           			<td class="text12" >
 				           				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span title="dkiv_446ka">Kode</span>
 				           				&nbsp;
 				           				<select name="dkiv_446ka" id="dkiv_446ka">
@@ -1957,20 +1957,20 @@
 									           		<div class="text10" align="left">
 									           			<table>
 									           				<tr>
-											           			<td colspan="2" class="text12">
+											           			<td colspan="2" class="text14">
 																	<b>44.6&nbsp;Supplerende vareoplysninger</b></td>
 																</td>
 															</tr>
 															<tr height="8"><td></td></tr>
 															<tr>
-																<td class="text11" align="center">
+																<td class="text12" align="center">
 																	<span title="dkiv_446kb,_446kf,_446kj,_446kn,_446kr">Kode</span>
 																</td>
-											           			<td class="text11">
+											           			<td class="text12">
 																	&nbsp;&nbsp;<span title="dkiv_446tb - _446ts">Tekst</span>
 																</td>
-																<td class="text11" align="center">&nbsp;</td>
-											           			<td class="text11">
+																<td class="text12" align="center">&nbsp;</td>
+											           			<td class="text12">
 																	&nbsp;&nbsp;Tekst
 																</td>
 																
@@ -2107,24 +2107,24 @@
 									           			</table>
 														<table width="100%" align="left" border="0">
 															<tr align="left" >
-																<td class="text11"><button name="itemSupplerendeVareOpExtraFieldsButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('itemSupplerendeVareOpExtraFields');">&nbsp;Ok</button> 
+																<td class="text12"><button name="itemSupplerendeVareOpExtraFieldsButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('itemSupplerendeVareOpExtraFields');">&nbsp;Ok</button> 
 																</td>
 															</tr>
 														</table>
 													</div>
 											</span>											
 				           			</td>
-				           			<td class="text11" >
+				           			<td class="text12" >
 				           				&nbsp;
 				           			</td>
 								</tr>
 								<tr>
-									<td colspan="2" class="text11">&nbsp;&nbsp;&nbsp;&nbsp;
+									<td colspan="2" class="text12">&nbsp;&nbsp;&nbsp;&nbsp;
 										<span title="dkiv_446ta">Tekst&nbsp;</span>
 									</td>
 								</tr>
 								<tr>
-									<td colspan="2" class="text11">&nbsp;&nbsp;&nbsp;
+									<td colspan="2" class="text12">&nbsp;&nbsp;&nbsp;
 										<textarea onKeyPress="return lockCarriageReturnKey(event)" rows="5" cols="40" class="inputText" name="dkiv_446ta" id="dkiv_446ta" maxlength="254">${model.record.dkiv_446ta}</textarea>
 									</td>
 								</tr>
@@ -2134,18 +2134,18 @@
 					        <td width="50%" valign="top">
 						 		<table border="0" cellspacing="1" cellpadding="0">
 									<tr>
-							            <td nowrap colspan="2" class="text12" align="left">
+							            <td nowrap colspan="2" class="text14" align="left">
 							            		<b>33.&nbsp;Varekode [Tillægskoder]</b>
 				 						</td>
-							           	<td class="text12" align="left">&nbsp;</td>
+							           	<td class="text14" align="left">&nbsp;</td>
 							        </tr>
 							        <tr height="5"><td class="text" align="left"></td></tr>
 							        <tr>   	
-						            		<td class="text12" align="left">&nbsp;&nbsp;
+						            		<td class="text14" align="left">&nbsp;&nbsp;
 											<img onMouseOver="showPop('332_info');" onMouseOut="hidePop('332_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info" >
 											<span title="dkiv_332/dkiv_333">Tillægskoder&nbsp;</span>
-											<div class="text11" style="position: relative;" align="left">
-											<span style="position:absolute;top:2px; width:250px;" id="332_info" class="popupWithInputText text11"  >
+											<div class="text12" style="position: relative;" align="left">
+											<span style="position:absolute;top:2px; width:250px;" id="332_info" class="popupWithInputText text12"  >
 								           			<b>33.&nbsp;Varekode [Tillægskoder]</b>
 													<p>
 													I nogle tilfælde skal der yderligere angives op til to 4-cifrede tillægskoder, fx når der er tale om antidumpingtold,
@@ -2157,37 +2157,37 @@
 											</span>
 											</div>
 										</td>
-										<td class="text12" align="left" colspan="2">
+										<td class="text14" align="left" colspan="2">
 											33.2&nbsp;<input type="text" class="inputText" name="dkiv_332" id="dkiv_332" size="4" maxlength="4" value="${model.record.dkiv_332}">
 											&nbsp;33.3&nbsp;<input type="text" class="inputText" name="dkiv_333" id="dkiv_333" size="4" maxlength="4" value="${model.record.dkiv_333}">
 										</td>
 					            		</tr>
 					            		<tr height="15"><td class="text" align="left">&nbsp;</td></tr>
 						 			<tr>
-							            <td class="text12" nowrap colspan="2" align="left"><b>31.</b>&nbsp;
+							            <td class="text14" nowrap colspan="2" align="left"><b>31.</b>&nbsp;
 							            		<span title="dkiv_311/dkiv_313/dkiv_314">Kolli mærke, kolli antal og kolli art</span>
 						            		</td>
-							           	<td class="text12" align="left">&nbsp;
+							           	<td class="text14" align="left">&nbsp;
 							           	<button name="goodsMarkButton" class="buttonGray" type="button" onClick="showPop('goodsMark');" >Mere...</button> 
    									        <span style="position:absolute; left:480px; top:800px; width:350px; height:320px;" id="goodsMark" class="popupWithInputText"  >
 								           		<div class="text10" align="left" valign="top">
 								           			<table>
 								           				<tr>
-										           			<td class="text11">
+										           			<td class="text12">
 										           				&nbsp;Kolli mærke [max 16 tecken]:
 										           			</td>
-										           			<td class="text11">
+										           			<td class="text12">
 																&nbsp;Kolli antal:
 															</td>
-															<td class="text11">
+															<td class="text12">
 																&nbsp;Kolli art [kod]
 															</td>
 														</tr>
 									           			<tr>
-										           			<td valign="top" class="text11">
+										           			<td valign="top" class="text12">
 										           				&nbsp;2.<textarea rows="2" cols="15" class="inputText" name="dkiv_311b" id="dkiv_311b" maxlength="16">${model.record.dkiv_311b}</textarea>
 										           			</td>
-										           			<td valign="bottom" class="text11">
+										           			<td valign="bottom" class="text12">
 																&nbsp;<input onKeyPress="return numberKey(event)" type="text" class="inputText" name="dkiv_313b" id="dkiv_313b" size="6" maxlength="6" value="${model.record.dkiv_313b}">
 															</td>
 															<td align="left" valign="bottom">
@@ -2200,10 +2200,10 @@
 									            				</td> 
 										           		</tr>
 														<tr>
-										           			<td valign="top" class="text11">
+										           			<td valign="top" class="text12">
 										           				&nbsp;3.<textarea rows="2" cols="15" class="inputText" name="dkiv_311c" id="dkiv_311c" maxlength="16">${model.record.dkiv_311c}</textarea>
 										           			</td>
-										           			<td valign="bottom" class="text11">
+										           			<td valign="bottom" class="text12">
 																&nbsp;<input onKeyPress="return numberKey(event)" type="text" class="inputText" name="dkiv_313c" id="dkiv_313c" size="6" maxlength="6" value="${model.record.dkiv_313c}">
 															</td>
 															<td align="left" valign="bottom">
@@ -2217,10 +2217,10 @@
 										           		</tr>
 														
 									           			<tr>
-										           			<td valign="top" class="text11">
+										           			<td valign="top" class="text12">
 										           				&nbsp;4.<textarea rows="2" cols="15" class="inputText" name="dkiv_311d" id="dkiv_311d" maxlength="16">${model.record.dkiv_311d}</textarea>
 										           			</td>
-										           			<td valign="bottom" class="text11">
+										           			<td valign="bottom" class="text12">
 																&nbsp;<input onKeyPress="return numberKey(event)" type="text" class="inputText" name="dkiv_313d" id="dkiv_313d" size="6" maxlength="6" value="${model.record.dkiv_313d}">
 															</td>
 															<td align="left" valign="bottom">
@@ -2233,10 +2233,10 @@
 									            				</td> 
 										           		</tr>
 														<tr>
-										           			<td valign="top" class="text11">
+										           			<td valign="top" class="text12">
 										           				&nbsp;5.<textarea rows="2" cols="15" class="inputText" name="dkiv_311e" id="dkiv_311e" maxlength="16">${model.record.dkiv_311e}</textarea>
 										           			</td>
-										           			<td valign="bottom" class="text11">
+										           			<td valign="bottom" class="text12">
 																&nbsp;<input onKeyPress="return numberKey(event)" type="text" class="inputText" name="dkiv_313e" id="dkiv_313e" size="6" maxlength="6" value="${model.record.dkiv_313e}">
 															</td>
 															<td align="left" valign="bottom">
@@ -2253,7 +2253,7 @@
 								           			</table>
 													<table width="100%" align="left" border="0">
 														<tr align="left" >
-															<td  class="text12"><button name="goodsMarkButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('goodsMark');">&nbsp;Ok</button> 
+															<td  class="text14"><button name="goodsMarkButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('goodsMark');">&nbsp;Ok</button> 
 															</td>
 														</tr>
 													</table>
@@ -2262,11 +2262,11 @@
 							           	</td>
 							        </tr>
 									<tr>
-							            <td class="text12" align="left">&nbsp;&nbsp;
+							            <td class="text14" align="left">&nbsp;&nbsp;
 							            <img onMouseOver="showPop('31_2_info');" onMouseOut="hidePop('31_2_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 							            <span title="dkiv_312a,dkiv_312b ...">31.2 Containernr:&nbsp;</span>
-							            <div class="text11" style="position: relative;" align="left">
-										<span style="position:absolute;top:2px; width:250px;" id="31_2_info" class="popupWithInputText text11"  >
+							            <div class="text12" style="position: relative;" align="left">
+										<span style="position:absolute;top:2px; width:250px;" id="31_2_info" class="popupWithInputText text12"  >
 						           			<b>31.2 Containernr</b>
 											<br/><br/>
 											Hvis varerne transporteres i container, angiver klarereren identifikationsnummeret på containeren. 
@@ -2274,7 +2274,7 @@
 										</span>
 										</div>
 										</td>
-							            <td class="text12" align="left">
+							            <td class="text14" align="left">
 								           	<input type="text" class="inputText" name="dkiv_312a" id="dkiv_312a" size="12" maxlength="11" value="${model.record.dkiv_312a}">
 								        </td>
 								        <td>&nbsp;  	
@@ -2283,28 +2283,28 @@
 								           		<div class="text10" align="left">
 								           			<table>
 								           			<tr>
-									           			<td class="text11" colspan="5">
+									           			<td class="text12" colspan="5">
 									           				<b>31.2 Containernr</b>
 									           			</td>
 									        			</tr>
 								           			<tr>
-									           			<td class="text11">
+									           			<td class="text12">
 															&nbsp;2.<input type="text" class="inputText" name="dkiv_312b" id="dkiv_312b" size="12" maxlength="11" value="${model.record.dkiv_312b}">
 														</td>
-														<td class="text11">
+														<td class="text12">
 															&nbsp;3.<input type="text" class="inputText" name="dkiv_312c" id="dkiv_312c" size="12" maxlength="11" value="${model.record.dkiv_312c}">
 														</td>
-														<td class="text11">
+														<td class="text12">
 									           				&nbsp;4.<input type="text" class="inputText" name="dkiv_312d" id="dkiv_312d" size="12" maxlength="11" value="${model.record.dkiv_312d}">
 									           			</td>
-									           			<td class="text11">
+									           			<td class="text12">
 									           				&nbsp;5.<input type="text" class="inputText" name="dkiv_312e" id="dkiv_312e" size="12" maxlength="11" value="${model.record.dkiv_312e}">
 									           			</td>
 													</tr>
 													</table>
 													<table width="100%" align="left" border="0">
 														<tr align="left" >
-															<td class="text12" ><button name="containerNrButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('containerNrInfo');">&nbsp;Ok</button> 
+															<td class="text14" ><button name="containerNrButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('containerNrInfo');">&nbsp;Ok</button> 
 															</td>
 														</tr>
 													</table>
@@ -2316,11 +2316,11 @@
 							        <tr height="15"><td></td></tr>
 
 							        <tr>
-							            <td class="text12" align="left">
+							            <td class="text14" align="left">
 							            		<img onMouseOver="showPop('39_info');" onMouseOut="hidePop('39_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 						            			<span title="dkiv_39"><b>39.</b>&nbsp;Kontingent nr:</span>
-							            <div class="text11" style="position: relative;" align="left">
-										<span style="position:absolute;top:2px; width:250px;" id="39_info" class="popupWithInputText text11"  >
+							            <div class="text12" style="position: relative;" align="left">
+										<span style="position:absolute;top:2px; width:250px;" id="39_info" class="popupWithInputText text12"  >
 						           			<b>39 Kontingenter</b>
 											<br/><br/>
 											Kontingentløbenummer
@@ -2329,7 +2329,7 @@
 										</span>
 										</div>
 										</td>
-							            <td class="text12" align="left">
+							            <td class="text14" align="left">
 							            		<input type="text" onKeyPress="return numberKey(event)" class="inputText" name="dkiv_39" id="dkiv_39" size="7" maxlength="6" value="${model.record.dkiv_39}">
 							            		<a tabindex="-1" class="text14" target="_blank" href="${model.skatToldKontingenterCodesURL.value}" onclick="${model.skatToldKontingenterCodesURL.windowOpenDimensions}" >
         											<img style="cursor:pointer;" src="resources/images/find.png" border="0" alt="search" >
@@ -2339,12 +2339,12 @@
 							        <tr height="20"><td></td></tr>
 							        
 							        <tr>
-							            <td class="text12" align="left">
+							            <td class="text14" align="left">
 							            <img onMouseOver="showPop('sikkerheds_info');" onMouseOut="hidePop('sikkerheds_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 					            		<span title="dkiv_sikk">Sikkerhedsstillelse:&nbsp;</span>
 							           
-							            <div class="text11" style="position: relative;" align="left">
-										<span style="position:absolute;top:2px; width:250px;" id="sikkerheds_info" class="popupWithInputText text11"  >
+							            <div class="text12" style="position: relative;" align="left">
+										<span style="position:absolute;top:2px; width:250px;" id="sikkerheds_info" class="popupWithInputText text12"  >
 						           			<b>Sikkerhedsstillelse</b>
 											<br/><br/>
 											Oplysning om særlig sikkerhedsstillelse i fb. m. antidumping/udligningtold
@@ -2353,17 +2353,17 @@
 										</span>
 										</div>
 										</td>
-							            <td class="text12" align="left">
+							            <td class="text14" align="left">
 							            		<input type="text" class="inputText" name="dkiv_sikk" id="dkiv_sikk" size="3" maxlength="2" value="${model.record.dkiv_sikk}">
 							            </td>
 							        </tr>
 							        <tr>
-							            <td class="text12" align="left">
+							            <td class="text14" align="left">
 								            <img onMouseOver="showPop('farligGods_info');" onMouseOut="hidePop('farligGods_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 							            		<span title="dkiv_s27"><b>S27.</b>&nbsp;FN Farlig gods:&nbsp;</span>
 							            
-							            <div class="text11" style="position: relative;" align="left">
-										<span style="position:absolute;top:2px; width:250px;" id="farligGods_info" class="popupWithInputText text11"  >
+							            <div class="text12" style="position: relative;" align="left">
+										<span style="position:absolute;top:2px; width:250px;" id="farligGods_info" class="popupWithInputText text12"  >
 						           			<b>FN-kode for farlige varer (UN Dangerous goods code)</b>
 											<br/><br/>
 											Her anføres De Forenede Nationers kode for farligt gods (UNDG), hvis det er relevant.
@@ -2377,7 +2377,7 @@
 										</span>
 										</div>
 										</td>
-							            <td class="text12" align="left">
+							            <td class="text14" align="left">
 							            		<input type="text" class="inputText" name="dkiv_s27" id="dkiv_s27" size="7" maxlength="6" value="${model.record.dkiv_s27}">
 							            </td>
 							        </tr>
@@ -2389,18 +2389,18 @@
  										<td valign="top" colspan="4" >
 											<table class="tableBorderWithRoundCornersGray">
 										        <tr >
-										        <td colspan="2" class="text12Bold">
+										        <td colspan="2" class="text14Bold">
 										        		<img onMouseOver="showPop('47_info');" onMouseOut="hidePop('47_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 										        		47.&nbsp;<label onClick="showPop('debugPrintlnAjaxAdmin');" >A</label>fgifter [Sker på SKAT]
 													<span style="position:absolute; left:200px; top:600px; width:800px; height:300px;" id="debugPrintlnAjaxAdmin" class="popupWithInputText"  >
-										           		<div class="text11" align="left">
+										           		<div class="text12" align="left">
 										           			<label id="debugPrintlnAjaxInfo"></label>
 										           			&nbsp;&nbsp;&nbsp;&nbsp;<button name="specialInformationButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('debugPrintlnAjaxAdmin');">Close</button> 
 										           		</div>
 										        		</span>										        		
 
-										        <div class="text11" style="position: relative;" align="left">
-												<span style="position:absolute;top:2px; width:250px;" id="47_info" class="popupWithInputText text11"  >
+										        <div class="text12" style="position: relative;" align="left">
+												<span style="position:absolute;top:2px; width:250px;" id="47_info" class="popupWithInputText text12"  >
 								           			<br/>
 								           			<b>Afgifter [Sker på SKAT]</b>
 													<br/><br/>
@@ -2413,117 +2413,117 @@
 										        </tr>
 												<tr height="5"><td></td></tr>
 												<tr>
-													<td class="text12" align="left" >&nbsp;<span title="dkiva_abk1">Art</span></td>
-			                							<td class="text12" align="left" >&nbsp;<span title="dkiva_abg1">Grundlag</span></td>
-			                							<td class="text12" align="left" >&nbsp;<span title="dkiva_abs1">Sats</span></td>
-			                							<td class="text12" align="left" >&nbsp;<span title="dkiva_abb1">Beløb</span></td>
-			                							<td class="text12" align="left" >&nbsp;<span title="dkiva_aba1">Ber.art</span></td>
+													<td class="text14" align="left" >&nbsp;<span title="dkiva_abk1">Art</span></td>
+			                							<td class="text14" align="left" >&nbsp;<span title="dkiva_abg1">Grundlag</span></td>
+			                							<td class="text14" align="left" >&nbsp;<span title="dkiva_abs1">Sats</span></td>
+			                							<td class="text14" align="left" >&nbsp;<span title="dkiva_abb1">Beløb</span></td>
+			                							<td class="text14" align="left" >&nbsp;<span title="dkiva_aba1">Ber.art</span></td>
 			                							
 			                						</tr>
 			 									<tr>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														<input readonly tabindex=-1 type="text" class="inputTextReadOnly" name="dkiva_abk1" id="dkiva_abk1" size="8" value="${model.record.dkiva_abk1}">
 													</td>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														<input readonly tabindex=-1 type="text" class="inputTextReadOnly" name="dkiva_abg1" id="dkiva_abg1" size="8" value="${model.record.dkiva_abg1}">
 													</td>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														<input readonly tabindex=-1 type="text" class="inputTextReadOnly" name="dkiva_abs1" id="dkiva_abs1" size="8" value="${model.record.dkiva_abs1}">
 													</td>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														<input readonly tabindex=-1 type="text" class="inputTextReadOnly" name="dkiva_abb1" id="dkiva_abb1" size="8" value="${model.record.dkiva_abb1}">
 													</td>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														<input readonly tabindex=-1 type="text" class="inputTextReadOnly" name="dkiva_aba1" id="dkiva_aba1" size="8" value="${model.record.dkiva_aba1}">
 													</td>
 													
 												</tr>
 			 									<tr>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														<input readonly tabindex=-1 type="text" class="inputTextReadOnly" name="dkiva_abk2" id="dkiva_abk2" size="8" value="${model.record.dkiva_abk2}">
 													</td>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														<input readonly tabindex=-1 type="text" class="inputTextReadOnly" name="dkiva_abg2" id="dkiva_abg2" size="8" value="${model.record.dkiva_abg2}">
 													</td>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														<input readonly tabindex=-1 type="text" class="inputTextReadOnly" name="dkiva_abs2" id="dkiva_abs2" size="8" value="${model.record.dkiva_abs2}">
 													</td>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														<input readonly tabindex=-1 type="text" class="inputTextReadOnly" name="dkiva_abb2" id="dkiva_abb2" size="8" value="${model.record.dkiva_abb2}">
 													</td>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														<input readonly tabindex=-1 type="text" class="inputTextReadOnly" name="dkiva_aba2" id="dkiva_aba2" size="8" value="${model.record.dkiva_aba2}">
 													</td>
 													
 												</tr>
 			 									<tr>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														<input readonly tabindex=-1 type="text" class="inputTextReadOnly" name="dkiva_abk3" id="dkiva_abk3" size="8" value="${model.record.dkiva_abk3}">
 													</td>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														<input readonly tabindex=-1 type="text" class="inputTextReadOnly" name="dkiva_abg3" id="dkiva_abg3" size="8" value="${model.record.dkiva_abg3}">
 													</td>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														<input readonly tabindex=-1 type="text" class="inputTextReadOnly" name="dkiva_abs3" id="dkiva_abs3" size="8" value="${model.record.dkiva_abs3}">
 													</td>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														<input readonly tabindex=-1 type="text" class="inputTextReadOnly" name="dkiva_abb3" id="dkiva_abb3" size="8" value="${model.record.dkiva_abb3}">
 													</td>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														<input readonly tabindex=-1 type="text" class="inputTextReadOnly" name="dkiva_aba3" id="dkiva_aba3" size="8" value="${model.record.dkiva_aba3}">
 													</td>
 													
 												</tr>
 			 									<tr>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														<input readonly tabindex=-1 type="text" class="inputTextReadOnly" name="dkiva_abk4" id="dkiva_abk4" size="8" value="${model.record.dkiva_abk4}">
 													</td>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														<input readonly tabindex=-1 type="text" class="inputTextReadOnly" name="dkiva_abg4" id="dkiva_abg4" size="8" value="${model.record.dkiva_abg4}">
 													</td>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														<input readonly tabindex=-1 type="text" class="inputTextReadOnly" name="dkiva_abs4" id="dkiva_abs4" size="8" value="${model.record.dkiva_abs4}">
 													</td>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														<input readonly tabindex=-1 type="text" class="inputTextReadOnly" name="dkiva_abb4" id="dkiva_abb4" size="8" value="${model.record.dkiva_abb4}">
 													</td>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														<input readonly tabindex=-1 type="text" class="inputTextReadOnly" name="dkiva_aba4" id="dkiva_aba4" size="8" value="${model.record.dkiva_aba4}">
 													</td>
 													
 												</tr>
 			 									<tr>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														<input readonly tabindex=-1 type="text" class="inputTextReadOnly" name="dkiva_abk5" id="dkiva_abk5" size="8" value="${model.record.dkiva_abk5}">
 													</td>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														<input readonly tabindex=-1 type="text" class="inputTextReadOnly" name="dkiva_abg5" id="dkiva_abg5" size="8" value="${model.record.dkiva_abg5}">
 													</td>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														<input readonly tabindex=-1 type="text" class="inputTextReadOnly" name="dkiva_abs5" id="dkiva_abs5" size="8" value="${model.record.dkiva_abs5}">
 													</td>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														<input readonly tabindex=-1 type="text" class="inputTextReadOnly" name="dkiva_abb5" id="dkiva_abb5" size="8" value="${model.record.dkiva_abb5}">
 													</td>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														<input readonly tabindex=-1 type="text" class="inputTextReadOnly" name="dkiva_aba5" id="dkiva_aba5" size="8" value="${model.record.dkiva_aba5}">
 													</td>
 													
 												</tr>
 			 									<tr>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														&nbsp;
 													</td>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														&nbsp;
 													</td>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														&nbsp;
 													</td>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														&nbsp;
 													</td>
-													<td class="text12MediumBlue">
+													<td class="text14MediumBlue">
 														&nbsp;
 													</td>
 												</tr>
@@ -2537,14 +2537,14 @@
 											<table align="left" border="0" cellspacing="0" cellpadding="0">
 							 					<tr height="1"><td></td></tr>
 								 				<tr>
-								 					<td colspan="2" class="text12Bold" align="left" >
+								 					<td colspan="2" class="text14Bold" align="left" >
 									 					<img onMouseOver="showPop('toldvardidekl_info');" onMouseOut="hidePop('toldvardidekl_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 									 					<a style="color:#000000;" target="_blank" href="http://www.skat.dk/SKAT.aspx?oID=2089688&chk=209500&layout=353121">
 										 					TOLDVÆRDIDEKLARATION&nbsp;<b>D.V.1</b>
 										 				</a>
 									 			
-									 				<div class="text11" style="position: relative;" align="left">
-													<span style="position:absolute;top:2px; width:250px;" id="toldvardidekl_info" class="popupWithInputText text11"  >
+									 				<div class="text12" style="position: relative;" align="left">
+													<span style="position:absolute;top:2px; width:250px;" id="toldvardidekl_info" class="popupWithInputText text12"  >
 										           			<b>TOLDVÆRDIDEKLARATION D.V.1</b>
 										           			<br/><br/>
 										           			Toldværdideklarationen er en erklæring, der skal afgives af importøren ved forsendelser indeholdende værditoldpligtige varer, hvis toldværdi overstiger 10.000 EUR.
@@ -2563,7 +2563,7 @@
 									<td >
 										<table align="left" border="0" cellspacing="0" cellpadding="0">
 											<tr>
-												<td colspan="3" class="text12">
+												<td colspan="3" class="text14">
 												<button name="toldvardideklButton" class="buttonGray" type="button" onClick="showPop('toldvardidekl');" >Blankett</button> 
 											        <span style="background-color:#EEEEEE; position:absolute; left:50px; top:500px; width:1200px; height:600px;" id="toldvardidekl" class="popupWithInputTextThickBorder"  >
 										           		<div class="ownScrollableSubWindow" style="width:1080px; height:480px; margin:10px;">
@@ -2577,33 +2577,33 @@
 										           				<td>
 										           				<table width="95%" border="0" class="formFrameTitaniumWhite" >
 										           				<tr>
-										           					<td class="text12" colspan="2">
+										           					<td class="text14" colspan="2">
 																		&nbsp;<b>A. Beregningsgrundlag</b>
 																	</td>															
 																</tr>
 										           				<tr>
-										           					<td class="text11">
+										           					<td class="text12">
 																		&nbsp;&nbsp;&nbsp;<span title="dkiv_t11a"><b>11a.</b>&nbsp;Nettopris i faktureret valuta. (Faktisk betalte pris eller pris, som
 																		skulle betales ved afregning på fortoldningstidspunktet)</span>
 																	</td>
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;<input readonly type="text" class="inputTextRight" name="dkiv_t11a" id="dkiv_t11a" size="20" maxlength="15" value="${model.record.dkiv_t11a}">
 																	</td>
 																</tr>
 																<tr>	
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;&nbsp;&nbsp;<span title="dkiv_t11b"><b>11b.</b>&nbsp;Indirekte betalinger - se rubrik 8 b.</span>
 																		&nbsp;(Omregningskurs: <font class="text11Gray"><b>${recordTopicSkatImport.dkih_221b}</b></font> )
 																	</td>
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;<input onKeyPress="return numberKey(event)" type="text" class="inputTextRight" name="dkiv_t11b" id="dkiv_t11b" size="20" maxlength="15" value="${model.record.dkiv_t11b}">
 																	</td>
 																</tr>
 																<tr>	
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;&nbsp;&nbsp;<span title="dkiv_t12"><b>12</b>&nbsp;I alt (A) i national valuta (danske kroner)</span>
 																	</td>
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;<input readonly type="text" class="inputTextRightBold" name="dkiv_t12" id="dkiv_t12" size="20" maxlength="15" value="${model.record.dkiv_t12}">
 																	</td>
 																</tr>
@@ -2615,80 +2615,80 @@
 										           				<td>
 										           				<table width="95%" border="0" class="formFrameTitaniumWhite" >
 										           				<tr>
-										           					<td class="text12" colspan="2">
+										           					<td class="text14" colspan="2">
 																		&nbsp;<b>B. Tillæg:&nbsp;Omkostninger i national valuta, der ikke er medregnet under A ovenfor *)
 																		Anfør eventuel relevant toldværdiafgørelse</b>
 																	</td>															
 																</tr>
 																<%-- RUBRIK 13 --%>
 																<tr>
-										           					<td class="text12">
+										           					<td class="text14">
 																		&nbsp;<b>13</b>&nbsp;Omkostninger, afholdt af køberen:
 																	</td>
 																</tr>
 										           				<tr>
-										           					<td class="text11">
+										           					<td class="text12">
 																		&nbsp;&nbsp;&nbsp;<span title="dkiv_t13a"><b>a.</b>&nbsp;provision, undtagen indkøbsprovision</span>
 																	</td>
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;<input onKeyPress="return numberKey(event)" type="text" class="inputTextRight" name="dkiv_t13a" id="dkiv_t13a" size="20" maxlength="15" value="${model.record.dkiv_t13a}">
 																	</td>
 																</tr>
 																<tr>	
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;&nbsp;&nbsp;<span title="dkiv_t13b"><b>b.</b>&nbsp;mæglerhonorar</span>
 																	</td>
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;<input onKeyPress="return numberKey(event)" type="text" class="inputTextRight" name="dkiv_t13b" id="dkiv_t13b" size="20" maxlength="15" value="${model.record.dkiv_t13b}">
 																	</td>
 																</tr>
 																<tr>	
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;&nbsp;&nbsp;<span title="dkiv_t13c"><b>c</b>&nbsp;emballage og emballering .</span>
 																	</td>
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;<input onKeyPress="return numberKey(event)" type="text" class="inputTextRight" name="dkiv_t13c" id="dkiv_t13c" size="20" maxlength="15" value="${model.record.dkiv_t13c}">
 																	</td>
 																</tr>
 																<tr height="10"><td></td></tr>
 																<%-- RUBRIK 14 --%>
 																<tr>
-										           					<td class="text12" colspan="2">
+										           					<td class="text14" colspan="2">
 																		&nbsp;<b>14</b>&nbsp;Varer og tjenesteydelser, leveret af køberen uden beregning eller til nedsat pris til brug ved fremstilling og salg til eksport af de indførte varer. 
 																		<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Der anføres om nødvendigt forholdsmæssige værdier
 																	</td>
 																</tr>
 																<tr>
-										           					<td class="text11">
+										           					<td class="text12">
 																		&nbsp;&nbsp;&nbsp;<span title="dkiv_t14a"><b>a.</b>&nbsp;materialer, komponenter, dele og lign. indgået i de indførte varer</span>
 																	</td>
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;<input onKeyPress="return numberKey(event)" type="text" class="inputTextRight" name="dkiv_t14a" id="dkiv_t14a" size="20" maxlength="15" value="${model.record.dkiv_t14a}">
 																	</td>
 																</tr>
 																<tr>	
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;&nbsp;&nbsp;<span title="dkiv_t14b"><b>b.</b>&nbsp;værktøj, matricer, forme og lign., der er anvendt ved fremstillingen af
 																		de indførte varer</span>
 																	</td>
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;<input onKeyPress="return numberKey(event)" type="text" class="inputTextRight" name="dkiv_t14b" id="dkiv_t14b" size="20" maxlength="15" value="${model.record.dkiv_t14b}">
 																	</td>
 																</tr>
 																<tr>	
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;&nbsp;&nbsp;<span title="dkiv_t14c"><b>c</b>&nbsp;materialer, der er forbrugt ved fremstillingen af de indførte varer</span>
 																	</td>
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;<input onKeyPress="return numberKey(event)" type="text" class="inputTextRight" name="dkiv_t14c" id="dkiv_t14c" size="20" maxlength="15" value="${model.record.dkiv_t14c}">
 																	</td>
 																</tr>
 																<tr>	
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;&nbsp;&nbsp;<span title="dkiv_t14d"><b>d</b>&nbsp;ingeniørarbejde, udviklingsarbejde, kunst- og designarbejde, tegninger og skitser, 
 																		som er udført andetsteds end i Fællesskabet, <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;og som er nødvendige for fremstillingen af de indførte varer</span>
 																	</td>
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;<input onKeyPress="return numberKey(event)" type="text" class="inputTextRight" name="dkiv_t14d" id="dkiv_t14d" size="20" maxlength="15" value="${model.record.dkiv_t14d}">
 																	</td>
 																</tr>
@@ -2696,31 +2696,31 @@
 																<tr height="10"><td></td></tr>
 																<%-- RUBRIK 15 --%>
 																<tr>
-										           					<td class="text11">
-																		&nbsp;<span title="dkiv_t15"><b><font class="text12">15</font></b>&nbsp;Royalty og licensafgifter - se rubrik 9 a</span>
+										           					<td class="text12">
+																		&nbsp;<span title="dkiv_t15"><b><font class="text14">15</font></b>&nbsp;Royalty og licensafgifter - se rubrik 9 a</span>
 																	</td>
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;<input onKeyPress="return numberKey(event)" type="text" class="inputTextRight" name="dkiv_t15" id="dkiv_t15" size="20" maxlength="15" value="${model.record.dkiv_t15}">
 																	</td>
 																</tr>
 																<tr height="10"><td></td></tr>
 																<%-- RUBRIK 16 --%>
 																<tr>
-										           					<td class="text11">
-																		&nbsp;<span title="dkiv_t16"><b><font class="text12">16</font></b>&nbsp;Værdien af enhver del af provenuet ved ethvert videresalg, <br/>
+										           					<td class="text12">
+																		&nbsp;<span title="dkiv_t16"><b><font class="text14">16</font></b>&nbsp;Værdien af enhver del af provenuet ved ethvert videresalg, <br/>
 																		&nbsp;&nbsp;&nbsp;&nbsp;overdragelse eller anvendelse, som tilfalder sælgeren - se rubrik 9 b</span>
 																	</td>
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;<input onKeyPress="return numberKey(event)" type="text" class="inputTextRight" name="dkiv_t16" id="dkiv_t16" size="20" maxlength="15" value="${model.record.dkiv_t16}">
 																	</td>
 																</tr>
 																<tr height="10"><td></td></tr>
 																<%-- RUBRIK 17 --%>
 																<tr>
-										           					<td class="text12">
+										           					<td class="text14">
 																		&nbsp;<b>17</b>&nbsp;Leveringsomkostninger til (indførselsstedet)
 																	</td>
-																	<td class="text11">
+																	<td class="text12">
 																		<c:forEach var="record" items="${model.toldstedCodeList}" >
 																			<c:if test="${recordTopicSkatImport.dkih_a == record.dkkd_kd}"> 
 																				&nbsp;<input style="text-align:right;" readonly type="text" class="inputTextReadOnly" name="dkiv_t17_readOnly" id="dkiv_t17_readOnly" size="20" maxlength="35" value="${record.dkkf_txt}">
@@ -2729,36 +2729,36 @@
 																	</td>
 																</tr>
 										           				<tr>
-										           					<td class="text11">
+										           					<td class="text12">
 																		&nbsp;&nbsp;&nbsp;<span title="dkiv_t17a"><b>a.</b>&nbsp;transport</span>
 																	</td>
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;<input onKeyPress="return numberKey(event)" type="text" class="inputTextRight" name="dkiv_t17a" id="dkiv_t17a" size="20" maxlength="15" value="${model.record.dkiv_t17a}">
 																	</td>
 																</tr>
 																<tr>	
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;&nbsp;&nbsp;<span title="dkiv_t17b"><b>b.</b>&nbsp;lastning og håndtering</span>
 																	</td>
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;<input onKeyPress="return numberKey(event)" type="text" class="inputTextRight" name="dkiv_t17b" id="dkiv_t17b" size="20" maxlength="15" value="${model.record.dkiv_t17b}">
 																	</td>
 																</tr>
 																<tr>	
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;&nbsp;&nbsp;<span title="dkiv_t17c"><b>c</b>&nbsp;forsikring</span>
 																	</td>
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;<input onKeyPress="return numberKey(event)" type="text" class="inputTextRight" name="dkiv_t17c" id="dkiv_t17c" size="20" maxlength="15" value="${model.record.dkiv_t17c}">
 																	</td>
 																</tr>
 																<tr height="10"><td></td></tr>
 																<%-- RUBRIK 18 --%>
 																<tr>
-										           					<td class="text12">
+										           					<td class="text14">
 																		&nbsp;<b>18</b>&nbsp;I alt (B)
 																	</td>
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;<input readonly type="text" class="inputTextRightBold" name="dkiv_t18" id="dkiv_t18" size="20" value="${model.record.dkiv_t18}">
 																	</td>
 																</tr>
@@ -2771,52 +2771,52 @@
 										           				<td>
 										           				<table width="95%" border="0" class="formFrameTitaniumWhite" >
 										           				<tr>
-										           					<td class="text12" colspan="2">
+										           					<td class="text14" colspan="2">
 																		&nbsp;<b>C. Fradrag: Omkostninger i national valuta, der er medregnet under A ovenfor *)</b>
 																	</td>															
 																</tr>
 										           				<tr>
-										           					<td class="text11">
-																		&nbsp;<span title="dkiv_t19"><b><font class="text12">19</font></b>&nbsp;Transportomkostninger efter ankomsten til indførselsstedet</span>
+										           					<td class="text12">
+																		&nbsp;<span title="dkiv_t19"><b><font class="text14">19</font></b>&nbsp;Transportomkostninger efter ankomsten til indførselsstedet</span>
 																	</td>
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;<input onKeyPress="return numberKey(event)" type="text" class="inputTextRight" name="dkiv_t19" id="dkiv_t19" size="20" maxlength="15" value="${model.record.dkiv_t19}">
 																	</td>
 																</tr>
 																<tr>
-										           					<td class="text11">
-																		&nbsp;<span title="dkiv_t20"><b><font class="text12">20</font></b>&nbsp;Omkostninger til bygnings-, installations- eller monteringsarbejder, 
+										           					<td class="text12">
+																		&nbsp;<span title="dkiv_t20"><b><font class="text14">20</font></b>&nbsp;Omkostninger til bygnings-, installations- eller monteringsarbejder, 
 																		ved ligeholdelse eller teknisk bistand, foretaget efter indførselen</span>
 																	</td>
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;<input onKeyPress="return numberKey(event)" type="text" class="inputTextRight" name="dkiv_t20" id="dkiv_t20" size="20" maxlength="15" value="${model.record.dkiv_t20}">
 																	</td>
 																</tr>
 																<tr>
-										           					<td class="text11">
-																		&nbsp;<span title="dkiv_t21a/b"><b><font class="text12">21</font></b>&nbsp;Andre omkostninger (angiv arten):</span>
+										           					<td class="text12">
+																		&nbsp;<span title="dkiv_t21a/b"><b><font class="text14">21</font></b>&nbsp;Andre omkostninger (angiv arten):</span>
 																		<input type="text" class="inputText" name="dkiv_t21a" id="dkiv_t21a" size="20" maxlength="15" value="${model.record.dkiv_t21a}">
 																	</td>
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;<input onKeyPress="return numberKey(event)" type="text" class="inputTextRight" name="dkiv_t21b" id="dkiv_t21b" size="20" maxlength="15" value="${model.record.dkiv_t21b}">
 																	</td>
 																</tr>
 																
 																<tr>
-										           					<td class="text11">
-																		&nbsp;<span title="dkiv_t22"><b><font class="text12">22</font></b>&nbsp;Told og afgifter, som skal betales i Fællesskabet i forbindelse med import
+										           					<td class="text12">
+																		&nbsp;<span title="dkiv_t22"><b><font class="text14">22</font></b>&nbsp;Told og afgifter, som skal betales i Fællesskabet i forbindelse med import
 																		eller salg af varerne</span>
 																	</td>
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;<input onKeyPress="return numberKey(event)" type="text" class="inputTextRight" name="dkiv_t22" id="dkiv_t22" size="20" maxlength="15" value="${model.record.dkiv_t22}">
 																	</td>
 																</tr>
 																
 																<tr>
-										           					<td class="text11">
-																		&nbsp;<span title="dkiv_t23"><b><font class="text12">23</font></b>&nbsp;I alt (C)</span>
+										           					<td class="text12">
+																		&nbsp;<span title="dkiv_t23"><b><font class="text14">23</font></b>&nbsp;I alt (C)</span>
 																	</td>
-																	<td class="text11">
+																	<td class="text12">
 																		&nbsp;<input readonly type="text" class="inputTextRightBold" name="dkiv_t23" id="dkiv_t23" size="20" maxlength="15" value="${model.record.dkiv_t23}">
 																	</td>
 																</tr>
@@ -2829,10 +2829,10 @@
 										           				<td>
 										           				<table width="95%" border="0" class="formFrameTitaniumWhite" >
 										           				<tr>
-										           					<td class="text12">
-																		&nbsp;<span title="dkiv_t24"><b>24. Angivet værdi (A + B ÷ C)</b></span>&nbsp;&nbsp;<font class="text12Gray" style="font-style:italic;">[Statistisk værdi]</font>
+										           					<td class="text14">
+																		&nbsp;<span title="dkiv_t24"><b>24. Angivet værdi (A + B ÷ C)</b></span>&nbsp;&nbsp;<font class="text14Gray" style="font-style:italic;">[Statistisk værdi]</font>
 																	</td>
-																	<td class="text11" align="right">
+																	<td class="text12" align="right">
 																		&nbsp;<input readonly type="text" class="inputTextRightBold" name="dkiv_t24" id="dkiv_t24" size="20" maxlength="15" value="${model.record.dkiv_t24}">
 																		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 																	</td>															
@@ -2846,24 +2846,24 @@
 										           				<td>
 										           				<table width="95%" class="formFrameTitaniumWhite" >
 										           				<tr>
-										           					<td class="text12" colspan="5">
+										           					<td class="text14" colspan="5">
 																		&nbsp;Hvis beløbene skal betales i udenlandsk valuta, skal der nedenfor - med reference til rubrik og varepost nr. - anføres beløb i udenlandsk møntenhed og omregningskurs
 																	</td>
 																</tr>
 																<tr>	
-																	<td class="text11"><span title="dkiv_t25a">Reference</span></td>
-																	<td class="text11"><span title="dkiv_t25b">Beløb</span></td>
-																	<td class="text11"><span title="dkiv_t25c">Møntsort</span></td>
-																	<td class="text11"><span title="dkiv_t25d">Omregningskurs</span></td>
+																	<td class="text12"><span title="dkiv_t25a">Reference</span></td>
+																	<td class="text12"><span title="dkiv_t25b">Beløb</span></td>
+																	<td class="text12"><span title="dkiv_t25c">Møntsort</span></td>
+																	<td class="text12"><span title="dkiv_t25d">Omregningskurs</span></td>
 																</tr>
 																<tr>	
-																	<td class="text11">
+																	<td class="text12">
 																		<input type="text" class="inputText" name="dkiv_t25a" id="dkiv_t25a" size="20" maxlength="35" value="">
 																	</td>
-																	<td class="text11">
+																	<td class="text12">
 																		<input onKeyPress="return numberKey(event)" type="text" class="inputText" name="dkiv_t25b" id="dkiv_t25b" size="20" maxlength="15" value="${model.record.dkiv_t25b}">
 																	</td>
-																	<td class="text11">
+																	<td class="text12">
 																		<%-- Note: onChange event in jQuery for this currency list --%>
 														 				<select name="dkiv_t25c" id="dkiv_t25c" >
 														 				  <option value="">-vælg-</option>	
@@ -2875,7 +2875,7 @@
 														            			<img style="cursor:pointer;" src="resources/images/find.png" border="0" alt="search" >
 														            		</a>		
 																	</td>
-																	<td class="text11">
+																	<td class="text12">
 																		<input onKeyPress="return amountKey(event)" type="text" class="inputText" name="dkiv_t25d" id="dkiv_t25d" size="20" maxlength="7" value="${model.record.dkiv_t25d}">
 																	</td>
 																																
@@ -2892,7 +2892,7 @@
 															<table >
 																<%-- OK BUTTON --%>
 										           				<tr align="left" >
-																	<td class="text11">&nbsp;&nbsp;&nbsp;<button name="toldvardideklButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('toldvardidekl');">&nbsp;<spring:message code="systema.skat.import.ok"/></button></td>
+																	<td class="text12">&nbsp;&nbsp;&nbsp;<button name="toldvardideklButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('toldvardidekl');">&nbsp;<spring:message code="systema.skat.import.ok"/></button></td>
 																	
 																</tr>
 															</table>
