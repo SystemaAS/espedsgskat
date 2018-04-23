@@ -35,15 +35,15 @@
 						<td colspan="3" >
 							<table id="tblInvoices" class="display compact cell-border" width="100%">
 								<thead>
-								<tr style="background-color:#DDDDDD">
-									<th class="text12">&nbsp;Vælg&nbsp;</th>
-								    <th class="text12">&nbsp;Fakturanr.&nbsp;</th>   
+								<tr class="tableHeaderField" >
+									<th class="text14">&nbsp;Vælg&nbsp;</th>
+								    <th class="text14">&nbsp;Fakturanr.&nbsp;</th>   
 				                    <%--
-				                    <th class="text12">&nbsp;Type&nbsp;</th>
+				                    <th class="text14">&nbsp;Type&nbsp;</th>
 				                     --%> 
-				                    <th align="right" class="text12">&nbsp;Beløb&nbsp;</th> 
-				                    <th class="text12">&nbsp;Møntsort&nbsp;</th> 
-				                    <th align="left" class="text12">&nbsp;MRN&nbsp;</th>
+				                    <th align="right" class="text14">&nbsp;Beløb&nbsp;</th> 
+				                    <th class="text14">&nbsp;Møntsort&nbsp;</th> 
+				                    <th align="left" class="text14">&nbsp;MRN&nbsp;</th>
 			                    </tr>
 			                    </thead>
 			                    <tbody>
@@ -56,16 +56,16 @@
 					                       <tr class="tableOddRow" height="15" >
 					                   </c:otherwise>
 					               </c:choose>
-					               <td align="center" class="text11" >
+					               <td align="center" class="text14" >
 					               		<input class="clazzInvoiceAware" type="checkbox" value="J" id="id${record.dkef_reff}_unik${record.dkef_unik}" name="id${record.dkef_reff}_unik${record.dkef_unik}" >
 					               </td>
-					               <td width="10%" class="text11" align="center">&nbsp;<span title="reff/unik:${record.dkef_reff}/${record.dkef_unik}">${record.dkef_fatx}</span></td>
+					               <td width="10%" class="text14" align="center">&nbsp;<span title="reff/unik:${record.dkef_reff}/${record.dkef_unik}">${record.dkef_fatx}</span></td>
 					               <%--
-					               <td class="text11" >&nbsp;${record.dkef_faty}</td>
+					               <td class="text14" >&nbsp;${record.dkef_faty}</td>
 					                --%>
-					               <td align="right" class="text11" >&nbsp;${record.dkef_fabl}&nbsp;</td>
-					               <td align="center" class="text11" >&nbsp;${record.dkef_vakd}</td>
-					               <td align="left" class="text11" >&nbsp;${record.dkef_mrn}</td>
+					               <td align="right" class="text14" >&nbsp;${record.dkef_fabl}&nbsp;</td>
+					               <td align="center" class="text14" >&nbsp;${record.dkef_vakd}</td>
+					               <td align="left" class="text14" >&nbsp;${record.dkef_mrn}</td>
 					               
 				               </tr>
 				               </c:forEach>

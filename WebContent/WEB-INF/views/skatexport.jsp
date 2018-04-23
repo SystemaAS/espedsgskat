@@ -49,13 +49,13 @@
  	        <tr height="3"><td></td></tr>
  	        <form name="skatExportSearchForm" id="searchForm" action="skatexport?action=doFind" method="post" >
  	        <tr>	
-                <td class="text12" align="left" >&nbsp;&nbsp;&nbsp;<spring:message code="systema.skat.export.list.search.label.avd"/></td>
-                <td class="text12" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.export.list.search.label.signatur"/></td>
-                <td class="text12" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.export.list.search.label.arende"/></td>
-                <td class="text12" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.export.list.search.label.refnr"/></td>
-                <td class="text12" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.export.list.search.label.xrefnr"/></td>
+                <td class="text14" align="left" >&nbsp;&nbsp;&nbsp;<spring:message code="systema.skat.export.list.search.label.avd"/></td>
+                <td class="text14" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.export.list.search.label.signatur"/></td>
+                <td class="text14" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.export.list.search.label.arende"/></td>
+                <td class="text14" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.export.list.search.label.refnr"/></td>
+                <td class="text14" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.export.list.search.label.xrefnr"/></td>
                 
-                <td class="text12" align="left" >
+                <td class="text14" align="left" >
 	 				<img onMouseOver="showPop('meddTyp_info');" onMouseOut="hidePop('meddTyp_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 	 				<spring:message code="systema.skat.export.list.search.label.aart"/>
 	 				<div class="text11" style="position: relative;" align="left">
@@ -69,7 +69,7 @@
 					</div>
                 </td>
                 
-                <td class="text12" align="left" >
+                <td class="text14" align="left" >
 				<img onMouseOver="showPop('datum_info');" onMouseOut="hidePop('datum_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
                 	<spring:message code="systema.skat.export.list.search.label.datum"/>
                 <div class="text11" style="position: relative;" align="left">
@@ -81,8 +81,8 @@
 				</span>	
 				</div>
                 </td>
-                <td class="text12" align="left" >Til dato</td>
-                <td class="text12" align="left" >
+                <td class="text14" align="left" >Til dato</td>
+                <td class="text14" align="left" >
                 <img onMouseOver="showPop('status_info');" onMouseOut="hidePop('status_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
                 <spring:message code="systema.skat.export.list.search.label.status"/>
                 		<div class="text11" style="position: relative;" align="left">
@@ -108,14 +108,14 @@
 					</span>	
 					</div>
                 </td>
-                <td class="text12" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.export.list.search.label.avsandare"/></td>
-                <td class="text12" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.export.list.search.label.mottagare"/></td>
-                <td class="text12" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.export.list.search.label.internFakturanr"/></td>
+                <td class="text14" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.export.list.search.label.avsandare"/></td>
+                <td class="text14" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.export.list.search.label.mottagare"/></td>
+                <td class="text14" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.export.list.search.label.internFakturanr"/></td>
                 <td>&nbsp;</td>
 			</tr>
  	        <tr>
 				<td align="left" >&nbsp;
-           			<select name="avd" id="avd">
+           			<select class="selectMediumBlueE2" name="avd" id="avd">
 	            		<option value="">-vælg-</option>
 	 				  	<c:forEach var="record" items="${model.avdList}" >
                        	 	<option value="${record.avd}"<c:if test="${searchFilterSkatExport.avd == record.avd}"> selected </c:if> >${record.avd}<c:if test="${record.tst == '1'}">&nbsp;(test)</c:if></option>                       	 	
@@ -123,7 +123,7 @@
 					</select>
 				</td>
 				<td align="left" >
-           			<select name="sign" id="sign">
+           			<select class="selectMediumBlueE2" name="sign" id="sign">
 	            		<option value="">-vælg-</option>
 	 				  	<c:forEach var="record" items="${model.signList}" >
                        	 	<option value="${record.sign}"
@@ -137,7 +137,7 @@
 				<td align="left" ><input type="text" class="inputText" name="xrefnr" id="xrefnr"size="8" maxlength="35" value='${searchFilterSkatExport.xrefnr}'>&nbsp;</td>
 				
 				<td align="left" >
-					<select name="aart" id="aart" >
+					<select class="selectMediumBlueE2" name="aart" id="aart" >
    	 				   <option value="">-vælg-</option>
 	 				   <c:forEach var="record" items="${model.angivelsesArterCodeList}" >
  				  			<option value="${record.dkkd_kd}"<c:if test="${searchFilterSkatExport.aart == record.dkkd_kd}"> selected </c:if> >${record.dkkd_kd}&nbsp;${record.dkkd_kd2}</option>
@@ -300,19 +300,19 @@
 									<input type="hidden" name="originalAvd${counter.count}" id="originalAvd${counter.count}" value='${topic.avd}'/>
 				 					<input type="hidden" name="originalOpd${counter.count}" id="originalOpd${counter.count}" value='${topic.opd}'/>
 					 					
-									<p class="text12" >Du skal vælga nye&nbsp;<code>Afdeling</code>&nbsp;og nye&nbsp;
+									<p class="text14" >Du skal vælga nye&nbsp;<code>Afdeling</code>&nbsp;og nye&nbsp;
 										<code>Signatur</code> or at kunne kopiere en angivelse
 									</p>
-									<p class="text12" >Et nyt angivelsesnummer vil blive oprettet automatisk.
+									<p class="text14" >Et nyt angivelsesnummer vil blive oprettet automatisk.
 									</p>
 									
 									<table>
 										<tr>
-											<td class="text12" align="left" >&nbsp;Afdeling</td>
-	                							<td class="text12" align="left" >&nbsp;Signatur</td>
+											<td class="text14" align="left" >&nbsp;Afdeling</td>
+	                							<td class="text14" align="left" >&nbsp;Signatur</td>
 	                						</tr>
 	 									<tr>
-											<td class="text12MediumBlue">
+											<td class="text14MediumBlue">
 												<select class="newAvd" name="newAvd${counter.count}" id="newAvd${counter.count}">
 								            		<option value="">-vælg-</option>
 								 				  	<c:forEach var="record" items="${model.avdList}" >
@@ -320,7 +320,7 @@
 													</c:forEach> 
 												</select>
 											</td>
-											<td class="text12MediumBlue">
+											<td class="text14MediumBlue">
 												<select class="newSign" name="newSign${counter.count}" id="newSign${counter.count}">
 								            		<option value="">-vælg-</option>
 								 				  	<c:forEach var="record" items="${model.signList}" >
@@ -362,43 +362,43 @@
 				<form  action="skatexport_doFetchTopicFromTransportUppdrag.do" name="copyFromTransportUppdragForm" id="copyFromTransportUppdragForm" method="post">
 				 	<input type="hidden" name="actionGS" id="actionGS" value='doUpdate'/>
 				 	
-					<p class="text12" >Du kan hente en ny sag fra den Norske Import eller fra en Transportopdrag.
+					<p class="text14" >Du kan hente en ny sag fra den Norske Import eller fra en Transportopdrag.
 					 	Du skal vælge&nbsp;<b>Afdeling</b>&nbsp;og&nbsp;<b>Opdragsnummer</b>.
 					</p>
-					<p class="text12">Orden til at hente er:</p>
-					<ol class="text12" >
-						<li class="text12" >
+					<p class="text14">Orden til at hente er:</p>
+					<ol class="text14" >
+						<li class="text14" >
 						    En ny opdragsnummer vil blive oprettet, hvis den fil, du input er tilgængelig i enten (a) <b>Norsk Import</b> eller (b) <b>Transportopdrag</b>
 						</li>
 						<br/>
-						<li class="text12" >
+						<li class="text14" >
 							Hvis opdraget ikke er fundet hverken i den Norske Import eller i Transportopdrag skal du oprette en ny angivelse. 
 							Du vil blive omdirigeret der automatisk.
 						</li>
 					</ol>
 					
-					<p class="text12" >Men hvis du ønsker at indtaste en ny angivelse, uden at køre denne rutine, forlader Titel og Opdragsnr. blank og klikke på <b>Fortsæt</b>.</p>
+					<p class="text14" >Men hvis du ønsker at indtaste en ny angivelse, uden at køre denne rutine, forlader Titel og Opdragsnr. blank og klikke på <b>Fortsæt</b>.</p>
 					
 					<table>
 						<tr>
-							<td class="text12" align="left" >&nbsp;Afdeling</td>
-   							<td class="text12" align="left" >&nbsp;Opdragsnr.</td>
-   							<td class="text12" align="left" >&nbsp;Ext.ref.nr.&nbsp;
+							<td class="text14" align="left" >&nbsp;Afdeling</td>
+   							<td class="text14" align="left" >&nbsp;Opdragsnr.</td>
+   							<td class="text14" align="left" >&nbsp;Ext.ref.nr.&nbsp;
    							</td>
    						</tr>
 						<tr>
-							<td class="text12MediumBlue">
-								<select name="selectedAvd" id="selectedAvd">
+							<td class="text14MediumBlue">
+								<select class="selectMediumBlueE2" name="selectedAvd" id="selectedAvd">
 				            		<option value="">-vælg-</option>
 				 				  	<c:forEach var="record" items="${model.avdList}" >
 			                             	 	<option value="${record.avd}">${record.avd}</option>
 									</c:forEach> 
 								</select>
 							</td>
-							<td class="text12MediumBlue">
+							<td class="text14MediumBlue">
 								<input type="text" class="inputText" id="selectedOpd" name="selectedOpd" size="10" maxlength="35" value=''>&nbsp;
 							</td>
-							<td class="text12MediumBlue">
+							<td class="text14MediumBlue">
 								<input type="text" class="inputText" id="selectedExtRefNr" name="selectedExtRefNr" size="25" maxlength="35" value=''>&nbsp;
 								<a tabindex="-1" id="extRefIdLink">
 									<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
@@ -417,11 +417,11 @@
 				<form  action="NOTHING.do" name="sendAllForm" id="sendAllForm" method="post">
 				 	<input type="hidden" name="actionGS" id="actionGS" value='doUpdate'/>
 				 	<input type="hidden" name="applicationUser" id="applicationUser" value='${user.user}'>
-					<p class="text12" ></p>
+					<p class="text14" ></p>
 					
 					<table>
 						<tr>
-							<td class="text12" align="left" >&nbsp;Faktisk ekspeditionstid</td>
+							<td class="text14" align="left" >&nbsp;Faktisk ekspeditionstid</td>
    						</tr>
 						<tr>
 							<td class="text12MediumBlue">

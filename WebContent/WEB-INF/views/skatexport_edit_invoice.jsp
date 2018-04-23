@@ -18,7 +18,7 @@
 	</style>
 	
 	<%-- tab container component --%>
-	<table width="100%"  class="text11" cellspacing="0" border="0" cellpadding="0">
+	<table width="100%"  class="text14" cellspacing="0" border="0" cellpadding="0">
 		<tr height="2"><td></td></tr>
 		<tr height="25"> 
 			<td width="15%" valign="bottom" class="tabDisabled" align="center" nowrap>
@@ -34,7 +34,7 @@
 						&sysg=${model.sign}&tuid=${model.refnr}&syst=${model.status}&sydt=${model.datum}">
 					
 					<font class="tabDisabledLink">&nbsp;<spring:message code="systema.skat.export.created.mastertopic.tab"/></font>
-					<font class="text12MediumBlue">[${model.opd}]</font>
+					<font class="text14MediumBlue">[${model.opd}]</font>
 					<c:if test="${model.status == 'M' || empty model.status || model.status == '11' || model.status == '20' || model.status == '97'}">
 						<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">
 					</c:if>
@@ -99,7 +99,7 @@
 	 				<%-- MASTER Topic header --%>
 	 				<table width="80%" align="left" class="formFrameHeaderTransparent" border="0" cellspacing="0" cellpadding="0">
 				 		<tr height="15">
-				 			<td class="text12MediumBlue">
+				 			<td class="text14MediumBlue">
 				 				&nbsp;Afd&nbsp;<b>${model.avd}</b>
 				 				&nbsp;Angiv.&nbsp;<b>${model.opd}</b>
 				 				&nbsp;Sign&nbsp;<b>${model.sign}</b>
@@ -114,33 +114,33 @@
 					 		<td width="50%">
 						 		<table width="100%" border="0" cellspacing="1" cellpadding="0">
 							 		<tr>
-							            <td width="30%" class="text11Bold" align="left" >Eksportør</td>
-							            <td class="text11" align="left" >&nbsp;&nbsp;</td>
+							            <td width="30%" class="text14Bold" align="left" >Eksportør</td>
+							            <td class="text14" align="left" >&nbsp;&nbsp;</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text11" align="left">CVR/SE-nr&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkat.dkeh_02a}</td>
+							            <td width="30%" class="text14" align="left">CVR/SE-nr&nbsp;</td>
+							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_02a}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text11" align="left">Navn&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkat.dkeh_02b}</td>
+							            <td width="30%" class="text14" align="left">Navn&nbsp;</td>
+							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_02b}</td>
 							        </tr>
 									<tr>
-							            <td width="30%" class="text11" align="left">Adresse&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkat.dkeh_02c}</td>
+							            <td width="30%" class="text14" align="left">Adresse&nbsp;</td>
+							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_02c}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text11" align="left">Postnr.&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkat.dkeh_02d}</td>
+							            <td width="30%" class="text14" align="left">Postnr.&nbsp;</td>
+							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_02d}</td>
 							        </tr>
 							        
 									<tr>
-							            <td width="30%" class="text11" align="left">By&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkat.dkeh_02e}&nbsp;${recordTopicSkat.dkeh_02f}</td>
+							            <td width="30%" class="text14" align="left">By&nbsp;</td>
+							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_02e}&nbsp;${recordTopicSkat.dkeh_02f}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text11" align="left">Klarereren&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkat.dkeh_14a}&nbsp;&nbsp;Status${recordTopicSkat.dkeh_14b}</td>
+							            <td width="30%" class="text14" align="left">Klarereren&nbsp;</td>
+							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_14a}&nbsp;&nbsp;Status${recordTopicSkat.dkeh_14b}</td>
 							        </tr>
 							        						        
 			        	        </table>
@@ -148,31 +148,31 @@
 					        <td width="50%">
 						 		<table width="100%" border="0" cellspacing="1" cellpadding="0">
 							 		<tr>
-							            <td width="30%" class="text11Bold" align="left" >Modtager</td>
-							            <td class="text11" align="left" >&nbsp;&nbsp;</td>
+							            <td width="30%" class="text14Bold" align="left" >Modtager</td>
+							            <td class="text14" align="left" >&nbsp;&nbsp;</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text11" align="left">EORI.&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkat.dkeh_08a}</td>
+							            <td width="30%" class="text14" align="left">EORI.&nbsp;</td>
+							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_08a}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text11" align="left">Navn&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkat.dkeh_08b}</td>
+							            <td width="30%" class="text14" align="left">Navn&nbsp;</td>
+							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_08b}</td>
 							        </tr>
 									<tr>
-							            <td width="30%" class="text11" align="left">Adresse&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkat.dkeh_08c}</td>
+							            <td width="30%" class="text14" align="left">Adresse&nbsp;</td>
+							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_08c}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text11" align="left">Postnr.&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkat.dkeh_08d}</td>
+							            <td width="30%" class="text14" align="left">Postnr.&nbsp;</td>
+							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_08d}</td>
 							        </tr>
 									<tr>
-							            <td width="30%" class="text11" align="left">By&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkat.dkeh_08e}&nbsp;${recordTopicSkat.dkeh_08f}</td>
+							            <td width="30%" class="text14" align="left">By&nbsp;</td>
+							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_08e}&nbsp;${recordTopicSkat.dkeh_08f}</td>
 							        </tr>
 							        <tr>
-							        		<td width="30%" class="text11" align="left">&nbsp;</td>
+							        		<td width="30%" class="text14" align="left">&nbsp;</td>
 							        </tr>
 							        
 			        	        </table>
@@ -193,15 +193,15 @@
 							<td>
 								<table width="80%" cellspacing="0" border="0" cellpadding="0">
 									<tr>
-										<td class="text12Bold">&nbsp;Antall fakturaer&nbsp;&nbsp;<font class="text12MediumBlue"><b>${model.recordItemContainerInvoiceTopic.totalNumberOfItemLines}</b></font>
+										<td class="text14Bold">&nbsp;Antall fakturaer&nbsp;&nbsp;<font class="text14MediumBlue"><b>${model.recordItemContainerInvoiceTopic.totalNumberOfItemLines}</b></font>
 						            		</td>
-										<td align="right" class="text11">Fsum:&nbsp;
-											<input tabindex=-1 align="right" type="text" readonly class="inputText11BlueBoldReadOnly" size="12" maxlength=20" value="${recordTopicSkat.dkeh_222}">
+										<td align="right" class="text14">Fsum:&nbsp;
+											<input tabindex=-1 align="right" type="text" readonly class="inputText12BlueBoldReadOnly" size="12" maxlength=20" value="${recordTopicSkat.dkeh_222}">
 											<font class="inputText11BlueBoldReadOnly">${recordTopicSkat.dkeh_221}</font>
 										</td>
-										<td align="right" class="text11">Vsum&nbsp;(&Sigma;):&nbsp;
-											<input tabindex=-1 align="right" type="text" readonly class="inputText11BlueBoldReadOnly" size="12" maxlength=20" value="${model.recordItemContainerInvoiceTopic.calculatedItemLinesTotalAmount}">
-											<font class="inputText11BlueBoldReadOnly">${model.recordItemContainerInvoiceTopic.calculatedValidCurrency}</font>											
+										<td align="right" class="text14">Vsum&nbsp;(&Sigma;):&nbsp;
+											<input tabindex=-1 align="right" type="text" readonly class="inputText12BlueBoldReadOnly" size="12" maxlength=20" value="${model.recordItemContainerInvoiceTopic.calculatedItemLinesTotalAmount}">
+											<font class="inputText12BlueBoldReadOnly">${model.recordItemContainerInvoiceTopic.calculatedValidCurrency}</font>											
 										</td>
 										<%--
 										<td align="right" class="text11">Diff:&nbsp;
@@ -235,18 +235,18 @@
 								<%-- this is the datatables grid (content) --%>
 								<table id="tblInvoices" class="display compact cell-border" >
 									<thead>
-									<tr style="background-color:#DDDDDD">
-									    <th class="text12"><span title="dkef_fatx">&nbsp;Fakturanr.&nbsp;</span></th>   
+									<tr class="tableHeaderField">
+									    <th class="text14"><span title="dkef_fatx">&nbsp;Fakturanr.&nbsp;</span></th>   
 					                    <%--
-					                    <th class="text12" ><span title="dkef_faty">&nbsp;Type&nbsp;</span></th>
+					                    <th class="text14" ><span title="dkef_faty">&nbsp;Type&nbsp;</span></th>
 					                     --%>
-					                    <th align="right" class="text12" ><span title="dkef_fabl">&nbsp;Belopp&nbsp;</span></th>
-					                    <th class="text12" ><span title="dkef_vakd">&nbsp;Møntsort&nbsp;</span></th>
-					                    <th align="right" class="text12" ><span title="dkef_vaku">&nbsp;Kurs&nbsp;</span></th>
-					                    <th class="text12" align="left"><span title="dkef_omr">Faktor&nbsp;</span></th>
-					                    <th class="text12" align="left"><span title="dkef_mrn">MRN&nbsp;</span></th>
+					                    <th align="right" class="text14" ><span title="dkef_fabl">&nbsp;Belopp&nbsp;</span></th>
+					                    <th class="text14" ><span title="dkef_vakd">&nbsp;Møntsort&nbsp;</span></th>
+					                    <th align="right" class="text14" ><span title="dkef_vaku">&nbsp;Kurs&nbsp;</span></th>
+					                    <th class="text14" align="left"><span title="dkef_omr">Faktor&nbsp;</span></th>
+					                    <th class="text14" align="left"><span title="dkef_mrn">MRN&nbsp;</span></th>
 					                    <c:if test="${ model.status == 'M' || empty  model.status || model.status == '11' || model.status == '20' || model.status == '97'}">
-					                    	<th align="center" class="text12" nowrap>Fjern</th>
+					                    	<th align="center" class="text14" nowrap>Fjern</th>
 					                    </c:if>
 					               </tr>
 					              </thead>
@@ -260,22 +260,22 @@
 							                       <tr class="tableOddRow" height="20" >
 							                   </c:otherwise>
 							               </c:choose>
-							               <td width="20%" class="text11" >
+							               <td width="20%" class="text14" >
 							               		<a tabindex=-1 id="recordUpdate_${record.dkef_fatx}" href="#" onClick="getItemData(this);">
 							               			&nbsp;<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">&nbsp;${record.dkef_fatx}
 							               		</a>
 							               </td>
 							               <%--
-							               <td class="text11" >&nbsp;${record.dkef_faty}</td>
+							               <td class="text14" >&nbsp;${record.dkef_faty}</td>
 							                --%>
-							               <td align="right" class="text11" >&nbsp;${record.dkef_fabl}&nbsp;</td>
-							               <td class="text11" >&nbsp;${record.dkef_vakd}</td>
-							               <td align="right" class="text11" >&nbsp;${record.dkef_vaku}&nbsp;</td>
-							               <td class="text11" >&nbsp;${record.dkef_omr}</td>
-							               <td align="left" class="text11" >&nbsp;${record.dkef_mrn}</td>
+							               <td align="right" class="text14" >&nbsp;${record.dkef_fabl}&nbsp;</td>
+							               <td class="text14" >&nbsp;${record.dkef_vakd}</td>
+							               <td align="right" class="text14" >&nbsp;${record.dkef_vaku}&nbsp;</td>
+							               <td class="text14" >&nbsp;${record.dkef_omr}</td>
+							               <td align="left" class="text14" >&nbsp;${record.dkef_mrn}</td>
 							               
 							               <c:if test="${ model.status == 'M' || empty  model.status || model.status == '11' || model.status == '20' || model.status == '97'}">	
-								               <td width="4%" class="text11" align="center" nowrap>
+								               <td width="4%" class="text14" align="center" nowrap>
 								               	<a onclick="javascript:return confirm('Er du sikker på at du vil slette denne?')" tabindex=-1 href="skatexport_edit_invoice.do?action=doDelete&sign=${model.sign}&avd=${model.avd}&opd=${model.opd}&status=${model.status}&fak=${record.dkef_fatx}">
 								               		<img valign="bottom" src="resources/images/delete.gif" border="0" alt="remove">
 								               	</a>	&nbsp;
@@ -360,7 +360,7 @@
 	 				
 	 				<table width="80%" cellspacing="0" border="0" cellpadding="0">
 						<tr>
-							<td class="text12Bold">
+							<td class="text14Bold">
 								<c:if test="${ model.status == 'M' || empty  model.status || model.status == '11' || model.status == '20' || model.status == '97'}">
 									<input tabindex=-1 class="inputFormSubmitStd" type="submit" name="submit" onclick="javascript: form.action='skatexport_edit_invoice.do';" value="Skabe ny">
 								</c:if>
@@ -392,11 +392,11 @@
 				 	<%-- Topic ITEM CREATE --%>
 	 				<table width="80%" align="left" class="formFrameHeader" border="0" cellspacing="0" cellpadding="0">
 				 		<tr height="15">
-				 			<td class="text12White" align="left" >
+				 			<td class="text14White" align="left" >
 				 				<b>&nbsp;&nbsp;F<label onClick="showPop('debugPrintlnAjaxItemFetchAdmin');" >a</label>ktura&nbsp;</b>
 				 				
 									<span style="position:absolute; left:150px; top:200px; width:800px; height:400px;" id="debugPrintlnAjaxItemFetchAdmin" class="popupWithInputText"  >
-					           		<div class="text11" align="left">
+					           		<div class="text14" align="left">
 					           			<label id="debugPrintlnAjaxItemFetchInfo"></label>
 					           			<br/>
 					           			&nbsp;&nbsp;
@@ -409,7 +409,7 @@
 				 				
 				 				<img onClick="showPop('updateInfo');" src="resources/images/update.gif" border="0" alt="edit">
 				 				<span style="position:absolute; left:150px; top:200px; width:800px; height:400px;" id="updateInfo" class="popupWithInputText"  >
-		           		   			<div class="text12" align="left" style="display:block;width:700px;word-break:break-all;">
+		           		   			<div class="text14" align="left" style="display:block;width:700px;word-break:break-all;">
 		           		   				${activeUrlRPGUpdate_Skat}<br/><br/>
 		           		   				<button name="updateInformationButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('updateInfo');">Close</button> 
 		           		   			</div>
@@ -423,16 +423,16 @@
 					 		<td>
 						 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
 							 		<tr>
-							 			<td class="text12" align="left"><span title="dkef_fatx">
+							 			<td class="text14" align="left"><span title="dkef_fatx">
 							 			<font class="text16RedBold" >*</font>Fakturanr.</span>
 										</td>
 										<%--
-							            <td class="text12" align="left"><span title="dkef_faty">&nbsp;<font class="text16RedBold" >*</font>Type</span></td>
+							            <td class="text14" align="left"><span title="dkef_faty">&nbsp;<font class="text16RedBold" >*</font>Type</span></td>
 							             --%>
-							            <td class="text12" align="left"><span title="dkef_fabl">&nbsp;<font class="text16RedBold" >*</font>Beløb</span></td>
-							            <td class="text12" align="left"><span title="dkef_vakd">&nbsp;<font class="text16RedBold" >*</font>Møntsort</span></td>
-					            		<td class="text12" align="left"><span title="dkef_vaku">&nbsp;<font class="text16RedBold" >*</font>Kurs</span></td>
-					            		<td class="text12" align="left"><span title="factor">Faktor&nbsp;</span></td>
+							            <td class="text14" align="left"><span title="dkef_fabl">&nbsp;<font class="text16RedBold" >*</font>Beløb</span></td>
+							            <td class="text14" align="left"><span title="dkef_vakd">&nbsp;<font class="text16RedBold" >*</font>Møntsort</span></td>
+					            		<td class="text14" align="left"><span title="dkef_vaku">&nbsp;<font class="text16RedBold" >*</font>Kurs</span></td>
+					            		<td class="text14" align="left"><span title="factor">Faktor&nbsp;</span></td>
 							        </tr>
 							        <tr>
 						        		<td align="left">
@@ -461,7 +461,7 @@
 			 							</td>
 			 							--%>
 			 							
-										<td class="text12" align="left">
+										<td class="text14" align="left">
 							            		<input onKeyPress="return amountKey(event)" type="text" class="inputTextMediumBlueMandatoryField" name="dkef_fabl" id="dkef_fabl" size="13" maxlength="12" value="${model.record.dkef_fabl}">
 							            </td>
 										<td align="left" nowrap>
@@ -475,11 +475,11 @@
 												<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
 											</a>
 										</td>
-							        		<td class="text12" align="left">
+							        		<td class="text14" align="left">
 							            		<input onKeyPress="return amountKey(event)" type="text" class="inputTextMediumBlueMandatoryField" name="dkef_vaku" id="dkef_vaku" size="8" maxlength="8" value="${model.record.dkef_vaku}">
 							            </td>
 							            <%-- this field is only used via Ajax since there is no database field. It is used to disclosed a factor when changing the currency --%>
-							 			<td class="text12Grey" align="left" ><input readonly type="text" class="inputTextReadOnly" name="factor" id="factor" size="6" value=""></td>
+							 			<td class="text14Grey" align="left" ><input readonly type="text" class="inputTextReadOnly" name="factor" id="factor" size="6" value=""></td>
 							 			
 							        </tr>
 							        <tr height="10"><td class="text" align="left"></td></tr>
