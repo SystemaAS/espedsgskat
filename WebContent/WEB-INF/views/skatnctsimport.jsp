@@ -13,7 +13,7 @@
 	.ui-datepicker { font-size:9pt;}
 	</style>
 	
-<table width="100%"  class="text11" cellspacing="0" border="0" cellpadding="0">
+<table width="100%"  class="" cellspacing="0" border="0" cellpadding="0">
 <tr>
 	<td>
 	<%-- tab container component --%>
@@ -46,11 +46,11 @@
  	        <tr height="3"><td></td></tr>
  	        <form name="nctsImportSearchForm" id="searchForm" action="skatnctsimport?action=doFind" method="post" >
  	        <tr>	
-                <td class="text12" align="left" >&nbsp;&nbsp;&nbsp;<spring:message code="systema.skat.ncts.import.list.search.label.avd"/></td>
-                <td class="text12" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.import.list.search.label.signatur"/></td>
-                <td class="text12" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.import.list.search.label.arende"/></td>
-                <td class="text12" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.import.list.search.label.mrnNr"/></td>
-                <td class="text12" align="left" >
+                <td class="text14" align="left" >&nbsp;&nbsp;&nbsp;<spring:message code="systema.skat.ncts.import.list.search.label.avd"/></td>
+                <td class="text14" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.import.list.search.label.signatur"/></td>
+                <td class="text14" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.import.list.search.label.arende"/></td>
+                <td class="text14" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.import.list.search.label.mrnNr"/></td>
+                <td class="text14" align="left" >
 				<img onMouseOver="showPop('datum_info');" onMouseOut="hidePop('datum_info');"style="vertical-align:middle;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
                 <spring:message code="systema.skat.ncts.import.list.search.label.datum"/>
                 <div class="text11" style="position: relative;" align="left">
@@ -62,8 +62,8 @@
 	           	</span>	
            		</div>
                 </td>
-                <td class="text12" align="left" >Til dato</td>
-                <td class="text12" align="left" >
+                <td class="text14" align="left" >Til dato</td>
+                <td class="text14" align="left" >
 				<img onMouseOver="showPop('status_info');" onMouseOut="hidePop('status_info');"style="vertical-align:middle;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
                 <spring:message code="systema.skat.ncts.import.list.search.label.status"/>
                 	<div class="text11" style="position: relative;" align="left">
@@ -77,16 +77,16 @@
 					</span>	 
 					</div>
 				</td>	               
-                <td class="text12" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.import.list.search.label.type"/></td>
-                <td class="text12" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.import.list.search.label.ansvarig"/></td>
-                <td class="text12" align="left" >&nbsp;&nbsp;Egen ref.</td>
-                <td class="text12" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.import.list.search.label.frigivningsDatum"/></td>
+                <td class="text14" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.import.list.search.label.type"/></td>
+                <td class="text14" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.import.list.search.label.ansvarig"/></td>
+                <td class="text14" align="left" >&nbsp;&nbsp;Egen ref.</td>
+                <td class="text14" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.import.list.search.label.frigivningsDatum"/></td>
                 
                 <td>&nbsp;</td>
 			</tr>
  	        <tr>
 				<td align="left" >&nbsp;
-           			<select name="avd" id="avd">
+           			<select class="selectMediumBlueE2" name="avd" id="avd">
 	            		<option value="">-vælg-</option>
 	 				  	<c:forEach var="record" items="${model.avdList}" >
                         	 	<option value="${record.avd}"<c:if test="${searchFilterSkatImportNcts.avd == record.avd}"> selected </c:if> >${record.avd}<c:if test="${record.tst == '1'}">&nbsp;(test)</c:if></option>                       	 	
@@ -94,7 +94,7 @@
 					</select>
 				</td>
 				<td align="left" >
-           			<select name="sign" id="sign">
+           			<select class="selectMediumBlueE2" name="sign" id="sign">
 	            		<option value="">-vælg-</option>
 	 				  	<c:forEach var="record" items="${model.signList}" >
                              	 	<option value="${record.sign}"<c:if test="${searchFilterSkatImportNcts.sign == record.sign}"> selected </c:if> >${record.sign}</option>
@@ -107,7 +107,7 @@
 				<td align="left" ><input onKeyPress="return numberKey(event)" type="text" class="inputText" name="datumt" id="datumt" size="9" maxlength="8" value="${searchFilterSkatImportNcts.datumt}">&nbsp;</td>
 				<td align="left" ><input type="text" class="inputText" name="status" id="status" size="2" maxlength="1" value="${searchFilterSkatImportNcts.status}">&nbsp;</td>
 				<td align="left" >
-					<select name="forenklad" id="forenklad">
+					<select class="selectMediumBlueE2" name="forenklad" id="forenklad">
 		            		<option value="">-vælg-</option>
 		            		<option value="J" <c:if test="${searchFilterSkatImportNcts.forenklad == 'J'}"> selected </c:if> >Forenklet</option>
 		            		<option value="N" <c:if test="${searchFilterSkatImportNcts.forenklad == 'N'}"> selected </c:if> >Normal</option>

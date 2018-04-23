@@ -28,7 +28,7 @@
 				<a id="alinkHeader" tabindex=-1 style="display:block;" href="skatnctsimport_edit.do?action=doFetch&avd=${recordTopicSkatNctsImport.tiavd}&opd=${recordTopicSkatNctsImport.titdn}
 						&sysg=${recordTopicSkatNctsImport.tisg}&syst=${recordTopicSkatNctsImport.tist}&sydt=${recordTopicSkatNctsImport.tidt}">
 					<font class="tabDisabledLink">&nbsp;<spring:message code="systema.skat.ncts.import.created.mastertopic.tab"/></font>
-					<font class="text12MediumBlue">[${recordTopicSkatNctsImport.titdn}]</font>
+					<font class="text14MediumBlue">[${recordTopicSkatNctsImport.titdn}]</font>
 					<c:if test="${ recordTopicSkatNctsImport.tist == 'F' || recordTopicSkatNctsImport.tist == 'M' || empty recordTopicSkatNctsImport.tist}">
 						<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">
 					</c:if>
@@ -107,7 +107,7 @@
 	 				<%-- MASTER Topic header --%>
 	 				<table width="100%" align="center" class="formFrameHeaderTransparent" border="0" cellspacing="0" cellpadding="0">
 				 		<tr height="15">
-				 			<td class="text11MediumBlue">
+				 			<td class="text14MediumBlue">
 				 				&nbsp;Afd&nbsp;<b>${recordTopicSkatNctsImport.tiavd}</b>
 				 				&nbsp;Angivelse&nbsp;<b>${recordTopicSkatNctsImport.titdn}</b>
 				 				&nbsp;Sign&nbsp;<b>${recordTopicSkatNctsImport.tisg}</b>
@@ -144,41 +144,41 @@
 					 		<td width="50%">
 						 		<table width="80%" border="0" cellspacing="1" cellpadding="0">
 							 		<tr>
-							            <td width="30%" class="text11Bold" align="left" >Ansvarlig&nbsp;</td>
-							            <td class="text11" align="left" ></td>
+							            <td width="30%" class="text12Bold" align="left" >Ansvarlig&nbsp;</td>
+							            <td class="text12" align="left" ></td>
 							        </tr>
 									<tr>
-							            <td width="30%" class="text11" align="left" >Kundenr&nbsp;</td>
-							            <td class="text11MediumBlue" align="left" >${recordTopicSkatNctsImport.tikn}</td>
+							            <td width="30%" class="text12" align="left" >Kundenr&nbsp;</td>
+							            <td class="text12MediumBlue" align="left" >${recordTopicSkatNctsImport.tikn}</td>
 							        </tr>
 							        							        
 							        <tr>
-							            <td width="30%" class="text11" align="left">TIN-nr&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left"><b>${recordTopicSkatNctsImport.titin}</b></td>
+							            <td width="30%" class="text12" align="left">TIN-nr&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left"><b>${recordTopicSkatNctsImport.titin}</b></td>
 							        </tr>
 									<tr>
-							            <td width="30%" class="text11" align="left">Navn&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left"><b>${recordTopicSkatNctsImport.tina}</b></td>
+							            <td width="30%" class="text12" align="left">Navn&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left"><b>${recordTopicSkatNctsImport.tina}</b></td>
 							        </tr>
 								</table>
 					        </td>
 							<td width="50%">
 						 		<table width="80%" border="0" cellspacing="1" cellpadding="0">
 							 		<tr>
-							            <td class="text11" align="left" >&nbsp;</td>
+							            <td class="text12" align="left" >&nbsp;</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text11" align="left">Adresse&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkatNctsImport.tiad1}</td>
+							            <td width="30%" class="text12" align="left">Adresse&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkatNctsImport.tiad1}</td>
 							        </tr>
 									<tr>
-							            <td width="30%" class="text11" align="left">By&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkatNctsImport.tipn}&nbsp;${recordTopicSkatNctsImport.tips}</td>
+							            <td width="30%" class="text12" align="left">By&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkatNctsImport.tipn}&nbsp;${recordTopicSkatNctsImport.tips}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text11" align="left">Landkode
+							            <td width="30%" class="text12" align="left">Landkode
 							            </td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkatNctsImport.tilk}</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkatNctsImport.tilk}</td>
 							        </tr>
 							        
 			        	        </table>
@@ -207,7 +207,7 @@
 				 				<input type="hidden" name="status" id="status" value='${model.status}'>
 				 				<input type="hidden" name="datum" id="datum" value='${model.datum}'>
 				 					
-							<td class="text12Bold">&nbsp;Vareposter&nbsp;&nbsp;
+							<td class="text14Bold">&nbsp;Vareposter&nbsp;&nbsp;
 								<input tabindex=-1 class="inputFormSubmitStd" type="submit" name="submit" value='Skapa ny'>
 								<button name="allItemsButton" class="inputFormSubmitStd" type="button" onClick="showPop('allItems');" >Vis alle</button> 
 							        <span style="background-color:#EEEEEE; position:absolute; left:50px; top:200px; width:1100px; height:1000px;" id="allItems" class="popupWithInputTextThickBorder"  >
@@ -271,7 +271,7 @@
 						           				<table >
 												<%-- OK BUTTON --%>
 						           				<tr align="left" >
-													<td class="text11"><button name="allItemsButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('allItems');">&nbsp;Ok</button> 
+													<td class="text12"><button name="allItemsButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('allItems');">&nbsp;Ok</button> 
 													</td>
 												</tr>
 												</table>
@@ -286,21 +286,23 @@
 							</form>
 						</tr> 
 						<tr>
-							<td class="ownScrollableSubWindow" style="width:1150px; height:10em;">
+							<td class="ownScrollableSubWindow" style="width:100%; height:10em;">
 								<table width="100%" cellspacing="0" border="0" cellpadding="0">
+									<thead>
 									<tr class="tableHeaderField" height="20" valign="left">
-									    <td class="tableHeaderFieldFirst">&nbsp;Linjenr.&nbsp;</td>
-					                    <td class="tableHeaderField">&nbsp;Varekode&nbsp;</td>   
-					                    <td class="tableHeaderField">&nbsp;Dok.type&nbsp;</td>
-					                    <td class="tableHeaderField">&nbsp;Dok.ref&nbsp;</td>
-					                    <td class="tableHeaderField">&nbsp;Bruttovægt&nbsp;</td>
-					                    <td class="tableHeaderField">&nbsp;Nettovægt&nbsp;</td>
-					                    <td class="tableHeaderField">&nbsp;Kollislag</td>
-					                    <td class="tableHeaderField">&nbsp;Kolliantal</td>
-					                    <td class="tableHeaderField">&nbsp;Varebeskrivelse&nbsp;</td>
-					                    <td align="center" class="tableHeaderField" nowrap>Fjern</td>
+									    <th class="tableHeaderFieldFirst">&nbsp;Linjenr.&nbsp;</th>
+					                    <th class="tableHeaderField">&nbsp;Varekode&nbsp;</th>   
+					                    <th class="tableHeaderField">&nbsp;Dok.type&nbsp;</th>
+					                    <th class="tableHeaderField">&nbsp;Dok.ref&nbsp;</th>
+					                    <th class="tableHeaderField">&nbsp;Bruttovægt&nbsp;</th>
+					                    <th class="tableHeaderField">&nbsp;Nettovægt&nbsp;</th>
+					                    <th class="tableHeaderField">&nbsp;Kollislag</th>
+					                    <th class="tableHeaderField">&nbsp;Kolliantal</th>
+					                    <th class="tableHeaderField">&nbsp;Varebeskrivelse&nbsp;</th>
+					                    <th align="center" class="tableHeaderField" nowrap>Fjern</th>
 					               </tr> 
-					               
+					               </thead>
+					               <tbody>
 					               <form name="formItemList" id="formItemList" method="POST" >
 					               		<input type="hidden" name="opdItemList" id="opdItemList" value='${model.opd}'>
 				 						<input type="hidden" name="avdItemList" id="avdItemList" value='${model.avd}'> 
@@ -345,6 +347,7 @@
 								         
 							            </c:forEach>
 						            </form>	
+						            </tbody>
 					            </table>
 							</td>	
 						</tr>
@@ -390,13 +393,13 @@
 				 	<%-- Topic ITEM CREATE --%>
 	 				<table width="100%" align="center" class="formFrameHeader" border="0" cellspacing="0" cellpadding="0">
 				 		<tr height="15">
-				 			<td class="text12White">
+				 			<td class="text14White">
 				 				<b>&nbsp;&nbsp;Varelinje&nbsp;-&nbsp;Kontrolresultat&nbsp;&nbsp;</b>
 				 				<img src="resources/images/update.gif" border="0" alt="edit">
 				 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				 				<input tabindex=-1 align="center" class="text12BoldLightGreenForItemLinenr" readonly type="text" name="lineNr" id="lineNr" size="3" value="">
+				 				<input tabindex=-1 align="center" class="text14BoldLightGreenForItemLinenr" readonly type="text" name="lineNr" id="lineNr" size="3" value="">
 			 				</td>
-			 				<td class="text12White" align="right">
+			 				<td class="text14White" align="right">
 				 				Konform&nbsp;&nbsp;<font class="text16RedBold">${ recordTopicSkatNctsImportUnloading.nikonf }</font>&nbsp;&nbsp;&nbsp;
 				 			</td>
 		 				</tr>
@@ -408,7 +411,7 @@
 					 		<td >
 						 		<table width="100%" border="0" cellspacing="1" cellpadding="0">
 							 		<tr>
-							 			<td class="text12" align="left" valign="bottom">
+							 			<td class="text14" align="left" valign="bottom">
 							 				<img onMouseOver="showPop('control_code_info');" onMouseOut="hidePop('control_code_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 							 				<c:if test="${recordTopicSkatNctsImportUnloading.nikonf != '1'}">
 								 				<font class="text16RedBold" >*</font>
@@ -429,10 +432,10 @@
 											</span>
 											</div>
 							 			</td>
-							 			<td class="text12" align="left">&nbsp;&nbsp;
+							 			<td class="text14" align="left">&nbsp;&nbsp;
 							            		<span title="nvctsk" >Sprogkode</span>
 							            </td>
-							            <td colspan="4" class="text12" align="left" valign="bottom">&nbsp;
+							            <td colspan="4" class="text14" align="left" valign="bottom">&nbsp;
 											<span title="nvctb" >Bemærkning</span>
 										</td>
 										<%-- This pointer (Peker) is automatically fixed by the AS400 service
@@ -456,7 +459,7 @@
 							             --%>
 							        </tr>
 							        <tr>
-							        		<td class="text12" align="left">
+							        		<td class="text14" align="left">
 							        		<c:choose>
 							        		<c:when test="${recordTopicSkatNctsImportUnloading.nikonf != '1'}">
 												<select class="inputTextMediumBlueMandatoryField" name="nvct" id="nvct">
@@ -478,7 +481,7 @@
 											
 			 			            		</td>
 							        		<td >
-											<select name="nvctsk" id="nvctsk">
+											<select class="selectMediumBlueE2" name="nvctsk" id="nvctsk">
 							            			<option value="">-vælg-</option>
 						 					  	<c:forEach var="code" items="${model.ncts012_Sprak_CodeList}" >
 			                                	 	<option value="${code.tkkode}"<c:if test="${model.record.nvctsk == code.tkkode}"> selected </c:if> >${code.tkkode}</option>
@@ -488,14 +491,14 @@
 												<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
 											</a>
 										</td>
-										<td colspan="4" class="text12" align="left" >
+										<td colspan="4" class="text14" align="left" >
 							        			<input type="text" class="inputText" name="nvctb" id="nvctb" size="71" maxlength="70" value="${model.record.nvctb}">
 			 			            		</td>
 			 			            		
 			 			            		<%-- This pointer (Peker) is automatically fixed by the AS400 service
 										  -- The final EDIFACT segment: FTX+ABV++NP+44# should be written without the need of this field
 										  --
-			 			            		<td colspan="2" class="text12" align="left" >
+			 			            		<td colspan="2" class="text14" align="left" >
 							        			<input type="text" class="inputText" name="nvctp" id="nvctp" size="25" maxlength="35" value="${model.record.nvctp}">
 			 			            		</td>
 			 			            		--%>
@@ -504,10 +507,10 @@
 							        <tr height="12"><td class="text" align="left"></td></tr>
 							        
 							 		<tr>
-							 			<td class="text12" align="left" valign="bottom">
+							 			<td class="text14" align="left" valign="bottom">
 							 				&nbsp;&nbsp;<span title="tvli" >Linjenr.</span>
 							 			</td>
-							 			<td class="text12" align="left">
+							 			<td class="text14" align="left">
 							            		&nbsp;&nbsp;<span title="nvvnt" >Varekode</span>
 											<img style="cursor:pointer;" src="resources/images/find.png" border="0" alt="search" onClick="showPop('searchTaricCodesDialog');">
 								            <%-- ======================================================== --%>
@@ -565,28 +568,28 @@
 											</span>							            		
 							            </td>
 
-							            <td nowrap class="text12" align="left" valign="bottom">
+							            <td nowrap class="text14" align="left" valign="bottom">
 											&nbsp;<span title="nvvtsk" >Sprogkode</span>
 										</td>
-										<td class="text12" align="left">
+										<td class="text14" align="left">
 							            		&nbsp;&nbsp;<span title="nvvktb" >Brut.vægt(kg)</span>
 							            </td>
-										<td class="text12" align="left">
+										<td class="text14" align="left">
 							            		&nbsp;&nbsp;<span title="nvvktn" >Net.vægt(kg)</span>
 							            </td>
-							            <td colspan="3" class="text12" align="left">
+							            <td colspan="3" class="text14" align="left">
 							            		&nbsp;<font class="text16RedBold" >*</font><span title="nvvt" >Varebeskrivelse</span>
 							            </td>
 							        </tr>
 							        <tr>
-							        		<td class="text12" align="left">
+							        		<td class="text14" align="left">
 							        			&nbsp;<input tabindex=-1 readonly type="text" class="inputTextReadOnly" name="tvli" id="tvli" size="4" maxlength="5" value="${model.record.tvli}">
 			 			            		</td>
-							        		<td class="text12" align="left" >
+							        		<td class="text14" align="left" >
 							        			<input onKeyPress="return numberKey(event)" type="text" class="inputText" name="nvvnt" id="nvvnt" size="8" maxlength="6" value="${model.record.nvvnt}">
 			 			            		</td>
 			 			            		<td >
-											<select name="nvvtsk" id="nvvtsk">
+											<select class="selectMediumBlueE2" name="nvvtsk" id="nvvtsk">
 							            			<option value="">-vælg-</option>
 						 					  	<c:forEach var="code" items="${model.ncts012_Sprak_CodeList}" >
 			                                	 	<option value="${code.tkkode}"<c:if test="${model.record.nvvtsk == code.tkkode}"> selected </c:if> >${code.tkkode}</option>
@@ -596,13 +599,13 @@
 												<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
 											</a>
 										</td>
-										<td class="text12" align="left" >
+										<td class="text14" align="left" >
 							        			<input onKeyPress="return amountKey(event)" type="text" class="inputText" name="nvvktb" id="nvvktb" size="9" maxlength="9" value="${model.record.nvvktb}">
 			 			            		</td>
-			 			            		<td class="text12" align="left" >
+			 			            		<td class="text14" align="left" >
 							        			<input onKeyPress="return amountKey(event)" type="text" class="inputText" name="nvvktn" id="nvvktn" size="9" maxlength="9" value="${model.record.nvvktn}">
 			 			            		</td>
-			 			            		<td colspan="3" class="text12" align="left" >
+			 			            		<td colspan="3" class="text14" align="left" >
 							        			<input type="text" class="inputTextMediumBlueMandatoryField" name="nvvt" id="nvvt" size="60" maxlength="70" value="${model.record.nvvt}">
 			 			            		</td>
 			 			            					 			            		
@@ -612,19 +615,19 @@
 							        <tr><td class="text" colspan="9"><hr></td></tr>
 							         
 							        <tr>
-							 			<td class="text12" align="left" valign="bottom">
+							 			<td class="text14" align="left" valign="bottom">
 							 				&nbsp;<b>44.</b>&nbsp;<span title="nvdty" >Dok.type</span>
 							 			</td>
-							 			<td colspan="2" class="text12" align="left">
+							 			<td colspan="2" class="text14" align="left">
 							            		&nbsp;<b>44.</b>&nbsp;<span title="nvdref" >Dok.ref.</span>
 							            </td>
-										<td class="text12" align="left" valign="bottom"><b>44.</b>&nbsp;<span title="nvdsk" >Dok.sprog</span></td>
+										<td class="text14" align="left" valign="bottom"><b>44.</b>&nbsp;<span title="nvdsk" >Dok.sprog</span></td>
 										
-										<td class="text12" align="left">
+										<td class="text14" align="left">
 							            		&nbsp;<b>44.</b>&nbsp;<span title="nvdo" >Met information</span>
 							            </td>
 							            
-										<td class="text12" align="left">
+										<td class="text14" align="left">
 							            		&nbsp;<b>44.</b>&nbsp;<span title="nvdosk" >Sprog</span>
 							            </td>
 							            
@@ -632,19 +635,19 @@
 							        <tr>
 							        
 										<%-- Doc.Type --%>
-										<td class="text12" align="left">
-											<select name="nvdty" id="nvdty">
+										<td class="text14" align="left">
+											<select class="selectMediumBlueE2" name="nvdty" id="nvdty">
 							            		<option value="">-vælg-</option>
 							 				  	<c:forEach var="code" items="${model.ncts013_DocType_CodeList}" >
 			                                	 	<option value="${code.tkkode}"<c:if test="${model.record.nvdty == code.tkkode}"> selected </c:if> >${code.tkkode}</option>
 												</c:forEach> 
 											</select>										           				
 										</td>							        
-							        		<td colspan="2" class="text12" align="left" >
+							        		<td colspan="2" class="text14" align="left" >
 							        			<input type="text" class="inputText" name="nvdref" id="nvdref" size="35" maxlength="35" value="${model.record.nvdref}">
 			 			            		</td>
 			 			            		<td >
-											<select name="nvdsk" id="nvdsk">
+											<select class="selectMediumBlueE2" name="nvdsk" id="nvdsk">
 							            			<option value="">-vælg-</option>
 						 					  	<c:forEach var="code" items="${model.ncts012_Sprak_CodeList}" >
 			                                	 	<option value="${code.tkkode}"<c:if test="${model.record.nvdsk == code.tkkode}"> selected </c:if> >${code.tkkode}</option>
@@ -654,12 +657,12 @@
 												<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
 											</a>
 										</td>
-										<td class="text12" align="left" >
+										<td class="text14" align="left" >
 							        			<input type="text" class="inputText" name="nvdo" id="nvdo" size="26" maxlength="26" value="${model.record.nvdo}">
 			 			            		</td>
 			 			            		
 										<td >
-											<select name="nvdosk" id="nvdosk">
+											<select class="selectMediumBlueE2" name="nvdosk" id="nvdosk">
 							            			<option value="">-vælg-</option>
 						 					  	<c:forEach var="code" items="${model.ncts012_Sprak_CodeList}" >
 			                                	 	<option value="${code.tkkode}"<c:if test="${model.record.nvdosk == code.tkkode}"> selected </c:if> >${code.tkkode}</option>
@@ -672,29 +675,29 @@
 							        </tr>
 							        
 							        <tr>
-							 			<td colspan="3" class="text12" align="left" valign="bottom">
+							 			<td colspan="3" class="text14" align="left" valign="bottom">
 							 				&nbsp;<b>31.</b>&nbsp;<font class="text16RedBold" >*</font><span title="nvmn" >Mærke og nr.</span>
 							 			</td>
-							 			<td nowrap class="text12" align="left" valign="bottom"><b>31.</b>&nbsp;<span title="nvmnsk" >Godsm.sprog</span></td>
-										<td class="text12" align="left">
+							 			<td nowrap class="text14" align="left" valign="bottom"><b>31.</b>&nbsp;<span title="nvmnsk" >Godsm.sprog</span></td>
+										<td class="text14" align="left">
 							            		&nbsp;<b>31.</b>&nbsp;<span title="nvcnr" >Container</span>
 							            </td>
-							            <td class="text12" align="left">
+							            <td class="text14" align="left">
 							            		&nbsp;<b>31.</b>&nbsp;<font class="text16RedBold" >*</font><span title="nveh" >Kollislag</span>
 							            </td>
-							           <td class="text12" align="left">
+							           <td class="text14" align="left">
 							            		&nbsp;<b>31.</b>&nbsp;<span title="nvnt" >Kolliantal</span>
 							            </td>
-							           <td class="text12" align="left">
+							           <td class="text14" align="left">
 							            		&nbsp;<b>31.</b>&nbsp;<span title="nvnteh" >STK</span>
 							            </td>
 							        </tr>
 							        <tr>
-							        		<td colspan="3" class="text12" align="left">
+							        		<td colspan="3" class="text14" align="left">
 							        			<input type="text" class="inputTextMediumBlueMandatoryField" name="nvmn" id="nvmn" size="35" maxlength="42" value="${model.record.nvmn}">
 			 			            		</td>
 							        		<td >
-											<select name="nvmnsk" id="nvmnsk">
+											<select class="selectMediumBlueE2" name="nvmnsk" id="nvmnsk">
 							            			<option value="">-vælg-</option>
 						 					  	<c:forEach var="code" items="${model.ncts012_Sprak_CodeList}" >
 			                                	 	<option value="${code.tkkode}"<c:if test="${model.record.nvmnsk == code.tkkode}"> selected </c:if> >${code.tkkode}</option>
@@ -704,11 +707,11 @@
 												<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
 											</a>
 										</td>
-										<td class="text12" align="left" >
+										<td class="text14" align="left" >
 							        			<input type="text" class="inputText" name="nvcnr" id="nvcnr" size="20" maxlength="17" value="${model.record.nvcnr}">
 			 			            		</td>
 			 			            		
-			 			            		<td class="text12" align="left" >
+			 			            		<td class="text14" align="left" >
 							        			<select class="inputTextMediumBlueMandatoryField" name="nveh" id="nveh">
 							            		<option value="">-vælg-</option>
 							 				  	<c:forEach var="code" items="${model.ncts017_Kolli_CodeList}" >
@@ -719,36 +722,36 @@
 		 										<img style="cursor:pointer;" src="resources/images/find.png" border="0" alt="search" >
 		 									</a>		
 			 			            		</td>
-			 			            		<td class="text12" align="left" >
+			 			            		<td class="text14" align="left" >
 							        			<input onKeyPress="return numberKey(event)" align="right" type="text" class="inputText" name="nvnt" id="nvnt" size="6" maxlength="5" value="${model.record.nvnt}">
 			 			            		</td>
-			 			            		<td class="text12" align="left" >
+			 			            		<td class="text14" align="left" >
 							        			<input onKeyPress="return numberKey(event)" align="right" type="text" class="inputText" name="nvnteh" id="nvnteh" size="6" maxlength="5" value="${model.record.nvnteh}">
 			 			            		</td>
 							        </tr>
 							        
    							        <tr><td class="text" colspan="9"><hr></td></tr>
    							        <tr>
-							 			<td colspan="2" class="text12Bold" align="left" >
+							 			<td colspan="2" class="text14Bold" align="left" >
 							 				&nbsp;&nbsp;Følsomme varer
 							 			</td>
 							 		</tr>
 							        <tr>
-							 			<td class="text12" align="left" >
+							 			<td class="text14" align="left" >
 							 				&nbsp;&nbsp;<span title="nvfv" >Kode</span>
 							 			</td>
-							 			<td colspan="2" class="text12" align="left">
+							 			<td colspan="2" class="text14" align="left">
 							            		&nbsp;&nbsp;<span title="nvfvnt" >Antal</span>
 							            </td>
 							        </tr>
 							        <tr>
-							        		<td class="text12" align="left">
-							        			<select name="nvfv" id="nvfv">
+							        		<td class="text14" align="left">
+							        			<select class="selectMediumBlueE2" name="nvfv" id="nvfv">
 								        			<option value="">-vælg-</option>
 								 				<option value="1"<c:if test="${model.record.nvfv == '1'}"> selected </c:if> >1</option>
 											</select>
 			 			            		</td>
-							        		<td colspan="2" class="text12" align="left">
+							        		<td colspan="2" class="text14" align="left">
 							        			<input onKeyPress="return numberKey(event)" align="right" type="text" class="inputText" name="nvfvnt" id="nvfvnt" size="12" maxlength="11" value="${model.record.nvfvnt}">
 			 			            		</td>
 							        		
@@ -780,7 +783,7 @@
  					        <td colspan="3">
 							<table width="90%" align="left" class="formFrameHeaderBlueWithBorder" border="0" cellspacing="0" cellpadding="0">
 						 		<tr height="15">
-						 			<td class="text12White">
+						 			<td class="text14White">
 						 				&nbsp;&nbsp;<b>Varelinje&nbsp;-&nbsp;Original</b>&nbsp;[fra eksportøren]
 					 				</td>
 				 				</tr>
@@ -792,116 +795,116 @@
 					 		<td>
 						 		<table align="left" width="90%" class="secondarySectionFrame" border="0" cellspacing="0" cellpadding="0">
 						 			<tr>
-							 			<td class="text12" align="left" valign="bottom">
+							 			<td class="text14" align="left" valign="bottom">
 							 				&nbsp;<span title="tvvnt" >Varekode</span>
 							 			</td>
-							 			<td class="text12" align="left" valign="bottom">
+							 			<td class="text14" align="left" valign="bottom">
 							            		&nbsp;&nbsp;<span title="tvvtsk" >Sprogkode</span>
 							            </td>
-										<td class="text12" align="left" valign="bottom">
+										<td class="text14" align="left" valign="bottom">
 											&nbsp;<span title="tvvktb" >Brut.vægt(kg)</span>
 										</td>
-							 			<td class="text12" align="left" valign="bottom">
+							 			<td class="text14" align="left" valign="bottom">
 											&nbsp;<span title="tvvktn" >Net.vægt(kg)</span>
 										</td>
-							 			<td class="text12" align="left" valign="bottom">
+							 			<td class="text14" align="left" valign="bottom">
 							            		&nbsp;&nbsp;<span title="tvvt" >Varebeskrivelse</span>
 							            </td>
 							            
 							        </tr>
 							        <tr>
-							        		<td class="text12" align="left">
+							        		<td class="text14" align="left">
 							        			&nbsp;<input readonly type="text" class="inputTextReadOnly" name="tvvnt" id="tvvnt" size="7" maxlength="6" value="${model.record.tvvnt}">
 			 			            		</td>
-			 			            		<td class="text12" align="left" >
+			 			            		<td class="text14" align="left" >
 											<input readonly type="text" class="inputTextReadOnly" name="tvvtsk" id="tvvtsk" size="3" maxlength="2" value="${model.record.tvvtsk}">
 										</td>
-							        		<td class="text12" align="left" >
+							        		<td class="text14" align="left" >
 											<input readonly type="text" class="inputTextReadOnly" name="tvvktb" id="tvvktb" size="10" maxlength="9" value="${model.record.tvvktb}">
 										</td>
-										<td class="text12" align="left" >
+										<td class="text14" align="left" >
 											<input readonly type="text" class="inputTextReadOnly" name="tvvktn" id="tvvktn" size="10" maxlength="9" value="${model.record.tvvktn}">
 										</td>
-										<td colspan="4" class="text12" align="left" >
+										<td colspan="4" class="text14" align="left" >
 							        			<input readonly type="text" class="inputTextReadOnly" name="tvvt" id="tvvt" size="35" maxlength="70" value="${model.record.tvvt}">
 			 			            		</td>
 			 			            		
 							        </tr>
  							        <tr><td class="text" colspan="6"><hr></td></tr>
 						 			<tr>
-							 			<td class="text12" align="left" valign="bottom">
+							 			<td class="text14" align="left" valign="bottom">
 							 				&nbsp;<span title="tvdty" ><b>44.</b>&nbsp;Dok.type</span>
 							 			</td>
-										<td class="text12" align="left" valign="bottom">
+										<td class="text14" align="left" valign="bottom">
 											&nbsp;<span title="tvdref"><b>44.</b>&nbsp;Dok.ref.</span>
 										</td>
-							 			<td class="text12" align="left" valign="bottom">
+							 			<td class="text14" align="left" valign="bottom">
 											&nbsp;<span title="tvdsk"><b>44.</b>&nbsp;Dok.sprog</span>
 										</td>
-							 			<td nowrap class="text12" align="left" valign="bottom">
+							 			<td nowrap class="text14" align="left" valign="bottom">
 							            		&nbsp;<span title="tvdo"><b>44.</b>&nbsp;Met information</span>
 							            </td>
-							            <td nowrap class="text12" align="left" valign="bottom">
+							            <td nowrap class="text14" align="left" valign="bottom">
 							            		&nbsp;<span title="tvdosk"><b>44.</b>&nbsp;Sprog</span>
 							            </td>
 							        </tr>
 							        <tr>
-							        		<td class="text12" align="left">
+							        		<td class="text14" align="left">
 							        			&nbsp;<input readonly type="text" class="inputTextReadOnly" name="tvdty" id="tvdty" size="5" maxlength="4" value="${model.record.tvdty}">
 			 			            		</td>
-							        		<td class="text12" align="left" >
+							        		<td class="text14" align="left" >
 											<input readonly type="text" class="inputTextReadOnly" name="tvdref" id="tvdref" size="20" maxlength="35" value="${model.record.tvdref}">
 										</td>
-										<td class="text12" align="left" >
+										<td class="text14" align="left" >
 											<input readonly type="text" class="inputTextReadOnly" name="tvdsk" id="tvdsk" size="3" maxlength="2" value="${model.record.tvdsk}">
 										</td>
-										<td class="text12" align="left" >
+										<td class="text14" align="left" >
 							        			<input readonly type="text" class="inputTextReadOnly" name="tvdo" id="tvdo" size="20" maxlength="26" value="${model.record.tvdo}">
 			 			            		</td>
-			 			            		<td class="text12" align="left" >
+			 			            		<td class="text14" align="left" >
 											<input readonly type="text" class="inputTextReadOnly" name="tvdosk" id="tvdosk" size="3" maxlength="2" value="${model.record.tvdosk}">
 										</td>
 							        </tr>
 
  							        <tr><td class="text" colspan="6"><hr></td></tr>
 						 			<tr>
-							 			<td colspan="2" class="text12" align="left" valign="bottom">
+							 			<td colspan="2" class="text14" align="left" valign="bottom">
 							 				&nbsp;<span title="tvmn" ><b>31.</b>&nbsp;Kollimærkning</span>
 							 			</td>
-										<td class="text12" align="left" valign="bottom">
+										<td class="text14" align="left" valign="bottom">
 											&nbsp;<span title="tvmnsk"><b>31.</b>&nbsp;Godsm.sprog</span>
 										</td>
-							 			<td class="text12" align="left" valign="bottom">
+							 			<td class="text14" align="left" valign="bottom">
 											&nbsp;<span title="tvcnr"><b>31.</b>&nbsp;Container</span>
 										</td>
-							 			<td class="text12" align="left" valign="bottom">
+							 			<td class="text14" align="left" valign="bottom">
 							            		&nbsp;<span title="tveh"><b>31.</b>&nbsp;Kollislag</span>
 							            </td>
-							            <td class="text12" align="left" valign="bottom">
+							            <td class="text14" align="left" valign="bottom">
 							            		&nbsp;<span title="tvnt"><b>31.</b>&nbsp;Kolliantal</span>
 							            </td>
-							            <td class="text12" align="left" valign="bottom">
+							            <td class="text14" align="left" valign="bottom">
 							            		&nbsp;<span title="tvnteh"><b>31.</b>&nbsp;STK</span>
 							            </td>
 							        </tr>
 							        <tr>
-							        		<td colspan="2" class="text12" align="left">
+							        		<td colspan="2" class="text14" align="left">
 							        			&nbsp;<input readonly type="text" class="inputTextReadOnly" name="tvmn" id="tvmn" size="20" maxlength="42" value="${model.record.tvmn}">
 			 			            		</td>
-							        		<td class="text12" align="left" >
+							        		<td class="text14" align="left" >
 											<input readonly type="text" class="inputTextReadOnly" name="tvmnsk" id="tvmnsk" size="3" maxlength="2" value="${model.record.tvmnsk}">
 										</td>
-										<td class="text12" align="left" >
+										<td class="text14" align="left" >
 											<input readonly type="text" class="inputTextReadOnly" name="tvcnr" id="tvcnr" size="20" maxlength="17" value="${model.record.tvcnr}">
 										</td>
 										
-										<td class="text12" align="left" >
+										<td class="text14" align="left" >
 							        			<input readonly type="text" class="inputTextReadOnly" name="tveh" id="tveh" size="3" maxlength="2" value="${model.record.tveh}">
 			 			            		</td>
-			 			            		<td class="text12" align="left" >
+			 			            		<td class="text14" align="left" >
 											<input readonly type="text" class="inputTextReadOnly" name="tvnt" id="tvnt" size="6" maxlength="5" value="${model.record.tvnt}">
 										</td>
-										<td class="text12" align="left" >
+										<td class="text14" align="left" >
 											<input readonly type="text" class="inputTextReadOnly" name="tvnteh" id="tvnteh" size="6" maxlength="5" value="${model.record.tvnteh}">
 										</td>
 							        </tr>

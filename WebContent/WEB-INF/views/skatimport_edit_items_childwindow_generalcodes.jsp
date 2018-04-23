@@ -42,7 +42,7 @@
 													           		
 	           		<tr height="10"><td></td></tr>
 					
-					<tr class="text12" >
+					<tr class="text14" >
 					<td class="ownScrollableSubWindowDynamicWidthHeight" width="100%" style="height:30em;">
 					<%-- this is the datatables grid (content)--%>
 					<table id="generalCodeList" class="display compact cell-border" width="100%" >

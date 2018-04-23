@@ -42,14 +42,14 @@
 													           		
 	           		<tr height="10"><td></td></tr>
 					
-					<tr class="text12" >
+					<tr class="text14" >
 					<td class="ownScrollableSubWindowDynamicWidthHeight" width="100%" style="height:30em;">
 					<%-- this is the datatables grid (content)--%>
 					<table id="generalCodeList" class="display compact cell-border" width="100%" >
 						<thead>
 						<tr class="tableHeaderField">
-							<th class="text11" title="adunnr">&nbsp;Kode&nbsp;</th>
-		                    <th class="text11" title="adembg">&nbsp;Beskrivelse&nbsp;</th>
+							<th class="text14" title="adunnr">&nbsp;Kode&nbsp;</th>
+		                    <th class="text14" title="adembg">&nbsp;Beskrivelse&nbsp;</th>
 		                </tr> 
 		                </thead>
 		                
@@ -57,29 +57,29 @@
 		                <c:forEach var="record" items="${model.generalCodeList}" varStatus="counter">    
 			               <c:choose>           
 			                   <c:when test="${counter.count%2==0}">
-			                       <tr class="text11">
+			                       <tr class="text14">
 			                   </c:when>
 			                   <c:otherwise>   
-			                       <tr class="text11">
+			                       <tr class="text14">
 			                   </c:otherwise>
 			               </c:choose>
 			               
 			               <c:choose>           
 		                   	<c:when test="${not empty record.dkkd_kd}">
-				               <td nowrap style="cursor:pointer;" class="text11MediumBlue" 
+				               <td nowrap style="cursor:pointer;" class="text14MediumBlue" 
 				               		id="kod${record.dkkd_kd}@ctype${model.callerType}" >
 				               		&nbsp;<img title="select" style="vertical-align:top;" src="resources/images/bebullet.gif" border="0" alt="edit">
 				               		&nbsp;&nbsp;${record.dkkd_kd}
 				               </td>
-			               	   <td class="text11">&nbsp;${record.dkkf_txt}</td>
+			               	   <td class="text14">&nbsp;${record.dkkf_txt}</td>
 		               	   	</c:when>
 		               	   	<c:otherwise>
-	               	    		<td nowrap style="cursor:pointer;" class="text11MediumBlue" 
+	               	    		<td nowrap style="cursor:pointer;" class="text14MediumBlue" 
 				               		id="kod${record.tkkode}@ctype${model.callerType}" >
 				               		&nbsp;<img title="select" style="vertical-align:top;" src="resources/images/bebullet.gif" border="0" alt="edit">
 				               		&nbsp;&nbsp;${record.tkkode}
 				               </td>
-			               	   <td class="text11">&nbsp;${record.tktxtn}</td>
+			               	   <td class="text14">&nbsp;${record.tktxtn}</td>
 		               	   	</c:otherwise>
 		               	   </c:choose>
 			            </tr> 
