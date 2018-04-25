@@ -29,7 +29,7 @@
 					</td>
 					<td width="1px" class="tabFantomSpace" align="center" nowrap><font class="tabDisabledLink">&nbsp;</font></td>
 					<td width="20%" valign="bottom" class="tab" align="center">
-						<font class="tabLink">Firmaoplys.</font>&nbsp;<font class="text12">DKT055 / DKTFI</font>&nbsp;
+						<font class="tabLink">Firmaoplys.</font>&nbsp;<font class="text14">DKT055 / DKTFI</font>&nbsp;
 						<a id="alinkRecordId_${counter.count}" onClick="setBlockUI(this);" href="skatmaintenancefelles_dkt055r.do?id=${model.dbTable}">
 							<img style="vertical-align: middle;"  src="resources/images/bulletGreen.png" border="0" width="8px" height="8px" alt="db table">
 						</a>
@@ -58,7 +58,7 @@
 	            	<table align="left" border="0" cellspacing="0" cellpadding="0">
 	            	<tr >
 					<td >					
-			            <ul class="isa_error text12" >
+			            <ul class="isa_error text14" >
 			            <c:forEach var="error" items="${errors.allErrors}">
 			                <li >
 			                	<spring:message code="${error.code}" text="${error.defaultMessage}"/>&nbsp;&nbsp;
@@ -80,7 +80,7 @@
 	            	<table align="left" border="0" cellspacing="0" cellpadding="0">
 				 		<tr>
 				 			<td >
-				 				<ul class="isa_error text12" >
+				 				<ul class="isa_error text14" >
                                     <li>[ERROR on Update] - Server return code: ${model.errorMessage}</li>                                    
                                 </ul>
 				 			</td>
@@ -99,7 +99,7 @@
 	 	    	<td width="5%">&nbsp;</td>
 				<td width="100%">
 					<table class=formFrameHeaderBlueWithBorder width="80%" cellspacing="0" border="0" align="left">
-						<tr><td class="text12White" >&nbsp;TEST&nbsp;&nbsp;<img style="vertical-align: middle;"  src="resources/images/bulletGrey.png" border="0" width="10px" height="10px" alt="test"></td>
+						<tr><td class="text14White" >&nbsp;TEST&nbsp;&nbsp;<img style="vertical-align: middle;"  src="resources/images/bulletGrey.png" border="0" width="10px" height="10px" alt="test"></td>
 						</tr>
 					</table>
 					<table class="formFrame" width="80%" cellspacing="1" border="0" align="left">	
@@ -115,17 +115,17 @@
 							</td>	
 						</tr>
 						<tr>
-							<td class="text12" title="dktf_0004t">&nbsp;Afsender id
+							<td class="text14" title="dktf_0004t">&nbsp;Afsender id
 								<a tabindex="-1" id="dktf_0004tIdLink">
 									<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
 								</a>
 							</td>
-							<td class="text12" title="dktf_0010t">&nbsp;Modtager id
+							<td class="text14" title="dktf_0010t">&nbsp;Modtager id
 								<a tabindex="-1" id="dktf_0010tIdLink">
 									<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
 								</a>
 							</td>
-							<td class="text12" title="dktf_0022t">&nbsp;Kodeord</td>
+							<td class="text14" title="dktf_0022t">&nbsp;Kodeord</td>
 						</tr>
 						<tr>
 							<td ><input type="text" class="inputTextMediumBlue" name="dktf_0004t" id="dktf_0004t" size="30" maxlength="35" value='${model.record.dktf_0004t}'></td>
@@ -139,11 +139,11 @@
 							</td>
 						</tr>
 						<tr>
-							<td class="text12" title="dktf_ftust">&nbsp;Bruger id</td>
-							<td class="text12" title="dktf_ftpwt">&nbsp;Kodeord&nbsp;
+							<td class="text14" title="dktf_ftust">&nbsp;Bruger id</td>
+							<td class="text14" title="dktf_ftpwt">&nbsp;Kodeord&nbsp;
 								<img style="vertical-align: bottom;" src="resources/images/lockOrig.png" border="0" alt="pass">
 							</td>
-							<td class="text12" title="dktf_ftipt">&nbsp;Adresse</td>
+							<td class="text14" title="dktf_ftipt">&nbsp;Adresse</td>
 						</tr>
 						<tr>
 							<td ><input type="text" class="inputTextMediumBlue" name="dktf_ftust" id="dktf_ftust" size="30" maxlength="35" value='${model.record.dktf_ftust}'></td>
@@ -152,7 +152,7 @@
 						</tr>
 						<tr height="3"><td></td>
 						<tr>
-							<td class="text12" title="dktf_0031t">&nbsp;Returner bekræftelse</td>
+							<td class="text14" title="dktf_0031t">&nbsp;Returner bekræftelse</td>
 						</tr>
 						<tr>
 							<td >
@@ -167,11 +167,11 @@
 	 	    		</table> 
 	 	    		<%-- SEPARATOR --%>
 	 	    		<table width="80%" cellspacing="0" border="0" align="left">
-						<tr height="25" ><td class="text12" >&nbsp;</td></tr>
+						<tr height="25" ><td class="text14" >&nbsp;</td></tr>
 					</table>
 					
 	 	    		<table class="formFrameHeaderPeachWithBorder" width="80%" cellspacing="0" border="0" align="left">
-						<tr><td class="text12" >&nbsp;PRODUKSJON&nbsp;&nbsp;<img style="vertical-align: middle;"  src="resources/images/bulletGreen.png" border="0" width="10px" height="10px" alt="prod"></td></tr>
+						<tr><td class="text14" >&nbsp;PRODUKSJON&nbsp;&nbsp;<img style="vertical-align: middle;"  src="resources/images/bulletGreen.png" border="0" width="10px" height="10px" alt="prod"></td></tr>
 					</table>
 					<table class="formFramePeachGrayRoundBottom" width="80%" cellspacing="1" border="0" align="left">	
 						<%--
@@ -186,17 +186,17 @@
 							</td>
 						</tr>
 						<tr>
-							<td class="text12" title="dktf_0004p">&nbsp;Afsender id
+							<td class="text14" title="dktf_0004p">&nbsp;Afsender id
 								<a tabindex="-1" id="dktf_0004pIdLink">
 									<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
 								</a>
 							</td>
-							<td class="text12" title="dktf_0010p">&nbsp;Modtager id
+							<td class="text14" title="dktf_0010p">&nbsp;Modtager id
 								<a tabindex="-1" id="dktf_0010pIdLink">
 									<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
 								</a>
 							</td>
-							<td class="text12" title="dktf_0022p">&nbsp;Kodeord</td>
+							<td class="text14" title="dktf_0022p">&nbsp;Kodeord</td>
 						</tr>
 						<tr>
 							<td ><input type="text" class="inputTextMediumBlue" name="dktf_0004p" id="dktf_0004p" size="30" maxlength="35" value='${model.record.dktf_0004p}'></td>
@@ -210,11 +210,11 @@
 							</td>
 						</tr>
 						<tr>
-							<td class="text12" title="dktf_ftusp">&nbsp;Bruger id</td>
-							<td class="text12" title="dktf_ftpwp">&nbsp;Kodeord&nbsp;
+							<td class="text14" title="dktf_ftusp">&nbsp;Bruger id</td>
+							<td class="text14" title="dktf_ftpwp">&nbsp;Kodeord&nbsp;
 								<img style="vertical-align: bottom;" src="resources/images/lockOrig.png" border="0" alt="pass">
 							</td>
-							<td class="text12" title="dktf_ftipp">&nbsp;Adresse</td>
+							<td class="text14" title="dktf_ftipp">&nbsp;Adresse</td>
 						</tr>
 						<tr>
 							<td ><input type="text" class="inputTextMediumBlue" name="dktf_ftusp" id="dktf_ftusp" size="30" maxlength="35" value='${model.record.dktf_ftusp}'></td>
@@ -223,7 +223,7 @@
 						</tr>
 						<tr height="3"><td></td>
 						<tr>
-							<td class="text12" title="dktf_0031p">&nbsp;Returner bekræftelse</td>
+							<td class="text14" title="dktf_0031p">&nbsp;Returner bekræftelse</td>
 						</tr>
 						<tr>
 							<td >
@@ -240,10 +240,10 @@
 	 	    		<table width="80%" cellspacing="1" border="0" align="left">
 	 	    			<tr height="10"><td>&nbsp;</td>
 			    	    <tr>
-				    	    <td colspan="2" class="text12" title="dktard01">&nbsp;Bibliotek for LSOUTPUT&nbsp;&nbsp;&nbsp;
+				    	    <td colspan="2" class="text14" title="dktard01">&nbsp;Bibliotek for LSOUTPUT&nbsp;&nbsp;&nbsp;
 				    	    <input type="text" class="inputTextMediumBlue" name="dktf_lsli" id="dktf_lsli" size="11" maxlength="10" value='${model.record.dktf_lsli}'>
 				    	    </td>
-				    	    <td class="text12" align="right">
+				    	    <td class="text14" align="right">
 								<input class="inputFormSubmit" type="submit" name="submit" id="submit" value='Spare'/>
 							</td>
 						</tr>

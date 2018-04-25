@@ -36,7 +36,7 @@
 					</td>
 					<td width="1px" class="tabFantomSpace" align="center" nowrap><font class="tabDisabledLink">&nbsp;</font></td>
 					<td width="30%" valign="bottom" class="tab" align="center" nowrap>
-						<font class="tabLink">&nbsp;Kodetype&nbsp;<font class="text12">${model.dkkd_typ}&nbsp;${model.legend}</font></font>&nbsp;
+						<font class="tabLink">&nbsp;Kodetype&nbsp;<font class="text14">${model.dkkd_typ}&nbsp;${model.legend}</font></font>&nbsp;
 						<img style="vertical-align: middle;"  src="resources/images/list.gif" border="0" alt="general list">
 					</td>
 					<td width="50%" class="tabFantomSpace" align="center" nowrap><font class="tabDisabledLink">&nbsp;</font></td>	
@@ -53,7 +53,7 @@
 	 	    <%--
 	 	    <tr >
 	 	    	<td width="5%">&nbsp;</td>
-				<td width="100%" class="text12">
+				<td width="100%" class="text14">
 					<form action="skatmaintenanceexport_dkg210d.do?id=${Xmodel.dbTable}" name="formRecordSearch" id="formRecordSearch" method="POST" >
 					Kode&nbsp;
 					<input type="text" class="inputTextMediumBlue" name="searchKode" id="searchKode" size="5" maxlength="3" value='${Xmodel.searchKode}'>
@@ -87,10 +87,10 @@
 				               <td id="recordUpdate_${record.dkkd_typ}_${record.dkkd_kd}" onClick="getRecord(this);" align="center" width="2%" class="tableCellFirst" style="cursor:pointer; border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;">
 		               				<img src="resources/images/update.gif" border="0" alt="edit">
 				               </td>
-				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 1px;border-color:#FAEBD7;"><font class="text12">&nbsp;${record.dkkd_kd}&nbsp;</font></td>
-				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text12">&nbsp;${record.dkkd_kd2}&nbsp;</font></td>
-				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text12">&nbsp;${record.dkkd_kd3}&nbsp;</font></td>
-				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text12">&nbsp;${record.dkkd_txt}&nbsp;</font></td>      
+				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 1px;border-color:#FAEBD7;"><font class="text14">&nbsp;${record.dkkd_kd}&nbsp;</font></td>
+				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text14">&nbsp;${record.dkkd_kd2}&nbsp;</font></td>
+				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text14">&nbsp;${record.dkkd_kd3}&nbsp;</font></td>
+				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text14">&nbsp;${record.dkkd_txt}&nbsp;</font></td>      
 				               <td align="center" width="2%" class="tableCell" style="cursor:pointer; border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;">
 		               				<a onclick="javascript:return confirm('Er du sikker på at du vil fjerne denne?')" tabindex=-1 href="skatmaintenanceexport_dkg210d_edit.do?action=doDelete&id=${model.dbTable}&dkkd_typ=${record.dkkd_typ}&dkkd_kd=${record.dkkd_kd}">
 					               		<img valign="bottom" src="resources/images/delete.gif" border="0" width="15px" height="15px" alt="remove">
@@ -128,7 +128,7 @@
 	            	<table align="left" border="0" cellspacing="0" cellpadding="0">
 	            	<tr >
 					<td >					
-			            <ul class="isa_error text12" >
+			            <ul class="isa_error text14" >
 			            <c:forEach var="error" items="${errors.allErrors}">
 			                <li >
 			                	<spring:message code="${error.code}" text="${error.defaultMessage}"/>&nbsp;&nbsp;
@@ -150,7 +150,7 @@
 	            	<table align="left" border="0" cellspacing="0" cellpadding="0">
 				 		<tr>
 				 			<td >
-				 				<ul class="isa_error text12" >
+				 				<ul class="isa_error text14" >
                                     <li>[ERROR on Update] - Server return code: ${model.errorMessage}</li>                                    
                                 </ul>
 				 			</td>
@@ -177,10 +177,10 @@
 					
 					<table width="80%" cellspacing="1" border="0" align="left">
 			    	    <tr>
-							<td class="text12" title="DKKD_KD">&nbsp;<font class="text14RedBold" >*</font>Kode</td>
-							<td class="text12" title="DKKD_KD2">&nbsp;Kode2</td>
-							<td class="text12" title="DKKD_KD3">&nbsp;Kode3</td>
-							<td class="text12" title="DKKD_TXT">&nbsp;<font class="text14RedBold" >*</font>Tekst</td>
+							<td class="text14" title="DKKD_KD">&nbsp;<font class="text14RedBold" >*</font>Kode</td>
+							<td class="text14" title="DKKD_KD2">&nbsp;Kode2</td>
+							<td class="text14" title="DKKD_KD3">&nbsp;Kode3</td>
+							<td class="text14" title="DKKD_TXT">&nbsp;<font class="text14RedBold" >*</font>Tekst</td>
 						</tr>
 						<tr>
 						<td ><input type="text" required oninvalid="this.setCustomValidity('Obligatoriskt')" oninput="setCustomValidity('')" class="inputTextMediumBlueMandatoryField" name="dkkd_kd" id="dkkd_kd" size="10" maxlength="20" value='${model.record.dkkd_kd}'></td>

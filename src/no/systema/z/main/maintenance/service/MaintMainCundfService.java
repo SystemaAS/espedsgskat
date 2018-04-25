@@ -8,7 +8,7 @@ import no.systema.z.main.maintenance.model.jsonjackson.dbtable.JsonMaintMainCund
 /**
  * 
  * @author oscardelatorre
- * @date Mar 30, 2018
+ * @date Aug 15, 2016
  * 
  *
  */

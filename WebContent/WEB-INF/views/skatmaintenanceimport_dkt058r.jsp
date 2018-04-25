@@ -29,7 +29,7 @@
 					</td>
 					<td width="1px" class="tabFantomSpace" align="center" nowrap><font class="tabDisabledLink">&nbsp;</font></td>
 					<td width="20%" valign="bottom" class="tab" align="center">
-						<font class="tabLink">Certifikater</font>&nbsp;<font class="text12">DKT058 / DKTSE</font>&nbsp;
+						<font class="tabLink">Certifikater</font>&nbsp;<font class="text14">DKT058 / DKTSE</font>&nbsp;
 						<a id="alinkRecordId_${counter.count}" onClick="setBlockUI(this);" href="skatmaintenanceimport_dkt058r.do?id=${model.dbTable}">
 							<img style="vertical-align: middle;"  src="resources/images/bulletGreen.png" border="0" width="8px" height="8px" alt="db table">
 						</a>
@@ -47,7 +47,7 @@
 	 	    
 	 	    <tr >
 	 	    	<td width="5%">&nbsp;</td>
-				<td width="100%" class="text12">
+				<td width="100%" class="text14">
 					<form action="skatmaintenanceimport_dkt058r.do?id=${model.dbTable}" name="formRecordSearch" id="formRecordSearch" method="POST" >
 					Kundenr&nbsp;
 					<input type="text" class="inputTextMediumBlue" name="search_dkse_knr" id="search_dkse_knr" size="10" maxlength="8" value='${model.search_dkse_knr}'>
@@ -89,11 +89,11 @@
 				               <td id="recordUpdate_${record.dkse_knr}_${record.dkse_331}" onClick="getRecord(this);" align="center" width="2%" class="tableCellFirst" style="cursor:pointer; border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;">
 		               				<img src="resources/images/lock.gif" border="0" alt="locked">
 				               </td>
-				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 1px;border-color:#FAEBD7;"><font class="text12">&nbsp;${record.dkse_knr}&nbsp;</font></td>
-				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text12">&nbsp;${record.dkse_331}&nbsp;</font></td>
-				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text12">&nbsp;${record.dkse_34}&nbsp;</font></td>
-				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text12">&nbsp;${record.dkse_4421}&nbsp;</font></td>
-				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text12">&nbsp;${record.dkse_442A}&nbsp;</font></td>
+				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 1px;border-color:#FAEBD7;"><font class="text14">&nbsp;${record.dkse_knr}&nbsp;</font></td>
+				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text14">&nbsp;${record.dkse_331}&nbsp;</font></td>
+				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text14">&nbsp;${record.dkse_34}&nbsp;</font></td>
+				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text14">&nbsp;${record.dkse_4421}&nbsp;</font></td>
+				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text14">&nbsp;${record.dkse_442A}&nbsp;</font></td>
 				               
 				               <td align="center" width="2%" class="tableCell" style="cursor:pointer; border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;">
 		               				<a onclick="javascript:return confirm('Er du sikker på at du vil fjerne denne?')" tabindex=-1 href="skatmaintenanceimport_dkt058r_edit.do?action=doDelete&id=${model.dbTable}&dkse_knr=${record.dkse_knr}&dkse_331=${record.dkse_331}&dkse_34=${record.dkse_34}&dkse_4421=${record.dkse_4421}">
@@ -133,7 +133,7 @@
 	            	<table align="left" border="0" cellspacing="0" cellpadding="0">
 	            	<tr >
 					<td >					
-			            <ul class="isa_error text12" >
+			            <ul class="isa_error text14" >
 			            <c:forEach var="error" items="${errors.allErrors}">
 			                <li >
 			                	<spring:message code="${error.code}" text="${error.defaultMessage}"/>&nbsp;&nbsp;
@@ -155,7 +155,7 @@
 	            	<table align="left" border="0" cellspacing="0" cellpadding="0">
 				 		<tr>
 				 			<td >
-				 				<ul class="isa_error text12" >
+				 				<ul class="isa_error text14" >
                                     <li>[ERROR on Update] - Server return code: ${model.errorMessage}</li>                                    
                                 </ul>
 				 			</td>
@@ -182,11 +182,11 @@
 					
 					<table width="80%" cellspacing="1" border="0" align="left">
 			    	    <tr>
-							<td class="text12" title="DKSE_KNR">&nbsp;<font class="text14RedBold" >*</font>Kundenr</td>
-							<td class="text12" title="DKSE_331">&nbsp;<font class="text14RedBold" >*</font>Varekode</td>
-							<td class="text12" title="DKSE_34">&nbsp;Land</td>
-							<td class="text12" title="DKSE_4421">&nbsp;Certifikat</td>
-							<td class="text12" title="DKSE_442A">&nbsp;Nummer</td>
+							<td class="text14" title="DKSE_KNR">&nbsp;<font class="text14RedBold" >*</font>Kundenr</td>
+							<td class="text14" title="DKSE_331">&nbsp;<font class="text14RedBold" >*</font>Varekode</td>
+							<td class="text14" title="DKSE_34">&nbsp;Land</td>
+							<td class="text14" title="DKSE_4421">&nbsp;Certifikat</td>
+							<td class="text14" title="DKSE_442A">&nbsp;Nummer</td>
 						</tr>
 						<tr>
 						<td ><input onKeyPress="return numberKey(event)" type="text" required oninvalid="this.setCustomValidity('Obligatoriskt')" oninput="setCustomValidity('')" class="inputTextMediumBlueMandatoryField" name="dkse_knr" id="dkse_knr" size="10" maxlength="8" value='${model.record.dkse_knr}'>

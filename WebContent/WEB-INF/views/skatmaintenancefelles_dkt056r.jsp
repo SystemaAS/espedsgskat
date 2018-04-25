@@ -54,7 +54,7 @@
 						<td class="text11">
 						<table id="mainList" class="display compact cell-border" >
 							<thead>
-							<tr>
+							<tr >
 							    <th width="2%" class="tableHeaderFieldFirst" align="center" >Endre</th>                                                            
 								<th width="10%" class="tableHeaderField" align="center" >Signatur</th>
 								<th class="tableHeaderField" align="center" >Navn</th>
@@ -98,7 +98,7 @@
 		           	<table align="left" border="0" cellspacing="0" cellpadding="0">
 		           	<tr >
 		           	<td >					
-			            <ul class="isa_error text12" >
+			            <ul class="isa_error text14" >
 			            <c:forEach var="error" items="${errors.allErrors}">
 			                <li >
 			                	<spring:message code="${error.code}" text="${error.defaultMessage}"/>&nbsp;&nbsp;
@@ -120,7 +120,7 @@
 		           	<table align="left" border="0" cellspacing="0" cellpadding="0">
 				 		<tr>
 				 			<td >
-				 				<ul class="isa_error text12" >
+				 				<ul class="isa_error text14" >
 		                                  <li>[ERROR on Update] - Server return code: ${model.errorMessage}</li>                                    
 		                              </ul>
 				 			</td>
@@ -145,7 +145,7 @@
 						</tr>
 						<tr height="20"><td></td></tr>
 						<tr>
-							<td class="text12" ><font class="text14RedBold" >*</font><span title="dkth_sysg">Signatur&nbsp;</span>
+							<td class="text14" ><font class="text14RedBold" >*</font><span title="dkth_sysg">Signatur&nbsp;</span>
 								<c:choose>
 									<c:when test="${not empty model.updateId}">
 										<input readonly type="text" class="inputTextReadOnly"  name="dkth_sysg" id="dkth_sysg" size="5" maxlength="3" value='${model.record.dkth_sysg}'>

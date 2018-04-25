@@ -41,7 +41,7 @@
 	 	<tr>
 	 		 <%-- class="grayTitanBg" --%>
     		<td height="60" class="headerTdsBannerAreaBg" width="100%" align="left" colspan="3"> 
-    			 <table width="1100" border="0" cellspacing="0" cellpadding="0">
+    			 <table width="100%" border="0" cellspacing="0" cellpadding="0">
     			 	<tr>
 			        	<td>&nbsp;</td>
 			        	<td>&nbsp;</td>
@@ -98,7 +98,7 @@
 		                   		&nbsp;&nbsp;<spring:message code="systema.main.maintenance.main.gate.returnTo.label"/>&nbsp;&nbsp;</font>
 			    			</a>
 	      				</td>		      				
-	      				<td class="text11" width="50%" align="right" valign="middle">
+	      				<td class="text14" width="50%" align="right" valign="middle">
 	      					
 	      					<c:if test="${ empty user.usrLang || user.usrLang == 'NO'}">
 			               		<img src="resources/images/countryFlags/Flag_NO.gif" height="12" border="0" alt="country">

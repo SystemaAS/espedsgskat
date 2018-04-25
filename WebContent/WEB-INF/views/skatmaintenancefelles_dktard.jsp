@@ -29,7 +29,7 @@
 					</td>
 					<td width="1px" class="tabFantomSpace" align="center" nowrap><font class="tabDisabledLink">&nbsp;</font></td>
 					<td width="20%" valign="bottom" class="tab" align="center">
-						<font class="tabLink">Toldtariffen</font>&nbsp;<font class="text12">DKTARD</font>&nbsp;
+						<font class="tabLink">Toldtariffen</font>&nbsp;<font class="text14">DKTARD</font>&nbsp;
 						<a id="alinkRecordId_${counter.count}" onClick="setBlockUI(this);" href="skatmaintenancefelles_dktard.do?id=${model.dbTable}">
 							<img style="vertical-align: middle;"  src="resources/images/bulletGreen.png" border="0" width="8px" height="8px" alt="db table">
 						</a>
@@ -47,7 +47,7 @@
 	 	    
 	 	    <tr >
 	 	    	<td width="5%">&nbsp;</td>
-				<td width="100%" class="text12">
+				<td width="100%" class="text14">
 					<form action="skatmaintenancefelles_dktard.do?id=${model.dbTable}" name="formRecord" id="formRecord" method="POST" >
 					Varekode&nbsp;
 					<input type="text" class="inputTextMediumBlue" name="searchDktard01" id="searchDktard01" size="11" maxlength="10" value='${model.searchDktard01}'>
@@ -85,13 +85,13 @@
 				               <td id="recordUpdate_${record.dktard01}_${record.dktard02}_${record.dktard03}" onClick="getRecord(this);" align="center" width="2%" class="tableCellFirst" style="cursor:pointer; border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;">
 		               				<img src="resources/images/update.gif" border="0" alt="edit">
 				               </td>
-				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 1px;border-color:#FAEBD7;"><font class="text12">&nbsp;${record.dktard01}&nbsp;</font></td>
-				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text12">&nbsp;${record.dktard02}&nbsp;</font></td>
-				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text12">&nbsp;${record.dktard03}&nbsp;</font></td>
-		                       <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text12">&nbsp;${record.dktard04}&nbsp;</font></td>
-				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text12">&nbsp;${record.dktard05}&nbsp;</font></td>
-		                       <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text12">&nbsp;${record.dktard47}&nbsp;</font></td>
-		                       <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text12">&nbsp;${record.dktard48}&nbsp;</font></td>
+				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 1px;border-color:#FAEBD7;"><font class="text14">&nbsp;${record.dktard01}&nbsp;</font></td>
+				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text14">&nbsp;${record.dktard02}&nbsp;</font></td>
+				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text14">&nbsp;${record.dktard03}&nbsp;</font></td>
+		                       <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text14">&nbsp;${record.dktard04}&nbsp;</font></td>
+				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text14">&nbsp;${record.dktard05}&nbsp;</font></td>
+		                       <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text14">&nbsp;${record.dktard47}&nbsp;</font></td>
+		                       <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text14">&nbsp;${record.dktard48}&nbsp;</font></td>
 		                       <td align="center" width="2%" class="tableCell" style="cursor:pointer; border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;">
 		               				<a onclick="javascript:return confirm('Er du sikker på at du vil slette denne?')" tabindex=-1 href="skatmaintenancefelles_dktard_edit.do?action=doDelete&id=${model.dbTable}&dktard01=${record.dktard01}&dktard02=${record.dktard02}&dktard03=${record.dktard03}">
 					               		<img valign="bottom" src="resources/images/delete.gif" border="0" width="15px" height="15px" alt="remove">
@@ -132,7 +132,7 @@
 	            	<table align="left" border="0" cellspacing="0" cellpadding="0">
 	            	<tr >
 					<td >					
-			            <ul class="isa_error text12" >
+			            <ul class="isa_error text14" >
 			            <c:forEach var="error" items="${errors.allErrors}">
 			                <li >
 			                	<spring:message code="${error.code}" text="${error.defaultMessage}"/>&nbsp;&nbsp;
@@ -154,7 +154,7 @@
 	            	<table align="left" border="0" cellspacing="0" cellpadding="0">
 				 		<tr>
 				 			<td >
-				 				<ul class="isa_error text12" >
+				 				<ul class="isa_error text14" >
                                     <li>[ERROR on Update] - Server return code: ${model.errorMessage}</li>                                    
                                 </ul>
 				 			</td>
@@ -179,13 +179,13 @@
 					
 					<table width="80%" cellspacing="1" border="0" align="left">
 			    	    <tr>
-							<td class="text12" title="dktard01">&nbsp;<font class="text14RedBold" >*</font>Varekode</td>
-							<td class="text12" title="dktard02">&nbsp;<font class="text14RedBold" >*</font>Startdato</td>
-							<td class="text12" title="dktard03"><font class="text14RedBold" >*</font>&nbsp;Slutdato</td>
-							<td class="text12" title="dktard04">&nbsp;Toldsatstype</td>
-							<td class="text12" title="dktard05">&nbsp;Toldsats</td>
-							<td class="text12" title="dktard47">&nbsp;Supplerende mængde</td>
-							<td class="text12" title="dktard48"><font class="text14RedBold" >*</font>&nbsp;Varekodetext</td>
+							<td class="text14" title="dktard01">&nbsp;<font class="text14RedBold" >*</font>Varekode</td>
+							<td class="text14" title="dktard02">&nbsp;<font class="text14RedBold" >*</font>Startdato</td>
+							<td class="text14" title="dktard03"><font class="text14RedBold" >*</font>&nbsp;Slutdato</td>
+							<td class="text14" title="dktard04">&nbsp;Toldsatstype</td>
+							<td class="text14" title="dktard05">&nbsp;Toldsats</td>
+							<td class="text14" title="dktard47">&nbsp;Supplerende mængde</td>
+							<td class="text14" title="dktard48"><font class="text14RedBold" >*</font>&nbsp;Varekodetext</td>
 						</tr>
 						<tr>
 						<td ><input type="text" required oninvalid="this.setCustomValidity('Obligatoriskt')" oninput="setCustomValidity('')" class="inputTextMediumBlueMandatoryField" name="dktard01" id="dktard01" size="11" maxlength="10" value='${model.record.dktard01}'></td>
@@ -216,10 +216,10 @@
 						------------------------ 
 						--%>
 						<tr>
-							<td class="text12" title="dktard06">&nbsp;Enhedsgrundlag</td>
-							<td class="text12" title="dktard07">&nbsp;Enhedstillæg</td>
-							<td class="text12" title="dktard08">&nbsp;Komponent</td>
-							<td class="text12" title="dktard09">&nbsp;EURO type</td>
+							<td class="text14" title="dktard06">&nbsp;Enhedsgrundlag</td>
+							<td class="text14" title="dktard07">&nbsp;Enhedstillæg</td>
+							<td class="text14" title="dktard08">&nbsp;Komponent</td>
+							<td class="text14" title="dktard09">&nbsp;EURO type</td>
 						</tr>
 
 						<tr>
@@ -249,12 +249,12 @@
 						--%>
 						<tr height="10"><td></td></tr>
 						<tr>
-							<td class="text12" title="dktard10">&nbsp;Toldsatstype(2)</td>
-							<td class="text12" title="dktard11">&nbsp;Toldsats(2)</td>
-							<td class="text12" title="dktard12">&nbsp;Enhedsgrundlag(2)</td>
-							<td class="text12" title="dktard13">&nbsp;Enhedstillæg(2)</td>
-							<td class="text12" title="dktard14">&nbsp;Komponent(2)</td>
-							<td class="text12" title="dktard15">&nbsp;EURO type(2)</td>
+							<td class="text14" title="dktard10">&nbsp;Toldsatstype(2)</td>
+							<td class="text14" title="dktard11">&nbsp;Toldsats(2)</td>
+							<td class="text14" title="dktard12">&nbsp;Enhedsgrundlag(2)</td>
+							<td class="text14" title="dktard13">&nbsp;Enhedstillæg(2)</td>
+							<td class="text14" title="dktard14">&nbsp;Komponent(2)</td>
+							<td class="text14" title="dktard15">&nbsp;EURO type(2)</td>
 						</tr>
 
 						<tr>
@@ -293,12 +293,12 @@
 						------------------------ 
 						--%>
 						<tr>
-							<td class="text12" title="dktard16">&nbsp;Toldsatstype(3)</td>
-							<td class="text12" title="dktard17">&nbsp;Toldsats(3)</td>
-							<td class="text12" title="dktard18">&nbsp;Enhedsgrundlag(3)</td>
-							<td class="text12" title="dktard19">&nbsp;Enhedstillæg(3)</td>
-							<td class="text12" title="dktard20">&nbsp;Komponent(3)</td>
-							<td class="text12" title="dktard21">&nbsp;EURO type(3)</td>
+							<td class="text14" title="dktard16">&nbsp;Toldsatstype(3)</td>
+							<td class="text14" title="dktard17">&nbsp;Toldsats(3)</td>
+							<td class="text14" title="dktard18">&nbsp;Enhedsgrundlag(3)</td>
+							<td class="text14" title="dktard19">&nbsp;Enhedstillæg(3)</td>
+							<td class="text14" title="dktard20">&nbsp;Komponent(3)</td>
+							<td class="text14" title="dktard21">&nbsp;EURO type(3)</td>
 						</tr>
 
 						<tr>
@@ -336,12 +336,12 @@
 						------------------------ 
 						--%>
 						<tr>
-							<td class="text12" title="dktard22">&nbsp;Toldsatstype(4)</td>
-							<td class="text12" title="dktard23">&nbsp;Toldsats(4)</td>
-							<td class="text12" title="dktard24">&nbsp;Enhedsgrundlag(4)</td>
-							<td class="text12" title="dktard25">&nbsp;Enhedstillæg(4)</td>
-							<td class="text12" title="dktard26">&nbsp;Komponent(4)</td>
-							<td class="text12" title="dktard27">&nbsp;EURO type(4)</td>
+							<td class="text14" title="dktard22">&nbsp;Toldsatstype(4)</td>
+							<td class="text14" title="dktard23">&nbsp;Toldsats(4)</td>
+							<td class="text14" title="dktard24">&nbsp;Enhedsgrundlag(4)</td>
+							<td class="text14" title="dktard25">&nbsp;Enhedstillæg(4)</td>
+							<td class="text14" title="dktard26">&nbsp;Komponent(4)</td>
+							<td class="text14" title="dktard27">&nbsp;EURO type(4)</td>
 						</tr>
 
 						<tr>
@@ -379,12 +379,12 @@
 						------------------------ 
 						--%>
 						<tr>
-							<td class="text12" title="dktard28">&nbsp;Toldsatstype(5)</td>
-							<td class="text12" title="dktard29">&nbsp;Toldsats(5)</td>
-							<td class="text12" title="dktard30">&nbsp;Enhedsgrundlag(5)</td>
-							<td class="text12" title="dktard31">&nbsp;Enhedstillæg(5)</td>
-							<td class="text12" title="dktard32">&nbsp;Komponent(5)</td>
-							<td class="text12" title="dktard33">&nbsp;EURO type(5)</td>
+							<td class="text14" title="dktard28">&nbsp;Toldsatstype(5)</td>
+							<td class="text14" title="dktard29">&nbsp;Toldsats(5)</td>
+							<td class="text14" title="dktard30">&nbsp;Enhedsgrundlag(5)</td>
+							<td class="text14" title="dktard31">&nbsp;Enhedstillæg(5)</td>
+							<td class="text14" title="dktard32">&nbsp;Komponent(5)</td>
+							<td class="text14" title="dktard33">&nbsp;EURO type(5)</td>
 						</tr>
 
 						<tr>
@@ -424,7 +424,7 @@
 						--%>
 						<tr height="10"><td></td></tr>
 						<tr>
-							<td class="text12" >
+							<td class="text14" >
 							<img onMouseOver="showPop('bilag1_info');" onMouseOut="hidePop('bilag1_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info" >
 				 			<span title="dktard34">Bilag-1</span>
 								<div class="text11" style="position: relative;" align="left">
@@ -435,7 +435,7 @@
 								</span>
 								</div>
 							</td>
-							<td class="text12" >
+							<td class="text14" >
 							<img onMouseOver="showPop('bilag2_info');" onMouseOut="hidePop('bilag2_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info" >
 				 			<span title="dktard35">Bilag-2</span>
 				 				<div class="text11" style="position: relative;" align="left">
@@ -446,7 +446,7 @@
 								</span>
 								</div>
 				 			</td>
-							<td class="text12" >
+							<td class="text14" >
 							<img onMouseOver="showPop('bilag3_info');" onMouseOut="hidePop('bilag3_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info" >
 				 			<span title="dktard36">Bilag-3</span>
 								<div class="text11" style="position: relative;" align="left">
@@ -457,7 +457,7 @@
 								</span>
 								</div>
 							</td>
-							<td class="text12" >
+							<td class="text14" >
 							<img onMouseOver="showPop('bilag4_info');" onMouseOut="hidePop('bilag4_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info" >
 				 			<span title="dktard37">Bilag-4</span>
 				 				<div class="text11" style="position: relative;" align="left">
@@ -487,12 +487,12 @@
 						--%>
 						<tr height="10"><td></td></tr>
 						<tr>
-							<td class="text12" title="dktard38">&nbsp;Varebest.(1)</td>
-							<td class="text12" title="dktard39">&nbsp;Varebest.(2)</td>
-							<td class="text12" title="dktard40">&nbsp;Varebest.(3)</td>
-							<td class="text12" title="dktard41">&nbsp;Varebest.(4)</td>
-							<td class="text12" title="dktard42">&nbsp;Varebest.(5)</td>
-							<td class="text12" title="dktard43">&nbsp;Varebest.(6)</td>
+							<td class="text14" title="dktard38">&nbsp;Varebest.(1)</td>
+							<td class="text14" title="dktard39">&nbsp;Varebest.(2)</td>
+							<td class="text14" title="dktard40">&nbsp;Varebest.(3)</td>
+							<td class="text14" title="dktard41">&nbsp;Varebest.(4)</td>
+							<td class="text14" title="dktard42">&nbsp;Varebest.(5)</td>
+							<td class="text14" title="dktard43">&nbsp;Varebest.(6)</td>
 							
 						</tr>
 
@@ -506,9 +506,9 @@
 							
 						</tr>
 						<tr>
-							<td class="text12" title="dktard44">&nbsp;Varebest.(7)</td>
-							<td class="text12" title="dktard45">&nbsp;Varebest.(8)</td>
-							<td class="text12" title="dktard46">&nbsp;Varebest.(9)</td>
+							<td class="text14" title="dktard44">&nbsp;Varebest.(7)</td>
+							<td class="text14" title="dktard45">&nbsp;Varebest.(8)</td>
+							<td class="text14" title="dktard46">&nbsp;Varebest.(9)</td>
 						</tr>
 
 						<tr>
