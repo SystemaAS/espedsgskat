@@ -383,7 +383,7 @@
 						<tr>
 							<td class="text14" align="left" >&nbsp;Afdeling</td>
    							<td class="text14" align="left" >&nbsp;Opdragsnr.</td>
-   							<td class="text14" align="left" >&nbsp;Ext.ref.nr.&nbsp;
+   							<td class="text14" align="left" >&nbsp;Ekst.ref.nr.&nbsp;
    							</td>
    						</tr>
 						<tr>
