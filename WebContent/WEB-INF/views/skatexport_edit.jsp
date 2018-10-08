@@ -257,8 +257,8 @@
 		<%-- LEFT SIDE CELL --%>
 		<%-- --------------- --%>
 		<tr>
-		<td width="55%">
-		<table width="96%" border="0" cellspacing="0" cellpadding="0">
+		<td width="50%">
+		<table width="90%" border="0" cellspacing="0" cellpadding="0">
 			<tr>
 	            <td width="5">&nbsp;</td>
 	            <td >
@@ -579,7 +579,7 @@
             <tr>
 	            <td width="5">&nbsp;</td>
 	            <td >
-	                <table class="formFrame" width="100%" align="left" border="0" cellspacing="1" cellpadding="1">
+	                <table class="formFrame" style="width:100%" align="left" border="0" cellspacing="1" cellpadding="1">
 				 		<tr>
 				 			<td class="text14">
 				 				<b>&nbsp;22.2</b>&nbsp;
