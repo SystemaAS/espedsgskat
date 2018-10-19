@@ -134,8 +134,6 @@
     	jq(idLink).attr('target','_blank');
     	window.open('skatnctsexport_edit_childwindow_tullkontor.do?action=doInit&tkkode=' + jq("#"+id).val()+ '&ctype=' + id, "codeWin", "top=300px,left=500px,height=600px,width=800px,scrollbars=no,status=no,location=no");
     }
-	  
-    
     
 	jq(document).ready(function(){
   	    jq(this).scrollTop(0); //needed for Chrome (bug)
