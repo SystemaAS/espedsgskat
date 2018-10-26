@@ -142,8 +142,6 @@ public class SkatNctsExportHeaderController {
 	 * @param request
 	 * @return
 	 */
-	
-	
 	@RequestMapping(value="skatnctsexport_edit.do")
 	public ModelAndView doNctsExportEdit(@ModelAttribute ("record") JsonSkatNctsExportSpecificTopicRecord recordToValidate, BindingResult bindingResult, HttpSession session, HttpServletRequest request){
 		

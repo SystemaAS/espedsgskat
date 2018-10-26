@@ -1652,7 +1652,6 @@
 					        </tr>	    
 				            <tr height="2"><td>&nbsp;</td></tr>
 				            
-					     	<%-- This section is not needed in NCTS since the backend sums all kollis at an item level --%>
 					     	<tr>
 					        		<td class="text14Gray" align="left" >
 					        			Antal kollin (i vareposterne)&nbsp;
