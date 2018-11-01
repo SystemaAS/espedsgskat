@@ -22,7 +22,7 @@
 			  var faktValuta = record[5].replace("valuta", "");
 			  var faktBelopp = record[6].replace("blp", "");
 			  
-			  //alert(vkod + " " + text);
+			  //Used in item lines
 			  opener.jq('#tvavd2').val(avd);
 			  opener.jq('#tvtdn2').val(opd);
 			  opener.jq('#xref').val(xref);
@@ -36,8 +36,15 @@
 					  opener.jq('#tvdref').val(refnr);
 				  }
 			  }
-			  
 			  opener.jq('#tvtdn2').focus();
+			  
+			  
+			  //Used in Create new header (if applicable)
+			  opener.jq('#selectedAvd').val(avd);
+			  opener.jq('#selectedOpd').val(opd);
+			  opener.jq('#selectedExtRefNr').val(xref);
+			  opener.jq('#selectedExtRefNr').focus();
+			  
 			  //close child window
 			  window.close();
 			  

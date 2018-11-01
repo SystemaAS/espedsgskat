@@ -155,3 +155,17 @@
   //-----------------------
   //END Transportuppdrag
   //-----------------------
+  
+  jq(function() {
+	  jq('#extRefIdLink').click(function() {
+	  	jq('#extRefIdLink').attr('target','_blank');
+	  	window.open('skatnctsexport_edit_items_childwindow_angivelselist.do?action=doFind&avd=' + jq('#selectedAvd').val() + '&opd=' + jq('#selectedOpd').val() + '&xref=' + jq('#selectedExtRefNr').val(), "codeWin", "top=300px,left=500px,height=600px,width=1200px,scrollbars=no,status=no,location=no");
+	  });
+	  jq('#extRefIdLink').keypress(function(e){ //extra feature for the end user
+			if(e.which == 13) {
+				jq('#extRefIdLink').click();
+			}
+	  });
+  });
+ 
+

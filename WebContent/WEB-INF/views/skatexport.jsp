@@ -134,7 +134,7 @@
 				</td>
 				<td align="left" ><input type="text" class="inputText" name="opd" id="opd" size="8" maxlength="10" value='${searchFilterSkatExport.opd}'>&nbsp;</td>
 				<td align="left" ><input type="text" class="inputText" name="refnr" id="refnr"size="8" maxlength="35" value='${searchFilterSkatExport.refnr}'>&nbsp;</td>
-				<td align="left" ><input type="text" class="inputText" name="xrefnr" id="xrefnr"size="8" maxlength="35" value='${searchFilterSkatExport.xrefnr}'>&nbsp;</td>
+				<td align="left" ><input type="text" class="inputText" name="xrefnr" id="xrefnr"size="10" maxlength="35" value='${searchFilterSkatExport.xrefnr}'>&nbsp;</td>
 				
 				<td align="left" >
 					<select class="selectMediumBlueE2" name="aart" id="aart" >
