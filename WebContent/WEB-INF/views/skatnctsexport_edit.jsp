@@ -264,8 +264,8 @@
 		<%-- LEFT SIDE CELL --%>
 		<%-- --------------- --%>
 		<tr>
-		<td width="55%">
-		<table border="0" cellspacing="1" cellpadding="0">
+		<td width="50%">
+		<table style="width:90%" border="0" cellspacing="1" cellpadding="0">
 			<tr>
 	            <td width="5">&nbsp;</td>
 	            <td >
@@ -1114,7 +1114,7 @@
 		<%-- --------------- --%>
 		<%-- RIGHT SIDE CELL --%>
 		<%-- --------------- --%>
-		<td width="45%" align="center" valign="top">
+		<td width="50%" align="center" valign="top">
 			<table border="0" cellspacing="0" cellpadding="0">
 				<tr>
 					<td width="2">&nbsp;</td>
@@ -1851,7 +1851,7 @@
 			<%-- ---------------------------- --%>
 			<%-- tab area container SECONDARY --%>
 			<%-- ---------------------------- --%>
-			<table width="100%" class="secondarySectionHeader" border="0" cellspacing="0" cellpadding="0">
+			<table style="width:90%" class="secondarySectionHeader" border="0" cellspacing="0" cellpadding="0">
 		 		<tr height="18">
 					<td class="text14WhiteBold">
 		 				<b>&nbsp;&nbsp;&nbsp;&nbsp;Supplerende oplysninger&nbsp;<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">
@@ -1864,7 +1864,7 @@
 		<%--EXTRAORDINÄRA --%>
 		<tr>
 			<td colspan="2" >
-			<table width="100%" class="secondarySectionFrame" border="0" cellspacing="0" cellpadding="0">
+			<table style="width:100%" class="secondarySectionFrame" border="0" cellspacing="0" cellpadding="0">
 				<tr height="10"><td colspan="2"></td></tr>
 				<tr>
 				<td width="50%" valign="top">
@@ -1873,7 +1873,7 @@
 			 			<td width="5">&nbsp;</td>
 			            <td >		
 			 				<%-- ANSVARIG --%>
-			 				<table width="100%" align="left" class="formFrameHeader" border="0" cellspacing="0" cellpadding="0">
+			 				<table style="width:90%"  align="left" class="formFrameHeader" border="0" cellspacing="0" cellpadding="0">
 						 		<tr height="18px">
 						 			<td class="text14White">
 						 				&nbsp;
@@ -1907,7 +1907,7 @@
 			 			<td width="5">&nbsp;</td>
 			            <td >	
 							<%-- create record --%>
-						 	<table width="100%" align="left" class="formFrame" border="0" cellspacing="0" cellpadding="0">
+						 	<table style="width:90%"  align="left" class="formFrame" border="0" cellspacing="0" cellpadding="0">
 						 		<tr>
 							 		<td>
 								 		<table width="100%" border="0" cellspacing="0" cellpadding="0">

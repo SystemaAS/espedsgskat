@@ -258,7 +258,7 @@
 		<%-- --------------- --%>
 		<tr>
 		<td width="50%">
-		<table width="90%" border="0" cellspacing="0" cellpadding="0">
+		<table style="width:90%" border="0" cellspacing="0" cellpadding="0">
 			<tr>
 	            <td width="5">&nbsp;</td>
 	            <td >
@@ -1686,7 +1686,7 @@
 			<%-- ---------------------------- --%>
 			<%-- tab area container SECONDARY --%>
 			<%-- ---------------------------- --%>
-			<table width="100%" class="secondarySectionHeader" border="0" cellspacing="0" cellpadding="0">
+			<table style="width:100%" class="secondarySectionHeader" border="0" cellspacing="0" cellpadding="0">
 		 		<tr height="18">
 					<td class="text14WhiteBold">
 		 				<b>&nbsp;&nbsp;&nbsp;&nbsp;Supplerende oplysninger&nbsp;</b>
@@ -1707,7 +1707,7 @@
 		<%--EXTRAORDINÄRA --%>
 		<tr>
 			<td colspan="2" >
-			<table width="100%" class="secondarySectionFrame" border="0" cellspacing="0" cellpadding="0">
+			<table style="width:100%" class="secondarySectionFrame" border="0" cellspacing="0" cellpadding="0">
 				<tr height="10"><td colspan="2"></td></tr>
 				<tr>
 				<td width="50%" valign="top">
@@ -1718,7 +1718,7 @@
 	            				<%-- =========== --%>
 			 				<%-- TRANSPORTØR --%>
 			 				<%-- =========== --%>	
-			 				<table width="100%" align="left" class="formFrameHeader" border="0" cellspacing="0" cellpadding="0">
+			 				<table style="width:90%" align="left" class="formFrameHeader" border="0" cellspacing="0" cellpadding="0">
 						 		<tr height="18px">
 						 			<td class="text14White">
 						 				&nbsp;<img onMouseOver="showPop('transportor_info');" onMouseOut="hidePop('transportor_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
@@ -1737,10 +1737,10 @@
 			 			</td>
 			 		</tr>
 			 		<tr>	
-			 			<td width="5">&nbsp;</td>
+		 			<td width="5">&nbsp;</td>
 			            <td colspan="2">	
 							<%-- create record --%>
-						 	<table width="100%" align="left" class="formFrame" border="0" cellspacing="0" cellpadding="0">
+						 	<table style="width:90%" align="left" class="formFrame" border="0" cellspacing="0" cellpadding="0">
 						 		<tr>
 							 		<td>
 								 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -1795,7 +1795,7 @@
 	            				<%-- =========== --%>
 			 				<%-- REPRESENTAT --%>
 			 				<%-- =========== --%>	
-			 				<table width="100%" align="left" class="formFrameHeader" border="0" cellspacing="0" cellpadding="0">
+			 				<table style="width:90%" align="left" class="formFrameHeader" border="0" cellspacing="0" cellpadding="0">
 						 		<tr height="18px">
 						 			<td class="text14White">
 						 				&nbsp;<img onMouseOver="showPop('representant_info');" onMouseOut="hidePop('representant_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
@@ -1817,7 +1817,7 @@
 			 			<td width="5">&nbsp;</td>
 			            <td colspan="2">	
 							<%-- create record --%>
-						 	<table width="100%" align="left" class="formFrame" border="0" cellspacing="0" cellpadding="0">
+						 	<table style="width:90%" align="left" class="formFrame" border="0" cellspacing="0" cellpadding="0">
 						 		<tr>
 							 		<td>
 								 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
