@@ -17,8 +17,12 @@ public final class SkatNctsExportUrlDataStore {
 	//----------------------------
 	//[1] FETCH ARENDE LIST
 	//----------------------------
-	static public String NCTS_EXPORT_BASE_TOPICLIST_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDCE000R.pgm"; 
 	//http://gw.systema.no/sycgip/TDCE000R.pgm?user=OSCAR&avd=1&sign=CB";
+	static public String NCTS_EXPORT_BASE_TOPICLIST_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDCE000R.pgm";
+	//http://gw.systema.no/sycgip/TDCE000R.pgm?user=OSCAR&tvdref=xxxx";
+	static public String NCTS_EXPORT_BASE_TOPICLIST_DOCREF_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDCE000R2.pgm";
+		
+	
 	
 	//---------------------------------------------------------------
 	//[2] FETCH A SPECIFIC ARENDE or Default values for a NEW ARENDE

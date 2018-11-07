@@ -83,6 +83,7 @@
 				</td>               
                 <td class="text14" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.export.list.search.label.mottagare"/></td>
                 <td class="text14" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.export.list.search.label.bruttovikt"/></td>
+                <td class="text14" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.export.list.search.label.docRef"/></td>
                 <td>&nbsp;</td>
 			</tr>
  	        <tr>
@@ -110,6 +111,7 @@
 				<td align="left" ><input type="text" class="inputText" name="status" id="status" size="2" maxlength="1" value='${searchFilterSkatExportNcts.status}'>&nbsp;</td>
 				<td align="left" ><input type="text" class="inputText" name="motNavn" id="motNavn" size="10" maxlength="50" value='${searchFilterSkatExportNcts.motNavn}'>&nbsp;</td>
 				<td align="left" ><input type="text" class="inputText" name="bruttoVikt" id="bruttoVikt" size="10" maxlength="50" value='${searchFilterSkatExportNcts.bruttoVikt}'>&nbsp;</td>
+				<td align="left" ><input type="text" class="inputText" name="docRef" id="docRef" size="10" maxlength="50" value='${searchFilterSkatExportNcts.docRef}'>&nbsp;</td>
 				
 				<td valign="top" align="left" >
                    &nbsp;<input class="inputFormSubmit" type="submit" name="submit" id="submit" value='<spring:message code="systema.skat.search"/>'>
