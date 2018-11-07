@@ -1,6 +1,11 @@
 	//this variable is a global jQuery var instead of using "$" all the time. Very handy
   	var jq = jQuery.noConflict();
   	var BLOCKUI_OVERLAY_MESSAGE_DEFAULT = "Please wait...";
+  	
+  	function setBlockUI(element){
+  	  jq.blockUI({ message: BLOCKUI_OVERLAY_MESSAGE_DEFAULT});
+    }
+  	
   	//--------
   	//Koder
   	//--------
@@ -95,6 +100,8 @@
   	  //-----------------------
     	  jq('#angivelseList').dataTable( {
     		  "dom": '<"top"fli>rt<"bottom"p><"clear">',
+    		  "scrollY": "300px",
+    		  "scrollCollapse": true,
     		  "lengthMenu": [ 75, 100, 200, 500]
     	  });
       //event on input field for search

@@ -55,7 +55,7 @@
 							<td class="text14">&nbsp;<input type="text" class="inputText" name="avsNavn" id="avsNavn" size="15" maxlength="25" value="${searchFilter.avsNavn}"></td>
 							<td class="text14">&nbsp;<input type="text" class="inputText" name="motNavn" id="motNavn" size="15" maxlength="25" value="${searchFilter.motNavn}"></td>
 							
-							<td align="right">&nbsp;<input class="inputFormSubmit" type="submit" name="submit" value='<spring:message code="systema.skat.search"/>'>
+							<td align="right">&nbsp;<input class="inputFormSubmit" type="submit" name="submit" onClick="setBlockUI(this);" value='<spring:message code="systema.skat.search"/>'>
 		           		</tr>
 		           		</form>
 		           		</table>
@@ -86,36 +86,44 @@
 		                    <th class="text14" title="status">&nbsp;<spring:message code="systema.skat.export.list.search.label.status"/>&nbsp;</th>
 		                    <th class="text14" title="avsNavn">&nbsp;<spring:message code="systema.skat.export.list.search.label.avsandare"/>&nbsp;</th>
 		                    <th class="text14" title="motNavn">&nbsp;<spring:message code="systema.skat.export.list.search.label.mottagare"/>&nbsp;</th>
+		                    <th class="text14" title="dokref">&nbsp;Dok.ref.&nbsp;</th>
+		                    
 		                </tr> 
 		                </thead>
 		                
 		                <tbody>
 		                <c:forEach var="record" items="${model.angivelseList}" varStatus="counter">    
-			               <c:choose>           
-			                   <c:when test="${counter.count%2==0}">
-			                       <tr class="text14">
-			                   </c:when>
-			                   <c:otherwise>   
-			                       <tr class="text14">
-			                   </c:otherwise>
+			               <c:choose>
+			                   <c:when test="${empty record.dokref}">    
+				               		<tr style="color: #000000;">
+				               </c:when>
+				               <c:otherwise>
+				               		<tr style="color: #4F8A10;background-color: #DFF2BF;">
+				               </c:otherwise>
 			               </c:choose>
 			               <td align="center" class="text14" >
-			               		<input class="clazzEksportAware" type="checkbox" value="J" id="syav${record.avd}_syop${record.opd}" name="syav${record.avd}_syop${record.opd}" >
+			               		<c:choose>
+				               		<c:when test="${empty record.dokref}">
+			               				<input class="clazzEksportAware" type="checkbox" value="J" id="syav${record.avd}_syop${record.opd}" name="syav${record.avd}_syop${record.opd}" >
+			               			</c:when>
+			               			<c:otherwise>
+			               				<img title="already picked!" style="cursor:pointer;" src="resources/images/lock.gif" border="0" alt="edit">
+			               			</c:otherwise>
+		               			</c:choose>
 			               </td>
-			               <td class="text14">&nbsp;${record.avd}</td>
-			               <td class="text14">&nbsp;${record.sign}</td>
-			               <td nowrap style="cursor:pointer;" class="text14MediumBlue" id="avd${record.avd}@opd${record.opd}@xref${record.dkeh_xref}@refnr${record.refnr}@mrn${record.dkeh_mrn}@valuta${record.dkeh_221}@blp${record.dkeh_222}" >
-			               		<img title="select" style="vertical-align:top;" src="resources/images/bebullet.gif" border="0" alt="edit">&nbsp;${record.opd}
-			               	</td>
-		               	   <td class="text14">&nbsp;${record.dkeh_mrn}</td>
-		               	   <td class="text14">&nbsp;${record.refnr}</td>
-		               	   <td class="text14">&nbsp;${record.dkeh_181}</td>
-		               	   <td class="text14">&nbsp;${record.dkeh_xref}</td>
-		               	   <td class="text14">&nbsp;${record.aart}</td>
-		               	   <td class="text14">&nbsp;${record.datum}</td>
-		               	   <td class="text14">&nbsp;${record.status}</td>
-		               	   <td class="text14">&nbsp;${record.avsNavn}</td>
-		               	   <td class="text14">&nbsp;${record.motNavn}</td>
+			               <td width="2%" class="text14NoneColor">&nbsp;${record.avd}</td>
+			               <td width="2%" class="text14NoneColor">&nbsp;${record.sign}</td>
+			               <td width="2%" class="text14MediumBlue" id="avd${record.avd}@opd${record.opd}@xref${record.dkeh_xref}@refnr${record.refnr}@mrn${record.dkeh_mrn}@valuta${record.dkeh_221}@blp${record.dkeh_222}" >&nbsp;${record.opd}</td>
+		               	   <td width="2%" class="text14NoneColor">&nbsp;${record.dkeh_mrn}</td>
+		               	   <td width="2%" class="text14NoneColor">&nbsp;${record.refnr}</td>
+		               	   <td width="2%" class="text14NoneColor">&nbsp;${record.dkeh_181}</td>
+		               	   <td width="2%" class="text14NoneColor">&nbsp;${record.dkeh_xref}</td>
+		               	   <td width="2%" class="text14NoneColor">&nbsp;${record.aart}</td>
+		               	   <td width="2%" class="text14NoneColor">&nbsp;${record.datum}</td>
+		               	   <td width="2%" class="text14NoneColor">&nbsp;${record.status}</td>
+		               	   <td class="text14NoneColor">&nbsp;${record.avsNavn}</td>
+		               	   <td class="text14NoneColor">&nbsp;${record.motNavn}</td>
+		               	   <td width="2%" class="text14NoneColor">&nbsp;${record.dokref}</td>
 			            </tr> 
 			            </c:forEach>
 			            </tbody>

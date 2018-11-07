@@ -1001,7 +1001,7 @@
 											</a>
 										</td>
 							        	<td valign="top"><input readonly type="text" class="inputTextReadOnly" name="ownToldsats" id="ownToldsats" size="9" value=''></td>
-							            <td colspan="4">
+							            <td colspan="4" align="left">
 							            	<table cellspacing="0" border="0" cellpadding="0">
 							            		
 							            		<tr class="tableHeaderField10" height="20" valign="left">
@@ -1048,40 +1048,25 @@
 							               			<td class="tableCell" align="right" >&nbsp;</td>
 						               				<td class="tableCell" align="right" ><span title="dkxv_42c">&nbsp;<b>TOTAL</b>&nbsp;</span></td>
 						               				<td class="tableCell" align="right" >&nbsp;<input onKeyPress="return amountKey(event)" type="text" class="inputTextMediumBlue10MandatoryField" style="text-align: right" name="dkxv_42c" id="dkxv_42c" size="16" maxlength="12" value='${model.record.dkxv_42c}'>&nbsp;</td>
-							               		 </tr>	
+							               		 </tr>
+							               		 <tr height="2"><td>&nbsp;</td></tr>
+							               		 <tr>
+							               		 	<td colspan="5" valign="top" align="right">
+													<c:choose>	
+														<c:when test="${model.status == 'G' ||  model.status=='F' || model.status == 'M' || empty model.status}">
+															<input class="inputFormSubmit" type="submit" name="submit" id="submit" value='<spring:message code="systema.skat.ncts.export.item.createnew.submit"/>'>
+														</c:when>
+														<c:otherwise>
+								 				    		<input disabled class="inputFormSubmitGrayDisabled" type="submit" name="submit" value='<spring:message code="systema.skat.submit.not.editable"/>'/>
+								 				    	</c:otherwise>	
+							 				    		</c:choose>	
+										            </td>
+							               		 </tr>
+							               		 	
 							            	</table>
 							            </td>
-							            <td valign="top">
-											<c:choose>	
-											<c:when test="${model.status == 'G' ||  model.status=='F' || model.status == 'M' || empty model.status}">
-												<input class="inputFormSubmit" type="submit" name="submit" id="submit" value='<spring:message code="systema.skat.ncts.export.item.createnew.submit"/>'>
-											</c:when>
-											<c:otherwise>
-					 				    		<input disabled class="inputFormSubmitGrayDisabled" type="submit" name="submit" value='<spring:message code="systema.skat.submit.not.editable"/>'/>
-					 				    		</c:otherwise>	
-				 				    		</c:choose>	
-							            </td>
  							        </tr>
- 							        <%--
- 							        <tr>
- 							        	<td colspan="9">
- 							        	<table border="0" width="1000px">
- 							        	<tr>
- 							        	<td width="100%" align="right">
-											<c:choose>	
-											<c:when test="${model.status == 'G' ||  model.status=='F' || model.status == 'M' || empty model.status}">
-												<input class="inputFormSubmit" type="submit" name="submit" id="submit" value='<spring:message code="systema.skat.ncts.export.item.createnew.submit"/>'>
-											</c:when>
-											<c:otherwise>
-					 				    		<input disabled class="inputFormSubmitGrayDisabled" type="submit" name="submit" value='<spring:message code="systema.skat.submit.not.editable"/>'/>
-				 				    		</c:otherwise>	
-				 				    		</c:choose>	
-							            </td>
- 							        	</table>
- 							        	</tr>
- 							        	</td>
- 							        </tr>
- 							         --%>
+ 							        
 			        	        </table>
 					        </td>
 					        
