@@ -1043,7 +1043,7 @@
 		<%-- --------------- --%>
 		<%-- RIGHT SIDE CELL --%>
 		<%-- --------------- --%>
-		<td width="50%" align="center" valign="top">
+		<td width="50%" align="left" valign="top">
 			<table border="0" cellspacing="0" cellpadding="0">
 				<tr>
 					<td width="2">&nbsp;</td>
@@ -2016,7 +2016,7 @@
 				<%-- --------------- --%>
 				<%-- RIGHT SIDE CELL --%>
 				<%-- --------------- --%>
-				<td width="45%" align="center" valign="top">
+				<td width="50%" align="left" valign="top">
 					<table border="0" cellspacing="0" cellpadding="0">
 						<tr>
 						<td width="2">&nbsp;</td>

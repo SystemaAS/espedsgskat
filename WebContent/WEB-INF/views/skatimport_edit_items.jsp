@@ -842,7 +842,7 @@
 							        <tr>
 							        		
 							        		<td class="text14" align="left">
-							            		<input onKeyPress="return numberKey(event)" type="text" class="inputText" name="dkiv_331" id="dkiv_331" size="14" maxlength="10" value="${model.record.dkiv_331}">
+							            		<input onKeyPress="return numberKey(event)" type="text" class="inputTextMediumBlueMandatoryField" name="dkiv_331" id="dkiv_331" size="14" maxlength="10" value="${model.record.dkiv_331}">
 							            	<a tabindex="-1" id="dkiv_331IdLink">
 												<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
 											</a>	
@@ -852,7 +852,7 @@
 										
 										
 										<td class="text14" align="left" nowrap>
-											<select name="dkiv_36" id="dkiv_36">
+											<select class="inputTextMediumBlueMandatoryField" name="dkiv_36" id="dkiv_36">
 						 						<option value="">-vælg-</option>
 							 				  	<c:forEach var="code" items="${model.preferenceCodeList}" >
 							 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_36 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
@@ -864,7 +864,7 @@
 										</td>
 										
 										<td align="left" nowrap>
-											<select name="dkiv_37" id="dkiv_37">
+											<select class="inputTextMediumBlueMandatoryField" name="dkiv_37" id="dkiv_37">
 						 						<option value="">-vælg-</option>
 							 				  	<c:forEach var="code" items="${model.procedureKoderR37CodeList}" >
 							 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_37 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
@@ -876,10 +876,10 @@
 						 				</td>
 						 				
 						 				<td class="text14" align="left" nowrap>
-							            		<input onKeyPress="return amountKey(event)" type="text" class="inputText" name="dkiv_42" id="dkiv_42" size="14" maxlength="13" value="${model.record.dkiv_42}">
+							            		<input onKeyPress="return amountKey(event)" type="text" class="inputTextMediumBlueMandatoryField"  name="dkiv_42" id="dkiv_42" size="14" maxlength="13" value="${model.record.dkiv_42}">
 							            	</td>
-						 				<td class="text14" align="left"><input onKeyPress="return amountKey(event)" type="text" class="inputText" name="dkiv_35" id="dkiv_35" size="10" maxlength="12" value="${model.record.dkiv_35}"></td>
-										<td class="text14" align="left"><input onKeyPress="return amountKey(event)" type="text" class="inputText" name="dkiv_38" id="dkiv_38" size="10" maxlength="9" value="${model.record.dkiv_38}"></td>
+						 				<td class="text14" align="left"><input onKeyPress="return amountKey(event)" type="text" class="inputTextMediumBlueMandatoryField"  name="dkiv_35" id="dkiv_35" size="10" maxlength="12" value="${model.record.dkiv_35}"></td>
+										<td class="text14" align="left"><input onKeyPress="return amountKey(event)" type="text" class="inputTextMediumBlueMandatoryField"  name="dkiv_38" id="dkiv_38" size="10" maxlength="9" value="${model.record.dkiv_38}"></td>
 										<td class="text14" align="left" ><input type="text" class="inputText" name="dkiv_311a" id="dkiv_311a" size="16" maxlength="16" value="${model.record.dkiv_311a}"></td>
 										
 							        </tr>
@@ -965,10 +965,10 @@
 							        </tr>
 									<tr>
 					           			<td class="text12" valign="bottom">
-											<input onKeyPress="return numberKey(event)" type="text" class="inputText" name="dkiv_313a" id="dkiv_313a" size="7" maxlength="6" value="${model.record.dkiv_313a}">
+											<input onKeyPress="return numberKey(event)" type="text" class="inputTextMediumBlueMandatoryField" name="dkiv_313a" id="dkiv_313a" size="7" maxlength="6" value="${model.record.dkiv_313a}">
 										</td>
 										<td align="left" nowrap>
-					            			<select name="dkiv_314a" id="dkiv_314a">
+					            			<select class="inputTextMediumBlueMandatoryField" name="dkiv_314a" id="dkiv_314a">
 							            		<option value="">-vælg-</option>
 							 				  	<c:forEach var="code" items="${model.emballageCodeList}" >
 			                                	 	<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_314a == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
@@ -978,7 +978,7 @@
 												<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
 											</a>											
 				            				</td> 										
-										<td class="text14" align="left" colspan="2"><input type="text" class="inputText" name="dkiv_315a" id="dkiv_315a" size="40" maxlength="45" value="${model.record.dkiv_315a}">
+										<td class="text14" align="left" colspan="2"><input type="text" class="inputTextMediumBlueMandatoryField"  name="dkiv_315a" id="dkiv_315a" size="40" maxlength="45" value="${model.record.dkiv_315a}">
 							            &nbsp;&nbsp;<button name="itemDescriptionExtraInformationButton" class="buttonGray" type="button" onClick="showPop('itemDescriptionExtraInformation');" >Mere...</button>
 								        <span style="position:absolute; left:280px; top:500px; width:350px; height:300px;" id="itemDescriptionExtraInformation" class="popupWithInputText"  >
 								           		<div class="text10" align="left">
@@ -1140,7 +1140,7 @@
 							        </tr>
 							        <tr>
 						        			<td align="left" nowrap>
-								            	<select name="dkiv_34" id="dkiv_34">
+								            	<select class="inputTextMediumBlueMandatoryField" name="dkiv_34" id="dkiv_34">
 						 						<option value="">-vælg-</option>
 							 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 							 				  		<option value="${country.dkkd_kd}"<c:if test="${model.record.dkiv_34 == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
@@ -1150,12 +1150,12 @@
 												<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
 											</a>																 			
 										</td>
-								        	<td class="text14" align="left"><input onKeyPress="return numberKey(event)" type="text" class="inputText" name="dkiv_46" id="dkiv_46" size="16" maxlength="15" value="${model.record.dkiv_46}"></td>
+								        	<td class="text14" align="left"><input onKeyPress="return numberKey(event)" type="text" class="inputTextMediumBlueMandatoryField"  name="dkiv_46" id="dkiv_46" size="16" maxlength="15" value="${model.record.dkiv_46}"></td>
 										<td colspan="4" class="text14" align="left" nowrap>
 							           			<table>
 							           				<tr>
 									           			<td class="text14">&nbsp;&nbsp;&nbsp;&nbsp;<span title="dkiv_401-2">40.2&nbsp;Kat./Type</span>
-										           			<select name="dkiv_402a" id="dkiv_402a">
+										           			<select class="inputTextMediumBlueMandatoryField" name="dkiv_402a" id="dkiv_402a">
 											            		<option value="">-vælg-</option>
 											 				  	<c:forEach var="code" items="${model.transportdocsSummariskadocsCodeList}" >
 											 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_402a == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
@@ -1166,7 +1166,7 @@
 															</a>										           				
 														</td>
 														<td class="text14" ><span title="dkiv_403a">&nbsp;&nbsp;&nbsp;40.3&nbsp;Id</span>
-															<input type="text" class="inputText" name="dkiv_403a" id="dkiv_403a" size="25" maxlength="35" value="${model.record.dkiv_403a}">
+															<input type="text" class="inputTextMediumBlueMandatoryField"  name="dkiv_403a" id="dkiv_403a" size="25" maxlength="35" value="${model.record.dkiv_403a}">
 															<input class="clazz_copyElement" type="checkbox" name="dkiv_401a_copy@dkiv_402a_copy@dkiv_403a_copy" id="dkiv_401a_copy@dkiv_402a_copy@dkiv_403a_copy" value="1" >
 															<font class="text11MediumBlue" >
 																<label onMouseOver="showPop('dkiv_403a_copy_info');" onMouseOut="hidePop('dkiv_403a_copy_info');">Kopi</label>

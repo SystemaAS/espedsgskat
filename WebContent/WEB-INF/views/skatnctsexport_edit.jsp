@@ -1114,7 +1114,7 @@
 		<%-- --------------- --%>
 		<%-- RIGHT SIDE CELL --%>
 		<%-- --------------- --%>
-		<td width="50%" align="center" valign="top">
+		<td width="50%" align="left" valign="top">
 			<table border="0" cellspacing="0" cellpadding="0">
 				<tr>
 					<td width="2">&nbsp;</td>
@@ -1851,7 +1851,7 @@
 			<%-- ---------------------------- --%>
 			<%-- tab area container SECONDARY --%>
 			<%-- ---------------------------- --%>
-			<table style="width:90%" class="secondarySectionHeader" border="0" cellspacing="0" cellpadding="0">
+			<table style="width:100%" class="secondarySectionHeader" border="0" cellspacing="0" cellpadding="0">
 		 		<tr height="18">
 					<td class="text14WhiteBold">
 		 				<b>&nbsp;&nbsp;&nbsp;&nbsp;Supplerende oplysninger&nbsp;<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">
@@ -1907,10 +1907,10 @@
 			 			<td width="5">&nbsp;</td>
 			            <td >	
 							<%-- create record --%>
-						 	<table style="width:90%"  align="left" class="formFrame" border="0" cellspacing="0" cellpadding="0">
+						 	<table style="width:90%" align="left" class="formFrame" border="0" cellspacing="0" cellpadding="0">
 						 		<tr>
 							 		<td>
-								 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								 		<table style="width:100%" border="0" cellspacing="0" cellpadding="0">
 									 		<tr height="15">
 									            <td class="text14" align="left">&nbsp;</td> 
 									        </tr>
@@ -1937,7 +1937,7 @@
 									            
 									        </tr>
 									        <tr>
-									        		<td align="left"><input type="text" class="inputTextMediumBlueMandatoryField" name="thtina" id="thtina" size="20" maxlength="17" value="${model.record.thtina}"></td>
+								        		<td align="left"><input type="text" class="inputTextMediumBlueMandatoryField" name="thtina" id="thtina" size="20" maxlength="17" value="${model.record.thtina}"></td>
 									            <td align="left"><input type="text" class="inputTextMediumBlueMandatoryField" name="thnaa" id="thnaa" size="30" maxlength="35" value="${model.record.thnaa}"></td>
 									            
 									        </tr>
@@ -2022,7 +2022,7 @@
 				<%-- --------------- --%>
 				<%-- RIGHT SIDE CELL --%>
 				<%-- --------------- --%>
-				<td width="50%" align="center" valign="top">
+				<td width="50%" align="left" valign="top">
 					<table border="0" cellspacing="0" cellpadding="0">
 						<tr>
 							<td width="2">&nbsp;</td>

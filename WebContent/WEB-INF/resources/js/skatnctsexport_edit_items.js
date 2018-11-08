@@ -909,6 +909,9 @@
 	      jq('input.tblItemLinesAll_filter').on( 'keyup click', function () {
 	      		filterGlobal();
 	      });
+	      
+	      //
+		  jq('#tvvnt').focus();
 
 	});
   	

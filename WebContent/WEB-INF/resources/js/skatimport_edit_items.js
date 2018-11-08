@@ -777,6 +777,9 @@
 	      jq('input.tblItemLinesAll_filter').on( 'keyup click', function () {
 	      		filterGlobal();
 	      });
+	      
+	      //
+		  jq('#dkiv_331').focus();
 
 	});
 	 

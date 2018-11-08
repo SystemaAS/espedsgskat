@@ -522,6 +522,8 @@
 	      		filterGlobal();
 	      });
 		
+	      //
+		  jq('#dkev_331').focus();
 		
   	});
   	
