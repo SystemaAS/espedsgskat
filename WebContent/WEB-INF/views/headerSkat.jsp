@@ -6,11 +6,11 @@
 	<head>
 		<link href="/espedsg2/resources/${user.cssEspedsg}?ver=${user.versionEspedsg}" rel="stylesheet" type="text/css"/>
 		<link href="resources/jquery.calculator.css" rel="stylesheet" type="text/css"/>
-		<link type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/overcast/jquery-ui.css" rel="stylesheet">
-		<%--<link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/themes/smoothness/jquery-ui.css" rel="stylesheet"> --%>
 		
 		<%-- datatables grid CSS --%>
 		<link type="text/css" href="//cdn.datatables.net/1.10.11/css/jquery.dataTables.css" rel="stylesheet">
+		<link type="text/css" href="//cdn.datatables.net/responsive/1.0.7/css/responsive.dataTables.min.css" rel="stylesheet">
+		<link type="text/css" href="//cdn.datatables.net/plug-ins/1.10.19/features/searchHighlight/dataTables.searchHighlight.css" rel="stylesheet">
 		
 		<c:choose>
 			<c:when test="${ fn:contains(user.cssEspedsg, 'Toten') }"> 
@@ -20,9 +20,20 @@
 				<link rel="SHORTCUT ICON" type="image/png" href="resources/images/systema_logo.png"></link>
 			</c:otherwise>
 		</c:choose>
+		<%-- for dialog popup --%>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+		<style type = "text/css">
+			.ui-dialog{font-size:10pt;}
+		</style>
+		
 		<%-- <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> --%>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+		<%-- Cache disabled --%>
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="expires" content="0">
+		
 		<title>eSpedsg - SKAT Toldsystem</title>
 	</head>
 	<body>
@@ -35,7 +46,13 @@
 	
 	<%--datatables grid --%>
 	<script type="text/javascript" src="//cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
-	
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+	<script type="text/javascript" src="//cdn.datatables.net/plug-ins/1.10.16/sorting/datetime-moment.js"></script>
+	<%-- searchHighlight on datatables --%>
+	<script type="text/javascript" src="//bartaz.github.io/sandbox.js/jquery.highlight.js"></script>
+	<script type="text/javascript" src="//cdn.datatables.net/responsive/1.0.7/js/dataTables.responsive.min.js"></script>
+	<script type="text/javascript" src="//cdn.datatables.net/plug-ins/1.10.19/features/searchHighlight/dataTables.searchHighlight.min.js"></script>
+		
 	
     <table class="noBg" width="100%" border="0" cellspacing="0" cellpadding="0">
 		<%--Banner --%>
@@ -212,51 +229,36 @@
 		      				&nbsp;
 		      				<font class="headerMenuGreen">
 			    				<img src="resources/images/appUser.gif" border="0" onClick="showPop('specialInformationAdmin');" > 
-						          		
+						            <div class="text11" style="position: relative;display: inline;" align="left">
+									<span style="position:absolute; left:-150px; top:5px;" id="specialInformationAdmin" class="popupWithInputText"  >	
+					           		<div class="text11" align="left">
+					           			${activeUrlRPG_Skat}
+					           			<br/><br/>
+					           			<button name="specialInformationButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('specialInformationAdmin');">Close</button> 
+					           		</div>
+							        </span>
+							        </div>  		
 			    				<font class="text14User" >${user.user}&nbsp;</font>${user.usrLang}</font>
 			    				<font color="#FFFFFF"; style="font-weight: bold;">&nbsp;|&nbsp;&nbsp;</font>
-			    				<%--
-			    				<form style="display:inline" action="logout.do" method="post">
-								    <input type="hidden" name="user" value="${user.user}" />
-								    <input type="hidden" name="password" value="${user.encryptedPassword}" />
-								    <input type="hidden" name="aes" value="1"  />
-								    
-								    <font class="headerMenuGreen">
-			    						<img src="resources/images/home.gif" border="0">&nbsp;
-								    	<button onClick="setBlockUI(this);" style="border:0; padding:0; background: none; display: inline; cursor: pointer;"><font class="text11User"><spring:message code="dashboard.menu.button"/>&nbsp;</font></button>
-								    </font>
-								</form>
-								--%>
-			    				
-				    			<a onClick="setBlockUI(this);" tabindex=-1 href="logout.do">
+			    				<a onClick="setBlockUI(this);" tabindex=-1 href="logout.do">
 				    				<font class="headerMenuGreen"><img src="resources/images/home.gif" border="0">&nbsp;
 				    					<font class="text14User" onMouseOver="style='color:lemonchiffon;'" onMouseOut="style='color:black;'" ><spring:message code="dashboard.menu.button"/>&nbsp;</font>
 				    				</font>
 				    			</a>
-				    			
-				    			 
 				    			<font color="#FFFFFF"; style="font-weight: bold;">&nbsp;&nbsp;|&nbsp;</font>
-				    			<font class="text14LightGreen" style="cursor:pointer;" onClick="showPop('versionInfo');">${user.versionSpring}&nbsp;</font>
-		    				     
+				    			<font class="text12LightGreen" style="cursor:pointer;" onClick="showPop('versionInfo');">${user.versionSpring}&nbsp;</font>
+		    				     	<div class="text12" style="position: relative;display: inline;" align="left">
+									<span style="position:absolute; left:-150px; top:3px;" id="versionInfo" class="popupWithInputText"  >
+						           		<div class="text12" align="left">
+						           			<b>${user.versionEspedsg}</b>
+						           			<p>
+						           				&nbsp;<a id="alinkLog4jLogger" ><font class="text14LightGreen" style="cursor:pointer;">log4j</font></a><br/>
+						           			</p>
+						           			<button name="versionInformationButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('versionInfo');">Close</button> 
+						           		</div>
+						           	</span>
+						           	</div>
 				    		</td>
-				    		<div class="text11" style="position: relative;" align="left">
-								<span style="position:absolute; left:5px; top:30px; width:250px" id="versionInfo" class="popupWithInputText"  >	
-				           			&nbsp;<b>${user.versionEspedsg}</b>
-				           			<br/><br/>
-				           			&nbsp;<a href="renderLocalLog4j.do" target="_blank">log4j</a>
-				           			<br/><br/><br/>
-				           			<button name="versionInformationButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('versionInfo');">Close</button> 
-				           		</span>
-							</div>
-							<div class="text11" style="position: relative;" align="left">
-								<span style="position:absolute; left:5px; top:30px; width:250px" id="specialInformationAdmin" class="popupWithInputText"  >	
-				           		<div class="text11" align="left">
-				           			${activeUrlRPG_Skat}
-				           			<br/><br/>
-				           			<button name="specialInformationButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('specialInformationAdmin');">Close</button> 
-				           		</div>
-					        	</span> 
-					        </div>	
 			        </tr>
 			     </table> 
 			</td>
@@ -371,6 +373,35 @@
 		</c:otherwise>
 	    </c:choose>
 	    
+	    
+	    <%-- ------------------------- --%>
+		<%-- DIALOG render log4j.log   --%>
+		<%-- ------------------------- --%>
+		<tr>
+		<td>
+			<div id="dialogLogger" title="Dialog" style="display:none">
+				<form>
+			 	<table>
+			 		<tr>
+						<td colspan="3" class="text14" align="left" >Password</td>
+  						</tr>
+					<tr >
+						<td>
+							<input type="password" class="inputText" id="pwd" name="pwd" size="15" maxlength="15" value=''>
+						</td>
+					</tr>
+  						<tr height="10"><td></td></tr>
+					<tr>
+						<td colspan="3" class="text14MediumBlue" align="left">
+							<label id="loggerStatus"></label>
+						</td>
+					</tr>
+					
+				</table>
+				</form>
+			</div>
+		</td>
+		</tr>
 	    
 	    <tr class="text" height="2"><td></td></tr>
 		
