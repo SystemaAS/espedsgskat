@@ -19,7 +19,9 @@ public final class SkatExportUrlDataStore {
 	//fetch external references
 	//http://10.13.1.22/sycgip/tdke004r.pgm?user=A25DEMO
 	static public String SKAT_EXPORT_BASE_FETCH_TOPIC_LIST_EXTERNAL_REFERENCES_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKE004R.pgm";
-	
+	//http://gw.systema.no/sycgip/tdke005r.pgm?user=OSCAR&avd=1&opd=91127
+	static public String SKAT_EXPORT_BASE_UPDATE_SPECIFIC_TOPIC_EXTERNAL_REFERENCES_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKE005R.pgm";	
+		
 	//----------------------------
 	//[2] FETCH A SPECIFIC ARENDE
 	//----------------------------

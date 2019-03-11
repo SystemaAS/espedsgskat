@@ -55,6 +55,7 @@ import no.systema.skat.skatexport.service.SkatExportTopicListService;
 
 import no.systema.skat.skatexport.url.store.SkatExportUrlDataStore;
 import no.systema.skat.util.SkatConstants;
+import no.systema.skat.skatexport.model.jsonjackson.topic.JsonSkatExportTopicInvoiceExternalForUpdateContainer;
 
 
 
@@ -229,6 +230,7 @@ public class SkatExportControllerChildWindow {
 			urlRequestParamsKeys.append("user=" + appUser.getUser());
 			if(StringUtils.isNotEmpty(avd)){
 				urlRequestParamsKeys.append("&avd=" + avd);
+				model.put("avd", avd);
 			}
 			
 			logger.info(Calendar.getInstance().getTime() + " CGI-start timestamp");
@@ -251,6 +253,55 @@ public class SkatExportControllerChildWindow {
 			
 	    	logger.info("END of method");
 	    	return successView;
+		}
+		
+	}
+	/**
+	 * 
+	 * @param recordToValidate
+	 * @param bindingResult
+	 * @param session
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping(value="skatexport_childwindow_external_references_delete.do",  method={RequestMethod.GET, RequestMethod.POST })
+	public ModelAndView skatExportExternalReferencesDelete(@ModelAttribute ("record") JsonSkatExportTopicListExternalRefRecord recordToValidate, BindingResult bindingResult, HttpSession session, HttpServletRequest request){
+		logger.info("Inside: skatExportExternalReferencesDelete");
+		
+		SystemaWebUser appUser = (SystemaWebUser)session.getAttribute(AppConstants.SYSTEMA_WEB_USER_KEY);
+		String parentAvd = request.getParameter("parentAvd");
+		//redirect view
+		StringBuffer paramsRedirect = new StringBuffer();
+		paramsRedirect.append("user=" + appUser.getUser());
+		if(StringUtils.isNotEmpty(parentAvd)){
+			paramsRedirect.append("&avd=" + parentAvd);
+		}
+		ModelAndView successView = new ModelAndView("redirect:skatexport_childwindow_external_references.do?" + paramsRedirect);
+		
+		String urlRequestParamsKeys = null;
+		//Catch required action (doFetch or doUpdate)
+		String action = request.getParameter("action");
+		logger.info("ACTION: " + action);
+		
+		if(appUser == null || "".equals(appUser)){
+		  return this.loginView;
+		}else{
+		
+		  String BASE_URL = SkatExportUrlDataStore.SKAT_EXPORT_BASE_UPDATE_SPECIFIC_TOPIC_EXTERNAL_REFERENCES_URL;
+		  String params = "user=" + appUser.getUser() + "&avd=" + recordToValidate.getFsavd() + "&opd=" + recordToValidate.getFsopd(); 
+		  logger.info("URL:" + BASE_URL);
+		  logger.info("PARAMS:" + params);
+		  
+		  String jsonPayload = this.urlCgiProxyService.getJsonContent(BASE_URL, params);
+		  JsonSkatExportTopicInvoiceExternalForUpdateContainer container = this.skatExportSpecificTopicService.getSkatExportTopicInvoiceContainerOneInvoiceExternalForUpdate(jsonPayload);
+		  
+		  if(container!=null && ( container.getErrmsg()!=null && !"".equals(container.getErrmsg())) ){
+			  logger.info("[ERROR] " + container.getErrmsg());
+		  }else{
+			  logger.info("[INFO]" + " Update successfully done!");
+		  }
+		  //logger.info("END of method");
+		  return successView;
 		}
 		
 	}

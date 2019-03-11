@@ -23,6 +23,7 @@
 			<%-- this container table is necessary in order to separate the datatables element and the frame above, otherwise
 		 	the cosmetic frame will not follow the whole datatable grid including the search field... --%>
 			<table id="containerdatatableTable" width="98%" align="left">
+				<input type="hidden" name="parentAvd" id="parentAvd" value='${model.avd}'/>
 				<%-- List (external references) --%>
 				<tr height="15"><td></td></tr>
 				<tr>
@@ -31,23 +32,37 @@
 							<thead>
 							<tr class="tableHeaderField">
 								<th class="text14">&nbsp;Ekstern refnr.&nbsp;</th>
-								<th class="text14">&nbsp;Avd.&nbsp;</th>   
+								<th class="text14">&nbsp;Avd.&nbsp;</th>  
+								<th class="text14">&nbsp;Opd.&nbsp;</th>
 			                    <th class="text14">&nbsp;Dato&nbsp;</th>   
 			                    <th class="text14">&nbsp;Afsender&nbsp;</th> 
 			                    <th class="text14">&nbsp;Modtager&nbsp;</th> 
+			                    <th class="text14">&nbsp;Fjern&nbsp;</th> 
 		                    </tr>
 		                    </thead>
 		                    <tbody>
 		                    <c:forEach items="${model.listExternalRef}" var="record" varStatus="counter">    
+				               <tr>
 				               <td  style="cursor:pointer;" class="text14MediumBlue" id="ref${record.fssok}" >
 			               		&nbsp;<img title="select" style="vertical-align:top;" src="resources/images/bebullet.gif" border="0" alt="edit">
 			               		&nbsp;&nbsp;${record.fssok}
 			               		</td>
 				               <td class="text14" >&nbsp;${record.fsavd}&nbsp;</td>
+				               <td class="text14" >&nbsp;${record.fsopd}&nbsp;</td>
 				               <td class="text14" >&nbsp;${record.fsdtop}&nbsp;</td>
 				               <td class="text14" >&nbsp;${record.henas}</td>
 				               <td class="text14" >&nbsp;${record.henak}</td>
-				               
+				               <td width="2%" class="text14" align="center">
+					               	<a id="avd_${record.fsavd}@opd_${record.fsopd}@counter_${counter.count}" title="delete" onClick="doPermanentlyDeleteExternalRef(this)" tabindex=-1>
+					               		<img src="resources/images/delete.gif" border="0" alt="remove">
+					               	</a>&nbsp;
+					               	
+					               	<%--
+					               	<a onclick="javascript:return confirm('Er du sikker på at du vil slette denne?')" tabindex=-1 href="skatexport_edit_childwindow_external_references_delete.do?action=doDelete&parentAvd=${topic.avd}&fsavd=${record.fsavd}&opd=${record.fsopd}">
+					               		<img valign="bottom" src="resources/images/delete.gif" border="0" alt="remove">
+					               	</a>
+					               	 --%>	
+				               </td>
 			               </tr>
 			               </c:forEach>
 			               </tbody>
