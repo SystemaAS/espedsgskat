@@ -9,15 +9,14 @@
 	jq(function() {
 		jq('#tblList').on('click', 'td', function(){
 			  var id = this.id;
-			  var refnr = id.replace("ref", "");
-			  //var callerType = record[1].replace("ctype", "");
-			  //alert(refnr);
-			  
-			  opener.jq('#selectedExtRefNr').val(refnr);
-			  opener.jq('#selectedExtRefNr').focus();
-				  
-			  //close child window
-			  window.close();
+			//only when ref-cell is clicked. We have other events in this table: e.g: delete
+			  if(id.indexOf("ref") >= 0){
+				  var refnr = id.replace("ref", "");
+				  opener.jq('#selectedExtRefNr').val(refnr);
+				  opener.jq('#selectedExtRefNr').focus();
+				  //close child window
+				  window.close();
+			  }
 		  });
 	});
 	
@@ -59,7 +58,7 @@
   	  var opd = record[1];
   	  avd= avd.replace("avd_","");
   	  opd= opd.replace("opd_","");
-  	  alert("avd:" + avd + " opd:" + opd);
+
   	  	//Start dialog
   	  	jq('<div></div>').dialog({
   	        modal: true,
@@ -69,7 +68,7 @@
   	        		jq( this ).dialog( "close" );
   		            //do delete
   		            jq.blockUI({ message: BLOCKUI_OVERLAY_MESSAGE_DEFAULT});
-  		            window.location = "skatexport_edit_childwindow_external_references_delete.do?action=doDelete&parentAvd=" + jq("#parentAvd").val() + "&fsavd=" + avd + "&fsopd=" + opd;
+  		            window.location = "skatexport_childwindow_external_references_delete.do?action=doDelete&parentAvd=" + jq("#parentAvd").val() + "&fsavd=" + avd + "&fsopd=" + opd;
   		        },
   		        Avbryt: function() {
   		            jq( this ).dialog( "close" );
@@ -83,7 +82,6 @@
   		     }
   		     
   		});  //end dialog
-  	  alert("Z");
     }	
     
     

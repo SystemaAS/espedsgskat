@@ -44,7 +44,7 @@
 		                    <c:forEach items="${model.listExternalRef}" var="record" varStatus="counter">    
 				               <tr>
 				               <td  style="cursor:pointer;" class="text14MediumBlue" id="ref${record.fssok}" >
-			               		&nbsp;<img title="select" style="vertical-align:top;" src="resources/images/bebullet.gif" border="0" alt="edit">
+			               		<%--&nbsp;<img title="select" style="vertical-align:top;" src="resources/images/bebullet.gif" border="0" alt="edit"> --%>
 			               		&nbsp;&nbsp;${record.fssok}
 			               		</td>
 				               <td class="text14" >&nbsp;${record.fsavd}&nbsp;</td>
@@ -53,15 +53,16 @@
 				               <td class="text14" >&nbsp;${record.henas}</td>
 				               <td class="text14" >&nbsp;${record.henak}</td>
 				               <td width="2%" class="text14" align="center">
-					               	<a id="avd_${record.fsavd}@opd_${record.fsopd}@counter_${counter.count}" title="delete" onClick="doPermanentlyDeleteExternalRef(this)" tabindex=-1>
+					               	<a tabindex=-1 id="avd_${record.fsavd}@opd_${record.fsopd}@counter_${counter.count}" title="delete" onClick="doPermanentlyDeleteExternalRef(this)" >
 					               		<img src="resources/images/delete.gif" border="0" alt="remove">
-					               	</a>&nbsp;
+					               	</a>&nbsp;		               	
 					               	
 					               	<%--
-					               	<a onclick="javascript:return confirm('Er du sikker på at du vil slette denne?')" tabindex=-1 href="skatexport_edit_childwindow_external_references_delete.do?action=doDelete&parentAvd=${topic.avd}&fsavd=${record.fsavd}&opd=${record.fsopd}">
+					               	<a onclick="javascript:return confirm('Er du sikker på at du vil slette denne?')" tabindex=-1 href="skatexport_childwindow_external_references_delete.do?parentAvd=${model.avd}&fsavd=${record.fsavd}&fsopd=${record.fsopd}">
 					               		<img valign="bottom" src="resources/images/delete.gif" border="0" alt="remove">
 					               	</a>
-					               	 --%>	
+					               	 --%>
+					               	
 				               </td>
 			               </tr>
 			               </c:forEach>
@@ -69,9 +70,9 @@
 	                    </table>  
 					</td>
 				</tr>
-				
-               
 			</table>
 		</td>
 		</tr>
-	</table> 
+	</table>
+	 
+	</body>
