@@ -122,10 +122,10 @@
   jq(function() { 
 	  jq("#dialogCopyFromTransportUppdrag").dialog({
 		  autoOpen: false,
-		  maxWidth:500,
-          maxHeight: 400,
+		  maxWidth:600,
+          maxHeight: 600,
           width: 500,
-          height: 400,
+          height: 500,
 		  modal: true
 	  });
   });

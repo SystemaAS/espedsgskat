@@ -46,18 +46,13 @@ import no.systema.main.model.SystemaWebUser;
 import no.systema.skat.skatimport.model.jsonjackson.topic.JsonSkatImportTopicInvoiceExternalRecord;
 import no.systema.skat.skatimport.model.jsonjackson.topic.JsonSkatImportTopicListExternalRefContainer;
 import no.systema.skat.skatimport.model.jsonjackson.topic.JsonSkatImportTopicListExternalRefRecord;
-import no.systema.skat.skatimport.model.jsonjackson.topic.JsonSkatImportSpecificTopicRecord;
-import no.systema.skat.skatimport.model.jsonjackson.topic.JsonSkatImportTopicInvoiceContainer;
-import no.systema.skat.skatimport.model.jsonjackson.topic.JsonSkatImportTopicInvoiceRecord;
+import no.systema.skat.skatimport.model.jsonjackson.topic.JsonSkatImportTopicInvoiceExternalForUpdateContainer;
 import no.systema.skat.skatimport.model.jsonjackson.topic.JsonSkatImportTopicInvoiceExternalContainer;
 
 import no.systema.skat.skatimport.service.SkatImportSpecificTopicService;
 import no.systema.skat.skatimport.service.SkatImportTopicListService;
 
 import no.systema.skat.skatimport.url.store.SkatImportUrlDataStore;
-import no.systema.skat.skatimport.util.RpgReturnResponseHandler;
-
-import no.systema.skat.url.store.SkatUrlDataStore;
 import no.systema.skat.util.SkatConstants;
 
 
@@ -234,6 +229,7 @@ public class SkatImportControllerChildWindow {
 			urlRequestParamsKeys.append("user=" + appUser.getUser());
 			if(StringUtils.isNotEmpty(avd)){
 				urlRequestParamsKeys.append("&avd=" + avd);
+				model.put("avd", avd);
 			}
 			logger.info(Calendar.getInstance().getTime() + " CGI-start timestamp");
 			logger.info("FETCH av list... ");
@@ -259,6 +255,55 @@ public class SkatImportControllerChildWindow {
 		
 	}
 	
+	/**
+	 * 
+	 * @param recordToValidate
+	 * @param bindingResult
+	 * @param session
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping(value="skatimport_childwindow_external_references_delete.do",  method={RequestMethod.GET, RequestMethod.POST })
+	public ModelAndView skatImportExternalReferencesDelete(@ModelAttribute ("record") JsonSkatImportTopicListExternalRefRecord recordToValidate, BindingResult bindingResult, HttpSession session, HttpServletRequest request){
+		logger.info("Inside: skatImportExternalReferencesDelete");
+		
+		SystemaWebUser appUser = (SystemaWebUser)session.getAttribute(AppConstants.SYSTEMA_WEB_USER_KEY);
+		String parentAvd = request.getParameter("parentAvd");
+		//redirect view
+		StringBuffer paramsRedirect = new StringBuffer();
+		paramsRedirect.append("user=" + appUser.getUser());
+		if(StringUtils.isNotEmpty(parentAvd)){
+			paramsRedirect.append("&avd=" + parentAvd);
+		}
+		ModelAndView successView = new ModelAndView("redirect:skatimport_childwindow_external_references.do?" + paramsRedirect);
+		
+		String urlRequestParamsKeys = null;
+		//Catch required action (doFetch or doUpdate)
+		String action = request.getParameter("action");
+		logger.info("ACTION: " + action);
+		
+		if(appUser == null || "".equals(appUser)){
+		  return this.loginView;
+		}else{
+		
+		  String BASE_URL = SkatImportUrlDataStore.SKAT_IMPORT_BASE_UPDATE_SPECIFIC_TOPIC_EXTERNAL_REFERENCES_URL;
+		  String params = "user=" + appUser.getUser() + "&avd=" + recordToValidate.getFsavd() + "&opd=" + recordToValidate.getFsopd(); 
+		  logger.info("URL:" + BASE_URL);
+		  logger.info("PARAMS:" + params);
+		  
+		  String jsonPayload = this.urlCgiProxyService.getJsonContent(BASE_URL, params);
+		  JsonSkatImportTopicInvoiceExternalForUpdateContainer container = this.skatImportSpecificTopicService.getSkatImportTopicInvoiceContainerOneInvoiceExternalForUpdate(jsonPayload);
+		  
+		  if(container!=null && ( container.getErrmsg()!=null && !"".equals(container.getErrmsg())) ){
+			  logger.info("[ERROR] " + container.getErrmsg());
+		  }else{
+			  logger.info("[INFO]" + " Update successfully done!");
+		  }
+		  //logger.info("END of method");
+		  return successView;
+		}
+		
+	}
 	
 	/**
 	 * 

@@ -9,7 +9,7 @@
 	jq(function() {
 		jq('#tblList').on('click', 'td', function(){
 			  var id = this.id;
-			//only when ref-cell is clicked. We have other events in this table: e.g: delete
+			  //only when ref-cell is clicked. We have other events in this table: e.g: delete
 			  if(id.indexOf("ref") >= 0){
 				  var refnr = id.replace("ref", "");
 				  opener.jq('#selectedExtRefNr').val(refnr);
@@ -54,7 +54,7 @@
     //----------------------------------------
     function doPermanentlyDeleteExternalRef(element){
       //start
-  	  var record = element.id.split('@');
+      var record = element.id.split('@');
   	  var avd = record[0];
   	  var opd = record[1];
   	  avd= avd.replace("avd_","");
