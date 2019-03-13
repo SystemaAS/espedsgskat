@@ -67,7 +67,7 @@
 				 	<tr>
 				 		<td class="text14white" width="10%" align=left valign="bottom" >&nbsp;</td>
 				 		<td class="text32Bold" width="100%" align="center" valign="middle" style="color:#778899;" >
-				 			eSped<font style="color:#003300;">sg</font> - SKAT - VEDLIGEHOLD
+				 			eSped<font style="color:#003300;">sg</font> - SKAT - <spring:message code="systema.skat.maintenance.label"/>
 				 			
 				 		</td>
 				 		 

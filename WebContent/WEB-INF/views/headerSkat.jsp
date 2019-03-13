@@ -221,7 +221,7 @@
 			    			<%-- -------------------- --%>
 			    			<a tabindex=-1 href="skatmaintenancegate.do">
 			    				&nbsp;<font class="headerMenuAdmin">
-		                   	&nbsp;&nbsp;Vedligehold&nbsp;&nbsp;</font>
+		                   	&nbsp;&nbsp;<spring:message code="systema.skat.maintenance.label"/>&nbsp;&nbsp;</font>
 			    			</a>
 	      				</td>		      				
 	      				<td  class="text14" width="50%" align="right">
@@ -332,7 +332,7 @@
     			 		<tr >
 				    		<td colspan="2" class="text14" >&nbsp;
 				    			<img onMouseOver="showPop('skatBehorighet_info');" onMouseOut="hidePop('skatBehorighet_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-				    			<b>SKAT Brugertilladelse</b>
+				    			<b>SKAT <spring:message code="login.skat.user.userPermission"/></b>
 								<span style="position:absolute; left:300px; top:120px; width:250px; height:200px;" id="skatBehorighet_info" class="popupWithInputText"  >
 					           		<div class="text11" align="left">
 					           			Denne brugerkontrol er nødvendig for at bruge både
@@ -347,7 +347,7 @@
 	      	        </tr>
 	      	        <tr class="text" height="5"><td></td></tr>
 				 	<tr >
-				    		<td class="text14" >&nbsp;&nbsp;BrugerId</td>
+				    		<td class="text14" >&nbsp;&nbsp;<spring:message code="login.skat.user.userId"/></td>
 		      				<td class="text14" >
 		      					<input readonly type="text" class="inputTextReadOnly" name=userAS400 id="userAS400" size="10" maxlength="10" value='${user.userAS400}'>	
 		      					<input type="hidden" name=formSubmit id="formSubmit" value="Y">	
