@@ -187,8 +187,13 @@
 	      				</td>		      				
 	      				<td class="text14" width="50%" align="right" valign="middle">
 	      					
-						    <img valign="bottom" src="resources/images/countryFlags/Flag_NO.gif" height="12" border="0" alt="country">
-		      				&nbsp;
+						    <c:if test="${ empty user.usrLang || user.usrLang == 'EN'}">
+			               		<img src="resources/images/countryFlags/Flag_UK.gif" height="12" border="0" alt="country">
+			               	</c:if>
+			               	<c:if test="${ user.usrLang == 'DA'}">
+			               		<img src="resources/images/countryFlags/Flag_DK.gif" height="12" border="0" alt="country">
+			               	</c:if>
+			               	&nbsp;
 		      				<font class="headerMenuWhite">
 			    				<img src="resources/images/appUser.gif" border="0" onClick="showPop('specialInformationAdmin');" > 
 						        <span style="position:absolute; left:100px; top:150px; width:1000px; height:400px;" id="specialInformationAdmin" class="popupWithInputText"  >

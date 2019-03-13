@@ -225,8 +225,13 @@
 			    			</a>
 	      				</td>		      				
 	      				<td  class="text14" width="50%" align="right">
-	      					<img valign="bottom" src="resources/images/countryFlags/Flag_DK.gif" height="12" border="0" alt="country">
-		      				&nbsp;
+	      					<c:if test="${ empty user.usrLang || user.usrLang == 'EN'}">
+			               		<img src="resources/images/countryFlags/Flag_UK.gif" height="12" border="0" alt="country">
+			               	</c:if>
+			               	<c:if test="${ user.usrLang == 'DA'}">
+			               		<img src="resources/images/countryFlags/Flag_DK.gif" height="12" border="0" alt="country">
+			               	</c:if>
+			               	&nbsp;
 		      				<font class="headerMenuGreen">
 			    				<img src="resources/images/appUser.gif" border="0" onClick="showPop('specialInformationAdmin');" > 
 						            <div class="text11" style="position: relative;display: inline;" align="left">
@@ -272,8 +277,13 @@
 					 	<tr >
 				    		<td nowrap class="text11" width="50%" align="left" >&nbsp;&nbsp;</td>
 	      					<td nowrap class="text11" width="50%" align="right">
-	      					<img valign="bottom" src="resources/images/countryFlags/Flag_DK.gif" height="12" border="0" alt="country">
-		      				&nbsp;
+	      					<c:if test="${ empty user.usrLang || user.usrLang == 'EN'}">
+			               		<img src="resources/images/countryFlags/Flag_UK.gif" height="12" border="0" alt="country">
+			               	</c:if>
+			               	<c:if test="${ user.usrLang == 'DA'}">
+			               		<img src="resources/images/countryFlags/Flag_DK.gif" height="12" border="0" alt="country">
+			               	</c:if>
+			               	&nbsp;
 	      					<font class="headerMenuGreen">
 				    				<img src="resources/images/appUser.gif" border="0" > 
 								<font style="color:#000000" >${user.user}&nbsp;</font>${user.usrLang}
