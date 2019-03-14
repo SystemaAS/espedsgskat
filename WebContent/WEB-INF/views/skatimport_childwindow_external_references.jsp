@@ -32,10 +32,12 @@
 							<thead>
 							<tr class="tableHeaderField">
 								<th class="text14">&nbsp;Ekstern refnr.&nbsp;</th>
-								<th class="text14">&nbsp;Avd.&nbsp;</th>   
+								<th class="text14">&nbsp;Avd.&nbsp;</th> 
+								<th class="text14">&nbsp;Opd.&nbsp;</th>
 			                    <th class="text14">&nbsp;Dato&nbsp;</th>   
 			                    <th class="text14">&nbsp;Afsender&nbsp;</th> 
 			                    <th class="text14">&nbsp;Modtager&nbsp;</th> 
+			                    <th class="text14">&nbsp;Fjern&nbsp;</th> 
 		                    </tr>
 		                    </thead>
 		                    <tbody>
@@ -45,6 +47,7 @@
 			               		&nbsp;&nbsp;${record.fssok}
 			               		</td>
 				               <td class="text14" >&nbsp;${record.fsavd}&nbsp;</td>
+				               <td class="text14" >&nbsp;${record.fsopd}&nbsp;</td>
 				               <td class="text14" >&nbsp;${record.fsdtop}&nbsp;</td>
 				               <td class="text14" >&nbsp;${record.henas}</td>
 				               <td class="text14" >&nbsp;${record.henak}</td>
