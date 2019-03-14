@@ -181,7 +181,7 @@ public class SkatImportControllerChildWindow {
 			String jsonPayloadFetch = this.urlCgiProxyService.getJsonContent(BASE_URL_FETCH, urlRequestParamsKeys);
 			
 			//Debug --> 
-	    	logger.info(jsonPayloadFetch);
+	    	logger.info(jsonDebugger.debugJsonPayloadWithLog4J(jsonPayloadFetch));
 	    	logger.info(Calendar.getInstance().getTime() +  " CGI-end timestamp");
 	    	JsonSkatImportTopicInvoiceExternalContainer container = this.skatImportSpecificTopicService.getSkatImportTopicInvoiceContainerContainerExternal(jsonPayloadFetch);
 	    	//drop downs populated from back-end

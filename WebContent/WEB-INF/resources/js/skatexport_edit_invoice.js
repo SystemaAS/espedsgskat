@@ -24,7 +24,7 @@
     
   	jq(function() {
   	  	jq('#importInvoicesButton').click(function() {
-  	  		window.open('skatexport_edit_childwindow_external_invoices.do?avd=' + jq("#avd").val() + "&opd=" + jq("#opd").val(), 'importInvoicesWin','top=120px,left=100px,height=600px,width=800px,scrollbars=no,status=no,location=no');
+  	  		window.open('skatexport_edit_childwindow_external_invoices.do?avd=' + jq("#avd").val() + "&opd=" + jq("#opd").val(), 'importInvoicesWin','top=120px,left=100px,height=650px,width=800px,scrollbars=no,status=no,location=no');
   	  	});
   	  	/*
   	  	//Typ ( same as Bilagda Handlingar on item level)

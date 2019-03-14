@@ -44,6 +44,7 @@
 				                    <th align="right" class="text14">&nbsp;Beløb&nbsp;</th> 
 				                    <th class="text14">&nbsp;Møntsort&nbsp;</th> 
 				                    <th align="left" class="text14">&nbsp;MRN&nbsp;</th>
+				                    <th class="text14">&nbsp;Fjern&nbsp;</th>
 			                    </tr>
 			                    </thead>
 			                    <tbody>
@@ -66,6 +67,12 @@
 					               <td align="right" class="text14" >&nbsp;${record.dkef_fabl}&nbsp;</td>
 					               <td align="center" class="text14" >&nbsp;${record.dkef_vakd}</td>
 					               <td align="left" class="text14" >&nbsp;${record.dkef_mrn}</td>
+					               <td width="2%" class="text14" align="center">
+					               	<a tabindex=-1 id="id${record.dkef_reff}@unik${record.dkef_unik}@counter${counter.count}" title="delete" onClick="doPermanentlyDelete(this)" >
+					               		<img src="resources/images/delete.gif" border="0" alt="remove">
+					               	</a>&nbsp;		               	
+					               	
+				               	   </td>
 					               
 				               </tr>
 				               </c:forEach>

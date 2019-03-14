@@ -43,7 +43,7 @@
 				                     --%>
 				                    <th align="right" class="text14">&nbsp;Beløb&nbsp;</th> 
 				                    <th class="text14">&nbsp;Møntsort&nbsp;</th> 
-				                    
+				                    <th class="text14">&nbsp;Fjern&nbsp;</th>
 			                    </tr>
 			                    </thead>
 			                    <tbody>
@@ -57,15 +57,21 @@
 					                   </c:otherwise>
 					               </c:choose>
 					               <td class="text14" align="center">
-					               		<input class="clazzInvoiceAware" type="checkbox" value="J" id="id${record.dkef_reff}_unik${record.dkef_unik}" name="id${record.dkef_reff}_unik${record.dkef_unik}" >
+					               		<input class="clazzInvoiceAware" type="checkbox" value="J" id="id${record.dkif_reff}_unik${record.dkif_unik}" name="id${record.dkif_reff}_unik${record.dkif_unik}" >
 					               </td>
-					               <td width="10%" class="text14" align="center">&nbsp;<span title="reff/unik:${record.dkef_reff}/${record.dkef_unik}">${record.dkef_fatx}</span></td>
+					               <td width="10%" class="text14" align="center">&nbsp;<span title="reff/unik:${record.dkif_reff}/${record.dkif_unik}">${record.dkif_fatx}</span></td>
 					               <%--
 					               <td class="text14" >&nbsp;${record.dkef_faty}</td>
 					                --%>
-					               <td align="right" class="text14" >&nbsp;${record.dkef_fabl}&nbsp;</td>
-					               <td class="text14" >&nbsp;${record.dkef_vakd}</td>
-					               
+					               <td align="right" class="text14" >&nbsp;${record.dkif_fabl}&nbsp;</td>
+					               <td class="text14" >&nbsp;${record.dkif_vakd}</td>
+					               <td width="2%" class="text14" align="center">
+					                
+					               	<a tabindex=-1 id="id${record.dkif_reff}@unik${record.dkif_unik}@counter${counter.count}" title="delete" onClick="doPermanentlyDelete(this)" >
+					               		<img src="resources/images/delete.gif" border="0" alt="remove">
+					               	</a>&nbsp;		               	
+					               	
+				               	   </td>
 				               </tr>
 				               </c:forEach>
 				               </tbody>
