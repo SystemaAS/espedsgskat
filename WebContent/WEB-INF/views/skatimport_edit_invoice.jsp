@@ -97,11 +97,11 @@
 	 				<%-- MASTER Topic header --%>
 	 				<table width="80%" align="left" class="formFrameHeaderTransparent" border="0" cellspacing="0" cellpadding="0">
 				 		<tr height="15">
-				 			<td class="text12MediumBlue">
-				 				&nbsp;Afd&nbsp;<b>${model.avd}</b>
-				 				&nbsp;Angiv.&nbsp;<b>${model.opd}</b>
-				 				&nbsp;Sign&nbsp;<b>${model.sign}</b>
-				 				&nbsp;&nbsp;Status:&nbsp;<b>${model.status}</b>				 				
+				 			<td class="text14MediumBlue">
+				 				&nbsp;<spring:message code="systema.skat.invoice.avd"/>&nbsp;<b>${model.avd}</b>
+				 				&nbsp;<spring:message code="systema.skat.invoice.decl"/>&nbsp;<b>${model.opd}</b>
+				 				&nbsp;<spring:message code="systema.skat.invoice.sign"/>&nbsp;<b>${model.sign}</b>
+				 				&nbsp;&nbsp;<spring:message code="systema.skat.invoice.status"/>:&nbsp;<b>${model.status}</b>				 				
 			 				</td>
 		 				</tr>
 	 				</table>
@@ -112,64 +112,64 @@
 					 		<td width="50%">
 						 		<table width="100%" border="0" cellspacing="1" cellpadding="0">
 							 		<tr>
-							            <td width="30%" class="text11Bold" align="left" >Eksportør</td>
-							            <td class="text11" align="left" >&nbsp;&nbsp;</td>
+							            <td width="30%" class="text14Bold" align="left" ><spring:message code="systema.skat.invoice.sender"/></td>
+							            <td class="text14" align="left" >&nbsp;&nbsp;</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text11" align="left">EORI&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkatImport.dkih_02a}</td>
+							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.eori"/>&nbsp;</td>
+							           	<td class="text14MediumBlue" align="left">${recordTopicSkatImport.dkih_02a}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text11" align="left">Navn&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkatImport.dkih_02b}</td>
+							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.name"/>&nbsp;</td>
+							           	<td class="text14MediumBlue" align="left">${recordTopicSkatImport.dkih_02b}</td>
 							        </tr>
 									<tr>
-							            <td width="30%" class="text11" align="left">Adresse&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkatImport.dkih_02c}</td>
+							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.address"/>&nbsp;</td>
+							           	<td class="text14MediumBlue" align="left">${recordTopicSkatImport.dkih_02c}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text11" align="left">Postnr.&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkatImport.dkih_02d}</td>
+							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.postalcode"/>&nbsp;</td>
+							           	<td class="text14MediumBlue" align="left">${recordTopicSkatImport.dkih_02d}</td>
 							        </tr>
 							        
 									<tr>
-							            <td width="30%" class="text11" align="left">By&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkatImport.dkih_02e}&nbsp;${recordTopicSkatImport.dkih_02f}</td>
+							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.city"/>&nbsp;</td>
+							           	<td class="text14MediumBlue" align="left">${recordTopicSkatImport.dkih_02e}&nbsp;${recordTopicSkatImport.dkih_02f}</td>
 							        </tr>
 							        <tr>
-							        		<td width="30%" class="text11" align="left">&nbsp;</td>
+							        		<td width="30%" class="text14" align="left">&nbsp;</td>
 							        </tr>						        
 			        	        </table>
 					        </td>
 					        <td width="50%">
 						 		<table width="100%" border="0" cellspacing="1" cellpadding="0">
 							 		<tr>
-							            <td width="30%" class="text11Bold" align="left" >Modtager</td>
-							            <td class="text11" align="left" >&nbsp;&nbsp;</td>
+							            <td width="30%" class="text14Bold" align="left" ><spring:message code="systema.skat.invoice.receiver"/></td>
+							            <td class="text14" align="left" >&nbsp;&nbsp;</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text11" align="left">CVR/SE-nr.&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkatImport.dkih_08a}</td>
+							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.cvr"/>&nbsp;</td>
+							           	<td class="text14MediumBlue" align="left">${recordTopicSkatImport.dkih_08a}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text11" align="left">Navn&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkatImport.dkih_08b}</td>
+							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.name"/>&nbsp;</td>
+							           	<td class="text14MediumBlue" align="left">${recordTopicSkatImport.dkih_08b}</td>
 							        </tr>
 									<tr>
-							            <td width="30%" class="text11" align="left">Adresse&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkatImport.dkih_08c}</td>
+							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.address"/>&nbsp;</td>
+							           	<td class="text14MediumBlue" align="left">${recordTopicSkatImport.dkih_08c}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text11" align="left">Postnr.&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkatImport.dkih_08d}</td>
+							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.postalcode"/>&nbsp;</td>
+							           	<td class="text14MediumBlue" align="left">${recordTopicSkatImport.dkih_08d}</td>
 							        </tr>
 									<tr>
-							            <td width="30%" class="text11" align="left">By&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkatImport.dkih_08e}&nbsp;${recordTopicSkatImport.dkih_08f}</td>
+							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.city"/>&nbsp;</td>
+							           	<td class="text14MediumBlue" align="left">${recordTopicSkatImport.dkih_08e}&nbsp;${recordTopicSkatImport.dkih_08f}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text11" align="left">Klarereren&nbsp;</td>
-							           	<td class="text11MediumBlue" align="left">${recordTopicSkatImport.dkih_14a}&nbsp;&nbsp;${recordTopicSkatImport.dkih_14b}</td>
+							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.klarer"/>&nbsp;</td>
+							           	<td class="text14MediumBlue" align="left">${recordTopicSkatImport.dkih_14a}&nbsp;&nbsp;${recordTopicSkatImport.dkih_14b}</td>
 							        </tr>
 							        
 			        	        </table>
@@ -190,17 +190,17 @@
 							<td>
 								<table width="80%" cellspacing="0" border="0" cellpadding="0">
 									<tr>
-										<td class="text12Bold">&nbsp;Antall fakturaer&nbsp;&nbsp;<font class="text12MediumBlue"><b>${model.recordItemContainerInvoiceTopic.totalNumberOfItemLines}</b></font>
+										<td class="text14Bold">&nbsp;Antall fakturaer&nbsp;&nbsp;<font class="text12MediumBlue"><b>${model.recordItemContainerInvoiceTopic.totalNumberOfItemLines}</b></font>
 						            	</td>
 						            	
-										<td align="right" class="text11">Fsum:&nbsp;
-											<input tabindex=-1 align="right" type="text" readonly class="inputText11BlueBoldReadOnly" size="12" value="${recordTopicSkatImport.dkih_222}">
-											<font class="inputText11BlueBoldReadOnly">${recordTopicSkatImport.dkih_221}</font>
+										<td align="right" class="text14">Fsum:&nbsp;
+											<input tabindex=-1 align="right" type="text" readonly class="inputText12BlueBoldReadOnly" size="12" value="${recordTopicSkatImport.dkih_222}">
+											<font class="inputText12BlueBoldReadOnly">${recordTopicSkatImport.dkih_221}</font>
 										</td>
 										
-										<td align="right" class="text11">Vsum&nbsp;(&Sigma;):&nbsp;
-											<input tabindex=-1 align="right" type="text" readonly class="inputText11BlueBoldReadOnly" size="12" value="${model.recordItemContainerInvoiceTopic.calculatedItemLinesTotalAmount}">
-											<font class="inputText11BlueBoldReadOnly">${model.recordItemContainerInvoiceTopic.calculatedValidCurrency}</font>											
+										<td align="right" class="text14">Vsum&nbsp;(&Sigma;):&nbsp;
+											<input tabindex=-1 align="right" type="text" readonly class="inputText12BlueBoldReadOnly" size="12" value="${model.recordItemContainerInvoiceTopic.calculatedItemLinesTotalAmount}">
+											<font class="inputText12BlueBoldReadOnly">${model.recordItemContainerInvoiceTopic.calculatedValidCurrency}</font>											
 										</td>
 										 
 										<%-- Bug somewhere !!!
@@ -238,16 +238,16 @@
 								<table id="tblInvoices" class="display compact cell-border" >
 									<thead>
 									<tr class="tableHeaderField">
-									    <th class="text14"><span title="dkif_fatx">&nbsp;Fakturanr.&nbsp;</span></th>   
+									    <th class="text14"><span title="dkif_fatx">&nbsp;<spring:message code="systema.skat.invoice.invoicenr"/>&nbsp;</span></th>   
 					                    <%--
 					                    <th class="text14" ><span title="dkif_faty">&nbsp;Typ&nbsp;</span></th>
 					                     --%>
-					                    <th align="right" class="text14" ><span title="dkif_fabl">&nbsp;Beløb&nbsp;</span></th>
-					                    <th class="text14" ><span title="dkif_vakd">&nbsp;Møntsort&nbsp;</span></th>
-					                    <th align="right" class="text14" ><span title="dkif_vaku">&nbsp;Kurs&nbsp;</span></th>
-					                    <th class="text14" align="left"><span title="dkif_omr">Faktor&nbsp;</span></th> 
+					                    <th align="right" class="text14" ><span title="dkif_fabl">&nbsp;<spring:message code="systema.skat.invoice.amount"/>&nbsp;</span></th>
+					                    <th class="text14" ><span title="dkif_vakd">&nbsp;<spring:message code="systema.skat.invoice.currency"/>&nbsp;</span></th>
+					                    <th align="right" class="text14" ><span title="dkif_vaku">&nbsp;<spring:message code="systema.skat.invoice.rate"/>&nbsp;</span></th>
+					                    <th class="text14" align="left"><span title="dkif_omr"><spring:message code="systema.skat.invoice.factor"/>&nbsp;</span></th> 
 					                    <c:if test="${ model.status == 'M' || empty  model.status || model.status == '10' || model.status == '20' || model.status == '40'}">
-					                    	<th align="center" class="text14" >Radera</th>
+					                    	<th align="center" class="text14" ><spring:message code="systema.skat.delete"/></th>
 					                    </c:if>
 					                    
 					               </tr> 
@@ -276,7 +276,7 @@
 							               <td class="text14" >&nbsp;${record.dkif_omr}</td>
 							               <c:if test="${ model.status == 'M' || empty  model.status || model.status == '10' || model.status == '20' || model.status == '40'}">
 								               <td width="4%" class="text14" align="center" nowrap>
-								               	<a onclick="javascript:return confirm('Er du sikker på at du vil slette denne?')" tabindex=-1 href="skatimport_edit_invoice.do?action=doDelete&sign=${model.sign}&avd=${model.avd}&opd=${model.opd}&status=${model.status}&fak=${record.dkif_fatx}">
+								               	<a onclick="javascript:return confirm('<spring:message code="systema.skat.dialogDelete"/>')" tabindex=-1 href="skatimport_edit_invoice.do?action=doDelete&sign=${model.sign}&avd=${model.avd}&opd=${model.opd}&status=${model.status}&fak=${record.dkif_fatx}">
 								               		<img valign="bottom" src="resources/images/delete.gif" border="0" alt="remove">
 								               	</a>	&nbsp;
 								               </td>
@@ -331,7 +331,7 @@
 				 			<td class="textError">
 				 				<ul>
                                     <li>
-                                      	Fel vid uppdatering. [ERROR:${Xmodel.errorMessage}]  
+                                      	Error on update [ERROR:${Xmodel.errorMessage}]  
                                     </li>
                                     <li>
                                       	[META-INFO: ${Xmodel.errorInfo}]  
@@ -362,9 +362,9 @@
 						<tr>
 							<td class="text14Bold">
 								<c:if test="${ model.status == 'M' || empty  model.status || model.status == '10' || model.status == '20' || model.status == '40'}">
-									<input tabindex=-1 class="inputFormSubmitStd" type="submit" name="submit" onclick="javascript: form.action='skatimport_edit_invoice.do';" value="Skabe ny">
+									<input tabindex=-1 class="inputFormSubmitStd" type="submit" name="submit" onclick="javascript: form.action='skatimport_edit_invoice.do';" value='<spring:message code="systema.skat.createnew"/>'>
 								</c:if>
-								&nbsp;<button title="Import av externa fakturor" name="importInvoicesButton" id="importInvoicesButton" class="buttonGrayWithGreenFrame" type="button" >Import eksterne fakturaer</button>
+								&nbsp;<button title="<spring:message code="systema.skat.invoice.button.importExternaFakt"/>" name="importInvoicesButton" id="importInvoicesButton" class="buttonGrayWithGreenFrame" type="button" ><spring:message code="systema.skat.invoice.button.importExternaFakt"/></button>
 							</td>
 						</tr>
 				   </table>
@@ -393,7 +393,7 @@
 	 				<table width="80%" align="left" class="formFrameHeader" border="0" cellspacing="0" cellpadding="0">
 				 		<tr height="15">
 				 			<td class="text14White" align="left" >
-				 				<b>&nbsp;&nbsp;F<label onClick="showPop('debugPrintlnAjaxItemFetchAdmin');" >a</label>ktura&nbsp;</b>
+				 				<b>&nbsp;&nbsp;<spring:message code="systema.skat.invoice"/>&nbsp;</b>
 				 				
 		 									<span style="position:absolute; left:150px; top:200px; width:800px; height:400px;" id="debugPrintlnAjaxItemFetchAdmin" class="popupWithInputText"  >
 								           		<div class="text11" align="left">
@@ -401,7 +401,7 @@
 								           			<br/>
 								           			&nbsp;&nbsp;
 								           			<button name="specialInformationButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('debugPrintlnAjaxItemFetchAdmin');">
-								           			Close
+								           			<spring:message code="systema.skat.close"/>
 								           			</button> 
 								           		</div>
 								        		</span>
@@ -411,7 +411,7 @@
 				 				<span style="position:absolute; left:150px; top:200px; width:800px; height:400px;" id="updateInfo" class="popupWithInputText"  >
 		           		   			<div class="text14" align="left" style="display:block;width:700px;word-break:break-all;">
 		           		   				${activeUrlRPGUpdate_Skat}<br/><br/>
-		           		   				<button name="updateInformationButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('updateInfo');">Close</button> 
+		           		   				<button name="updateInformationButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('updateInfo');"><spring:message code="systema.skat.close"/></button> 
 		           		   			</div>
 						        </span>  
 			 				</td>
@@ -424,14 +424,14 @@
 					 		<td>
 						 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
 							 		<tr>
-							 			<td class="text14" align="left"><span title="dkif_fatx"><font class="text16RedBold" >*</font>Fakturanr.</span></td>
+							 			<td class="text14" align="left"><span title="dkif_fatx"><font class="text16RedBold" >*</font><spring:message code="systema.skat.invoice.invoicenr"/></span></td>
 							            <%--
 							            <td class="text14" align="left"><font class="text16RedBold" >*</font><span title="svif_faty">&nbsp;Typ</span></td>
 							             --%>
-							            <td class="text14" align="left"><font class="text16RedBold" >*</font><span title="dkif_fabl">&nbsp;Beløb</span></td>
-							            <td class="text14" align="left"><font class="text16RedBold" >*</font><span title="dkif_vakd">&nbsp;Møntsort</span></td>
-					            		<td class="text14" align="left"><font class="text16RedBold" >*</font><span title="dkif_vaku">&nbsp;Kurs</span></td>
-					            		<td class="text14" align="left"><span title="factor">Faktor&nbsp;</span></td>
+							            <td class="text14" align="left"><font class="text16RedBold" >*</font><span title="dkif_fabl">&nbsp;<spring:message code="systema.skat.invoice.amount"/></span></td>
+							            <td class="text14" align="left"><font class="text16RedBold" >*</font><span title="dkif_vakd">&nbsp;<spring:message code="systema.skat.invoice.currency"/></span></td>
+					            		<td class="text14" align="left"><font class="text16RedBold" >*</font><span title="dkif_vaku">&nbsp;<spring:message code="systema.skat.invoice.rate"/></span></td>
+					            		<td class="text14" align="left"><span title="factor"><spring:message code="systema.skat.invoice.factor"/>&nbsp;</span></td>
 					            		
 							        </tr>
 							        <tr>
@@ -491,11 +491,11 @@
 						    <td align="left" colspan="5">
 									<c:choose>	
 										<c:when test="${ model.status == 'M' || empty  model.status || model.status == '10' || model.status == '20' || model.status == '40'}">
-											<input class="inputFormSubmit" type="submit" name="submit" onclick="javascript: form.action='skatimport_edit_invoice.do';" value='Spare faktura'>
+											<input class="inputFormSubmit" type="submit" name="submit" onclick="javascript: form.action='skatimport_edit_invoice.do';" value='<spring:message code="systema.skat.save"/>'>
 											&nbsp;&nbsp;
 										</c:when>
 										<c:otherwise>
-				 				    		<input disabled class="inputFormSubmitGrayDisabled" type="submit" name="submit" value='Ikke opdaterbar'/>
+				 				    		<input disabled class="inputFormSubmitGrayDisabled" type="submit" name="submit" value='<spring:message code="systema.skat.submit.not.editable"/>'/>
 				 				    	</c:otherwise>	
 			 				    	</c:choose>	
 							</td>							        	
