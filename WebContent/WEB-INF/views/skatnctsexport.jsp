@@ -166,7 +166,7 @@
                 		<th class="tableHeaderField" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.export.list.search.label.status"/></th>
                 		<th class="tableHeaderField" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.export.list.search.label.mottagare"/></th>
                 		<th class="tableHeaderField" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.export.list.search.label.bruttovikt"/></th>
-                		<th class="tableHeaderField">&nbsp;Kopiera Ärende&nbsp;</th>
+                		<th class="tableHeaderField">&nbsp;<spring:message code="systema.skat.copy"/>&nbsp;</th>
 	                    
                 	</tr> 
                 	</thead>
@@ -201,12 +201,12 @@
 		               <td class="tableCell" >&nbsp;<b>${topic.status}</b></td>
 		               <td class="tableCell" >&nbsp;${topic.motNavn}</td>
 		               <td class="tableCell" >&nbsp;${topic.bruttoVikt}</td>
-    		               <td class="tableCell" width="10%">&nbsp;
+    		               <td align="center" class="tableCell" width="10%">&nbsp;
 		               		
 		               		<%-- <button class="buttonGray" type="button" name="copyButton${counter.count}" id="copyButton${counter.count}" >Kopiera</button>	 --%>
 							<a class="copyLink" id="copyLink${counter.count}" runat="server" href="#">
 								<img src="resources/images/copy.png" border="0" alt="copy">
-								&nbsp;Kopiere
+								&nbsp;<spring:message code="systema.skat.copy"/>
 							</a>
 							 
 							<div style="display: none;" class="clazz_dialog" id="dialog${counter.count}" title="Dialog">
@@ -215,16 +215,14 @@
 									<input type="hidden" name="originalAvd${counter.count}" id="originalAvd${counter.count}" value='${topic.avd}'/>
 				 					<input type="hidden" name="originalOpd${counter.count}" id="originalOpd${counter.count}" value='${topic.opd}'/>
 					 					
-									<p class="text14" >Du skal vælga nye&nbsp;<code>Afdeling</code>&nbsp;og nye&nbsp;
-										<code>Signatur</code> or at kunne kopiere en angivelse
-									</p>
-									<p class="text14" >Et nyt angivelsesnummer vil blive oprettet automatisk.
-									</p>
+									<p class="text14" ><spring:message code="systema.skat.export.dialogCopy.p1"/></p>
+									<p class="text14" ><spring:message code="systema.skat.export.dialogCopy.p2"/></p>
+									
 									
 									<table>
 										<tr>
-											<td class="text14" align="left" >&nbsp;Afdeling</td>
-	                							<td class="text14" align="left" >&nbsp;Signatur</td>
+											<td class="text14" align="left" >&nbsp;<spring:message code="systema.skat.export.dialogCopy.table.tr1.td1"/></td>
+	                							<td class="text14" align="left" >&nbsp;<spring:message code="systema.skat.export.dialogCopy.table.tr1.td2"/></td>
 	                						</tr>
 	 									<tr>
 											<td class="text14MediumBlue">
@@ -268,27 +266,16 @@
 				<form  action="skatnctsexport_doFetchTopicFromTransportUppdrag.do" name="copyFromTransportUppdragForm" id="copyFromTransportUppdragForm" method="post">
 				 	<input type="hidden" name="actionGS" id="actionGS" value='doUpdate'/>
 						
-					<p class="text14" >Du kan hente en ny sag fra Eksport eller fra en Transportopdrag.
-					 	Du skal vælge&nbsp;<b>Afdeling</b>&nbsp;og&nbsp;<b>Angivelsesnr.</b>.</p>
-					<p class="text14">Orden til at hente er:</p>
-					<ol class="text14" >
-						<li class="text14" >
-						    En ny transitering vil blive oprettet, hvis den fil, du input er tilgængelig i enten (a) <b>Eksport</b> eller (b) <b>Transportopdrag</b>
-						</li>
-						<br/>
-						<li class="text14" >
-							Hvis angivelsen ikke er fundet hverken i den Eksport eller i Transportopdrag skal du oprette en ny transitering. 
-							Du vil blive omdirigeret der automatisk.
-						</li>
-					</ol>
-					
-					<p class="text14" >Men hvis du ønsker at indtaste en ny angivelse, uden at køre denne rutine, forlader Titel og Angivelsesnr. blank og klikke på <b>Fortsæt</b>.</p>
+					<p class="text14" ><spring:message code="systema.skat.nctsexport.dialogCopyFromTransportUppdrag.p1"/></p>
+					<p class="text14"><spring:message code="systema.skat.nctsexport.dialogCopyFromTransportUppdrag.p2"/></p>
+					<ol class="text14" ><spring:message code="systema.skat.nctsexport.dialogCopyFromTransportUppdrag.ol"/></ol>
+					<p class="text14" ><spring:message code="systema.skat.nctsexport.dialogCopyFromTransportUppdrag.p3"/></p>
 					
 					<table>
 						<tr>
-							<td class="text14" align="left" >&nbsp;Afdeling</td>
-   							<td class="text14" align="left" >&nbsp;Angivelsesnr.</td>
-   							<td class="text14" align="left" >&nbsp;Ext.ref.nr.</td>
+							<td class="text14" align="left" >&nbsp;<spring:message code="systema.skat.nctsexport.dialogCopyFromTransportUppdrag.table.tr1.td1"/></td>
+   							<td class="text14" align="left" >&nbsp;<spring:message code="systema.skat.nctsexport.dialogCopyFromTransportUppdrag.table.tr1.td2"/></td>
+   							<td class="text14" align="left" >&nbsp;<spring:message code="systema.skat.nctsexport.dialogCopyFromTransportUppdrag.table.tr1.td3"/>&nbsp;</td>
    						</tr>
 						<tr>
 							<td class="text14MediumBlue">

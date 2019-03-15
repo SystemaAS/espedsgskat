@@ -287,11 +287,11 @@
 		               <%-- 
     		               <td class="tableCell" width="10%">&nbsp;</td>
     		               --%>
-		               <td class="tableCell" width="10%">&nbsp;
+		               <td  align="center" class="tableCell" width="2%">
 		               		<%--<button class="buttonGray" type="button" name="copyButton${counter.count}" id="copyButton${counter.count}" >Kopiera</button> --%>
 							<a class="copyLink" id="copyLink${counter.count}" runat="server" href="#">
 								<img src="resources/images/copy.png" border="0" alt="copy">
-								&nbsp;Kopiere
+								&nbsp;<spring:message code="systema.skat.copy"/>
 							</a>
 							 
 							<div style="display: none;" class="clazz_dialog" id="dialog${counter.count}" title="Dialog">
@@ -333,7 +333,7 @@
 		               <c:choose>
 		               <c:when test="${topic.status == 'M' || empty topic.status}">	
 			               <td class="tableCell" align="center" nowrap>&nbsp;
-			               	<a onclick="javascript:return confirm('<spring:message code="systema.skat.export.dialogDelete"/>')" tabindex=-1 href="skatexport.do?action=doDelete&avd=${topic.avd}&opd=${topic.opd}">
+			               	<a onclick="javascript:return confirm('<spring:message code="systema.skat.dialogDelete"/>')" tabindex=-1 href="skatexport.do?action=doDelete&avd=${topic.avd}&opd=${topic.opd}">
 			               		<img valign="bottom" src="resources/images/delete.gif" border="0" alt="remove">
 			               	</a>	
 			               </td>
@@ -366,10 +366,9 @@
 					 
 					<table>
 						<tr>
-							<td class="text14" align="left" >&nbsp;Afdeling</td>
-   							<td class="text14" align="left" >&nbsp;Opdragsnr.</td>
-   							<td class="text14" align="left" >&nbsp;Ekst.ref.nr.&nbsp;
-   							</td>
+							<td class="text14" align="left" >&nbsp;<spring:message code="systema.skat.export.dialogCopyFromTransportUppdrag.table.tr1.td1"/></td>
+   							<td class="text14" align="left" >&nbsp;<spring:message code="systema.skat.export.dialogCopyFromTransportUppdrag.table.tr1.td2"/></td>
+   							<td class="text14" align="left" >&nbsp;<spring:message code="systema.skat.export.dialogCopyFromTransportUppdrag.table.tr1.td3"/>&nbsp;</td>
    						</tr>
 						<tr>
 							<td class="text14MediumBlue">

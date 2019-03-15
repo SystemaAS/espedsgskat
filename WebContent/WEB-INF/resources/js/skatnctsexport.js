@@ -40,24 +40,32 @@
   //Present dialog box onClick (href in parent JSP)
   jq(function() {
 	  jq(".copyLink").click(function() {
+		  //Localize
+		  //DA - std
+		  var dlgTitle = "Kopi Angivelse "; var btnTextOk = "Fortstæt"; var btnTextCancel = "Annullér";
+		  //EN
+		  if(jq("#usrLang").val() == "EN"){
+			  dlgTitle = "Copy declaration "; btnTextOk = "Ok"; btnTextCancel = "Cancel"; 
+		  }
+		  
 		  var id = this.id;
 		  counterIndex = id.replace("copyLink","");
 		  //setters (add more if needed)
-		  jq('#dialog'+counterIndex).dialog( "option", "title", "Kopi Angivelse " + jq('#originalOpd'+counterIndex).val() );
+		  jq('#dialog'+counterIndex).dialog( "option", "title", dlgTitle + jq('#originalOpd'+counterIndex).val() );
 		  
 		  //deal with buttons for this modal window
 		  jq('#dialog'+counterIndex).dialog({
 			 buttons: [ 
 	            {
 				 id: "dialogSave"+counterIndex,	
-				 text: "Fortsæt",
+				 text: btnTextOk,
 				 click: function(){
 					 		jq('#copyForm'+counterIndex).submit();
 				 		}
 			 	 },
 	 	 		{
 			 	 id: "dialogCancel"+counterIndex,
-			 	 text: "Annullér", 
+			 	 text: btnTextCancel, 
 				 click: function(){
 					 		//back to initial state of form elements on modal dialog
 					 		jq("#dialogSave"+counterIndex).button("option", "disabled", true);
@@ -110,32 +118,40 @@
   jq(function() { 
 	  jq("#dialogCopyFromTransportUppdrag").dialog({
 		  autoOpen: false,
-		  maxWidth:500,
-          maxHeight: 400,
+		  maxWidth:600,
+          maxHeight: 600,
           width: 500,
-          height: 400,
+          height: 500,
 		  modal: true
 	  });
   });
   //Present dialog box onClick (href in parent JSP)
   jq(function() {
 	  jq("#copyFromTransportUppdragLink").click(function() {
+		  //Localize
+		  //DA - std
+		  var dlgTitle = "Hent opdrag fra SYSPED"; var btnTextOk = "Fortstæt"; var btnTextCancel = "Annullér";
+		  //EN
+		  if(jq("#usrLang").val() == "EN"){
+			  dlgTitle = "Get the order from SYSPED"; btnTextOk = "Ok"; btnTextCancel = "Cancel"; 
+		  }
+		  
 		  //setters (add more if needed)
-		  jq('#dialogCopyFromTransportUppdrag').dialog( "option", "title", "Hent opdrag fra SYSPED" );
+		  jq('#dialogCopyFromTransportUppdrag').dialog( "option", "title", dlgTitle );
 		  
 		  //deal with buttons for this modal window
 		  jq('#dialogCopyFromTransportUppdrag').dialog({
 			 buttons: [ 
 	            {
 				 id: "dialogSaveTU",	
-				 text: "Fortsæt",
+				 text: btnTextOk,
 				 click: function(){
 					 		jq('#copyFromTransportUppdragForm').submit();
 				 		}
 			 	 },
 	 	 		{
 			 	 id: "dialogCancelTU",
-			 	 text: "Annullér", 
+			 	 text: btnTextCancel, 
 				 click: function(){
 					 		//back to initial state of form elements on modal dialog
 					 		jq("#dialogSaveSU").button("option", "disabled", true);

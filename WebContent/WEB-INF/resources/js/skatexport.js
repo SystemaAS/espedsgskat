@@ -63,7 +63,7 @@
   //Present dialog box onClick (href in parent JSP)
   jq(function() {
 	  jq(".copyLink").click(function() {
-		//Localize
+		  //Localize
 		  //DA - std
 		  var dlgTitle = "Kopi Angivelse "; var btnTextOk = "Fortstæt"; var btnTextCancel = "Annullér";
 		  //EN
