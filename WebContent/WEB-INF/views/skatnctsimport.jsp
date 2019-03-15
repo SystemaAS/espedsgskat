@@ -62,7 +62,7 @@
 	           	</span>	
            		</div>
                 </td>
-                <td class="text14" align="left" >Til dato</td>
+                <td class="text14" align="left" ><spring:message code="systema.skat.ncts.import.list.search.label.tilldatum"/></td>
                 <td class="text14" align="left" >
 				<img onMouseOver="showPop('status_info');" onMouseOut="hidePop('status_info');"style="vertical-align:middle;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
                 <spring:message code="systema.skat.ncts.import.list.search.label.status"/>
@@ -79,7 +79,7 @@
 				</td>	               
                 <td class="text14" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.import.list.search.label.type"/></td>
                 <td class="text14" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.import.list.search.label.ansvarig"/></td>
-                <td class="text14" align="left" >&nbsp;&nbsp;Egen ref.</td>
+                <td class="text14" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.import.list.search.label.egenref"/></td>
                 <td class="text14" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.import.list.search.label.frigivningsDatum"/></td>
                 
                 <td>&nbsp;</td>
@@ -170,7 +170,7 @@
                 		<th class="tableHeaderField" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.import.list.search.label.status"/></th>
                 		<th class="tableHeaderField" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.import.list.search.label.type"/></th>
                 		<th class="tableHeaderField" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.import.list.search.label.ansvarig"/></th>
-                		<th class="tableHeaderField" align="left" >&nbsp;&nbsp;Egen ref.</th>
+                		<th class="tableHeaderField" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.import.list.search.label.egenref"/></th>
                 		<th class="tableHeaderField" align="left" >&nbsp;&nbsp;<spring:message code="systema.skat.ncts.import.list.search.label.frigivningsDatum"/></th>
                 		<%--
                 		<th class="tableHeaderField">&nbsp;Kopiera Ärende&nbsp;</th>
