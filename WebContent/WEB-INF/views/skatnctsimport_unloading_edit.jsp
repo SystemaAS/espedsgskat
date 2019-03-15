@@ -505,7 +505,7 @@
 						 			<td colspan="2" class="text14">&nbsp;<b>CTL resultat(OT/DI)</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 									<span title="nictsk">Sprogkode</span>&nbsp;
 							            <select class="selectMediumBlueE2" name="nictsk" id="nictsk">
-							            		<option value="">-vælg-</option>
+							            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 							 				  	<c:forEach var="code" items="${model.ncts012_Sprak_CodeList}" >
 						                             <option value="${code.tkkode}"<c:if test="${model.record.nictsk == code.tkkode}"> selected </c:if> >${code.tkkode}</option>
 												</c:forEach> 
@@ -617,7 +617,7 @@
 						 			<td class="text14" >&nbsp;&nbsp;&nbsp;<span title="nidfst">Status:</span>&nbsp;</td>
 						 			<td class="text14">
 					           			<select class="selectMediumBlueE2"  name="nidfst" id="nidfst">
-					           				<option value="">-vælg-</option>
+					           				<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 					           				<option value=""<c:if test="${model.record.nidfst == '0'}"> selected </c:if> >Ikke Ok</option>
 					           				<option value="1"<c:if test="${model.record.nidfst == '1'}"> selected </c:if> >Ok</option>
 										  	
@@ -642,7 +642,7 @@
 						 			</td>
 						 			<td 	class="text14" >
 							            <select class="selectMediumBlueE2" name="nidfsk" id="nidfsk">
-							            		<option value="">-vælg-</option>
+							            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 							 				  	<c:forEach var="code" items="${model.ncts012_Sprak_CodeList}" >
 						                             <option value="${code.tkkode}"<c:if test="${model.record.nidfsk == code.tkkode}"> selected </c:if> >${code.tkkode}</option>
 												</c:forEach> 
@@ -671,7 +671,7 @@
 						 			<td class="text14">&nbsp;&nbsp;&nbsp;&nbsp;<b><span title="nimn1/nimn2">Bemærkninger</span></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						 			<span title="nimnsk">Sprogkode</span>&nbsp;
 							            <select class="selectMediumBlueE2" name="nimnsk" id="nimnsk">
-							            		<option value="">-vælg-</option>
+							            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 							 				  	<c:forEach var="code" items="${model.ncts012_Sprak_CodeList}" >
 						                             <option value="${code.tkkode}"<c:if test="${model.record.nimnsk == code.tkkode}"> selected </c:if> >${code.tkkode}</option>
 												</c:forEach> 

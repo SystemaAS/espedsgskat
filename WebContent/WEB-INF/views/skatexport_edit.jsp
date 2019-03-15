@@ -234,7 +234,7 @@
 				<td align="left" class="text14MediumBlue">
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Afdeling:&nbsp;
            			<select class="selectMediumBlueE2" name="avd" id="avd" TABINDEX=1>
-	            		<option value="">-vælg-</option>
+	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 	 				  	<c:forEach var="record" items="${model.avdList}" >
                        	 	<option value="${record.avd}"<c:if test="${model.record.dkeh_syav == record.avd}"> selected </c:if> >${record.avd}<c:if test="${record.tst == '1'}">&nbsp;(test)</c:if></option>
 						</c:forEach> 
@@ -242,7 +242,7 @@
 					
 					&nbsp;Sign:&nbsp;
            			<select class="selectMediumBlueE2" name="sign" id="sign" TABINDEX=2>
-	            		<option value="">-vælg-</option>
+	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 	 				  	<c:forEach var="record" items="${model.signList}" >
                              	 	<option value="${record.sign}"<c:if test="${model.record.dkeh_sysg == record.sign}"> selected </c:if> >${record.sign}</option>
 						</c:forEach> 
@@ -280,7 +280,7 @@
 				 			</td>
 				 			<td>
 				 				<select class="selectMediumBlueE2" name="dkeh_r011" id="dkeh_r011" TABINDEX=3>
-				 				  <option value="">-vælg-</option>
+				 				  <option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 					 				  	<c:forEach var="record" items="${model.angivelsesTypeCodeList}" >
 					 				  		<option value="${record.dkkd_kd}"<c:if test="${model.record.dkeh_r011 == record.dkkd_kd}"> selected </c:if> >${record.dkkd_kd}</option>
 										</c:forEach>  
@@ -303,7 +303,7 @@
 							</td>
 			 				<td>
 				 				<select class="selectMediumBlueE2" name="dkeh_aart" id="dkeh_aart" TABINDEX=10>
-				 				  <option value="">-vælg-</option>
+				 				  <option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 					 				  	<c:forEach var="record" items="${model.angivelsesArterCodeList}" >
 					 				  		<option value="${record.dkkd_kd}"<c:if test="${model.record.dkeh_aart == record.dkkd_kd}"> selected </c:if> >${record.dkkd_kd}&nbsp;${record.dkkd_kd2}</option>
 										</c:forEach>  
@@ -333,7 +333,7 @@
 				 			</td>
 				 			<td>
 				 				<select class="selectMediumBlueE2" name="dkeh_r012" id="dkeh_r012" TABINDEX=10>
-				 				  <option value="">-vælg-</option>
+				 				  <option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 				 				  	<c:forEach var="record" items="${model.euAngivelsesArterCodeList}" >
 				 				  		<option value="${record.dkkd_kd}"<c:if test="${model.record.dkeh_r012 == record.dkkd_kd}"> selected </c:if> >${record.dkkd_kd}</option>
 									</c:forEach>  
@@ -371,7 +371,7 @@
 				 			</td>
 				 			<td>	
 				 				<select class="selectMediumBlueE2" name="dkeh_ajou" id="dkeh_ajou" >
-			 					  <option value="" <c:if test="${ empty model.record.dkeh_ajou }"> selected </c:if> >-vælg-</option>
+			 					  <option value="" <c:if test="${ empty model.record.dkeh_ajou }"> selected </c:if> >-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 			 					  <option value="1"<c:if test="${ model.record.dkeh_ajou == '1'}"> selected </c:if> >1</option>
 								  <option value="2"<c:if test="${ model.record.dkeh_ajou == '2'}"> selected </c:if> >2</option>
 								  <option value="6"<c:if test="${ model.record.dkeh_ajou == '6'}"> selected </c:if> >6</option>
@@ -399,7 +399,7 @@
 			 				</td>
 			 				<td class="text14">
 			            			<select class="selectMediumBlueE2" name="dkeh_a1" id="dkeh_a1">
-					            		<option value="">-vælg-</option>
+					            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 					 				  	<c:forEach var="record" items="${model.toldstedCodeList}" >
 					 				  		<option value="${record.dkkd_kd}"<c:if test="${model.record.dkeh_a1 == record.dkkd_kd}"> selected </c:if> >${record.dkkd_kd}</option>
 										</c:forEach>  
@@ -500,7 +500,7 @@
 			 				
 				            <td >
 				            		<select class="selectMediumBlueE2" id="dkeh_29" name="dkeh_29" >
-				            		<option value="">-vælg-</option>
+				            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 			 				  	<c:forEach var="record" items="${model.udgangstoldstedCodeList}" >
 			 				  		<option value="${record.dkkd_kd}"<c:if test="${model.record.dkeh_29 == record.dkkd_kd}"> selected </c:if> >${record.dkkd_kd}</option>
 								</c:forEach>
@@ -593,7 +593,7 @@
 				 				<span title="dkeh_221" id="v_dkeh_221" class="validation">Fakuramøntsort</span>
 				 				<%-- Note: onChange event in jQuery for this currency list --%>
 				 				<select class="selectMediumBlueE2" name="dkeh_221" id="dkeh_221" >
-				 				  <option value="">-vælg-</option>	
+				 				  <option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>	
 				 				  <c:forEach var="currency" items="${model.currencyCodeList}" >
 			 				  		<option value="${currency.dkkd_kd}"<c:if test="${ model.record.dkeh_221 == currency.dkkd_kd}"> selected </c:if> >${currency.dkkd_kd}</option>
 								  </c:forEach>  
@@ -737,7 +737,7 @@
 									        		<tr>
 									        			<td align="left">
 									            			<select class="selectMediumBlueE2" name="dkeh_02f" id="dkeh_02f">
-											            		<option value="">-vælg-</option>
+											            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 											 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 											 				  		<option value="${country.dkkd_kd}"<c:if test="${model.record.dkeh_02f == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 																</c:forEach>  
@@ -870,7 +870,7 @@
 								        		<tr>
 								        			<td align="left">
 								            			<select class="selectMediumBlueE2" name="dkeh_08f" id="dkeh_08f">
-										            		<option value="">-vælg-</option>
+										            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 										 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 										 				  		<option value="${country.dkkd_kd}"<c:if test="${model.record.dkeh_08f == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 															</c:forEach>  
@@ -939,7 +939,7 @@
 							            
 							            <td align="left">
 							            	<select class="selectMediumBlueE2" name="dkeh_14b" id="dkeh_14b">
-			 									<option value="">-vælg-</option>
+			 									<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 							  					<option value="1"
 								  				<c:if test="${model.record.dkeh_14b == '1'}"> selected </c:if> >1-Klarerer</option>
 								  				<option value="2"
@@ -1003,7 +1003,7 @@
 										</td>
 							            <td>
 							 				<select class="selectMediumBlueE2" name="dkeh_28a" id="dkeh_28a">
-							 					<option value="">-vælg-</option><option value="N380"<c:if test="${ model.record.dkeh_28a == 'N380'}"> selected </c:if> >N380</option>
+							 					<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option><option value="N380"<c:if test="${ model.record.dkeh_28a == 'N380'}"> selected </c:if> >N380</option>
 											  	<option value="N325"<c:if test="${ model.record.dkeh_28a == 'N325'}"> selected </c:if> >N325</option>
 											</select>
 			 							</td>
@@ -1085,7 +1085,7 @@
 								</td>	
 					            <td >
 					            	<select class="selectMediumBlueE2" name="dkeh_17a" id="dkeh_17a">
-				 						<option value="">-vælg-</option>
+				 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 					 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 					 				  		<option value="${country.dkkd_kd}"<c:if test="${model.record.dkeh_17a == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 										</c:forEach>  
@@ -1167,7 +1167,7 @@
 								</td>
 								<td>
 					            		<select class="selectMediumBlueE2" name="dkeh_21" id="dkeh_21">
-				 						<option value="">-vælg-</option>
+				 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 					 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 					 				  		<option value="${country.dkkd_kd}"<c:if test="${model.record.dkeh_21 == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 										</c:forEach>  
@@ -1202,7 +1202,7 @@
 								</td>
 					            <td class="text14" >
 			           				<select class="selectMediumBlueE2" name="dkeh_25" id="dkeh_25">
-				 						<option value="">-vælg-</option>
+				 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 					 				  	<c:forEach var="code" items="${model.transportmadeCodeList}" >
 					 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkeh_25 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}-${code.dkkf_txt}</option>
 										</c:forEach>  
@@ -1227,7 +1227,7 @@
 					            
 					            <td class="text14" >
 			           				<select class="selectMediumBlueE2" name="dkeh_26" id="dkeh_26">
-				 						<option value="">-vælg-</option>
+				 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 					 				  	<c:forEach var="code" items="${model.transportmadeCodeList}" >
 					 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkeh_26 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}-${code.dkkf_txt}</option>
 										</c:forEach>  
@@ -1278,7 +1278,7 @@
 							</td>	
 				            <td >
 				            		<select class="selectMediumBlueE2" name="dkeh_s131" id="dkeh_s131">
-			 						<option value="">-vælg-</option>
+			 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 				 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 				 				  		<option value="${country.dkkd_kd}"<c:if test="${model.record.dkeh_s131 == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 									</c:forEach>  
@@ -1305,7 +1305,7 @@
 							</td>		
 				            <td >
 				            		<select class="selectMediumBlueE2" name="dkeh_s132" id="dkeh_s132">
-			 						<option value="">-vælg-</option>
+			 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 				 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 				 				  		<option value="${country.dkkd_kd}"<c:if test="${model.record.dkeh_s132 == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 									</c:forEach>  
@@ -1324,7 +1324,7 @@
 													</td>
 													<td>
 									           			<select class="selectMediumBlueE2" name="dkeh_s133" id="dkeh_s133">
-									 						<option value="">-vælg-</option>
+									 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 										 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 										 				  		<option value="${country.dkkd_kd}"<c:if test="${model.record.dkeh_s133 == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 															</c:forEach>  
@@ -1337,7 +1337,7 @@
 													</td>
 													<td>
 									           			<select class="selectMediumBlueE2" name="dkeh_s134" id="dkeh_s134">
-									 						<option value="">-vælg-</option>
+									 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 										 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 										 				  		<option value="${country.dkkd_kd}"<c:if test="${model.record.dkeh_s134 == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 															</c:forEach>  
@@ -1350,7 +1350,7 @@
 													</td>
 													<td>
 									           			<select class="selectMediumBlueE2" name="dkeh_s135" id="dkeh_s135">
-									 						<option value="">-vælg-</option>
+									 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 										 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 										 				  		<option value="${country.dkkd_kd}"<c:if test="${model.record.dkeh_s135 == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 															</c:forEach>  
@@ -1400,7 +1400,7 @@
 							</td>	
 				            <td >
 					            	<select class="selectMediumBlueE2" name="dkeh_201" id="dkeh_201">
-			 						<option value="">-vælg-</option>
+			 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 					 				  	<c:forEach var="code" items="${model.incotermsCodeList}" >
 					 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkeh_201 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 										</c:forEach>  
@@ -1447,7 +1447,7 @@
 								</td>
 								<td >
 					            		<select class="selectMediumBlueE2" name="dkeh_s29" id="dkeh_s29">
-				 						<option value="">-vælg-</option>
+				 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 					 				  	<c:forEach var="code" items="${model.betalningsmadeCodeList}" >
 					 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkeh_s29 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 										</c:forEach>  
@@ -1485,7 +1485,7 @@
 					            <span title="dkeh_301" id="v_dkeh_301" class="validation">Oplagshav. ISO kode</span></td>
 					            <td >
 						            <select class="selectMediumBlueE2" name="dkeh_301" id="dkeh_301">
-					 				  <option value="">-vælg-</option>
+					 				  <option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 									  <option value="DK"<c:if test="${model.record.dkeh_301 == 'DK'}"> selected </c:if> >DK</option>
 									</select>
 					            </td>
@@ -1900,7 +1900,7 @@
 										        		<tr >
 										        			<td align="left">
 										            			<select class="selectMediumBlueE2" name="dkeh_relk" id="dkeh_relk">
-												            		<option value="">-vælg-</option>
+												            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 											 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 											 				  		<option value="${country.dkkd_kd}"<c:if test="${model.record.dkeh_relk == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 																</c:forEach>  
@@ -2067,20 +2067,20 @@
 				 			<tr>	
 				 				<td>
 					 				<select class="selectMediumBlueE2" name="dkeh_gis1" id="dkeh_gis1" >
-					 				  <option selected value="">-vælg-</option>
+					 				  <option selected value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 									  <option value="0"<c:if test="${model.record.dkeh_gis1 == '0'}"> selected </c:if> >0</option>
 									  <option value="1"<c:if test="${model.record.dkeh_gis1 == '1'}"> selected </c:if> >1</option>
 									</select>
 				 				</td>
 				 				<td>
 					 				<select class="selectMediumBlueE2" name="dkeh_gis2" id="dkeh_gis2" >
-					 				  <option selected value="">-vælg-</option>
+					 				  <option selected value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 									  <option value="0"<c:if test="${model.record.dkeh_gis2 == '0'}"> selected </c:if> >0</option>
 									</select>
 				 				</td>
 				 				<td>
 					 				<select class="selectMediumBlueE2" name="dkeh_gis3" id="dkeh_gis3" >
-					 				  <option selected value="">-vælg-</option>
+					 				  <option selected value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 									  <option value="0"<c:if test="${model.record.dkeh_gis3 == '0'}"> selected </c:if> >0</option>
 									  <option value="1"<c:if test="${model.record.dkeh_gis3 == '1'}"> selected </c:if> >1</option>
 									</select>
@@ -2104,7 +2104,7 @@
 				 			<tr>	
 				 				<td col="3">
 					 				<select class="selectMediumBlueE2" name="dkeh_gis4" id="dkeh_gis4" >
-					 				  <option selected value="">-vælg-</option>
+					 				  <option selected value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 									  <option value="0"<c:if test="${model.record.dkeh_gis4 =='0'}"> selected </c:if> >0</option>
 									  <option value="1"<c:if test="${model.record.dkeh_gis4 =='1'}"> selected </c:if> >1</option>								</select>
 				 				</td>
@@ -2283,7 +2283,7 @@
 					            <span title="dkeh_ind" id="v_dkeh_ind" class="validation"><b></b>&nbsp;Indladningssted</span>
 					            &nbsp;&nbsp;
 				            		<select class="selectMediumBlueE2" id="dkeh_ind" name="dkeh_ind" >
-				            		<option value="">-vælg-</option>
+				            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 			 				  	<c:forEach var="record" items="${model.udgangstoldstedCodeList}" >
 			 				  		<option value="${record.dkkd_kd}"<c:if test="${model.record.dkeh_ind == record.dkkd_kd}"> selected </c:if> >${record.dkkd_kd}</option>
 								</c:forEach>
@@ -2348,7 +2348,7 @@
 													</td>
 													<td class="text11">&nbsp;
 														<select class="selectMediumBlueE2" name="dkeh_ym21" id="dkeh_ym21">
-									 						<option value="">-vælg-</option>
+									 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 										 				  	<c:forEach var="code" items="${model.exportArterCodeList}" >
 										 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkeh_ym21 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 															</c:forEach>  
@@ -2365,7 +2365,7 @@
 													</td>
 													<td class="text11">&nbsp;
 														<select class="selectMediumBlueE2" name="dkeh_ym23" id="dkeh_ym23">
-									 						<option value="">-vælg-</option>
+									 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 										 				  	<c:forEach var="code" items="${model.tStatusCodeList}" >
 										 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkeh_ym23 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}-${code.dkkf_txt}</option>
 															</c:forEach>  
@@ -2394,7 +2394,7 @@
 													</td>
 													<td class="text11">&nbsp;
 														<select class="selectMediumBlueE2" name="dkeh_yme1" id="dkeh_yme1">
-									 						<option value="">-vælg-</option>
+									 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 										 				  	<c:forEach var="code" items="${model.erklaeringerCodeList}" >
 										 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkeh_yme1 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}&nbsp;${fn:substring(code.dkkf_txt, 0, 50)}</option>
 															</c:forEach>  
@@ -2407,7 +2407,7 @@
 													</td>
 													<td class="text11">&nbsp;
 														<select class="selectMediumBlueE2" name="dkeh_yme2" id="dkeh_yme2" >
-									 						<option value="">-vælg-</option>
+									 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 										 				  	<c:forEach var="code" items="${model.erklaeringerCodeList}" >
 										 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkeh_yme2 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}&nbsp;${fn:substring(code.dkkf_txt, 0, 50)}</option>
 															</c:forEach>  
@@ -2420,7 +2420,7 @@
 													</td>
 													<td class="text11">&nbsp;
 														<select class="selectMediumBlueE2" name="dkeh_yme3" id="dkeh_yme3" >
-									 						<option value="">-vælg-</option>
+									 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 										 				  	<c:forEach var="code" items="${model.erklaeringerCodeList}" >
 										 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkeh_yme3 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}&nbsp;${fn:substring(code.dkkf_txt, 0, 50)}</option>
 															</c:forEach>  
@@ -2671,7 +2671,7 @@
 						<td class="text14" align="left" >&nbsp;Status</td>
 						<td class="text14MediumBlue">
 							<select class="selectMediumBlueE2" name="selectedStatus" id="selectedStatus">
-			            			<option value="">-vælg-</option>
+			            			<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 			 				  	<c:forEach var="record" items="${model.statusCodeList}" >
 		                            <option value="${record.dkkd_kd}">${record.dkkd_kd}</option>
 								</c:forEach> 

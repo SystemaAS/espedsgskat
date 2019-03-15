@@ -853,7 +853,7 @@
 										
 										<td class="text14" align="left" nowrap>
 											<select class="inputTextMediumBlueMandatoryField" name="dkiv_36" id="dkiv_36">
-						 						<option value="">-vælg-</option>
+						 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 							 				  	<c:forEach var="code" items="${model.preferenceCodeList}" >
 							 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_36 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 												</c:forEach>  
@@ -865,7 +865,7 @@
 										
 										<td align="left" nowrap>
 											<select class="inputTextMediumBlueMandatoryField" name="dkiv_37" id="dkiv_37">
-						 						<option value="">-vælg-</option>
+						 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 							 				  	<c:forEach var="code" items="${model.procedureKoderR37CodeList}" >
 							 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_37 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 												</c:forEach>  
@@ -969,7 +969,7 @@
 										</td>
 										<td align="left" nowrap>
 					            			<select class="inputTextMediumBlueMandatoryField" name="dkiv_314a" id="dkiv_314a">
-							            		<option value="">-vælg-</option>
+							            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 							 				  	<c:forEach var="code" items="${model.emballageCodeList}" >
 			                                	 	<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_314a == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 												</c:forEach> 
@@ -1141,7 +1141,7 @@
 							        <tr>
 						        			<td align="left" nowrap>
 								            	<select class="inputTextMediumBlueMandatoryField" name="dkiv_34" id="dkiv_34">
-						 						<option value="">-vælg-</option>
+						 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 							 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 							 				  		<option value="${country.dkkd_kd}"<c:if test="${model.record.dkiv_34 == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 												</c:forEach>  
@@ -1156,7 +1156,7 @@
 							           				<tr>
 									           			<td class="text14">&nbsp;&nbsp;&nbsp;&nbsp;<span title="dkiv_401-2">40.2&nbsp;Kat./Type</span>
 										           			<select class="inputTextMediumBlueMandatoryField" name="dkiv_402a" id="dkiv_402a">
-											            		<option value="">-vælg-</option>
+											            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 											 				  	<c:forEach var="code" items="${model.transportdocsSummariskadocsCodeList}" >
 											 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_402a == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																</c:forEach> 
@@ -1213,7 +1213,7 @@
 																			<tr>
 																				<td 	align="right"><b>2.</b>
 																					<select name="dkiv_402b" id="dkiv_402b">
-																	            		<option value="">-vælg-</option>
+																	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 																	 				  	<c:forEach var="code" items="${model.transportdocsSummariskadocsCodeList}" >
 																	 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_402b == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																						</c:forEach> 
@@ -1229,7 +1229,7 @@
 																				
 																				<td align="right"><b>3.</b>
 																					<select name="dkiv_402c" id="dkiv_402c">
-																	            		<option value="">-vælg-</option>
+																	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 																	 				  	<c:forEach var="code" items="${model.transportdocsSummariskadocsCodeList}" >
 																	 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_402c == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																						</c:forEach> 
@@ -1244,7 +1244,7 @@
 																			<tr>
 																				<td align="right"><b>4.</b>
 																					<select name="dkiv_402d" id="dkiv_402d">
-																	            		<option value="">-vælg-</option>
+																	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 																	 				  	<c:forEach var="code" items="${model.transportdocsSummariskadocsCodeList}" >
 																	 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_402d == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																						</c:forEach> 
@@ -1259,7 +1259,7 @@
 																				</td>
 																				<td align="right"><b>5.</b>
 																					<select name="dkiv_402e" id="dkiv_402e">
-																	            		<option value="">-vælg-</option>
+																	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 																	 				  	<c:forEach var="code" items="${model.transportdocsSummariskadocsCodeList}" >
 																	 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_402e == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																						</c:forEach> 
@@ -1274,7 +1274,7 @@
 																			<tr>
 																				<td align="right"><b>6.</b>
 																					<select name="dkiv_402f" id="dkiv_402f">
-																	            		<option value="">-vælg-</option>
+																	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 																	 				  	<c:forEach var="code" items="${model.transportdocsSummariskadocsCodeList}" >
 																	 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_402f == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																						</c:forEach> 
@@ -1289,7 +1289,7 @@
 																				</td>
 																				<td align="right"><b>7.</b>
 																					<select name="dkiv_402g" id="dkiv_402g">
-																	            		<option value="">-vælg-</option>
+																	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 																	 				  	<c:forEach var="code" items="${model.transportdocsSummariskadocsCodeList}" >
 																	 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_402g == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																						</c:forEach> 
@@ -1304,7 +1304,7 @@
 																			<tr>
 																				<td align="right"><b>8.</b>
 																					<select name="dkiv_402h" id="dkiv_402h">
-																	            		<option value="">-vælg-</option>
+																	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 																	 				  	<c:forEach var="code" items="${model.transportdocsSummariskadocsCodeList}" >
 																	 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_402h == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																						</c:forEach> 
@@ -1319,7 +1319,7 @@
 																				</td>
 																				<td align="right"><b>9.</b>
 																					<select name="dkiv_402i" id="dkiv_402i">
-																	            		<option value="">-vælg-</option>
+																	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 																	 				  	<c:forEach var="code" items="${model.transportdocsSummariskadocsCodeList}" >
 																	 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_402i == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																						</c:forEach> 
@@ -1334,7 +1334,7 @@
 																			<tr>
 																				<td align="right"><b>10.</b>
 																					<select name="dkiv_402j" id="dkiv_402j">
-																	            		<option value="">-vælg-</option>
+																	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 																	 				  	<c:forEach var="code" items="${model.transportdocsSummariskadocsCodeList}" >
 																	 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_402j == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																						</c:forEach> 
@@ -1349,7 +1349,7 @@
 																				</td>
 																				<td align="right"><b>11.</b>
 																					<select name="dkiv_402k" id="dkiv_402k">
-																	            		<option value="">-vælg-</option>
+																	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 																	 				  	<c:forEach var="code" items="${model.transportdocsSummariskadocsCodeList}" >
 																	 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_402k == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																						</c:forEach> 
@@ -1364,7 +1364,7 @@
 																			<tr>
 																				<td align="right"><b>12.</b>
 																					<select name="dkiv_402l" id="dkiv_402l">
-																	            		<option value="">-vælg-</option>
+																	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 																	 				  	<c:forEach var="code" items="${model.transportdocsSummariskadocsCodeList}" >
 																	 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_402l == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																						</c:forEach> 
@@ -1379,7 +1379,7 @@
 																				</td>
 																				<td align="right"><b>13.</b>
 																					<select name="dkiv_402m" id="dkiv_402m">
-																	            		<option value="">-vælg-</option>
+																	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 																	 				  	<c:forEach var="code" items="${model.transportdocsSummariskadocsCodeList}" >
 																	 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_402m == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																						</c:forEach> 
@@ -1394,7 +1394,7 @@
 																			<tr>
 																				<td align="right"><b>14.</b>
 																					<select name="dkiv_402n" id="dkiv_402n">
-																	            		<option value="">-vælg-</option>
+																	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 																	 				  	<c:forEach var="code" items="${model.transportdocsSummariskadocsCodeList}" >
 																	 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_402n == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																						</c:forEach> 
@@ -1409,7 +1409,7 @@
 																				</td>
 																				<td align="right"><b>15.</b>
 																					<select name="dkiv_402o" id="dkiv_402o">
-																	            		<option value="">-vælg-</option>
+																	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 																	 				  	<c:forEach var="code" items="${model.transportdocsSummariskadocsCodeList}" >
 																	 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_402o == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																						</c:forEach> 
@@ -1424,7 +1424,7 @@
 																			<tr>
 																				<td align="right"><b>16.</b>
 																					<select name="dkiv_402p" id="dkiv_402p">
-																	            		<option value="">-vælg-</option>
+																	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 																	 				  	<c:forEach var="code" items="${model.transportdocsSummariskadocsCodeList}" >
 																	 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_402p == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																						</c:forEach> 
@@ -1439,7 +1439,7 @@
 																				</td>
 																				<td align="right"><b>17.</b>
 																					<select name="dkiv_402q" id="dkiv_402q">
-																	            		<option value="">-vælg-</option>
+																	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 																	 				  	<c:forEach var="code" items="${model.transportdocsSummariskadocsCodeList}" >
 																	 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_402q == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																						</c:forEach> 
@@ -1453,7 +1453,7 @@
 																			<tr>
 																				<td align="right"><b>18.</b>
 																					<select name="dkiv_402r" id="dkiv_402r">
-																	            		<option value="">-vælg-</option>
+																	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 																	 				  	<c:forEach var="code" items="${model.transportdocsSummariskadocsCodeList}" >
 																	 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_402r == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																						</c:forEach> 
@@ -1468,7 +1468,7 @@
 																				</td>
 																				<td align="right"><b>19.</b>
 																					<select name="dkiv_402s" id="dkiv_402s">
-																	            		<option value="">-vælg-</option>
+																	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 																	 				  	<c:forEach var="code" items="${model.transportdocsSummariskadocsCodeList}" >
 																	 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_402s == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																						</c:forEach> 
@@ -1659,7 +1659,7 @@
 									</td>
 						            <td class="text14" >
 				           				<select name="dkiv_4421" id="dkiv_4421">
-					 						<option value="">-vælg-</option>
+					 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 						 				  	<c:forEach var="code" items="${model.certifikatKoderR44_2CodeList}" >
 						 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_4421 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 											</c:forEach>  
@@ -1682,7 +1682,7 @@
 														</td>
 														<td class="text12"><span title="dkiv_4422">Cert.kode</span>
 															<select name="dkiv_4422" id="dkiv_4422">
-										 						<option value="">-vælg-</option>
+										 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 											 				  	<c:forEach var="code" items="${model.certifikatKoderR44_2CodeList}" >
 											 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_4422 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																</c:forEach>  
@@ -1696,7 +1696,7 @@
 														</td>
 														<td class="text12"><span title="dkiv_4423">Cert.kode</span>
 															<select name="dkiv_4423" id="dkiv_4423">
-										 						<option value="">-vælg-</option>
+										 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 											 				  	<c:forEach var="code" items="${model.certifikatKoderR44_2CodeList}" >
 											 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_4423 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																</c:forEach>  
@@ -1710,7 +1710,7 @@
 														</td>
 														<td class="text12">Cert.kode
 															<select name="dkiv_4424" id="dkiv_4424">
-										 						<option value="">-vælg-</option>
+										 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 											 				  	<c:forEach var="code" items="${model.certifikatKoderR44_2CodeList}" >
 											 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_4424 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																</c:forEach>  
@@ -1724,7 +1724,7 @@
 														</td>
 														<td class="text12">Cert.kode
 															<select name="dkiv_4425" id="dkiv_4425">
-										 						<option value="">-vælg-</option>
+										 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 											 				  	<c:forEach var="code" items="${model.certifikatKoderR44_2CodeList}" >
 											 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_4425 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																</c:forEach>  
@@ -1738,7 +1738,7 @@
 														</td>
 														<td class="text12">Cert.kode
 															<select name="dkiv_4426" id="dkiv_4426">
-										 						<option value="">-vælg-</option>
+										 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 											 				  	<c:forEach var="code" items="${model.certifikatKoderR44_2CodeList}" >
 											 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_4426 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																</c:forEach>  
@@ -1752,7 +1752,7 @@
 														</td>
 														<td class="text12">Cert.kode
 															<select name="dkiv_4427" id="dkiv_4427">
-										 						<option value="">-vælg-</option>
+										 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 											 				  	<c:forEach var="code" items="${model.certifikatKoderR44_2CodeList}" >
 											 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_4427 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																</c:forEach>  
@@ -1766,7 +1766,7 @@
 														</td>
 														<td class="text12">Cert.kode
 															<select name="dkiv_4428" id="dkiv_4428">
-										 						<option value="">-vælg-</option>
+										 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 											 				  	<c:forEach var="code" items="${model.certifikatKoderR44_2CodeList}" >
 											 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_4428 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																</c:forEach>  
@@ -1780,7 +1780,7 @@
 														</td>
 														<td class="text12"><span title="dkiv_4429">Cert.kode</span>
 															<select name="dkiv_4429" id="dkiv_4429">
-										 						<option value="">-vælg-</option>
+										 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 											 				  	<c:forEach var="code" items="${model.certifikatKoderR44_2CodeList}" >
 											 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_4429 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																</c:forEach>  
@@ -1824,7 +1824,7 @@
 									</td>
 						            <td class="text14" >
 				           				<select name="dkiv_443" id="dkiv_443">
-					 						<option value="">-vælg-</option>
+					 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 						 				  	<c:forEach var="code" items="${model.vabCertifikatKoderR44_3CodeList}" >
 						 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_443 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 											</c:forEach>  
@@ -1851,7 +1851,7 @@
 									</td>
 						            <td class="text14" >
 				           				<select name="dkiv_444b" id="dkiv_444b">
-					 						<option value="">-vælg-</option>
+					 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 						 				  	<c:forEach var="code" items="${model.pdokumentationsKoderR44_4CodeList}" >
 						 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_444b == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 											</c:forEach>  
@@ -1910,7 +1910,7 @@
 				           			<td class="text12">
 				           				<span title="dkiv_449a">&nbsp;&nbsp;&nbsp;&nbsp;Kode</span>
 				           				<select name="dkiv_449a" id="dkiv_449a">
-					 						<option value="">-vælg-</option>
+					 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 						 				  	<c:forEach var="code" items="${model.oplysningsTypeCodeList}" >
 						 				  		<c:choose>
 													<c:when test="${not empty model.record.dkiv_449a}">
@@ -1947,7 +1947,7 @@
 				           				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span title="dkiv_446ka">Kode</span>
 				           				&nbsp;
 				           				<select name="dkiv_446ka" id="dkiv_446ka">
-				           					<option value="">-vælg-</option>
+				           					<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 					 						<c:forEach var="code" items="${model.supplerandeVareoplysningsKoderR44_6CodeList}" >
 						 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_446ka == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 											</c:forEach>  
@@ -1978,7 +1978,7 @@
 															<tr>
 																<td 	align="right"><b>2.</b>
 																	<select name="dkiv_446kb" id="dkiv_446kb">
-													            		<option value="">-vælg-</option>
+													            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 													 				  	<c:forEach var="code" items="${model.supplerandeVareoplysningsKoderR44_6CodeList}" >
 													 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_446kb == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																		</c:forEach> 
@@ -2006,7 +2006,7 @@
 															<tr>
 																<td align="right"><b>3.</b>
 																	<select name="dkiv_446kf" id="dkiv_446kf">
-													            		<option value="">-vælg-</option>
+													            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 													 				  	<c:forEach var="code" items="${model.supplerandeVareoplysningsKoderR44_6CodeList}" >
 													 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_446kf == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																		</c:forEach> 
@@ -2034,7 +2034,7 @@
 															<tr>
 																<td align="right"><b>4.</b>
 																	<select name="dkiv_446kj" id="dkiv_446kj">
-													            		<option value="">-vælg-</option>
+													            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 													 				  	<c:forEach var="code" items="${model.supplerandeVareoplysningsKoderR44_6CodeList}" >
 													 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_446kj == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																		</c:forEach> 
@@ -2062,7 +2062,7 @@
 															<tr>
 																<td align="right"><b>5.</b>
 																	<select name="dkiv_446kn" id="dkiv_446kn">
-													            		<option value="">-vælg-</option>
+													            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 													 				  	<c:forEach var="code" items="${model.supplerandeVareoplysningsKoderR44_6CodeList}" >
 													 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_446kn == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																		</c:forEach> 
@@ -2090,7 +2090,7 @@
 															<tr>
 																<td align="right"><b>6.</b>
 																	<select name="dkiv_446kr" id="dkiv_446kr">
-													            		<option value="">-vælg-</option>
+													            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 													 				  	<c:forEach var="code" items="${model.supplerandeVareoplysningsKoderR44_6CodeList}" >
 													 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_446kr == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																		</c:forEach> 
@@ -2192,7 +2192,7 @@
 															</td>
 															<td align="left" valign="bottom">
 										            			<select name="dkiv_314b" id="dkiv_314b">
-												            		<option value="">-vælg-</option>
+												            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 												 				  	<c:forEach var="code" items="${model.emballageCodeList}" >
 								                                	 	<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_314b == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																	</c:forEach> 
@@ -2208,7 +2208,7 @@
 															</td>
 															<td align="left" valign="bottom">
 										            			<select name="dkiv_314c" id="dkiv_314c">
-												            		<option value="">-vælg-</option>
+												            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 												 				  	<c:forEach var="code" items="${model.emballageCodeList}" >
 								                                	 	<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_314c == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																	</c:forEach> 
@@ -2225,7 +2225,7 @@
 															</td>
 															<td align="left" valign="bottom">
 										            			<select name="dkiv_314d" id="dkiv_314d">
-												            		<option value="">-vælg-</option>
+												            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 												 				  	<c:forEach var="code" items="${model.emballageCodeList}" >
 								                                	 	<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_314d == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																	</c:forEach> 
@@ -2241,7 +2241,7 @@
 															</td>
 															<td align="left" valign="bottom">
 										            			<select name="dkiv_314e" id="dkiv_314e">
-												            		<option value="">-vælg-</option>
+												            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 												 				  	<c:forEach var="code" items="${model.emballageCodeList}" >
 								                                	 	<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_314e == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 																	</c:forEach> 
@@ -2866,7 +2866,7 @@
 																	<td class="text12">
 																		<%-- Note: onChange event in jQuery for this currency list --%>
 														 				<select name="dkiv_t25c" id="dkiv_t25c" >
-														 				  <option value="">-vælg-</option>	
+														 				  <option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>	
 														 				  <c:forEach var="currency" items="${model.currencyCodeList}" >
 													 				  		<option value="${currency.dkkd_kd}">${currency.dkkd_kd}</option>
 																		  </c:forEach>  

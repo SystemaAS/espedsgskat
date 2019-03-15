@@ -119,7 +119,7 @@
  	        <tr>
 				<td align="left" >&nbsp;
            			<select class="selectMediumBlueE2" name="avd" id="avd">
-	            		<option value="">-vælg-</option>
+	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 	 				  	<c:forEach var="record" items="${model.avdList}" >
                    	 		<option value="${record.avd}"<c:if test="${searchFilterSkatImport.avd == record.avd}"> selected </c:if> >${record.avd}<c:if test="${record.tst == '1'}">&nbsp;(test)</c:if></option>                       	 	
 						</c:forEach> 
@@ -127,7 +127,7 @@
 				</td>
 				<td align="left" >
            			<select class="selectMediumBlueE2" name="sign" id="sign">
-	            		<option value="">-vælg-</option>
+	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 	 				  	<c:forEach var="record" items="${model.signList}" >
                              	 	<option value="${record.sign}"
                              	 		<c:if test="${searchFilterSkatImport.sign == record.sign}"> selected </c:if> >
@@ -140,7 +140,7 @@
 				<td align="left" ><input type="text" class="inputText" name="xrefnr" id="xrefnr"size="8" maxlength="35" value='${searchFilterSkatImport.xrefnr}'>&nbsp;</td>
 				<td align="left" >
 					<select class="selectMediumBlueE2" name="aart" id="aart">
-   	 				   <option value="">-vælg-</option>
+   	 				   <option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 	 				   <c:forEach var="record" items="${model.angivelsesArterCodeList}" >
  				  			<option value="${record.dkkd_kd}"<c:if test="${searchFilterSkatImport.aart == record.dkkd_kd}"> selected </c:if> >${record.dkkd_kd}&nbsp;${record.dkkd_kd2}</option>
 					   </c:forEach>  
@@ -302,7 +302,7 @@
 	 									<tr>
 											<td class="text14MediumBlue">
 												<select class="newAvd" name="newAvd${counter.count}" id="newAvd${counter.count}">
-								            		<option value="">-vælg-</option>
+								            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 								 				  	<c:forEach var="record" items="${model.avdList}" >
 							                             	 	<option value="${record.avd}">${record.avd}</option>
 													</c:forEach> 
@@ -310,7 +310,7 @@
 											</td>
 											<td class="text14MediumBlue">
 												<select class="newSign" name="newSign${counter.count}" id="newSign${counter.count}">
-								            		<option value="">-vælg-</option>
+								            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 								 				  	<c:forEach var="record" items="${model.signList}" >
 							                             	 	<option value="${record.sign}">${record.sign}</option>
 													</c:forEach> 
@@ -376,7 +376,7 @@
 						<tr>
 							<td class="text14MediumBlue">
 								<select class="selectMediumBlueE2" name="selectedAvd" id="selectedAvd">
-				            		<option value="">-vælg-</option>
+				            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 				 				  	<c:forEach var="record" items="${model.avdList}" >
 			                             	 	<option value="${record.avd}" <c:if test="${user.asavd == record.avd}"> selected </c:if> >${record.avd}</option>
 									</c:forEach> 

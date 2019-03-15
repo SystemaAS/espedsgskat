@@ -466,7 +466,7 @@
 							            </td>
 										<td align="left" nowrap>
 							            	<select class="inputTextMediumBlueMandatoryField" name="dkef_vakd" id="dkef_vakd">
-						 						<option value="">-vælg-</option>	
+						 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>	
 								 				  <c:forEach var="currency" items="${model.currencyCodeList}" >
 							 				  		<option value="${currency.dkkd_kd}"<c:if test="${ model.record.dkef_vakd == currency.dkkd_kd}"> selected </c:if> >${currency.dkkd_kd}</option>
 												  </c:forEach> 

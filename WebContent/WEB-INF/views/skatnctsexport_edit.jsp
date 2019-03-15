@@ -232,7 +232,7 @@
 					&nbsp;<font class="text16RedBold" >*</font>Afdelning:&nbsp;
 					<%-- Must be model attribute in order to validate towards the filter (thavd) --%>
            			<select class="selectMediumBlueE2" name="avd" id="avd">
-	            		<option value="">-vælg-</option>
+	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 	 				  	<c:forEach var="record" items="${model.avdList}" >
                             <option value="${record.avd}"<c:if test="${model.record.thavd == record.avd}"> selected </c:if> >${record.avd}<c:if test="${record.tst == '1'}">&nbsp;(test)</c:if></option>
 						</c:forEach> 
@@ -241,7 +241,7 @@
 					<font class="text16RedBold" >*</font><span title="thsg">Sign:</span>&nbsp;
 					<%-- Must be model attribute in order to validate towards the filter (thsg) --%>
            			<select class="selectMediumBlueE2" name="sign" id="sign">
-	            		<option value="">-vælg-</option>
+	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 	 				  	<c:forEach var="record" items="${model.signList}" >
                              	 	<option value="${record.sign}"<c:if test="${model.record.thsg == record.sign}"> selected </c:if> >${record.sign}</option>
 						</c:forEach> 
@@ -326,7 +326,7 @@
 				 			
 				 			<td>
 				 				<select class="inputTextMediumBlueMandatoryField" name="thdk" id="thdk" TABINDEX=1>
-				 				  <option value="">-vælg-</option>
+				 				  <option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 				 				  	<c:forEach var="code" items="${model.ncts031_DeklType_CodeList}" >
                                 	 	<option value="${code.tkkode}"<c:if test="${model.record.thdk == code.tkkode}"> selected </c:if> >${code.tkkode}</option>
 									</c:forEach> 
@@ -506,7 +506,7 @@
 							            <td align="left"><input type="text" class="inputTextMediumBlueMandatoryField"  name="thads1" id="thads1" size="30" maxlength="35" value="${model.record.thads1}"></td>
 							            <td class="text14" align="left" >
 						            		&nbsp;<select class="inputTextMediumBlue" name="thsks" id="thsks">
-							            		<option value="">-vælg-</option>
+							            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 							 				  	<c:forEach var="code" items="${model.ncts012_Sprak_CodeList}" >
 			                                	 	<option value="${code.tkkode}"<c:if test="${model.record.thsks == code.tkkode}"> selected </c:if> >${code.tkkode}</option>
 												</c:forEach> 
@@ -543,7 +543,7 @@
 								        			<td align="left"><input type="text" class="inputTextMediumBlueMandatoryField" name="thpns" id="thpns" size="10" maxlength="9" value="${model.record.thpns}"></td> 
 								            		<td align="left">
 								            			<select class="inputTextMediumBlueMandatoryField" name="thlks" id="thlks">
-										            		<option value="">-vælg-</option>
+										            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 									 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 					                                	 	<option value="${country.dkkd_kd}"<c:if test="${model.record.thlks == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 														</c:forEach> 
@@ -649,7 +649,7 @@
 							            <td align="left"><input type="text" class="inputTextMediumBlueMandatoryField" name="thadk1" id="thadk1" size="30" maxlength="35" value="${model.record.thadk1}"></td>
 							            <td class="text14" align="left" >
 							            		&nbsp;<select class="inputTextMediumBlue" name="thskk" id="thskk">
-								            		<option value="">-vælg-</option>
+								            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 								 				  	<c:forEach var="code" items="${model.ncts012_Sprak_CodeList}" >
 				                                	 	<option value="${code.tkkode}"<c:if test="${model.record.thskk == code.tkkode}"> selected </c:if> >${code.tkkode}</option>
 													</c:forEach> 
@@ -686,7 +686,7 @@
 								        			<td align="left"><input type="text" class="inputTextMediumBlueMandatoryField" name="thpnk" id="thpnk" size="10" maxlength="9" value="${model.record.thpnk}"></td> 
 								            		<td align="left">
 								            			<select class="inputTextMediumBlueMandatoryField" name="thlkk" id="thlkk">
-										            		<option value="">-vælg-</option>
+										            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 									 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 					                                	 	<option value="${country.dkkd_kd}"<c:if test="${model.record.thlkk == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 														</c:forEach> 
@@ -723,7 +723,7 @@
 				 			<td class="text14">&nbsp;<font class="text16RedBold" >*</font><span title="thgvk">Møntsort</span>
 				 				<%-- Note: onChange event in jQuery for this currency list 
 				 				<select name="thgvk" id="thgvk" >
-				 				  <option value="">-vælg-</option>	
+				 				  <option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>	
 				 				  	<c:forEach var="code" items="${model.currencyCodeList}" >
                                 	 	<option value="${code.dkkd_kd}"<c:if test="${model.record.thgvk == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 									</c:forEach> 
@@ -1011,7 +1011,7 @@
 							            		<tr>
 							            			<td>
 							            				<select class="selectMediumBlueE2" name="thgkd" id="thgkd" >
-										 				  <option value="">-vælg-</option>
+										 				  <option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 														  <option value="0"<c:if test="${model.record.thgkd == '0'}"> selected </c:if> >0</option>
 														  <option value="1"<c:if test="${model.record.thgkd == '1'}"> selected </c:if> >1</option>
 														  <option value="2"<c:if test="${model.record.thgkd == '2'}"> selected </c:if> >2</option>
@@ -1059,7 +1059,7 @@
 							            			</td>
 							            			<td align="left">
 								            			<select class="selectMediumBlueE2" name="thgbgu" id="thgbgu">
-										            		<option value="">-vælg-</option>
+										            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 									 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 					                                	 	<option value="${country.dkkd_kd}"<c:if test="${model.record.thgbgu == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 														</c:forEach> 
@@ -1082,7 +1082,7 @@
 									 			</td>
 									 			<td>
 									 				<select class="inputTextMediumBlueMandatoryField" name="thgvk" id="thgvk" >
-									 				  <option value="">-vælg-</option>	
+									 				  <option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>	
 									 				  	<c:forEach var="code" items="${model.currencyCodeList}" >
 					                                	 	<option value="${code.dkkd_kd}"<c:if test="${model.record.thgvk == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 														</c:forEach> 
@@ -1157,7 +1157,7 @@
 								</td>	
 					            <td >
 					            	<select class="inputTextMediumBlueMandatoryField" name="thalk" id="thalk">
-				 						<option value="">-vælg-</option>
+				 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 					 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 	                                	 	<option value="${country.dkkd_kd}"<c:if test="${model.record.thalk == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 										</c:forEach> 
@@ -1184,7 +1184,7 @@
 					            
 					            <td >
 					            	<select class="inputTextMediumBlueMandatoryField" name="thblk" id="thblk">
-				 						<option value="">-vælg-</option>
+				 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 					 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 	                                	 	<option value="${country.dkkd_kd}"<c:if test="${model.record.thblk == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 										</c:forEach> 
@@ -1265,7 +1265,7 @@
 				            		<font class="text16RedBold" >*</font><span title="thtalk">Nationalitet</span>
 				            		
 				            		<select class="inputTextMediumBlueMandatoryField" name="thtalk" id="thtalk">
-				 						<option value="">-vælg-</option>
+				 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 					 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 	                                	 	<option value="${country.dkkd_kd}"<c:if test="${model.record.thtalk == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 										</c:forEach> 
@@ -1277,7 +1277,7 @@
 									&nbsp;<span title="thtask">Sprog</span>
 						            		
 									<select class="selectMediumBlueE2" name="thtask" id="thtask">
-			            				<option value="">-vælg-</option>
+			            				<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 			 				  			<c:forEach var="code" items="${model.ncts012_Sprak_CodeList}" >
                                	 			<option value="${code.tkkode}"<c:if test="${model.record.thtask == code.tkkode}"> selected </c:if> >${code.tkkode}</option>
 										</c:forEach> 
@@ -1293,7 +1293,7 @@
 				            		<img onMouseOver="showPop('thtrmi_info');" onMouseOut="hidePop('thtrmi_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 				            		<b>26.</b><span title="thtrmi">Transp.måde ved afsendelsen&nbsp;</span>
 				 				  	<select class="inputTextMediumBlue" name="thtrmi" id="thtrmi">
-				 						<option value="">-vælg-</option>
+				 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 					 				  	<c:forEach var="code" items="${model.transportmadeCodeList}" >
 					 				  		<option value="${code.tkkode}"<c:if test="${model.record.thtrmi == code.tkkode}"> selected </c:if> >${code.tkkode}-${code.tktxtn}</option>
 										</c:forEach>  
@@ -1358,7 +1358,7 @@
 				            		<span title="thtglk">Nationalitet</span>
 				            		
 				            		<select class="inputTextMediumBlue" name="thtglk" id="thtglk">
-				 						<option value="">-vælg-</option>
+				 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 					 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 	                                	 	<option value="${country.dkkd_kd}"<c:if test="${model.record.thtglk == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 										</c:forEach> 
@@ -1370,7 +1370,7 @@
 									&nbsp;<span title="thtgsk">Sprog</span>
 						            		
 									<select class="selectMediumBlueE2" name="thtgsk" id="thtgsk">
-			            				<option value="">-vælg-</option>
+			            				<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 			 				  			<c:forEach var="code" items="${model.ncts012_Sprak_CodeList}" >
                                	 			<option value="${code.tkkode}"<c:if test="${model.record.thtgsk == code.tkkode}"> selected </c:if> >${code.tkkode}</option>
 										</c:forEach> 
@@ -1387,7 +1387,7 @@
 				            		<img onMouseOver="showPop('thtrm_info');" onMouseOut="hidePop('thtrm_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 		            				<b>25.</b><span title="thtrm">Transp.måde ved grænsen&nbsp;</span>
 				            		<select class="inputTextMediumBlue" name="thtrm" id="thtrm">
-			 						<option value="">-vælg-</option>
+			 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 				 				  	<c:forEach var="code" items="${model.transportmadeCodeList}" >
 				 				  		<option value="${code.tkkode}"<c:if test="${model.record.thtrm == code.tkkode}"> selected </c:if> >${code.tkkode}-${code.tktxtn}</option>
 									</c:forEach> 
@@ -1544,7 +1544,7 @@
 								</td>
 					            <td align="left">
 	            					<select class="inputTextMediumBlueMandatoryField" name="thskfd" id="thskfd">
-			            				<option value="">-vælg-</option>
+			            				<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 			 				  			<c:forEach var="code" items="${model.ncts012_Sprak_CodeList}" >
                                	 			<option value="${code.tkkode}"<c:if test="${model.record.thskfd == code.tkkode}"> selected </c:if> >${code.tkkode}</option>
 										</c:forEach> 
@@ -1590,7 +1590,7 @@
 					            	<input type="text" class="inputTextMediumBlueMandatoryField" name="thdst" id="thdst" size="15" maxlength="15" value="${model.record.thdst}">
 					            	&nbsp;<font class="text16RedBold" >*</font><span title="thdsk">Dekl.sprog</span>
 					            	<select class="inputTextMediumBlueMandatoryField" name="thdsk" id="thdsk">
-			            				<option value="">-vælg-</option>
+			            				<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 			 				  			<c:forEach var="code" items="${model.ncts012_Sprak_CodeList}" >
                                	 			<option value="${code.tkkode}"<c:if test="${model.record.thdsk == code.tkkode}"> selected </c:if> >${code.tkkode}</option>
 										</c:forEach> 
@@ -1715,7 +1715,7 @@
 								</td>
 					           	<td class="text14" align="left">
 					           		<select class="selectMediumBlueE2" name="thdkr" id="thdkr" >
-					 				  <option value="">-vælg-</option>
+					 				  <option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 									  <option value="A3"<c:if test="${model.record.thdkr == 'A3'}"> selected </c:if> >A3</option>													  
 									</select>
 					           		
@@ -1953,7 +1953,7 @@
 									            <td align="left"><input type="text" class="inputTextMediumBlue" name="thada1" id="thada1" size="30" maxlength="35" value="${model.record.thada1}"></td>
 									            <td class="text14" align="left" >
 									            		&nbsp;<select class="selectMediumBlueE2" name="thska" id="thska">
-										            		<option value="">-vælg-</option>
+										            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 										 				  	<c:forEach var="code" items="${model.ncts012_Sprak_CodeList}" >
 						                                	 	<option value="${code.tkkode}"<c:if test="${model.record.thska == code.tkkode}"> selected </c:if> >${code.tkkode}</option>
 															</c:forEach> 
@@ -1991,7 +1991,7 @@
 										        			<td align="left"><input type="text" class="inputTextMediumBlue" name="thpna" id="thpna" size="10" maxlength="9" value="${model.record.thpna}"></td> 
 										            		<td align="left">
 										            			<select class="inputTextMediumBlueMandatoryField" name="thlka" id="thlka">
-												            		<option value="">-vælg-</option>
+												            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 											 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 							                                	 	<option value="${country.dkkd_kd}"<c:if test="${model.record.thlka == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 																</c:forEach> 
@@ -2060,7 +2060,7 @@
 								            		</td>
 				 								<td class="text14" align="left">
 									           		<select class="selectMediumBlueE2" name="thdfsk" id="thdfsk">
-							            				<option value="">-vælg-</option>
+							            				<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 							 				  			<c:forEach var="code" items="${model.ncts012_Sprak_CodeList}" >
 				                               	 			<option value="${code.tkkode}"<c:if test="${model.record.thdfsk == code.tkkode}"> selected </c:if> >${code.tkkode}</option>
 														</c:forEach> 
@@ -2187,7 +2187,7 @@
 					            				<img onMouseOver="showPop('spesOmstand_info');" onMouseOut="hidePop('spesOmstand_info');"style="vertical-align:middle;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 					            				<span title="thspom">Spes.omstændighed</span>&nbsp;
 					            				<select class="selectMediumBlueE2" name="thspom" id="thspom">
-					            				<option value="">-vælg-</option>
+					            				<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 					 				  			<c:forEach var="code" items="${model.ncts096_SpecOmst_CodeList}" >
 	                             	 				<option value="${code.tkkode}"<c:if test="${model.record.thspom == code.tkkode}"> selected </c:if> >${code.tkkode}</option>
 												</c:forEach> 
@@ -2206,7 +2206,7 @@
 					            				<img onMouseOver="showPop('betalmade_info');" onMouseOut="hidePop('betalmade_info');"style="vertical-align:middle;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 					            				<span title="thtkbm">Transp.kost/Betal.måde</span>&nbsp;
 					            				<select class="selectMediumBlueE2" name="thtkbm" id="thtkbm">
-					            				<option value="">-vælg-</option>
+					            				<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 					 				  			<c:forEach var="code" items="${model.ncts116_BetalningTransport_CodeList}" >
 	                             	 				<option value="${code.tkkode}"<c:if test="${model.record.thtkbm == code.tkkode}"> selected </c:if> >${code.tkkode}</option>
 												</c:forEach> 
@@ -2228,7 +2228,7 @@
 					            			</td>
 					            			<td class="text14">&nbsp;&nbsp;<span title="thlosdsk">Lossested sprogkode</span>
 					            				<select class="selectMediumBlueE2" name="thlosdsk" id="thlosdsk">
-					            				<option value="">-vælg-</option>
+					            				<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 					 				  			<c:forEach var="code" items="${model.ncts012_Sprak_CodeList}" >
 				                             	 			<option value="${code.tkkode}"<c:if test="${model.record.thlosdsk == code.tkkode}"> selected </c:if> >${code.tkkode}</option>
 												</c:forEach> 
@@ -2252,7 +2252,7 @@
 					            				<tr>
 						            				<td>
 						            				<select class="selectMediumBlueE2" name="thlkr1" id="thlkr1">
-									            		<option value="">-vælg-</option>
+									            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 								 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 				                                	 	<option value="${country.dkkd_kd}"<c:if test="${model.record.thlkr1 == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 													</c:forEach> 
@@ -2260,7 +2260,7 @@
 												</td>
 												<td>
 						            				<select class="selectMediumBlueE2" name="thlkr2" id="thlkr2">
-									            		<option value="">-vælg-</option>
+									            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 								 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 				                                	 	<option value="${country.dkkd_kd}"<c:if test="${model.record.thlkr2 == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 													</c:forEach> 
@@ -2268,7 +2268,7 @@
 												</td>
 												<td>
 						            				<select class="selectMediumBlueE2" name="thlkr3" id="thlkr3">
-									            		<option value="">-vælg-</option>
+									            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 								 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 				                                	 	<option value="${country.dkkd_kd}"<c:if test="${model.record.thlkr3 == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 													</c:forEach> 
@@ -2276,7 +2276,7 @@
 												</td>
 												<td>
 												<select class="selectMediumBlueE2" name="thlkr4" id="thlkr4">
-									            		<option value="">-vælg-</option>
+									            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 								 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 				                                	 	<option value="${country.dkkd_kd}"<c:if test="${model.record.thlkr4 == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 													</c:forEach> 
@@ -2286,7 +2286,7 @@
 					            				<tr>	
 						            				<td>
 						            				<select class="selectMediumBlueE2" name="thlkr5" id="thlkr5">
-									            		<option value="">-vælg-</option>
+									            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 								 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 				                                	 	<option value="${country.dkkd_kd}"<c:if test="${model.record.thlkr5 == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 													</c:forEach> 
@@ -2294,7 +2294,7 @@
 						            				</td>
 						            				<td>
 						            				<select class="selectMediumBlueE2" name="thlkr6" id="thlkr6">
-									            		<option value="">-vælg-</option>
+									            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 								 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 				                                	 	<option value="${country.dkkd_kd}"<c:if test="${model.record.thlkr6 == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 													</c:forEach> 
@@ -2302,7 +2302,7 @@
 						            				</td>
 						            				<td>
 						            				<select class="selectMediumBlueE2" name="thlkr7" id="thlkr7">
-									            		<option value="">-vælg-</option>
+									            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 								 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 				                                	 	<option value="${country.dkkd_kd}"<c:if test="${model.record.thlkr7 == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 													</c:forEach> 
@@ -2310,7 +2310,7 @@
 												</td>
 												<td>
 						            				<select class="selectMediumBlueE2" name="thlkr8" id="thlkr8">
-									            		<option value="">-vælg-</option>
+									            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 								 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 				                                	 	<option value="${country.dkkd_kd}"<c:if test="${model.record.thlkr8 == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 													</c:forEach> 
@@ -2390,7 +2390,7 @@
 													            <td align="left"><input type="text" class="inputTextMediumBlue" name="thadss1" id="thadss1" size="30" maxlength="30" value="${model.record.thadss1}"></td>
 													            <td class="text14" align="left" >
 													            		&nbsp;<select class="selectMediumBlueE2" name="thskss" id="thskss">
-														            		<option value="">-vælg-</option>
+														            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 														 				  	<c:forEach var="code" items="${model.ncts012_Sprak_CodeList}" >
 										                                	 	<option value="${code.tkkode}"<c:if test="${model.record.thskss == code.tkkode}"> selected </c:if> >${code.tkkode}</option>
 																			</c:forEach> 
@@ -2428,7 +2428,7 @@
 														        			<td align="left"><input type="text" class="inputTextMediumBlue" name="thpnss" id="thpnss" size="10" maxlength="8" value="${model.record.thpnss}"></td> 
 														            		<td align="left">
 														            			<select class="selectMediumBlueE2" name="thlkss" id="thlkss">
-																            		<option value="">-vælg-</option>
+																            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 															 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 											                                	 	<option value="${country.dkkd_kd}"<c:if test="${model.record.thlkss == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 																				</c:forEach> 
@@ -2522,7 +2522,7 @@
 													            <td align="left"><input type="text" class="inputTextMediumBlue" name="thadt1" id="thadt1" size="30" maxlength="30" value="${model.record.thadt1}"></td>
 													            <td class="text14" align="left" >
 													            		&nbsp;<select class="selectMediumBlueE2" name="thskt" id="thskt">
-														            		<option value="">-vælg-</option>
+														            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 														 				  	<c:forEach var="code" items="${model.ncts012_Sprak_CodeList}" >
 										                                	 	<option value="${code.tkkode}"<c:if test="${model.record.thskt == code.tkkode}"> selected </c:if> >${code.tkkode}</option>
 																			</c:forEach> 
@@ -2559,7 +2559,7 @@
 														        			<td align="left"><input type="text" class="inputTextMediumBlue" name="thpnt" id="thpnt" size="10" maxlength="8" value="${model.record.thpnt}"></td> 
 														            		<td align="left">
 														            			<select class="selectMediumBlueE2" name="thlkt" id="thlkt">
-																            		<option value="">-vælg-</option>
+																            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 															 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 											                                	 	<option value="${country.dkkd_kd}"<c:if test="${model.record.thlkt == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 																				</c:forEach> 
@@ -2650,7 +2650,7 @@
 													            <td align="left"><input type="text" class="inputTextMediumBlue" name="thadks1" id="thadks1" size="30" maxlength="30" value="${model.record.thadks1}"></td>
 													            <td class="text14" align="left" >
 													            		&nbsp;<select class="selectMediumBlueE2" name="thskks" id="thskks">
-														            		<option value="">-vælg-</option>
+														            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 														 				  	<c:forEach var="code" items="${model.ncts012_Sprak_CodeList}" >
 										                                	 	<option value="${code.tkkode}"<c:if test="${model.record.thskks == code.tkkode}"> selected </c:if> >${code.tkkode}</option>
 																			</c:forEach> 
@@ -2687,7 +2687,7 @@
 														        			<td align="left"><input type="text" class="inputTextMediumBlue" name="thpnks" id="thpnks" size="10" maxlength="8" value="${model.record.thpnks}"></td> 
 														            		<td align="left">
 														            			<select class="selectMediumBlueE2" name="thlkks" id="thlkks">
-																            		<option value="">-vælg-</option>
+																            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 															 				  	<c:forEach var="country" items="${model.countryCodeList}" >
 											                                	 	<option value="${country.dkkd_kd}"<c:if test="${model.record.thlkks == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
 																				</c:forEach> 
@@ -2743,7 +2743,7 @@
 						<td class="text14" align="left" >&nbsp;Status</td>
 						<td class="text14MediumBlue">
 							<select class="selectMediumBlueE2" name="selectedStatus" id="selectedStatus">
-			            			<option value="">-vælg-</option>
+			            			<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 			 				  	<c:forEach var="record" items="${model.statusCodeList}" >
 		                            <option value="${record.tkkode}">${record.tkkode}</option>
 								</c:forEach> 
@@ -2777,7 +2777,7 @@
 							</td>
 							<td class="text14MediumBlue">
 								<select class="selectMediumBlueE2" name="tksk" id="tksk">
-				            		<option value="">-vælg-</option>
+				            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 				 				  	<c:forEach var="code" items="${model.ncts012_Sprak_CodeList}" >
                                	 		<option value="${code.tkkode}"<c:if test="${model.record.thskfd == code.tkkode}"> selected </c:if> >${code.tkkode}</option>
 									</c:forEach> 

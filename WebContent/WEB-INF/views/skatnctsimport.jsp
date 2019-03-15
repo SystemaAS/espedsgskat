@@ -87,7 +87,7 @@
  	        <tr>
 				<td align="left" >&nbsp;
            			<select class="selectMediumBlueE2" name="avd" id="avd">
-	            		<option value="">-vælg-</option>
+	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 	 				  	<c:forEach var="record" items="${model.avdList}" >
                         	 	<option value="${record.avd}"<c:if test="${searchFilterSkatImportNcts.avd == record.avd}"> selected </c:if> >${record.avd}<c:if test="${record.tst == '1'}">&nbsp;(test)</c:if></option>                       	 	
 						</c:forEach> 
@@ -95,7 +95,7 @@
 				</td>
 				<td align="left" >
            			<select class="selectMediumBlueE2" name="sign" id="sign">
-	            		<option value="">-vælg-</option>
+	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 	 				  	<c:forEach var="record" items="${model.signList}" >
                              	 	<option value="${record.sign}"<c:if test="${searchFilterSkatImportNcts.sign == record.sign}"> selected </c:if> >${record.sign}</option>
 						</c:forEach> 
@@ -108,7 +108,7 @@
 				<td align="left" ><input type="text" class="inputText" name="status" id="status" size="2" maxlength="1" value="${searchFilterSkatImportNcts.status}">&nbsp;</td>
 				<td align="left" >
 					<select class="selectMediumBlueE2" name="forenklad" id="forenklad">
-		            		<option value="">-vælg-</option>
+		            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 		            		<option value="J" <c:if test="${searchFilterSkatImportNcts.forenklad == 'J'}"> selected </c:if> >Forenklet</option>
 		            		<option value="N" <c:if test="${searchFilterSkatImportNcts.forenklad == 'N'}"> selected </c:if> >Normal</option>
 					</select>

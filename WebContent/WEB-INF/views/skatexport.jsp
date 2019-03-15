@@ -116,7 +116,7 @@
  	        <tr>
 				<td align="left" >&nbsp;
            			<select class="selectMediumBlueE2" name="avd" id="avd">
-	            		<option value="">-vælg-</option>
+	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 	 				  	<c:forEach var="record" items="${model.avdList}" >
                        	 	<option value="${record.avd}"<c:if test="${searchFilterSkatExport.avd == record.avd}"> selected </c:if> >${record.avd}<c:if test="${record.tst == '1'}">&nbsp;(test)</c:if></option>                       	 	
 						</c:forEach> 
@@ -124,7 +124,7 @@
 				</td>
 				<td align="left" >
            			<select class="selectMediumBlueE2" name="sign" id="sign">
-	            		<option value="">-vælg-</option>
+	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 	 				  	<c:forEach var="record" items="${model.signList}" >
                        	 	<option value="${record.sign}"
                     	 		<c:if test="${searchFilterSkatExport.sign == record.sign}"> selected </c:if> >
@@ -138,7 +138,7 @@
 				
 				<td align="left" >
 					<select class="selectMediumBlueE2" name="aart" id="aart" >
-   	 				   <option value="">-vælg-</option>
+   	 				   <option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 	 				   <c:forEach var="record" items="${model.angivelsesArterCodeList}" >
  				  			<option value="${record.dkkd_kd}"<c:if test="${searchFilterSkatExport.aart == record.dkkd_kd}"> selected </c:if> >${record.dkkd_kd}&nbsp;${record.dkkd_kd2}</option>
 					   </c:forEach>  
@@ -300,21 +300,18 @@
 									<input type="hidden" name="originalAvd${counter.count}" id="originalAvd${counter.count}" value='${topic.avd}'/>
 				 					<input type="hidden" name="originalOpd${counter.count}" id="originalOpd${counter.count}" value='${topic.opd}'/>
 					 					
-									<p class="text14" >Du skal vælga nye&nbsp;<code>Afdeling</code>&nbsp;og nye&nbsp;
-										<code>Signatur</code> or at kunne kopiere en angivelse
-									</p>
-									<p class="text14" >Et nyt angivelsesnummer vil blive oprettet automatisk.
-									</p>
+									<p class="text14" ><spring:message code="systema.skat.export.dialogCopy.p1"/></p>
+									<p class="text14" ><spring:message code="systema.skat.export.dialogCopy.p2"/></p>
 									
 									<table>
 										<tr>
-											<td class="text14" align="left" >&nbsp;Afdeling</td>
-	                							<td class="text14" align="left" >&nbsp;Signatur</td>
+											<td class="text14" align="left" >&nbsp;<spring:message code="systema.skat.export.dialogCopy.table.tr1.td1"/></td>
+	                							<td class="text14" align="left" >&nbsp;<spring:message code="systema.skat.export.dialogCopy.table.tr1.td2"/></td>
 	                						</tr>
 	 									<tr>
 											<td class="text14MediumBlue">
 												<select class="newAvd" name="newAvd${counter.count}" id="newAvd${counter.count}">
-								            		<option value="">-vælg-</option>
+								            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 								 				  	<c:forEach var="record" items="${model.avdList}" >
 							                             	 	<option value="${record.avd}">${record.avd}</option>
 													</c:forEach> 
@@ -322,7 +319,7 @@
 											</td>
 											<td class="text14MediumBlue">
 												<select class="newSign" name="newSign${counter.count}" id="newSign${counter.count}">
-								            		<option value="">-vælg-</option>
+								            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 								 				  	<c:forEach var="record" items="${model.signList}" >
 							                             	 	<option value="${record.sign}">${record.sign}</option>
 													</c:forEach> 
@@ -336,7 +333,7 @@
 		               <c:choose>
 		               <c:when test="${topic.status == 'M' || empty topic.status}">	
 			               <td class="tableCell" align="center" nowrap>&nbsp;
-			               	<a onclick="javascript:return confirm('Er du sikker på at du vil slette denne?')" tabindex=-1 href="skatexport.do?action=doDelete&avd=${topic.avd}&opd=${topic.opd}">
+			               	<a onclick="javascript:return confirm('<spring:message code="systema.skat.export.dialogDelete"/>')" tabindex=-1 href="skatexport.do?action=doDelete&avd=${topic.avd}&opd=${topic.opd}">
 			               		<img valign="bottom" src="resources/images/delete.gif" border="0" alt="remove">
 			               	</a>	
 			               </td>
@@ -362,23 +359,11 @@
 				<form  action="skatexport_doFetchTopicFromTransportUppdrag.do" name="copyFromTransportUppdragForm" id="copyFromTransportUppdragForm" method="post">
 				 	<input type="hidden" name="actionGS" id="actionGS" value='doUpdate'/>
 				 	
-					<p class="text14" >Du kan hente en ny sag fra den Norske Import eller fra en Transportopdrag.
-					 	Du skal vælge&nbsp;<b>Afdeling</b>&nbsp;og&nbsp;<b>Opdragsnummer</b>.
-					</p>
-					<p class="text14">Orden til at hente er:</p>
-					<ol class="text14" >
-						<li class="text14" >
-						    En ny opdragsnummer vil blive oprettet, hvis den fil, du input er tilgængelig i enten (a) <b>Norsk Import</b> eller (b) <b>Transportopdrag</b>
-						</li>
-						<br/>
-						<li class="text14" >
-							Hvis opdraget ikke er fundet hverken i den Norske Import eller i Transportopdrag skal du oprette en ny angivelse. 
-							Du vil blive omdirigeret der automatisk.
-						</li>
-					</ol>
-					
-					<p class="text14" >Men hvis du ønsker at indtaste en ny angivelse, uden at køre denne rutine, forlader Titel og Opdragsnr. blank og klikke på <b>Fortsæt</b>.</p>
-					
+				 	<p class="text14" ><spring:message code="systema.skat.export.dialogCopyFromTransportUppdrag.p1"/></p>
+					<p class="text14"><spring:message code="systema.skat.export.dialogCopyFromTransportUppdrag.p2"/></p>
+					<ol class="text14" ><spring:message code="systema.skat.export.dialogCopyFromTransportUppdrag.ol"/></ol>
+					<p class="text14" ><spring:message code="systema.skat.export.dialogCopyFromTransportUppdrag.p3"/></p>
+					 
 					<table>
 						<tr>
 							<td class="text14" align="left" >&nbsp;Afdeling</td>
@@ -389,7 +374,7 @@
 						<tr>
 							<td class="text14MediumBlue">
 								<select class="selectMediumBlueE2" name="selectedAvd" id="selectedAvd">
-				            		<option value="">-vælg-</option>
+				            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 				 				  	<c:forEach var="record" items="${model.avdList}" >
 			                             	 	<option value="${record.avd}" <c:if test="${user.asavd == record.avd}"> selected </c:if> >${record.avd}</option>
 									</c:forEach> 
@@ -421,7 +406,7 @@
 					
 					<table>
 						<tr>
-							<td class="text14" align="left" >&nbsp;Faktisk ekspeditionstid</td>
+							<td class="text14" align="left" >&nbsp;<spring:message code="systema.skat.export.dialogSendAll.faktiskt.ekspeditionstid"/></td>
    						</tr>
 						<tr>
 							<td class="text12MediumBlue">

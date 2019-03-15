@@ -63,24 +63,32 @@
   //Present dialog box onClick (href in parent JSP)
   jq(function() {
 	  jq(".copyLink").click(function() {
+		//Localize
+		  //DA - std
+		  var dlgTitle = "Kopi Angivelse "; var btnTextOk = "Fortstæt"; var btnTextCancel = "Annullér";
+		  //EN
+		  if(jq("#usrLang").val() == "EN"){
+			  dlgTitle = "Copy declaration "; btnTextOk = "Ok"; btnTextCancel = "Cancel"; 
+		  }
+		  
 		  var id = this.id;
 		  counterIndex = id.replace("copyLink","");
 		  //setters (add more if needed)
-		  jq('#dialog'+counterIndex).dialog( "option", "title", "Kopi Angivelse " + jq('#originalOpd'+counterIndex).val() );
+		  jq('#dialog'+counterIndex).dialog( "option", "title", dlgTitle + jq('#originalOpd'+counterIndex).val() );
 		  
 		  //deal with buttons for this modal window
 		  jq('#dialog'+counterIndex).dialog({
 			 buttons: [ 
 	            {
 				 id: "dialogSave"+counterIndex,	
-				 text: "Fortsæt",
+				 text: btnTextOk,
 				 click: function(){
 					 		jq('#copyForm'+counterIndex).submit();
 				 		}
 			 	 },
 	 	 		{
 			 	 id: "dialogCancel"+counterIndex,
-			 	 text: "Annullér", 
+			 	 text: btnTextCancel, 
 				 click: function(){
 					 		//back to initial state of form elements on modal dialog
 					 		jq("#dialogSave"+counterIndex).button("option", "disabled", true);
@@ -141,22 +149,30 @@
   //Present dialog box onClick (href in parent JSP)
   jq(function() {
 	  jq("#copyFromTransportUppdragLink").click(function() {
+		  //Localize
+		  //DA - std
+		  var dlgTitle = "Hent opdrag fra SYSPED"; var btnTextOk = "Fortstæt"; var btnTextCancel = "Annullér";
+		  //EN
+		  if(jq("#usrLang").val() == "EN"){
+			  dlgTitle = "Get the order from SYSPED"; btnTextOk = "Ok"; btnTextCancel = "Cancel"; 
+		  }
+		  
 		  //setters (add more if needed)
-		  jq('#dialogCopyFromTransportUppdrag').dialog( "option", "title", "Hent opdrag fra SYSPED" );
+		  jq('#dialogCopyFromTransportUppdrag').dialog( "option", "title", dlgTitle );
 		  
 		  //deal with buttons for this modal window
 		  jq('#dialogCopyFromTransportUppdrag').dialog({
 			 buttons: [ 
 	            {
 				 id: "dialogSaveTU",	
-				 text: "Fortsæt",
+				 text: btnTextOk,
 				 click: function(){
 					 		jq('#copyFromTransportUppdragForm').submit();
 				 		}
 			 	 },
 	 	 		{
 			 	 id: "dialogCancelTU",
-			 	 text: "Annullér", 
+			 	 text: btnTextCancel, 
 				 click: function(){
 					 		//back to initial state of form elements on modal dialog
 					 		jq("#dialogSaveSU").button("option", "disabled", true);
@@ -251,22 +267,31 @@
 //Present dialog box onClick (href in parent JSP)
   jq(function() {
 	  jq("#buttonSendAll").click(function() {
+		  //Localize
+		  //DA - std
+		  var dlgTitle = "Sæt Faktisk ekspeditionstid"; var btnTextOk = "Fortstæt"; var btnTextCancel = "Annullér";
+		  //EN
+		  if(jq("#usrLang").val() == "EN"){
+			  dlgTitle = "Set the Actual expedition time"; btnTextOk = "Ok"; btnTextCancel = "Cancel"; 
+		  }
+		  
+		  
 		  //setters (add more if needed)
-		  jq('#dialogSendAll').dialog( "option", "title", "Sæt Faktisk ekspeditionstid" );
+		  jq('#dialogSendAll').dialog( "option", "title", dlgTitle );
 		  
 		  //deal with buttons for this modal window
 		  jq('#dialogSendAll').dialog({
 			 buttons: [ 
 	            {
 				 id: "buttonSaveOk",	
-				 text: "Fortstæt",
+				 text: btnTextOk,
 				 click: function(){
 	            			sendAllWithStatus11();
 				 		}
 			 	 },
 	 	 		{
 			 	 id: "buttonCancel",
-			 	 text: "Annullér", 
+			 	 text: btnTextCancel, 
 				 click: function(){
 					 		//back to initial state of form elements on modal dialog
 					 		//jq("#buttonSaveOk").button("option", "disabled", true);
