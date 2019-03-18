@@ -190,8 +190,7 @@
 							<td>
 								<table width="80%" cellspacing="0" border="0" cellpadding="0">
 									<tr>
-										<td class="text14Bold">&nbsp;Antall fakturaer&nbsp;&nbsp;<font class="text12MediumBlue"><b>${model.recordItemContainerInvoiceTopic.totalNumberOfItemLines}</b></font>
-						            	</td>
+										<td class="text14Bold">&nbsp;</td>
 						            	
 										<td align="right" class="text14">Fsum:&nbsp;
 											<input tabindex=-1 align="right" type="text" readonly class="inputText12BlueBoldReadOnly" size="12" value="${recordTopicSkatImport.dkih_222}">

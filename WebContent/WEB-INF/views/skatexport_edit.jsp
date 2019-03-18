@@ -162,7 +162,7 @@
 			
 			<tr >
 				<td align="left" class="text14MediumBlue" >
-					&nbsp;&nbsp;&nbsp;&nbsp;<span title="dkeh_syav">Afdeling:&nbsp;</span><b>${model.record.dkeh_syav}</b>&nbsp;&nbsp;<span title="dkeh_syop">Angivelse:&nbsp;</span><b>${model.record.dkeh_syop}</b>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span title="dkeh_syav"><spring:message code="systema.skat.avd"/>&nbsp;</span><b>${model.record.dkeh_syav}</b>&nbsp;&nbsp;<span title="dkeh_syop">Angivelse:&nbsp;</span><b>${model.record.dkeh_syop}</b>
 					&nbsp;&nbsp;<span title="dkeh_07">Reference-nr:&nbsp;</span><b>${model.record.dkeh_07}</b>
 					&nbsp;&nbsp;<span title="dkeh_sysg">Sign:&nbsp;</span><b>${model.record.dkeh_sysg}</b>
 				</td>
@@ -184,7 +184,7 @@
 			<tr>
 				<td align="left" class="text14MediumBlue" >
 					&nbsp;&nbsp;&nbsp;&nbsp;<span title="dkeh_mrn">MRN-nr:&nbsp;</span><b>${model.record.dkeh_mrn}</b>
-					&nbsp;&nbsp;&nbsp;&nbsp;<span title="dkeh_sydt">Dato:&nbsp;</span><%-- <b>${model.record.dkeh_sydt}</b> --%>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span title="dkeh_sydt"><spring:message code="systema.skat.date"/>&nbsp;</span><%-- <b>${model.record.dkeh_sydt}</b> --%>
 					<input onKeyPress="return numberKey(event)" type="text" class="inputTextMediumBlue" name="dkeh_sydt" id="dkeh_sydt" size="8" maxlength="8" value="${model.record.dkeh_sydt}">
 					&nbsp;&nbsp;<img onMouseOver="showPop('status_info');" onMouseOut="hidePop('status_info');" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 					<span title="dkeh_syst">Stat</span><a tabindex=-1 id="updateStatusLink" runat="server" href="#"><font class="text14MediumBlue">u</font></a>s:
@@ -201,11 +201,11 @@
 					<%-- test indicator /per avdelning --%> 
 					<c:if test="${'1' == isTestAvd}">
 						<font class="text14Red" >	
-							&nbsp;&nbsp;<b>[TEST Afdeling]</b>
+							&nbsp;&nbsp;<b>[TEST <spring:message code="systema.skat.avd"/>]</b>
 							<input type="hidden" name="testAvdFlag" id="testAvdFlag" value='${isTestAvd}'>
 						</font>
 					</c:if>
-					&nbsp;&nbsp;&nbsp;<input id="updateProformaCheckbox" type="checkbox" name="dkeh_prof" id="dkeh_prof" value="1" <c:if test="${not empty model.record.dkeh_prof}"> checked </c:if> ><span title="dkeh_prof"><font class="text14MediumBlue">Proformaangivelse</font></span>
+					&nbsp;&nbsp;&nbsp;<input id="updateProformaCheckbox" type="checkbox" name="dkeh_prof" id="dkeh_prof" value="1" <c:if test="${not empty model.record.dkeh_prof}"> checked </c:if> ><span title="dkeh_prof"><font class="text14MediumBlue"><spring:message code="systema.skat.proforma.angivelse"/></font></span>
 					<div id=updateProformaIcon style="display:inline;">
 						<a tabindex=-1 id="updateProformaLink" runat="server" href="#">
 							<img src="resources/images/update.gif" border="0" alt="edit">
@@ -232,7 +232,7 @@
 		<c:otherwise>
 			<tr >
 				<td align="left" class="text14MediumBlue">
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Afdeling:&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<spring:message code="systema.skat.avd"/>&nbsp;
            			<select class="selectMediumBlueE2" name="avd" id="avd" TABINDEX=1>
 	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 	 				  	<c:forEach var="record" items="${model.avdList}" >
@@ -266,7 +266,7 @@
 	            			<tr>
 				 			<td class="text14">
 				 				<img onMouseOver="showPop('1_1_info');" onMouseOut="hidePop('1_1_info');" style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-			 					<b>1.1</b><span title="dkeh_r011" id="v_dkeh_r011" class="validation">Ang.type&nbsp;</span>
+			 					<b>1.1</b><span title="dkeh_r011" id="v_dkeh_r011" class="validation"><spring:message code="systema.skat.decl.type"/>&nbsp;</span>
 			 					
 					           	<div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="1_1_info" class="popupWithInputText text11"  >		
@@ -289,7 +289,7 @@
 			 				</td>
 			 				<td class="text14" align="left">
 			 				<img onMouseOver="showPop('meddTyp_info');" onMouseOut="hidePop('meddTyp_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-			 				<span title="dkeh_aart" id="v_dkeh_aart" class="validation">Ang.art&nbsp;</span>
+			 				<span title="dkeh_aart" id="v_dkeh_aart" class="validation"><spring:message code="systema.skat.decl.art"/>&nbsp;</span>
 				 			
 				           	<div class="text11" style="position: relative;" align="left">
 							<span style="position:absolute;top:2px; width:250px;" id="meddTyp_info" class="popupWithInputText text11"  >	
@@ -315,7 +315,7 @@
 		 					<td class="text14" >
 		 						<img onMouseOver="showPop('1_2_info');" onMouseOut="hidePop('1_2_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 				 				<b>1.2</b>&nbsp;
-				 				<span title="dkeh_r012" id="v_dkeh_r012" class="validation">EU ang.art&nbsp;</span>
+				 				<span title="dkeh_r012" id="v_dkeh_r012" class="validation"><spring:message code="systema.skat.eu.decl.type"/>&nbsp;</span>
 				 					
 					           	<div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="1_2_info" class="popupWithInputText text11"  >	
@@ -342,10 +342,10 @@
 			 				</td>
 			 				<td class="text14" align="left">
 			 					<img onMouseOver="showPop('ajour_info');" onMouseOut="hidePop('ajour_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-				 				<span title="dkeh_ajou" id="v_dkeh_ajou" class="validation">Ajour.type&nbsp;</span>
+				 				<span title="dkeh_ajou" id="v_dkeh_ajou" class="validation"><spring:message code="systema.skat.ajour.type"/>&nbsp;</span>
 				 				<div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="ajour_info" class="popupWithInputText text11"  >	
-					           			<b>Ajourføringstype</b>
+					           			<b><spring:message code="systema.skat.ajour.type"/></b>
 					           			<ul>
 					           				<li>
 					           					<b>1</b> Rette tidligere angivelse.
@@ -384,10 +384,10 @@
 		 				<tr>
 							<td class="text14" align="left">
 								<img onMouseOver="showPop('ekspedsted_info');" onMouseOut="hidePop('ekspedsted_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-								<b>A.1</b><span title="dkeh_a1" id="v_dkeh_a1" class="validation">Eksped.sted&nbsp;</span>
+								<b>A.1</b><span title="dkeh_a1" id="v_dkeh_a1" class="validation"><spring:message code="systema.skat.expedition.place"/>&nbsp;</span>
 					           	<div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="ekspedsted_info" class="popupWithInputText text11"  >	
-					           			<b>Eksped.sted</b>
+					           			<b><spring:message code="systema.skat.expedition.place"/></b>
 					           			<br/><br/>
 					           			Ekspeditionssted, hvor varerne skal frigives til eksport.
 					           			<br/><br/>
@@ -410,10 +410,10 @@
 			 				</td>
 			 				<td align="left" class="text14">
 			 					<img onMouseOver="showPop('ekspednr_info');" onMouseOut="hidePop('ekspednr_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-								<b>A.2</b>&nbsp;<span title="dkeh_a2" id="v_dkeh_a2" class="validation">Eksped.nr.&nbsp;</span>
+								<b>A.2</b>&nbsp;<span title="dkeh_a2" id="v_dkeh_a2" class="validation"><spring:message code="systema.skat.expedition.nr"/>&nbsp;</span>
 								<div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="ekspednr_info" class="popupWithInputText text11"  >	
-					           			<b>Eksped.nummer</b>
+					           			<b><spring:message code="systema.skat.expedition.nr"/></b>
 					           			<br/><br/>
 					           			Ekspeditionsnummeret er et unikt løbenummer med tretten cifre, som indeholder 
 					           			<ul>
@@ -435,10 +435,10 @@
 		 				<tr>
 		 					<td class="text14" >
 		 						<img onMouseOver="showPop('dkeh_dtm1_info');" onMouseOut="hidePop('dkeh_dtm1_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-				 				<span title="dkeh_dtm1" id="v_dkeh_dtm1" class="validation">Forventet eksp.tid&nbsp;</span>
+				 				<span title="dkeh_dtm1" id="v_dkeh_dtm1" class="validation"><spring:message code="systema.skat.expected.exptime"/>&nbsp;</span>
 				 				<div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="dkeh_dtm1_info" class="popupWithInputText text11"  >
-					           			<b>Forventet ekspeditionstidspunkt</b>
+					           			<b><spring:message code="systema.skat.expected.exptime"/></b>
 					           			<br/><br/>
 					           			Forventet ankomst til toldekspeditionssted eller forventet indlæsningstid hos den godkendte eksportør.
 										Dato (år måned dato) og klokkeslæt (timer/minutter).
@@ -452,10 +452,10 @@
 
 				 			<td class="text14" >
 		 						<img onMouseOver="showPop('dkeh_dtm2_info');" onMouseOut="hidePop('dkeh_dtm2_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-				 				<span title="dkeh_dtm2" id="v_dkeh_dtm2" class="validation">Faktisk eksp.tid&nbsp;</span>
+				 				<span title="dkeh_dtm2" id="v_dkeh_dtm2" class="validation"><spring:message code="systema.skat.actual.exptime"/>&nbsp;</span>
 				 				<div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="dkeh_dtm2_info" class="popupWithInputText text11"  >
-					           			<b>Faktisk ekspeditionstidspunkt</b>
+					           			<b><spring:message code="systema.skat.actual.exptime"/></b>
 					           			<br/><br/>
 					           			Faktisk ekspeditionstid på et toldekspeditionssted eller tidspunktet, hvor den godkendte eksportør har overholdt sin forudanmeldelsestid.
 										Dato (år måned dato) og klokkeslæt (timer/minutter).
@@ -468,18 +468,18 @@
 		 				</tr>	
 		 				<tr height="2"><td></td></tr>
 			 			<tr>
-							<td align="left" class="text14Gray">&nbsp;
-		 						<span title="dkeh_fast_dummy">&nbsp;&nbsp;&nbsp;Faktisk.utp.sted&nbsp;</span>
+							<td align="left" class="text14">&nbsp;
+		 						<span title="dkeh_fast_dummy">&nbsp;&nbsp;&nbsp;<spring:message code="systema.skat.actual.utp.sted"/>&nbsp;</span>
 				 			</td>
 				 			<td colspan="2">
 				 				<input readonly type="text" class="inputTextReadOnly" name="dkeh_fast_dummy" id="dkeh_fast_dummy" size="30" maxlenght="25" value="${model.record.dkeh_fast}">
 			 				</td>			
 			 				<td class="text14" align="left" >
 					            <img onMouseOver="showPop('29_info');" onMouseOut="hidePop('29_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">	
-					            <b>29.</b>&nbsp;<span title="dkeh_29" id="v_dkeh_29" class="validation">Udg.toldsted</span>
+					            <b>29.</b>&nbsp;<span title="dkeh_29" id="v_dkeh_29" class="validation"><spring:message code="systema.skat.utg.toldsted"/></span>
 					            <div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="29_info" class="popupWithInputText text11"  >
-					           			<b>29. Udgangstoldsted</b>
+					           			<b>29. <spring:message code="systema.skat.utg.toldsted"/></b>
 					           			<br/><br/>
 					           			Koden for det toldsted, hvorfra varerne forventes at udpassere af EU's toldområde eller hvor forsendelsesordning begyndes.
 										<br/><br/>
@@ -491,8 +491,8 @@
 			 			</tr>
 			 			<tr height="2"><td></td></tr>
 			 			<tr>
-							<td align="left" class="text14Gray">&nbsp;
-		 						<span title="dkeh_xref">&nbsp;&nbsp;&nbsp;Ekstern ref.&nbsp;</span>
+							<td align="left" class="text14">&nbsp;
+		 						<span title="dkeh_xref">&nbsp;&nbsp;&nbsp;<spring:message code="systema.skat.externref"/>&nbsp;</span>
 				 			</td>
 				 			<td colspan="2">
 				 				<input type="text" class="inputText" name="dkeh_xref" id="dkeh_xref" size="30" maxlenght="35" value="${model.record.dkeh_xref}">
@@ -548,7 +548,7 @@
 				 			<td class="textError">
 				 				<ul>
                                     <li>
-                                    		Fel vid uppdatering/kopiering. [ERROR/WARN] ${model.errorMessage} 
+                                    		Error on update/copy [ERROR/WARN] ${model.errorMessage} 
                                     </li>
                                     <li>
                                       	[META-INFO: ${model.errorInfo}]  
@@ -570,7 +570,7 @@
 					<table align="left" class="formFrameHeader" width="100%" border="0" cellspacing="0" cellpadding="0">
 				 		<tr height="15">
 				 			<td class="text14White">
-				 				<b>&nbsp;22.</b>&nbsp;&nbsp;Faktura&nbsp;<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">
+				 				<b>&nbsp;22.</b>&nbsp;&nbsp;<spring:message code="systema.skat.invoice"/>&nbsp;<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">
 			 				</td>
 		 				</tr>
 	 				</table>
@@ -583,14 +583,14 @@
 				 		<tr>
 				 			<td class="text14">
 				 				<b>&nbsp;22.2</b>&nbsp;
-				 				<span title="dkeh_222" id="v_dkeh_222" class="validation">Fakturabeløb&nbsp;</span>
+				 				<span title="dkeh_222" id="v_dkeh_222" class="validation"><spring:message code="systema.skat.invoice.amount"/>&nbsp;</span>
 				 			</td>
 				 			<td align="left" >
 				 				<input onKeyPress="return amountKey(event)" type="text" class="inputTextMediumBlue" name="dkeh_222" id="dkeh_222" size="20" maxlength="19" value="${model.record.dkeh_222}">
 				 			</td>
 				 			<td class="text14">
 				 				<b>&nbsp;22.1</b>&nbsp;
-				 				<span title="dkeh_221" id="v_dkeh_221" class="validation">Fakuramøntsort</span>
+				 				<span title="dkeh_221" id="v_dkeh_221" class="validation"><spring:message code="systema.skat.invoice.currency"/></span>
 				 				<%-- Note: onChange event in jQuery for this currency list --%>
 				 				<select class="selectMediumBlueE2" name="dkeh_221" id="dkeh_221" >
 				 				  <option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>	
@@ -606,13 +606,13 @@
 		 				</tr>
 		 				<tr>
 			 				<td class="text14" align="left">
-				 				<span title="dkeh_221b" id="v_dkeh_221b" class="validation">&nbsp;Kurs&nbsp;</span>
+				 				<span title="dkeh_221b" id="v_dkeh_221b" class="validation">&nbsp;<spring:message code="systema.skat.invoice.rate"/>&nbsp;</span>
 				 			</td>
 				 			<td class="text14" align="left" ><input onKeyPress="return amountKey(event)" type="text" class="inputTextMediumBlue" name="dkeh_221b" id="dkeh_221b" size="20" maxlength="20" value="${model.record.dkeh_221b}"></td>
 				 			<td class="text14" align="left" >&nbsp;
-					 			<span title="dkeh_221c">Faktor</span>
+					 			<span title="dkeh_221c"><spring:message code="systema.skat.invoice.factor"/></span>
 					 			<input onKeyPress="return numberKey(event)" type="text" class="inputTextMediumBlue" name="dkeh_221c" id="dkeh_221c" size="8" maxlength="7" value="${model.record.dkeh_221c}">
-					 			&nbsp;<button title="Hente summen fra Fakturaer" name="getFakturaListSum2Button" id="getFakturaListSum2Button" class="buttonGrayWithGreenFrame" type="button" >Hente summen</button>
+					 			&nbsp;<button title="<spring:message code="systema.skat.fetchinvoice.sum"/>" name="getFakturaListSum2Button" id="getFakturaListSum2Button" class="buttonGrayWithGreenFrame" type="button" ><spring:message code="systema.skat.fetchinvoice.sum"/></button>
 				 			</td>
 		 				</tr>
 		 				<tr height="2"><td></td></tr>
@@ -628,10 +628,10 @@
 				 		<tr height="15">
 				 			<td class="text14White">
 								&nbsp;<img onMouseOver="showPop('2_info');" onMouseOut="hidePop('2_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-					 			<b>&nbsp;2.</b>Afsender/Eksportør&nbsp;<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">
+					 			<b>&nbsp;2.</b><spring:message code="systema.skat.sender"/>/<spring:message code="systema.skat.exporter"/>&nbsp;<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">
 				 				<div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="2_info" class="popupWithInputText text11"  >
-					           		<b>Afsender / Eksportør</b>
+					           		<b><spring:message code="systema.skat.sender"/> / <spring:message code="systema.skat.exporter"/></b>
 					           		<ol>
 					           			<li><b>Afsenders navn</b>
 										Det fuldstændige navn på den afsender/eksportør, der har udstedt fakturaen.
@@ -674,8 +674,8 @@
 							        	
 							        	
 							            <td class="text14" align="left" >&nbsp;&nbsp;
-							            <span title="dkeh_avkn">Kundenummer</span></td>
-							            <td class="text14" align="left" >&nbsp;&nbsp;<span title="dkeh_02b">Navn&nbsp;</span>
+							            <span title="dkeh_avkn"><spring:message code="systema.skat.kundnr"/></span></td>
+							            <td class="text14" align="left" >&nbsp;&nbsp;<span title="dkeh_02b"><spring:message code="systema.skat.name"/>&nbsp;</span>
 							            	<a tabindex="-1" id="dkeh_02bIdLink">
 											<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
 											</a>
@@ -688,7 +688,7 @@
 							        </tr>
 							        
 							        <tr>
-							            <td class="text14" align="left" >&nbsp;&nbsp;<span title="dkeh_02a" id="v_dkeh_02a" class="validation">CVR/SE-nr</span></td>
+							            <td class="text14" align="left" >&nbsp;&nbsp;<span title="dkeh_02a" id="v_dkeh_02a" class="validation"><spring:message code="systema.skat.cvr.se"/></span></td>
 							            <td class="text14" align="left" >&nbsp;&nbsp;</td>
 							        </tr>
 							        <tr>
@@ -699,9 +699,9 @@
 							        <tr height="4"><td>&nbsp;</td></tr>
 							        <tr>
 							            <td class="text14" align="left" >&nbsp;&nbsp;
-							            <span title="dkeh_02c">Adresse</span></td>
+							            <span title="dkeh_02c"><spring:message code="systema.skat.address"/></span></td>
 							            <td class="text14" align="left" >&nbsp;&nbsp;
-						            		<span title="dkeh_02d">Postnummer</span></td>
+						            		<span title="dkeh_02d"><spring:message code="systema.skat.postalcode"/></span></td>
 							        </tr>
 							        <tr>
 							            <td align="left"><input type="text" class="inputTextMediumBlue" name="dkeh_02c" id="dkeh_02c" size="30" maxlength="35" value="${model.record.dkeh_02c}"></td>
@@ -713,7 +713,7 @@
 								        		<table>
 									        		<tr>
 									            		<td class="text14" align="left" >&nbsp;&nbsp;
-									            		<span title="dkeh_02e">By</span></td>
+									            		<span title="dkeh_02e"><spring:message code="systema.skat.city"/></span></td>
 									            		<td class="text14" >&nbsp;</td>
 									            	</tr>
 									        		<tr>
@@ -727,12 +727,7 @@
 							            <td>
 								            	<table>
 									        		<tr>
-									            		
-									            		<td class="text14" align="left" >&nbsp;&nbsp;
-									            		<span title="dkeh_02f">Land</span>
-																														 			
-									            		</td>
-									            		
+									            		<td class="text14" align="left" >&nbsp;&nbsp;<span title="dkeh_02f"><spring:message code="systema.skat.country"/></span></td>
 									            	</tr>
 									        		<tr>
 									        			<td align="left">
@@ -772,10 +767,10 @@
 				 		<tr height="15">
 				 			<td class="text14White">
 				 				&nbsp;<img onMouseOver="showPop('8_info');" onMouseOut="hidePop('8_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-				 				<b>&nbsp;8.</b>Modtager&nbsp;<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">
+				 				<b>&nbsp;8.</b><spring:message code="systema.skat.receiver"/>&nbsp;<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">
 				 				<div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="8_info" class="popupWithInputText text11"  >
-						           		<b>Modtager</b>
+						           		<b><spring:message code="systema.skat.receiver"/></b>
 						           		<ol>
 						           			<li>Rubrikken skal indeholde oplysning om modtagerens navn og adresse.</li>
 											
@@ -812,8 +807,8 @@
 							        	<input type="hidden" name="orig_dkeh_08f" id="orig_dkeh_08f" value="${model.record.dkeh_08f}">
 							        	
 							            <td class="text14" align="left" >&nbsp;&nbsp;
-							            <span title="dkeh_mokn">Kundenummer</span></td>
-							            <td class="text14" align="left" >&nbsp;&nbsp;<span title="dkeh_08b" id="v_dkeh_08b" class="validation">Navn</span>&nbsp;
+							            <span title="dkeh_mokn"><spring:message code="systema.skat.kundnr"/></span></td>
+							            <td class="text14" align="left" >&nbsp;&nbsp;<span title="dkeh_08b" id="v_dkeh_08b" class="validation"><spring:message code="systema.skat.name"/></span>&nbsp;
 							            	<a tabindex="-1" id="dkeh_08bIdLink">
 											<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
 											</a>
@@ -825,7 +820,7 @@
 							        </tr>
 							        <tr>
 							            <td class="text14" align="left" >&nbsp;&nbsp;
-							            <span title="dkeh_08a">EORI</span></td>
+							            <span title="dkeh_08a"><spring:message code="systema.skat.eori"/></span></td>
 							            <td class="text14" align="left" >&nbsp;&nbsp;</td>
 							        </tr>
 							        <tr>
@@ -835,9 +830,9 @@
 							        <tr height="4"><td>&nbsp;</td></tr>
 							        <tr>
 							            <td class="text14" align="left" >&nbsp;&nbsp;
-							            <span title="dkeh_08c" id="v_dkeh_08c" class="validation">Adresse</span></td>
+							            <span title="dkeh_08c" id="v_dkeh_08c" class="validation"><spring:message code="systema.skat.address"/></span></td>
 							            <td class="text14" align="left" >&nbsp;&nbsp;
-						        			<span title="dkeh_08d" id="v_dkeh_08d" class="validation">Postnummer</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						        			<span title="dkeh_08d" id="v_dkeh_08d" class="validation"><spring:message code="systema.skat.postalcode"/></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 								            		
     							        </tr>
 							        <tr>
@@ -850,7 +845,7 @@
 							        		<table>
 								        		<tr>
 								            		<td class="text14" align="left" >&nbsp;
-								            		<span title="dkeh_08e" id="v_dkeh_08e" class="validation">By</span></td>
+								            		<span title="dkeh_08e" id="v_dkeh_08e" class="validation"><spring:message code="systema.skat.city"/></span></td>
 												<td align="left">&nbsp;</td>
 								            	</tr>
 								        		<tr>
@@ -863,7 +858,7 @@
 							            	<table>
 								        		<tr>
 								        			<td class="text14" align="left" >&nbsp;&nbsp;
-								            		<span title="dkeh_08f" id="v_dkeh_08f" class="validation">Land</span>
+								            		<span title="dkeh_08f" id="v_dkeh_08f" class="validation"><spring:message code="systema.skat.country"/></span>
 																													 			
 												</td>
 								            	</tr>
@@ -902,7 +897,7 @@
 				 		<tr height="18px">
 				 			<td class="text14White">
 				 				&nbsp;<img onMouseOver="showPop('14_b_info');" onMouseOut="hidePop('14_b_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-		 						<b>&nbsp;14.</b>Klarereren / Repræsentant&nbsp;<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">
+		 						<b>&nbsp;14.</b><spring:message code="systema.skat.klarer"/> / <spring:message code="systema.skat.representant"/>&nbsp;<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">
 				 				<div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="14_b_info" class="popupWithInputText text11"  >
 				           			<b>14.&nbsp;Klarereren/repræsentanten</b> er den juridiske person, der afgiver fortoldningen.<br/><br/>
@@ -927,11 +922,11 @@
 							            <td class="text14" align="left">&nbsp;</td> 
 							        </tr>
 							        <tr>
-							            <td class="text14" align="left" >&nbsp;&nbsp;
-							            <span title="dkeh_14a">Repr. CVR/SE-nr.</span></td>
+							            <td class="text14" align="left" >
+							            <span title="dkeh_14a"><spring:message code="systema.skat.representant"/> <spring:message code="systema.skat.cvr.se"/></span></td>
 							            
-							            <td class="text14" align="left" >&nbsp;&nbsp;
-							            <span title="dkeh_14b">Repræsentationsstatus</span></td>
+							            <td class="text14" align="left" >&nbsp;
+							            <span title="dkeh_14b"><spring:message code="systema.skat.status"/></span></td>
 							             
 							        </tr>
 							        <tr>
@@ -966,7 +961,7 @@
 					<table align="left" class="formFrameHeader" width="100%" border="0" cellspacing="0" cellpadding="0">
 				 		<tr height="15">
 				 			<td class="text14White">
-				 				<b>&nbsp;44.</b>&nbsp;Øvrige supplerende oplysninger&nbsp;/&nbsp;Certifikat&nbsp;<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">
+				 				<b>&nbsp;44.</b>&nbsp;<spring:message code="systema.skat.supplerande.opp"/>&nbsp;/&nbsp;<spring:message code="systema.skat.certificate"/>&nbsp;<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">
 			 				</td>
 		 				</tr>
 	 				</table>
@@ -985,11 +980,11 @@
 							        </tr>
 							        <tr>
 							            <td class="text14" align="left" >&nbsp;
-							            <span title="dkeh_28b">Fakt.nr.&nbsp;</span></td>
+							            <span title="dkeh_28b"><spring:message code="systema.skat.invoicenr"/>&nbsp;</span></td>
 							            <td ><input type="text" class="inputTextMediumBlue" name="dkeh_28b" id="dkeh_28b" size="18" maxlength="17" value='${ model.record.dkeh_28b}'></td>
 							            <td class="text14" align="left" >&nbsp;&nbsp;&nbsp;
 							            <img onMouseOver="showPop('faktTyp_info');" onMouseOut="hidePop('faktTyp_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-						 				<span title="dkeh_28a">Fakt.type&nbsp;</span>
+						 				<span title="dkeh_28a"><spring:message code="systema.skat.invoicetype"/>&nbsp;</span>
 							            <div class="text11" style="position: relative;" align="left">
 										<span style="position:absolute;top:2px; width:250px;" id="faktTyp_info" class="popupWithInputText text11"  >
 						           			<font class="text14">
@@ -1007,7 +1002,7 @@
 											  	<option value="N325"<c:if test="${ model.record.dkeh_28a == 'N325'}"> selected </c:if> >N325</option>
 											</select>
 			 							</td>
-			 							<td class="text14">&nbsp;&nbsp;<span title="dkeh_28c">Fakt.dato</span>
+			 							<td class="text14">&nbsp;&nbsp;<span title="dkeh_28c"><spring:message code="systema.skat.invoicedate"/></span>
 			 								<input onKeyPress="return numberKey(event)" type="text" class="inputTextMediumBlue" name="dkeh_28c" id="dkeh_28c" size="9" maxlength="8" value="${model.record.dkeh_28c}">
 			 							</td>
 							        </tr>
@@ -1016,11 +1011,11 @@
 							        </tr>
 							        <tr>
 							            <td colspan="5" class="text14" align="left" >&nbsp;
-							            <span title="fakturaListTotSum/fakturaListTotValidCurrency">Fakturasum. fra Fakturaer&nbsp;</span>
+							            <span title="fakturaListTotSum/fakturaListTotValidCurrency"><spring:message code="systema.skat.invoicesum.frominvoices"/>&nbsp;</span>
 							            <input readonly type="text" class="inputTextReadOnly"  name="fakturaListTotSum" id="fakturaListTotSum" size="15" value='${ model.record.fakturaListTotSum}'>
 							            &nbsp;&nbsp;
 							            <input readonly type="text" class="inputTextReadOnly"  name="fakturaListTotValidCurrency" id="fakturaListTotValidCurrency" size="5" value='${ model.record.fakturaListTotValidCurrency}'>
-							            &nbsp;<button title="Hente summen fra Fakturaer" name="getFakturaListSumButton" id="getFakturaListSumButton" class="buttonGrayWithGreenFrame" type="button" >Hente summen</button>
+							            &nbsp;<button title="<spring:message code="systema.skat.fetchinvoice.sum"/>" name="getFakturaListSumButton" id="getFakturaListSumButton" class="buttonGrayWithGreenFrame" type="button" ><spring:message code="systema.skat.fetchinvoice.sum"/></button>
 							            <input type="hidden" name="fakturaListTotKurs" id="fakturaListTotKurs" value='${ model.record.fakturaListTotKurs}'>
 							            <input type="hidden" name="fakturaListTotFaktnr" id="fakturaListTotFaktnr" value='${ model.record.fakturaListTotFaktnr}'>
 							            </td>
@@ -1073,10 +1068,10 @@
 					 		<tr>
 					            <td class="text14" align="left" >
 					            <img onMouseOver="showPop('17_a_info');" onMouseOut="hidePop('17_a_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-			 					<b>17a.</b><span title="dkeh_17a" id="v_dkeh_17a" class="validation">Bestem.land</span>&nbsp;
+			 					<b>17a.</b><span title="dkeh_17a" id="v_dkeh_17a" class="validation"><spring:message code="systema.skat.bestemland"/></span>&nbsp;
 					            <div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="17_a_info" class="popupWithInputText text11"  >
-					           			<b>17a. Bestemmelsesland</b>
+					           			<b>17a. <spring:message code="systema.skat.bestemland"/></b>
 					           			<br/><br/>
 					           			Koden for bestemmelseslandet. Koderne fremgår af landefortegnelsen i bilag 37. Eller se kodetabeller i e-Export under virksomheder Told - Erhverv på http://www.skat.dk/
 					           			<br/><br/>
@@ -1120,7 +1115,7 @@
 							<tr>
 					            <td class="text14" align="left" >
 					            <img onMouseOver="showPop('18_1_info');" onMouseOut="hidePop('18_1_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-			 					<b>18.1</b>&nbsp;<span title="dkeh_181" id="v_dkeh_181" class="validation">Transp.ID</span>
+			 					<b>18.1</b>&nbsp;<span title="dkeh_181" id="v_dkeh_181" class="validation"><spring:message code="systema.skat.transport.id"/></span>
 			 					<div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="18_1_info" class="popupWithInputText text11"  >
 					           			<b>18.1 Transportmidlets identitet ved afgang</b>
@@ -1148,7 +1143,7 @@
 					 		<tr>
 					            <td class="text14" align="left">
 					            <img onMouseOver="showPop('21_info');" onMouseOut="hidePop('21_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-					            <b>21</b><span title="dkeh_21">&nbsp;Transportmidlets nationalitet ved udførsel&nbsp;</span>
+					            <b>21</b><span title="dkeh_21">&nbsp;<spring:message code="systema.skat.vehicle.nationality.atexport"/>&nbsp;</span>
 					            
 					            <div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="21_info" class="popupWithInputText text11"  >
@@ -1189,10 +1184,10 @@
 					            <td class="text14" align="left" >
 					            <img onMouseOver="showPop('25_info');" onMouseOut="hidePop('25_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 					            <b>25.</b>
-					            <span title="dkeh_25" id="v_dkeh_25" class="validation" >Transp.måde ved grænsen&nbsp;</span>
+					            <span title="dkeh_25" id="v_dkeh_25" class="validation" ><spring:message code="systema.skat.transport.mode"/>&nbsp;</span>
 					            <div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="25_info" class="popupWithInputText text11"  >
-					           			<b>25. Transportmåde ved grænsen</b>
+					           			<b>25. <spring:message code="systema.skat.transport.mode"/></b>
 					           			<br/><br/>
 					           			Koden for den transportmåde, der anvendes ved transporten over EU's ydre grænse. 
 					           			Denne transportmåde skal være i overensstemmelse med det aktive transportmiddel angivet i rubrik 21. 
@@ -1214,10 +1209,10 @@
 					            <td class="text14" align="left" >
 					            <img onMouseOver="showPop('26_info');" onMouseOut="hidePop('26_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 					            <b>26.</b>
-					            <span title="dkeh_26" id="v_dkeh_26" class="validation">Indenlandsk transp.måde&nbsp;</span>
+					            <span title="dkeh_26" id="v_dkeh_26" class="validation"><spring:message code="systema.skat.transport.mode.domestic"/>&nbsp;</span>
 					            <div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="26_info" class="popupWithInputText text11"  >
-					           			<b>26. Indenlandsk transportmåde</b>
+					           			<b>26. <spring:message code="systema.skat.transport.mode.domestic"/></b>
 					           			<br/><br/>
 					           			Koden for den transportmåde, der anvendes ved varernes frigivelse til udførsel af EU's toldområde. 
 					           			Udfyldelsen er obligatorisk, og der anvendes de koder, der er anført i bilag 145.
@@ -1266,10 +1261,10 @@
 				 			<tr>
 				            <td class="text14" align="left" >
 				            <img onMouseOver="showPop('s13_info');" onMouseOut="hidePop('s13_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-		 					<b>S13.1</b><span title="dkeh_s131" id="v_dkeh_s131" class="validation">&nbsp;Transitlandskode</span>&nbsp;
+		 					<b>S13.1</b><span title="dkeh_s131" id="v_dkeh_s131" class="validation">&nbsp;<spring:message code="systema.skat.transitland.code"/></span>&nbsp;
 				            <div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="s13_info" class="popupWithInputText text11"  >
-				           			<b>S13. Transitlandskode</b>
+				           			<b>S13. <spring:message code="systema.skat.transitland.code"/></b>
 				           			<br/><br/>
 				           			Landekode/koder indsættes. 
 				           			<br/><br/>
@@ -1293,10 +1288,10 @@
 							<tr>
 				            <td class="text14" align="left" >
 				            <img onMouseOver="showPop('s132_info');" onMouseOut="hidePop('s132_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-		 					<b>S13.2</b><span title="dkeh_s132">&nbsp;Transitlandskode-2</span>&nbsp;
+		 					<b>S13.2</b><span title="dkeh_s132">&nbsp;<spring:message code="systema.skat.transitland.code"/>-2</span>&nbsp;
 				            <div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="s132_info" class="popupWithInputText text11"  >
-				           			<b>S13.2 Transitlandskode-2</b>
+				           			<b>S13.2 <spring:message code="systema.skat.transitland.code"/>-2</b>
 				           			<br/><br/>
 				           			Landekode/koder indsættes. 
 				           			<br/><br/>
@@ -1314,13 +1309,13 @@
 									<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
 								</a>
 								&nbsp;
-								<button name="transitCountriesButton" class="buttonGray" type="button" onClick="showPop('transitCountries');" >Mere transit</button> 
+								<button name="transitCountriesButton" class="buttonGray" type="button" onClick="showPop('transitCountries');" ><spring:message code="systema.skat.more"/></button> 
 							        <span style="position:absolute; left:950px; top:300px; width:250px; height:200px;" id="transitCountries" class="popupWithInputText"  >
 						           		<div class="text10" align="left" valign="top">
 						           			<table>
 						           				<tr>
 								           			<td class="text11">
-														<b>S13.3</b><span title="dkeh_s133">&nbsp;Transitland 3</span>
+														<b>S13.3</b><span title="dkeh_s133">&nbsp;<spring:message code="systema.skat.transitland.code"/> 3</span>
 													</td>
 													<td>
 									           			<select class="selectMediumBlueE2" name="dkeh_s133" id="dkeh_s133">
@@ -1333,7 +1328,7 @@
 												</tr>
 								           		<tr>
 								           			<td class="text11">
-														<b>S13.4</b><span title="dkeh_s134">&nbsp;Transitland 4</span>
+														<b>S13.4</b><span title="dkeh_s134">&nbsp;<spring:message code="systema.skat.transitland.code"/> 4</span>
 													</td>
 													<td>
 									           			<select class="selectMediumBlueE2" name="dkeh_s134" id="dkeh_s134">
@@ -1346,7 +1341,7 @@
 												</tr>
 												<tr>
 								           			<td class="text11">
-														<b>S13.5</b><span title="dkeh_s135">&nbsp;Transitland 5</span>
+														<b>S13.5</b><span title="dkeh_s135">&nbsp;<spring:message code="systema.skat.transitland.code"/> 5</span>
 													</td>
 													<td>
 									           			<select class="selectMediumBlueE2" name="dkeh_s135" id="dkeh_s135">
@@ -1383,10 +1378,10 @@
 							<tr>
 				            <td class="text14" align="left" >
 				            <img onMouseOver="showPop('dkeh_201_info');" onMouseOut="hidePop('dkeh_201_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-		 					<b>20.1</b><span title="dkeh_201">&nbsp;Leveringsbetingelser [kode]</span>&nbsp;
+		 					<b>20.1</b><span title="dkeh_201">&nbsp;<spring:message code="systema.skat.termsofdelivery.code"/></span>&nbsp;
 				            <div class="text11" style="position: relative;" align="left">
 							<span style="position:absolute;top:2px; width:250px;" id="dkeh_201_info" class="popupWithInputText text11"  >
-				           			<b>20.1 Leveringsbetingelser</b>
+				           			<b>20.1 <spring:message code="systema.skat.termsofdelivery.code"/></b>
 				           			<br/><br/>
 				           			Internationale koder for forsendelsesbetingelser og leveringsbetingelser. 
 				           			<br/><br/>
@@ -1411,10 +1406,10 @@
 			 				<tr>
 					            <td class="text14" align="left" >
 					            <img onMouseOver="showPop('dkeh_202_info');" onMouseOut="hidePop('dkeh_202_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-			 					<b>20.2</b><span title="dkeh_202">&nbsp;Sted</span>&nbsp;
+			 					<b>20.2</b><span title="dkeh_202">&nbsp;<spring:message code="systema.skat.place"/></span>&nbsp;
 					            <div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="dkeh_202_info" class="popupWithInputText text11"  >
-					           			<b>20.2 Sted</b>
+					           			<b>20.2 <spring:message code="systema.skat.place"/></b>
 					           			<br/><br/>
 					           			Sted, hvor forsendelsesbetingelser og leveringsbetingelser opfyldes. 
 					           			<br/><br/>
@@ -1432,10 +1427,10 @@
 					 		<tr>
 					            <td class="text14" align="left" >
 					            <img onMouseOver="showPop('s29_info');" onMouseOut="hidePop('s29_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-			 					<b>S29.</b>&nbsp;<span title="dkeh_s29" id="v_dkeh_s29" class="validation">Bet.måde for transp.udgifter</span>&nbsp;
+			 					<b>S29.</b>&nbsp;<span title="dkeh_s29" id="v_dkeh_s29" class="validation"><spring:message code="systema.skat.termsofpayment.transp.utgifter"/></span>&nbsp;
 					            <div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="s29_info" class="popupWithInputText text11"  >
-				           			<b>S29. Betalingsmåde for transportudgifter (Transport charges method of payment)</b>
+				           			<b>S29. <spring:message code="systema.skat.termsofpayment.transp.utgifter"/></b>
 				           			<ul>
 				           				<c:forEach var="record" items="${model.betalningsmadeCodeList}" >
 				           				<li><b>${record.dkkd_kd}</b>&nbsp;${record.dkkf_txt}</li>
@@ -1467,10 +1462,10 @@
 			 				<tr>
 					            <td class="text14" align="left" >
 					            <img onMouseOver="showPop('30_info');" onMouseOut="hidePop('30_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">	
-					            <b>30.&nbsp;Varernes placering</b>
+					            <b>30.&nbsp;<spring:message code="systema.skat.varernes.placering"/></b>
 					            <div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="30_info" class="popupWithInputText text11"  >
-					           			<b>30. Varernes placering</b>
+					           			<b>30. <spring:message code="systema.skat.varernes.placering"/></b>
 					           			<br/><br/>
 					           			Her angiver klarereren, hvor varerne kan kontrolleres. 
 					           			Hvis feltet ikke er udfyldt, vil varens placering være toldekspeditionsstedet, der er angivet i rubrik A. Rubrikken udfyldes med ISO landekode DK, SE-nummer, bevillingstype og løbenummeret på den adresse i bevillingen, som der er tale om.
@@ -1482,7 +1477,7 @@
 				            <tr>
 				            		<td class="text14" align="left" >
 					            &nbsp;&nbsp;&nbsp;30.1&nbsp;
-					            <span title="dkeh_301" id="v_dkeh_301" class="validation">Oplagshav. ISO kode</span></td>
+					            <span title="dkeh_301" id="v_dkeh_301" class="validation"><spring:message code="systema.skat.oplagshav.iso"/></span></td>
 					            <td >
 						            <select class="selectMediumBlueE2" name="dkeh_301" id="dkeh_301">
 					 				  <option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
@@ -1493,19 +1488,19 @@
 	        					<tr>
 				            		<td class="text14" align="left" >
 					            &nbsp;&nbsp;&nbsp;30.2&nbsp;
-					            <span title="dkeh_302" id="v_dkeh_302" class="validation">Oplagshav. SE-nr</span></td>
+					            <span title="dkeh_302" id="v_dkeh_302" class="validation"><spring:message code="systema.skat.oplagshav.se.nr"/></span></td>
 					            <td ><input type="text" class="inputTextMediumBlue" name="dkeh_302" id="dkeh_302" size="9" maxlength="8" value="${model.record.dkeh_302}"></td>
 	        					</tr>
 	        					<tr>
 				            		<td class="text14" align="left" >
 					            &nbsp;&nbsp;&nbsp;30.3&nbsp;
-					            <span title="dkeh_303" id="v_dkeh_303" class="validation">Bevillingstype</span></td>
+					            <span title="dkeh_303" id="v_dkeh_303" class="validation"><spring:message code="systema.skat.bevillingstype"/></span></td>
 					            <td ><input type="text" class="inputTextMediumBlue" name="dkeh_303" id="dkeh_303" size="4" maxlength="3" value="${model.record.dkeh_303}"></td>
 	        					</tr>
 	        					<tr>
 				            		<td class="text14" align="left" >
 					            &nbsp;&nbsp;&nbsp;30.4&nbsp;
-					            <span title="dkeh_304" id="v_dkeh_304" class="validation">Adresseløbenr.</span></td>
+					            <span title="dkeh_304" id="v_dkeh_304" class="validation"><spring:message code="systema.skat.address.lopenr"/></span></td>
 					            <td ><input type="text" class="inputTextMediumBlue" name="dkeh_304" id="dkeh_304" size="4" maxlength="3" value="${model.record.dkeh_304}"></td>
 	        					</tr>
 	        					<tr height="8"><td class="text"></td> </tr>
@@ -1514,10 +1509,10 @@
 					            <td class="text14" align="left" >&nbsp;&nbsp;&nbsp;
 					            <img onMouseOver="showPop('uvp_info');" onMouseOut="hidePop('uvp_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 					            30.d&nbsp;
-			 					<span title="dkeh_uvp" id="v_dkeh_uvp" class="validation">Var.plac.udpassage</span>
+			 					<span title="dkeh_uvp" id="v_dkeh_uvp" class="validation"><spring:message code="systema.skat.varernes.placering.atexport"/></span>
 			 					<div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="uvp_info" class="popupWithInputText text11"  >
-					           			<b>Varernes placering udpassage</b>
+					           			<b><spring:message code="systema.skat.varernes.placering.atexport"/></b>
 					           			<br/><br/>
 					           			Kan kun anvendes i forbindelse med ankomstregistreringer, dvs ajourføringstype = 6
 					           			<br/><br/>
@@ -1537,7 +1532,7 @@
 	        					<tr>
 					            <td class="text14" align="left" >
 					            <img onMouseOver="showPop('brut_info');" onMouseOut="hidePop('brut_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">	
-					            <span title="dkeh_brut">Bruttovægt</span>
+					            <span title="dkeh_brut"><spring:message code="systema.skat.gross.weight"/></span>
 					            <div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="brut_info" class="popupWithInputText text11"  >
 					           			<b>Samlede bruttovægt</b>
@@ -1552,10 +1547,10 @@
 					            <td class="text14" align="left" >
 					            <img onMouseOver="showPop('6_info');" onMouseOut="hidePop('6_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">	
 					            <b>6.&nbsp;</b>
-					            <span title="dkeh_06" id="v_dkeh_06" class="validation">Kolli i alt</span>
+					            <span title="dkeh_06" id="v_dkeh_06" class="validation"><spring:message code="systema.skat.total.colli"/></span>
 					            <div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="6_info" class="popupWithInputText text11"  >
-				           			<b>6. Kolli i alt</b>
+				           			<b>6. <spring:message code="systema.skat.total.colli"/></b>
 				           			<br/><br/>
 				           			Det samlede antal kolli.
 				           			<br/><br/>
@@ -1570,7 +1565,7 @@
 					        
 					        <tr>
 					        		<td class="text14Gray" align="left" >
-					        			Antal kollin (i vareposterne)&nbsp;
+					        			<spring:message code="systema.skat.total.colli.in.itemlines"/>&nbsp;
 					        		</td>
 						        	<td >
 					            		<input readonly style="text-align: right" type="text" class="inputTextReadOnly" name="sumOfAntalKolliInItemLines" id="sumOfAntalKolliInItemLines" size="20" value="${ model.record.sumOfAntalKolliInItemLinesStr}">
@@ -1596,7 +1591,7 @@
 					        </tr>
 					        <tr>
 					        		<td class="text14Gray" align="left" >
-					        			Antal vareposter &nbsp;
+					        			<spring:message code="systema.skat.numberof.itemlines"/> &nbsp;
 					        		</td>
 						        	<td >
 					            		<input readonly style="text-align: right" type="text" class="inputTextReadOnly" name="sumOfAntalItemLines" id="sumOfAntalItemLines" size="20" value="${ model.record.sumOfAntalItemLinesStr}">
@@ -1619,7 +1614,7 @@
 					        </tr>
    					        <tr>
 					        		<td class="text14Gray" align="left" >
-					        			Sum av varelinjebeløp&nbsp;
+					        			<spring:message code="systema.skat.sum.itemlines"/>&nbsp;
 					        		</td>
 						        	<td >
 					            		<input readonly style="text-align: right" type="text" class="inputTextReadOnly" name="sumTotalAmountItemLinesStr---Dummy" id="sumTotalAmountItemLinesStr---Dummy" size="20" maxlength="20" value="${ model.record.sumTotalAmountItemLinesStr}">
@@ -1689,7 +1684,7 @@
 			<table style="width:100%" class="secondarySectionHeader" border="0" cellspacing="0" cellpadding="0">
 		 		<tr height="18">
 					<td class="text14WhiteBold">
-		 				<b>&nbsp;&nbsp;&nbsp;&nbsp;Supplerende oplysninger&nbsp;</b>
+		 				<b>&nbsp;&nbsp;&nbsp;&nbsp;<spring:message code="systema.skat.additional.info"/>&nbsp;</b>
 		 				<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">
 					</td>
 					<td class="text11White" align="right">
@@ -1722,10 +1717,10 @@
 						 		<tr height="18px">
 						 			<td class="text14White">
 						 				&nbsp;<img onMouseOver="showPop('transportor_info');" onMouseOut="hidePop('transportor_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-				 						Transportør&nbsp;<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">
+				 						<spring:message code="systema.skat.carrier"/>&nbsp;<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">
 				 						<div class="text11" style="position: relative;" align="left">
 										<span style="position:absolute;top:2px; width:250px;" id="transportor_info" class="popupWithInputText text11"  >
-							           			<b>Transportør</b>
+							           			<b><spring:message code="systema.skat.carrier"/></b>
 							           			<br/><br/>
 							           			Todo
 							           			<br/><br/>
@@ -1758,7 +1753,7 @@
 									        	
 							        	
 									            <td class="text14" align="left" >&nbsp;&nbsp;
-									            <span title="dkeh_trkn">Kundenummer</span></td>
+									            <span title="dkeh_trkn"><spring:message code="systema.skat.kundnr"/></span></td>
 									            <td class="text14" align="center" >&nbsp;&nbsp;<span title="dkeh_treo" id="v_dkeh_treo" class="validation">EORI-nr.</span>
 									            	<a tabindex="-1" id="dkeh_treoIdLink">
 													<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
@@ -1773,7 +1768,7 @@
 									        
 									        <tr>
 									            <td class="text14">
-													<span title="dkeh_zkp" id="v_dkeh_zkp" class="validation">&nbsp;Transportmidlets fører</span>
+													<span title="dkeh_zkp" id="v_dkeh_zkp" class="validation">&nbsp;<spring:message code="systema.skat.driver"/></span>
 												</td>
 												<td align="center"></td>
 									        </tr>
@@ -1799,7 +1794,7 @@
 						 		<tr height="18px">
 						 			<td class="text14White">
 						 				&nbsp;<img onMouseOver="showPop('representant_info');" onMouseOut="hidePop('representant_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-				 						Repræsentant ved udpassage&nbsp;<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">
+				 						<spring:message code="systema.skat.representant"/>&nbsp;<img valign="bottom" src="resources/images/update.gif" border="0" alt="edit">
 				 						<div class="text11" style="position: relative;" align="left">
 										<span style="position:absolute;top:2px; width:250px;" id="representant_info" class="popupWithInputText text11"  >
 							           			<b>Repræsentant ved udpassage</b>
@@ -1840,8 +1835,8 @@
 									        	
 							        	
 									            <td class="text14" align="left" >&nbsp;&nbsp;
-									            <span title="dkeh_rekn">Kundenummer</span></td>
-									            <td class="text14" align="left" >&nbsp;&nbsp;<span title="dkeh_rena">Navn</span>
+									            <span title="dkeh_rekn"><spring:message code="systema.skat.kundnr"/></span></td>
+									            <td class="text14" align="left" >&nbsp;&nbsp;<span title="dkeh_rena"><spring:message code="systema.skat.name"/></span>
 									           		<a tabindex="-1" id="dkeh_renaIdLink">
 													<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
 													</a>
@@ -1853,7 +1848,7 @@
 									        </tr>
 									        <tr>
 									            <td class="text14" align="left" >&nbsp;&nbsp;
-									            <span title="dkeh_reeo" id="v_dkeh_reeo" class="validation">EORI-nr.</span></td>
+									            <span title="dkeh_reeo" id="v_dkeh_reeo" class="validation"><spring:message code="systema.skat.eori"/></span></td>
 									            <td class="text14" align="left" >&nbsp;&nbsp;</td>
 									        </tr>
 									        <tr>
@@ -1863,9 +1858,9 @@
 									        <tr height="4"><td>&nbsp;</td></tr>
 									        <tr>
 									            <td class="text14" align="left" >&nbsp;&nbsp;
-									            <span title="dkeh_rega">Adresse</span></td>
+									            <span title="dkeh_rega"><spring:message code="systema.skat.address"/></span></td>
 									            <td class="text14" align="left" >&nbsp;&nbsp;
-								        			<span title="dkeh_repo">Postnummer</span></td>
+								        			<span title="dkeh_repo"><spring:message code="systema.skat.postalcode"/></span></td>
 										            		
 									        </tr>
 									        <tr>
@@ -1878,7 +1873,7 @@
 										        		<table>
 										        		<tr>
 										            		<td class="text14" align="left" >&nbsp;
-										            		<span title="dkeh_reby">By</span></td>
+										            		<span title="dkeh_reby"><spring:message code="systema.skat.city"/></span></td>
 										            		<td align="left">&nbsp;</td>
 										            	</tr>
 										        		<tr>
@@ -1893,7 +1888,7 @@
 										            	<table>
 										        		<tr>
 										        			<td class="text14" align="left" >&nbsp;&nbsp;
-										            		<span title="dkeh_relk">Land</span>
+										            		<span title="dkeh_relk"><spring:message code="systema.skat.country"/></span>
 																																 			
 														</td>
 										            	</tr>
@@ -1930,40 +1925,40 @@
 			 				<table align="left" border="0" cellspacing="0" cellpadding="0">
 			 					<tr height="1"><td></td></tr>
 				 				<tr>
-				 					<td class="text14Bold" colspan="2">Systemdatoer&nbsp;</td>
+				 					<td class="text14Bold" colspan="2"><spring:message code="systema.skat.system.dates"/>&nbsp;</td>
 								</tr>
 							
 				 				<tr height="1"><td></td></tr>
 				 				<tr>
-				 					<td class="text14" ><span title="dkeh_godt_dummy">Godkendelsesdato:</span>&nbsp;</td>
+				 					<td class="text14" ><span title="dkeh_godt_dummy"><spring:message code="systema.skat.approval.date"/></span>&nbsp;</td>
 				 					<td class="text14">
 				 						<input readonly style="text-align: right" type="text" class="inputTextReadOnly" name="dkeh_godt_dummy" id="dkeh_godt_dummy" size="13" maxlength="12" value="${model.record.dkeh_godt}">
 				 					</td>
 								</tr>
 								<tr height="1"><td></td></tr>
 				 				<tr>
-				 					<td class="text14" ><span title="dkeh_frdt_dummy">Frigivelsetidspunkt:</span>&nbsp;</td>
+				 					<td class="text14" ><span title="dkeh_frdt_dummy"><spring:message code="systema.skat.release.time"/></span>&nbsp;</td>
 				 					<td class="text14">
 				 						<input readonly style="text-align: right" type="text" class="inputTextReadOnly" name="dkeh_frdt_dummy" id="dkeh_frdt_dummy" size="13" maxlength="12" value="${model.record.dkeh_frdt}">
 				 					</td>
 								</tr>
 								<tr height="1"><td></td></tr>
 				 				<tr>
-				 					<td class="text14" ><span title="dkeh_vadt_dummy">Valideringstidspunkt:</span>&nbsp;</td>
+				 					<td class="text14" ><span title="dkeh_vadt_dummy"><spring:message code="systema.skat.validation.time"/></span>&nbsp;</td>
 				 					<td class="text14">
 				 						<input readonly style="text-align: right" type="text" class="inputTextReadOnly" name="dkeh_vadt_dummy" id="dkeh_vadt_dummy" size="13" maxlength="12" value="${model.record.dkeh_vadt}">
 				 					</td>
 								</tr>
 								<tr height="1"><td></td></tr>
 				 				<tr>
-				 					<td class="text14" ><span title="dkeh_fedt_dummy">Fakt.eksp.tidspunkt:</span>&nbsp;</td>
+				 					<td class="text14" ><span title="dkeh_fedt_dummy"><spring:message code="systema.skat.actual.exp.time"/></span>&nbsp;</td>
 				 					<td class="text14">
 				 						<input readonly style="text-align: right" type="text" class="inputTextReadOnly" name="dkeh_fedt_dummy" id="dkeh_fedt_dummy" size="13" maxlength="12" value="${model.record.dkeh_fedt}">
 				 					</td>
 								</tr>
 								<tr height="1"><td></td></tr>
 				 				<tr>
-				 					<td class="text14" ><span title="dkeh_fudt_dummy">Fakt.udpassagetid:</span>&nbsp;</td>
+				 					<td class="text14" ><span title="dkeh_fudt_dummy"><spring:message code="systema.skat.actual.exit.time"/></span>&nbsp;</td>
 				 					<td class="text14">
 				 						<input readonly style="text-align: right" type="text" class="inputTextReadOnly" name="dkeh_fudt_dummy" id="dkeh_fudt_dummy" size="13" maxlength="8" value="${model.record.dkeh_fudt}">
 				 					</td>
@@ -1979,28 +1974,28 @@
 								</tr>
 								<tr height="1"><td></td></tr>
 			 					<tr>
-				 					<td class="text14" ><span title="dkeh_fvdt_dummy">Forv.udpassagetid:</span>&nbsp;</td>
+				 					<td class="text14" ><span title="dkeh_fvdt_dummy"><spring:message code="systema.skat.expected.exit.time"/></span>&nbsp;</td>
 				 					<td class="text14">
 				 						<input readonly style="text-align: right" type="text" class="inputTextReadOnly" name="dkeh_fvdt_dummy" id="dkeh_fvdt_dummy" size="10" maxlength="8" value="${model.record.dkeh_fvdt}">
 				 					</td>
 								</tr>
 								<tr height="1"><td></td></tr>
 				 				<tr>
-				 					<td class="text14" ><span title="dkeh_ctdt_dummy">Udt.udpassagectl:</span>&nbsp;</td>
+				 					<td class="text14" ><span title="dkeh_ctdt_dummy"><spring:message code="systema.skat.exit.ctl"/></span>&nbsp;</td>
 				 					<td class="text14">
 				 						<input readonly style="text-align: right" type="text" class="inputTextReadOnly" name="dkeh_ctdt_dummy" id="dkeh_ctdt_dummy" size="10" maxlength="8" value="${model.record.dkeh_ctdt}">
 				 					</td>
 								</tr>
 								<tr height="1"><td></td></tr>
 				 				<tr>
-				 					<td class="text14" ><span title="dkeh_cfdt_dummy">Frig.udpassagectl:</span>&nbsp;</td>
+				 					<td class="text14" ><span title="dkeh_cfdt_dummy"><spring:message code="systema.skat.release.ctl"/></span>&nbsp;</td>
 				 					<td class="text14">
 				 						<input readonly style="text-align: right" type="text" class="inputTextReadOnly" name="dkeh_cfdt_dummy" id="dkeh_cfdt_dummy" size="10" maxlength="8" value="${model.record.dkeh_cfdt}">
 				 					</td>
 								</tr>
 								<tr height="1"><td></td></tr>
 				 				<tr>
-				 					<td class="text14" ><span title="dkeh_fadt_dummy">Fakt.ank.utp.sted:</span>&nbsp;</td>
+				 					<td class="text14" ><span title="dkeh_fadt_dummy"><spring:message code="systema.skat.actual.exp.place"/></span>&nbsp;</td>
 				 					<td class="text14">
 				 						<input readonly style="text-align: right" type="text" class="inputTextReadOnly" name="dkeh_fadt_dummy" id="dkeh_fadt_dummy" size="10" maxlength="8" value="${model.record.dkeh_fadt}">
 				 					</td>
@@ -2025,10 +2020,10 @@
 							<tr>
 								<td class="text14" nowrap>
 				 					<img onMouseOver="showPop('fraktdok_info');" onMouseOut="hidePop('fraktdok_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-					 				<span title="dkeh_gis1">Fragtdok.&nbsp;</span>
+					 				<span title="dkeh_gis1"><spring:message code="systema.skat.freight.doc"/>&nbsp;</span>
 					 				<div class="text11" style="position: relative;" align="left">
 									<span style="position:absolute;top:2px; width:250px;" id="fraktdok_info" class="popupWithInputText text11"  >
-							           		<b>Fragtdokument</b>
+							           		<b><spring:message code="systema.skat.freight.doc"/></b>
 							           		<ul>
 							           			<li><b>1</b> Hvis gennemgående fragtdokument</li>
 												<li><b>0</b> Hvis direkte udførsel, [1131] = 117 </li>
@@ -2040,10 +2035,10 @@
 				 				
 				 				<td class="text14" nowrap>
 				 					<img onMouseOver="showPop('storageFlag_info');" onMouseOut="hidePop('storageFlag_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-					 				<span title="dkeh_gis2">Storage flag&nbsp;</span>
+					 				<span title="dkeh_gis2"><spring:message code="systema.skat.storage.flag"/>&nbsp;</span>
 					 				<div class="text11" style="position: relative;" align="left">
 									<span style="position:absolute;top:2px; width:250px;" id="storageFlag_info" class="popupWithInputText text11"  >
-							           		<b>Storage flag</b>
+							           		<b><spring:message code="systema.skat.storage.flag"/></b>
 							           		<ul>
 							           			<li>Storage flag = <b>0</b>, [1131] = 109 </li>
 							           		</ul>
@@ -2052,12 +2047,12 @@
 				 				</td>
 				 				<td class="text14">
 				 					<img onMouseOver="showPop('forsegl_info');" onMouseOut="hidePop('forsegl_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-					 				<span title="dkeh_gis3">Disp. for Forsegling&nbsp;</span>
+					 				<span title="dkeh_gis3"><spring:message code="systema.skat.disp.sealing"/>&nbsp;</span>
 					 				<div class="text11" style="position: relative;" align="left">
 									<span style="position:absolute;top:2px; width:250px;" id="forsegl_info" class="popupWithInputText text11"  >
-							           		<b>Disp. for Forsegling</b>
+							           		<b><spring:message code="systema.skat.disp.sealing"/></b>
 							           		<ul>
-							           			<li>Disp. For Forsegling = <b>0</b> eller <b>1</b>, [1131] = XXX</li>
+							           			<li><spring:message code="systema.skat.disp.sealing"/> = <b>0</b> eller <b>1</b>, [1131] = XXX</li>
 							           		</ul>
 									</span>
 									</div>
@@ -2090,12 +2085,12 @@
 			 				<tr>
 				 				<td class="text14" colspan="3">
 				 					<img onMouseOver="showPop('restitution_info');" onMouseOut="hidePop('restitution_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-					 				<span title="dkeh_gis4">Restitution mindre end 1000 EURO&nbsp;</span>
+					 				<span title="dkeh_gis4"><spring:message code="systema.skat.refund.1000.euro"/>&nbsp;</span>
 					 				<div class="text11" style="position: relative;" align="left">
 									<span style="position:absolute;top:2px; width:250px;" id="restitution_info" class="popupWithInputText text11"  >
-							           		<b>Restitution mindre end 1000 EURO</b>
+							           		<b><spring:message code="systema.skat.refund.1000.euro"/></b>
 							           		<ul>
-							           			<li>Restitution mindre end 1000 EURO = <b>0</b> eller <b>1</b>, [1131] = BBB</li>
+							           			<li><spring:message code="systema.skat.refund.1000.euro"/> = <b>0</b> eller <b>1</b>, [1131] = BBB</li>
 							           		</ul>
 									</span>
 									</div>
@@ -2123,10 +2118,10 @@
 					 				<tr>
 					 					<td class="text14" >
 					 					<img onMouseOver="showPop('plombering_info');" onMouseOut="hidePop('plombering_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-						 				&nbsp;<b>&nbsp;Plombering&nbsp;</b></td>
+						 				&nbsp;<b>&nbsp;<spring:message code="systema.skat.seal"/>&nbsp;</b></td>
 					 					<div class="text11" style="position: relative;" align="left">
 										<span style="position:absolute;top:2px; width:250px;" id="plombering_info" class="popupWithInputText text11"  >
-							           			<b>Plombering</b>
+							           			<b><spring:message code="systema.skat.seal"/></b>
 							           			<br/>
 							           			<ul>
 								           			<li><b>Id-1...Id-5</b> Plomb.Id (hovedsageligt til interne plomber).</li>
@@ -2143,31 +2138,31 @@
 				 				<table align="left" border="0" cellspacing="0" cellpadding="0">
 					 				<tr height="2"><td></td></tr>
 					 				<tr>
-					 					<td class="text14" >&nbsp;&nbsp;&nbsp;<span title="dkeh_d011">Plombering Id-1</span>&nbsp; </td>
+					 					<td class="text14" >&nbsp;&nbsp;&nbsp;<span title="dkeh_d011"><spring:message code="systema.skat.seal.id"/>-1</span>&nbsp; </td>
 					 					<td class="text14">
 					 						<input  type="text" class="inputTextMediumBlue" name="dkeh_d011" id="dkeh_d011" size="21" maxlength="35" value="${model.record.dkeh_d011}">
 					 					</td>
 									</tr>
 									<tr>
-					 					<td class="text14" >&nbsp;&nbsp;&nbsp;<span title="dkeh_d012">Plombering Id-2</span>&nbsp; </td>
+					 					<td class="text14" >&nbsp;&nbsp;&nbsp;<span title="dkeh_d012"><spring:message code="systema.skat.seal.id"/>-2</span>&nbsp; </td>
 					 					<td class="text14">
 					 						<input  type="text" class="inputTextMediumBlue" name="dkeh_d012" id="dkeh_d012" size="21" maxlength="35" value="${model.record.dkeh_d012}">
 					 					</td>
 									</tr>
 									<tr>
-					 					<td class="text14" >&nbsp;&nbsp;&nbsp;<span title="dkeh_d013">Plombering Id-3</span>&nbsp; </td>
+					 					<td class="text14" >&nbsp;&nbsp;&nbsp;<span title="dkeh_d013"><spring:message code="systema.skat.seal.id"/>-3</span>&nbsp; </td>
 					 					<td class="text14">
 					 						<input  type="text" class="inputTextMediumBlue" name="dkeh_d013" id="dkeh_d013" size="21" maxlength="35" value="${model.record.dkeh_d013}">
 					 					</td>
 									</tr>
 									<tr>
-					 					<td class="text14" >&nbsp;&nbsp;&nbsp;<span title="dkeh_d014">Plombering Id-4</span>&nbsp; </td>
+					 					<td class="text14" >&nbsp;&nbsp;&nbsp;<span title="dkeh_d014"><spring:message code="systema.skat.seal.id"/>-4</span>&nbsp; </td>
 					 					<td class="text14">
 					 						<input  type="text" class="inputTextMediumBlue" name="dkeh_d014" id="dkeh_d014" size="21" maxlength="35" value="${model.record.dkeh_d014}">
 					 					</td>
 									</tr>
 									<tr>
-					 					<td class="text14" >&nbsp;&nbsp;&nbsp;<span title="dkeh_d015">Plombering Id-5</span>&nbsp; </td>
+					 					<td class="text14" >&nbsp;&nbsp;&nbsp;<span title="dkeh_d015"><spring:message code="systema.skat.seal.id"/>-5</span>&nbsp; </td>
 					 					<td class="text14">
 					 						<input  type="text" class="inputTextMediumBlue" name="dkeh_d015" id="dkeh_d015" size="21" maxlength="35" value="${model.record.dkeh_d015}">
 					 					</td>
@@ -2227,10 +2222,10 @@
 					 				<tr>
 					 					<td class="text14" >
 					 					<img onMouseOver="showPop('bemaerkning_info');" onMouseOut="hidePop('bemaerkning_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-						 				&nbsp;<b>&nbsp;Bemærkning&nbsp;</b>
+						 				&nbsp;<b>&nbsp;<spring:message code="systema.skat.remark"/>&nbsp;</b>
 					 					<div class="text11" style="position: relative;" align="left">
 										<span style="position:absolute;top:2px; width:250px;" id="bemaerkning_info" class="popupWithInputText text11"  >
-							           			<b>Bemærkning</b>
+							           			<b><spring:message code="systema.skat.remark"/></b>
 							           			<br/>
 							           			<ul>
 								           			<li>Skal angives ved ajourføring type 1, 2 og 8</li>
@@ -2248,25 +2243,25 @@
 				 				<table align="left" border="0" cellspacing="0" cellpadding="0">
 					 				<tr height="2"><td></td></tr>
 					 				<tr>
-					 					<td class="text14" >&nbsp;&nbsp;&nbsp;<span title="dkeh_ftx6">Bemærkning-1</span>&nbsp; </td>
+					 					<td class="text14" >&nbsp;&nbsp;&nbsp;<span title="dkeh_ftx6"><spring:message code="systema.skat.remark"/>-1</span>&nbsp; </td>
 					 					<td class="text14">
 					 						<input  type="text" class="inputTextMediumBlue" name="dkeh_ftx6" id="dkeh_ftx6" size="30" maxlength="70" value="${model.record.dkeh_ftx6}">
 					 					</td>
 									</tr>
 									<tr>
-					 					<td class="text14" >&nbsp;&nbsp;&nbsp;<span title="dkeh_ftx7">Bemærkning-2</span>&nbsp; </td>
+					 					<td class="text14" >&nbsp;&nbsp;&nbsp;<span title="dkeh_ftx7"><spring:message code="systema.skat.remark"/>-2</span>&nbsp; </td>
 					 					<td class="text14">
 					 						<input  type="text" class="inputTextMediumBlue" name="dkeh_ftx7" id="dkeh_ftx7" size="30" maxlength="70" value="${model.record.dkeh_ftx7}">
 					 					</td>
 									</tr>
 									<tr>
-					 					<td class="text14" >&nbsp;&nbsp;&nbsp;<span title="dkeh_ftx8">Bemærkning-3</span>&nbsp; </td>
+					 					<td class="text14" >&nbsp;&nbsp;&nbsp;<span title="dkeh_ftx8"><spring:message code="systema.skat.remark"/>-3</span>&nbsp; </td>
 					 					<td class="text14">
 					 						<input  type="text" class="inputTextMediumBlue" name="dkeh_ftx8" id="dkeh_ftx8" size="30" maxlength="70" value="${model.record.dkeh_ftx8}">
 					 					</td>
 									</tr>
 									<tr>
-					 					<td class="text14" >&nbsp;&nbsp;&nbsp;<span title="dkeh_ftx9">Bemærkning-4</span>&nbsp; </td>
+					 					<td class="text14" >&nbsp;&nbsp;&nbsp;<span title="dkeh_ftx9"><spring:message code="systema.skat.remark"/>-4</span>&nbsp; </td>
 					 					<td class="text14">
 					 						<input  type="text" class="inputTextMediumBlue" name="dkeh_ftx9" id="dkeh_ftx9" size="30" maxlength="70" value="${model.record.dkeh_ftx9}">
 					 					</td>
@@ -2280,7 +2275,7 @@
 				        		<td width="2">&nbsp;</td>
 				            <td class="text14" align="left" >
 					            <img onMouseOver="showPop('indssted_info');" onMouseOut="hidePop('indssted_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">	
-					            <span title="dkeh_ind" id="v_dkeh_ind" class="validation"><b></b>&nbsp;Indladningssted</span>
+					            <span title="dkeh_ind" id="v_dkeh_ind" class="validation"><b></b>&nbsp;<spring:message code="systema.skat.inladningsted"/></span>
 					            &nbsp;&nbsp;
 				            		<select class="selectMediumBlueE2" id="dkeh_ind" name="dkeh_ind" >
 				            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
@@ -2294,7 +2289,7 @@
 								
 								<div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="indssted_info" class="popupWithInputText text11"  >
-					           			<b>Indladningssted</b>
+					           			<b><spring:message code="systema.skat.inladningsted"/></b>
 					           			<br/><br/>
 					           			Kun på Angivelsesart:
 										<ul>
@@ -2308,14 +2303,14 @@
 						<tr height="30"><td></td></tr>
 						<tr>
 							<td colspan="2" class="text14">
-							<span title="section_YM" id="v_section_YM" class="validation"><b>&nbsp;&nbsp;YM oplysninger</b></span>
-								<button name="YMPosterButton" class="buttonGray" type="button" onClick="showPop('YMPoster');" >Mere</button> 
+							<span title="section_YM" id="v_section_YM" class="validation"><b>&nbsp;&nbsp;<spring:message code="systema.skat.ym.info"/></b></span>
+								<button name="YMPosterButton" class="buttonGray" type="button" onClick="showPop('YMPoster');" ><spring:message code="systema.skat.more"/></button> 
 						        <span style="background-color:#EEEEEE; position:absolute; left:50px; top:1000px; width:900px; height:600px;" id="YMPoster" class="popupWithInputTextThickBorder"  >
 					           		<div id="ymInformationDialog" class="ownScrollableSubWindow" style="width:850px; height:580px; margin:10px;">
 					           			<nav>
 					           			<table class="formFrameTitaniumWhite" width="95%" border="0" align="left" cellspacing="2">
 					           			<tr>
-					           				<td colspan="3" class="text14"><b>YM oplysninger</b></td>
+					           				<td colspan="3" class="text14"><b><spring:message code="systema.skat.ym.info"/></b></td>
 						           		</tr>
 						           		
 						           		<tr>
@@ -2480,8 +2475,8 @@
 						<tr height="20"><td></td></tr>
 						<tr>
 							<td colspan="2" class="text14">
-							<span title="section_Proviant" id="v_section_Proviant" class="validation"><b>&nbsp;&nbsp;Proviant</b>
-								<button name="proviantButton" class="buttonGray" type="button" onClick="showPop('proviant');" >Mere</button> 
+							<span title="section_Proviant" id="v_section_Proviant" class="validation"><b>&nbsp;&nbsp;<spring:message code="systema.skat.proviant"/></b>
+								<button name="proviantButton" class="buttonGray" type="button" onClick="showPop('proviant');" ><spring:message code="systema.skat.more"/></button> 
 						        <span style="background-color:#EEEEEE; position:absolute; left:50px; top:1000px; width:900px; height:600px;" id="proviant" class="popupWithInputTextThickBorder"  >
 					           		<div id="proviantDialog" class="ownScrollableSubWindow" style="width:850px; height:580px; margin:10px;">
 					           			<nav>
@@ -2495,7 +2490,7 @@
 					           				<table >
 						           				<tr>
 						           					<td class="text14" colspan="2" >
-														&nbsp;<b>Proviant</b>
+														&nbsp;<b><spring:message code="systema.skat.proviant"/></b>
 													</td>
 												</tr>													 
 						           				<tr>
@@ -2694,7 +2689,7 @@
 			 	<input type="hidden" name="currentOpd" id="currentSign" value='${model.record.dkeh_sysg}'>
 			 	<input type="hidden" name="currentCheckboxProforma" id="currentCheckboxProforma" value=''>
 			 	
-				<p class="text14" >Proforma angivelses felter</p>
+				<p class="text14" ><spring:message code="systema.skat.proforma.angivelse"/></p>
 				<table >
 					<tr>
 					<td >
@@ -2706,7 +2701,7 @@
 							</td>
 						</tr>
 						<tr>	
-							<td class="text14" align="left" title="dkeh_godt" ><b>Godkendelsesdato</b></td>
+							<td class="text14" align="left" title="dkeh_godt" ><b><spring:message code="systema.skat.approval.date"/></b></td>
 							<td class="text14MediumBlue">
 								<input type="text" class="inputText" name="dkeh_godt" id="dkeh_godt" size="8" maxlength="8" value="${model.record.dkeh_godt}">
 							</td>
@@ -2723,31 +2718,31 @@
 							<td valign="top" width="50%">
 								<table >
 								<tr>
-									<td class="text14" align="left"  title="dkeh_frdt" >Frigivelsetidspunkt</td>
+									<td class="text14" align="left"  title="dkeh_frdt" ><spring:message code="systema.skat.release.time"/></td>
 									<td class="text14MediumBlue">
 										<input type="text" class="inputText" name="dkeh_frdt" id="dkeh_frdt" size="8" maxlength="8" value="${model.record.dkeh_frdt}">
 									</td>
 								</tr>
 								<tr>
-									<td class="text14" align="left"  title="dkeh_vadt" >Valideringstidspunkt</td>
+									<td class="text14" align="left"  title="dkeh_vadt" ><spring:message code="systema.skat.validation.time"/></td>
 									<td class="text14MediumBlue">
 										<input type="text" class="inputText" name="dkeh_vadt" id="dkeh_vadt" size="8" maxlength="8" value="${model.record.dkeh_vadt}">
 									</td>
 								</tr>
 								<tr>	
-									<td class="text14" align="left"  title="dkeh_fedt" >Fakt.eksp.tidspunkt</td>
+									<td class="text14" align="left"  title="dkeh_fedt" ><spring:message code="systema.skat.actual.exp.time"/></td>
 									<td class="text14MediumBlue">
 										<input type="text" class="inputText" name="dkeh_fedt" id="dkeh_fedt" size="8" maxlength="8" value="${model.record.dkeh_frdt}">
 									</td>
 								</tr>
 								<tr>
-									<td class="text14" align="left"  title="dkeh_fudt" >Fakt.udpassagetid</td>
+									<td class="text14" align="left"  title="dkeh_fudt" ><spring:message code="systema.skat.actual.exit.time"/></td>
 									<td class="text14MediumBlue">
 										<input type="text" class="inputText" name="dkeh_fudt" id="dkeh_fudt" size="8" maxlength="8" value="${model.record.dkeh_fudt}">
 									</td>
 								</tr>
 								<tr>
-									<td class="text14" align="left"  title="dkeh_fvdt" >Forv.udpassagetid</td>
+									<td class="text14" align="left"  title="dkeh_fvdt" ><spring:message code="systema.skat.expected.exit.time"/></td>
 									<td class="text14MediumBlue">
 										<input type="text" class="inputText" name="dkeh_fvdt" id="dkeh_fvdt" size="8" maxlength="8" value="${model.record.dkeh_fvdt}">
 									</td>
@@ -2759,25 +2754,25 @@
 								<table >
 								<tr>
 								
-								<td class="text14" align="left"  title="dkeh_ctdt" >Udt.udpassagectl</td>
+								<td class="text14" align="left"  title="dkeh_ctdt" ><spring:message code="systema.skat.exit.ctl"/></td>
 								<td class="text14MediumBlue">
 									<input type="text" class="inputText" name="dkeh_ctdt" id="dkeh_ctdt" size="8" maxlength="8" value="${model.record.dkeh_ctdt}">
 								</td>
 								</tr>
 								<tr>	
-									<td class="text14" align="left"  title="dkeh_cfdt" >Frig.udpassagectl</td>
+									<td class="text14" align="left"  title="dkeh_cfdt" ><spring:message code="systema.skat.release.ctl"/></td>
 									<td class="text14MediumBlue">
 										<input type="text" class="inputText" name="dkeh_cfdt" id="dkeh_cfdt" size="8" maxlength="8" value="${model.record.dkeh_cfdt}">
 									</td>
 								</tr>
 								<tr>	
-									<td class="text14" align="left"  title="dkeh_fadt" >Fakt.ank.utp.sted</td>
+									<td class="text14" align="left"  title="dkeh_fadt" ><spring:message code="systema.skat.actual.ank.exp.place"/></td>
 									<td class="text14MediumBlue">
 										<input type="text" class="inputText" name="dkeh_fadt" id="dkeh_fadt" size="8" maxlength="8" value="${model.record.dkeh_fadt}">
 									</td>
 								</tr>
 								<tr>	
-									<td class="text14" align="left"  title="dkeh_fast" >Faktisk.utp.sted</td>
+									<td class="text14" align="left"  title="dkeh_fast" ><spring:message code="systema.skat.actual.exp.place"/></td>
 									<td class="text14MediumBlue">
 										<input type="text" class="inputText" name="dkeh_fast" id="dkeh_fast" size="25" maxlength="25" value="${model.record.dkeh_fast}">
 									</td>
@@ -2808,7 +2803,7 @@
 						<td class="text14" align="left" >&nbsp;Type</td>
 						<td class="text14MediumBlue">
 							<select class="selectMediumBlueE2" name="selectedType" id="selectedType">
-			            		<option value="">-velg-</option>
+			            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 			            		<c:forEach var="record" items="${model.typeArchiveCodeList}" >
 			 				  		<option value="${record.artype}">${record.artype}&nbsp;${record.artxt}</option>
 								</c:forEach>  
@@ -2857,7 +2852,7 @@
 									</tr>
 									 --%>
 									<tr>
-										<td class="text11">&nbsp;Arkiv typen:</td>
+										<td class="text11">&nbsp;Archive type</td>
 										<td class="text11">&nbsp;
 											<select class="selectMediumBlueE2" tabindex=-1 name="wstype" id="wstype">
 												<c:forEach var="record" items="${user.arkivKodOpdList}" >
@@ -2868,7 +2863,7 @@
 									</tr>
 									<tr height="5"><td></td></tr>
 									<tr>	
-										<td class="text11">&nbsp;Fil:</td>
+										<td class="text11">&nbsp;File:</td>
 										<td class="text11">
 			           						&nbsp;<input type="file" name="fileUpload" id="fileUpload" />
 			       						</td>
