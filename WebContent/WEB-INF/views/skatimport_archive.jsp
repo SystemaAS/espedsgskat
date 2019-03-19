@@ -97,7 +97,7 @@
 	                    <th class="tableHeaderField">&nbsp;<spring:message code="systema.skat.import.archive.list.label.date"/>&nbsp;</th>
 	                    <th class="tableHeaderField">&nbsp;<spring:message code="systema.skat.import.archive.list.label.time"/>&nbsp;</th>
 	                    <th class="tableHeaderField">&nbsp;<spring:message code="systema.skat.import.archive.list.label.additionalInfo"/>&nbsp;</th>
-	                    <th class="tableHeaderField">&nbsp;Dokument</th> 
+	                    <th class="tableHeaderField">&nbsp;<spring:message code="systema.skat.document"/></th> 
 	                    
 	               </tr> 
 	               </thead>

@@ -98,7 +98,7 @@
 	                    <th class="tableHeaderField">&nbsp;<spring:message code="systema.skat.export.archive.list.label.date"/>&nbsp;</th>
 	                    <th class="tableHeaderField">&nbsp;<spring:message code="systema.skat.export.archive.list.label.time"/>&nbsp;</th>
 	                    <th class="tableHeaderField">&nbsp;<spring:message code="systema.skat.export.archive.list.label.additionalInfo"/>&nbsp;</th>
-	                    <th class="tableHeaderField">&nbsp;Dokument</th> 
+	                    <th class="tableHeaderField">&nbsp;<spring:message code="systema.skat.document"/></th> 
 	                    
 	               </tr>  
 	               </thead>
@@ -121,7 +121,7 @@
 		               <%-- <td class="tableCell" >&nbsp;${record.url}</td>  --%>
 		               <td class="tableCell" >&nbsp;
 		               		<a href="skat_export_renderArchive.do?fp=${record.url}" target="_new" >
-			               		<img src="resources/images/pdf.png" border="0" width="16px" height="16px" alt="Visa arkivdokument" >
+			               		<img src="resources/images/pdf.png" border="0" width="16px" height="16px" alt="Show archive document" >
 			               		${record.documentName}
 		               		</a>
 		               </td>
