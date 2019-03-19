@@ -386,7 +386,7 @@
 									<thead>
 										<tr class="tableHeaderField">
 									    <th class="text14">&nbsp;<spring:message code="systema.skat.export.item.list.label.dkev_syli.linjeNr"/>&nbsp;</th>
-									    <th class="text14">&nbsp;<spring:message code="systema.skat.export.item.list.label.dkev_syop.angNr"/>&nbsp;</th>
+									    <th class="text14">&nbsp;<spring:message code="systema.skat.update"/>&nbsp;</th>
 									    <th class="text14">&nbsp;<spring:message code="systema.skat.export.item.list.label.dkev_28b.purchaseSellerInvoice"/>&nbsp;</th>
 					                    <th class="text14" nowrap>&nbsp;<spring:message code="systema.skat.export.item.list.label.dkev_32.varepostNr"/>&nbsp;</th>   
 					                    <th class="text14" nowrap>&nbsp;<spring:message code="systema.skat.export.item.list.label.dkev_34a.oprLand"/>&nbsp;</th>
@@ -557,7 +557,7 @@
 						            	 
 							            <div class="text14" style="position: relative;" align="left">
 										<span style="position:absolute;top:2px; width:250px;" id="33_info" class="popupWithInputText text14"  >
-						           			<b>33. Varekoder</b>
+						           			<b>33. <spring:message code="systema.skat.items.varekode"/></b>
 						           			<br/><br/>
 											Her angiver klarereren den 10-cifrede varekode i henhold tilToldtariffen. I nogle tilfælde skal der yderligere angives op til to 4-cifrede tillægskoder, fx når der er tale om antidumpingtold, landbrugselement mv. 
 											Se Toldtariffens vejledning om anvendelse af varekoder og tillægskoder og afsnittet om MIO.						           			<br/><br/>

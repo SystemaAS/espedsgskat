@@ -96,14 +96,14 @@
 	 				<table width="100%" align="center" class="formFrameHeaderTransparent" border="0" cellspacing="0" cellpadding="0">
 				 		<tr height="15">
 				 			<td class="text14MediumBlue">
-				 				&nbsp;Avd&nbsp;<b>${model.avd}</b>
-				 				&nbsp;Angivelse&nbsp;<b>${model.opd}</b>
+				 				&nbsp;<spring:message code="systema.skat.avd"/>&nbsp;<b>${model.avd}</b>
+				 				&nbsp;<spring:message code="systema.skat.decl"/>&nbsp;<b>${model.opd}</b>
 				 				&nbsp;Sign&nbsp;<b>${model.sign}</b>
 				 				&nbsp;&nbsp;&nbsp;&nbsp;Ref.nr.:&nbsp;<b>${recordTopicSkatImport.dkih_07}</b>
 				 				&nbsp;&nbsp;
 				 				<img onMouseOver="showPop('status_info');" onMouseOut="hidePop('status_info');" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 				 				Status:&nbsp;<b>${model.status}</b>
-				 				&nbsp;&nbsp;Angivelsesart:&nbsp;<b>${recordTopicSkatImport.dkih_aart}</b>
+				 				&nbsp;&nbsp;<spring:message code="systema.skat.decl.art"/>&nbsp;<b>${recordTopicSkatImport.dkih_aart}</b>
 				 				
 				 				<div class="text12" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:500px;" id="status_info" class="popupWithInputText text12"  >
@@ -139,29 +139,29 @@
 					 		<td width="50%">
 						 		<table width="80%" border="0" cellspacing="1" cellpadding="0">
 							 		<tr>
-							            <td width="30%" class="text12Bold" align="left" >Eksportør</td>
+							            <td width="30%" class="text12Bold" align="left" ><spring:message code="systema.skat.exporter"/></td>
 							            <td class="text12" align="left" >&nbsp;&nbsp;</td>
 							        </tr>
 							        <tr>
-							        		<td width="30%" class="text12" align="left">EORI&nbsp;</td>
+							        		<td width="30%" class="text12" align="left"><spring:message code="systema.skat.eori"/>&nbsp;</td>
 							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_02a}</td>
 							           	
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text12" align="left">Navn&nbsp;</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.name"/>&nbsp;</td>
 							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_02b}</td>
 							        </tr>
 									<tr>
-							            <td width="30%" class="text12" align="left">Adresse&nbsp;</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.address"/>&nbsp;</td>
 							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_02c}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text12" align="left">Postnr.&nbsp;</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.postalcode"/>&nbsp;</td>
 							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_02d}&nbsp;${recordTopicSkatImport.dkih_02e}</td>
 							        </tr>
 							        
 									<tr>
-							            <td width="30%" class="text12" align="left">Landkode&nbsp;</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.country"/>&nbsp;</td>
 							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_02f}</td>
 							        </tr>						        
 							        
@@ -170,28 +170,28 @@
 					        <td width="50%">
 						 		<table width="80%" border="0" cellspacing="1" cellpadding="0">
 							 		<tr>
-							            <td width="30%" class="text12Bold" align="left" >Modtager</td>
+							            <td width="30%" class="text12Bold" align="left" ><spring:message code="systema.skat.receiver"/></td>
 							            <td class="text12" align="left" >&nbsp;&nbsp;</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text12" align="left">CVR/SE-nr&nbsp;</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.cvr.se"/>&nbsp;</td>
 							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_08a}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text12" align="left">Navn&nbsp;</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.name"/>&nbsp;</td>
 							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_08b}</td>
 							        </tr>
 									<tr>
-							            <td width="30%" class="text12" align="left">Adresse&nbsp;</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.address"/>&nbsp;</td>
 							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_08c}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text12" align="left">Postnr.&nbsp;</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.postalcode"/>&nbsp;</td>
 							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_08d}&nbsp;${recordTopicSkatImport.dkih_08e}</td>
 							        </tr>
 							        
 									<tr>
-							            <td width="30%" class="text12" align="left">Landkode&nbsp;</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.country"/>&nbsp;</td>
 							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_08f}</td>
 							        </tr>
 							        <%--
@@ -239,7 +239,7 @@
 											<c:if test="${model.status == 'M' || empty model.status || model.status == '10' || model.status == '20'|| model.status == '40'}">
 												<input tabindex=-1 class="inputFormSubmitStd" type="submit" name="submitNew" onclick="javascript: form.action='skatimport_edit_items.do';" value="<spring:message code="systema.skat.import.item.line.init.createnew.submit"/>">
 											</c:if>
-											<button name="allItemsButton" class="inputFormSubmitStd" type="button" onClick="showPop('allItems');" >Vis alle</button> 
+											<button name="allItemsButton" class="inputFormSubmitStd" type="button" onClick="showPop('allItems');" ><spring:message code="systema.skat.show.all"/></button> 
 										       <span style="background-color:#EEEEEE; position:absolute; left:50px; top:200px; width:1200px; height:1000px;" id="allItems" class="popupWithInputTextThickBorder"  >
 									           		<table id="containerdatatableTable" width="98%" align="left" >
 													<tr>
@@ -248,7 +248,7 @@
 														<table id="tblItemLinesAll" class="display compact cell-border">
 										           			<thead>
 												           	<tr class="tableHeaderField">	
-																    <th class="">&nbsp;Linjenr.&nbsp;</th>   
+																    <th class="">&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_syli.linjeNr"/>&nbsp;</th>   
 																    <th class="text14"><spring:message code="systema.skat.import.item.list.label.dkiv_28b.purchaseSellerInvoice"/>&nbsp;</th>
 												                    <th class="text14" ><spring:message code="systema.skat.import.item.list.label.dkiv_32.varepostNr"/>&nbsp;</th>   
 												                    <th class="text14" >&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_34.oprLand"/>&nbsp;</th>
@@ -264,7 +264,7 @@
 												                    <th class="text14" ><spring:message code="systema.skat.import.item.list.label.dkiv_42.varansPris"/>&nbsp;</th>
 												                    <th class="text14" >&nbsp;<spring:message code="systema.skat.import.item.list.label.dkerr.error"/>&nbsp;</th>
 												                    <c:if test="${model.status == 'M' || empty model.status || model.status == '10' || model.status == '20'|| model.status == '40'}">
-												                    	<th align="center" class="text14" nowrap>Fjern</th>
+												                    	<th align="center" class="text14" nowrap><spring:message code="systema.skat.delete"/></th>
 												                    </c:if>
 												                    
 											               		</tr> 
@@ -380,7 +380,7 @@
 														               </td>
 														               <c:if test="${model.status == 'M' || empty model.status || model.status == '10' || model.status == '20'|| model.status == '40'}">	
 															               <td class="text14" align="center" nowrap>&nbsp;
-															               	<a onclick="javascript:return confirm('Er du sikker på at du vil slette denne?')" tabindex=-1 href="skatimport_edit_items.do?action=doDelete&avd=${record.dkiv_syav}&opd=${record.dkiv_syop}&lin=${record.dkiv_syli}&fabl=${XX.svih_fabl}">
+															               	<a onclick="javascript:return confirm('<spring:message code="systema.skat.dialogDelete"/>')" tabindex=-1 href="skatimport_edit_items.do?action=doDelete&avd=${record.dkiv_syav}&opd=${record.dkiv_syop}&lin=${record.dkiv_syli}&fabl=${XX.svih_fabl}">
 															               		<img valign="bottom" src="resources/images/delete.gif" border="0" alt="remove">
 															               	</a>	
 															               </td>
@@ -414,27 +414,27 @@
 														</div>	
 								   				</span>	
 								   				<c:if test="${model.status == 'M' || empty model.status || model.status == '10' || model.status == '20'|| model.status == '40'}">		
-													&nbsp;<button title="Kontrollere vareposter" name="itemListControlButton" id="itemListControlButton" class="buttonGrayWithGreenFrame" type="button" >Kontrollere vareposter</button>
+													&nbsp;<button title="Kontrollere vareposter" name="itemListControlButton" id="itemListControlButton" class="buttonGrayWithGreenFrame" type="button" ><spring:message code="systema.skat.items.check.items"/></button>
 												</c:if>	
 										</td>
 									</tr>
 									<tr>
-										<td class="text14Bold">&nbsp;Antal vareposter&nbsp;&nbsp;<font class="text14MediumBlue"><b>${totalNumberOfItemLines}</b></font>
+										<td class="text14Bold">&nbsp;<spring:message code="systema.skat.numberof.itemlines"/>&nbsp;&nbsp;<font class="text14MediumBlue"><b>${totalNumberOfItemLines}</b></font>
 						            		
 										</td>
 										<td width="10%" class="text14">&nbsp;</td>
 										
-										<td align="right" class="text12">Bruttovægt:&nbsp;
+										<td align="right" class="text12"><spring:message code="systema.skat.gross.weight"/>&nbsp;
 											<input tabindex=-1 align="right" type="text" readonly class="inputText12BlueBoldReadOnly" size="12" maxlength="11" value='${recordTopicSkatImport.dkih_brut}'>
 										</td>
-										<td align="right" class="text12">Faktura beløb:&nbsp;
+										<td align="right" class="text12"><spring:message code="systema.skat.invoice"/>&nbsp;<spring:message code="systema.skat.invoice.amount"/>&nbsp;
 											<input tabindex=-1 align="right" type="text" readonly class="inputText12BlueBoldReadOnly" size="12" maxlength="20" value='${recordTopicSkatImport.dkih_222}'>
 											&nbsp;<font style="color:#000080; font-style: italic;"><b>${recordTopicSkatImport.dkih_221}</b></font>
 										</td>
-										<td align="right" class="text12">Varens pris&nbsp;(&Sigma;):&nbsp;
+										<td align="right" class="text12"><spring:message code="systema.skat.items.varens.pris"/>&nbsp;(&Sigma;):&nbsp;
 											<input tabindex=-1 align="right" type="text" readonly class="inputText12BlueBoldReadOnly" size="12" maxlength="20" value='${model.recordItemContainerTopic.calculatedItemLinesTotalAmount}'>
 										</td>
-										<td align="right" class="text12">Forskel:&nbsp;
+										<td align="right" class="text12"><spring:message code="systema.skat.items.forskel"/>&nbsp;
 											<input tabindex=-1 align="right" type="text" readonly
 												<c:choose>
 												<c:when test="${fn:contains(model.recordItemContainerTopic.diffItemLinesTotalAmountWithInvoiceTotalAmount,'-')}">
@@ -467,8 +467,8 @@
 								<table id="tblItemLines" class="display compact cell-border" width="100%" >
 									<thead>
 									<tr  class="tableHeaderField">
-									    <th class="text14">&nbsp;Lin&nbsp;</th>
-									    <th class="text14">&nbsp;Opd.&nbsp;</th>   
+									    <th class="text14">&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_syli.linjeNr"/>&nbsp;</th>
+									    <th class="text14">&nbsp;<spring:message code="systema.skat.update"/>&nbsp;</th>   
 									    <th class="text14"><spring:message code="systema.skat.import.item.list.label.dkiv_28b.purchaseSellerInvoice"/>&nbsp;</th>
 					                    <th class="text14" nowrap><spring:message code="systema.skat.import.item.list.label.dkiv_32.varepostNr"/>&nbsp;</th>   
 					                    <th class="text14" nowrap>&nbsp;<spring:message code="systema.skat.import.item.list.label.dkiv_34.oprLand"/>&nbsp;</th>
@@ -484,7 +484,7 @@
 					                    <th class="text14" nowrap><spring:message code="systema.skat.import.item.list.label.dkiv_42.varansPris"/>&nbsp;</th>
 					                    <th class="text14" >&nbsp;<spring:message code="systema.skat.import.item.list.label.dkerr.error"/>&nbsp;</th>
 					                    <c:if test="${model.status == 'M' || empty model.status || model.status == '10' || model.status == '20'|| model.status == '40'}">
-				                    		<th align="center" class="text14" nowrap>Fjern</td>
+				                    		<th align="center" class="text14" nowrap><spring:message code="systema.skat.delete"/></td>
 					                    </c:if>
 					               </tr> 
 					               </thead>
@@ -599,7 +599,7 @@
 							               </td>
 							               <c:if test="${model.status == 'M' || empty model.status || model.status == '10' || model.status == '20'|| model.status == '40'}">	
 								               <td class="text14" align="center" nowrap>&nbsp;
-								               	<a onclick="javascript:return confirm('Er du sikker på at du vil slette denne?')" tabindex=-1 href="skatimport_edit_items.do?action=doDelete&avd=${record.dkiv_syav}&opd=${record.dkiv_syop}&lin=${record.dkiv_syli}&fabl=${XX.svih_fabl}">
+								               	<a onclick="javascript:return confirm('<spring:message code="systema.skat.dialogDelete"/>')" tabindex=-1 href="skatimport_edit_items.do?action=doDelete&avd=${record.dkiv_syav}&opd=${record.dkiv_syop}&lin=${record.dkiv_syli}&fabl=${XX.svih_fabl}">
 								               		<img valign="bottom" src="resources/images/delete.gif" border="0" alt="remove">
 								               	</a>	
 								               </td>
@@ -713,11 +713,11 @@
 							            <c:if test="${recordTopicSkatImport.dkih_aart=='02' || recordTopicSkatImport.dkih_aart=='04' || recordTopicSkatImport.dkih_aart=='07'}">
 							            		<font class="text16RedBold" >*</font>
 							            </c:if>
-							            <span title="dkiv_331">Varekode</span>
+							            <span title="dkiv_331"><spring:message code="systema.skat.items.varekode"/></span>
 							            
 							            <div class="text12" style="position: relative;" align="left">
 										<span style="position:absolute;top:2px; width:250px;" id="33_info" class="popupWithInputText text12"  >
-						           			<b>33. Varekoder</b>
+						           			<b>33. <spring:message code="systema.skat.items.varekode"/></b>
 						           			<br/><br/>
 											Her angiver klarereren den 10-cifrede varekode i henhold tilToldtariffen. I nogle tilfælde skal der yderligere angives op til to 4-cifrede tillægskoder, fx når der er tale om antidumpingtold, landbrugselement mv. 
 											Se Toldtariffens vejledning om anvendelse af varekoder og tillægskoder og afsnittet om MIO.						           			<br/><br/>
@@ -736,10 +736,10 @@
 				 						<c:if test="${recordTopicSkatImport.dkih_aart=='03' || recordTopicSkatImport.dkih_aart=='04' || recordTopicSkatImport.dkih_aart=='07'}">
 							            		<font class="text16RedBold" >*</font>
 							            </c:if>
-				 						<span title="dkiv_36">Præference</span>
+				 						<span title="dkiv_36"><spring:message code="systema.skat.items.preference"/></span>
 				 						<div class="text12" style="position: relative;" align="left">
 										<span style="position:absolute;top:2px; width:250px;" id="36_info" class="popupWithInputText text12"  >
-						           			<b>36. Præference</b>
+						           			<b>36. <spring:message code="systema.skat.items.preference"/></b>
 						           			 <br><br>
 											 Her skal klarereren angive med en trecifret kode, om man anmoder om præferencetoldbehandling, og i givet fald hvilken type præference, 
 						           			 der er tale om. Se koderne på SKATshjemmeside. 
@@ -753,11 +753,11 @@
 				 						<c:if test="${recordTopicSkatImport.dkih_aart=='03' || recordTopicSkatImport.dkih_aart=='04' || recordTopicSkatImport.dkih_aart=='07'}">
 							            		<font class="text16RedBold" >*</font>
 							            </c:if>
-				 						<span title="dkiv_37">Procedure</span>
+				 						<span title="dkiv_37"><spring:message code="systema.skat.items.procedure"/></span>
 							            <div class="text12" style="position: relative;" align="left">
 										<span style="position:absolute;top:2px; width:250px;" id="37_1_info" class="popupWithInputText text12"  >
 						           			<br>
-						           			<b>37. Procedure</b>
+						           			<b>37. <spring:message code="systema.skat.items.procedure"/></b>
 						           			<br/><br/>
 						           			Her skal klarereren angive den 7-cifrede kode for den procedure, som varerne ønskes toldbehandlet efter.
 						           			<br/><br/>
@@ -786,7 +786,7 @@
 				 						<c:if test="${recordTopicSkatImport.dkih_aart=='03' || recordTopicSkatImport.dkih_aart=='04' || recordTopicSkatImport.dkih_aart=='07'}">
 							            		<font class="text16RedBold" >*</font>
 							            </c:if>
-							            	<span title="dkiv_42">Varens pris:&nbsp;</span>
+							            	<span title="dkiv_42"><spring:message code="systema.skat.items.varenspris"/>&nbsp;</span>
 						            		</td>
 						            		
 							            <td class="text14" align="left">
@@ -796,11 +796,11 @@
 				 									  recordTopicSkatImport.dkih_aart=='05' || recordTopicSkatImport.dkih_aart=='07'}">
 							            		<font class="text16RedBold" >*</font>
 							            </c:if>
-				 						<span title="dkiv_35">Brut.(kg)</span>
+				 						<span title="dkiv_35"><spring:message code="systema.skat.items.gross.short.kg"/></span>
 							            <div class="text12" style="position: relative;" align="left">
 										<span style="position:absolute;top:2px; width:250px;" id="35_info" class="popupWithInputText text12"  >
 							           			<br/>
-							           			<b>35. Bruttomasse (kg)</b>
+							           			<b>35. <spring:message code="systema.skat.items.gross.short.kg"/></b>
 							           			<br/><br/>
 												Klarereren skal anføre bruttovægten for den enkelte varepost i kg og g efter følgende regler:											
 												<br/>
@@ -819,7 +819,7 @@
 				 									  recordTopicSkatImport.dkih_aart=='07' || recordTopicSkatImport.dkih_aart=='08'}">
 							            		<font class="text16RedBold" >*</font>
 							            </c:if>
-										<span title="dkiv_38">Net.(kg)</span>
+										<span title="dkiv_38"><spring:message code="systema.skat.items.net.short.kg"/></span>
 										</td>
 										<td class="text14" align="left" >
 							            <img onMouseOver="showPop('31_gods_info');" onMouseOut="hidePop('31_gods_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
@@ -828,11 +828,11 @@
 				 									  recordTopicSkatImport.dkih_aart=='05' || recordTopicSkatImport.dkih_aart=='07'}">
 							            		<font class="text16RedBold" >*</font>
 							            </c:if>
-							            <span title="dkiv_311a">Kolli mærke&nbsp;</span>
+							            <span title="dkiv_311a"><spring:message code="systema.skat.items.kollimarke"/>&nbsp;</span>
 							            <div class="text12" style="position: relative;" align="left">
 										<span style="position:absolute;top:2px; width:250px;" id="31_gods_info" class="popupWithInputText text12"  >
 						           			<br/>
-						           			<b>Kolli Mærke</b>
+						           			<b><spring:message code="systema.skat.items.kollimarke"/></b>
 											<br/><br/>
 						           			Her oplyses emballagernes mærke og numre. For uemballerede varer skal klarereren anføre "in bulk".
 										</span>
@@ -896,10 +896,10 @@
 										<c:if test="${recordTopicSkatImport.dkih_aart=='02' || recordTopicSkatImport.dkih_aart=='04' || recordTopicSkatImport.dkih_aart=='07'}">
 							            		<font class="text16RedBold" >*</font>
 							            </c:if>
-				 						<span title="dkiv_313a">Kolli antal</span>
+				 						<span title="dkiv_313a"><spring:message code="systema.skat.items.kolliantal"/></span>
 										<div class="text12" style="position: relative;" align="left">
 										<span style="position:absolute;top:2px; width:250px;" id="31_kantal_info" class="popupWithInputText text12"  >
-							           		<b>31.3 Kolliantal</b>
+							           		<b>31.3 <spring:message code="systema.skat.items.kolliantal"/></b>
 						           			<br/><br/>
 						           			Her anfører klarereren det samlede antal kolli, der er omfattet af vareposten.
 										</span>
@@ -912,12 +912,12 @@
 										<c:if test="${recordTopicSkatImport.dkih_aart=='02' || recordTopicSkatImport.dkih_aart=='04' || recordTopicSkatImport.dkih_aart=='07'}">
 							            		<font class="text16RedBold" >*</font>
 							            </c:if>
-										<span title="dkiv_314a">Kolli art</span>
+										<span title="dkiv_314a"><spring:message code="systema.skat.items.kolliart"/></span>
 										
 										<div class="text12" style="position: relative;" align="left">
 										<span style="position:absolute;top:2px; width:250px;" id="31_kslag_info" class="popupWithInputText text12"  >
 						           			<br/>
-						           			<b>31.4 Kolli art</b>
+						           			<b>31.4  <spring:message code="systema.skat.items.kolliart"/></b>
 											<br/>
 						           			Her beskriver klarereren, hvordan varerne er pakket. Emballagekoderne findes på SKATs hjemmeside.
 										</span>
@@ -930,11 +930,11 @@
 										<c:if test="${recordTopicSkatImport.dkih_aart=='01' || recordTopicSkatImport.dkih_aart=='02' || recordTopicSkatImport.dkih_aart=='04' || recordTopicSkatImport.dkih_aart=='07'}">
 							            		<font class="text16RedBold" >*</font>
 							            </c:if>
-										<span title="dkiv_315a">Varebeskrivelse&nbsp;</span>
+										<span title="dkiv_315a"><spring:message code="systema.skat.items.varebeskrivelse"/>&nbsp;</span>
 										<div class="text12" style="position: relative;" align="left">
 										<span style="position:absolute;top:2px; width:250px;" id="31_varubesk_info" class="popupWithInputText text12"  >
 						           			<br/>
-						           			<b>Varebeskrivelse</b>
+						           			<b><spring:message code="systema.skat.items.varebeskrivelse"/></b>
 											<br/><br/>
 						           			En varebeskrivelse er en beskrivelse, der er tilstrækkelig entydig til at fastslå varekoden i Toldtariffen, og som muliggør en øjeblikkelig og sikker identifikation af varen.							           			
 										</span>
@@ -942,12 +942,12 @@
 										</td>
 										<td class="text14" align="left" colspan="2">
 										<img onMouseOver="showPop('41_info');" onMouseOut="hidePop('41_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-				 						<b>41.</b><span title="dkiv_412">Suppl.enh.verdi</span>/<span title="dkiv_411">enh.</span>
+				 						<b>41.</b><span title="dkiv_412"><spring:message code="systema.skat.items.supp.enh.verdi"/></span>/<span title="dkiv_411">enh.</span>
 				 							
 											<div class="text12" style="position: relative;" align="left">
 											<span style="position:absolute;top:2px; width:250px;" id="41_info" class="popupWithInputText text12"  >
 						           		
-													<b>41. Supplerende enheder</b>
+													<b>41. <spring:message code="systema.skat.items.supp.enh.verdi"/></b>
 													<br/><br/>
 													Klarereren skal anføre supplerende mængde i den enhed, som Toldtariffen kræver for den pågældende varekode, fx stk., par, liter, 
 													MWh eller m2. Man anfører mængderne uden decimaler.
@@ -961,7 +961,7 @@
 											</span>
 											</div>
 										</td>
-										<td class="text14" align="left">&nbsp;&nbsp;<span title="dkiv_28b">Køb/Salgsfakt.</span></td>
+										<td class="text14" align="left">&nbsp;&nbsp;<span title="dkiv_28b"><spring:message code="systema.skat.items.kop.salgs.faktura"/></span></td>
 							        </tr>
 									<tr>
 					           			<td class="text12" valign="bottom">
@@ -979,7 +979,7 @@
 											</a>											
 				            				</td> 										
 										<td class="text14" align="left" colspan="2"><input type="text" class="inputTextMediumBlueMandatoryField"  name="dkiv_315a" id="dkiv_315a" size="40" maxlength="45" value="${model.record.dkiv_315a}">
-							            &nbsp;&nbsp;<button name="itemDescriptionExtraInformationButton" class="buttonGray" type="button" onClick="showPop('itemDescriptionExtraInformation');" >Mere...</button>
+							            &nbsp;&nbsp;<button name="itemDescriptionExtraInformationButton" class="buttonGray" type="button" onClick="showPop('itemDescriptionExtraInformation');" ><spring:message code="systema.skat.more"/></button>
 								        <span style="position:absolute; left:280px; top:500px; width:350px; height:300px;" id="itemDescriptionExtraInformation" class="popupWithInputText"  >
 								           		<div class="text10" align="left">
 								           			<table>
@@ -1058,11 +1058,11 @@
 				 						<c:if test="${recordTopicSkatImport.dkih_aart=='02' || recordTopicSkatImport.dkih_aart=='04' || recordTopicSkatImport.dkih_aart=='07'}">
 							            		<font class="text16RedBold" >*</font>
 							            </c:if>
-				 						<span title="dkiv_34">Opr.land</span>
+				 						<span title="dkiv_34"><spring:message code="systema.skat.items.opr.land"/></span>
 										
 							            <div class="text12" style="position: relative;" align="left">
 										<span style="position:absolute;top:2px; width:250px;" id="34a_info" class="popupWithInputText text12"  >
-						           			<b>34. Oprindelsesland</b>
+						           			<b>34. <spring:message code="systema.skat.items.opr.land"/></b>
 						           			<br/><br/>
 											Klarereren skal angive oprindelsesland med koden for det land, hvor varerne er fremstillet. Hvis fremstillingen er foregået i to eller flere lande, skal klarereren anføre det land, hvor den sidste væsentlige forarbejdning har fundet sted.						           			<br/><br/>
 											Observera att koden EU endast får användas vid återimport och när du samtidigt yrkar på preferenstull, det vill säga då du i fält 37
@@ -1088,12 +1088,12 @@
 				 									 recordTopicSkatImport.dkih_aart=='05' || recordTopicSkatImport.dkih_aart=='07' || recordTopicSkatImport.dkih_aart=='08' }">
 							            		<font class="text16RedBold" >*</font>
 							            </c:if>
-							            <span title="dkiv_46">Statistisk værdi:&nbsp;</span>
+							            <span title="dkiv_46"><spring:message code="systema.skat.items.stats.verdi"/>&nbsp;</span>
 							           
 							            <div class="text12" style="position: relative;" align="left">
 										<span style="position:absolute;top:2px; width:250px;" id="46_info" class="popupWithInputText text12"  >
 							           			<br/>
-							           			<b>46. Statistisk værdi</b>
+							           			<b>46. <spring:message code="systema.skat.items.stats.verdi"/></b>
 												<br/><br/>
 							           			Den statistiske værdi for den enkelte varepost svarer til varernes toldværdi. For toldfrie varer anvendes en tilsvarende værdi.
 							           			<br/><br/>
@@ -1112,10 +1112,10 @@
 					 									 recordTopicSkatImport.dkih_aart=='05' || recordTopicSkatImport.dkih_aart=='07' }">
 								            		<font class="text16RedBold" >*</font>
 								            </c:if>
-					 						<span title="dkiv_401/dkiv_402/dkiv_403">Summarisk angivelse / Forudgående dokument:</span>
+					 						<span title="dkiv_401/dkiv_402/dkiv_403"><spring:message code="systema.skat.items.summarisk.ang"/></span>
 								            <div class="text12" style="position: relative;" align="left">
 											<span style="position:absolute;top:2px; width:250px;" id="40_info" class="popupWithInputText text12"  >
-							           			<b>40. Summarisk angivelse / Forudgående dokument</b>
+							           			<b>40. <spring:message code="systema.skat.items.summarisk.ang"/></b>
 												<br/><br/>
 												Rubrikken skal udfyldes med henvisning til eventuelt tidligere udfærdigede dokumenter, der er relevante for indførslen (fx fragtbrev, TIR forsendelse, EU forsendelse mv.).
 												<br/><br/>
@@ -1154,7 +1154,7 @@
 										<td colspan="4" class="text14" align="left" nowrap>
 							           			<table>
 							           				<tr>
-									           			<td class="text14">&nbsp;&nbsp;&nbsp;&nbsp;<span title="dkiv_401-2">40.2&nbsp;Kat./Type</span>
+									           			<td class="text14">&nbsp;&nbsp;&nbsp;&nbsp;<span title="dkiv_401-2">40.2&nbsp;<spring:message code="systema.skat.items.summarisk.ang.kattype"/></span>
 										           			<select class="inputTextMediumBlueMandatoryField" name="dkiv_402a" id="dkiv_402a">
 											            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 											 				  	<c:forEach var="code" items="${model.transportdocsSummariskadocsCodeList}" >
@@ -1169,7 +1169,7 @@
 															<input type="text" class="inputTextMediumBlueMandatoryField"  name="dkiv_403a" id="dkiv_403a" size="25" maxlength="35" value="${model.record.dkiv_403a}">
 															<input class="clazz_copyElement" type="checkbox" name="dkiv_401a_copy@dkiv_402a_copy@dkiv_403a_copy" id="dkiv_401a_copy@dkiv_402a_copy@dkiv_403a_copy" value="1" >
 															<font class="text11MediumBlue" >
-																<label onMouseOver="showPop('dkiv_403a_copy_info');" onMouseOut="hidePop('dkiv_403a_copy_info');">Kopi</label>
+																<label onMouseOver="showPop('dkiv_403a_copy_info');" onMouseOut="hidePop('dkiv_403a_copy_info');"><spring:message code="systema.skat.copy"/></label>
 															</font>
 															<div class="text12" style="position: relative;" align="left" >
 									 						<span style="position:absolute; left:0px; top:0px;" id="dkiv_403a_copy_info" class="popupWithInputText"  >
@@ -1182,7 +1182,7 @@
 														
 														<td class="text14" >
 															&nbsp;&nbsp;
-															<button name="itemSummariskaDocsExtraFieldsButton" class="buttonGray" type="button" onClick="showPop('itemSummariskaDocsExtraFields');" >Mere...</button>
+															<button name="itemSummariskaDocsExtraFieldsButton" class="buttonGray" type="button" onClick="showPop('itemSummariskaDocsExtraFields');" ><spring:message code="systema.skat.more"/></button>
 													        <span style="position:absolute; left:250px; top:400px; width:800px; height:550px;" id="itemSummariskaDocsExtraFields" class="popupWithInputText"  >
 													           		<div class="text10" align="left">
 													           			<table>
@@ -1267,7 +1267,7 @@
 																				</td>
 															           			<td class="text12">
 																					&nbsp;<input type="text" class="inputText" name="dkiv_403e" id="dkiv_403e" size="30" maxlength="35" value="${model.record.dkiv_403e}">
-																					<input class="clazz_copyElement" type="checkbox" name="dkiv_401e_copy@dkiv_402e_copy@dkiv_403e_copy" id="dkiv_401e_copy@dkiv_402e_copy@dkiv_403e_copy" value="1" ><font class="text11MediumBlue">Kopi</font>
+																					<input class="clazz_copyElement" type="checkbox" name="dkiv_401e_copy@dkiv_402e_copy@dkiv_403e_copy" id="dkiv_401e_copy@dkiv_402e_copy@dkiv_403e_copy" value="1" ><font class="text11MediumBlue"><spring:message code="systema.skat.copy"/></font>
 																				</td>
 																			</tr>
 																			
@@ -1282,7 +1282,7 @@
 																				</td>
 															           			<td class="text12">
 																					&nbsp;<input type="text" class="inputText" name="dkiv_403f" id="dkiv_403f" size="30" maxlength="35" value="${model.record.dkiv_403f}">
-																					<input class="clazz_copyElement" type="checkbox" name="dkiv_401f_copy@dkiv_402f_copy@dkiv_403f_copy" id="dkiv_401f_copy@dkiv_402f_copy@dkiv_403f_copy" value="1" ><font class="text11MediumBlue">Kopi</font>
+																					<input class="clazz_copyElement" type="checkbox" name="dkiv_401f_copy@dkiv_402f_copy@dkiv_403f_copy" id="dkiv_401f_copy@dkiv_402f_copy@dkiv_403f_copy" value="1" ><font class="text11MediumBlue"><spring:message code="systema.skat.copy"/></font>
 																				</td>
 																				<td class="text12" width="20px">
 																					&nbsp;
@@ -1553,7 +1553,7 @@
 	 				<table width="100%" align="center" class="secondarySectionHeader" border="0" cellspacing="0" cellpadding="0">
 				 		<tr height="15">
 				 			<td class="text14WhiteBold">
-				 				<b>&nbsp;&nbsp;Varepost&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Supplerende oplysninger&nbsp;</b>
+				 				<b>&nbsp;&nbsp;<spring:message code="systema.skat.items.varepost"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<spring:message code="systema.skat.additional.info"/>&nbsp;</b>
 				 				<img src="resources/images/update.gif" border="0" alt="edit">
 				 			</td>
 							<td class="text11White" align="right">
@@ -1574,7 +1574,7 @@
 				            		<tr>
 						            <td nowrap colspan="2" class="text14" align="left">
 						            &nbsp;
-			 						<b>44.&nbsp;Certifikat og bevilling</b></td>
+			 						<b>44.&nbsp;<spring:message code="systema.skat.items.cert.og.bevilling"/></b></td>
 						           	<td class="text14" align="left">&nbsp;</td>
 						        </tr>
 						        <tr height="5"><td class="text" align="left"></td></tr>
@@ -1582,7 +1582,7 @@
 								<tr>
 						            <td class="text14" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						            <img onMouseOver="showPop('44_1_info');" onMouseOut="hidePop('44_1_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-						            <span title="dkiv_441">44.1&nbsp;Bevillingsnr:&nbsp;</span>
+						            <span title="dkiv_441">44.1&nbsp;<spring:message code="systema.skat.items.bevillingsnr"/>&nbsp;</span>
 							            <div class="text12" style="position: relative;" align="left">
 										<span style="position:absolute;top:2px; width:250px;" id="44_1_info" class="popupWithInputText text12"  >
 							           			<b>44.1 Bevillinr.[Sags-nr]</b>
@@ -1599,10 +1599,10 @@
 						         
 						            <td class="text14" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						            <img onMouseOver="showPop('44_2_info');" onMouseOut="hidePop('44_2_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-						            <span title="dkiv_442a">44.2&nbsp;Certifikatnr:&nbsp;</span>
+						            <span title="dkiv_442a">44.2&nbsp;<spring:message code="systema.skat.items.cert.nr"/>&nbsp;</span>
 						            <div class="text12" style="position: relative;" align="left">
 									<span style="position:absolute;top:2px; width:250px;" id="44_2_info" class="popupWithInputText text12"  >
-						           			<b>44.2 Certifikatnr / Certifikatkode</b>
+						           			<b>44.2 <spring:message code="systema.skat.items.cert.nr"/> / <spring:message code="systema.skat.items.cert.code"/></b>
 											<br/><br/>
 											Ved indførsel af varer omfattet af varebestemmelser eller med adgang til en nedsat told ud over de almindelige præferenceordninger er der ofte krav, 
 											om at varerne skal ledsages af et certifikat, en tilladelse eller lignende.
@@ -1667,7 +1667,7 @@
 										<a tabindex="-1" id="dkiv_4421IdLink" OnClick="triggerChildWindowGeneralCodes(this, '005')">
 											<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
 										</a>
-										<button name="containerNrButton" class="buttonGray" type="button" onClick="showPop('certifikatKode_Info');" >Mere...</button> 
+										<button name="containerNrButton" class="buttonGray" type="button" onClick="showPop('certifikatKode_Info');" ><spring:message code="systema.skat.more"/></button> 
 								           	<span style="position:absolute; left:480px; top:750px; width:550px; height:400px;" id="certifikatKode_Info" class="popupWithInputText"  >
 								           		<div class="text10" align="left">
 								           			<table>
@@ -1804,7 +1804,7 @@
 						        <tr>
 						            <td class="text14" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						            <img onMouseOver="showPop('44_3_info');" onMouseOut="hidePop('44_3_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-						            <span title="dkiv_443">44.3&nbsp;Varebestemmelse:&nbsp;</span>
+						            <span title="dkiv_443">44.3&nbsp;<spring:message code="systema.skat.items.varebestem"/>&nbsp;</span>
 						            <div class="text12" style="position: relative;" align="left">
 									<span style="position:absolute;top:2px; width:250px;" id="44_3_info" class="popupWithInputText text12"  >
 						           			<b>44.3 Varebestemmelser</b>
@@ -1838,7 +1838,7 @@
 						        <tr>
 						            <td class="text14" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						            <img onMouseOver="showPop('44_4_info');" onMouseOut="hidePop('44_4_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-						            <span title="dkiv_444b">44.4&nbsp;Præferencedok.kode:&nbsp;</span>
+						            <span title="dkiv_444b">44.4&nbsp;<spring:message code="systema.skat.items.preference.code"/>&nbsp;</span>
 						            <div class="text12" style="position: relative;" align="left">
 									<span style="position:absolute;top:2px; width:250px;" id="44_4_info" class="popupWithInputText text12"  >
 						           			<b>44.4 Præferencedok.kode</b>
@@ -1865,7 +1865,7 @@
 						        <tr>
 						            <td class="text14" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						            <img onMouseOver="showPop('44_4a_info');" onMouseOut="hidePop('44_4a_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-						            <span title="dkiv_444a">44.4a&nbsp;Præferencedok.nr:&nbsp;</span>
+						            <span title="dkiv_444a">44.4a&nbsp;<spring:message code="systema.skat.items.preference.nr"/>&nbsp;</span>
 						            <div class="text12" style="position: relative;" align="left">
 									<span style="position:absolute;top:2px; width:250px;" id="44_4a_info" class="popupWithInputText text12"  >
 						           			<b>44.4a Præferencedok.nr</b>
@@ -1884,7 +1884,7 @@
 						        <tr>
 						            <td colspan="5" class="text14">
 						            &nbsp;
-			 						<b>44.9&nbsp;Oplysningstype</b>
+			 						<b>44.9&nbsp;<spring:message code="systema.skat.items.oplysnings.type"/></b>
 						            
 					           		<div class="text12" style="position: relative;" align="left">
 									<span style="position:absolute;top:2px; width:250px;" id="44a_info" class="popupWithInputText text12"  >
@@ -1908,7 +1908,7 @@
 								<tr height="5"><td></td></tr>
 			           			<tr>
 				           			<td class="text12">
-				           				<span title="dkiv_449a">&nbsp;&nbsp;&nbsp;&nbsp;Kode</span>
+				           				<span title="dkiv_449a">&nbsp;&nbsp;&nbsp;&nbsp;<spring:message code="systema.skat.items.code"/></span>
 				           				<select name="dkiv_449a" id="dkiv_449a">
 					 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 						 				  	<c:forEach var="code" items="${model.oplysningsTypeCodeList}" >
@@ -1924,7 +1924,7 @@
 										</select>
 				           			</td>
 				           			<td class="text12">
-										<span title="dkiv_449b">&nbsp;Værdi</span>
+										<span title="dkiv_449b">&nbsp;<spring:message code="systema.skat.items.value"/></span>
 											<c:choose>
 												<c:when test="${not empty dkiv_449b}">
 													<input type="text" class="inputText" name="dkiv_449b" id="dkiv_449b" size="17" maxlength="16" value="${model.record.dkiv_449b}">
@@ -1939,7 +1939,7 @@
 						        <tr>
 						            <td colspan="2" class="text14">
 						            &nbsp;
-			 						<b>44.6&nbsp;Supplerende vareoplysninger</b></td>
+			 						<b>44.6&nbsp;<spring:message code="systema.skat.additional.info"/>&nbsp;(items)</b></td>
 						        </tr>
 								<tr height="5"><td></td></tr>
 								<tr>
@@ -1952,7 +1952,7 @@
 						 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkiv_446ka == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 											</c:forEach>  
 										</select>
-										&nbsp;<button name="itemSupplerendeVareOpExtraFieldsButton" class="buttonGray" type="button" onClick="showPop('itemSupplerendeVareOpExtraFields');" >Mere...</button>
+										&nbsp;<button name="itemSupplerendeVareOpExtraFieldsButton" class="buttonGray" type="button" onClick="showPop('itemSupplerendeVareOpExtraFields');" ><spring:message code="systema.skat.more"/></button>
 									        <span style="position:absolute; left:250px; top:800px; width:750px; height:500px;" id="itemSupplerendeVareOpExtraFields" class="popupWithInputText"  >
 									           		<div class="text10" align="left">
 									           			<table>
@@ -2120,7 +2120,7 @@
 								</tr>
 								<tr>
 									<td colspan="2" class="text12">&nbsp;&nbsp;&nbsp;&nbsp;
-										<span title="dkiv_446ta">Tekst&nbsp;</span>
+										<span title="dkiv_446ta"><spring:message code="systema.skat.text"/>&nbsp;</span>
 									</td>
 								</tr>
 								<tr>
@@ -2135,7 +2135,7 @@
 						 		<table border="0" cellspacing="1" cellpadding="0">
 									<tr>
 							            <td nowrap colspan="2" class="text14" align="left">
-							            		<b>33.&nbsp;Varekode [Tillægskoder]</b>
+							            		<b>33.&nbsp;<spring:message code="systema.skat.items.varekode"/> [<spring:message code="systema.skat.items.tillaggskode"/>]</b>
 				 						</td>
 							           	<td class="text14" align="left">&nbsp;</td>
 							        </tr>
@@ -2143,7 +2143,7 @@
 							        <tr>   	
 						            		<td class="text14" align="left">&nbsp;&nbsp;
 											<img onMouseOver="showPop('332_info');" onMouseOut="hidePop('332_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info" >
-											<span title="dkiv_332/dkiv_333">Tillægskoder&nbsp;</span>
+											<span title="dkiv_332/dkiv_333"><spring:message code="systema.skat.items.tillaggskode"/>&nbsp;</span>
 											<div class="text12" style="position: relative;" align="left">
 											<span style="position:absolute;top:2px; width:250px;" id="332_info" class="popupWithInputText text12"  >
 								           			<b>33.&nbsp;Varekode [Tillægskoder]</b>
@@ -2168,7 +2168,7 @@
 							            		<span title="dkiv_311/dkiv_313/dkiv_314">Kolli mærke, kolli antal og kolli art</span>
 						            		</td>
 							           	<td class="text14" align="left">&nbsp;
-							           	<button name="goodsMarkButton" class="buttonGray" type="button" onClick="showPop('goodsMark');" >Mere...</button> 
+							           	<button name="goodsMarkButton" class="buttonGray" type="button" onClick="showPop('goodsMark');" ><spring:message code="systema.skat.more"/></button> 
    									        <span style="position:absolute; left:480px; top:800px; width:350px; height:320px;" id="goodsMark" class="popupWithInputText"  >
 								           		<div class="text10" align="left" valign="top">
 								           			<table>
@@ -2264,7 +2264,7 @@
 									<tr>
 							            <td class="text14" align="left">&nbsp;&nbsp;
 							            <img onMouseOver="showPop('31_2_info');" onMouseOut="hidePop('31_2_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-							            <span title="dkiv_312a,dkiv_312b ...">31.2 Containernr:&nbsp;</span>
+							            <span title="dkiv_312a,dkiv_312b ...">31.2 <spring:message code="systema.skat.container.nr"/>&nbsp;</span>
 							            <div class="text12" style="position: relative;" align="left">
 										<span style="position:absolute;top:2px; width:250px;" id="31_2_info" class="popupWithInputText text12"  >
 						           			<b>31.2 Containernr</b>
@@ -2278,7 +2278,7 @@
 								           	<input type="text" class="inputText" name="dkiv_312a" id="dkiv_312a" size="12" maxlength="11" value="${model.record.dkiv_312a}">
 								        </td>
 								        <td>&nbsp;  	
-							           		<button name="containerNrButton" class="buttonGray" type="button" onClick="showPop('containerNrInfo');" >Mere...</button> 
+							           		<button name="containerNrButton" class="buttonGray" type="button" onClick="showPop('containerNrInfo');" ><spring:message code="systema.skat.more"/></button> 
 								           	<span style="position:absolute; left:480px; top:850px; width:580px; height:100px;" id="containerNrInfo" class="popupWithInputText"  >
 								           		<div class="text10" align="left">
 								           			<table>
@@ -2318,7 +2318,7 @@
 							        <tr>
 							            <td class="text14" align="left">
 							            		<img onMouseOver="showPop('39_info');" onMouseOut="hidePop('39_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-						            			<span title="dkiv_39"><b>39.</b>&nbsp;Kontingent nr:</span>
+						            			<span title="dkiv_39"><b>39.</b>&nbsp;<spring:message code="systema.skat.items.kontingent.nr"/></span>
 							            <div class="text12" style="position: relative;" align="left">
 										<span style="position:absolute;top:2px; width:250px;" id="39_info" class="popupWithInputText text12"  >
 						           			<b>39 Kontingenter</b>
@@ -2341,7 +2341,7 @@
 							        <tr>
 							            <td class="text14" align="left">
 							            <img onMouseOver="showPop('sikkerheds_info');" onMouseOut="hidePop('sikkerheds_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-					            		<span title="dkiv_sikk">Sikkerhedsstillelse:&nbsp;</span>
+					            		<span title="dkiv_sikk"><spring:message code="systema.skat.items.collateral"/>&nbsp;</span>
 							           
 							            <div class="text12" style="position: relative;" align="left">
 										<span style="position:absolute;top:2px; width:250px;" id="sikkerheds_info" class="popupWithInputText text12"  >
@@ -2360,7 +2360,7 @@
 							        <tr>
 							            <td class="text14" align="left">
 								            <img onMouseOver="showPop('farligGods_info');" onMouseOut="hidePop('farligGods_info');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-							            		<span title="dkiv_s27"><b>S27.</b>&nbsp;FN Farlig gods:&nbsp;</span>
+							            		<span title="dkiv_s27"><b>S27.</b>&nbsp;<spring:message code="systema.skat.items.fn.dangerous.goods"/>&nbsp;</span>
 							            
 							            <div class="text12" style="position: relative;" align="left">
 										<span style="position:absolute;top:2px; width:250px;" id="farligGods_info" class="popupWithInputText text12"  >
