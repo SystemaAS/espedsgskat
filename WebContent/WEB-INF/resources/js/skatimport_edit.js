@@ -1062,21 +1062,28 @@
 		  
 	  });
 	  function presentPrintSkilleArkDialog(){
+		  //Localize
+		  //DA - std
+		  var dlgTitle = "Print Delere"; var btnTextOk = "Fortstæt"; var btnTextCancel = "Annullér";
+		  //EN
+		  if(jq("#usrLang").val() == "EN"){
+			  dlgTitle = "Print"; btnTextOk = "Ok"; btnTextCancel = "Cancel"; 
+		  }
 		//setters (add more if needed)
-		  jq('#dialogPrintSkilleArk').dialog( "option", "title", "Print Delere" );
+		  jq('#dialogPrintSkilleArk').dialog( "option", "title", dlgTitle );
 		  //deal with buttons for this modal window
 		  jq('#dialogPrintSkilleArk').dialog({
 			 buttons: [ 
 	            {
 				 id: "dialogSaveTU",	
-				 text: "Fortsæt",
+				 text: btnTextOk,
 				 click: function(){
 					 		jq('#skilleArkForm').submit();
 				 		}
 			 	 },
 	 	 		{
 			 	 id: "dialogCancelTU",
-			 	 text: "Annullér", 
+			 	 text: btnTextCancel, 
 				 click: function(){
 					 		//back to initial state of form elements on modal dialog
 					 		jq("#dialogSaveTU").button("option", "disabled", true);
@@ -1130,8 +1137,15 @@
 		  
 	  });
 	  function presentUploadFileDialog(){
+		//Localize
+		  //DA - std
+		  var dlgTitle = "Upload dokument"; var btnTextOk = "Fortstæt"; var btnTextCancel = "Annullér";
+		  //EN
+		  if(jq("#usrLang").val() == "EN"){
+			  dlgTitle = "Upload document"; btnTextOk = "Ok"; btnTextCancel = "Cancel"; 
+		  }
 		//setters (add more if needed)
-		  jq('#dialogUploadArchiveDocument').dialog( "option", "title", "Upload dokument" );
+		  jq('#dialogUploadArchiveDocument').dialog( "option", "title", dlgTitle );
 		  //deal with buttons for this modal window
 		  jq('#dialogUploadArchiveDocument').dialog({
 			 buttons: [ 
@@ -1146,7 +1160,7 @@
 			 	 },*/
 	 	 		{
 			 	 id: "dialogCancelTU",
-			 	 text: "Annullér", 
+			 	 text: btnTextCancel, 
 				 click: function(){
 					 		//back to initial state of form elements on modal dialog
 					 		//jq("#dialogSaveTU").button("option", "disabled", true);
