@@ -11,10 +11,8 @@
 	<SCRIPT type="text/javascript" src="resources/js/jquery-ui-timepicker-addon.js"></SCRIPT>
 	<SCRIPT type="text/javascript" src="resources/js/skatimport_edit_invoice.js?ver=${user.versionEspedsg}"></SCRIPT>
 	
-	<%-- for dialog popup --%>
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/blitzer/jquery-ui.css">
 	<style type = "text/css">
-		.ui-dialog{font-size:10pt;}
+		.ui-dialog{font-size:9pt;}
 	</style>
 	
 	<%-- tab container component --%>
@@ -275,9 +273,15 @@
 							               <td class="text14" >&nbsp;${record.dkif_omr}</td>
 							               <c:if test="${ model.status == 'M' || empty  model.status || model.status == '10' || model.status == '20' || model.status == '40'}">
 								               <td width="4%" class="text14" align="center" nowrap>
+								               	<%--
 								               	<a onclick="javascript:return confirm('<spring:message code="systema.skat.dialogDelete"/>')" tabindex=-1 href="skatimport_edit_invoice.do?action=doDelete&sign=${model.sign}&avd=${model.avd}&opd=${model.opd}&status=${model.status}&fak=${record.dkif_fatx}">
 								               		<img valign="bottom" src="resources/images/delete.gif" border="0" alt="remove">
 								               	</a>	&nbsp;
+								               	 --%>
+								               	 
+								               	<a sytle="cursor:pointer;" id="avd_${model.avd}@opd_${model.opd}@sign_${model.sign}@status_${model.status}@fak_${record.dkif_fatx}" onclick="doPermanentlyDelete(this)" tabindex=-1 >
+								               		<img src="resources/images/delete.gif" border="0" alt="remove">
+								               	</a>
 								               </td>
 							               </c:if>
 							            </tr>

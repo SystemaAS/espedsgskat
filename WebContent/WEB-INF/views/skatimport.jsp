@@ -322,9 +322,14 @@
 		               <c:choose>
 			               <c:when test="${topic.status == 'M' || empty topic.status || topic.status == '20' }">	
 				               <td class="tableCell" align="center" nowrap>&nbsp;
+				               	<%-- 
 				               	<a onclick="javascript:return confirm('<spring:message code="systema.skat.dialogDelete"/>')"  tabindex=-1 href="skatimport.do?action=doDelete&avd=${topic.avd}&opd=${topic.opd}">
 				               		<img valign="bottom" src="resources/images/delete.gif" border="0" alt="remove">
 				               	</a>	
+				               	--%>
+				               	<a sytle="cursor:pointer;" id="avd_${topic.avd}@opd_${topic.opd}" onclick="doPermanentlyDelete(this)" tabindex=-1 >
+			               			<img src="resources/images/delete.gif" border="0" alt="remove">
+			               		</a>
 				               </td>
 	    		               </c:when>
 			               <c:otherwise>

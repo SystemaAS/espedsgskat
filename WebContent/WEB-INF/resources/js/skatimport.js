@@ -122,6 +122,60 @@
   //END Model dialog "Kopiera Ärende
   //---------------------------------
 	
+//---------------------------------------
+  //DELETE Angivelse
+  //This is done in order to present a jquery
+  //Alert modal pop-up
+  //----------------------------------------
+  function doPermanentlyDelete(element){
+	  //start
+	  var record = element.id.split('@');
+	  var avd = record[0];
+	  var opd = record[1];
+	  avd= avd.replace("avd_","");
+	  opd= opd.replace("opd_","");
+	  
+	  //Localize
+	  //DA - std
+	  var dlgTitle = "Fjern Angivelse "; var btnTextOk = "Fortstæt"; var btnTextCancel = "Annullér";
+	  var legend = "Er du sikker på, at du vil slette dette?";
+	  //EN
+	  if(jq("#usrLang").val() == "EN"){
+		  dlgTitle = "Delete declaration "; btnTextOk = "Ok"; btnTextCancel = "Cancel"; 
+		  legend = "Are you sure you want to delete this record?"
+	  }
+	  
+  	//Start dialog
+  	jq('<div></div>').dialog({
+        modal: true,
+        title: dlgTitle + opd,
+        
+        buttons: [ 
+            {
+			 id: "dialogSave",	
+			 text: btnTextOk,
+			 click: function(){
+				 	jq( this ).dialog( "close" );
+		            //do delete
+		            jq.blockUI({ message: BLOCKUI_OVERLAY_MESSAGE_DEFAULT});
+		            window.location = "skatimport.do?action=doDelete" + "&avd=" + avd + "&opd=" + opd;
+			 	 }
+		 	 },
+ 	 		{
+		 	 id: "dialogCancel",
+		 	 text: btnTextCancel, 
+			 click: function(){
+				 	jq( this ).dialog( "close" );
+				} 
+ 	 		 } ], 
+ 	 		open: function() {
+		  		  var markup = legend;
+		          jq(this).html(markup);
+		          //make Cancel the default button
+		          jq(this).siblings('.ui-dialog-buttonpane').find('button:eq(1)').focus();
+		     }
+	});  //end dialog
+  } 
   
   //-----------------------------------------------------------------------------
   //START Model dialog "Kopiera Ärende from template (norsk export/transport order)
@@ -242,6 +296,8 @@
   //END Model dialog "Kopiera Ärende from template
   //-----------------------------------------------
 
+  
+  
   
  
 

@@ -599,9 +599,16 @@
 							               </td>
 							               <c:if test="${model.status == 'M' || empty model.status || model.status == '10' || model.status == '20'|| model.status == '40'}">	
 								               <td class="text14" align="center" nowrap>&nbsp;
+								               	<%--
 								               	<a onclick="javascript:return confirm('<spring:message code="systema.skat.dialogDelete"/>')" tabindex=-1 href="skatimport_edit_items.do?action=doDelete&avd=${record.dkiv_syav}&opd=${record.dkiv_syop}&lin=${record.dkiv_syli}&fabl=${XX.svih_fabl}">
 								               		<img valign="bottom" src="resources/images/delete.gif" border="0" alt="remove">
 								               	</a>	
+								               	 --%>
+								               	 
+								               	<a sytle="cursor:pointer;" id="avd_${record.dkiv_syav}@opd_${record.dkiv_syop}@lin_${record.dkiv_syli}@fabl_${XrecordTopicSkat.dkeh_222}" onclick="doPermanentlyDelete(this)" tabindex=-1 >
+								               		<img src="resources/images/delete.gif" border="0" alt="remove">
+								               	</a>
+								               	
 								               </td>
 							               </c:if>
 							               
