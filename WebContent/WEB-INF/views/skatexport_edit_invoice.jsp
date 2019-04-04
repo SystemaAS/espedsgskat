@@ -11,10 +11,8 @@
 	<SCRIPT type="text/javascript" src="resources/js/jquery-ui-timepicker-addon.js"></SCRIPT>
 	<SCRIPT type="text/javascript" src="resources/js/skatexport_edit_invoice.js?ver=${user.versionEspedsg}"></SCRIPT>
 	
-	<%-- for dialog popup --%>
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/blitzer/jquery-ui.css">
 	<style type = "text/css">
-		.ui-dialog{font-size:10pt;}
+		.ui-dialog{font-size:9pt;}
 	</style>
 	
 	<%-- tab container component --%>
@@ -114,33 +112,33 @@
 					 		<td width="50%">
 						 		<table width="100%" border="0" cellspacing="1" cellpadding="0">
 							 		<tr>
-							            <td width="30%" class="text14Bold" align="left" ><spring:message code="systema.skat.invoice.sender"/></td>
-							            <td class="text14" align="left" >&nbsp;&nbsp;</td>
+							            <td width="30%" class="text12Bold" align="left" ><spring:message code="systema.skat.invoice.sender"/></td>
+							            <td class="text12" align="left" >&nbsp;&nbsp;</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.cvr"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_02a}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.invoice.cvr"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkat.dkeh_02a}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.name"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_02b}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.invoice.name"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkat.dkeh_02b}</td>
 							        </tr>
 									<tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.address"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_02c}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.invoice.address"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkat.dkeh_02c}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.postalcode"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_02d}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.invoice.postalcode"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkat.dkeh_02d}</td>
 							        </tr>
 							        
 									<tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.city"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_02e}&nbsp;${recordTopicSkat.dkeh_02f}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.invoice.city"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkat.dkeh_02e}&nbsp;${recordTopicSkat.dkeh_02f}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.klarer"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_14a}&nbsp;&nbsp;Status${recordTopicSkat.dkeh_14b}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.invoice.klarer"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkat.dkeh_14a}&nbsp;&nbsp;Status${recordTopicSkat.dkeh_14b}</td>
 							        </tr>
 							        						        
 			        	        </table>
@@ -148,31 +146,31 @@
 					        <td width="50%">
 						 		<table width="100%" border="0" cellspacing="1" cellpadding="0">
 							 		<tr>
-							            <td width="30%" class="text14Bold" align="left" ><spring:message code="systema.skat.invoice.receiver"/></td>
-							            <td class="text14" align="left" >&nbsp;&nbsp;</td>
+							            <td width="30%" class="text12Bold" align="left" ><spring:message code="systema.skat.invoice.receiver"/></td>
+							            <td class="text12" align="left" >&nbsp;&nbsp;</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.eori"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_08a}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.invoice.eori"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkat.dkeh_08a}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.name"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_08b}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.invoice.name"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkat.dkeh_08b}</td>
 							        </tr>
 									<tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.address"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_08c}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.invoice.address"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkat.dkeh_08c}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.postalcode"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_08d}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.invoice.postalcode"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkat.dkeh_08d}</td>
 							        </tr>
 									<tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.city"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_08e}&nbsp;${recordTopicSkat.dkeh_08f}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.invoice.city"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkat.dkeh_08e}&nbsp;${recordTopicSkat.dkeh_08f}</td>
 							        </tr>
 							        <tr>
-							        		<td width="30%" class="text14" align="left">&nbsp;</td>
+							        		<td width="30%" class="text12" align="left">&nbsp;</td>
 							        </tr>
 							        
 			        	        </table>
@@ -275,9 +273,15 @@
 							               
 							               <c:if test="${ model.status == 'M' || empty  model.status || model.status == '11' || model.status == '20' || model.status == '97'}">	
 								               <td width="4%" class="text14" align="center" nowrap>
+								               	<%--
 								               	<a onclick="javascript:return confirm('<spring:message code="systema.skat.dialogDelete"/>')" tabindex=-1 href="skatexport_edit_invoice.do?action=doDelete&sign=${model.sign}&avd=${model.avd}&opd=${model.opd}&status=${model.status}&fak=${record.dkef_fatx}">
 								               		<img valign="bottom" src="resources/images/delete.gif" border="0" alt="remove">
 								               	</a>	&nbsp;
+								               	 --%>
+								               	 
+								               	<a sytle="cursor:pointer;" id="avd_${model.avd}@opd_${model.opd}@sign_${model.sign}@status_${model.status}@fak_${record.dkef_fatx}" onclick="doPermanentlyDelete(this)" tabindex=-1 >
+								               		<img src="resources/images/delete.gif" border="0" alt="remove">
+								               	</a>
 								               </td>
 							               </c:if>
 							            </tr>

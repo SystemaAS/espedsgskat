@@ -527,32 +527,62 @@
 		
   	});
   	
-  //Grid aspects on behavior usually required when updating more than 10-rows. 
-	//All this helps to high-light the next-row to update...after a newly row update has taken place.
-	/* OBSOLETE:    jq(document).ready(function(){
-		var indx = 1;
-		try{
-			indx = parseInt(jq('#lastSelectedItemLineNumber').val());
-			indx++;
-		}catch(err){ 
-			//alert("err:" + err.message)
-		}
-		var row = document.getElementById("parentItemLineListTable").rows;
-		//do the rest ONLY if lineNr is empty (since there could be validadtion errors and in this case the code should not execute further)
-		var lineNr = jq('#lineNr').val();
-		if (indx > 1 && ""==lineNr){
-			//alert(indx);
-			row[indx].scrollIntoView(false);
-			var id = "#"+row[indx].id;
-			//jq(id).css("background-color","#F0F0F0");
-			jq(id).css("background-color","#A3D098");
-			row[indx].focus();
-			
-		}else{
-			//focus on dkev_331
-			jq('#dkev_331').focus();
-		}
-	});
-	*/
-
-	
+  //---------------------------------------
+    //DELETE record
+    //This is done in order to present a jquery
+    //Alert modal pop-up
+    //----------------------------------------
+    function doPermanentlyDelete(element){
+    	  //start
+    	  var record = element.id.split('@');
+    	  var avd = record[0];
+    	  var opd = record[1];
+    	  var lin = record[2];
+    	  var fabl = record[3];
+    	 
+    	  avd= avd.replace("avd_","");
+    	  opd= opd.replace("opd_","");
+    	  lin= lin.replace("lin_","");
+    	  fabl= fabl.replace("fabl_","");
+    	  
+    	  //Localize
+    	  //DA - std
+    	  var dlgTitle = "Fjern varepost "; var btnTextOk = "Fortstæt"; var btnTextCancel = "Annullér";
+    	  var legend = "Er du sikker på, at du vil slette dette?";
+    	  //EN
+    	  if(jq("#usrLang").val() == "EN"){
+    		  dlgTitle = "Delete item line "; btnTextOk = "Ok"; btnTextCancel = "Cancel"; 
+    		  legend = "Are you sure you want to delete this record?"
+    	  }
+    	  
+      	//Start dialog
+      	jq('<div></div>').dialog({
+            modal: true,
+            title: dlgTitle + opd +"/"+ lin,
+            
+            buttons: [ 
+                {
+    			 id: "dialogSave",	
+    			 text: btnTextOk,
+    			 click: function(){
+    				 	jq( this ).dialog( "close" );
+    		            //do delete
+    		            jq.blockUI({ message: BLOCKUI_OVERLAY_MESSAGE_DEFAULT});
+    		            window.location = "skatexport_edit_items.do?action=doDelete" + "&avd=" + avd + "&opd=" + opd + "&lin=" + lin + "&fabl=" + fabl;
+    			 	 }
+    		 	 },
+     	 		{
+    		 	 id: "dialogCancel",
+    		 	 text: btnTextCancel, 
+    			 click: function(){
+    				 	jq( this ).dialog( "close" );
+    				} 
+     	 		 } ], 
+     	 		open: function() {
+    		  		  var markup = legend;
+    		          jq(this).html(markup);
+    		          //make Cancel the default button
+    		          jq(this).siblings('.ui-dialog-buttonpane').find('button:eq(1)').focus();
+    		     }
+    	});  //end dialog
+    } 

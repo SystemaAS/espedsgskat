@@ -34,7 +34,7 @@
 						&sysg=${model.sign}&refnr=${dkih_07}&syst=${model.status}&sydt=${model.datum}">
 					
 					<font class="tabDisabledLink">&nbsp;<spring:message code="systema.skat.import.created.mastertopic.tab"/></font>
-					<font class="text12MediumBlue">[${model.opd}]</font>
+					<font class="text14MediumBlue">[${model.opd}]</font>
 					<c:if test="${model.status == 'M' || empty model.status || model.status == '10' || model.status == '20'|| model.status == '40'}">
 						<img src="resources/images/update.gif" border="0" alt="edit">
 					</c:if>
@@ -112,64 +112,64 @@
 					 		<td width="50%">
 						 		<table width="100%" border="0" cellspacing="1" cellpadding="0">
 							 		<tr>
-							            <td width="30%" class="text14Bold" align="left" ><spring:message code="systema.skat.invoice.sender"/></td>
-							            <td class="text14" align="left" >&nbsp;&nbsp;</td>
+							            <td width="30%" class="text12Bold" align="left" ><spring:message code="systema.skat.invoice.sender"/></td>
+							            <td class="text12" align="left" >&nbsp;&nbsp;</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.eori"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkatImport.dkih_02a}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.invoice.eori"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_02a}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.name"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkatImport.dkih_02b}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.invoice.name"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_02b}</td>
 							        </tr>
 									<tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.address"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkatImport.dkih_02c}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.invoice.address"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_02c}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.postalcode"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkatImport.dkih_02d}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.invoice.postalcode"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_02d}</td>
 							        </tr>
 							        
 									<tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.city"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkatImport.dkih_02e}&nbsp;${recordTopicSkatImport.dkih_02f}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.invoice.city"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_02e}&nbsp;${recordTopicSkatImport.dkih_02f}</td>
 							        </tr>
 							        <tr>
-							        		<td width="30%" class="text14" align="left">&nbsp;</td>
+							        		<td width="30%" class="text12" align="left">&nbsp;</td>
 							        </tr>						        
 			        	        </table>
 					        </td>
 					        <td width="50%">
 						 		<table width="100%" border="0" cellspacing="1" cellpadding="0">
 							 		<tr>
-							            <td width="30%" class="text14Bold" align="left" ><spring:message code="systema.skat.invoice.receiver"/></td>
-							            <td class="text14" align="left" >&nbsp;&nbsp;</td>
+							            <td width="30%" class="text12Bold" align="left" ><spring:message code="systema.skat.invoice.receiver"/></td>
+							            <td class="text12" align="left" >&nbsp;&nbsp;</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.cvr"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkatImport.dkih_08a}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.invoice.cvr"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_08a}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.name"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkatImport.dkih_08b}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.invoice.name"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_08b}</td>
 							        </tr>
 									<tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.address"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkatImport.dkih_08c}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.invoice.address"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_08c}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.postalcode"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkatImport.dkih_08d}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.invoice.postalcode"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_08d}</td>
 							        </tr>
 									<tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.city"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkatImport.dkih_08e}&nbsp;${recordTopicSkatImport.dkih_08f}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.invoice.city"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_08e}&nbsp;${recordTopicSkatImport.dkih_08f}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.invoice.klarer"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkatImport.dkih_14a}&nbsp;&nbsp;${recordTopicSkatImport.dkih_14b}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.invoice.klarer"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkatImport.dkih_14a}&nbsp;&nbsp;${recordTopicSkatImport.dkih_14b}</td>
 							        </tr>
 							        
 			        	        </table>

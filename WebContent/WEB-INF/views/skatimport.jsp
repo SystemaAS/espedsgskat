@@ -82,7 +82,7 @@
 				</span>	
 				</div>
                 </td>
-                <td class="text14" align="left" >Til dato</td>
+                <td class="text14" align="left" ><spring:message code="systema.skat.import.list.search.label.till.datum"/></td>
                 <td class="text14" align="left" >
                 <img onMouseOver="showPop('status_info');" onMouseOut="hidePop('status_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
                 <spring:message code="systema.skat.import.list.search.label.status"/>

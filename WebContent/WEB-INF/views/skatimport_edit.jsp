@@ -299,7 +299,7 @@
 								  <option value="IM"<c:if test="${model.record.dkih_r011 == 'IM'}"> selected </c:if> >IM</option>
 								</select>
 			 				</td>
-			 				<td class="text14">&nbsp;
+			 				<td class="text14">
 			 				<img onMouseOver="showPop('meddTyp_info');" onMouseOut="hidePop('meddTyp_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 			 				<font class="text16RedBold" >*</font><span title="dkih_aart"><spring:message code="systema.skat.decl.art"/>&nbsp;</span>
 			 				<div class="text11" style="position: relative;" align="left">
@@ -362,7 +362,7 @@
 								  <option value="Z"<c:if test="${ model.record.dkih_r012 == 'Z'}"> selected </c:if> >Z</option>
 								</select>
 			 				</td>
-			 				<td class="text14">&nbsp;
+			 				<td class="text14">
 			 					<img onMouseOver="showPop('ens_flag_info');" onMouseOut="hidePop('ens_flag_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 				 				<span title="dkih_ensf">ENS-flag&nbsp;</span>
 				 				<div class="text11" style="position: relative;" align="left">
@@ -386,7 +386,7 @@
 			 				
 		 				</tr>
 		 				<tr>
-			 				<td class="text14" align="center"><b>A.1</b>
+			 				<td class="text14" align="left"><b>A.1</b>
 				 				<font class="text16RedBold" >*</font>
 			 					<span title="dkih_a"><spring:message code="systema.skat.expedition.place"/>&nbsp;</span>
 			 						
@@ -403,7 +403,7 @@
 								</a>	
 			 				</td> 
 			 				<td class="text14">
-			 					&nbsp;<img onMouseOver="showPop('ajour_info');" onMouseOut="hidePop('ajour_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
+			 					<img onMouseOver="showPop('ajour_info');" onMouseOut="hidePop('ajour_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 				 				<span title="dkih_ajou"><spring:message code="systema.skat.ajour.type"/>&nbsp;</span>
 				 				<div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="ajour_info" class="popupWithInputText text11"  >

@@ -81,7 +81,7 @@
 				</span>	
 				</div>
                 </td>
-                <td class="text14" align="left" >Til dato</td>
+                <td class="text14" align="left" ><spring:message code="systema.skat.export.list.search.label.till.datum"/></td>
                 <td class="text14" align="left" >
                 <img onMouseOver="showPop('status_info');" onMouseOut="hidePop('status_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
                 <spring:message code="systema.skat.export.list.search.label.status"/>
@@ -333,9 +333,15 @@
 		               <c:choose>
 		               <c:when test="${topic.status == 'M' || empty topic.status}">	
 			               <td class="tableCell" align="center" nowrap>&nbsp;
+			               	<%--
 			               	<a onclick="javascript:return confirm('<spring:message code="systema.skat.dialogDelete"/>')" tabindex=-1 href="skatexport.do?action=doDelete&avd=${topic.avd}&opd=${topic.opd}">
 			               		<img valign="bottom" src="resources/images/delete.gif" border="0" alt="remove">
-			               	</a>	
+			               	</a>
+			               	 --%>
+			               	<a sytle="cursor:pointer;" id="avd_${topic.avd}@opd_${topic.opd}" onclick="doPermanentlyDelete(this)" tabindex=-1 >
+			               		<img src="resources/images/delete.gif" border="0" alt="remove">
+			               	</a>
+			               		
 			               </td>
 		               </c:when>
 		               <c:otherwise>

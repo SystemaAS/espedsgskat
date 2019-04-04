@@ -137,30 +137,30 @@
 					 		<td width="50%">
 						 		<table width="80%" border="0" cellspacing="1" cellpadding="0">
 							 		<tr>
-							            <td width="30%" class="text14Bold" align="left" ><spring:message code="systema.skat.exporter"/></td>
-							            <td class="text14" align="left" >&nbsp;&nbsp;</td>
+							            <td width="30%" class="text12Bold" align="left" ><spring:message code="systema.skat.exporter"/></td>
+							            <td class="text12" align="left" >&nbsp;&nbsp;</td>
 							        </tr>
 							        <tr>
-							        		<td width="30%" class="text14" align="left"><spring:message code="systema.skat.cvr.se"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_02a}</td>
+							        		<td width="30%" class="text12" align="left"><spring:message code="systema.skat.cvr.se"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkat.dkeh_02a}</td>
 							           	
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.name"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_02b}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.name"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkat.dkeh_02b}</td>
 							        </tr>
 									<tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.address"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_02c}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.address"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkat.dkeh_02c}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.postalcode"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_02d}&nbsp;${recordTopicSkat.dkeh_02e}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.postalcode"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkat.dkeh_02d}&nbsp;${recordTopicSkat.dkeh_02e}</td>
 							        </tr>
 							        
 									<tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.country"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_02f}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.country"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkat.dkeh_02f}</td>
 							        </tr>						        
 							        
 			        	        </table>
@@ -168,29 +168,29 @@
 					        <td width="50%">
 						 		<table width="80%" border="0" cellspacing="1" cellpadding="0">
 							 		<tr>
-							            <td width="30%" class="text14Bold" align="left" ><spring:message code="systema.skat.receiver"/></td>
-							            <td class="text14" align="left" >&nbsp;&nbsp;</td>
+							            <td width="30%" class="text12Bold" align="left" ><spring:message code="systema.skat.receiver"/></td>
+							            <td class="text12" align="left" >&nbsp;&nbsp;</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.eori"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_08a}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.eori"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkat.dkeh_08a}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.name"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_08b}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.name"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkat.dkeh_08b}</td>
 							        </tr>
 									<tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.address"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_08c}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.address"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkat.dkeh_08c}</td>
 							        </tr>
 							        <tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.postalcode"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_08d}&nbsp;${recordTopicSkat.dkeh_08e}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.postalcode"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkat.dkeh_08d}&nbsp;${recordTopicSkat.dkeh_08e}</td>
 							        </tr>
 							        
 									<tr>
-							            <td width="30%" class="text14" align="left"><spring:message code="systema.skat.country"/>&nbsp;</td>
-							           	<td class="text14MediumBlue" align="left">${recordTopicSkat.dkeh_08f}</td>
+							            <td width="30%" class="text12" align="left"><spring:message code="systema.skat.country"/>&nbsp;</td>
+							           	<td class="text12MediumBlue" align="left">${recordTopicSkat.dkeh_08f}</td>
 							        </tr>
 							        <%--
 									<tr>
@@ -441,9 +441,15 @@
 							               </td>
    							               <c:if test="${model.status == 'M' || empty model.status || model.status == '11' || model.status == '20' || model.status == '97' || model.status == '40'}">	
 								               <td class="text14" align="center" nowrap>&nbsp;
+								                <%--
 								               	<a onclick="javascript:return confirm('<spring:message code="systema.skat.dialogDelete"/>')" tabindex=-1 href="skatexport_edit_items.do?action=doDelete&avd=${record.dkev_syav}&opd=${record.dkev_syop}&lin=${record.dkev_syli}&fabl=${recordTopicSkat.dkeh_222}">
 								               		<img valign="bottom" src="resources/images/delete.gif" border="0" alt="remove">
 								               	</a>	
+								               	 --%>
+								               	<a sytle="cursor:pointer;" id="avd_${record.dkev_syav}@opd_${record.dkev_syop}@lin_${record.dkev_syli}@fabl_${recordTopicSkat.dkeh_222}" onclick="doPermanentlyDelete(this)" tabindex=-1 >
+								               		<img src="resources/images/delete.gif" border="0" alt="remove">
+								               	</a>
+								               	
 								               </td>
 							               </c:if>
 							            </tr>
@@ -1434,7 +1440,7 @@
 															&nbsp;8. Cert.nr.<input type="text" class="inputText" name="dkev_442h" id="dkev_442h" size="36" maxlength="35" value="${model.record.dkev_442h}">
 														</td>
 														<td class="text14">Cert.kode
-															<select name="dkev_4428" id="dkev_4428">
+															<select class="selectMediumBlueE2" name="dkev_4428" id="dkev_4428">
 										 						<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 											 				  	<c:forEach var="code" items="${model.certifikatKoderR44_2CodeList}" >
 											 				  		<option value="${code.dkkd_kd}"<c:if test="${model.record.dkev_4428 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>

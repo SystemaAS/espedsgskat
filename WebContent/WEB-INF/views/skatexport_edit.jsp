@@ -65,16 +65,16 @@
 					<td width="1px" class="tabFantomSpace" align="center" nowrap><font class="tabDisabledLink">&nbsp;</font></td>
 					<td width="15%" valign="bottom" class="tabDisabled" align="center" nowrap>
 						<a id="alinkInvoices" tabindex=-1 style="display:block;" href="skatexport_edit_invoice.do?action=doFetch&avd=${model.record.dkeh_syav}&sign=${model.record.dkeh_sysg}
-															&opd=${model.record.dkeh_syop}&refnr=${model.record.dkeh_07}
-															&status=${model.record.dkeh_syst}&datum=${model.record.dkeh_sydt}&fabl=${model.record.dkeh_222}">
+								&opd=${model.record.dkeh_syop}&refnr=${model.record.dkeh_07}
+								&status=${model.record.dkeh_syst}&datum=${model.record.dkeh_sydt}&fabl=${model.record.dkeh_222}">
 							<font class="tabDisabledLink">&nbsp;<spring:message code="systema.skat.export.invoice.tab"/></font>
 						</a>
 					</td>
 					<td width="1px" class="tabFantomSpace" align="center" nowrap><font class="tabDisabledLink">&nbsp;</font></td>
 					<td width="15%" valign="bottom" class="tabDisabled" align="center" nowrap>
 						<a id="alinkItemLines" tabindex=-1 style="display:block;" href="skatexport_edit_items.do?action=doFetch&avd=${ model.record.dkeh_syav}&sign=${ model.record.dkeh_sysg}
-													&opd=${ model.record.dkeh_syop}&refnr=${ model.record.dkeh_07}
-													&status=${ model.record.dkeh_syst}&datum=${ model.record.dkeh_sydt}&fabl=${ model.record.dkeh_222}">
+								&opd=${ model.record.dkeh_syop}&refnr=${ model.record.dkeh_07}
+								&status=${ model.record.dkeh_syst}&datum=${ model.record.dkeh_sydt}&fabl=${ model.record.dkeh_222}">
 							<font class="tabDisabledLink">
 								&nbsp;<spring:message code="systema.skat.export.item.createnew.tab"/>
 							</font>
@@ -83,8 +83,8 @@
 					<td width="1px" class="tabFantomSpace" align="center" nowrap><font class="tabDisabledLink">&nbsp;</font></td>
 					<td width="15%" valign="bottom" class="tabDisabled" align="center" nowrap>
 						<a id="alinkLogging" tabindex=-1 style="display:block;" href="skatexport_logging.do?avd=${ model.record.dkeh_syav}&sign=${ model.record.dkeh_sysg}
-													&opd=${ model.record.dkeh_syop}&refnr=${ model.record.dkeh_07}
-													&status=${ model.record.dkeh_syst}&datum=${ model.record.dkeh_sydt}">
+								&opd=${ model.record.dkeh_syop}&refnr=${ model.record.dkeh_07}
+								&status=${ model.record.dkeh_syst}&datum=${ model.record.dkeh_sydt}">
 							<font class="tabDisabledLink">
 								&nbsp;<spring:message code="systema.skat.export.logging.tab"/>
 							</font>
@@ -94,8 +94,8 @@
 					<td width="1px" class="tabFantomSpace" align="center" nowrap><font class="tabDisabledLink">&nbsp;</font></td>
 					<td width="15%" valign="bottom" class="tabDisabled" align="center" nowrap>
 						<a id="alinkArchive" tabindex=-1 style="display:block;" href="skatexport_archive.do?avd=${model.record.dkeh_syav}&sign=${model.record.dkeh_sysg}
-													&opd=${model.record.dkeh_syop}&refnr=${model.record.dkeh_07}
-													&status=${model.record.dkeh_syst}&datum=${model.record.dkeh_sydt}">
+								&opd=${model.record.dkeh_syop}&refnr=${model.record.dkeh_07}
+								&status=${model.record.dkeh_syst}&datum=${model.record.dkeh_sydt}">
 							<font class="tabDisabledLink">
 								&nbsp;<spring:message code="systema.skat.export.archive.tab"/>
 							</font>
@@ -108,7 +108,6 @@
 					<td width="15%" valign="bottom" class="tab" align="center" nowrap>
 						<font class="tabLink">&nbsp;<spring:message code="systema.skat.export.createnew.tab"/></font>
 						<img valign="bottom" src="resources/images/add.png" width="12" hight="12" border="0" alt="create new">
-						
 					</td>
 					<td width="70%" class="tabFantomSpace" align="center" nowrap><font class="tabDisabledLink">&nbsp;</font></td>
 				</c:otherwise>
@@ -1564,7 +1563,7 @@
 					        </tr>
 					        
 					        <tr>
-					        		<td class="text14Gray" align="left" >
+					        		<td class="text12Gray" align="left" >
 					        			<spring:message code="systema.skat.total.colli.in.itemlines"/>&nbsp;
 					        		</td>
 						        	<td >
@@ -1590,7 +1589,7 @@
 					            </td>
 					        </tr>
 					        <tr>
-					        		<td class="text14Gray" align="left" >
+					        		<td class="text12Gray" align="left" >
 					        			<spring:message code="systema.skat.numberof.itemlines"/> &nbsp;
 					        		</td>
 						        	<td >
@@ -1613,7 +1612,7 @@
 					            </td>
 					        </tr>
    					        <tr>
-					        		<td class="text14Gray" align="left" >
+					        		<td class="text12Gray" align="left" >
 					        			<spring:message code="systema.skat.sum.itemlines"/>&nbsp;
 					        		</td>
 						        	<td >
