@@ -164,14 +164,14 @@
 			<input type="hidden" name="sign" id="sign" value='${model.record.dkih_sysg}'>
 			<tr>
 				<td align="left" class="text14MediumBlue">
-					&nbsp;&nbsp;<span title="dkih_syav">Afdeling:&nbsp;</span><b>${model.record.dkih_syav}</b>&nbsp;&nbsp;<span title="dkih_syop">Angivelse:&nbsp;</span><b>${model.record.dkih_syop}</b>
-					&nbsp;&nbsp;<span title="dkih_07">Reference-nr:&nbsp;</span><b>${model.record.dkih_07}</b>
-					&nbsp;&nbsp;<span title="dkih_sysg">Sign:&nbsp;</span><b>${model.record.dkih_sysg}</b>
+					&nbsp;&nbsp;<span title="dkih_syav"><spring:message code="systema.skat.avd"/>&nbsp;</span><b>${model.record.dkih_syav}</b>&nbsp;&nbsp;<span title="dkih_syop">Angivelse:&nbsp;</span><b>${model.record.dkih_syop}</b>
+					&nbsp;&nbsp;<span title="dkih_07"><spring:message code="systema.skat.refno"/>&nbsp;</span><b>${model.record.dkih_07}</b>
+					&nbsp;&nbsp;<span title="dkih_sysg"><spring:message code="systema.skat.sign"/>&nbsp;</span><b>${model.record.dkih_sysg}</b>
 				</td>
 			</tr>
 			<tr>	
 				<td align="left" class="text14MediumBlue">				
-					&nbsp;&nbsp;<span title="dkih_sydt">Dato:&nbsp;</span><b>${model.record.dkih_sydt}</b>
+					&nbsp;&nbsp;<span title="dkih_sydt"><spring:message code="systema.skat.date"/>&nbsp;</span><b>${model.record.dkih_sydt}</b>
 					&nbsp;&nbsp;<img onMouseOver="showPop('status_info');" onMouseOut="hidePop('status_info');" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 					<span title="dkih_syst">Stat</span><a id="updateStatusLink" runat="server" href="#"><font class="text14MediumBlue">u</font></a>s:
 					<b>
@@ -228,7 +228,7 @@
 			<c:if test="${'1' == isTestAvd}">
 				<tr>
 					<td align="left" class="text14Red" >
-						&nbsp;&nbsp;<b>[TEST Afdeling]</b>
+						&nbsp;&nbsp;<b>[TEST <spring:message code="systema.skat.avd"/>]</b>
 						<input type="hidden" name="testAvdFlag" id="testAvdFlag" value='${isTestAvd}'>
 					</td>
 				</tr>
@@ -239,7 +239,7 @@
 		<c:otherwise>
 			<tr >
 				<td align="left" class="text14MediumBlue">
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Afdeling:&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<spring:message code="systema.skat.avd"/>&nbsp;
            			<select class="selectMediumBlueE2" name="avd" id="avd" TABINDEX=1>
 	            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 	 				  	<c:forEach var="record" items="${model.avdList}" >
@@ -274,7 +274,7 @@
 				 		<tr>
 				 			<td class="text14">
 				 				<img onMouseOver="showPop('1_1_info');" onMouseOut="hidePop('1_1_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-			 					<b>1.1</b><font class="text16RedBold" >*</font><span title="dkih_r011">Ang.type&nbsp;</span>
+			 					<b>1.1</b><font class="text16RedBold" >*</font><span title="dkih_r011"><spring:message code="systema.skat.decl.type"/>&nbsp;</span>
 			 					<div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="1_1_info" class="popupWithInputText text11"  >
 					           		<ul>
@@ -301,7 +301,7 @@
 			 				</td>
 			 				<td class="text14">&nbsp;
 			 				<img onMouseOver="showPop('meddTyp_info');" onMouseOut="hidePop('meddTyp_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-			 				<font class="text16RedBold" >*</font><span title="dkih_aart">Ang.art&nbsp;</span>
+			 				<font class="text16RedBold" >*</font><span title="dkih_aart"><spring:message code="systema.skat.decl.art"/>&nbsp;</span>
 			 				<div class="text11" style="position: relative;" align="left">
 							<span style="position:absolute;top:2px; width:250px;" id="meddTyp_info" class="popupWithInputText text11"  >
 					           		<ul>
@@ -327,7 +327,7 @@
 		 					<td class="text14">
 		 						<img onMouseOver="showPop('1_2_info');" onMouseOut="hidePop('1_2_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
 				 				<b>1.2</b>&nbsp;
-				 				<span title="dkih_r012" id="v_dkih_r012" class="validation">EU ang.art&nbsp;</span>
+				 				<span title="dkih_r012" id="v_dkih_r012" class="validation"><spring:message code="systema.skat.eu.decl.type"/>&nbsp;</span>
 				 				<div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="1_2_info" class="popupWithInputText text11"  >
 					           		<ul>
@@ -388,7 +388,7 @@
 		 				<tr>
 			 				<td class="text14" align="center"><b>A.1</b>
 				 				<font class="text16RedBold" >*</font>
-			 					<span title="dkih_a">Eksped.sted&nbsp;</span>
+			 					<span title="dkih_a"><spring:message code="systema.skat.expedition.place"/>&nbsp;</span>
 			 						
 			 				</td>
 			 				<td class="text14">
@@ -404,7 +404,7 @@
 			 				</td> 
 			 				<td class="text14">
 			 					&nbsp;<img onMouseOver="showPop('ajour_info');" onMouseOut="hidePop('ajour_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-				 				<span title="dkih_ajou">Ajour.type&nbsp;</span>
+				 				<span title="dkih_ajou"><spring:message code="systema.skat.ajour.type"/>&nbsp;</span>
 				 				<div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="ajour_info" class="popupWithInputText text11"  >
 					           			<b>Ajourføringstype</b>
@@ -436,7 +436,7 @@
 						<tr>
 		 					<td class="text14" >
 		 						<img onMouseOver="showPop('dkih_dtm1_info');" onMouseOut="hidePop('dkih_dtm1_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-				 				<span title="dkih_dtm1" id="v_dkih_dtm1" class="validation">Forventet ank.dato&nbsp;</span>
+				 				<span title="dkih_dtm1" id="v_dkih_dtm1" class="validation"><spring:message code="systema.skat.expected.date.arrival"/>&nbsp;</span>
 				 				<div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="dkih_dtm1_info" class="popupWithInputText text11"  >
 					           			<b>Forventet ankomstdato</b>
@@ -451,7 +451,7 @@
 				 			
 				 			<td class="text14">
 		 						<img onMouseOver="showPop('dkih_dtm2_info');" onMouseOut="hidePop('dkih_dtm2_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-				 				<span title="dkih_dtm2">Faktisk ank.dato&nbsp;</span>
+				 				<span title="dkih_dtm2"><spring:message code="systema.skat.actual.date.arrival"/>&nbsp;</span>
 				 				<div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="dkih_dtm2_info" class="popupWithInputText text11"  >
 					           			<b>Faktisk ankomstdato</b>
@@ -468,7 +468,7 @@
 		 				<tr height="10"><td></td></tr>
 		 				<tr>
 		 					<td align="left" class="text14">&nbsp;
-		 						<span title="dkih_syav+dkih_syop+dkih_sysg">Intern ref.&nbsp;</span>
+		 						<span title="dkih_syav+dkih_syop+dkih_sysg"><spring:message code="systema.skat.internal.reference"/>&nbsp;</span>
 				 			</td>
 				 			<td colspan="4">
 				 				<input readonly type="text" class="inputTextReadOnly" name="dkih_1004_phantom" id="dkih_1004_phantom" size="35" maxlength="35" value="${model.record.dkih_syav}/${model.record.dkih_syop}/${model.record.dkih_sysg}">
@@ -476,7 +476,7 @@
 			 			</tr>
 			 			<tr>	
 			 				<td align="left" class="text14">&nbsp;
-		 						<span title="dkih_xref">Ekstern ref.&nbsp;</span>
+		 						<span title="dkih_xref"><spring:message code="systema.skat.external.reference"/>&nbsp;</span>
 				 			</td>
 				 			<td colspan="4">
 				 				<input type="text" class="inputText" name="dkih_xref" id="dkih_xref" size="35" maxlength="35" value="${model.record.dkih_xref}">
@@ -485,7 +485,7 @@
 				 		<tr>	
 				 			<td align="left" class="text14">&nbsp;
 			 					<img onMouseOver="showPop('beg_fasthold_info_MAIN');" onMouseOut="hidePop('beg_fasthold_info_MAIN');"style="vertical-align:bottom;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">
-		 						<span title="dkih_bega" id="dkih_bega_label">Beg. for fastholdelse&nbsp;</span>
+		 						<span title="dkih_bega" id="dkih_bega_label"><spring:message code="systema.skat.reason.retention"/>&nbsp;</span>
 		 						<div class="text11" style="position: relative;" align="left">
 		 						<span style="position:absolute; left:0px; top:0px;" id="beg_fasthold_info_MAIN" class="popupWithInputText"  >
 		 							<font class="text11">
@@ -2015,7 +2015,7 @@
 													</span>
 													</div>
 								 				</td>
-								 				<td class="text14" align="left"><button name="beg_fastholdFieldsButton" class="buttonGray" type="button" onClick="showPop('beg_fastholdFields');" >Mere...</button> 
+								 				<td class="text14" align="left"><button name="beg_fastholdFieldsButton" class="buttonGray" type="button" onClick="showPop('beg_fastholdFields');" ><spring:message code="systema.skat.more"/></button> 
 											        <span style="position:absolute; left:600px; top:1100px; width:350px; height:300px;" id="beg_fastholdFields" class="popupWithInputText"  >
 										           		<div class="text10" align="left">
 										           			<table>
