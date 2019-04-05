@@ -13,7 +13,7 @@
 	
 		<tr><td valign="top" colspan="3" class="text14Bold">&nbsp;&nbsp;&nbsp;
 		<img title="select" valign="bottom" src="resources/images/search.gif" width="24px" height="24px" border="0" alt="search">
-		Eksterne Fakturaer
+		<spring:message code="systema.skat.invoice.extern.invoices.title"/>
 		</td>
 		</tr>
 		
@@ -30,21 +30,21 @@
 				<table id="containerdatatableTable" width="98%" align="left">
 					<%-- Fakturalista (external invoices) --%>
 					<tr height="15"><td></td></tr>
-					<tr><td valign="top" colspan="3" class="text14Bold">&nbsp;Fakturaer</td></tr>
+					<tr><td valign="top" colspan="3" class="text14Bold">&nbsp;<spring:message code="systema.skat.invoices"/></td></tr>
 					<tr>
 						<td colspan="3" >
 							<table id="tblInvoices" class="display compact cell-border" width="100%">
 								<thead>
 								<tr class="tableHeaderField" >
-									<th class="text14">&nbsp;Vælg&nbsp;</th>
-								    <th class="text14">&nbsp;Fakturanr.&nbsp;</th>   
+									<th class="text14">&nbsp;<spring:message code="systema.skat.select"/>&nbsp;</th>
+								    <th class="text14">&nbsp;<spring:message code="systema.skat.invoice.invoicenr"/>&nbsp;</th>   
 				                    <%--
 				                    <th class="text14">&nbsp;Type&nbsp;</th>
 				                     --%> 
-				                    <th align="right" class="text14">&nbsp;Beløb&nbsp;</th> 
-				                    <th class="text14">&nbsp;Møntsort&nbsp;</th> 
-				                    <th align="left" class="text14">&nbsp;MRN&nbsp;</th>
-				                    <th class="text14">&nbsp;Fjern&nbsp;</th>
+				                    <th align="right" class="text14">&nbsp;<spring:message code="systema.skat.invoice.amount"/>&nbsp;</th> 
+				                    <th class="text14">&nbsp;<spring:message code="systema.skat.invoice.currency"/>&nbsp;</th> 
+				                    <th align="left" class="text14">&nbsp;<spring:message code="systema.skat.invoice.mrn"/>&nbsp;</th>
+				                    <th class="text14">&nbsp;<spring:message code="systema.skat.delete"/>&nbsp;</th>
 			                    </tr>
 			                    </thead>
 			                    <tbody>
@@ -83,8 +83,8 @@
 					
 	               <tr>
 		               <td align="left">
-		               		&nbsp;<input class="inputFormSubmit" type="button" name="buttonCloseOk" id="buttonCloseOk" value='OK'>
-		               		&nbsp;<input class="inputFormSubmit" type="button" name="cancel" id="cancel" value='Annullér'>
+		               		&nbsp;<input class="inputFormSubmit" type="button" name="buttonCloseOk" id="buttonCloseOk" value='<spring:message code="systema.skat.ok"/>'>
+		               		&nbsp;<input class="inputFormSubmit" type="button" name="cancel" id="cancel" value='<spring:message code="systema.skat.cancel"/>'>
 		               </td>
 	               </tr>	
 			</table>

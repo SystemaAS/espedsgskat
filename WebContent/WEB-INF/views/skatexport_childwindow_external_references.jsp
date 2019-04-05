@@ -13,7 +13,7 @@
 	
 		<tr><td valign="top" colspan="3" class="text14Bold">&nbsp;&nbsp;&nbsp;
 		<img title="select" valign="bottom" src="resources/images/search.gif" width="24px" height="24px" border="0" alt="search">
-		Eksterne Referencer
+			<spring:message code="systema.skat.externref.title"/>
 		</td>
 		</tr>
 		
@@ -31,13 +31,13 @@
 						<table id="tblList" class="display compact cell-border" width="100%">
 							<thead>
 							<tr class="tableHeaderField">
-								<th class="text14">&nbsp;Ekstern refnr.&nbsp;</th>
-								<th class="text14">&nbsp;Avd.&nbsp;</th>  
-								<th class="text14">&nbsp;Opd.&nbsp;</th>
-			                    <th class="text14">&nbsp;Dato&nbsp;</th>   
-			                    <th class="text14">&nbsp;Afsender&nbsp;</th> 
-			                    <th class="text14">&nbsp;Modtager&nbsp;</th> 
-			                    <th class="text14">&nbsp;Fjern&nbsp;</th> 
+								<th class="text14">&nbsp;<spring:message code="systema.skat.externref"/>&nbsp;</th>
+								<th class="text14">&nbsp;<spring:message code="systema.skat.avd"/>&nbsp;</th>  
+								<th class="text14">&nbsp;<spring:message code="systema.skat.angivelse"/>&nbsp;</th>
+			                    <th class="text14">&nbsp;<spring:message code="systema.skat.date"/>&nbsp;</th>   
+			                    <th class="text14">&nbsp;<spring:message code="systema.skat.sender"/>&nbsp;</th> 
+			                    <th class="text14">&nbsp;<spring:message code="systema.skat.receiver"/>&nbsp;</th> 
+			                    <th class="text14">&nbsp;<spring:message code="systema.skat.delete"/>&nbsp;</th> 
 		                    </tr>
 		                    </thead>
 		                    <tbody>
@@ -57,11 +57,6 @@
 					               		<img src="resources/images/delete.gif" border="0" alt="remove">
 					               	</a>&nbsp;		               	
 					               	
-					               	<%--
-					               	<a onclick="javascript:return confirm('Er du sikker på at du vil slette denne?')" tabindex=-1 href="skatexport_childwindow_external_references_delete.do?parentAvd=${model.avd}&fsavd=${record.fsavd}&fsopd=${record.fsopd}">
-					               		<img valign="bottom" src="resources/images/delete.gif" border="0" alt="remove">
-					               	</a>
-					               	 --%>
 					               	
 				               </td>
 			               </tr>

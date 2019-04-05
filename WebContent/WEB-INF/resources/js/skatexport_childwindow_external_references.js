@@ -59,24 +59,40 @@
   	  var opd = record[1];
   	  avd= avd.replace("avd_","");
   	  opd= opd.replace("opd_","");
-
+  	  
+  	//Localize
+	  //DA - std
+	  var dlgTitle = "Fjern ekst.ref "; var btnTextOk = "Fortstæt"; var btnTextCancel = "Annullér";
+	  var legend = "Er du sikker på, at du vil slette dette?";
+	  //EN
+	  if(jq("#usrLang").val() == "EN"){
+		  dlgTitle = "Delete ext.ref. "; btnTextOk = "Ok"; btnTextCancel = "Cancel"; 
+		  legend = "Are you sure you want to delete this record?"
+	  }
   	  	//Start dialog
   	  	jq('<div></div>').dialog({
   	        modal: true,
-  	        title: "Fjern ekst.ref " ,
-  	        buttons: {
-  		        Fortsett: function() {
-  	        		jq( this ).dialog( "close" );
+  	        title: dlgTitle ,
+  	      buttons: [ 
+  	    	{
+  			 id: "dialogSave",	
+  			 text: btnTextOk,
+  			 click: function(){
+  				 	jq( this ).dialog( "close" );
   		            //do delete
   		            jq.blockUI({ message: BLOCKUI_OVERLAY_MESSAGE_DEFAULT});
   		            window.location = "skatexport_childwindow_external_references_delete.do?action=doDelete&parentAvd=" + jq("#parentAvd").val() + "&fsavd=" + avd + "&fsopd=" + opd;
-  		        },
-  		        Avbryt: function() {
-  		            jq( this ).dialog( "close" );
-  		        }
-  	        },
+  			 	 }
+  		 	 },
+   	 		{
+  		 	 id: "dialogCancel",
+  		 	 text: btnTextCancel, 
+  			 click: function(){
+  				 	jq( this ).dialog( "close" );
+  				} 
+   	 		 } ], 
   	        open: function() {
-  		  		  var markup = "Er du sikker på at du vil slette denne?";
+  		  		  var markup = legend;
   		          jq(this).html(markup);
   		          //make Cancel the default button
   		          jq(this).siblings('.ui-dialog-buttonpane').find('button:eq(1)').focus();

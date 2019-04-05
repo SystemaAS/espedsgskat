@@ -92,19 +92,30 @@
   	  var unik = record[1];
   	  id= id.replace("id","");
   	  unik= unik.replace("unik","");
-  	  
   	  var requestParams = "&avd=" + jq('#avd').val() + "&opd=" + jq('#opd').val() + "&mode=D" + "&reff=" + id + "&unik=" + unik;
+  	//Localize
+	  //DA - std
+	  var dlgTitle = "Fjern faktura "; var btnTextOk = "Fortstæt"; var btnTextCancel = "Annullér";
+	  var legend = "Er du sikker på, at du vil slette dette?";
+	  //EN
+	  if(jq("#usrLang").val() == "EN"){
+		  dlgTitle = "Delete invoice "; btnTextOk = "Ok"; btnTextCancel = "Cancel"; 
+		  legend = "Are you sure you want to delete this record?"
+	  }
   	  	//Start dialog
   	  	jq('<div></div>').dialog({
   	        modal: true,
-  	        title: "Fjern ekst.ref " ,
-  	        buttons: {
-  		        Fortsett: function() {
-
-  		        	jq.blockUI({ message: BLOCKUI_OVERLAY_MESSAGE_DEFAULT });
-  		            
-		  	  		jq.ajax({
-				  	  	  type: 'GET',
+  	        title: dlgTitle ,
+  	      buttons: [ 
+  	    	{
+  			 id: "dialogSave",	
+  			 text: btnTextOk,
+  			 click: function(){
+				 	jq( this ).dialog( "close" );
+		            //do delete
+		            jq.blockUI({ message: BLOCKUI_OVERLAY_MESSAGE_DEFAULT});
+  		            jq.ajax({
+  		            	type: 'GET',
 				  	  	  url: 'updateExternalInvoiceLine_SkatImport.do',
 				  	  	  data: { applicationUser : jq('#applicationUser').val(),
 						  			requestParams : requestParams },
@@ -113,22 +124,24 @@
 				  	  	  async: false,
 				  	  	  contentType: 'application/json',
 				  	  	  success: function(data) {
-				  	  		  //reload
-		  		        	  window.location = "skatimport_edit_childwindow_external_invoices.do?avd=" + jq("#avd").val() + "&opd=" + jq("#opd").val();
-				  	  		  
+			  	  		   //reload
+				  	  	   window.location = "skatimport_edit_childwindow_external_invoices.do?avd=" + jq("#avd").val() + "&opd=" + jq("#opd").val();
 				  	  	  },
 					  	  error: function() {
 				  	  	    //alert('Error loading ...');
 				  	  	  }
-				  	  });
-  	        		
-  		        },
-  		        Avbryt: function() {
-  		            jq( this ).dialog( "close" );
-  		        }
-  	        },
+			  	  	   });
+  			 	 }
+  		 	 },
+   	 		{
+  		 	 id: "dialogCancel",
+  		 	 text: btnTextCancel, 
+  			 click: function(){
+  				 	jq( this ).dialog( "close" );
+  				} 
+   	 		 } ], 
   	        open: function() {
-  		  		  var markup = "Er du sikker på at du vil slette denne?";
+  		  		  var markup = legend;
   		          jq(this).html(markup);
   		          //make Cancel the default button
   		          jq(this).siblings('.ui-dialog-buttonpane').find('button:eq(1)').focus();

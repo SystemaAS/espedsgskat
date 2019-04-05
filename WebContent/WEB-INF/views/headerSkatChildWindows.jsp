@@ -51,5 +51,6 @@
 	<script type="text/javascript" src="//bartaz.github.io/sandbox.js/jquery.highlight.js"></script>
 	<script type="text/javascript" src="//cdn.datatables.net/responsive/1.0.7/js/dataTables.responsive.min.js"></script>
 	<script type="text/javascript" src="//cdn.datatables.net/plug-ins/1.10.19/features/searchHighlight/dataTables.searchHighlight.min.js"></script>
+	<input type="hidden" name="usrLang" id="usrLang" value="${user.usrLang}" />	
 	
 	
