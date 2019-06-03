@@ -94,20 +94,31 @@ public final class SkatExportUrlDataStore {
 	//mode=U (Update existing), 
 	//mode=D (Delete existing topic)
 	//-----------------------------------
+	@UrlDataStoreAnnotationForField (name="@SkatExportHeaderInvoiceController - skatexport_edit_invoice.do, etc ", description=" --> SKAT_EXPORT_BASE_FETCH_TOPIC_INVOICELIST_URL")
 	static public String SKAT_EXPORT_BASE_FETCH_TOPIC_INVOICELIST_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKE030R.pgm";
 	//http://gw.systema.no/sycgip/tdke030r.pgm?user=OSCAR&avd=1&opd=52919
+	
+	
+	@UrlDataStoreAnnotationForField (name="@SkatExportAjaxHandlerController - getInvoiceLine_SkatExport.do, etc ", description=" --> SKAT_EXPORT_BASE_FETCH_SPECIFIC_TOPIC_INVOICE_URL")
 	static public String SKAT_EXPORT_BASE_FETCH_SPECIFIC_TOPIC_INVOICE_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKE031R.pgm";
 	//http://gw.systema.no/sycgip/tdke031r.pgm?user=OSCAR&avd=1&opd=52919&fak=SE444197610900
+	
+	@UrlDataStoreAnnotationForField (name="@SkatExportHeaderInvoiceController - skatexport_edit_invoice.do, etc ", description=" --> SKAT_EXPORT_BASE_FETCH_SPECIFIC_TOPIC_INVOICE_URL")
 	static public String SKAT_EXPORT_BASE_UPDATE_SPECIFIC_TOPIC_INVOICE_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKE032R.pgm";	
 	//http://gw.systema.no/sycgip/tdke032r.pgm?user=OSCAR&mode=U&avd=1&opd=52919&fak=SE444197610900..................................
 	
 	//------------------------------------------
 	//[6.2] LIST/Get  External INVOICE RECORD(s)
 	//------------------------------------------
+	@UrlDataStoreAnnotationForField (name="@SkatExportControllerChildWindow - skatexport_edit_childwindow_external_invoices.do, etc ", description=" --> SKAT_EXPORT_BASE_FETCH_TOPIC_INVOICELIST_EXTERNAL_URL")
 	static public String SKAT_EXPORT_BASE_FETCH_TOPIC_INVOICELIST_EXTERNAL_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKE060R.pgm";
 	//http://gw.systema.no/sycgip/tdke060r.pgm?user=OSCAR
+	
+	@UrlDataStoreAnnotationForField (name="@SkatExport... - ? ", description=" --> SKAT_EXPORT_BASE_FETCH_SPECIFIC_TOPIC_INVOICE_EXTERNAL_URL")
 	static public String SKAT_EXPORT_BASE_FETCH_SPECIFIC_TOPIC_INVOICE_EXTERNAL_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKE061R.pgm";	
 	//http://gw.systema.no/sycgip/tdke061r.pgm?user=OSCAR&reff=6441&unik=4009282
+	
+	@UrlDataStoreAnnotationForField (name="@SkatExportAjaxHandlerController ", description=" --> SKAT_EXPORT_BASE_UPDATE_SPECIFIC_TOPIC_INVOICE_EXTERNAL_URL")
 	static public String SKAT_EXPORT_BASE_UPDATE_SPECIFIC_TOPIC_INVOICE_EXTERNAL_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKE062R.pgm";	
 	//http://gw.systema.no/sycgip/tdke062r.pgm?user=OSCAR&avd=1&opd=91127&mode=U&reff=6445&unik=4012087
 	
@@ -116,20 +127,27 @@ public final class SkatExportUrlDataStore {
 	//[7] LOG and ARCHIVE for a SPECIFIC ARENDE
 	//------------------------------------------
 	//This section contains external functions such as LOGGING, ARCHIVE	
+	@UrlDataStoreAnnotationForField (name="@SkatExportHeaderLoggingController - skatexport_logging.do ", description=" --> SKAT_EXPORT_BASE_LOG_LIST_FOR_SPECIFIC_TOPIC_URL")
 	static public String SKAT_EXPORT_BASE_LOG_LIST_FOR_SPECIFIC_TOPIC_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKE015R.pgm";	
 	//http://gw.systema.no/sycgip/TDKE015R.pgm?user=OSCAR&avd=1&opd=218&typ=DKI 
 	
+	@UrlDataStoreAnnotationForField (name="@SkatExportHeaderLoggingController - skat_export_renderLargeText.do ", description=" --> SKAT_EXPORT_BASE_LOG_LARGE_TEXT_FOR_SPECIFIC_TOPIC_URL")
 	static public String SKAT_EXPORT_BASE_LOG_LARGE_TEXT_FOR_SPECIFIC_TOPIC_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKE016R.pgm";	
 	//http://gw.systema.no/sycgip/TDKE016R.pgm?user=OSCAR&fmn=84278
 	
+	@UrlDataStoreAnnotationForField (name="@Controller not used... - skatexport_archive.do (uses SkatImport's entities...) ", description=" --> SKAT_EXPORT_BASE_ARCHIVE_FOR_SPECIFIC_TOPIC_URL")
 	static public String SKAT_EXPORT_BASE_ARCHIVE_FOR_SPECIFIC_TOPIC_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TJGE001.pgm";	//this function is actually general for all modules byt
 	//http://gw.systema.no/sycgip/TJGE001.pgm?user=JOVO&avd=1&opd=52919
 		
 	//------------------------------------------
 	//[8] PRINT document for a SPECIFIC ARENDE
 	//------------------------------------------
+	@UrlDataStoreAnnotationForField (name="@SkatExportHeaderController - skatexport_edit_printTopic.do ", description=" --> SKAT_EXPORT_BASE_PRINT_FOR_SPECIFIC_TOPIC_URL")
 	static public String SKAT_EXPORT_BASE_PRINT_FOR_SPECIFIC_TOPIC_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKE014R.pgm";	//this function is actually general for all modules byt
 	//http://gw.systema.no/sycgip/TDKE014R.pgm?user=OSCAR&avd=1&opd=218	
+	
+	
+	@UrlDataStoreAnnotationForField (name="@SkatExportHeaderController - skatexport_edit_printSkilleArkTopic.do ", description=" --> SKAT_EXPORT_BASE_PRINT_SKILLEARK_FOR_SPECIFIC_TOPIC_URL")
 	static public String SKAT_EXPORT_BASE_PRINT_SKILLEARK_FOR_SPECIFIC_TOPIC_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TARC000R.pgm";	
 	//http://gw.systema.no/sycgip/TARC000R.pgm?user=OSCAR&avd=1&opd=218&type=Z
 
@@ -137,6 +155,7 @@ public final class SkatExportUrlDataStore {
 	//[9] OMBUD default values for every new record
 	//----------------------------------------------
 	//http://gw.systema.no/sycgip/TDKE018R.pgm?user=OSCAR&avd=1
+	@UrlDataStoreAnnotationForField (name="@SkatExportAjaxHandlerController - getSpecificTopicOmbud_SkatExport.do ", description=" --> SKAT_EXPORT_BASE_FETCH_OMBUD_DEFAULT_DATA_URL")
 	static public String SKAT_EXPORT_BASE_FETCH_OMBUD_DEFAULT_DATA_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKE018R.pgm";	
 	
 	//--------------------------------------------------
@@ -156,11 +175,13 @@ public final class SkatExportUrlDataStore {
 	//-----------------------------
 	// Change status (Admin Role)
 	//-----------------------------
+	@UrlDataStoreAnnotationForField (name="@SkatExportHeaderController - skatexport_updateStatus.do ", description=" --> SKAT_EXPORT_BASE_UPDATE_STATUS_URL")
 	static public String SKAT_EXPORT_BASE_UPDATE_STATUS_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKE051R.pgm";
 	
 	//-----------------------------
 	// Update proforma angivelse
 	//-----------------------------
+	@UrlDataStoreAnnotationForField (name="@SkatExportHeaderController - skatexport_updateProforma.do ", description=" --> SKAT_EXPORT_BASE_UPDATE_PROFORMA_URL")
 	static public String SKAT_EXPORT_BASE_UPDATE_PROFORMA_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKE053R.pgm";
 		
 	
