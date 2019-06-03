@@ -3,6 +3,7 @@
  */
 package no.systema.skat.skatexport.url.store;
 import no.systema.main.util.AppConstants;
+import no.systema.main.model.UrlDataStoreAnnotationForField;
 /**
  * Static URLs
  * 
@@ -15,19 +16,26 @@ public final class SkatExportUrlDataStore {
 	//----------------------------
 	//[1] FETCH ARENDE LIST
 	//----------------------------
+	@UrlDataStoreAnnotationForField (name="@SkatExportController - doFind, @SkatNctsExportItemsControllerChildWindow - getAngivelseList() ", description=" --> SKAT_EXPORT_BASE_TOPICLIST_URL")
 	static public String SKAT_EXPORT_BASE_TOPICLIST_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKE000R.pgm";
 	//fetch external references
+	
 	//http://10.13.1.22/sycgip/tdke004r.pgm?user=A25DEMO
+	@UrlDataStoreAnnotationForField (name="@SkatExportControllerChildWindow - skatexport_childwindow_external_references.do ", description=" --> SKAT_EXPORT_BASE_FETCH_TOPIC_LIST_EXTERNAL_REFERENCES_URL")
 	static public String SKAT_EXPORT_BASE_FETCH_TOPIC_LIST_EXTERNAL_REFERENCES_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKE004R.pgm";
+	
 	//http://gw.systema.no/sycgip/tdke005r.pgm?user=OSCAR&avd=1&opd=91127
+	@UrlDataStoreAnnotationForField (name="@SkatExportControllerChildWindow - skatexport_childwindow_external_references_delete.do ", description=" --> SKAT_EXPORT_BASE_UPDATE_SPECIFIC_TOPIC_EXTERNAL_REFERENCES_URL")
 	static public String SKAT_EXPORT_BASE_UPDATE_SPECIFIC_TOPIC_EXTERNAL_REFERENCES_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKE005R.pgm";	
 		
 	//----------------------------
 	//[2] FETCH A SPECIFIC ARENDE
 	//----------------------------
 	//TEST static public String XX_EXPORT_BASE_SPECIFIC_TOPIC_URL = "http://gw.systema.no/sycgip/TDKI001R.pgm?user=OSCAR&avd=1&opd=139";
+	@UrlDataStoreAnnotationForField (name="@SkatExportHeaderController - skatexport_edit.do, skatexport_copyTopic.do, skatexport_doFetchTopicFromTransportUppdrag.do, etc   ", description=" --> SKAT_EXPORT_BASE_FETCH_SPECIFIC_TOPIC_URL")
 	static public String SKAT_EXPORT_BASE_FETCH_SPECIFIC_TOPIC_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKE001R.pgm";
 	//[2.1 FETCH Fakt.total from Invoices]
+	@UrlDataStoreAnnotationForField (name="@SkatExportHeaderController - getInvoiceTotalFromInvoices()...  ", description=" --> SKAT_EXPORT_BASE_FETCH_SPECIFIC_TOPIC_FAKT_TOTAL_URL")
 	static public String SKAT_EXPORT_BASE_FETCH_SPECIFIC_TOPIC_FAKT_TOTAL_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKE033R.pgm";
 	
 	//------------------------------
@@ -38,18 +46,22 @@ public final class SkatExportUrlDataStore {
 	//mode=C (Copy selected topic)... from Norskexport or fallback to the origin: transportuppdrag
 	//mode=S (Send topic)
 	//------------------------------		
+	@UrlDataStoreAnnotationForField (name="@SkatExportHeaderController - many...  ", description=" --> SKAT_EXPORT_BASE_UPDATE_SPECIFIC_TOPIC_URL")
 	static public String SKAT_EXPORT_BASE_UPDATE_SPECIFIC_TOPIC_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKE002R.pgm";	
 	
 	//http://gw.systema.no/sycgip/tdke052r.pgm?user=CB&avd=2&opd=7000033&dtm2=201701172100
+	@UrlDataStoreAnnotationForField (name="@SkatExportAjaxHandlerController - sendAllSkatExportStatus11_SkatExport.do   ", description=" --> SKAT_EXPORT_BASE_UPDATE_BULK_SEND_SPECIFIC_TOPICS_URL")
 	static public String SKAT_EXPORT_BASE_UPDATE_BULK_SEND_SPECIFIC_TOPICS_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKE052R.pgm";	
 	
 	
 	//-----------------------------
 	//[5] FETCH ITEM RECORDS (LIST)
 	//-----------------------------
+	@UrlDataStoreAnnotationForField (name="@SkatExportItemsController - skatexport_edit_items.do, many more ...   ", description=" --> SKAT_EXPORT_BASE_FETCH_TOPIC_ITEMLIST_URL")
 	static public String SKAT_EXPORT_BASE_FETCH_TOPIC_ITEMLIST_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKE010R.pgm";
 	
 	//[5.1] FETCH SPECIFIC ITEM (for an update)
+	@UrlDataStoreAnnotationForField (name="@SkatExportAjaxHandlerController - getSpecificTopicItemChosenFromGuiElement_SkatExport.do ", description=" --> SKAT_EXPORT_BASE_FETCH_SPECIFIC_TOPIC_ITEM_URL")
 	static public String SKAT_EXPORT_BASE_FETCH_SPECIFIC_TOPIC_ITEM_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKE011R.pgm";
 	
 	//-----------------------------------
@@ -58,12 +70,14 @@ public final class SkatExportUrlDataStore {
 	//mode=U (Update existing), 
 	//mode=D (Delete existing topic)
 	//-----------------------------------
+	@UrlDataStoreAnnotationForField (name="@SkatExportItemsController - skatexport_edit_items.do, etc ", description=" --> SKAT_EXPORT_BASE_UPDATE_SPECIFIC_TOPIC_ITEM_URL")
 	static public String SKAT_EXPORT_BASE_UPDATE_SPECIFIC_TOPIC_ITEM_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKE012R.pgm";
 	//http://gw.systema.no/sycgip/TDKE012R.pgm?user=OSCAR&avd=1&opd=80001&lin=2&mode=A
 	
 	//--------------------------------------
 	//[6.0.1] Update AutoControl error line  
 	//--------------------------------------
+	@UrlDataStoreAnnotationForField (name="@SkatExportItemsController - skatexport_edit_items_autocontrol.do, etc ", description=" --> SKAT_EXPORT_BASE_UPDATE_SPECIFIC_TOPIC_ITEM_AUTOCONTROL_ERROR_URL")
 	static public String SKAT_EXPORT_BASE_UPDATE_SPECIFIC_TOPIC_ITEM_AUTOCONTROL_ERROR_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKE026R.pgm";
 	//http://gw.systema.no/sycgip/tdke026r.pgm?user=OSCAR&avd=1&opd=900077&lin=1&dkev_err=X
 	
@@ -71,6 +85,7 @@ public final class SkatExportUrlDataStore {
 	//[6.0.2] EDIT/SAVE (Statistiskt værdi MÅSTE kalkyleras). Inga avgifter 
 	//--------------------------------------------------------------------
 	//http://gw.systema.no/sycgip/TDKE017R.pgm?user=OSCAR&dkeh_221=USD&dkeh_221b=6.80&dkeh_222=2000
+	@UrlDataStoreAnnotationForField (name="@SkatExportAjaxHandlerController - calculateStatistisktVarde_SkatExport.do, etc ", description=" --> SKAT_EXPORT_BASE_AVGIFTS_CALCULATION_URL")
 	static public String SKAT_EXPORT_BASE_AVGIFTS_CALCULATION_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKE017R.pgm";	
 	
 	//-----------------------------------
