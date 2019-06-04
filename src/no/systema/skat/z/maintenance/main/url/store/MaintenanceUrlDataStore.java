@@ -2,6 +2,7 @@
  * 
  */
 package no.systema.skat.z.maintenance.main.url.store;
+import no.systema.main.model.UrlDataStoreAnnotationForField;
 import no.systema.main.util.AppConstants;
 /**
  * 
@@ -60,6 +61,7 @@ public final class MaintenanceUrlDataStore {
 	static public String MAINTENANCE_BASE_DKX001R_DML_UPDATE_URL = AppConstants.HTTP_ROOT_SERVLET_JSERVICES + "/syjservicesst/syjsDKX001R_U.do";
 	
 	//Specific code --> http://gw.systema.no:8080/sycgip/TDKG201R.do?user=OSCAR
+	@UrlDataStoreAnnotationForField (name="@MaintSkatFellesToldtariffDownloadController - skatmaintenancefelles_ttariffdownloadr.do ", description=" --> MAINTENANCE_BASE_DKG210R_RUN_DOWNLOAD_TOLTARIF_URL")
 	static public String MAINTENANCE_BASE_DKG210R_RUN_DOWNLOAD_TOLTARIF_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKG201R.pgm";
 		
 }
