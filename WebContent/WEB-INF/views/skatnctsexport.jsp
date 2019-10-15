@@ -106,8 +106,8 @@
 				<td align="left" ><input type="text" class="inputText" name="opd" id="opd" size="10" maxlength="10" value='${searchFilterSkatExportNcts.opd}'>&nbsp;</td>
 				<td align="left" ><input type="text" class="inputText" name="lrnNr" id="lrnNr" size="14" maxlength="35" value='${searchFilterSkatExportNcts.lrnNr}'>&nbsp;</td>
 				<td align="left" ><input type="text" class="inputText" name="mrnNr" id="mrnNr" size="14" maxlength="35" value='${searchFilterSkatExportNcts.mrnNr}'>&nbsp;</td>
-				<td align="left" ><input onKeyPress="return numberKey(event)" type="text" class="inputText" name="datum" id="datum" size="10" maxlength="8" value='${searchFilterSkatExportNcts.datum}'>&nbsp;</td>
-				<td align="left" ><input onKeyPress="return numberKey(event)" type="text" class="inputText" name="datumt" id="datumt" size="10" maxlength="8" value='${searchFilterSkatExportNcts.datumt}'>&nbsp;</td>
+				<td align="left" ><input autoComplete="nope" onKeyPress="return numberKey(event)" type="text" class="inputText" name="datum" id="datum" size="10" maxlength="8" value='${searchFilterSkatExportNcts.datum}'>&nbsp;</td>
+				<td align="left" ><input autoComplete="nope" onKeyPress="return numberKey(event)" type="text" class="inputText" name="datumt" id="datumt" size="10" maxlength="8" value='${searchFilterSkatExportNcts.datumt}'>&nbsp;</td>
 				<td align="left" ><input type="text" class="inputText" name="status" id="status" size="2" maxlength="1" value='${searchFilterSkatExportNcts.status}'>&nbsp;</td>
 				<td align="left" ><input type="text" class="inputText" name="motNavn" id="motNavn" size="10" maxlength="50" value='${searchFilterSkatExportNcts.motNavn}'>&nbsp;</td>
 				<td align="left" ><input type="text" class="inputText" name="bruttoVikt" id="bruttoVikt" size="10" maxlength="50" value='${searchFilterSkatExportNcts.bruttoVikt}'>&nbsp;</td>

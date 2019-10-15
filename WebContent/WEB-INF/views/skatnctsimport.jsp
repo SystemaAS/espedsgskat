@@ -103,8 +103,8 @@
 				</td>
 				<td align="left" ><input type="text" class="inputText" name="opd" id="opd" size="10" maxlength="10" value="${searchFilterSkatImportNcts.opd}">&nbsp;</td>
 				<td align="left" ><input type="text" class="inputText" name="mrnNr" id="mrnNr" size="15" maxlength="18" value="${searchFilterSkatImportNcts.mrnNr}">&nbsp;</td>
-				<td align="left" ><input onKeyPress="return numberKey(event)" type="text" class="inputText" name="datum" id="datum" size="9" maxlength="8" value="${searchFilterSkatImportNcts.datum}">&nbsp;</td>
-				<td align="left" ><input onKeyPress="return numberKey(event)" type="text" class="inputText" name="datumt" id="datumt" size="9" maxlength="8" value="${searchFilterSkatImportNcts.datumt}">&nbsp;</td>
+				<td align="left" ><input autoComplete="nope" onKeyPress="return numberKey(event)" type="text" class="inputText" name="datum" id="datum" size="9" maxlength="8" value="${searchFilterSkatImportNcts.datum}">&nbsp;</td>
+				<td align="left" ><input autoComplete="nope" onKeyPress="return numberKey(event)" type="text" class="inputText" name="datumt" id="datumt" size="9" maxlength="8" value="${searchFilterSkatImportNcts.datumt}">&nbsp;</td>
 				<td align="left" ><input type="text" class="inputText" name="status" id="status" size="2" maxlength="1" value="${searchFilterSkatImportNcts.status}">&nbsp;</td>
 				<td align="left" >
 					<select class="selectMediumBlueE2" name="forenklad" id="forenklad">
@@ -115,7 +115,7 @@
 				</td>
 				<td align="left" ><input type="text" class="inputText" name="ansNavn" id="ansNavn" size="12" maxlength="50" value="${searchFilterSkatImportNcts.ansNavn}">&nbsp;</td>
 				<td align="left" ><input type="text" class="inputText" name="godsNr" id="godsNr" size="12" maxlength="35" value="${searchFilterSkatImportNcts.godsNr}">&nbsp;</td>
-				<td align="left" ><input onKeyPress="return numberKey(event)" type="text" class="inputText" name="datumFr" id="datumFr" size="9" maxlength="8" value="${searchFilterSkatImportNcts.datumFr}">&nbsp;</td>
+				<td align="left" ><input autoComplete="nope" onKeyPress="return numberKey(event)" type="text" class="inputText" name="datumFr" id="datumFr" size="9" maxlength="8" value="${searchFilterSkatImportNcts.datumFr}">&nbsp;</td>
 
 				
 				<td valign="top" align="left" >

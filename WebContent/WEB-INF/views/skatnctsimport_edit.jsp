@@ -427,7 +427,27 @@
 						<table border="0" cellspacing="1" cellpadding="0">
 						<tr>
 				            <td >&nbsp;</td>
-				            <td ><font class="text16RedBold" >*</font><span title="tign">Egen ref.</span></td>
+				            <td >
+				            		<font class="text16RedBold" >*</font><span title="tign">Egen ref./Angiv.sted</span>
+				            		<img onMouseOver="showPop('egenref_info');" onMouseOut="hidePop('egenref_info');"style="vertical-align:middle;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">&nbsp;
+				            		
+				            		<div class="text11" style="position: relative;" align="left">
+									<span style="position:absolute; top:2px; width:250px;" id="egenref_info" class="popupWithInputText text11"  >
+						           	<p>
+						           		<b>Eksempel</b><br/>
+										Et vareparti ankommer på køretøjet den 16. januar 2019, kl. 10.15, og har opbevaringsadressen
+										Toldervej 12, 4412 Toldkøbing.
+										Ovenstående oplysninger skal angives præcis på følgende måde:
+										16.01.19 10.15 Toldervej 12 4412<br/><br/>
+										Af pladshensyn skal bynavnet ikke angives, men kun postnummeret. Under hensyn til at rubrikken
+										"<b>Angivelsesstedet</b>" kun har 35 alfanumeriske karakterer, skal vejnavnet - ved lange vejnavne -
+										forkortes mest hensigtsmæssigt.
+						           		
+						           	</p>	
+									
+									</span>	
+								</div>
+				            	</td>
 				            <td colspan="3" ><input type="text" class="inputTextMediumBlueMandatoryField" name="tign" id="tign" size="36" maxlength="35" value="${model.record.tign}"></td>
 			            </tr>
 						<tr>
