@@ -92,7 +92,7 @@ public class SkatNctsExportHeaderValidator implements Validator {
 		//ValidationUtils.rejectIfEmptyOrWhitespace(errors, "thtrm", "systema.skat.ncts.export.header.error.null.thtrm");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "thcats", "systema.skat.ncts.export.header.error.null.thcats");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "thskfd", "systema.skat.ncts.export.header.error.null.thskfd");
-		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "thdst", "systema.skat.ncts.export.header.error.null.thdst");
+		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "thdstn", "systema.skat.ncts.export.header.error.null.thdst");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "thdsk", "systema.skat.ncts.export.header.error.null.thdsk");
 		
 		//ValidationUtils.rejectIfEmptyOrWhitespace(errors, "thtsd1", "systema.skat.ncts.export.header.error.null.thtsd1");

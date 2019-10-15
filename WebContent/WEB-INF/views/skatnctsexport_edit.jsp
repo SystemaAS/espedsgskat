@@ -1576,7 +1576,7 @@
 					        <tr>
 					            <td class="text14" align="left" >
 					            <img onMouseOver="showPop('deklarantplats_info');" onMouseOut="hidePop('deklarantplats_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">	
-					            <font class="text16RedBold" >*</font><span title="thdst">Dekl.sted</span>
+					            <font class="text16RedBold" >*</font><span title="thdstn">Dekl.sted</span>
 					            <div class="text11" style="position: relative;" align="left">
 								<span style="position:absolute;top:2px; width:250px;" id="deklarantplats_info" class="popupWithInputText text11"  >
 					           			<ul>
@@ -1587,7 +1587,7 @@
 								</td>
 					            
 					            <td class="text14" align="left" >
-					            	<input type="text" class="inputTextMediumBlueMandatoryField" name="thdst" id="thdst" size="15" maxlength="15" value="${model.record.thdst}">
+					            	<input type="text" class="inputTextMediumBlueMandatoryField" name="thdstn" id="thdstn" size="36" maxlength="35" value="${model.record.thdstn}">
 					            	&nbsp;<font class="text16RedBold" >*</font><span title="thdsk">Dekl.sprog</span>
 					            	<select class="inputTextMediumBlueMandatoryField" name="thdsk" id="thdsk">
 			            				<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>

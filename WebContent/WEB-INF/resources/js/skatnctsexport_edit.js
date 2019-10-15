@@ -676,7 +676,7 @@
 						jq('#thska').val('DA');
 					}
 					
-					jq('#thdst').val(data[i].thdst);
+					jq('#thdstn').val(data[i].thdstn);
 					jq('#thdk').val(data[i].thdk);
 					
 					jq('#thlsd').val(data[i].thlsd);

@@ -433,6 +433,10 @@ public class JsonSkatNctsExportSpecificTopicRecord extends JsonAbstractGrandFath
 	public void setThdst(String value) {  this.thdst = value; }
 	public String getThdst() { return this.thdst;}
 	
+	private String thdstn = null;
+	public void setThdstn(String value) {  this.thdstn = value; }
+	public String getThdstn() { return this.thdstn;}
+	
 	private String thdsk = null;
 	public void setThdsk(String value) {  this.thdsk = value; }
 	public String getThdsk() { return this.thdsk;}
