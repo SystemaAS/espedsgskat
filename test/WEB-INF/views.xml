@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+    
+    
+    <!-- SKAT Import -->
+    <bean id="skatImportItemListExcelView" class="no.systema.skat.skatimport.view.ItemLineListExcelBuilder" />
+    <!-- SKAT Export -->
+    <bean id="skatExportItemListExcelView" class="no.systema.skat.skatexport.view.ItemLineListExcelBuilder" />
+    <!-- SKAT NCTS Export -->
+    <bean id="skatNctsExportItemListExcelView" class="no.systema.skat.nctsexport.view.ItemLineListExcelBuilder" />
+    
+
+
+
+     
+</beans>

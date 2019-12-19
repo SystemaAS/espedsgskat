@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:p="http://www.springframework.org/schema/p"
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+	<!-- ================  -->
+ 	<!-- APPLICATION WIDE -->  
+	<!-- ================  -->
+	<bean id="urlCgiProxyService" class="no.systema.main.service.UrlCgiProxyServiceImpl"/>
+	<bean id="systemaWebLoginService" class="no.systema.main.service.login.SystemaWebLoginServiceImpl"/>
+	<bean id="currencyRateService" class="no.systema.main.service.general.CurrencyRateServiceImpl"/>
+	<bean id="notisblockService" class="no.systema.main.service.general.notisblock.NotisblockServiceImpl"/>
+	<bean id="ediFtpLogService" class="no.systema.main.service.general.EdiFtpLogServiceImpl"/>
+	<bean id="firmLoginService" class="no.systema.main.service.FirmLoginServiceImpl"/>
+	<bean id="uploadFileToArchiveService" class="no.systema.main.service.general.UploadFileToArchiveServiceImpl"/>
+	
+	
+	<!-- =========  -->
+	<!-- SKAT WIDE   -->
+	<!-- =========  -->
+	<bean id="skatTaricVarukodService" class="no.systema.skat.service.SkatTaricVarukodServiceImpl"/>
+	<!-- SKAT - Authorization -->
+    <bean id="skatAuthorizationService" class="no.systema.skat.service.SkatAuthorizationServiceImpl"/>
+    <!-- SKAT - Drop down bean --> 
+    <bean id="skatDropDownListPopulationService" class="no.systema.skat.service.html.dropdown.SkatDropDownListPopulationService"/>
+	<!-- SKAT - Customer --> 
+	<bean id="skatCustomerService" class="no.systema.skat.service.SkatCustomerServiceImpl"/>
+	 <!-- SKAT - Tullkontor --> 
+	<bean id="skatTullkontorService" class="no.systema.skat.service.SkatTullkontorServiceImpl"/>
+	
+		
+    <!-- ===========  -->
+	<!-- SKAT IMPORT  -->
+	<!-- =========== -->
+	<bean id="skatImportTopicListService" class="no.systema.skat.skatimport.service.SkatImportTopicListServiceImpl"/>
+	<bean id="skatImportSpecificTopicService" class="no.systema.skat.skatimport.service.SkatImportSpecificTopicServiceImpl"/>
+	<bean id="skatImportSpecificTopicItemService" class="no.systema.skat.skatimport.service.SkatImportSpecificTopicItemServiceImpl"/>
+	<bean id="skatImportGeneralCodesChildWindowService" class="no.systema.skat.skatimport.service.SkatImportGeneralCodesChildWindowServiceImpl"/>
+	<!-- SKAT IMPORT Drop down bean --> 
+    <bean id="skatImportDropDownListPopulationService" class="no.systema.skat.skatimport.service.html.dropdown.SkatImportDropDownListPopulationService"/>
+	
+	<!-- ===========  -->
+	<!-- SKAT EXPORT  -->
+	<!-- =========== -->
+	<bean id="skatExportTopicListService" class="no.systema.skat.skatexport.service.SkatExportTopicListServiceImpl"/>
+	<bean id="skatExportSpecificTopicService" class="no.systema.skat.skatexport.service.SkatExportSpecificTopicServiceImpl"/>
+	<bean id="skatExportSpecificTopicItemService" class="no.systema.skat.skatexport.service.SkatExportSpecificTopicItemServiceImpl"/>
+	<bean id="skatExportGeneralCodesChildWindowService" class="no.systema.skat.skatexport.service.SkatExportGeneralCodesChildWindowServiceImpl"/>
+	<!-- SKAT EXPORT Drop down bean  -->  
+    <bean id="skatExportDropDownListPopulationService" class="no.systema.skat.skatexport.service.html.dropdown.SkatExportDropDownListPopulationService"/>
+	
+	<!-- ================  -->
+	<!-- SKAT-NCTS EXPORT  -->
+	<!-- ================  -->
+	<bean id="skatNctsExportTopicListService" class="no.systema.skat.nctsexport.service.SkatNctsExportTopicListServiceImpl"/>
+	<bean id="skatNctsExportSkatSpecificTopicService" class="no.systema.skat.nctsexport.service.SkatNctsExportSpecificTopicServiceImpl"/>
+	<bean id="skatNctsExportSkatSpecificTopicItemService" class="no.systema.skat.nctsexport.service.SkatNctsExportSpecificTopicItemServiceImpl"/>
+	<bean id="skatNctsExportGeneralCodesChildWindowService" class="no.systema.skat.nctsexport.service.SkatNctsExportGeneralCodesChildWindowServiceImpl"/>
+	
+	
+	<!-- SKAT-NCTS EXPORT Drop down bean --> 
+    <bean id="skatNctsExportSkatdropDownListPopulationService" class="no.systema.skat.nctsexport.service.html.dropdown.SkatNctsExportDropDownListPopulationService"/>
+	
+	<!-- ================  -->
+	<!-- SKAT-NCTS IMPORT  -->
+	<!-- ================  -->
+	<bean id="skatNctsImportTopicListService" class="no.systema.skat.nctsimport.service.SkatNctsImportTopicListServiceImpl"/>
+	<bean id="skatNctsImportSpecificTopicService" class="no.systema.skat.nctsimport.service.SkatNctsImportSpecificTopicServiceImpl"/>
+	<bean id="skatNctsImportSpecificTopicItemService" class="no.systema.skat.nctsimport.service.SkatNctsImportSpecificTopicItemServiceImpl"/>
+	<bean id="skatNctsImportSpecificTopicUnloadingService" class="no.systema.skat.nctsimport.service.SkatNctsImportSpecificTopicUnloadingServiceImpl"/>
+	<bean id="skatNctsImportSpecificTopicUnloadingItemService" class="no.systema.skat.nctsimport.service.SkatNctsImportSpecificTopicUnloadingItemServiceImpl"/>
+	<bean id="skatNctsImportGeneralCodesChildWindowService" class="no.systema.skat.nctsimport.service.SkatNctsImportGeneralCodesChildWindowServiceImpl"/>
+	<!-- SKAT NCTS IMPORT Drop down bean --> 
+    <bean id="skatNctsImportDropDownListPopulationService" class="no.systema.skat.nctsimport.service.html.dropdown.SkatNctsImportDropDownListPopulationService"/>
+	
+	<!-- ===========  -->
+	<!-- SKAT ADMIN    -->
+	<!-- ===========  -->
+	<bean id="skatAdminTransportService" class="no.systema.skat.admin.service.SkatAdminTransportServiceImpl"/>
+	
+	
+	
+	
+</beans>
