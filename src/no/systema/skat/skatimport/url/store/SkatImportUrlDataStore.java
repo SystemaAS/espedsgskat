@@ -139,7 +139,7 @@ public final class SkatImportUrlDataStore {
 	//http://gw.systema.no/sycgip/TDKI016R.pgm?user=OSCAR&fmn=84278
 	
 	@UrlDataStoreAnnotationForField (name="@SkatImportHeaderArchiveController/@SkatExportHeaderArchiveController - skatimport_archive.do / skatexport_archive.do ", description=" --> SKAT_IMPORT_BASE_ARCHIVE_FOR_SPECIFIC_TOPIC_URL")
-	static public String SKAT_IMPORT_BASE_ARCHIVE_FOR_SPECIFIC_TOPIC_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TJGE001.pgm";	//this function is actually general for all modules byt
+	static public String SKAT_IMPORT_BASE_ARCHIVE_FOR_SPECIFIC_TOPIC_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TJGE001.pgm";	//this function is actually general for all modules 
 	//http://gw.systema.no/sycgip/TJGE001.pgm?user=JOVO&avd=1&opd=52919
 		
 	//------------------------------------------

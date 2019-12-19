@@ -27,8 +27,7 @@ import no.systema.main.service.UrlCgiProxyService;
 import no.systema.main.util.AppConstants;
 import no.systema.main.util.io.PayloadContentFlusher;
 import no.systema.main.util.io.StackTraceUtil;
-
-
+import no.systema.main.validator.IPAddressValidator;
 import no.systema.main.model.SystemaWebUser;
 import no.systema.skat.nctsimport.model.jsonjackson.topic.logging.JsonSkatNctsImportSpecificTopicLoggingContainer;
 import no.systema.skat.nctsimport.model.jsonjackson.topic.logging.JsonSkatNctsImportSpecificTopicLoggingLargeTextContainer;
@@ -156,20 +155,23 @@ public class SkatNctsImportHeaderLoggingController {
             			absoluteFilePath = "/" + absoluteFilePath;
             		}
             
-
-                response.setContentType(AppConstants.HTML_CONTENTTYPE_TEXTHTML);
-                //--> with browser dialogbox: response.setHeader ("Content-disposition", "attachment; filename=\"edifactPayload.txt\"");
-                response.setHeader ("Content-disposition", "filename=\"edifactPayload.txt\"");
-                
-                logger.info("Start flushing file payload...");
-                //send the file output to the ServletOutputStream
-                try{
-                		payloadContentFlusher.flushServletOutput(response, absoluteFilePath);
-                		
-                	
-                }catch (Exception e){
-                		e.printStackTrace();
-                		payloadContentFlusher.flushServletOutput(response, this.stackTraceUtil.printStackTrace(e).getBytes());
+        		if(!new IPAddressValidator().isValidAbsoluteFilePathFor_RenderFile(absoluteFilePath)){
+                	return (null);
+                }else{
+	                response.setContentType(AppConstants.HTML_CONTENTTYPE_TEXTHTML);
+	                //--> with browser dialogbox: response.setHeader ("Content-disposition", "attachment; filename=\"edifactPayload.txt\"");
+	                response.setHeader ("Content-disposition", "filename=\"edifactPayload.txt\"");
+	                
+	                logger.info("Start flushing file payload...");
+	                //send the file output to the ServletOutputStream
+	                try{
+	                		payloadContentFlusher.flushServletOutput(response, absoluteFilePath);
+	                		
+	                	
+	                }catch (Exception e){
+	                		e.printStackTrace();
+	                		payloadContentFlusher.flushServletOutput(response, this.stackTraceUtil.printStackTrace(e).getBytes());
+	                }
                 }
             }
 			//this to present the output in an independent window
