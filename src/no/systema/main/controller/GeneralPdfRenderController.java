@@ -71,7 +71,8 @@ public class GeneralPdfRenderController {
 			//session.setAttribute(SkatConstants.ACTIVE_URL_RPG_SKAT, SkatConstants.ACTIVE_URL_RPG_INITVALUE); 
 			
 			String localFileName = request.getParameter("fn");
-			String localFilePath = this.FILE_RESOURCE_PATH + localFileName; 
+			String localFilePath = request.getSession().getServletContext().getRealPath(FILE_RESOURCE_PATH + localFileName);
+			logger.info(localFilePath);
 			
 			//String path="/WEB-INF/ProjectFiles/Risultati/risultati_test.txt";
 			//InputStream inputStream = this.getServletConfig().getServletContext().getResourceAsStream(path);
@@ -82,8 +83,11 @@ public class GeneralPdfRenderController {
                 String absoluteFilePath = localFilePath;
                 
                 if(!new IPAddressValidator().isValidAbsoluteFilePathFor_RenderFile(absoluteFilePath)){
+                	//logger.warn("A");
                 	return (null);
+                	
                 }else{
+                	//logger.warn("B");
 	                //must know the file type in order to put the correct content type on the Servlet response.
 	                String fileType = this.payloadContentFlusher.getFileType(localFilePath);
 	                if(AppConstants.DOCUMENTTYPE_PDF.equals(fileType)){
@@ -105,9 +109,8 @@ public class GeneralPdfRenderController {
 	                logger.info("Start flushing file payload...");
 	                //send the file output to the ServletOutputStream
 	                try{
-	                		InputStream inputStream = session.getServletContext().getResourceAsStream(absoluteFilePath);
-	                		this.payloadContentFlusher.flushServletOutputOnLocalServletFile(response, inputStream);
-	                	
+	                	this.payloadContentFlusher.flushServletOutput(response, absoluteFilePath);
+	                		
 	                }catch (Exception e){
 	                		e.printStackTrace();
 	                }
