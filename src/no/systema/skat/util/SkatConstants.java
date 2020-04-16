@@ -109,7 +109,7 @@ public final class SkatConstants {
 	public static final String DOMAIN_RECORD_ITEM_CONTAINER_INVOICE_TOPIC = "recordItemContainerInvoiceTopic";
 	public static final String SESSION_LIST = "sessionList";
 	public static final String ITEM_LIST = "itemList";
-
+	public static final String MAIN_TOPIC_LIST = "mainList";
 	
 	//aspects in view (sucha as errors, logs, other
 	public static final String ASPECT_ERROR_MESSAGE = "errorMessage";

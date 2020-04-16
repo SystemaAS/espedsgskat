@@ -7,10 +7,15 @@
     
     <!-- SKAT Import -->
     <bean id="skatImportItemListExcelView" class="no.systema.skat.skatimport.view.ItemLineListExcelBuilder" />
+    <bean id="skatImportMainListExcelView" class="no.systema.skat.skatimport.view.MainListExcelBuilder" />
     <!-- SKAT Export -->
     <bean id="skatExportItemListExcelView" class="no.systema.skat.skatexport.view.ItemLineListExcelBuilder" />
+    <bean id="skatExportMainListExcelView" class="no.systema.skat.skatexport.view.MainListExcelBuilder" />
     <!-- SKAT NCTS Export -->
     <bean id="skatNctsExportItemListExcelView" class="no.systema.skat.nctsexport.view.ItemLineListExcelBuilder" />
+    <bean id="skatNctsExportMainListExcelView" class="no.systema.skat.nctsexport.view.MainListExcelBuilder" />
+    <!-- SKAT NCTS Import -->
+    <bean id="skatNctsImportMainListExcelView" class="no.systema.skat.nctsimport.view.MainListExcelBuilder" />
     
 
 

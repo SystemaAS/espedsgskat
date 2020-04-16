@@ -231,6 +231,8 @@ public class SkatExportController {
 					successView.addObject(SkatConstants.DOMAIN_MODEL , model);
 			    		//domain and search filter
 					successView.addObject(SkatConstants.DOMAIN_LIST,outputList);
+					//set a session variable in order to make the list available to an external view controller (Excel/PDF- Controller)
+					session.setAttribute(session.getId() + SkatConstants.SESSION_LIST, outputList);
 					
 					if (session.getAttribute(SkatConstants.SESSION_SEARCH_FILTER_SKATEXPORT) == null || session.getAttribute(SkatConstants.SESSION_SEARCH_FILTER_SKATEXPORT).equals("")){
 						successView.addObject(SkatConstants.DOMAIN_SEARCH_FILTER_SKATEXPORT, searchFilter);
@@ -314,6 +316,7 @@ public class SkatExportController {
 			//init the rest
 			successView.addObject(SkatConstants.DOMAIN_MODEL , model);
 			successView.addObject(SkatConstants.DOMAIN_LIST,new ArrayList());
+			
 			
 			return successView;
 			

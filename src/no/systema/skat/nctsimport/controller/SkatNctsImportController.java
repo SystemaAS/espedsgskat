@@ -213,9 +213,11 @@ public class SkatNctsImportController {
 					this.populateAvdelningHtmlDropDownsFromJsonString(model, appUser, session);
 					this.populateSignatureHtmlDropDownsFromJsonString(model, appUser);
 					successView.addObject(SkatConstants.DOMAIN_MODEL , model);
-		    		
 					//domain and search filter
 					successView.addObject(SkatConstants.DOMAIN_LIST,outputList);
+					//set a session variable in order to make the list available to an external view controller (Excel/PDF- Controller)
+					session.setAttribute(session.getId() + SkatConstants.SESSION_LIST, outputList);
+					
 					if (session.getAttribute(SkatConstants.SESSION_SEARCH_FILTER_SKATIMPORT_NCTS) == null || session.getAttribute(SkatConstants.SESSION_SEARCH_FILTER_SKATIMPORT_NCTS).equals("")){
 						successView.addObject(SkatConstants.DOMAIN_SEARCH_FILTER_SKATIMPORT_NCTS, searchFilter);
 					}
