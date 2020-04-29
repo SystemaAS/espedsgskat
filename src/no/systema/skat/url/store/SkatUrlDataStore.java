@@ -105,5 +105,12 @@ public final class SkatUrlDataStore {
 	static public String SKAT_CHECK_EXTRA_MANGDENHET = AppConstants.HTTP_ROOT_CGI + "/sycgip/TSVG016R.pgm"; 
 	
 
+	//-------------
+	//Upload CSV
+	//-------------
+	static public String SYSTEMA_UPLOAD_FILE_CSV_INVOICE_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKG020R.pgm";	
+	//http://10.13.3.22:80/sycgip/TDKG020R.pgm?user=OSCAR&wsdokn=tarzan.jpg
+	//{ "user": "OSCAR", "wsdokn": "tarzan.jpg","valids": "Y", "tmpdir": "/pdf/tmp/", "errMsg": "", "uploadcsv": [] } 
+		
 	
 }
