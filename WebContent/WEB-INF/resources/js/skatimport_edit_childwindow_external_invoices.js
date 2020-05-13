@@ -95,7 +95,7 @@
   	  var requestParams = "&avd=" + jq('#avd').val() + "&opd=" + jq('#opd').val() + "&mode=D" + "&reff=" + id + "&unik=" + unik;
   	//Localize
 	  //DA - std
-	  var dlgTitle = "Fjern faktura "; var btnTextOk = "Fortstæt"; var btnTextCancel = "Annullér";
+	  var dlgTitle = "Fjern faktura "; var btnTextOk = "Fortsæt"; var btnTextCancel = "Annullér";
 	  var legend = "Er du sikker på, at du vil slette dette?";
 	  //EN
 	  if(jq("#usrLang").val() == "EN"){

@@ -65,7 +65,7 @@
 	  jq(".copyLink").click(function() {
 		  //Localize
 		  //DA - std
-		  var dlgTitle = "Kopi Angivelse "; var btnTextOk = "Fortstæt"; var btnTextCancel = "Annullér";
+		  var dlgTitle = "Kopi Angivelse "; var btnTextOk = "Fortsæt"; var btnTextCancel = "Annullér";
 		  //EN
 		  if(jq("#usrLang").val() == "EN"){
 			  dlgTitle = "Copy declaration "; btnTextOk = "Ok"; btnTextCancel = "Cancel"; 
@@ -146,7 +146,7 @@
 	  
 	  //Localize
 	  //DA - std
-	  var dlgTitle = "Fjern Angivelse "; var btnTextOk = "Fortstæt"; var btnTextCancel = "Annullér";
+	  var dlgTitle = "Fjern Angivelse "; var btnTextOk = "Fortsæt"; var btnTextCancel = "Annullér";
 	  var legend = "Er du sikker på, at du vil slette dette?";
 	  //EN
 	  if(jq("#usrLang").val() == "EN"){
@@ -205,7 +205,7 @@
 	  jq("#copyFromTransportUppdragLink").click(function() {
 		  //Localize
 		  //DA - std
-		  var dlgTitle = "Hent opdrag fra SYSPED"; var btnTextOk = "Fortstæt"; var btnTextCancel = "Annullér";
+		  var dlgTitle = "Hent opdrag fra SYSPED"; var btnTextOk = "Fortsæt"; var btnTextCancel = "Annullér";
 		  //EN
 		  if(jq("#usrLang").val() == "EN"){
 			  dlgTitle = "Get the order from SYSPED"; btnTextOk = "Ok"; btnTextCancel = "Cancel"; 
@@ -323,7 +323,7 @@
 	  jq("#buttonSendAll").click(function() {
 		  //Localize
 		  //DA - std
-		  var dlgTitle = "Sæt Faktisk ekspeditionstid"; var btnTextOk = "Fortstæt"; var btnTextCancel = "Annullér";
+		  var dlgTitle = "Sæt Faktisk ekspeditionstid"; var btnTextOk = "Fortsæt"; var btnTextCancel = "Annullér";
 		  //EN
 		  if(jq("#usrLang").val() == "EN"){
 			  dlgTitle = "Set the Actual expedition time"; btnTextOk = "Ok"; btnTextCancel = "Cancel"; 

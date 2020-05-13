@@ -42,7 +42,7 @@
 	  jq(".copyLink").click(function() {
 		  //Localize
 		  //DA - std
-		  var dlgTitle = "Kopi Angivelse "; var btnTextOk = "Fortstæt"; var btnTextCancel = "Annullér";
+		  var dlgTitle = "Kopi Angivelse "; var btnTextOk = "Fortsæt"; var btnTextCancel = "Annullér";
 		  //EN
 		  if(jq("#usrLang").val() == "EN"){
 			  dlgTitle = "Copy declaration "; btnTextOk = "Ok"; btnTextCancel = "Cancel"; 
@@ -130,7 +130,7 @@
 	  jq("#copyFromTransportUppdragLink").click(function() {
 		  //Localize
 		  //DA - std
-		  var dlgTitle = "Hent opdrag fra SYSPED"; var btnTextOk = "Fortstæt"; var btnTextCancel = "Annullér";
+		  var dlgTitle = "Hent opdrag fra SYSPED"; var btnTextOk = "Fortsæt"; var btnTextCancel = "Annullér";
 		  //EN
 		  if(jq("#usrLang").val() == "EN"){
 			  dlgTitle = "Get the order from SYSPED"; btnTextOk = "Ok"; btnTextCancel = "Cancel"; 

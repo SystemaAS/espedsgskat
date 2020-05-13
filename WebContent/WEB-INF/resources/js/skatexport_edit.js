@@ -1326,7 +1326,7 @@
 		  jq("#updateProformaLink").click(function() {
 			  //Localize
 			  //DA - std
-			  var dlgTitle = "Opdater angivelse"; var btnTextOk = "Fortstæt"; var btnTextCancel = "Annullér";
+			  var dlgTitle = "Opdater angivelse"; var btnTextOk = "Fortsæt"; var btnTextCancel = "Annullér";
 			  //EN
 			  if(jq("#usrLang").val() == "EN"){
 				  dlgTitle = "Update declaration"; btnTextOk = "Ok"; btnTextCancel = "Cancel"; 
@@ -1393,7 +1393,7 @@
 	  function presentPrintSkilleArkDialog(){
 		//Localize
 		  //DA - std
-		  var dlgTitle = "Print Delere"; var btnTextOk = "Fortstæt"; var btnTextCancel = "Annullér";
+		  var dlgTitle = "Print Delere"; var btnTextOk = "Fortsæt"; var btnTextCancel = "Annullér";
 		  //EN
 		  if(jq("#usrLang").val() == "EN"){
 			  dlgTitle = "Print"; btnTextOk = "Ok"; btnTextCancel = "Cancel"; 
@@ -1470,7 +1470,7 @@
 	  function presentUploadFileDialog(){
 		//Localize
 		  //DA - std
-		  var dlgTitle = "Upload dokument"; var btnTextOk = "Fortstæt"; var btnTextCancel = "Annullér";
+		  var dlgTitle = "Upload dokument"; var btnTextOk = "Fortsæt"; var btnTextCancel = "Annullér";
 		  //EN
 		  if(jq("#usrLang").val() == "EN"){
 			  dlgTitle = "Upload document"; btnTextOk = "Ok"; btnTextCancel = "Cancel"; 

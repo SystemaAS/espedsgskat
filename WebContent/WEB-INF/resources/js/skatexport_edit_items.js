@@ -547,7 +547,7 @@
     	  
     	  //Localize
     	  //DA - std
-    	  var dlgTitle = "Fjern varepost "; var btnTextOk = "Fortstæt"; var btnTextCancel = "Annullér";
+    	  var dlgTitle = "Fjern varepost "; var btnTextOk = "Fortsæt"; var btnTextCancel = "Annullér";
     	  var legend = "Er du sikker på, at du vil slette dette?";
     	  //EN
     	  if(jq("#usrLang").val() == "EN"){
