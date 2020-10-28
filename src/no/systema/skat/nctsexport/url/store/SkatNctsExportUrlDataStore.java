@@ -67,7 +67,7 @@ public final class SkatNctsExportUrlDataStore {
 	//http://gw.systema.no/sycgip/TDCE017R.pgm?user=OSCAR&tftanr=170199(valid varukod) --->010290 (valid varukod)
 	
 	
-	//Refresh ARENDE
+	//Refresh ARENDE - hanterar garantibeloppet.
 	@UrlDataStoreAnnotationForField (name="@SkatNctsExportItemsController - skatnctsexport_edit_items.do ", description=" --> NCTS_EXPORT_BASE_REFRESH_SPECIFIC_TOPIC_URL")
 	static public String NCTS_EXPORT_BASE_REFRESH_SPECIFIC_TOPIC_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDCE004R.pgm";
 	
