@@ -36,6 +36,10 @@ public final class MaintenanceUrlDataStore {
 	//DKX001R
 	//Specific code --> http://gw.systema.no:8080/syjservicesst/syjsDKXKODFR.do?user=OSCAR&dkkd_typ=001&dkkd_kd=01
 	static public String MAINTENANCE_BASE_DKX001R_GET_LIST_URL = AppConstants.HTTP_ROOT_SERVLET_JSERVICES + "/syjservicesst/syjsDKX001R.do";
+	
+	//DKEK
+	//Specific code --> http://gw.systema.no:8080/syjservicesst/syjsDKEK.do?user=OSCAR&kundnr=1
+	static public String MAINTENANCE_BASE_DKEK_GET_LIST_URL = AppConstants.HTTP_ROOT_SERVLET_JSERVICES + "/syjservicesst/syjsDKEK.do";
 		
 	//----------------------------------
 	//[1] UPDATE DB record
@@ -63,5 +67,9 @@ public final class MaintenanceUrlDataStore {
 	//Specific code --> http://gw.systema.no:8080/sycgip/TDKG201R.do?user=OSCAR
 	@UrlDataStoreAnnotationForField (name="@MaintSkatFellesToldtariffDownloadController - skatmaintenancefelles_ttariffdownloadr.do ", description=" --> MAINTENANCE_BASE_DKG210R_RUN_DOWNLOAD_TOLTARIF_URL")
 	static public String MAINTENANCE_BASE_DKG210R_RUN_DOWNLOAD_TOLTARIF_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKG201R.pgm";
+	
+	//Specific code --> TODO http://gw.systema.no:8080/syjservicesst/syjsDKEK_U.do?user=OSCAR&mode=U&<record>attributes...
+	static public String MAINTENANCE_BASE_DKEK_DML_UPDATE_URL = AppConstants.HTTP_ROOT_SERVLET_JSERVICES + "/syjservicesst/syjsDKEK_U.do";
+		
 		
 }

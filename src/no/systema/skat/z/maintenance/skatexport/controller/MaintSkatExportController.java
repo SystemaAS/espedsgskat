@@ -103,6 +103,16 @@ public class MaintSkatExportController {
 		//object.setText("TODO");
 		object.setDbTable("DKTKD");
 		listObject.add(object);
+		//
+		object = new  MaintenanceMainListObject();
+		object.setId("2");
+		object.setSubject("Vedligeholdelse af kunde vareregister");
+		object.setCode("SKAT_KVAREREGISTER");
+		object.setStatus("G");
+		object.setPgm("dkek");
+		//object.setText("TODO");
+		object.setDbTable("DKEK");
+		listObject.add(object);
 		
 		return listObject;
 	}
