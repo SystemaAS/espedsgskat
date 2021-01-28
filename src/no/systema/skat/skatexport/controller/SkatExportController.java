@@ -186,7 +186,11 @@ public class SkatExportController {
 	            	SearchFilterSkatExportTopicList sessionFilter = (SearchFilterSkatExportTopicList)session.getAttribute(SkatConstants.SESSION_SEARCH_FILTER_SKATEXPORT);
 	            	if(sessionFilter!=null){
 	            		//Use the session filter when applicable
+	            		logger.warn("session filter is used...");
 	            		searchFilter = sessionFilter;
+	            	}else{
+	            		//default first time
+	            		logger.warn("first time filter is used...");
 	            	}
 	            }
 	            

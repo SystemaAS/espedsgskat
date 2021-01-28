@@ -43,7 +43,9 @@
 			jq("#dkek_vnr").addClass("inputTextMediumBlueMandatoryField");
 			
 			//rest of the gang
+			jq('#dkek_331').val("");
 			jq('#dkek_315').val("");
+			
 			
 			//for update
 			jq('#updateId').val("");
@@ -86,6 +88,7 @@
   			jq("#dkek_vnr").addClass("inputTextReadOnly");
   			
   			//rest of the gang
+  			jq('#dkek_331').val("");jq('#dkek_331').val(data[i].dkek_331);
   			jq('#dkek_315').val("");jq('#dkek_315').val(data[i].dkek_315);
   			//TODO
   			

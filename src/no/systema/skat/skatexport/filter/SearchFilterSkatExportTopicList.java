@@ -8,6 +8,8 @@ import java.util.*;
 
 import org.apache.log4j.Logger;
 
+import no.systema.main.util.DateTimeManager;
+
 
 /**
  * This search class is used at the GUI search behavior
@@ -21,6 +23,7 @@ import org.apache.log4j.Logger;
  */
 public class SearchFilterSkatExportTopicList {
 	private static final Logger logger = Logger.getLogger(SearchFilterSkatExportTopicList.class.getName());
+	private static final DateTimeManager dateMgr = new DateTimeManager();
 	
 	private String avd = null;
 	public void setAvd(String value) {  this.avd = value; }
@@ -46,7 +49,7 @@ public class SearchFilterSkatExportTopicList {
 	public void setSign(String value) { this.sign = value;}
 	public String getSign() { return this.sign;}
 	
-	private String datum = null;
+	private String datum = this.dateMgr.getNewDateFromNow(-1);
 	public void setDatum(String value) {  this.datum = value; }
 	public String getDatum() { return this.datum;}
 	

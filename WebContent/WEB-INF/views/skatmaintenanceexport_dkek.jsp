@@ -68,6 +68,7 @@
 							<tr>
 								<th align="center" width="2%" class="tableHeaderField" >&nbsp;Opdater&nbsp;</th>
 								<th class="tableHeaderField" >&nbsp;Kundenr&nbsp;</th>
+			                    <th class="tableHeaderField" >&nbsp;Kundens varenr&nbsp;</th>
 			                    <th class="tableHeaderField" >&nbsp;Varekode&nbsp;</th>
 			                    <th class="tableHeaderField" >&nbsp;Varebeskrivelse&nbsp;</th>
 								<th class="tableHeaderField" >&nbsp;todo&nbsp;</th>
@@ -83,6 +84,7 @@
 				               </td>
 				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 1px;border-color:#FAEBD7;"><font class="text14">&nbsp;${record.dkek_knr}&nbsp;</font></td>
 				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text14">&nbsp;${record.dkek_vnr}&nbsp;</font></td>
+							   <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text14">&nbsp;${record.dkek_331}&nbsp;</font></td>
 				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text14">&nbsp;${record.dkek_315}&nbsp;</font></td>
 				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text14">&nbsp;${Xrecord.dkse_4421}&nbsp;</font></td>
 				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text14">&nbsp;${Xrecord.dkse_442A}&nbsp;</font></td>
@@ -163,7 +165,8 @@
 					<table width="80%" cellspacing="1" border="0" align="left">
 			    	    <tr>
 							<td class="text14" title="dkek_knr">&nbsp;<font class="text14RedBold" >*</font>Kundenr</td>
-							<td class="text14" title="dkek_vnr">&nbsp;<font class="text14RedBold" >*</font>Varekode</td>
+							<td class="text14" title="dkek_vnr">&nbsp;<font class="text14RedBold" >*</font>Kundens varenr</td>
+							<td class="text14" title="dkek_331">&nbsp;Varekode</td>
 							<td class="text14" title="dkek_315">&nbsp;Varebeskrivelse</td>
 							<td class="text14" title="todo">&nbsp;todo</td>
 							<td class="text14" title="todo">&nbsp;todo</td>
@@ -176,6 +179,7 @@
 						
 						</td>
 						<td ><input type="text" required oninvalid="this.setCustomValidity('Obligatoriskt')" oninput="setCustomValidity('')" class="inputTextMediumBlueMandatoryField" name="dkek_vnr" id="dkek_vnr" size="25" maxlength="28" value='${model.record.dkek_vnr}'></td>
+						<td ><input type="text" class="inputTextMediumBlue" name="dkek_331" id="dkek_331" size="10" maxlength="8" value='${model.record.dkek_331}'></td>
 						<td ><input type="text" class="inputTextMediumBlue" name="dkek_315" id="dkek_315" size="25" maxlength="45" value='${model.record.dkek_315}'></td>
 						<td ><input type="text" class="inputTextMediumBlue" name="todo" id="todo" size="10" maxlength="10" value='${Xmodel.record.dkse_4421}'></td>
 						<td ><input type="text" class="inputTextMediumBlue" name="todo" id="todo" size="10" maxlength="10" value='${Xmodel.record.dkse_442A}'></td>
