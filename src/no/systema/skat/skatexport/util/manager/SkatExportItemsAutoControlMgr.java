@@ -4,6 +4,7 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
@@ -176,8 +177,8 @@ public class SkatExportItemsAutoControlMgr {
 	 */
 	public void checkValidGrossAndNetWeight(){
 		//Gross must always be >= Net
-		if(record.getDkev_35()!=null && !"".equals(record.getDkev_35())){
-			if(record.getDkev_38()!=null && !"".equals(record.getDkev_38())){
+		if(StringUtils.isNotEmpty(record.getDkev_35())){
+			if(StringUtils.isNotEmpty(record.getDkev_38())){
 				try{
 					String grossFormatTmp = record.getDkev_35().replace(".", "");
 					double grossWeight = Double.parseDouble(grossFormatTmp.replace(",", "."));
@@ -186,6 +187,7 @@ public class SkatExportItemsAutoControlMgr {
 					
 					//Net can not be > than Gross
 					if (netWeight>grossWeight){
+						logger.error("net > gross");
 						this.validRecord = false;
 					}
 				}catch(Exception e){
@@ -197,25 +199,27 @@ public class SkatExportItemsAutoControlMgr {
 		//No decimals are allowed with weights > 1
 		//-----------------------------------------
 		//Gross
-		if(record.getDkev_35()!=null && !"".equals(record.getDkev_35())){
+		if(StringUtils.isNotEmpty(record.getDkev_35())){
 			String grossFormatTmp = record.getDkev_35().replace(".", "");
 			double grossWeight = Double.parseDouble(grossFormatTmp.replace(",", "."));
 			if(grossWeight>1){
 				if(grossWeight%1==0){
 					//nothing since there are no decimals (mathematically)
 				}else{
-					this.validRecord = false;
+					//logger.error("decimals ... ? not allowed on gross weight");
+					//OBSOLETE -->this.validRecord = false;
 				}
 			}
 		}
 		//Net
-		if(record.getDkev_38()!=null && !"".equals(record.getDkev_38())){
+		if(StringUtils.isNotEmpty(record.getDkev_38())){
 			String netFormatTmp = record.getDkev_38().replace(".", "");
 			double netWeight = Double.parseDouble(netFormatTmp.replace(",", "."));
 			if(netWeight>1){
 				if(netWeight%1==0){
 					//nothing since there are no decimals (mathematically)
 				}else{
+					logger.error("decimals ... ? not allowed on net weight");
 					this.validRecord = false;
 				}
 			}
@@ -426,12 +430,15 @@ public class SkatExportItemsAutoControlMgr {
 	 * @param appUser
 	 */
 	public void calculateNetWeight(JsonSkatExportSpecificTopicRecord headerRecord, SystemaWebUser appUser){
-		  double grossNetFactor = 0.9; //default;
+		  double grossNetFactor = 0.8; //default;
 		  String grossWeight = this.record.getDkev_35();
 		  String netWeight = this.record.getDkev_38();
+		  logger.warn("Gross:" + grossWeight);
+		  logger.warn("Net:" + netWeight);
+		  
 		  try{
 			  //Gross weight exists but not net weight
-			  if(grossWeight!=null && !"".equals(grossWeight) && (netWeight==null || "".equals(netWeight))  ){
+			  if(StringUtils.isNotEmpty(grossWeight) && StringUtils.isEmpty(netWeight) ){
 				  /*NOTE! this field does not exist in SKAT (as for today)
 				  if(headerRecord.getSefvk()!=null && !"".equals(headerRecord.getSefvk())){
 					  String tmp = headerRecord.getSefvk().replace("," , ".");
@@ -442,8 +449,12 @@ public class SkatExportItemsAutoControlMgr {
 				  double grossWeightDbl = Double.parseDouble(grossWeight);
 				  double netWeightDbl = grossWeightDbl * grossNetFactor;
 				  NumberFormatterLocaleAware formatter = new NumberFormatterLocaleAware();
-				  netWeight = String.valueOf(formatter.getDoubleEuropeanFormat(netWeightDbl, 3, false));
+				  //OBSOLETE --> netWeight = String.valueOf(formatter.getDoubleEuropeanFormat(netWeightDbl, 3, false));
+				  
+				  //No decimals on Net Weight
+				  netWeight = String.valueOf(formatter.getDoubleEuropeanFormat(netWeightDbl, 0, false));
 				  //final result
+				  logger.warn(netWeight);
 				  this.record.setDkev_38(netWeight);
 				  
 			  }

@@ -17,6 +17,7 @@ import no.systema.main.model.jsonjackson.general.JsonAbstractGrandFatherRecord;
  */
 @Data
 public class JsonMaintDkekRecord extends JsonAbstractGrandFatherRecord{
+	private String knavn = null;
 		                       								//Start/end_pos Byte Dig Dec Type
 	private String dkek_knr = null; //   Kundens kundenr          1     8      8   8   0 S  
 	private String dkek_vnr = null; //   Kundens varenr           9      36    28           A (Artikkelnr)  

@@ -227,7 +227,19 @@
 				  opener.jq('#hekns').val(knr);
 				  opener.jq('#ownHekns').val(knavn);
 				  
-			  }
+			  //===============================
+		      //SKAT Vedlikehold Export Module - kundends vareregister 
+			  //===============================	  	  
+			  }else if(callerType == 'dkek_knr'){
+				  opener.jq('#dkek_knr').val(knr);
+				  opener.jq('#todo').val(knavn);
+				  opener.jq('#dkek_knr').focus();
+				  
+			  }else if(callerType == 'search_dkek_knr'){
+				  opener.jq('#search_dkek_knr').val(knr);
+				  opener.jq('#search_knavn').val(knavn);
+				  opener.jq('#search_dkek_knr').focus();
+			  }//Next if here
 			  
 			  
 			  

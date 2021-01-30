@@ -2,7 +2,7 @@ package no.systema.skat.skatexport.controller;
 
 import java.util.*;
 
-
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.springframework.web.servlet.ModelAndView;
@@ -458,9 +458,9 @@ public class SkatExportItemsController {
 		    			//START with calculations
 		    			//---------------------------
 	    				String idDebug = record.getDkev_syli() + "-" + record.getDkev_331();
-		    			logger.info("Check Calculations " + idDebug);
+		    			logger.warn("Check Calculations " + idDebug);
 		    			autoControlMgr.calculateNetWeight(headerRecord, appUser);
-		    			if(record.getDkev_46() == null || "".equals(record.getDkev_46()) ){
+		    			if(StringUtils.isNotEmpty(record.getDkev_46())){
 		    				autoControlMgr.calculateStatisticalValuesOnItem(headerRecord, appUser.getUser());
 		    			}
 		    			//Update (back-end) the record after the above backEndValdiationOnTolltariff and upcoming calculations...
@@ -470,7 +470,7 @@ public class SkatExportItemsController {
 		    			//START with validations now
 		    			//---------------------------
 						//Begin with the validity checks
-		    			//logger.info("level check (1) " + idDebug);
+		    			logger.warn(record.getDkev_38());
 						autoControlMgr.checkValidGrossAndNetWeight();
 						if(autoControlMgr.isValidRecord()){
 							//Go to level 2

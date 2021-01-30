@@ -249,6 +249,7 @@
 												                    <th class="text14" >&nbsp;<spring:message code="systema.skat.export.item.list.label.dkev_32.varepostNr"/>&nbsp;</th>   
 												                    <th class="text14" >&nbsp;<spring:message code="systema.skat.export.item.list.label.dkev_34a.oprLand"/>&nbsp;</th>
 												                    <th class="text14" >&nbsp;<spring:message code="systema.skat.export.item.list.label.dkev_331.varekod"/>&nbsp;</th>
+												                    <th class="text14" style="color:darkgrey" nowrap>&nbsp;<spring:message code="systema.skat.export.item.list.label.dkev_x02.kundensArtNr"/>&nbsp;</th>
 												                    <th class="text14" >&nbsp;<spring:message code="systema.skat.export.item.list.label.dkev_37.procedure"/>&nbsp;</th>
 												                    <th class="text14">&nbsp;<spring:message code="systema.skat.export.item.list.label.dkev_35.bruttov"/>&nbsp;</th>
 												                    <th class="text14">&nbsp;<spring:message code="systema.skat.export.item.list.label.dkev_38.nettov"/>&nbsp;</th>
@@ -284,6 +285,7 @@
 														               <td width="2%" class="text14" >&nbsp;${record.dkev_32}</td>
 														               <td class="text14" >&nbsp;${record.dkev_34a}</td>
 														               <td class="text14" >&nbsp;${record.dkev_331}</td>
+														               <td class="text14" style="color:darkgrey">&nbsp;${record.dkev_x02}</td>
 														               <td class="text14" >&nbsp;${record.dkev_37}</td>
 														               <td class="text14" >&nbsp;${record.dkev_35}</td>
 														               <td class="text14" >&nbsp;${record.dkev_38}</td>
@@ -388,9 +390,10 @@
 									    <th class="text14">&nbsp;<spring:message code="systema.skat.export.item.list.label.dkev_syli.linjeNr"/>&nbsp;</th>
 									    <th class="text14">&nbsp;<spring:message code="systema.skat.update"/>&nbsp;</th>
 									    <th class="text14">&nbsp;<spring:message code="systema.skat.export.item.list.label.dkev_28b.purchaseSellerInvoice"/>&nbsp;</th>
-					                    <th class="text14" nowrap>&nbsp;<spring:message code="systema.skat.export.item.list.label.dkev_32.varepostNr"/>&nbsp;</th>   
+					                    <th class="text14" nowrap>&nbsp;<spring:message code="systema.skat.export.item.list.label.dkev_32.varepostNr"/>&nbsp;</th>
 					                    <th class="text14" nowrap>&nbsp;<spring:message code="systema.skat.export.item.list.label.dkev_34a.oprLand"/>&nbsp;</th>
 					                    <th class="text14" nowrap>&nbsp;<spring:message code="systema.skat.export.item.list.label.dkev_331.varekod"/>&nbsp;</th>
+					                    <th class="text14" style="color:darkgrey" nowrap>&nbsp;<spring:message code="systema.skat.export.item.list.label.dkev_x02.kundensArtNr"/>&nbsp;</th>
 					                    <th class="text14" nowrap>&nbsp;<spring:message code="systema.skat.export.item.list.label.dkev_37.procedure"/>&nbsp;</th>
 					                    <th class="text14">&nbsp;<spring:message code="systema.skat.export.item.list.label.dkev_35.bruttov"/>&nbsp;</th>
 					                    <th class="text14">&nbsp;<spring:message code="systema.skat.export.item.list.label.dkev_38.nettov"/>&nbsp;</th>
@@ -426,6 +429,7 @@
 							               <td width="2%" class="text14" >&nbsp;${record.dkev_32}</td>
 							               <td class="text14" >&nbsp;${record.dkev_34a}</td>
 							               <td class="text14" >&nbsp;${record.dkev_331}</td>
+							               <td class="text14" style="color:darkgrey">&nbsp;${record.dkev_x02}</td>
 							               <td class="text14" >&nbsp;${record.dkev_37}</td>
 							               <td class="text14" >&nbsp;${record.dkev_35}</td>
 							               <td class="text14" >&nbsp;${record.dkev_38}</td>
@@ -534,7 +538,7 @@
 					           			<button name="updateInformationButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('updateInfo');">Close</button> 
 					           		</div>
 						        </span>  
-				 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 				&nbsp;&nbsp;<spring:message code="systema.skat.export.item.list.label.dkev_syli.linjeNr"/>
 				 				<c:choose>
 					 				<c:when test="${not empty model.record.dkev_syli}">
 				 						<input title="from model" tabindex=-1 align="center" class="text14BoldLightGreenForItemLinenr" readonly type="text" name="lineNr" id="lineNr" size="3" value='${model.record.dkev_syli}'>
@@ -543,6 +547,8 @@
 										<input title="from session" tabindex=-1 align="center" class="text14BoldLightGreenForItemLinenr" readonly type="text" name="lineNr" id="lineNr" size="3" value='${dkev_syli_SESSION}'>
 									</c:otherwise>
 								</c:choose>
+								&nbsp;&nbsp;<spring:message code="systema.skat.export.item.list.label.dkev_x02.kundensArtNr"/>
+								<input tabindex=-1 align="center" class="text14BoldLightGreenForItemLinenr" readonly type="text" name="kundVarenr" id="kundVarenr" size="15" value='${model.record.dkev_x02}'>
 			 				</td>
 		 				</tr>
 	 				</table>

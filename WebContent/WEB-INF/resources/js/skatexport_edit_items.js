@@ -168,6 +168,7 @@
 				jq('#lastSelectedItemLineNumber').val(""); jq('#lastSelectedItemLineNumber').val(rowCounter);
 				//back-end data
 				jq('#lineNr').val(""); jq('#lineNr').val(data[i].dkev_syli);
+				jq('#kundVarenr').val(""); jq('#kundVarenr').val(data[i].dkev_x02);
 				jq('#dkev_syli').val(""); jq('#dkev_syli').val(data[i].dkev_syli);
 				
 				jq('#dkev_311').val(""); jq('#dkev_311').val(data[i].dkev_311);
