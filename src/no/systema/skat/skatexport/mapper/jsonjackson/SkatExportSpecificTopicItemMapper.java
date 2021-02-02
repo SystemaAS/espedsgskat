@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.DeserializationConfig;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import no.systema.skat.skatexport.model.jsonjackson.topic.items.JsonSkatExportDkevContainer;
+import no.systema.skat.skatexport.model.jsonjackson.topic.items.JsonSkatExportDkevRecord;
 import no.systema.skat.skatexport.model.jsonjackson.topic.items.JsonSkatExportSpecificTopicItemAvgifterContainer;
 import no.systema.skat.skatexport.model.jsonjackson.topic.items.JsonSkatExportSpecificTopicItemAvgifterRecord;
 //application library
@@ -70,7 +72,23 @@ public class SkatExportSpecificTopicItemMapper {
 		return container;
 	}
 	
-	
+	public JsonSkatExportDkevContainer getDkevContainer(String utfPayload) throws Exception{
+		ObjectMapper mapper = new ObjectMapper();  
+		mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES,false);
+		
+		//At this point we now have an UTF-8 payload
+		JsonSkatExportDkevContainer container = mapper.readValue(utfPayload.getBytes(), JsonSkatExportDkevContainer.class); 
+		//logger.info(mapper.writeValueAsString(topicListContainer));
+		//logger.info("[JSON-String payload status=OK]  " + topicItemContainer.getUser());
+		//DEBUG
+		Collection<JsonSkatExportDkevRecord> list = container.getList();
+		//logger.info("Record list(size): " + list.size());
+		
+		for(JsonSkatExportDkevRecord record : list){
+			//logger.info("Item description(dkev_syop): " + record.getDkev_syop());
+		}
+		return container;
+	}
 	
 	
 }

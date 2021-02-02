@@ -198,7 +198,11 @@
 							
 							</td>
 							<td ><input type="text" required oninvalid="this.setCustomValidity('Obligatoriskt')" oninput="setCustomValidity('')" class="inputTextMediumBlueMandatoryField" name="dkek_vnr" id="dkek_vnr" size="28" maxlength="28" value='${model.record.dkek_vnr}'></td>
-							<td ><input type="text" class="inputTextMediumBlue" name="dkek_331" id="dkek_331" size="10" maxlength="8" value='${model.record.dkek_331}'></td>
+							<td ><input type="text" class="inputTextMediumBlue" name="dkek_331" id="dkek_331" size="10" maxlength="8" value='${model.record.dkek_331}'>
+								<a tabindex="-1" id="dkek_331IdLink">
+									<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
+								</a>
+							</td>
 							<td ><input type="text" class="inputTextMediumBlue" name="dkek_315" id="dkek_315" size="25" maxlength="45" value='${model.record.dkek_315}'></td>
 							<td >
 								<input type="text" class="inputTextMediumBlue" list="dkek_34a_list" name="dkek_34a" id="dkek_34a" size="5" maxlength="2" value='${model.record.dkek_34a}'>
@@ -207,7 +211,9 @@
 				 				  	<option value="${code.dkkd_kd}"<c:if test="${model.record.dkek_34a == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 			 				  	  </c:forEach>  
 								</datalist>
-								 
+								<a tabindex="-1" id="dkek_34aIdLink" OnClick="triggerChildWindowGeneralCodes(this, '008')">
+									<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
+								</a>	 
 							</td>
 							<td >
 								<input type="text" class="inputTextMediumBlue" list="dkek_37_list" name="dkek_37" id="dkek_37" size="10" maxlength="7" value='${model.record.dkek_37}'>
@@ -216,7 +222,9 @@
 				 				  	<option value="${code.dkkd_kd}"<c:if test="${model.record.dkek_37 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 			 				  	  </c:forEach>  
 								</datalist>
-								 
+								<a tabindex="-1" id="dkek_37IdLink" OnClick="triggerChildWindowGeneralCodes(this, '112')">
+									<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
+								</a> 
 							</td>
 							<td ><input type="text" class="inputTextMediumBlue" name="dkek_311" id="dkek_311" size="18" maxlength="16" value='${model.record.dkek_311}'></td>
 							<td class="text14">
@@ -226,6 +234,9 @@
 				 				  	<option value="${code.dkkd_kd}"<c:if test="${model.record.dkek_314 == code.dkkd_kd}"> selected </c:if> >${code.dkkd_kd}</option>
 			 				  	  </c:forEach>  
 								</datalist>
+								<a tabindex="-1" id="dkek_314IdLink" OnClick="triggerChildWindowGeneralCodes(this, '110')">
+									<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
+								</a>	
 							</td>
 							<td colspan="2" class="text12">
 								<span title="dkek_401a-402a">40.2&nbsp;<spring:message code="systema.skat.items.summarisk.ang.kattype"/></span>

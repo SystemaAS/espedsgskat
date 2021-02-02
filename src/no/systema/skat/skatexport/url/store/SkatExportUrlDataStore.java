@@ -70,9 +70,13 @@ public final class SkatExportUrlDataStore {
 	//mode=U (Update existing), 
 	//mode=D (Delete existing topic)
 	//-----------------------------------
+	//http://gw.systema.no/sycgip/TDKE012R.pgm?user=OSCAR&avd=1&opd=80001&lin=2&mode=A
 	@UrlDataStoreAnnotationForField (name="@SkatExportItemsController - skatexport_edit_items.do, etc ", description=" --> SKAT_EXPORT_BASE_UPDATE_SPECIFIC_TOPIC_ITEM_URL")
 	static public String SKAT_EXPORT_BASE_UPDATE_SPECIFIC_TOPIC_ITEM_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKE012R.pgm";
-	//http://gw.systema.no/sycgip/TDKE012R.pgm?user=OSCAR&avd=1&opd=80001&lin=2&mode=A
+	
+	//[6.1] DELETE ALL ITEM LINES
+	//http://localhost:8080/syjservicesst/syjsDKEV.do?user=OSCAR&mode=D&dkev_syav=1&dkev_syop=9000049
+	static public String SKAT_EXPORT_BASE_DELETE_ALL_ITEMS_URL = AppConstants.HTTP_ROOT_SERVLET_JSERVICES + "/syjservicesst/syjsDKEV_U.do";
 	
 	//--------------------------------------
 	//[6.0.1] Update AutoControl error line  

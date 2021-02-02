@@ -13,6 +13,10 @@
 			  //alert(vkod + " " + text + " " + callerType);
 			  opener.jq('#dkev_331').val(vkod);
 			  opener.jq('#dkev_331').focus();
+			  //maintenace opener
+			  opener.jq('#dkek_331').val(vkod);
+			  opener.jq('#dkek_331').focus();
+			  
 			  //close child window
 			  window.close();
 		  });

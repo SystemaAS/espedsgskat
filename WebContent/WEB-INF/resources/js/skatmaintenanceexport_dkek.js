@@ -36,9 +36,27 @@
   		  }
   	  });
 	  
+	//Varekod
+  	jq('#dkek_331IdLink').click(function() {
+  		jq('#dkek_331IdLink').attr('target','_blank');
+  		window.open('skatexport_edit_items_childwindow_tolltariff.do?action=doInit&vkod=' + jq('#dkek_331').val(), "codeWin", "top=300px,left=500px,height=600px,width=800px,scrollbars=no,status=no,location=no");
+  	});
+  	jq('#dkek_331IdLink').keypress(function(e){ //extra feature for the end user
+  		if(e.which == 13) {
+			jq('#dkek_331IdLink').click();
+  		}
+  	});
 	  
   	  
   });
+  
+//ChildWindow General Codes
+  function triggerChildWindowGeneralCodes(record, typeCode){
+  	var idLink = record.id;
+  	var id = idLink.replace("IdLink", "");
+  	jq(idLink).attr('target','_blank');
+  	window.open('skatexport_edit_items_childwindow_generalcodes.do?action=doInit&type=' + typeCode + '&ctype=' + id , "codeWin", "top=300px,left=500px,height=600px,width=800px,scrollbars=no,status=no,location=no");
+  }
   
   
   jq(function() {

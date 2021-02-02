@@ -47,6 +47,22 @@
 				  opener.jq('#dkev_445a').val(kod);
 				  opener.jq('#dkev_445a').focus();
 				  
+			  }else if(callerType == 'dkek_37'){
+				  opener.jq('#dkek_37').val(kod);
+				  opener.jq('#dkek_37').focus();
+				  
+			  }else if(callerType == 'dkek_34a'){
+				  opener.jq('#dkek_34a').val(kod);
+				  opener.jq('#dkek_34a').focus();
+				  
+			  }else if(callerType == 'dkek_314'){
+				  opener.jq('#dkek_314').val(kod);
+				  opener.jq('#dkek_314').focus();
+				  
+			  }else if(callerType == 'dkek_402a'){
+				  opener.jq('#dkek_402a').val(kod);
+				  opener.jq('#dkek_402a').focus();
+				  
 			  }
 
 			  //close child window

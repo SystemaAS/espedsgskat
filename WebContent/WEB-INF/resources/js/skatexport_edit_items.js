@@ -32,6 +32,12 @@
   		  jq.blockUI({ message: BLOCKUI_OVERLAY_MESSAGE_DEFAULT });
   		  window.location = 'skatexport_edit_items_autocontrol.do?dkev_syav='+ jq('#avd').val() + '&dkev_syop=' + jq('#opd').val();
   	  });
+  	  //delete all
+  	  jq('#itemListDeleteAllButton').click(function() {
+  		  doDeleteAll();
+  		  
+	  });
+  	  
     });
     
     jq(function() {
@@ -46,6 +52,7 @@
     		}
     	});
     });
+    
     
     //ChildWindow General Codes
     function triggerChildWindowGeneralCodes(record, typeCode){
@@ -586,4 +593,55 @@
     		          jq(this).siblings('.ui-dialog-buttonpane').find('button:eq(1)').focus();
     		     }
     	});  //end dialog
-    } 
+    }
+      	
+  	//---------------------------------------
+    //DELETE record
+    //This is done in order to present a jquery
+    //Alert modal pop-up
+    //----------------------------------------
+    function doDeleteAll(){
+    	  //Localize
+    	  //DA - std
+    	  var dlgTitle = "Fjern alle vareposter "; var btnTextOk = "Fortsæt"; var btnTextCancel = "Annullér";
+    	  var legend = "Er du sikker på at du vil slette alle?";
+    	  //EN
+    	  if(jq("#usrLang").val() == "EN"){
+    		  dlgTitle = "Delete all item lines "; btnTextOk = "Ok"; btnTextCancel = "Cancel"; 
+    		  legend = "Are you sure you want to delete all items?"
+    	  }
+    	  
+      	//Start dialog
+      	jq('<div></div>').dialog({
+            modal: true,
+            title: dlgTitle,
+            
+            buttons: [ 
+                {
+    			 id: "dialogSave",	
+    			 text: btnTextOk,
+    			 click: function(){
+    				 	jq( this ).dialog( "close" );
+    		            //do delete
+    		            jq.blockUI({ message: BLOCKUI_OVERLAY_MESSAGE_DEFAULT});
+    		          	window.location = 'skatexport_edit_items_deleteAll.do?dkev_syav='+ jq('#avd').val() + '&dkev_syop=' + jq('#opd').val();
+    			 	 }
+    		 	 },
+     	 		{
+    		 	 id: "dialogCancel",
+    		 	 text: btnTextCancel, 
+    			 click: function(){
+    				 	jq( this ).dialog( "close" );
+    				} 
+     	 		 } ], 
+     	 		open: function() {
+    		  		  var markup = legend;
+    		          jq(this).html(markup);
+    		          //make Cancel the default button
+    		          jq(this).siblings('.ui-dialog-buttonpane').find('button:eq(1)').focus();
+    		     }
+    	});  //end dialog
+    
+    }
+    
+ 

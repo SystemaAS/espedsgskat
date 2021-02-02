@@ -56,6 +56,7 @@ import no.systema.skat.skatexport.mapper.url.request.UrlRequestParameterMapper;
 import no.systema.skat.skatexport.util.manager.CodeDropDownMgr;
 import no.systema.skat.skatexport.validator.SkatExportItemsValidator;
 import no.systema.skat.skatexport.model.jsonjackson.topic.JsonSkatExportSpecificTopicRecord;
+import no.systema.skat.skatexport.model.jsonjackson.topic.items.JsonSkatExportDkevContainer;
 import no.systema.skat.skatexport.model.jsonjackson.topic.items.JsonSkatExportSpecificTopicItemContainer;
 import no.systema.skat.skatexport.model.jsonjackson.topic.items.JsonSkatExportSpecificTopicItemRecord;
 import no.systema.skat.skatexport.util.SkatExportCalculator;
@@ -542,7 +543,68 @@ public class SkatExportItemsController {
     	}
     	return successView;
 	}
-	
+	/**
+	 * 
+	 * @param recordToValidate
+	 * @param bindingResult
+	 * @param session
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping(value="skatexport_edit_items_deleteAll.do")
+	public ModelAndView skatExportEditItemDeleteAll(@ModelAttribute ("record") JsonSkatExportSpecificTopicItemRecord recordToValidate, BindingResult bindingResult, HttpSession session, HttpServletRequest request){
+		logger.info("Inside: skatExportEditItemDeleteAll");
+		
+		ModelAndView successView = null;
+		JsonSkatExportSpecificTopicItemRecord jsonSkatExportSpecificTopicItemRecord = null;
+		
+		SystemaWebUser appUser = (SystemaWebUser)session.getAttribute(AppConstants.SYSTEMA_WEB_USER_KEY);
+		//this fragment gets some header fields needed for the validator
+		JsonSkatExportSpecificTopicRecord headerRecord = (JsonSkatExportSpecificTopicRecord)session.getAttribute(SkatConstants.DOMAIN_RECORD_TOPIC_SKAT);
+		
+		Map model = new HashMap();
+		try{
+			
+		
+		if(appUser==null){
+			return this.loginView;
+			
+		}else{
+			//redirect
+			StringBuffer params = new StringBuffer();
+			params.append("user=" + appUser.getUser() + "&avd=" + recordToValidate.getDkev_syav() + "&opd=" + recordToValidate.getDkev_syop());
+			successView = new ModelAndView("redirect:skatexport_edit_items.do?" + params);
+			
+			//DELETE all items URL
+			String BASE_URL = SkatExportUrlDataStore.SKAT_EXPORT_BASE_DELETE_ALL_ITEMS_URL;
+			StringBuffer urlRequestParamsKeys = new StringBuffer();
+			urlRequestParamsKeys.append("user=" + appUser.getUser() + "&mode=D");
+			urlRequestParamsKeys.append("&dkev_syav=" + recordToValidate.getDkev_syav());
+			urlRequestParamsKeys.append("&dkev_syop=" + recordToValidate.getDkev_syop());
+			
+			logger.warn("URL: " + BASE_URL);
+	    	logger.warn("URL PARAMS: " + urlRequestParamsKeys);
+	    	String jsonPayload = this.urlCgiProxyService.getJsonContent(BASE_URL, urlRequestParamsKeys.toString());
+			logger.warn(jsonPayload);
+	    	
+	    	JsonSkatExportDkevContainer container = this.skatExportSpecificTopicItemService.getSkatExportDkevContainer(jsonPayload);
+	    	if(container!=null){
+	    		if(StringUtils.isEmpty(container.getErrMsg())){
+	    			//OK
+	    		}else{
+	    			String error = "[ERROR] FATAL on DELETE ALL: " + container.getErrMsg();
+	    			model.put(SkatConstants.ASPECT_ERROR_MESSAGE, error);
+	    		}
+	    	}else{
+	    		logger.error("container = NULL ??? check this error- Java code");
+	    	}
+			
+		}
+		}catch(Exception e){
+			e.toString();
+		}
+		return successView;
+	}
 	/**
 	 * 
 	 * @param appUser

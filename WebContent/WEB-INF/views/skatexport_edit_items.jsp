@@ -334,8 +334,8 @@
 													</table>
 										   			</div>
 								   				</span>
-								   					
-								   			<c:if test="${model.status == 'M' || empty model.status || model.status == '11' || model.status == '20' || model.status == '97' || model.status == '40'}">		
+								   			<c:if test="${model.status == 'M' || empty model.status || model.status == '11' || model.status == '20' || model.status == '97' || model.status == '40'}">
+												&nbsp;<button tabindex=-1 title="Delete all lines" name="itemListDeleteAllButton" id="itemListDeleteAllButton" class="inputFormSubmitStd" style="color:#606060;" type="button" ><spring:message code="systema.skat.items.delete.all.items"/></button>
 												&nbsp;<button title="Kontrollere vareposter" name="itemListControlButton" id="itemListControlButton" class="buttonGrayWithGreenFrame" type="button" ><spring:message code="systema.skat.items.check.items"/></button>
 											</c:if>		
 								   				
