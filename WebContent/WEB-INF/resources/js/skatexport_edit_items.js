@@ -30,7 +30,7 @@
   	  //Autocontrol
   	  jq('#itemListControlButton').click(function() {
   		  jq.blockUI({ message: BLOCKUI_OVERLAY_MESSAGE_DEFAULT });
-  		  window.location = 'skatexport_edit_items_autocontrol.do?dkev_syav='+ jq('#avd').val() + '&dkev_syop=' + jq('#opd').val();
+  		  window.location = 'skatexport_edit_items_autocontrol.do?dkev_syav='+ jq('#avd').val() + '&dkev_syop=' + jq('#opd').val() + '&fabl=' + jq('#fabl').val();
   	  });
   	  //delete all
   	  jq('#itemListDeleteAllButton').click(function() {

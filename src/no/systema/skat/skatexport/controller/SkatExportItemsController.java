@@ -416,7 +416,7 @@ public class SkatExportItemsController {
 			return this.loginView;
 		}else{
 			StringBuffer params = new StringBuffer();
-			params.append("user=" + appUser.getUser() + "&avd=" + recordToValidate.getDkev_syav() + "&opd=" + recordToValidate.getDkev_syop());
+			params.append("user=" + appUser.getUser() + "&avd=" + recordToValidate.getDkev_syav() + "&opd=" + recordToValidate.getDkev_syop() + "&fabl=" + request.getParameter("fabl"));
 			successView = new ModelAndView("redirect:skatexport_edit_items.do?" + params);
 			
 			//FETCH the ITEM LIST of existent ITEMs for this TOPIC
@@ -461,8 +461,10 @@ public class SkatExportItemsController {
 	    				String idDebug = record.getDkev_syli() + "-" + record.getDkev_331();
 		    			logger.warn("Check Calculations " + idDebug);
 		    			autoControlMgr.calculateNetWeight(headerRecord, appUser);
-		    			if(StringUtils.isNotEmpty(record.getDkev_46())){
+		    			if(StringUtils.isEmpty(record.getDkev_46())){
+		    				logger.warn("Calculate Stat.value now..." + idDebug);
 		    				autoControlMgr.calculateStatisticalValuesOnItem(headerRecord, appUser.getUser());
+	    					logger.warn("After Stat.value calculation:" + record.getDkev_46());
 		    			}
 		    			//Update (back-end) the record after the above backEndValdiationOnTolltariff and upcoming calculations...
 	    				autoControlMgr.updateItemRecord(appUser.getUser());

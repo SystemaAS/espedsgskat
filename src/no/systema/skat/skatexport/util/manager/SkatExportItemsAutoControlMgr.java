@@ -219,8 +219,8 @@ public class SkatExportItemsAutoControlMgr {
 				if(netWeight%1==0){
 					//nothing since there are no decimals (mathematically)
 				}else{
-					logger.error("decimals ... ? not allowed on net weight");
-					this.validRecord = false;
+					//OBSOLETE ? -->logger.error("decimals ... ? not allowed on net weight");
+					//OBSOLETE ? -->this.validRecord = false;
 				}
 			}
 		}

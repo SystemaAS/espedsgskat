@@ -96,8 +96,10 @@ public class MaintSkatExportKunderVareregisterDkekController {
 	    	//set domain objects
 	    	if(StringUtils.isNotEmpty(kundnr)){
 	    		JsonMaintMainCundfRecord cundf = this.getCundfRecord(appUser,kundnr);
-				model.put("search_knavn", cundf.getKnavn());
-				model.put("search_dkek_knr", kundnr);
+	    		if(cundf!=null){
+	    			model.put("search_knavn", cundf.getKnavn());
+	    			model.put("search_dkek_knr", kundnr);
+	    		}
 			}
 			model.put("list", list);
 			successView.addObject(SkatMaintenanceConstants.DOMAIN_MODEL , model);
