@@ -13,6 +13,10 @@ import no.systema.main.model.SystemaWebUser;
 import no.systema.main.service.UrlCgiProxyService;
 
 import no.systema.skat.util.SkatConstants;
+import no.systema.skat.z.maintenance.main.model.jsonjackson.dbtable.JsonMaintDkekContainer;
+import no.systema.skat.z.maintenance.main.model.jsonjackson.dbtable.JsonMaintDkekRecord;
+import no.systema.skat.z.maintenance.main.service.MaintDkekService;
+import no.systema.skat.z.maintenance.main.url.store.MaintenanceUrlDataStore;
 import no.systema.main.util.NumberFormatterLocaleAware;
 import no.systema.skat.skatexport.util.RpgReturnResponseHandler;
 import no.systema.skat.skatexport.mapper.url.request.UrlRequestParameterMapper;
@@ -463,6 +467,48 @@ public class SkatExportItemsAutoControlMgr {
 			  logger.info("[ERROR] on Net weight calculation - Auto control:" + e.toString());
 		  }
 		
+	}
+	/**
+	 * This method updates the certificate code (dkev_4421) if the code exists
+	 * The value is fetch from the kundesvareregister register (DKEK)
+	 * This method is meant to help the end-user in order to populate the specific field automatically
+	 * 
+	 * @param maintDkekService
+	 * @param applicationUser
+	 * @param kundnr
+	 * @param tariffnr
+	 */
+	public void updateCertificateCode(MaintDkekService maintDkekService, String applicationUser, String kundnr, String tariffnr){
+		if(StringUtils.isNotEmpty(applicationUser) && StringUtils.isNotEmpty(kundnr) && StringUtils.isNotEmpty(tariffnr)){
+			String BASE_URL = MaintenanceUrlDataStore.MAINTENANCE_BASE_DKEK_GET_LIST_URL;
+			StringBuffer urlRequestParams = new StringBuffer();
+			//mandatory params
+			urlRequestParams.append("user="+ applicationUser);
+			urlRequestParams.append("&dkek_knr=" + kundnr);
+			urlRequestParams.append("&dkek_vnr=" + tariffnr);
+			
+			
+			logger.info(Calendar.getInstance().getTime() + " CGI-start timestamp");
+	    	logger.warn("URL: " + BASE_URL);
+	    	logger.warn("URL PARAMS: " + urlRequestParams);
+	    	String jsonPayload = this.urlCgiProxyService.getJsonContent(BASE_URL, urlRequestParams.toString());
+	    	//extract
+	    	if(jsonPayload!=null){
+				//lists
+	    		JsonMaintDkekContainer container = maintDkekService.getList(jsonPayload);
+		        if(container!=null){
+		        	if(container.getList()!=null && container.getList().size()>0){
+			        	for(JsonMaintDkekRecord record : container.getList()){
+			        		if(StringUtils.isNotEmpty(record.getDkek_4421())){
+			        			this.record.setDkev_4421(record.getDkek_4421());
+			        			logger.warn("DKEK_4421<certif.code>:" + this.record.getDkev_4421());
+				        		
+			        		}
+			        	}
+		        	}
+		        }
+	    	}
+    	}
 	}
 	/**
 	 * 

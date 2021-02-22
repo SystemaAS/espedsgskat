@@ -37,6 +37,7 @@ import no.systema.main.util.JsonDebugger;
 
 
 import no.systema.skat.util.SkatConstants;
+import no.systema.skat.z.maintenance.main.service.MaintDkekService;
 import no.systema.skat.url.store.SkatUrlDataStore;
 
 import no.systema.skat.service.html.dropdown.SkatDropDownListPopulationService;
@@ -465,6 +466,11 @@ public class SkatExportItemsController {
 		    				logger.warn("Calculate Stat.value now..." + idDebug);
 		    				autoControlMgr.calculateStatisticalValuesOnItem(headerRecord, appUser.getUser());
 	    					logger.warn("After Stat.value calculation:" + record.getDkev_46());
+		    			}
+		    			if(StringUtils.isEmpty(record.getDkev_4421())){
+		    				logger.warn("update cert.code on kund.varenr (linenr-tariffnr):" + record.getDkev_x02() + " (" +idDebug + ")");
+		    				autoControlMgr.updateCertificateCode(maintDkekService, appUser.getUser(), headerRecord.getDkeh_avkn(), record.getDkev_x02());
+	    					logger.warn("After cert.code on kund.varenr (linenr-tariffnr):" + record.getDkev_x02() + " (" +idDebug + ")" + " cert.kod:" + record.getDkev_4421());
 		    			}
 		    			//Update (back-end) the record after the above backEndValdiationOnTolltariff and upcoming calculations...
 	    				autoControlMgr.updateItemRecord(appUser.getUser());
@@ -1038,19 +1044,14 @@ public class SkatExportItemsController {
 	@Qualifier ("urlCgiProxyService")
 	private UrlCgiProxyService urlCgiProxyService;
 	@Autowired
-	@Required
 	public void setUrlCgiProxyService (UrlCgiProxyService value){ this.urlCgiProxyService = value; }
 	public UrlCgiProxyService getUrlCgiProxyService(){ return this.urlCgiProxyService; }
-	
 	
 	@Qualifier 
 	private SkatTaricVarukodService skatTaricVarukodService;
 	@Autowired
-	@Required	
 	public void setSkatTaricVarukodService(SkatTaricVarukodService value){this.skatTaricVarukodService = value;}
 	public SkatTaricVarukodService getSkatTaricVarukodService(){ return this.skatTaricVarukodService; }
-	
-	
 	
 	@Qualifier ("skatExportDropDownListPopulationService")
 	private SkatExportDropDownListPopulationService skatExportDropDownListPopulationService;
@@ -1067,10 +1068,14 @@ public class SkatExportItemsController {
 	@Qualifier ("skatExportSpecificTopicItemService")
 	private SkatExportSpecificTopicItemService skatExportSpecificTopicItemService;
 	@Autowired
-	@Required
 	public void setSkatExportSpecificTopicItemService (SkatExportSpecificTopicItemService value){ this.skatExportSpecificTopicItemService = value; }
 	public SkatExportSpecificTopicItemService getSkatExportSpecificTopicItemService(){ return this.skatExportSpecificTopicItemService; }
 	
+	@Qualifier ("maintDkekService")
+	private MaintDkekService maintDkekService;
+	@Autowired
+	public void setMaintDkekService (MaintDkekService value){ this.maintDkekService = value; }
+	public MaintDkekService getMaintDkekService(){ return this.maintDkekService; }
 	
 	 
 }

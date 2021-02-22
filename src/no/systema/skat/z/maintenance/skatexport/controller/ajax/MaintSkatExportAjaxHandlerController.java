@@ -79,7 +79,7 @@ public class MaintSkatExportAjaxHandlerController {
 	private Collection<JsonMaintDkekRecord> fetchListDkek(String applicationUser, String kundnr, String varenr){
 		Collection<JsonMaintDkekRecord> list = new ArrayList();
 		
-    	if(StringUtils.isNotEmpty(kundnr) && StringUtils.isNotEmpty(varenr)){
+    	if(StringUtils.isNotEmpty(applicationUser) && StringUtils.isNotEmpty(kundnr) && StringUtils.isNotEmpty(varenr)){
 			String BASE_URL = MaintenanceUrlDataStore.MAINTENANCE_BASE_DKEK_GET_LIST_URL;
 			StringBuffer urlRequestParams = new StringBuffer();
 			//mandatory params
