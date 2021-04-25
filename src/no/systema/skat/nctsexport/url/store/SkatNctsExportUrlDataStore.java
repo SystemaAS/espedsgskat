@@ -106,11 +106,16 @@ public final class SkatNctsExportUrlDataStore {
 	static public String NCTS_EXPORT_BASE_UPDATE_SPECIFIC_TOPIC_ITEM_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDCE012R.pgm";	
 	//http://gw.systema.no/sycgip/TDCE012R.pgm?user=OSCAR&avd=1&opd=50079&lin=3&mode=D	
 	
+	
 	//[6.1] EDIT a SPECIFIC SIKKERHET ITEM RECORD
 	@UrlDataStoreAnnotationForField (name="@SkatNctsExportItemsController - skatnctsexport_edit_items.do ", description=" --> NCTS_EXPORT_BASE_UPDATE_SPECIFIC_SIKKERHET_TOPIC_ITEM_URL")
 	static public String NCTS_EXPORT_BASE_UPDATE_SPECIFIC_SIKKERHET_TOPIC_ITEM_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDCE026R.pgm";	
 	//http://gw.systema.no/sycgip/tdce026r.pgm?user=OSCAR&mode=U&tvavd=1&tvtdn=50187&tvli=1&tvtkbm=A&tvkref=Derivat&tvnass=Tarzan
 	
+	//[6.2] DELETE ALL ITEM LINES
+	//http://localhost:8080/syjservicesst/syjsDKXV.do?user=OSCAR&mode=D&tvavd=1&tvtdn=9000049
+	static public String NCTS_EXPORT_BASE_DELETE_ALL_ITEMS_URL = AppConstants.HTTP_ROOT_SERVLET_JSERVICES + "/syjservicesst/syjsDKXV_U.do";
+		
 	//---------------------------------------------
 	//[6.1] IMPORT into item lines
 	//avd = avdelningen till NCTS export

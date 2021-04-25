@@ -555,5 +555,48 @@ public class SkatExportItemsAutoControlMgr {
 		}
 		return retval;
 	}
+
+	//special edition for DACHSER DK (Apr. 2021)
+	public void setSoftwareValueWhenApplicable(JsonSkatExportSpecificTopicRecord headerRecord){ 
+		//in case that all this method is ONLY for --> EET GROUP i Hvidovre: 
+		//if("55231805".equals(headerRecord.getDkeh_avkn())){
+		//OR          //for testing purposes on local env.
+		//if ((System.getProperty("os.name").toLowerCase().indexOf("mac") >= 0) || (OS.indexOf("darwin") >= 0)) {
+		//	...
+		//}
+		
 	
+		//MOVE to Database (DKTKD with new kodtype= 200 serie maybe...)
+		String[] toldtariffNumbers = { "85235200","85232990","85235110","84733020","85258019","85238090","85234110","85235190",
+									   "85232915","85234910","85232100" };
+		
+		List<String> data = Arrays.asList(toldtariffNumbers);
+		boolean isMatch = false;
+		for(String record : data ){
+			if(record.equals(this.record.getDkev_331())){
+				isMatch = true;
+				break;
+			}
+		}
+		
+		if( this.record.getDkev_331() !=null && isMatch ){
+			logger.warn("#################Match Software value:" + this.record.getDkev_331());
+			logger.warn("#################dkev_42:" + this.record.getDkev_42());
+			if(StringUtils.isNotEmpty(this.record.getDkev_42())){
+				this.record.setDkev_448(this.record.getDkev_42());
+				logger.warn("#################dkev_448-raw:" + this.record.getDkev_448());
+				int index = this.record.getDkev_448().indexOf(","); 
+				if(index > 0){
+					String tmp = this.record.getDkev_448().substring(0,index);
+					this.record.setDkev_448(tmp);
+				}else{
+					index = this.record.getDkev_448().indexOf(".");
+					String tmp = this.record.getDkev_448().substring(0,index);
+					this.record.setDkev_448(tmp);
+				}
+				logger.warn("#################dkev_448-cleaned:" + this.record.getDkev_448());
+			}
+		}
+		
+	}
 }

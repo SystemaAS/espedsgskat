@@ -281,6 +281,7 @@
 								   				</span>	
 								   	
 								   	<c:if test="${model.status == 'G' ||  model.status=='F' || model.status == 'M' || empty model.status}">
+								   		&nbsp;<button tabindex=-1 title="Delete all lines" name="itemListDeleteAllButton" id="itemListDeleteAllButton" class="inputFormSubmitStd" style="color:#606060;" type="button" ><spring:message code="systema.skat.items.delete.all.items"/></button>
 								   		&nbsp;<button title="Import av vareposter" name="itemLinesImportButton" id="itemLinesImportButton" class="buttonGrayWithGreenFrame" type="button" >Importere vareposter</button>	
 								   	</c:if>	
 								   				

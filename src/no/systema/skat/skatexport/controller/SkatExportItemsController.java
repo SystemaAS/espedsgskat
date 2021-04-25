@@ -472,6 +472,9 @@ public class SkatExportItemsController {
 		    				autoControlMgr.updateCertificateCode(maintDkekService, appUser.getUser(), headerRecord.getDkeh_avkn(), record.getDkev_x02());
 	    					logger.warn("After cert.code on kund.varenr (linenr-tariffnr):" + record.getDkev_x02() + " (" +idDebug + ")" + " cert.kod:" + record.getDkev_4421());
 		    			}
+		    			if(StringUtils.isEmpty(record.getDkev_448())){ 
+		    				autoControlMgr.setSoftwareValueWhenApplicable(headerRecord);
+		    			}
 		    			//Update (back-end) the record after the above backEndValdiationOnTolltariff and upcoming calculations...
 	    				autoControlMgr.updateItemRecord(appUser.getUser());
 						

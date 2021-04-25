@@ -2,6 +2,7 @@ package no.systema.skat.nctsexport.controller;
 
 import java.util.*;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.springframework.web.servlet.ModelAndView;
@@ -52,8 +53,12 @@ import no.systema.skat.nctsexport.util.manager.CodeDropDownMgr;
 import no.systema.skat.service.SkatTaricVarukodService;
 import no.systema.skat.service.html.dropdown.SkatDropDownListPopulationService;
 import no.systema.skat.nctsexport.model.jsonjackson.topic.items.JsonSkatNctsExportSpecificTopicItemSecurityContainer;
+import no.systema.skat.skatexport.model.jsonjackson.topic.JsonSkatExportSpecificTopicRecord;
 import no.systema.skat.skatexport.model.jsonjackson.topic.JsonSkatExportTopicListContainer;
+import no.systema.skat.skatexport.model.jsonjackson.topic.items.JsonSkatExportDkevContainer;
+import no.systema.skat.skatexport.model.jsonjackson.topic.items.JsonSkatExportSpecificTopicItemRecord;
 import no.systema.skat.skatexport.url.store.SkatExportUrlDataStore;
+import no.systema.skat.skatexport.service.SkatExportSpecificTopicItemService;
 import no.systema.skat.skatexport.service.SkatExportTopicListService;
 import no.systema.skat.skatimport.model.jsonjackson.topic.JsonSkatImportSpecificTopicRecord;
 import no.systema.skat.skatimport.model.jsonjackson.topic.items.JsonSkatImportSpecificTopicItemRecord;
@@ -431,6 +436,68 @@ public class SkatNctsExportItemsController {
 			
 			return successView;
 		}
+	}
+	
+	/**
+	 * 
+	 * @param recordToValidate
+	 * @param bindingResult
+	 * @param session
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping(value="skatnctsexport_edit_items_deleteAll.do")
+	public ModelAndView skatNctsExportEditItemDeleteAll(HttpSession session, HttpServletRequest request){
+		logger.info("Inside: skatNctsExportEditItemDeleteAll");
+		ModelAndView successView = null;
+		
+		String opd = request.getParameter("opd");
+		String avd = request.getParameter("avd");
+		
+		SystemaWebUser appUser = (SystemaWebUser)session.getAttribute(AppConstants.SYSTEMA_WEB_USER_KEY);
+		
+		Map model = new HashMap();
+		try{
+			
+		
+		if(appUser==null){
+			return this.loginView;
+			
+		}else{
+			//redirect
+			StringBuffer params = new StringBuffer();
+			params.append("user=" + appUser.getUser() + "&avd=" + avd + "&opd=" + opd);
+			successView = new ModelAndView("redirect:skatnctsexport_edit_items.do?" + params);
+			
+			//DELETE all items URL
+			String BASE_URL = SkatNctsExportUrlDataStore.NCTS_EXPORT_BASE_DELETE_ALL_ITEMS_URL;
+			StringBuffer urlRequestParamsKeys = new StringBuffer();
+			urlRequestParamsKeys.append("user=" + appUser.getUser() + "&mode=D");
+			urlRequestParamsKeys.append("&tvavd=" + avd);
+			urlRequestParamsKeys.append("&tvtdn=" + opd);
+			
+			logger.warn("URL: " + BASE_URL);
+	    	logger.warn("URL PARAMS: " + urlRequestParamsKeys);
+	    	String jsonPayload = this.urlCgiProxyService.getJsonContent(BASE_URL, urlRequestParamsKeys.toString());
+			logger.warn(jsonPayload);
+	    	//we borrow from SkatExport only because we do need to check only errMsg
+	    	JsonSkatExportDkevContainer container = this.skatExportSpecificTopicItemService.getSkatExportDkevContainer(jsonPayload);
+	    	if(container!=null){
+	    		if(StringUtils.isEmpty(container.getErrMsg())){
+	    			//OK
+	    		}else{
+	    			String error = "[ERROR] FATAL on DELETE ALL: " + container.getErrMsg();
+	    			model.put(SkatConstants.ASPECT_ERROR_MESSAGE, error);
+	    		}
+	    	}else{
+	    		logger.error("container = NULL ??? check this error- Java code");
+	    	}
+			
+		}
+		}catch(Exception e){
+			e.toString();
+		}
+		return successView;
 	}
 	
 	/**
@@ -883,6 +950,12 @@ public class SkatNctsExportItemsController {
 	@Required	
 	public void setSkatTaricVarukodService(SkatTaricVarukodService value){this.skatTaricVarukodService = value;}
 	public SkatTaricVarukodService getSkatTaricVarukodService(){ return this.skatTaricVarukodService; }
+	
+	//Borrow from skat Export
+	@Autowired
+	private SkatExportSpecificTopicItemService skatExportSpecificTopicItemService;
+	public void setSkatExportSpecificTopicItemService (SkatExportSpecificTopicItemService value){ this.skatExportSpecificTopicItemService = value; }
+	public SkatExportSpecificTopicItemService getSkatExportSpecificTopicItemService(){ return this.skatExportSpecificTopicItemService; }
 	
 	
 	 
