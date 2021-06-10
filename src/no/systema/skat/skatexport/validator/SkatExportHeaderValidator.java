@@ -734,7 +734,7 @@ public class SkatExportHeaderValidator implements Validator {
 	 * @return
 	 */
 	private boolean isValidAngivelseTypeForEftaCountry(JsonSkatExportSpecificTopicRecord record){
-		String[] eftaCountry = {"NO","IS","CH"};
+		String[] eftaCountry = {"NO","IS","CH","GB"};
 		boolean retval = true;
 		
 		if(record!=null){
@@ -759,7 +759,7 @@ public class SkatExportHeaderValidator implements Validator {
 	 * @return
 	 */
 	private boolean isValidAngivelseTypeForNoneEftaCountry(JsonSkatExportSpecificTopicRecord record){
-		String[] eftaCountry = {"NO","IS","CH"};
+		String[] eftaCountry = {"NO","IS","CH","GB"};
 		boolean retval = true;
 		boolean eftaMatch = false;
 		
