@@ -51,6 +51,19 @@ public class JsonSkatExportSpecificTopicRecord extends JsonAbstractGrandFatherRe
 		return this.sumTotalAmountItemLinesStr;
 	}
 	
+	//Bruttovikt (SUM) (3 decimals)
+	private Double sumOfGrossWeightInItemLines = 0.00D;
+	public void setSumOfGrossWeightInItemLines(Double value) {  this.sumOfGrossWeightInItemLines = value; }
+	public Double getSumOfGrossWeightInItemLines() {return this.sumOfGrossWeightInItemLines;}
+	
+	private String sumOfGrossWeightInItemLinesStr = null;
+	public String getSumOfGrossWeightInItemLinesStr() {
+		//this.sumOfGrossWeightInItemLinesStr = String.valueOf(this.sumOfGrossWeightInItemLines);
+		String tmpStr = this.numberFormatter.getDoubleToPlainString(this.sumOfGrossWeightInItemLines, 3);
+		this.sumOfGrossWeightInItemLinesStr = tmpStr;
+		return this.sumOfGrossWeightInItemLinesStr;
+	}
+	
 	private boolean fakturaListExist = false;
 	public void setFakturaListExist(boolean value) { this.fakturaListExist = value; }
 	public boolean getFakturaListExist (){ return this.fakturaListExist; }
@@ -255,6 +268,20 @@ public class JsonSkatExportSpecificTopicRecord extends JsonAbstractGrandFatherRe
 	private String dkeh_brut = null;
 	public void setDkeh_brut(String value) {  this.dkeh_brut = value; }
 	public String getDkeh_brut() {return this.dkeh_brut;}
+	
+	private Double dkeh_brut_dbl = 0.00D;
+	public void setDkeh_brut_dbl(Double value) {  this.dkeh_brut_dbl = value; }
+	public Double getDkeh_brut_dbl() {
+		Double retval = dkeh_brut_dbl;
+		if(dkeh_brut!=null && !"".equals(dkeh_brut)){
+			try{
+				retval =  Double.parseDouble(this.dkeh_brut.replace(",", "."));
+			}catch(Exception e){
+				//nothing
+			}
+		}
+		return retval;
+	}
 	
 	private String dkeh_06 = null;
 	public void setDkeh_06(String value) {  this.dkeh_06 = value; }

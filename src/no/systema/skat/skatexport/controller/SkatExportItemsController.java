@@ -857,15 +857,32 @@ public class SkatExportItemsController {
 	private void setDomainObjectsForListInView(HttpSession session, Map model, JsonSkatExportSpecificTopicItemContainer container){
 		List list = new ArrayList();
 		if(container!=null){
+			double grossWeight = 0.00D;
 			for (JsonSkatExportSpecificTopicItemRecord record : container.getOrderList()){
+				//gross weight accumulation
+	    		grossWeight += this.getDouble(record.getDkev_35());
 				list.add(record);
 			}
+			//gross weight final sum
+			container.setSumOfGrossWeightInItemLines(grossWeight);
 		}
 		model.put(SkatConstants.DOMAIN_LIST, list);
 		model.put(SkatConstants.DOMAIN_RECORD_ITEM_CONTAINER_TOPIC, container);
 		//set a session variable in order to make the list available to an external view controller (Excel/PDF- Controller)
 		session.setAttribute(session.getId() + SkatConstants.SESSION_LIST, list);
 				
+	}
+	
+	private double getDouble(String value) {
+		double result = 0.00D;
+		if(StringUtils.isNotEmpty(value)){
+			try{
+				result = Double.parseDouble(value.replace(",", "."));
+			}catch(Exception e){
+				logger.error("[ERROR] on GROSS WEIGHT CATCH");
+			}
+		}
+		return result;
 	}
 	/**
 	 * Sets domain objects

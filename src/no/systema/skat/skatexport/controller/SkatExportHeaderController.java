@@ -244,6 +244,8 @@ public class SkatExportHeaderController {
 						recordToValidate.setSumOfAntalKolliInItemLines(totalItemLinesObject.getSumOfAntalKolliInItemLines());
 						recordToValidate.setSumOfAntalItemLines(totalItemLinesObject.getSumOfAntalItemLines());
 						recordToValidate.setSumTotalAmountItemLines(totalItemLinesObject.getSumTotalAmountItemLines());
+						//gross weight
+						recordToValidate.setSumOfGrossWeightInItemLines(totalItemLinesObject.getSumOfGrossWeightInItemLines());
 						
 						
 					}else{
@@ -260,9 +262,9 @@ public class SkatExportHeaderController {
 					//(2) Validate the record
 					SkatExportHeaderValidator validator = new SkatExportHeaderValidator();
 					//required validation only for production avd
-					if( !"1".equals(recordToValidate.getTestAvdFlag()) ){
+					//if( !"1".equals(recordToValidate.getTestAvdFlag()) ){
 						validator.validate(recordToValidate, bindingResult);
-					}
+					//}
 					//test indicator in validation field
 					recordToValidate.setDkeh_0035(dkeh_0035);
 
@@ -326,6 +328,8 @@ public class SkatExportHeaderController {
 					            jsonSkatExportSpecificTopicRecord.setSumOfAntalKolliInItemLines(totalItemLinesObject.getSumOfAntalKolliInItemLines());
 					            jsonSkatExportSpecificTopicRecord.setSumOfAntalItemLines(totalItemLinesObject.getSumOfAntalItemLines());
 					            jsonSkatExportSpecificTopicRecord.setSumTotalAmountItemLines(totalItemLinesObject.getSumTotalAmountItemLines());
+					            //
+					            jsonSkatExportSpecificTopicRecord.setSumOfGrossWeightInItemLines(totalItemLinesObject.getSumOfGrossWeightInItemLines());
 					            //test indicator
 					            jsonSkatExportSpecificTopicRecord.setDkeh_0035(dkeh_0035);
 								
@@ -1214,8 +1218,10 @@ public class SkatExportHeaderController {
 	    	JsonSkatExportSpecificTopicItemContainer jsonSkatExportSpecificTopicItemContainer = this.getSkatExportSpecificTopicItemService().getSkatExportSpecificTopicItemContainer(jsonPayloadFetch);
 	    	//now to the real logic
 	    	int antalKolli = 0;
+	    	double grossWeight = 0.00D;
 	    	int numberOfItemLines = 0;
 	    	double totalAmount = 0.00D;
+	    	
 	    	if(jsonSkatExportSpecificTopicItemContainer!=null){
 		    	for(JsonSkatExportSpecificTopicItemRecord record : jsonSkatExportSpecificTopicItemContainer.getOrderList()){
 		    		numberOfItemLines++;
@@ -1223,7 +1229,7 @@ public class SkatExportHeaderController {
 		    			try{
 		    				antalKolli += Integer.parseInt(record.getDkev_313());
 		    			}catch(Exception e){
-		    				logger.info("[ERROR] on ANTAL KOLLI CATCH");
+		    				logger.error("[ERROR] on ANTAL KOLLI CATCH");
 		    			}
 		    		}
 		    		//============
@@ -1234,7 +1240,15 @@ public class SkatExportHeaderController {
 		    				totalAmount += Double.parseDouble(record.getDkev_42().replace(",", "."));
 		    				
 		    			}catch(Exception e){
-		    				logger.info("[ERROR] on VARANS PRIS CATCH");
+		    				logger.error("[ERROR] on VARANS PRIS CATCH");
+		    			}
+		    		}
+		    		//gross weight
+		    		if(record.getDkev_35()!=null && !"".equals(record.getDkev_35())){
+		    			try{
+		    				grossWeight += Double.parseDouble(record.getDkev_35().replace(",", "."));
+		    			}catch(Exception e){
+		    				logger.error("[ERROR] on GROSS WEIGHT CATCH");
 		    			}
 		    		}
 		    	}
@@ -1244,16 +1258,20 @@ public class SkatExportHeaderController {
 	    	if(numberOfItemLines>0 && antalKolli==0){
 	    		antalKolli = -1;
 	    	}
+	    	
 	    	totalItemLinesObject.setSumOfAntalItemLines(numberOfItemLines);
 	    	totalItemLinesObject.setSumOfAntalKolliInItemLines(antalKolli);
+	    	//gross weight
+	    	totalItemLinesObject.setSumOfGrossWeightInItemLines(grossWeight);
 	    	//Round up doubles
 	    	totalAmount = this.numFormatter.getDouble(totalAmount, 3);
 	    	totalItemLinesObject.setSumTotalAmountItemLines(totalAmount);
 	    	
 	    	//DEBUG
-	    	logger.info("AntalKolli: " + totalItemLinesObject.getSumOfAntalKolliInItemLines());
+	    	logger.warn("AntalKolli: " + totalItemLinesObject.getSumOfAntalKolliInItemLines());
 	    	logger.info("AntalItems: " + totalItemLinesObject.getSumOfAntalItemLines());
 	    	logger.info("TotalAmountItems: " + totalItemLinesObject.getSumTotalAmountItemLines());
+	    	logger.warn("TotalGrossWeightItems: " + totalItemLinesObject.getSumOfGrossWeightInItemLines());
 	    
 	    	return totalItemLinesObject;
 	}
@@ -1566,6 +1584,7 @@ public class SkatExportHeaderController {
 			record.setSumOfAntalKolliInItemLines(totalItemLinesObject.getSumOfAntalKolliInItemLines());
 			record.setSumOfAntalItemLines(totalItemLinesObject.getSumOfAntalItemLines());
 			record.setSumTotalAmountItemLines(totalItemLinesObject.getSumTotalAmountItemLines());
+			record.setSumOfGrossWeightInItemLines(totalItemLinesObject.getSumOfGrossWeightInItemLines());
 			//Invoice list
 			record.setFakturaListTotValidCurrency(totalItemLinesObject.getFakturaListTotValidCurrency());
 			record.setFakturaListTotSum(totalItemLinesObject.getFakturaListTotSum());
@@ -1593,6 +1612,7 @@ public class SkatExportHeaderController {
 		record.setSumOfAntalKolliInItemLines(totalItemLinesObject.getSumOfAntalKolliInItemLines());
 		record.setSumOfAntalItemLines(totalItemLinesObject.getSumOfAntalItemLines());
 		record.setSumTotalAmountItemLines(totalItemLinesObject.getSumTotalAmountItemLines());
+		record.setSumOfGrossWeightInItemLines(totalItemLinesObject.getSumOfGrossWeightInItemLines());
 				
 		model.put(SkatConstants.DOMAIN_RECORD, record);
 		//put the header topic in session for the coming item lines

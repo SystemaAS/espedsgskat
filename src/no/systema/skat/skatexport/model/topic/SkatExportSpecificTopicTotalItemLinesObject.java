@@ -17,6 +17,11 @@ public class SkatExportSpecificTopicTotalItemLinesObject {
 	public void setSumOfAntalKolliInItemLines(Integer value) {  this.sumOfAntalKolliInItemLines = value; }
 	public Integer getSumOfAntalKolliInItemLines() {return this.sumOfAntalKolliInItemLines;}
 	
+	//Bruttovikt (SUM) (3 decimals)
+	private Double sumOfGrossWeightInItemLines = 0.00D;
+	public void setSumOfGrossWeightInItemLines(Double value) {  this.sumOfGrossWeightInItemLines = value; }
+	public Double getSumOfGrossWeightInItemLines() {return this.sumOfGrossWeightInItemLines;}
+	
 	
 	private Integer sumOfAntalItemLines = 0;
 	public void setSumOfAntalItemLines(Integer value) {  this.sumOfAntalItemLines = value; }

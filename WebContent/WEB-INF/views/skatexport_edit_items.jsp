@@ -348,6 +348,10 @@
 										<td nowrap align="right" class="text14"><spring:message code="systema.skat.gross.weight"/>:&nbsp;
 											<input tabindex=-1 align="right" type="text" readonly class="inputText12BlueBoldReadOnly" size="12" maxlength="11" value='${recordTopicSkat.dkeh_brut}'>
 										</td>
+										<td nowrap align="right" class="text14">Bruttovægt&nbsp;(&Sigma;):&nbsp;
+											<input tabindex=-1 align="right" type="text" readonly class="inputText12BlueBoldReadOnly" size="12" maxlength="11" value='${model.recordItemContainerTopic.sumOfGrossWeightInItemLinesStr}'>
+										</td>
+										<td width="3%" class="text14">&nbsp;</td>
 										<td title="recordTopicSkat.dkeh_221" nowrap align="right" class="text14"><spring:message code="systema.skat.invoice"/>&nbsp;<spring:message code="systema.skat.invoice.amount"/>:&nbsp;
 											<input tabindex=-1 align="right" type="text" readonly class="inputText12BlueBoldReadOnly" size="15" maxlength="20" value='${recordTopicSkat.dkeh_222}'>
 											&nbsp;<font style="color:#000080; font-style: italic;"><b>${recordTopicSkat.dkeh_221}</b></font>

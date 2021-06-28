@@ -1539,9 +1539,34 @@
 								</div>
 								</td>
 					            <td >
-				            		<input onKeyPress="return numberKey(event)" style="text-align: right" type="text" class="inputTextMediumBlue" name="dkeh_brut" id="dkeh_brut" size="12" maxlength="11" value="${model.record.dkeh_brut}">
+				            		<input onKeyPress="return numberKey(event)" style="text-align: right" type="text" class="inputTextMediumBlue" name="dkeh_brut" id="dkeh_brut" size="13" maxlength="11" value="${model.record.dkeh_brut}">
 					            </td>
 					        </tr>
+					        <tr>
+				        		<td class="text14Gray" align="center" >
+				        			Bruttovægt (vareposter)&nbsp;
+				        		</td>
+						        <td >
+				            		<input readonly style="text-align: right" type="text" class="inputTextReadOnly" name="sumOfGrossWeightInItemLinesStr" id="sumOfGrossWeightInItemLinesStr" size="13" value="${model.record.sumOfGrossWeightInItemLinesStr}">
+				            		<c:if test="${not empty (model.record.sumOfGrossWeightInItemLinesStr && model.record.dkeh_brut)}">
+				            			<c:if test="${model.record.sumOfGrossWeightInItemLines != model.record.dkeh_brut_dbl}">
+							            	<img id="imgRedFlagSumGrossWeightInItems" onMouseOver="showPop('itemsSumGrossweight_info');" onMouseOut="hidePop('itemsSumGrossweight_info');" width="18px" height="20px" src="resources/images/redFlag.png" border="0" alt="kolliantal warning">	
+					            		</c:if>
+					            	</c:if>
+				            		<div class="text11" style="position: relative;" align="left">
+					            		<span style="position:absolute; left:10px; top:0px; width:250px;" id="itemsSumGrossweight_info" class="popupWithInputText text11"  >
+					           			<p><b>Bruttovægt (vareposter)</b></p>
+					           			<p>
+					           			Summen af ​​bruttovægt på vareniveau svarer ikke til den specificerede bruttovægt i denne vare. Vi anbefaler at gennemgå, hvad der kan være galt, ved at kontrollere vareposterne.
+					           			</p>
+					           			Hvis tallet her er = <b>-1</b>, betyder det, at der er mere end 0 genstande, og at summen af ​​bruttovægten er = 0 (hvilket ikke er korrekt).
+					           			
+					           			</span>		
+									</div>	
+					            </td>
+					        </tr>
+					        <tr height="2"><td class="text">&nbsp;</td> </tr>
+					        
 				            <tr>
 					            <td class="text14" align="left" >
 					            <img onMouseOver="showPop('6_info');" onMouseOut="hidePop('6_info');"style="vertical-align:top;" width="12px" height="12px" src="resources/images/info3.png" border="0" alt="info">	
