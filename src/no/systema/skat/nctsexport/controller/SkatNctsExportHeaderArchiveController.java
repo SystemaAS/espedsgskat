@@ -31,6 +31,7 @@ import no.systema.skat.nctsexport.model.jsonjackson.topic.archive.JsonSkatNctsEx
 import no.systema.skat.nctsexport.service.SkatNctsExportSpecificTopicService;
 import no.systema.skat.nctsexport.url.store.SkatNctsExportUrlDataStore;
 import no.systema.skat.nctsexport.util.RpgReturnResponseHandler;
+import no.systema.skat.util.ArchiveGoogleCloudManager;
 import no.systema.skat.util.SkatConstants;
 
 
@@ -109,6 +110,10 @@ public class SkatNctsExportHeaderArchiveController {
 		    	logger.info(Calendar.getInstance().getTime() +  " CGI-end timestamp");
 		    	if(jsonPayload!=null){
 		    		JsonSkatNctsExportSpecificTopicArchiveContainer container = this.skatNctsExportSpecificTopicService.getNctsExportSpecificTopicArchiveContainer(jsonPayload);
+		    		//adjust to google cloud if needed
+		    		container = new ArchiveGoogleCloudManager().adjustUrl(appUser, container);
+		    		
+		    		
 		    		//add domain objects here
 		    		this.setDomainObjectsInView(model, container);
 		    		this.setDomainObjectsInView(request, model);
