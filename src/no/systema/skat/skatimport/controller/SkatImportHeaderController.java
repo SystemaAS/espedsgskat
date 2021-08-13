@@ -199,8 +199,8 @@ public class SkatImportHeaderController {
 					session.setAttribute(SkatConstants.ACTIVE_URL_RPG_SKAT, BASE_URL  + "==>params: " + urlRequestParamsKeys.toString()); 
 					
 					logger.info(Calendar.getInstance().getTime() + " CGI-start timestamp");
-				    	logger.info("URL: " + BASE_URL);
-				    	logger.info("URL PARAMS: " + urlRequestParamsKeys);
+				    	logger.warn("URL: " + BASE_URL);
+				    	logger.warn("URL PARAMS: " + urlRequestParamsKeys);
 				    	//--------------------------------------
 				    	//EXECUTE the FETCH (RPG program) here
 				    	//--------------------------------------
@@ -1046,9 +1046,9 @@ public class SkatImportHeaderController {
 		String urlRequestParamsKeys = "user=" + appUser.getUser() + "&avd=" + avd + "&opd=" + opd;
 		
 		logger.info(Calendar.getInstance().getTime() + " CGI-start timestamp");
-		logger.info("FETCH av item list... ");
-	    	logger.info("URL: " + BASE_URL_FETCH);
-	    	logger.info("URL PARAMS: " + urlRequestParamsKeys);
+		logger.warn("FETCH av item list... ");
+	    	logger.warn("URL: " + BASE_URL_FETCH);
+	    	logger.warn("URL PARAMS: " + urlRequestParamsKeys);
 	    	//--------------------------------------
 	    	//EXECUTE the FETCH (RPG program) here
 	    	//--------------------------------------

@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import javawebparts.core.org.apache.commons.lang.StringUtils;
 import no.systema.jservices.common.dao.ArkivpDao;
 import no.systema.main.model.SystemaWebUser;
+import no.systema.main.util.ApplicationPropertiesUtil;
 import no.systema.skat.nctsexport.model.jsonjackson.topic.archive.JsonSkatNctsExportSpecificTopicArchiveContainer;
 import no.systema.skat.nctsexport.model.jsonjackson.topic.archive.JsonSkatNctsExportSpecificTopicArchiveRecord;
 import no.systema.skat.nctsimport.model.jsonjackson.topic.archive.JsonSkatNctsImportSpecificTopicArchiveContainer;
@@ -30,12 +31,19 @@ import no.systema.skat.skatimport.model.jsonjackson.topic.archive.JsonSkatImport
 @Service
 public class ArchiveGoogleCloudManager {
 	private static final Logger logger = Logger.getLogger(ArchiveGoogleCloudManager.class.getName());
-	private final String GOOGLE_BUCKET_PREFIX_URL = "https://storage.googleapis.com/gc_"; //complete should be e.g--> "https://storage.googleapis.com/gc_a12/si20210003100088296FVQzjftv.pdf"
+	//private final String GOOGLE_BUCKET_PREFIX_URL = "https://storage.googleapis.com/gc_"; //complete should be e.g--> "https://storage.googleapis.com/gc_a12/si20210003100088296FVQzjftv.pdf"
+	
+	//API-SYSTEMA -->File passthrough, kan brukes for å vise fil til bruker. Returnere faktisk fil (pdf) :
+	//GET http://10.13.3.22:9886/api/files?comanyid=a12&filename=si201200060073243gS3b26AwqC.pdf
+	//private final String GOOGLE_BUCKET_PREFIX_URL = "http://10.13.3.22:9886/api/files?";
+		
+	private final String GOOGLE_BUCKET_PREFIX_URL = ApplicationPropertiesUtil.getProperty("archive.cloud.endpoint.prefix");
 	
 	private final String SAAS_ROOT_PATH_ON_FILE_SYSTEM = "/asp/";
 	private final String SAAS_ROOT_PATH_ON_FILE_SYSTEM_UPPERCASE = "/ASP/";
 	private final String LOCALHOST_ROOT_PATH_ON_FILE_SYSTEM = "/pdf/";
-	
+	private final String GOOGLE = "google";
+	private final String SYSTEMA_HOST_IP = "10.13.3.22";
 	/**
 	 * 
 	 * @param appUser
@@ -176,6 +184,27 @@ public class ArchiveGoogleCloudManager {
 		
 	}
 	/**
+	 * Special case in case we are using SYSTEMAs API and not Google directly 
+	 * @param suffix
+	 * @param strToReplace
+	 * @return
+	 */
+	private String adjustPdfApiSuffix(String suffix, String strToReplace) {
+		String result = "";
+		String tmp = this.adjustPdfSuffix(suffix, strToReplace);
+		logger.warn(tmp);
+		//We now have a string in this format: a12/xxxx.pdf
+		//We aim to have this suffix: "comanyid=a12&filename=si201200060073243gS3b26AwqC.pdf
+		int index = tmp.lastIndexOf("/");
+		String comanyid = tmp.substring(0, index);
+		String filename = tmp.substring(index + 1);
+		
+		result = "comanyid=" + comanyid + "&filename=" + filename;
+		
+		return result;
+		
+	}
+	/**
 	 * 
 	 * @param appUser
 	 * @param url
@@ -189,15 +218,20 @@ public class ArchiveGoogleCloudManager {
 			logger.info("Saas!");
 			logger.info("local url:" + url);
 			if(!new File(url).exists()){
-				if(GOOGLE_BUCKET_PREFIX_URL.toLowerCase().contains("google")) {
-					logger.info("File does not exists locally!...going to google cloud ...");
-					String strToReplace = SAAS_ROOT_PATH_ON_FILE_SYSTEM;
-					if(url.startsWith(SAAS_ROOT_PATH_ON_FILE_SYSTEM_UPPERCASE)) { strToReplace = SAAS_ROOT_PATH_ON_FILE_SYSTEM_UPPERCASE; }
+				logger.info("File does not exists locally!...going to google cloud ...");
+				String strToReplace = SAAS_ROOT_PATH_ON_FILE_SYSTEM;
+				if(url.startsWith(SAAS_ROOT_PATH_ON_FILE_SYSTEM_UPPERCASE)) { strToReplace = SAAS_ROOT_PATH_ON_FILE_SYSTEM_UPPERCASE; }
+				
+				if(GOOGLE_BUCKET_PREFIX_URL.toLowerCase().contains(this.GOOGLE)) {
 					//do it
 					retval = GOOGLE_BUCKET_PREFIX_URL + this.adjustPdfSuffix(url, strToReplace);
 					logger.info("cloud url:" + retval);
-				}else {
+					
+				}else if(GOOGLE_BUCKET_PREFIX_URL.toLowerCase().contains(this.SYSTEMA_HOST_IP)) {
 					//implement other API in case the direct google API is not used. Probably an inhouse API (Vidars)
+					retval = GOOGLE_BUCKET_PREFIX_URL + this.adjustPdfApiSuffix(url, strToReplace);
+					logger.info("api url:" + retval);
+					
 				}
 			}
 			
@@ -205,14 +239,20 @@ public class ArchiveGoogleCloudManager {
 			logger.info("localhost! or gw.systema test");
 			logger.info("local url:" + url);
 			if(!new File(url).exists()){
-				if(GOOGLE_BUCKET_PREFIX_URL.toLowerCase().contains("google")) {
-					logger.info("File does not exists locally!...going to google cloud ...");
+				logger.info("File does not exists locally!...going to google cloud ...");
+				String strToReplace = LOCALHOST_ROOT_PATH_ON_FILE_SYSTEM;
+				
+				if(GOOGLE_BUCKET_PREFIX_URL.toLowerCase().contains(this.GOOGLE)) {
 					//do it
-					retval = GOOGLE_BUCKET_PREFIX_URL + this.adjustPdfSuffix(url, LOCALHOST_ROOT_PATH_ON_FILE_SYSTEM);
+					retval = GOOGLE_BUCKET_PREFIX_URL + this.adjustPdfSuffix(url, strToReplace);
 					// TEST record.setUrl(googleBucketPrefix + "a12/si20210003100088296FVQzjftv.pdf");
 					logger.info("cloud url:" + retval);
-				}else {
+					
+				}else if(GOOGLE_BUCKET_PREFIX_URL.toLowerCase().contains(this.SYSTEMA_HOST_IP)) {
 					//implement other API in case the direct google API is not used. Probably an inhouse API (Vidars)
+					retval = GOOGLE_BUCKET_PREFIX_URL + this.adjustPdfApiSuffix(url, strToReplace);
+					logger.info("api url:" + retval);
+					
 				}
 			}
 		}
@@ -221,7 +261,6 @@ public class ArchiveGoogleCloudManager {
 		
 		return retval;
 	}
-	
 	
 	
 	
