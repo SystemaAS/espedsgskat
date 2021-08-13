@@ -44,6 +44,7 @@ public class ArchiveGoogleCloudManager {
 	private final String LOCALHOST_ROOT_PATH_ON_FILE_SYSTEM = "/pdf/";
 	private final String GOOGLE = "google";
 	private final String SYSTEMA_HOST_IP = "10.13.3.22";
+	private final String SYSTEMA_HOST_DNS = "gw.systema.no";
 	/**
 	 * 
 	 * @param appUser
@@ -248,7 +249,7 @@ public class ArchiveGoogleCloudManager {
 					// TEST record.setUrl(googleBucketPrefix + "a12/si20210003100088296FVQzjftv.pdf");
 					logger.info("cloud url:" + retval);
 					
-				}else if(GOOGLE_BUCKET_PREFIX_URL.toLowerCase().contains(this.SYSTEMA_HOST_IP)) {
+				}else if(GOOGLE_BUCKET_PREFIX_URL.toLowerCase().contains(this.SYSTEMA_HOST_IP) || GOOGLE_BUCKET_PREFIX_URL.toLowerCase().contains(this.SYSTEMA_HOST_DNS)) {
 					//implement other API in case the direct google API is not used. Probably an inhouse API (Vidars)
 					retval = GOOGLE_BUCKET_PREFIX_URL + this.adjustPdfApiSuffix(url, strToReplace);
 					logger.info("api url:" + retval);
