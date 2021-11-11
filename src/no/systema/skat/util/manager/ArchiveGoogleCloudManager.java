@@ -1,4 +1,4 @@
-package no.systema.skat.util;
+package no.systema.skat.util.manager;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -216,8 +216,8 @@ public class ArchiveGoogleCloudManager {
 		logger.info("original url:" + url);
 		
 		if(url.startsWith(SAAS_ROOT_PATH_ON_FILE_SYSTEM) || url.startsWith(SAAS_ROOT_PATH_ON_FILE_SYSTEM_UPPERCASE) ) {
-			logger.info("Saas!");
-			logger.info("local url:" + url);
+			logger.warn("Saas!");
+			logger.warn("local url:" + url);
 			if(!new File(url).exists()){
 				logger.info("File does not exists locally!...going to google cloud ...");
 				String strToReplace = SAAS_ROOT_PATH_ON_FILE_SYSTEM;
@@ -228,7 +228,7 @@ public class ArchiveGoogleCloudManager {
 					retval = GOOGLE_BUCKET_PREFIX_URL + this.adjustPdfSuffix(url, strToReplace);
 					logger.info("cloud url:" + retval);
 					
-				}else if(GOOGLE_BUCKET_PREFIX_URL.toLowerCase().contains(this.SYSTEMA_HOST_IP)) {
+				}else if(GOOGLE_BUCKET_PREFIX_URL.toLowerCase().contains(this.SYSTEMA_HOST_IP) || GOOGLE_BUCKET_PREFIX_URL.toLowerCase().contains(this.SYSTEMA_HOST_DNS)) {
 					//implement other API in case the direct google API is not used. Probably an inhouse API (Vidars)
 					retval = GOOGLE_BUCKET_PREFIX_URL + this.adjustPdfApiSuffix(url, strToReplace);
 					logger.info("api url:" + retval);
@@ -247,12 +247,12 @@ public class ArchiveGoogleCloudManager {
 					//do it
 					retval = GOOGLE_BUCKET_PREFIX_URL + this.adjustPdfSuffix(url, strToReplace);
 					// TEST record.setUrl(googleBucketPrefix + "a12/si20210003100088296FVQzjftv.pdf");
-					logger.info("cloud url:" + retval);
+					logger.warn("cloud url:" + retval);
 					
 				}else if(GOOGLE_BUCKET_PREFIX_URL.toLowerCase().contains(this.SYSTEMA_HOST_IP) || GOOGLE_BUCKET_PREFIX_URL.toLowerCase().contains(this.SYSTEMA_HOST_DNS)) {
 					//implement other API in case the direct google API is not used. Probably an inhouse API (Vidars)
 					retval = GOOGLE_BUCKET_PREFIX_URL + this.adjustPdfApiSuffix(url, strToReplace);
-					logger.info("api url:" + retval);
+					logger.warn("api url:" + retval);
 					
 				}
 			}

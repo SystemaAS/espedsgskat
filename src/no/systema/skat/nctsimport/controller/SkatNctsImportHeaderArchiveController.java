@@ -31,8 +31,8 @@ import no.systema.skat.nctsimport.model.jsonjackson.topic.archive.JsonSkatNctsIm
 import no.systema.skat.nctsimport.service.SkatNctsImportSpecificTopicService;
 import no.systema.skat.nctsimport.url.store.SkatNctsImportUrlDataStore;
 import no.systema.skat.nctsimport.util.RpgReturnResponseHandler;
-import no.systema.skat.util.ArchiveGoogleCloudManager;
 import no.systema.skat.util.SkatConstants;
+import no.systema.skat.util.manager.ArchiveGoogleCloudManager;
 
 
 
