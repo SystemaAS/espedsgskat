@@ -53,7 +53,11 @@
 			jq('#tggblb').val("");
 			jq('#tggvk').val("");
 			jq('#tgprm').val("");
-			
+			jq('#tgst').val("");
+			//
+			jq('#tgdt').val("");
+			jq('#tgdtr').val("");
+			jq('#tgusr').val("");
 			//for update
 			jq('#updateId').val("");
 		});
@@ -108,7 +112,11 @@
 			jq('#tggblb').val("");jq('#tggblb').val(data[i].tggblb);
 			jq('#tggvk').val("");jq('#tggvk').val(data[i].tggvk);
 			jq('#tgprm').val("");jq('#tgprm').val(data[i].tgprm);
-			
+			jq('#tgst').val("");jq('#tgst').val(data[i].tgst);
+			//
+			jq('#tgdt').val("");jq('#tgdt').val(data[i].tgdt);
+			jq('#tgdtr').val("");jq('#tgdtr').val(data[i].tgdtr);
+			jq('#tgusr').val("");jq('#tgusr').val(data[i].tgusr);
   			//for a future update
   			jq('#updateId').val("");jq('#updateId').val(data[i].tggnr);
 
@@ -138,6 +146,7 @@
     	  "dom": '<"top">t<"bottom"flip><"clear">',
     	  "scrollY": "250px",
     	  "scrollCollapse":  false,
+		  "order": [[ 4, "asc" ]],
     	  "lengthMenu": [ 75, 100]
   	  });
       

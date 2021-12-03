@@ -1,7 +1,13 @@
 package no.systema.skat.z.maintenance.skatnctsexport.validator;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.apache.log4j.Logger;
 import org.springframework.validation.Validator;
+
+import javawebparts.core.org.apache.commons.lang.StringUtils;
+
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 
@@ -50,7 +56,16 @@ public class MaintSkatExportDkx030rValidator implements Validator {
 		//Logical (RULES) controls if we passed the NOT NULL errors
 		if(!errors.hasFieldErrors()){
 			if(record!=null){
-				//TODO
+				if(StringUtils.isNotEmpty(record.getTgdt())){
+					if(!this.isValidDate(record.getTgdt())){
+						errors.rejectValue("tgdt", "", "Send dato er ugyldig ");
+					}
+				}
+				if(StringUtils.isNotEmpty(record.getTgdtr())){
+					if(!this.isValidDate(record.getTgdtr())){
+						errors.rejectValue("tgdtr", "", "Reg.dato er ugyldig");
+					}
+				}
 			}
 		}
 	}
@@ -66,6 +81,24 @@ public class MaintSkatExportDkx030rValidator implements Validator {
 		//logger.info(record.getTariff());
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "tggnr", "", "Garantinr er obligatorisk"); 
 		
+	}
+	
+	/**
+	 * 
+	 * @param rawValue
+	 * @return
+	 */
+	private boolean isValidDate(String rawValue){
+		boolean retval = false;
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMdd");
+		formatter.setLenient(false); //in order to put logical control for month
+		try{
+			Date tmp = formatter.parse(rawValue);
+			retval = true;
+		}catch(Exception e){
+			//nothing
+		}
+		return retval;
 	}
 	
 	

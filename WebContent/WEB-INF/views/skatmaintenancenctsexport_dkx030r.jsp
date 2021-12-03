@@ -76,6 +76,7 @@
 								<th class="tableHeaderField" >&nbsp;Garanti nr.&nbsp;</th>
 			                    <th class="tableHeaderField" >&nbsp;Toldsted&nbsp;</th>
 								<th class="tableHeaderField" >&nbsp;Send dato&nbsp;</th>
+								<th class="tableHeaderField" >&nbsp;Reg.dato&nbsp;</th>
 								<th class="tableHeaderField" >&nbsp;Status&nbsp;</th>
 								<th class="tableHeaderField" >&nbsp;Firma nr.&nbsp;</th>
 								<th class="tableHeaderField" >&nbsp;Ny tillg.kode&nbsp;</th>
@@ -93,6 +94,7 @@
 				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 1px;border-color:#FAEBD7;"><font class="text14">&nbsp;${record.tggnr}&nbsp;</font></td>
 				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text14">&nbsp;${record.tgtsd}&nbsp;</font></td>
 				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text14">&nbsp;${record.tgdt}&nbsp;</font></td>
+				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text14">&nbsp;${record.tgdtr}&nbsp;</font></td>
 				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text14">&nbsp;${record.tgst}&nbsp;</font></td>
 				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text14">&nbsp;${record.tgtina}&nbsp;</font></td>
 				               <td class="tableCell" style="border-style: solid;border-width: 0px 1px 1px 0px;border-color:#FAEBD7;" ><font class="text14">&nbsp;${record.tgakny}&nbsp;</font></td>
@@ -106,22 +108,7 @@
 				            </tr> 
 				            </c:forEach>
 				            </tbody>
-				            <%--
-				            <tfoot>
-							<tr>
-							    <th align="center" width="2%" class="tableHeaderFieldWhiteBg11" >&nbsp;Opdater&nbsp;</th>
-							    <th align="center" class="tableHeaderFieldWhiteBg11" >&nbsp;TGGTY</th>
-								<th align="center" class="tableHeaderFieldWhiteBg11" >&nbsp;TGGNR</th>
-			                    <th align="center" class="tableHeaderFieldWhiteBg11" >&nbsp;TGTSD&nbsp;</th>
-			                    <th align="center" class="tableHeaderFieldWhiteBg11" >&nbsp;TGDT&nbsp;</th>
-			                    <th align="center" class="tableHeaderFieldWhiteBg11" >&nbsp;TGST&nbsp;</th>
-			                    <th align="center" class="tableHeaderFieldWhiteBg11" >&nbsp;TGTINA&nbsp;</th>
-			                    <th align="center" class="tableHeaderFieldWhiteBg11" >&nbsp;TGAKNY&nbsp;</th>
-			                    <th align="center" class="tableHeaderFieldWhiteBg11" >&nbsp;TGAKGM&nbsp;</th>
-			                    <th align="center" class="tableHeaderFieldWhiteBg11">Fjern</th>
-			                </tr>  
-			                </tfoot> 
-			                 --%>
+				            
 			            </table>
 					</td>	
 					</tr>
@@ -282,7 +269,36 @@
 											<input type="text" onKeyPress="return numberKey(event)" class="inputTextMediumBlue" name="tgprm" id="tgprm" size="4" maxlength="3" value='${model.record.tgprm}'>
 											&nbsp;<font class="text11">(Når der er anvendt mere end X %)</font>
 										</td>
+									</tr>
+									<tr>
+										<td class="text14" title="tgst">&nbsp;Status</td>
+										<td >
+											<input type="text" class="inputTextMediumBlue" name="tgst" id="tgst" size="2" maxlength="1" value='${model.record.tgst}'>
+											
+										</td>
 									</tr>	
+									<tr>
+										<td class="text14" title="tgst">&nbsp;<font class="text14RedBold" >*</font>Send dato</td>
+										<td >
+											<input type="text" required oninvalid="this.setCustomValidity('Obligatorisk')" oninput="setCustomValidity('')" onKeyPress="return numberKey(event)" class="inputTextMediumBlueMandatoryField" name="tgdt" id="tgdt" size="10" maxlength="8" value='${model.record.tgdt}'>
+											
+										</td>
+									</tr>	
+									<tr>
+										<td class="text14" title="tgst">&nbsp;<font class="text14RedBold" >*</font>Reg.dato</td>
+										<td >
+											<input type="text" required oninvalid="this.setCustomValidity('Obligatorisk')" oninput="setCustomValidity('')" onKeyPress="return numberKey(event)" class="inputTextMediumBlueMandatoryField" name="tgdtr" id="tgdtr" size="10" maxlength="8" value='${model.record.tgdtr}'>
+											
+										</td>
+									</tr>	
+									<tr>
+										<td class="text14" title="tgst">&nbsp;<font class="text14RedBold" >*</font>Reg.user</td>
+										<td >
+											<input type="text" required oninvalid="this.setCustomValidity('Obligatorisk')" oninput="setCustomValidity('')" class="inputTextMediumBlueMandatoryField" name="tgusr" id="tgusr" size="12" maxlength="10" value='${model.record.tgusr}'>
+											
+										</td>
+									</tr>	
+										
 								</table>
 							</td>
 						</tr>
