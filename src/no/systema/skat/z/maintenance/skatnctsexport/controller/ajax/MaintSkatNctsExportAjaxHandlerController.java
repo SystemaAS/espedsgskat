@@ -34,6 +34,8 @@ import no.systema.skat.z.maintenance.main.url.store.MaintenanceUrlDataStore;
 import no.systema.skat.z.maintenance.skatncts.service.MaintDkxkodfService;
 import no.systema.skat.z.maintenance.skatnctsexport.model.jsonjackson.dbtable.JsonMaintDkxghContainer;
 import no.systema.skat.z.maintenance.skatnctsexport.model.jsonjackson.dbtable.JsonMaintDkxghRecord;
+import no.systema.skat.z.maintenance.skatnctsexport.model.jsonjackson.dbtable.JsonMaintDkxhContainer;
+import no.systema.skat.z.maintenance.skatnctsexport.model.jsonjackson.dbtable.JsonMaintDkxhRecord;
 import no.systema.skat.z.maintenance.skatnctsexport.service.MaintDkxghService;
 import no.systema.skat.z.maintenance.skatnctsexport.url.store.MaintenanceNctsExportUrlDataStore;
 import no.systema.skat.z.maintenance.skatncts.model.jsonjackson.dbtable.JsonMaintDkxkodfContainer;
@@ -89,6 +91,19 @@ public class MaintSkatNctsExportAjaxHandlerController {
 	
 	}
 	
+	@RequestMapping(value="getSpecificRecord_dkx030r_fbrukt.do", method={RequestMethod.GET, RequestMethod.POST})
+	public @ResponseBody List<JsonMaintDkxhRecord> getRecordSvx030_fbrukt
+	  	(@RequestParam String applicationUser, @RequestParam String thavd, String thtdn, String thsg) {
+		final String METHOD = "[DEBUG] getRecordSvx030r_fbrukt";
+		logger.info(METHOD + " Inside...");
+		List<JsonMaintDkxhRecord> result = new ArrayList();
+	 	//get table
+    	result = (List)this.fetchListSvx030_fbrukt(applicationUser, thavd, thtdn, thsg);
+    	
+    	return result;
+	
+	}
+	
 	/**
 	 * 
 	 * @param applicationUser
@@ -113,6 +128,30 @@ public class MaintSkatNctsExportAjaxHandlerController {
 	        	for(JsonMaintDkxghRecord record: list){
 	        		//logger.info(record.getTggnr());
 	        	}
+	        }
+    	}
+    	
+    	return list;
+    	
+	}
+private Collection<JsonMaintDkxhRecord> fetchListSvx030_fbrukt(String applicationUser, String avd, String opd, String sign){
+		
+		String BASE_URL = MaintenanceNctsExportUrlDataStore.MAINTENANCE_BASE_DKX030R_FBRUKT_GET_LIST_URL;
+		String urlRequestParams = "user=" + applicationUser + "&thavd=" + avd + "&thtdn=" + opd + "&thsg=" + sign ; //OneMatch ...
+		logger.info(Calendar.getInstance().getTime() + " CGI-start timestamp");
+    	logger.warn("URL: " + jsonDebugger.getBASE_URL_NoHostName(BASE_URL));
+    	logger.warn("URL PARAMS: " + urlRequestParams);
+    	String jsonPayload = this.urlCgiProxyService.getJsonContent(BASE_URL, urlRequestParams);
+    	//extract
+    	List<JsonMaintDkxhRecord> list = new ArrayList();
+    	if(jsonPayload!=null){
+			//lists
+    		JsonMaintDkxhContainer container = this.maintDkxghService.getListReservedGuaranty(jsonPayload);
+	        if(container!=null){
+	        	list = (List)container.getList();
+	        	//Debugg for(JsonMaintSvxhRecord record: list){
+	        		//logger.info(record.getTggnr());
+	        	//}
 	        }
     	}
     	

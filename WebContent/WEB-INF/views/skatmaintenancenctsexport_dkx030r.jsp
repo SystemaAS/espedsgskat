@@ -34,6 +34,15 @@
 							<img style="vertical-align: middle;"  src="resources/images/bulletGreen.png" border="0" width="8px" height="8px" alt="db table">
 						</a>
 					</td>
+					<td width="1px" class="tabFantomSpace" align="center" nowrap><font class="tabDisabledLink">&nbsp;</font></td>
+					<td width="20%" valign="bottom" class="tabDisabled" align="center">
+						<a id="alinkRecordId_${counter.count}" onClick="setBlockUI(this);" href="skatmaintenancenctsexport_dkx030r_fbrukt.do?id=DKXH">
+							<font class="tabDisabledLink">Frigivelse av Garanti
+							<img style="vertical-align: middle;"  src="resources/images/bulletGreen.png" border="0" width="8px" height="8px" alt="db table">
+						</a>
+					</td>
+					
+					
 					<td width="70%" class="tabFantomSpace" align="center" nowrap><font class="tabDisabledLink">&nbsp;</font></td>	
 				</tr>
 		</table>
@@ -167,7 +176,7 @@
 			<tr height="2"><td>&nbsp;</td></tr>
 	 	    <tr >
 	 	    	<td width="5%">&nbsp;</td>
-				<td width="100%">
+				<td width="100%">  
 				<form action="skatmaintenancenctsexport_dkx030r_edit.do" name="formRecord" id="formRecord" method="POST" >
 					<input type="hidden" name="applicationUser" id="applicationUser" value="${user.user}">
 					<input type="hidden" name="updateId" id=updateId value="${model.updateId}"> 

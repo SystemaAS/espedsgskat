@@ -4,7 +4,9 @@
 package no.systema.skat.z.maintenance.skatnctsexport.service;
 
 import no.systema.skat.z.maintenance.skatnctsexport.mapper.jsonjackson.dbtable.MaintDkxghMapper;
+import no.systema.skat.z.maintenance.skatnctsexport.mapper.jsonjackson.dbtable.MaintDkxhMapper;
 import no.systema.skat.z.maintenance.skatnctsexport.model.jsonjackson.dbtable.JsonMaintDkxghContainer;
+import no.systema.skat.z.maintenance.skatnctsexport.model.jsonjackson.dbtable.JsonMaintDkxhContainer;
 
 /**
  * 
@@ -46,5 +48,29 @@ public class MaintDkxghServiceImpl implements MaintDkxghService {
 		return container;
 		
 	}
+	public JsonMaintDkxhContainer getListReservedGuaranty(String utfPayload) {
+		JsonMaintDkxhContainer container = null;
+		try{
+			MaintDkxhMapper mapper = new MaintDkxhMapper();
+			container = mapper.getContainer(utfPayload);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		
+		return container;
+	}
+	
+	public JsonMaintDkxhContainer doReleaseGuarantee(String utfPayload) {
+		JsonMaintDkxhContainer container = null;
+		try{
+			MaintDkxhMapper mapper = new MaintDkxhMapper();
+			container = mapper.getContainer(utfPayload);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		
+		return container;
+	}
+	
 
 }
