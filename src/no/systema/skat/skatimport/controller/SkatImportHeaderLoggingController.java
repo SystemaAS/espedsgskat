@@ -34,6 +34,7 @@ import no.systema.skat.skatimport.service.SkatImportSpecificTopicService;
 import no.systema.skat.skatimport.url.store.SkatImportUrlDataStore;
 import no.systema.skat.skatimport.util.RpgReturnResponseHandler;
 import no.systema.skat.util.SkatConstants;
+import no.systema.skat.util.manager.ArchiveGoogleCloudManager;
 
 
 /**
@@ -108,13 +109,16 @@ public class SkatImportHeaderLoggingController {
 		    	logger.info(" --> jsonPayload:" + jsonPayload);
 		    	logger.info(Calendar.getInstance().getTime() +  " CGI-end timestamp");
 		    	if(jsonPayload!=null){
-		    		JsonSkatImportSpecificTopicLoggingContainer jsonSkatImportSpecificTopicLoggingContainer = this.skatImportSpecificTopicService.getSkatImportSpecificTopicLoggingContainer(jsonPayload);
+		    		JsonSkatImportSpecificTopicLoggingContainer container = this.skatImportSpecificTopicService.getSkatImportSpecificTopicLoggingContainer(jsonPayload);
+		    		//adjust to google cloud if needed
+		    		container = new ArchiveGoogleCloudManager().adjustUrl(appUser, container);
+		    		
 		    		//add domain objects here
-		    		this.setDomainObjectsInView(model, jsonSkatImportSpecificTopicLoggingContainer);
+		    		this.setDomainObjectsInView(model, container);
 		    		this.setDomainObjectsInView(request, model);
 		    		
 		    		successView.addObject(SkatConstants.DOMAIN_MODEL, model);
-				successView.addObject(SkatConstants.DOMAIN_LIST,jsonSkatImportSpecificTopicLoggingContainer.getLogg());
+				successView.addObject(SkatConstants.DOMAIN_LIST,container.getLogg());
 		    		
 		    	}else{
 				logger.fatal("NO CONTENT on jsonPayload from URL... ??? <Null>");
