@@ -135,7 +135,7 @@
 	               		   	<c:choose>
 		              		<c:when test="${fn:startsWith(record.wurl, 'http')}">
 								<a <c:if test="${record.msr == 'R'}">style="color:#9F6000;"</c:if> href="${record.wurl}" target="_new" >
-			               			<img src="resources/images/pdf.png" border="0" width="16px" height="16px" alt="Show file on cloud" >
+			               			<img src="resources/images/list.gif" border="0" width="16px" height="16px" alt="Show file on cloud" >
 			               			${record.mmn}
 		               			</a>		              
 		               		</c:when>
