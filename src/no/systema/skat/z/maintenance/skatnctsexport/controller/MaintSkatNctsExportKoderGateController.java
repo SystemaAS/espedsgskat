@@ -2,7 +2,7 @@ package no.systema.skat.z.maintenance.skatnctsexport.controller;
 
 import java.util.*;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller;
@@ -46,7 +46,7 @@ import no.systema.skat.z.maintenance.main.util.SkatMaintenanceConstants;
 @Scope("session")
 public class MaintSkatNctsExportKoderGateController {
 	private static final JsonDebugger jsonDebugger = new JsonDebugger();
-	private static final Logger logger = Logger.getLogger(MaintSkatNctsExportKoderGateController.class.getName());
+	private static final Logger logger = LogManager.getLogger(MaintSkatNctsExportKoderGateController.class.getName());
 	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	private ApplicationContext context;
 	private LoginValidator loginValidator = new LoginValidator();

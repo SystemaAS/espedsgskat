@@ -4,7 +4,7 @@
 package no.systema.skat.skatimport.mapper.jsonjackson;
 
 //jackson library
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 
 import com.fasterxml.jackson.databind.DeserializationConfig;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -27,7 +27,7 @@ import no.systema.skat.skatimport.model.jsonjackson.topic.JsonSkatImportTopicInv
  * 
  */
 public class SkatImportTopicInvoiceMapper extends ObjectMapperAbstractGrandFather{
-	private static final Logger logger = Logger.getLogger(SkatImportTopicInvoiceMapper.class.getName());
+	private static final Logger logger = LogManager.getLogger(SkatImportTopicInvoiceMapper.class.getName());
 	
 	public JsonSkatImportTopicInvoiceContainer getContainer(String utfPayload) throws Exception{
 		//At this point we now have an UTF-8 payload

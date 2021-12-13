@@ -6,7 +6,7 @@ package no.systema.skat.admin.filter;
 import java.lang.reflect.Field;
 import java.util.*;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 
 /**
  * This search class is used at the GUI search behavior
@@ -18,7 +18,7 @@ import org.apache.log4j.Logger;
  * @date 	Feb 20, 2014
  */
 public class SearchFilterSkatAdminTransportList {
-	private static final Logger logger = Logger.getLogger(SearchFilterSkatAdminTransportList.class.getName());
+	private static final Logger logger = LogManager.getLogger(SearchFilterSkatAdminTransportList.class.getName());
 	
 	private String avd = null;
 	public void setAvd(String value) {  this.avd = value; }

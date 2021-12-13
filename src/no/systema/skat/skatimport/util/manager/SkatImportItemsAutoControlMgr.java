@@ -2,7 +2,7 @@ package no.systema.skat.skatimport.util.manager;
 
 import java.util.*;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 import org.springframework.validation.ValidationUtils;
 
 import no.systema.main.model.SystemaWebUser;
@@ -25,7 +25,7 @@ import no.systema.skat.model.jsonjackson.JsonSkatAutoControlErrorContainer;
  * Apr 8, 2016
  */
 public class SkatImportItemsAutoControlMgr {
-	private static final Logger logger = Logger.getLogger(SkatImportItemsAutoControlMgr.class.getName());
+	private static final Logger logger = LogManager.getLogger(SkatImportItemsAutoControlMgr.class.getName());
 	private UrlCgiProxyService urlCgiProxyService = null;
 	private SkatImportSpecificTopicItemService skatImportSpecificTopicItemService = null;
 	NumberFormatterLocaleAware formatter = new NumberFormatterLocaleAware();

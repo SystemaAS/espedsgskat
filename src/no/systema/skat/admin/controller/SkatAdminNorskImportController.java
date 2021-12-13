@@ -31,7 +31,7 @@ import no.systema.skat.service.html.dropdown.SkatDropDownListPopulationService;
 import no.systema.skat.url.store.SkatUrlDataStore;
 import no.systema.skat.util.SkatConstants;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Required;
@@ -55,7 +55,7 @@ import org.springframework.web.servlet.ModelAndView;
 @SessionAttributes(AppConstants.SYSTEMA_WEB_USER_KEY)
 @Scope("session")
 public class SkatAdminNorskImportController {
-	private static final Logger logger = Logger.getLogger(SkatAdminNorskImportController.class.getName());
+	private static final Logger logger = LogManager.getLogger(SkatAdminNorskImportController.class.getName());
 	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	private ApplicationContext context;
 	private LoginValidator loginValidator = new LoginValidator();

@@ -3,7 +3,7 @@
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 import org.springframework.validation.Validator;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
@@ -17,7 +17,7 @@ import no.systema.skat.skatexport.model.jsonjackson.topic.items.JsonSkatExportSp
  * 
  */
 public class SkatExportItemsValidator implements Validator {
-	private static final Logger logger = Logger.getLogger(SkatExportItemsValidator.class.getName());
+	private static final Logger logger = LogManager.getLogger(SkatExportItemsValidator.class.getName());
 	
 	final String ANG_ART_20_ALU = "20";
 	final String ANG_ART_21_FOU = "21";

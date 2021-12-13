@@ -7,7 +7,7 @@ import java.util.Collection;
 import java.util.List;
 import javax.servlet.ServletContext;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 import org.springframework.web.context.ServletContextAware;
 
 import no.systema.main.context.TdsServletContext;
@@ -27,7 +27,7 @@ import no.systema.main.util.AppConstants;
  * @date Jun 3, 2014
  */
 public class SkatNctsExportTextFileJsonService {
-	private static final Logger logger = Logger.getLogger(SkatNctsExportTextFileJsonService.class.getName());
+	private static final Logger logger = LogManager.getLogger(SkatNctsExportTextFileJsonService.class.getName());
 	
 	private final String FILE_RESOURCE_PATH = AppConstants.RESOURCE_FILES_PATH;
 	private TextFileReaderService textFileReaderService = new TextFileReaderService();

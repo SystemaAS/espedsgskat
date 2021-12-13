@@ -6,7 +6,7 @@ package no.systema.skat.mapper.jsonjackson.avdsignature;
 import java.util.Collection;
 
 //jackson library
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 
 import com.fasterxml.jackson.databind.DeserializationConfig;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -25,7 +25,7 @@ import no.systema.skat.model.jsonjackson.avdsignature.JsonSkatSignatureRecord;
  * 
  */
 public class SkatSignatureMapper {
-	private static final Logger logger = Logger.getLogger(SkatSignatureMapper.class.getName());
+	private static final Logger logger = LogManager.getLogger(SkatSignatureMapper.class.getName());
 	
 	/**
 	 * 

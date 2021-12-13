@@ -18,7 +18,7 @@ import no.systema.main.service.UrlCgiProxyService;
 
 import javax.servlet.http.HttpSession;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 
 
 /**
@@ -31,7 +31,7 @@ import org.apache.log4j.Logger;
  * 
  */
 public class AvgiftsberakningenMgr {
-	private static final Logger logger = Logger.getLogger(AvgiftsberakningenMgr.class.getName());
+	private static final Logger logger = LogManager.getLogger(AvgiftsberakningenMgr.class.getName());
 	private SkatExportSpecificTopicItemService skatExportSpecificTopicItemService;
 	private UrlCgiProxyService urlCgiProxyService;
 	

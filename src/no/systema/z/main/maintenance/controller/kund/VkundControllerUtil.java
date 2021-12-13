@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 
 import no.systema.jservices.common.brreg.proxy.entities.Enhet;
 import no.systema.jservices.common.json.JsonDtoContainer;
@@ -23,7 +23,7 @@ import no.systema.z.main.maintenance.url.store.MaintenanceMainUrlDataStore;
  *
  */
 public class VkundControllerUtil {
-	private static final Logger logger = Logger.getLogger(VkundControllerUtil.class.getName());
+	private static final Logger logger = LogManager.getLogger(VkundControllerUtil.class.getName());
 	private UrlCgiProxyService cgiProxyService = null;
 
 	

@@ -7,7 +7,7 @@ package no.systema.skat.skatimport.mapper.jsonjackson;
 import java.util.Collection;
 
 //jackson library
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 
 import com.fasterxml.jackson.databind.DeserializationConfig;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -23,7 +23,7 @@ import no.systema.skat.skatimport.model.jsonjackson.topic.logging.JsonSkatImport
  * 
  */
 public class SkatImportSpecificTopicLoggingLargeTextMapper {
-	private static final Logger logger = Logger.getLogger(SkatImportSpecificTopicLoggingLargeTextMapper.class.getName());
+	private static final Logger logger = LogManager.getLogger(SkatImportSpecificTopicLoggingLargeTextMapper.class.getName());
 	
 	public JsonSkatImportSpecificTopicLoggingLargeTextContainer getContainer(String utfPayload) throws Exception{
 		ObjectMapper mapper = new ObjectMapper();  

@@ -4,7 +4,7 @@
 package no.systema.skat.skatimport.mapper.jsonjackson;
 
 //jackson library
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 
 import com.fasterxml.jackson.databind.DeserializationConfig;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -20,7 +20,7 @@ import no.systema.skat.skatimport.model.jsonjackson.topic.JsonSkatImportTopicCop
  * 
  */
 public class SkatImportTopicCopiedFromTransportUppdragMapper {
-	private static final Logger logger = Logger.getLogger(SkatImportTopicCopiedFromTransportUppdragMapper.class.getName());
+	private static final Logger logger = LogManager.getLogger(SkatImportTopicCopiedFromTransportUppdragMapper.class.getName());
 	
 	public JsonSkatImportTopicCopiedFromTransportUppdragContainer getContainer(String utfPayload) throws Exception{
 		ObjectMapper mapper = new ObjectMapper();  

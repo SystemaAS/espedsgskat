@@ -8,18 +8,18 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.log4j.BasicConfigurator;
-import org.apache.log4j.Category;
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
+//import org.apache.log4j.BasicConfigurator;
+//import org.apache.log4j.Category;
+ 
+import org.apache.logging.log4j.*;
+//import org.apache.log4j.PropertyConfigurator;
 
 import no.systema.main.context.TdsServletContext;
 import no.systema.main.controller.GeneralTextRenderController;
 
 public class Log4jMgr {
 
-	private static final Logger logger = Logger.getLogger(Log4jMgr.class.getName());
+	private static final Logger logger = LogManager.getLogger(Log4jMgr.class.getName());
 	
 	/**
 	 * 
@@ -29,7 +29,7 @@ public class Log4jMgr {
 	 * @throws IOException
 	 */
 	public void doLevelUpdate(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//response.setContentType("text/html");
+		/*//response.setContentType("text/html");
 		//PrintWriter out = response.getWriter();
 		logger.warn("(A)");
 		String logLevel = request.getParameter("logLevel");
@@ -44,11 +44,11 @@ public class Log4jMgr {
 		} else {
 			logger.warn("no logLevel or reloadPropertiesFile parameters were found");
 		}
-		
+		*/
 	}
 
 	private void setLogLevelWithParameter(String logLevel) {
-		
+		/*
 		Logger root = Logger.getRootLogger();
 		Enumeration allLoggers = root.getLoggerRepository().getCurrentLoggers();
 
@@ -71,9 +71,11 @@ public class Log4jMgr {
 		} else {
 			logger.warn("logLevel parameter '" + logLevel + "' level not recognized");
 		}
+		*/
 	}
 
 	private void loadLog4jPropertiesFile() {
+		/*
 		String webAppPath = TdsServletContext.getTdsServletContext().getRealPath("/");
 		String log4jLocation = webAppPath + "WEB-INF/classes/log4j.properties";
 
@@ -92,10 +94,11 @@ public class Log4jMgr {
 				BasicConfigurator.configure();
 			}
 		}
+		*/
 	}
 	
 	public void doLogoutLogger(){
-		//go back to WARN level since we might have put INFO for debugging reasons
+		/*//go back to WARN level since we might have put INFO for debugging reasons
 		Logger root = Logger.getRootLogger();
 		Enumeration allLoggers = root.getLoggerRepository().getCurrentLoggers();
 		root.setLevel(Level.WARN);
@@ -103,7 +106,7 @@ public class Log4jMgr {
 	        Category tmpLogger = (Category) allLoggers.nextElement();
 	        tmpLogger.setLevel(Level.WARN);
 	    }
-		
+		*/
 	}
 	
 }

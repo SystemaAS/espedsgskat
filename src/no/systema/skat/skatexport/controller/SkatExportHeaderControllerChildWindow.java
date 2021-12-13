@@ -5,8 +5,8 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.util.*;
 
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
+ 
+import org.apache.logging.log4j.*;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
@@ -63,7 +63,7 @@ import no.systema.skat.util.SkatConstants;
 @Scope("session")
 public class SkatExportHeaderControllerChildWindow {
 	
-	private static final Logger logger = Logger.getLogger(SkatExportHeaderControllerChildWindow.class.getName());
+	private static final Logger logger = LogManager.getLogger(SkatExportHeaderControllerChildWindow.class.getName());
 	private static final JsonDebugger jsonDebugger = new JsonDebugger(2000);
 	//customer
 	private final String DATATABLE_LIST = "list";
@@ -80,9 +80,7 @@ public class SkatExportHeaderControllerChildWindow {
 	
 	@PostConstruct
 	public void initIt() throws Exception {
-		if("DEBUG".equals(AppConstants.LOG4J_LOGGER_LEVEL)){
-			logger.setLevel(Level.DEBUG);
-		}
+		
 	}
 	
 	

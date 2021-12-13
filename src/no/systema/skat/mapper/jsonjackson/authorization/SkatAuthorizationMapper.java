@@ -6,7 +6,7 @@ package no.systema.skat.mapper.jsonjackson.authorization;
 import java.util.Collection;
 
 //jackson library
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 
 import com.fasterxml.jackson.databind.DeserializationConfig;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -24,7 +24,7 @@ import no.systema.skat.model.jsonjackson.authorization.JsonSkatAuthorizationReco
  * 
  */
 public class SkatAuthorizationMapper {
-	private static final Logger logger = Logger.getLogger(SkatAuthorizationMapper.class.getName());
+	private static final Logger logger = LogManager.getLogger(SkatAuthorizationMapper.class.getName());
 	
 	public JsonSkatAuthorizationContainer getContainer(String utfPayload) throws Exception{
 		ObjectMapper mapper = new ObjectMapper();  

@@ -7,7 +7,7 @@ import java.lang.reflect.Field;
 import java.net.URLEncoder;
 import java.util.*;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 
 import no.systema.skat.nctsexport.model.jsonjackson.topic.JsonSkatNctsExportSpecificTopicRecord;
 import no.systema.skat.nctsexport.model.jsonjackson.topic.items.JsonSkatNctsExportSpecificTopicItemRecord;
@@ -20,7 +20,7 @@ import no.systema.skat.util.SkatConstants;
  * 
  */
 public class UrlRequestParameterMapper {
-	private static final Logger logger = Logger.getLogger(UrlRequestParameterMapper.class.getName());
+	private static final Logger logger = LogManager.getLogger(UrlRequestParameterMapper.class.getName());
 	
 	
 	/**

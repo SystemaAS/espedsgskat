@@ -14,7 +14,7 @@ import no.systema.skat.skatimport.util.RpgReturnResponseHandler;
 import no.systema.skat.util.SkatConstants;
 
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 
 /**
  * @author oscardelatorre
@@ -26,7 +26,7 @@ import org.apache.log4j.Logger;
  * 
  */
 public class SkatAutoCopyItemLinesMgr {
-	private static final Logger logger = Logger.getLogger(SkatAutoCopyItemLinesMgr.class.getName());
+	private static final Logger logger = LogManager.getLogger(SkatAutoCopyItemLinesMgr.class.getName());
 	private RpgReturnResponseHandler rpgReturnResponseHandler = new RpgReturnResponseHandler();
 	/**
 	 * Gets the list of request elements' names that have been selected for auto-copy

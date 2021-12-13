@@ -3,7 +3,7 @@ package no.systema.skat.z.maintenance.skatnctsexport.validator;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 import org.springframework.validation.Validator;
 
 import javawebparts.core.org.apache.commons.lang.StringUtils;
@@ -22,7 +22,7 @@ import no.systema.skat.z.maintenance.skatnctsexport.model.jsonjackson.dbtable.Js
  *
  */
 public class MaintSkatExportDkx030rValidator implements Validator {
-	private static final Logger logger = Logger.getLogger(MaintSkatExportDkx030rValidator.class.getName());
+	private static final Logger logger = LogManager.getLogger(MaintSkatExportDkx030rValidator.class.getName());
 	private NumberFormatterLocaleAware numberFormatter = new NumberFormatterLocaleAware();
 	/**
 	 * 

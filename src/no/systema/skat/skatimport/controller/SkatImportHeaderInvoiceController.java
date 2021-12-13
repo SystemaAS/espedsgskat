@@ -3,8 +3,8 @@ package no.systema.skat.skatimport.controller;
 import java.util.*;
 
 
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
+ 
+import org.apache.logging.log4j.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -65,7 +65,7 @@ import no.systema.skat.skatimport.model.jsonjackson.topic.JsonSkatImportSpecific
 @Scope("session")
 public class SkatImportHeaderInvoiceController {
 	private static final JsonDebugger jsonDebugger = new JsonDebugger();
-	private static final Logger logger = Logger.getLogger(SkatImportHeaderInvoiceController.class.getName());
+	private static final Logger logger = LogManager.getLogger(SkatImportHeaderInvoiceController.class.getName());
 	private UrlRequestParameterMapper urlRequestParameterMapper = new UrlRequestParameterMapper();
 	private SkatImportCalculator skatImportCalculator = new SkatImportCalculator();
 	private CodeDropDownMgr codeDropDownMgr = new CodeDropDownMgr();
@@ -83,7 +83,7 @@ public class SkatImportHeaderInvoiceController {
 	@PostConstruct
 	public void initIt() throws Exception {
 		if("DEBUG".equals(AppConstants.LOG4J_LOGGER_LEVEL)){
-			logger.setLevel(Level.DEBUG);
+			 
 		}
 	}	
 	

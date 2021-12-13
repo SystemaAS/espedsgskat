@@ -6,7 +6,7 @@ package no.systema.skat.skatexport.controller.ajax;
 import java.util.*;
 
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Required;
@@ -65,7 +65,7 @@ import no.systema.skat.skatexport.model.jsonjackson.topic.JsonSkatExportTopicInv
 @Controller
 
 public class SkatExportAjaxHandlerController {
-	private static final Logger logger = Logger.getLogger(SkatExportAjaxHandlerController.class.getName());
+	private static final Logger logger = LogManager.getLogger(SkatExportAjaxHandlerController.class.getName());
 	private SkatExportTweaker skatExportTweaker = new SkatExportTweaker();
 	private static final JsonDebugger jsonDebugger = new JsonDebugger(800); 
 	/**

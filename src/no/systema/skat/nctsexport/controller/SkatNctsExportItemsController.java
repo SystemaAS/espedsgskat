@@ -3,8 +3,8 @@ package no.systema.skat.nctsexport.controller;
 import java.util.*;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
+ 
+import org.apache.logging.log4j.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -79,7 +79,7 @@ import no.systema.skat.model.jsonjackson.codes.JsonSkatTaricVarukodContainer;
 @Scope("session")
 public class SkatNctsExportItemsController {
 	private static final JsonDebugger jsonDebugger = new JsonDebugger(2500);
-	private static final Logger logger = Logger.getLogger(SkatNctsExportItemsController.class.getName());
+	private static final Logger logger = LogManager.getLogger(SkatNctsExportItemsController.class.getName());
 	private UrlRequestParameterMapper urlRequestParameterMapper = new UrlRequestParameterMapper();
 	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	private CodeDropDownMgr codeDropDownMgr = new CodeDropDownMgr();
@@ -91,9 +91,7 @@ public class SkatNctsExportItemsController {
 	
 	@PostConstruct
 	public void initIt() throws Exception {
-		if("DEBUG".equals(AppConstants.LOG4J_LOGGER_LEVEL)){
-			logger.setLevel(Level.DEBUG);
-		}
+		
 	}
 	
 	/**
