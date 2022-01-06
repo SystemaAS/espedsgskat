@@ -92,7 +92,7 @@ public class MaintSkatFellesToldtariffDownloadController {
 						String fileName = sourceURL.substring(sourceURL.lastIndexOf('/') + 1, sourceURL.length());
 						Path targetPath = new File(this.targetDirectory + File.separator + fileName).toPath();
 						Files.copy(url.openStream(), targetPath, StandardCopyOption.REPLACE_EXISTING);
-						logger.info(sourceURL + " successfully downloaded");
+						logger.warn(sourceURL + " successfully downloaded");
 					}
 					//At this point we have the files in the target directory
 			    	//now run the AS400 service pgm
@@ -102,7 +102,7 @@ public class MaintSkatFellesToldtariffDownloadController {
 		    		if(errMsg!=null && errMsg.length()>0){
 		    			model.put(SkatMaintenanceConstants.ASPECT_ERROR_MESSAGE, errMsg.toString());
 		    		}else{
-		    			logger.info("Update on DK-toldtarif back-end successfully ended ...");
+		    			logger.warn("Update on DK-toldtarif back-end successfully ended ...");
 		    		}
 				}catch(Exception e){
 					e.printStackTrace();
@@ -127,8 +127,8 @@ public class MaintSkatFellesToldtariffDownloadController {
 			urlRequestParams.append("user="+ applicationUser);
 
 			logger.info(Calendar.getInstance().getTime() + " CGI-start timestamp");
-	    	logger.info("URL: " + jsonDebugger.getBASE_URL_NoHostName(BASE_URL));
-	    	logger.info("URL PARAMS: " + urlRequestParams);
+	    	logger.warn("URL: " + jsonDebugger.getBASE_URL_NoHostName(BASE_URL));
+	    	logger.warn("URL PARAMS: " + urlRequestParams);
 	    	String jsonPayload = this.urlCgiProxyService.getJsonContent(BASE_URL, urlRequestParams.toString());
 	    	//extract
 	    	if(jsonPayload!=null){
