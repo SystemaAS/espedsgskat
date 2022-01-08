@@ -4,7 +4,7 @@ import java.util.*;
 
 
  
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -65,7 +65,7 @@ import no.systema.skat.skatexport.model.jsonjackson.topic.JsonSkatExportSpecific
 @Scope("session")
 public class SkatExportHeaderInvoiceController {
 	private static final JsonDebugger jsonDebugger = new JsonDebugger();
-	private static final Logger logger = LogManager.getLogger(SkatExportHeaderInvoiceController.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SkatExportHeaderInvoiceController.class.getName());
 	private UrlRequestParameterMapper urlRequestParameterMapper = new UrlRequestParameterMapper();
 	private SkatExportCalculator skatExportCalculator = new SkatExportCalculator();
 	private CodeDropDownMgr codeDropDownMgr = new CodeDropDownMgr();

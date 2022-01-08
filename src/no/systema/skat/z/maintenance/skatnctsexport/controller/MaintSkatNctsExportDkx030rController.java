@@ -2,7 +2,7 @@ package no.systema.skat.z.maintenance.skatnctsexport.controller;
 
 import java.util.*;
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -62,7 +62,7 @@ import no.systema.skat.z.maintenance.main.util.SkatMaintenanceConstants;
 @Scope("session")
 public class MaintSkatNctsExportDkx030rController {
 	private static final JsonDebugger jsonDebugger = new JsonDebugger();
-	private static final Logger logger = LogManager.getLogger(MaintSkatNctsExportDkx030rController.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(MaintSkatNctsExportDkx030rController.class.getName());
 	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	private ApplicationContext context;
 	private LoginValidator loginValidator = new LoginValidator();
@@ -266,7 +266,7 @@ public class MaintSkatNctsExportDkx030rController {
 					//at this point we have the guarantee released
 					//now we go on with adjusting the mother guarantee by substracting the newly released amount
 					double adjustedAmount = this.getCalculatedRest(appUser.getUser(), recordToValidate);
-					logger.warn(adjustedAmount);
+					logger.warn(String.valueOf(adjustedAmount));
 					if(adjustedAmount>=0) {
 						JsonMaintDkxghRecord svxghDto = new JsonMaintDkxghRecord();
 						svxghDto.setTggnr(recordToValidate.getThgft1());

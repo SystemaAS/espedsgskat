@@ -10,7 +10,7 @@ import java.text.NumberFormat;
 import java.math.BigDecimal;
 import java.util.Locale;
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 /**
  * @author oscardelatorre
  * @date Jan 29, 2014
@@ -18,7 +18,7 @@ import org.apache.logging.log4j.*;
  * 
  */
 public class SkatImportCalculator {
-	private static final Logger logger = LogManager.getLogger(SkatImportCalculator.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SkatImportCalculator.class.getName());
 	
 	/**
 	 * 

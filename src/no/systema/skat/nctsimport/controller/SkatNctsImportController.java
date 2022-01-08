@@ -4,7 +4,7 @@ import java.lang.reflect.Field;
 import java.util.*;
 
  
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller;
@@ -67,7 +67,7 @@ import no.systema.skat.util.SkatConstants;
 @Scope("session")
 public class SkatNctsImportController {
 	private static final JsonDebugger jsonDebugger = new JsonDebugger(800);
-	private static final Logger logger = LogManager.getLogger(SkatNctsImportController.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SkatNctsImportController.class.getName());
 	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	private CodeDropDownMgr codeDropDownMgr = new CodeDropDownMgr();
 	
@@ -226,7 +226,7 @@ public class SkatNctsImportController {
 					return successView;
 					
 				}else{
-					logger.fatal("NO CONTENT on jsonPayload from URL... ??? <Null>");
+					logger.error("NO CONTENT on jsonPayload from URL... ??? <Null>");
 					return loginView;
 				}
 		    }

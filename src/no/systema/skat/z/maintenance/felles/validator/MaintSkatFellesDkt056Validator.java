@@ -1,6 +1,6 @@
 package no.systema.skat.z.maintenance.felles.validator;
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.validation.Validator;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
@@ -17,7 +17,7 @@ import no.systema.skat.z.maintenance.main.model.jsonjackson.dbtable.JsonMaintDkt
  *
  */
 public class MaintSkatFellesDkt056Validator implements Validator {
-	private static final Logger logger = LogManager.getLogger(MaintSkatFellesDkt056Validator.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(MaintSkatFellesDkt056Validator.class.getName());
 	private NumberFormatterLocaleAware numberFormatter = new NumberFormatterLocaleAware();
 	/**
 	 * 

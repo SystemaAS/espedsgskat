@@ -5,7 +5,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 
@@ -34,7 +34,7 @@ import no.systema.skat.model.jsonjackson.JsonSkatAutoControlErrorContainer;
  * Apr 7, 2016
  */
 public class SkatExportItemsAutoControlMgr {
-	private static final Logger logger = LogManager.getLogger(SkatExportItemsAutoControlMgr.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SkatExportItemsAutoControlMgr.class.getName());
 	private UrlCgiProxyService urlCgiProxyService = null;
 	private SkatExportSpecificTopicItemService skatExportSpecificTopicItemService = null;
 	NumberFormatterLocaleAware formatter = new NumberFormatterLocaleAware();

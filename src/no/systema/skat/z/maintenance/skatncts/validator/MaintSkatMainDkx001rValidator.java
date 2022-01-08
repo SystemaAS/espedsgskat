@@ -1,6 +1,6 @@
 package no.systema.skat.z.maintenance.skatncts.validator;
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.validation.Validator;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
@@ -18,7 +18,7 @@ import no.systema.skat.z.maintenance.skatncts.model.jsonjackson.dbtable.JsonMain
  *
  */
 public class MaintSkatMainDkx001rValidator implements Validator {
-	private static final Logger logger = LogManager.getLogger(MaintSkatMainDkx001rValidator.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(MaintSkatMainDkx001rValidator.class.getName());
 	private NumberFormatterLocaleAware numberFormatter = new NumberFormatterLocaleAware();
 	/**
 	 * 

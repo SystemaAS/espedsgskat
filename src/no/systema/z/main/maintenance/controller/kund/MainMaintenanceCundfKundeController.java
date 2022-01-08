@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.aop.framework.ReflectiveMethodInvocation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -47,7 +47,7 @@ import no.systema.z.main.maintenance.validator.MaintMainCundfValidator;
 
 @Controller
 public class MainMaintenanceCundfKundeController {
-	private static final Logger logger = LogManager.getLogger(MainMaintenanceCundfKundeController.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(MainMaintenanceCundfKundeController.class.getName());
 	private ModelAndView loginView = new ModelAndView("login");
 	private static final JsonDebugger jsonDebugger = new JsonDebugger();
 	private UrlRequestParameterMapper urlRequestParameterMapper = new UrlRequestParameterMapper();

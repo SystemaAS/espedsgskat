@@ -3,7 +3,7 @@ package no.systema.skat.skatexport.controller;
 import java.util.*;
 
  
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -75,7 +75,7 @@ import no.systema.skat.skatexport.model.jsonjackson.topic.JsonSkatExportSpecific
 @Scope("session")
 public class SkatExportHeaderController {
 	private static final JsonDebugger jsonDebugger = new JsonDebugger();
-	private static final Logger logger = LogManager.getLogger(SkatExportHeaderController.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SkatExportHeaderController.class.getName());
 	private UrlRequestParameterMapper urlRequestParameterMapper = new UrlRequestParameterMapper();
 	private CodeDropDownMgr codeDropDownMgr = new CodeDropDownMgr();
 	NumberFormatterLocaleAware numFormatter = new NumberFormatterLocaleAware();
@@ -221,7 +221,7 @@ public class SkatExportHeaderController {
 			    		successView.addObject(SkatConstants.EDIT_ACTION_ON_TOPIC, SkatConstants.ACTION_UPDATE);
 			    		
 			    	}else{
-			    		logger.fatal("NO CONTENT on jsonPayload from URL... ??? <Null>");
+			    		logger.error("NO CONTENT on jsonPayload from URL... ??? <Null>");
 			    		return loginView;
 					}
 					
@@ -256,7 +256,7 @@ public class SkatExportHeaderController {
 					String tmp = String.valueOf(recordToValidate.getSumTotalAmountItemLines());
 					tmp = tmp.replace(",", ".");
 					recordToValidate.setSumTotalAmountItemLines(Double.parseDouble(tmp));
-					logger.info(recordToValidate.getSumTotalAmountItemLines());
+					logger.info(String.valueOf(recordToValidate.getSumTotalAmountItemLines()));
 					//(2) Validate the record
 					SkatExportHeaderValidator validator = new SkatExportHeaderValidator();
 					//required validation only for production avd
@@ -750,12 +750,12 @@ public class SkatExportHeaderController {
 		    		if(jsonSkatExportTopicCopiedContainer!=null){
 		    			//Check for errors
 		    			if(jsonSkatExportTopicCopiedContainer.getErrMsg()!=null && !"".equals(jsonSkatExportTopicCopiedContainer.getErrMsg())){
-		    				logger.fatal("[ERROR FATAL] errMsg containing: " + jsonSkatExportTopicCopiedContainer.getErrMsg());
+		    				logger.error("[ERROR FATAL] errMsg containing: " + jsonSkatExportTopicCopiedContainer.getErrMsg());
 		    				return fallbackOnErrorView;
 		    			}
 		    		}
 		    	}else{
-				logger.fatal("NO CONTENT on jsonPayload from URL... ??? <Null>");
+				logger.error("NO CONTENT on jsonPayload from URL... ??? <Null>");
 				return loginView;
 			}
 		    
@@ -793,7 +793,7 @@ public class SkatExportHeaderController {
 	    		successView.addObject(SkatConstants.EDIT_ACTION_ON_TOPIC, SkatConstants.ACTION_UPDATE);
 	    		
 	    	}else{
-	    		logger.fatal("NO CONTENT on jsonPayload from URL... ??? <Null>");
+	    		logger.error("NO CONTENT on jsonPayload from URL... ??? <Null>");
 	    		return loginView;
 			}
 			
@@ -880,7 +880,7 @@ public class SkatExportHeaderController {
 			    			}
 			    		}
 			    	}else{
-					logger.fatal("NO CONTENT on jsonPayload from URL... ??? <Null>");
+					logger.error("NO CONTENT on jsonPayload from URL... ??? <Null>");
 					return loginView;
 				}
 			    
@@ -919,7 +919,7 @@ public class SkatExportHeaderController {
 					successView.addObject(SkatConstants.EDIT_ACTION_ON_TOPIC, SkatConstants.ACTION_UPDATE);
 			    		
 			    	}else{
-					logger.fatal("[ERROR fatal] NO CONTENT on jsonPayload from URL... ??? <Null>");
+					logger.error("[ERROR fatal] NO CONTENT on jsonPayload from URL... ??? <Null>");
 					return loginView;
 				}
 			}else{

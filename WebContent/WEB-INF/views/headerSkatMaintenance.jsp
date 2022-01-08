@@ -220,7 +220,7 @@
 					           		<div class="text12" align="left">
 					           			<b>${user.versionEspedsg}</b>
 					           			<p>
-					           				&nbsp;<a id="alinkLog4jLogger" ><font class="text14Orange" style="cursor:pointer;">log4j</font></a><br/>
+					           				&nbsp;<a id="alinkLog4jLogger" ><font class="text14Orange" style="cursor:pointer;">logsg</font></a><br/>
 					           			</p>
 					           			<button name="versionInformationButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('versionInfo');">Close</button> 
 					           		</div>
@@ -240,7 +240,7 @@
 	    </tr>
 	    
 	    <%-- ------------------------- --%>
-		<%-- DIALOG render log4j.log   --%>
+		<%-- DIALOG render logsg.log   --%>
 		<%-- ------------------------- --%>
 		<tr>
 		<td>

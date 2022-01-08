@@ -6,7 +6,7 @@ package no.systema.skat.nctsexport.controller.ajax;
 import java.util.*;
 
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Required;
@@ -63,7 +63,7 @@ import no.systema.main.util.NumberFormatterLocaleAware;
 @Controller
 
 public class SkatNctsExportAjaxHandlerController {
-	private static final Logger logger = LogManager.getLogger(SkatNctsExportAjaxHandlerController.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SkatNctsExportAjaxHandlerController.class.getName());
 	private NumberFormatterLocaleAware numberFormatter = new NumberFormatterLocaleAware();
 	/**
 	 * 

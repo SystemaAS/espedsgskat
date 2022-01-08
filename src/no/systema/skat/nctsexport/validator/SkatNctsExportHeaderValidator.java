@@ -3,7 +3,7 @@ package no.systema.skat.nctsexport.validator;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Required;
@@ -32,7 +32,7 @@ import no.systema.skat.util.SkatConstants;
  *
  */
 public class SkatNctsExportHeaderValidator implements Validator {
-	private static final Logger logger = LogManager.getLogger(SkatNctsExportHeaderValidator.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SkatNctsExportHeaderValidator.class.getName());
 	//Intantiate services here since we are not capable to configure injection with Autowired. Check that further...
 	private UrlCgiProxyService urlCgiProxyService = new UrlCgiProxyServiceImpl();
 	private SkatNctsExportSpecificTopicService nctsExportSpecificTopicService = new SkatNctsExportSpecificTopicServiceImpl();

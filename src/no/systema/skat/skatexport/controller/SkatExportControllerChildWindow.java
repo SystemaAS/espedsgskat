@@ -6,7 +6,7 @@ import java.io.FileOutputStream;
 import java.util.*;
 
  
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
@@ -72,7 +72,7 @@ import no.systema.skat.skatexport.model.jsonjackson.topic.JsonSkatExportTopicInv
 @Scope("session")
 public class SkatExportControllerChildWindow {
 	
-	private static final Logger logger = LogManager.getLogger(SkatExportControllerChildWindow.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SkatExportControllerChildWindow.class.getName());
 	private static final JsonDebugger jsonDebugger = new JsonDebugger(2000);
 	//customer
 	private final String DATATABLE_LIST = "list";
@@ -322,7 +322,7 @@ public class SkatExportControllerChildWindow {
 		urlRequestParams.append("&lk=" + countryCode + "&vata=" + itemCode);
 		
 		logger.info(BASE_URL);
-		logger.info(urlRequestParams);
+		logger.info(urlRequestParams.toString());
 		
 		UrlCgiProxyService urlCgiProxyService = new UrlCgiProxyServiceImpl();
 		String jsonPayload = urlCgiProxyService.getJsonContent(BASE_URL, urlRequestParams.toString());
@@ -361,7 +361,7 @@ public class SkatExportControllerChildWindow {
 		urlRequestParams.append("user=" + appUser.getUser() + "&ie=" + IE_MODE);
 		urlRequestParams.append("&lk=" + countryCode + "&vata=" + itemCode);
 		logger.info(BASE_URL);
-		logger.info(urlRequestParams);
+		logger.info(urlRequestParams.toString());
 		  
 		UrlCgiProxyService urlCgiProxyService = new UrlCgiProxyServiceImpl();
 		String jsonPayload = urlCgiProxyService.getJsonContent(BASE_URL, urlRequestParams.toString());

@@ -5,7 +5,7 @@ package no.systema.skat.nctsimport.controller.ajax;
 
 import java.util.*;
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Required;
@@ -50,7 +50,7 @@ import no.systema.skat.util.SkatConstants;
 
 @Controller
 public class SkatNctsImportAjaxHandlerController {
-	private static final Logger logger = LogManager.getLogger(SkatNctsImportAjaxHandlerController.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SkatNctsImportAjaxHandlerController.class.getName());
 	 
 	
 	

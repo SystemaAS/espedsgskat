@@ -6,7 +6,7 @@ package no.systema.skat.skatexport.controller.ajax;
 import java.util.*;
 
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Required;
@@ -65,7 +65,7 @@ import no.systema.skat.skatexport.model.jsonjackson.topic.JsonSkatExportTopicInv
 @Controller
 
 public class SkatExportAjaxHandlerController {
-	private static final Logger logger = LogManager.getLogger(SkatExportAjaxHandlerController.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SkatExportAjaxHandlerController.class.getName());
 	private SkatExportTweaker skatExportTweaker = new SkatExportTweaker();
 	private static final JsonDebugger jsonDebugger = new JsonDebugger(800); 
 	/**
@@ -386,7 +386,7 @@ public class SkatExportAjaxHandlerController {
 			  String urlRequestParams = "user=" + applicationUser + "&avd=" + avd +   "&opd=" + opd + "&fak=" + invoiceNr;
 			  
 			  logger.info(BASE_URL);
-			  logger.info(urlRequestParams);
+			  logger.info(urlRequestParams.toString());
 			  
 			  UrlCgiProxyService urlCgiProxyService = new UrlCgiProxyServiceImpl();
 			  String jsonPayload = urlCgiProxyService.getJsonContent(BASE_URL, urlRequestParams);

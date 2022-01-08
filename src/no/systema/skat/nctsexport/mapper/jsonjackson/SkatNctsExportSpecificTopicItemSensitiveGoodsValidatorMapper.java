@@ -3,7 +3,7 @@
  */
 package no.systema.skat.nctsexport.mapper.jsonjackson;
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 
 import com.fasterxml.jackson.databind.DeserializationConfig;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -21,7 +21,7 @@ import no.systema.skat.nctsexport.model.jsonjackson.topic.items.validation.JsonS
  *
  */
 public class SkatNctsExportSpecificTopicItemSensitiveGoodsValidatorMapper {
-	private static final Logger logger = LogManager.getLogger(SkatNctsExportSpecificTopicItemSensitiveGoodsValidatorMapper.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SkatNctsExportSpecificTopicItemSensitiveGoodsValidatorMapper.class.getName());
 		
 	public JsonSkatNctsExportSpecificTopicItemSensitiveGoodsValidatorContainer getContainer(String utfPayload) throws Exception{
 		ObjectMapper mapper = new ObjectMapper();  

@@ -5,7 +5,7 @@ package no.systema.skat.skatexport.service.html.dropdown;
 
 import java.util.List;
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 
 import no.systema.main.context.TdsServletContext;
 import no.systema.main.util.io.TextFileReaderService;
@@ -27,7 +27,7 @@ import no.systema.skat.util.SkatConstants;
  * 
  */
 public class SkatExportDropDownListPopulationService {
-	private static final Logger logger = LogManager.getLogger(SkatExportDropDownListPopulationService.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SkatExportDropDownListPopulationService.class.getName());
 	
 	private final String FILE_RESOURCE_PATH = SkatConstants.RESOURCE_FILES_PATH;
 	private TextFileReaderService textFileReaderService = new TextFileReaderService();

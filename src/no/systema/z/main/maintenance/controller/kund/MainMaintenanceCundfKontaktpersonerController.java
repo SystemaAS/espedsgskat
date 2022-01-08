@@ -9,7 +9,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Required;
@@ -47,7 +47,7 @@ import no.systema.z.main.maintenance.validator.MaintMainCundcValidator;
 
 @Controller
 public class MainMaintenanceCundfKontaktpersonerController {
-	private static final Logger logger = LogManager.getLogger(MainMaintenanceCundfKontaktpersonerController.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(MainMaintenanceCundfKontaktpersonerController.class.getName());
 	private ModelAndView loginView = new ModelAndView("login");
 	private static final JsonDebugger jsonDebugger = new JsonDebugger();
 	private UrlRequestParameterMapper urlRequestParameterMapper = new UrlRequestParameterMapper();

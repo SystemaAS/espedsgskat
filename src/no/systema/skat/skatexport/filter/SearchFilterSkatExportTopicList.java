@@ -6,7 +6,7 @@ package no.systema.skat.skatexport.filter;
 import java.lang.reflect.Field;
 import java.util.*;
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 
 import no.systema.main.util.DateTimeManager;
 
@@ -22,7 +22,7 @@ import no.systema.main.util.DateTimeManager;
  * 
  */
 public class SearchFilterSkatExportTopicList {
-	private static final Logger logger = LogManager.getLogger(SearchFilterSkatExportTopicList.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SearchFilterSkatExportTopicList.class.getName());
 	private static final DateTimeManager dateMgr = new DateTimeManager();
 	
 	private String avd = null;

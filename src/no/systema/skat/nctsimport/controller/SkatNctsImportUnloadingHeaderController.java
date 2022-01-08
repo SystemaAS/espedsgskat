@@ -3,7 +3,7 @@ package no.systema.skat.nctsimport.controller;
 import java.util.*;
 
  
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller;
@@ -69,7 +69,7 @@ import no.systema.skat.nctsimport.mapper.url.request.UrlRequestParameterMapper;
 @Scope("session")
 public class SkatNctsImportUnloadingHeaderController {
 	private static final JsonDebugger jsonDebugger = new JsonDebugger(800);
-	private static final Logger logger = LogManager.getLogger(SkatNctsImportUnloadingHeaderController.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SkatNctsImportUnloadingHeaderController.class.getName());
 	private UrlRequestParameterMapper urlRequestParameterMapper = new UrlRequestParameterMapper();
 	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	private CodeDropDownMgr codeDropDownMgr = new CodeDropDownMgr();
@@ -285,7 +285,7 @@ public class SkatNctsImportUnloadingHeaderController {
 				successView.addObject(SkatConstants.EDIT_ACTION_ON_TOPIC, SkatConstants.ACTION_UPDATE);
 		    		
 		    	}else{
-		    		logger.fatal("NO CONTENT on jsonPayload from URL... ??? <Null>");
+		    		logger.error("NO CONTENT on jsonPayload from URL... ??? <Null>");
 		    		return loginView;
 				}    	
 				

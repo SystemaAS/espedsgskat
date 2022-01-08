@@ -2,7 +2,7 @@ package no.systema.skat.nctsexport.validator;
 
 import java.util.Calendar;
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.validation.Validator;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
@@ -27,7 +27,7 @@ import no.systema.skat.url.store.SkatUrlDataStore;
  *
  */
 public class SkatNctsExportItemsValidator implements Validator {
-	private static final Logger logger = LogManager.getLogger(SkatNctsExportItemsValidator.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SkatNctsExportItemsValidator.class.getName());
 	//Intantiate services here since we are not capable to configure injection with Autowired. Check that further...
 	private UrlCgiProxyService urlCgiProxyService = new UrlCgiProxyServiceImpl();
 	private SkatNctsExportSpecificTopicItemService nctsExportSpecificTopicItemService = new SkatNctsExportSpecificTopicItemServiceImpl();

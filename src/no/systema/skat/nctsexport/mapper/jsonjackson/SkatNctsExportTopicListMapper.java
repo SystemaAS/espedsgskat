@@ -4,7 +4,7 @@
 package no.systema.skat.nctsexport.mapper.jsonjackson;
 
 //jackson library
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 
 import com.fasterxml.jackson.databind.DeserializationConfig;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -20,7 +20,7 @@ import no.systema.skat.nctsexport.model.jsonjackson.topic.JsonSkatNctsExportTopi
  * 
  */
 public class SkatNctsExportTopicListMapper {
-	private static final Logger logger = LogManager.getLogger(SkatNctsExportTopicListMapper.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SkatNctsExportTopicListMapper.class.getName());
 	
 	public JsonSkatNctsExportTopicListContainer getContainer(String utfPayload) throws Exception{
 		ObjectMapper mapper = new ObjectMapper();  

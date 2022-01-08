@@ -4,7 +4,7 @@ import java.util.*;
 
 import org.apache.commons.lang3.StringUtils;
  
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -79,7 +79,7 @@ import no.systema.skat.model.jsonjackson.codes.JsonSkatTaricVarukodContainer;
 @Scope("session")
 public class SkatNctsExportItemsController {
 	private static final JsonDebugger jsonDebugger = new JsonDebugger(2500);
-	private static final Logger logger = LogManager.getLogger(SkatNctsExportItemsController.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SkatNctsExportItemsController.class.getName());
 	private UrlRequestParameterMapper urlRequestParameterMapper = new UrlRequestParameterMapper();
 	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	private CodeDropDownMgr codeDropDownMgr = new CodeDropDownMgr();

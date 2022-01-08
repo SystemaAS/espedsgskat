@@ -3,7 +3,7 @@ package no.systema.skat.skatimport.controller;
 import java.util.*;
 
  
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -78,7 +78,7 @@ import no.systema.skat.skatimport.util.manager.CodeDropDownMgr;
 @Scope("session")
 public class SkatImportHeaderController {
 	private static final JsonDebugger jsonDebugger = new JsonDebugger();
-	private static final Logger logger = LogManager.getLogger(SkatImportHeaderController.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SkatImportHeaderController.class.getName());
 	private UrlRequestParameterMapper urlRequestParameterMapper = new UrlRequestParameterMapper();
 	private CodeDropDownMgr codeDropDownMgr = new CodeDropDownMgr();
 	
@@ -218,7 +218,7 @@ public class SkatImportHeaderController {
 						successView.addObject(SkatConstants.EDIT_ACTION_ON_TOPIC, SkatConstants.ACTION_UPDATE);
 				    		
 				    	}else{
-						logger.fatal("NO CONTENT on jsonPayload from URL... ??? <Null>");
+						logger.error("NO CONTENT on jsonPayload from URL... ??? <Null>");
 						return loginView;
 					}
 				    	logger.info(Calendar.getInstance().getTime() +  "END of FETCH");
@@ -694,12 +694,12 @@ public class SkatImportHeaderController {
 	    		if(jsonSkatImportTopicCopiedContainer!=null){
 	    			//Check for errors
 	    			if(jsonSkatImportTopicCopiedContainer.getErrMsg()!=null && !"".equals(jsonSkatImportTopicCopiedContainer.getErrMsg())){
-	    				logger.fatal("[ERROR FATAL] errMsg containing: " + jsonSkatImportTopicCopiedContainer.getErrMsg());
+	    				logger.error("[ERROR FATAL] errMsg containing: " + jsonSkatImportTopicCopiedContainer.getErrMsg());
 	    				return fallbackOnErrorView;
 	    			}
 	    		}
 	    	}else{
-				logger.fatal("NO CONTENT on jsonPayload from URL... ??? <Null>");
+				logger.error("NO CONTENT on jsonPayload from URL... ??? <Null>");
 				return loginView;
 			}
 		    
@@ -739,7 +739,7 @@ public class SkatImportHeaderController {
 			successView.addObject(SkatConstants.EDIT_ACTION_ON_TOPIC, SkatConstants.ACTION_UPDATE);
 	    		
 	    	}else{
-				logger.fatal("NO CONTENT on jsonPayload from URL... ??? <Null>");
+				logger.error("NO CONTENT on jsonPayload from URL... ??? <Null>");
 				return loginView;
 			}
 			
@@ -826,7 +826,7 @@ public class SkatImportHeaderController {
 		    			}
 		    		}
 		    	}else{
-		    		logger.fatal("NO CONTENT on jsonPayload from URL... ??? <Null>");
+		    		logger.error("NO CONTENT on jsonPayload from URL... ??? <Null>");
 					return loginView;
 				}    
 				
@@ -863,7 +863,7 @@ public class SkatImportHeaderController {
 		    		//put the doUpdate action since we are preparing the record for an update (when saving)
 		    		successView.addObject(SkatConstants.EDIT_ACTION_ON_TOPIC, SkatConstants.ACTION_UPDATE);	
 		    	}else{
-		    		logger.fatal("[ERROR fatal] NO CONTENT on jsonPayload from URL... ??? <Null>");
+		    		logger.error("[ERROR fatal] NO CONTENT on jsonPayload from URL... ??? <Null>");
 		    		return loginView;
 		    	}
 			}else{

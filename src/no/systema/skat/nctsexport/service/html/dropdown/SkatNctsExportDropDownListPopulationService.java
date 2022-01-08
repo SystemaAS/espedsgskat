@@ -6,7 +6,7 @@ package no.systema.skat.nctsexport.service.html.dropdown;
 import java.util.List;
 import javax.servlet.ServletContext;
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.web.context.ServletContextAware;
 
 import no.systema.main.context.TdsServletContext;
@@ -29,7 +29,7 @@ import no.systema.skat.util.SkatConstants;
 public class SkatNctsExportDropDownListPopulationService {
 	private final String FILE_RESOURCE_PATH = SkatConstants.RESOURCE_FILES_PATH;
 	private TextFileReaderService textFileReaderService = new TextFileReaderService();
-	private static final Logger logger = LogManager.getLogger(SkatNctsExportDropDownListPopulationService.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SkatNctsExportDropDownListPopulationService.class.getName());
 	
 	/**
 	 * List of currencies

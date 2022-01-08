@@ -7,7 +7,7 @@ import java.lang.reflect.Field;
 import java.util.*;
 
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 
 /**
  * This search class is used at the GUI search behavior
@@ -19,7 +19,7 @@ import org.apache.logging.log4j.*;
  * @date   Apr 23, 2014
  */
 public class SearchFilterSkatNctsImportTopicList {
-	private static final Logger logger = LogManager.getLogger(SearchFilterSkatNctsImportTopicList.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SearchFilterSkatNctsImportTopicList.class.getName());
 	
 	private String avd = null;
 	public void setAvd(String value) {  this.avd = value; }

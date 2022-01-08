@@ -7,7 +7,7 @@ import java.util.*;
 
 import javax.servlet.http.HttpSession;
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 
 import no.systema.main.model.SystemaWebUser;
 import no.systema.main.service.UrlCgiProxyService;
@@ -36,7 +36,7 @@ import no.systema.skat.skatimport.util.SkatImportConstants;
  */
 
 public class CodeDropDownMgr {
-	private static final Logger logger = LogManager.getLogger(CodeDropDownMgr.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(CodeDropDownMgr.class.getName());
 	//
 	public static final String CODE_001_ANGIVELSESARTER = "001";
 	public static final String CODE_005_CERTIFIKAT_R44_2 = "005";

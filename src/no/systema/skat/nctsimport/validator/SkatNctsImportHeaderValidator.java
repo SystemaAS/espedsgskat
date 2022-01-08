@@ -3,7 +3,7 @@ package no.systema.skat.nctsimport.validator;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.validation.Validator;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
@@ -23,7 +23,7 @@ import no.systema.skat.nctsimport.model.jsonjackson.topic.JsonSkatNctsImportSpec
  * 
  */
 public class SkatNctsImportHeaderValidator implements Validator {
-	private static final Logger logger = LogManager.getLogger(SkatNctsImportHeaderValidator.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SkatNctsImportHeaderValidator.class.getName());
 	//Intantiate services here since we are not capable to configure injection with Autowired. Check that further...
 	private UrlCgiProxyService urlCgiProxyService = new UrlCgiProxyServiceImpl();
 	private SkatNctsImportSpecificTopicService nctsImportSpecificTopicService = new SkatNctsImportSpecificTopicServiceImpl();

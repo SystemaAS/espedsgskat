@@ -2,7 +2,7 @@ package no.systema.skat.z.maintenance.skatnctsexport.controller.ajax;
 
 import java.util.*;
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller;
@@ -55,7 +55,7 @@ import no.systema.skat.z.maintenance.skatncts.model.jsonjackson.dbtable.JsonMain
 @Scope("session")
 public class MaintSkatNctsExportAjaxHandlerController {
 	private static final JsonDebugger jsonDebugger = new JsonDebugger();
-	private static final Logger logger = LogManager.getLogger(MaintSkatNctsExportAjaxHandlerController.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(MaintSkatNctsExportAjaxHandlerController.class.getName());
 	
 	/**
 	 * 

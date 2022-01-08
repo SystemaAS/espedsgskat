@@ -4,7 +4,7 @@
 package no.systema.skat.mapper.jsonjackson;
 
 //jackson library
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 
 import com.fasterxml.jackson.databind.DeserializationConfig;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -19,7 +19,7 @@ import no.systema.skat.model.jsonjackson.JsonSkatAutoControlErrorContainer;
  * 
  */
 public class SkatAutoControlErrorMapper {
-	private static final Logger logger = LogManager.getLogger(SkatAutoControlErrorMapper.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SkatAutoControlErrorMapper.class.getName());
 	
 	/**
 	 * 

@@ -2,7 +2,7 @@ package no.systema.skat.nctsexport.controller;
 
 import java.util.*;
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -50,7 +50,7 @@ import no.systema.skat.util.manager.ArchiveGoogleCloudManager;
 @Scope("session")
 public class SkatNctsExportHeaderArchiveController {
 	
-	private static final Logger logger = LogManager.getLogger(SkatNctsExportHeaderArchiveController.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SkatNctsExportHeaderArchiveController.class.getName());
 	private PayloadContentFlusher payloadContentFlusher = new PayloadContentFlusher();
 	
 	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
@@ -122,7 +122,7 @@ public class SkatNctsExportHeaderArchiveController {
 				successView.addObject(SkatConstants.DOMAIN_LIST,container.getArchiveElements());
 		    		
 		    	}else{
-				logger.fatal("NO CONTENT on jsonPayload from URL... ??? <Null>");
+				logger.error("NO CONTENT on jsonPayload from URL... ??? <Null>");
 				return loginView;
 			}
 		}

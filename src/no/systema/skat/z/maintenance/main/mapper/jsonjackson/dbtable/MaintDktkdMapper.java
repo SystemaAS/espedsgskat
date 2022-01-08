@@ -7,7 +7,7 @@ package no.systema.skat.z.maintenance.main.mapper.jsonjackson.dbtable;
 import java.util.Collection;
 
 //jackson library
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 
 import com.fasterxml.jackson.databind.DeserializationConfig;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -22,7 +22,7 @@ import no.systema.skat.z.maintenance.main.model.jsonjackson.dbtable.JsonMaintDkt
  * 
  */
 public class MaintDktkdMapper {
-	private static final Logger logger = LogManager.getLogger(MaintDktkdMapper.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(MaintDktkdMapper.class.getName());
 	
 	public JsonMaintDktkdContainer getContainer(String utfPayload) throws Exception{
 		ObjectMapper mapper = new ObjectMapper();  

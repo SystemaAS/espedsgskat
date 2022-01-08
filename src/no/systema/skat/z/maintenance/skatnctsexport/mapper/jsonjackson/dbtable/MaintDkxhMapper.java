@@ -7,7 +7,7 @@ package no.systema.skat.z.maintenance.skatnctsexport.mapper.jsonjackson.dbtable;
 import java.util.Collection;
 
 //jackson library
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 
 import no.systema.main.mapper.jsonjackson.general.ObjectMapperAbstractGrandFather;
 import no.systema.skat.z.maintenance.skatnctsexport.model.jsonjackson.dbtable.JsonMaintDkxhContainer;
@@ -21,7 +21,7 @@ import no.systema.skat.z.maintenance.skatnctsexport.model.jsonjackson.dbtable.Js
  * 
  */
 public class MaintDkxhMapper extends ObjectMapperAbstractGrandFather{
-	private static final Logger logger = LogManager.getLogger(MaintDkxhMapper.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(MaintDkxhMapper.class.getName());
 	
 	public JsonMaintDkxhContainer getContainer(String utfPayload) throws Exception{
 		//At this point we now have an UTF-8 payload

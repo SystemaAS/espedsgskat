@@ -6,7 +6,7 @@ import java.io.FileOutputStream;
 import java.util.*;
 
  
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
@@ -66,7 +66,7 @@ import no.systema.skat.model.jsonjackson.codes.JsonSkatTaricVarukodRecord;
 @Scope("session")
 public class SkatExportItemsControllerChildWindow {
 	
-	private static final Logger logger = LogManager.getLogger(SkatExportItemsControllerChildWindow.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SkatExportItemsControllerChildWindow.class.getName());
 	private static final JsonDebugger jsonDebugger = new JsonDebugger(2000);
 	
 	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
@@ -205,7 +205,7 @@ public class SkatExportItemsControllerChildWindow {
 		urlRequestParams.append("&kod=" + tolltariffVarekod);
 		
 		logger.info(BASE_URL);
-		logger.info(urlRequestParams);
+		logger.info(urlRequestParams.toString());
 		
 		UrlCgiProxyService urlCgiProxyService = new UrlCgiProxyServiceImpl();
 		String jsonPayload = urlCgiProxyService.getJsonContent(BASE_URL, urlRequestParams.toString());
@@ -264,7 +264,7 @@ public class SkatExportItemsControllerChildWindow {
 		urlRequestParams.append("&typ=" + typeCode);
 		
 		logger.info(BASE_URL);
-		logger.info(urlRequestParams);
+		logger.info(urlRequestParams.toString());
 		
 		String jsonPayload = urlCgiProxyService.getJsonContent(BASE_URL, urlRequestParams.toString());
 		
@@ -305,7 +305,7 @@ public class SkatExportItemsControllerChildWindow {
 			urlRequestParams.append("&kode3=" + dkeh_26);
 		}
 		logger.info(BASE_URL);
-		logger.info(urlRequestParams);
+		logger.info(urlRequestParams.toString());
 		
 		String jsonPayload = urlCgiProxyService.getJsonContent(BASE_URL, urlRequestParams.toString());
 		//logger.info(jsonPayload);

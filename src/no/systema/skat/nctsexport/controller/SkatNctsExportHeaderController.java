@@ -3,7 +3,7 @@ package no.systema.skat.nctsexport.controller;
 import java.util.*;
 
  
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller;
@@ -83,7 +83,7 @@ import no.systema.skat.nctsexport.mapper.url.request.UrlRequestParameterMapper;
 @Scope("session")
 public class SkatNctsExportHeaderController {
 	private static final JsonDebugger jsonDebugger = new JsonDebugger();
-	private static final Logger logger = LogManager.getLogger(SkatNctsExportHeaderController.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SkatNctsExportHeaderController.class.getName());
 	private UrlRequestParameterMapper urlRequestParameterMapper = new UrlRequestParameterMapper();
 	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	private CodeDropDownMgr codeDropDownMgr = new CodeDropDownMgr();
@@ -206,7 +206,7 @@ public class SkatNctsExportHeaderController {
 			    		successView.addObject(SkatConstants.EDIT_ACTION_ON_TOPIC, SkatConstants.ACTION_UPDATE);
 			    		
 			    	}else{
-			    		logger.fatal("NO CONTENT on jsonPayload from URL... ??? <Null>");
+			    		logger.error("NO CONTENT on jsonPayload from URL... ??? <Null>");
 			    		return loginView;
 			    	}
 		    	//----------------------------
@@ -623,12 +623,12 @@ public class SkatNctsExportHeaderController {
 	    		if(jsonNctsExportTopicCopiedContainer!=null){
 	    			//Check for errors
 	    			if(jsonNctsExportTopicCopiedContainer.getErrMsg()!=null && !"".equals(jsonNctsExportTopicCopiedContainer.getErrMsg())){
-	    				logger.fatal("[ERROR FATAL] errMsg containing: " + jsonNctsExportTopicCopiedContainer.getErrMsg());
+	    				logger.error("[ERROR FATAL] errMsg containing: " + jsonNctsExportTopicCopiedContainer.getErrMsg());
 	    				return fallbackOnErrorView;
 	    			}
 	    		}
 	    	}else{
-	    		logger.fatal("NO CONTENT on jsonPayload from URL... ??? <Null>");
+	    		logger.error("NO CONTENT on jsonPayload from URL... ??? <Null>");
 	    		return loginView;
 			}
 			
@@ -667,7 +667,7 @@ public class SkatNctsExportHeaderController {
 			successView.addObject(SkatConstants.EDIT_ACTION_ON_TOPIC, SkatConstants.ACTION_UPDATE);
 	    		
 	    	}else{
-	    		logger.fatal("NO CONTENT on jsonPayload from URL... ??? <Null>");
+	    		logger.error("NO CONTENT on jsonPayload from URL... ??? <Null>");
 	    		return loginView;
 			}
 			return successView;
@@ -750,7 +750,7 @@ public class SkatNctsExportHeaderController {
 		    			}
 		    		}
 		    	}else{
-		    		logger.fatal("NO CONTENT on jsonPayload from URL... ??? <Null>");
+		    		logger.error("NO CONTENT on jsonPayload from URL... ??? <Null>");
 					return loginView;
 				}    
 				
@@ -787,7 +787,7 @@ public class SkatNctsExportHeaderController {
 		    		//put the doUpdate action since we are preparing the record for an update (when saving)
 		    		successView.addObject(SkatConstants.EDIT_ACTION_ON_TOPIC, SkatConstants.ACTION_UPDATE);	
 		    	}else{
-		    		logger.fatal("[ERROR fatal] NO CONTENT on jsonPayload from URL... ??? <Null>");
+		    		logger.error("[ERROR fatal] NO CONTENT on jsonPayload from URL... ??? <Null>");
 		    		return loginView;
 		    	}
 			}else{

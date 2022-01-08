@@ -7,7 +7,7 @@ package no.systema.skat.skatimport.mapper.jsonjackson;
 import java.util.Collection;
 
 //jackson library
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 
 import no.systema.main.mapper.jsonjackson.general.ObjectMapperAbstractGrandFather;
 import no.systema.skat.skatimport.model.jsonjackson.topic.items.JsonSkatImportSpecificTopicItemAvgifterContainer;
@@ -31,7 +31,7 @@ import no.systema.skat.skatimport.model.jsonjackson.topic.items.JsonSkatImportSp
  * 
  */
 public class SkatImportSpecificTopicItemMapper extends ObjectMapperAbstractGrandFather{
-	private static final Logger logger = LogManager.getLogger(SkatImportSpecificTopicItemMapper.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SkatImportSpecificTopicItemMapper.class.getName());
 	
 	public JsonSkatImportSpecificTopicItemContainer getContainer(String utfPayload) throws Exception{
 		//At this point we now have an UTF-8 payload

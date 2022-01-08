@@ -6,7 +6,7 @@ package no.systema.skat.skatimport.filter;
 import java.lang.reflect.Field;
 import java.util.*;
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 
 
 /**
@@ -20,7 +20,7 @@ import org.apache.logging.log4j.*;
  * 
  */
 public class SearchFilterSkatImportTopicList {
-	private static final Logger logger = LogManager.getLogger(SearchFilterSkatImportTopicList.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SearchFilterSkatImportTopicList.class.getName());
 	
 	private String avd = null;
 	public void setAvd(String value) {  this.avd = value; }

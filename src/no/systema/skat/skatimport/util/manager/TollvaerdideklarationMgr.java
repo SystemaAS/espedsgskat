@@ -23,7 +23,7 @@ import no.systema.main.service.UrlCgiProxyService;
 
 import javax.servlet.http.HttpSession;
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 
 
 /**
@@ -34,7 +34,7 @@ import org.apache.logging.log4j.*;
  * 
  */
 public class TollvaerdideklarationMgr {
-	private static final Logger logger = LogManager.getLogger(TollvaerdideklarationMgr.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(TollvaerdideklarationMgr.class.getName());
 	private SkatImportSpecificTopicItemService skatImportSpecificTopicItemService;
 	private UrlCgiProxyService urlCgiProxyService;
 	

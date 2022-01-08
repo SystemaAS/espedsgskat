@@ -3,7 +3,7 @@ package no.systema.skat.nctsimport.controller;
 import java.util.*;
 
  
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -65,7 +65,7 @@ import no.systema.skat.service.html.dropdown.SkatDropDownListPopulationService;
 @Scope("session")
 public class SkatNctsImportItemsController {
 	private static final JsonDebugger jsonDebugger = new JsonDebugger(800);
-	private static final Logger logger = LogManager.getLogger(SkatNctsImportItemsController.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SkatNctsImportItemsController.class.getName());
 	private UrlRequestParameterMapper urlRequestParameterMapper = new UrlRequestParameterMapper();
 	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	private CodeDropDownMgr codeDropDownMgr = new CodeDropDownMgr();

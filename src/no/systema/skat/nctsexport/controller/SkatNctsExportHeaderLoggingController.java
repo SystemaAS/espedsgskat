@@ -4,7 +4,7 @@ import java.util.*;
 import java.io.*;
 
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -54,7 +54,7 @@ import no.systema.skat.util.manager.ArchiveGoogleCloudManager;
 @Scope("session")
 public class SkatNctsExportHeaderLoggingController {
 	
-	private static final Logger logger = LogManager.getLogger(SkatNctsExportHeaderLoggingController.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SkatNctsExportHeaderLoggingController.class.getName());
 	private PayloadContentFlusher payloadContentFlusher = new PayloadContentFlusher();
 	private StackTraceUtil stackTraceUtil = new StackTraceUtil();
 	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
@@ -125,7 +125,7 @@ public class SkatNctsExportHeaderLoggingController {
 				successView.addObject(SkatConstants.DOMAIN_LIST,container.getLogg());
 		    		
 		    	}else{
-				logger.fatal("NO CONTENT on jsonPayload from URL... ??? <Null>");
+				logger.error("NO CONTENT on jsonPayload from URL... ??? <Null>");
 				return loginView;
 			}
 
@@ -244,7 +244,7 @@ public class SkatNctsExportHeaderLoggingController {
 		                }
 		            }
 		    	}else{
-				logger.fatal("NO CONTENT on jsonPayload from URL... ??? <Null>");
+				logger.error("NO CONTENT on jsonPayload from URL... ??? <Null>");
 				return loginView;
 			}
 

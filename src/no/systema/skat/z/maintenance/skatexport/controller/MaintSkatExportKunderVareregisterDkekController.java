@@ -3,7 +3,7 @@ package no.systema.skat.z.maintenance.skatexport.controller;
 import java.util.*;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller;
@@ -62,7 +62,7 @@ import no.systema.z.main.maintenance.util.MainMaintenanceConstants;
 @Scope("session")
 public class MaintSkatExportKunderVareregisterDkekController {
 	private static final JsonDebugger jsonDebugger = new JsonDebugger();
-	private static final Logger logger = LogManager.getLogger(MaintSkatExportKunderVareregisterDkekController.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(MaintSkatExportKunderVareregisterDkekController.class.getName());
 	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	private CodeDropDownMgr codeDropDownMgr = new CodeDropDownMgr();
 	private UrlRequestParameterMapper urlRequestParameterMapper = new UrlRequestParameterMapper();

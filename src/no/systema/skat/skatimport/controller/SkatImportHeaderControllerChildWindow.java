@@ -6,7 +6,7 @@ import java.io.FileOutputStream;
 import java.util.*;
 
  
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
@@ -63,7 +63,7 @@ import no.systema.skat.util.SkatConstants;
 @Scope("session")
 public class SkatImportHeaderControllerChildWindow {
 	
-	private static final Logger logger = LogManager.getLogger(SkatImportHeaderControllerChildWindow.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SkatImportHeaderControllerChildWindow.class.getName());
 	private static final JsonDebugger jsonDebugger = new JsonDebugger(2000);
 	//customer
 	private final String DATATABLE_LIST = "list";
@@ -162,7 +162,7 @@ public class SkatImportHeaderControllerChildWindow {
 		urlRequestParams.append("&typ=" + typeCode);
 		
 		logger.info(BASE_URL);
-		logger.info(urlRequestParams);
+		logger.info(urlRequestParams.toString());
 		
 		String jsonPayload = urlCgiProxyService.getJsonContent(BASE_URL, urlRequestParams.toString());
 		
