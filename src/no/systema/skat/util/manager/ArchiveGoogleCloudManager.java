@@ -49,7 +49,6 @@ public class ArchiveGoogleCloudManager {
 	
 	private final String SAAS_ROOT_PATH_ON_FILE_SYSTEM = "/asp/";
 	private final String SAAS_ROOT_PATH_ON_FILE_SYSTEM_UPPERCASE = "/ASP/";
-	private final String SAAS_ROOT_PATH_ON_HISTORYFILE_SYSTEM = "/ashnsf/";
 	
 	private final String LOCALHOST_ROOT_PATH_ON_FILE_SYSTEM = "/pdf/";
 	private final String EDI_EDISE_PATH_ON_FILE_SYSTEM = "/EDISE";
@@ -257,16 +256,6 @@ public class ArchiveGoogleCloudManager {
 			//concat. Will end up with this result string: "a25/xxxxx.pdf"
 			retval = dirs + file;
 			
-		}else if(strToReplace.equals(SAAS_ROOT_PATH_ON_HISTORYFILE_SYSTEM)) {
-			int index = suffix.lastIndexOf("/");
-			String dirs = suffix.substring(0, index);
-			String file = suffix.substring(index);
-			//change all directories to lower case
-			dirs = dirs.toLowerCase();
-			dirs = dirs.replace(SAAS_ROOT_PATH_ON_HISTORYFILE_SYSTEM, "");
-			//concat. Will end up with this result string: "a25/xxxxx.pdf"
-			retval = dirs + file;
-			
 		}
 		
 		return retval;
@@ -348,14 +337,13 @@ public class ArchiveGoogleCloudManager {
 		String retval = url;
 		logger.info("original url:" + url);
 		if(StringUtils.isNotEmpty(url) && !url.contains("http")) {
-			if(url.startsWith(SAAS_ROOT_PATH_ON_FILE_SYSTEM) || url.startsWith(SAAS_ROOT_PATH_ON_FILE_SYSTEM_UPPERCASE) || url.startsWith(SAAS_ROOT_PATH_ON_HISTORYFILE_SYSTEM) ) {
+			if(url.startsWith(SAAS_ROOT_PATH_ON_FILE_SYSTEM) || url.startsWith(SAAS_ROOT_PATH_ON_FILE_SYSTEM_UPPERCASE) ) {
 				logger.warn("Saas!");
 				logger.warn("local url:" + url);
 				if(!new File(url).exists()){
 					logger.info("File does not exists locally!...going to google cloud ...");
 					String strToReplace = SAAS_ROOT_PATH_ON_FILE_SYSTEM;
 					if(url.startsWith(SAAS_ROOT_PATH_ON_FILE_SYSTEM_UPPERCASE)) { strToReplace = SAAS_ROOT_PATH_ON_FILE_SYSTEM_UPPERCASE; }
-					if(url.startsWith(SAAS_ROOT_PATH_ON_HISTORYFILE_SYSTEM)) { strToReplace = SAAS_ROOT_PATH_ON_HISTORYFILE_SYSTEM; }
 					
 					if(GOOGLE_BUCKET_PREFIX_URL.toLowerCase().contains(this.GOOGLE)) {
 						//do it
