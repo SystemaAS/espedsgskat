@@ -84,6 +84,9 @@
 				 text: btnTextOk,
 				 click: function(){
 					 		jq('#copyForm'+counterIndex).submit();
+							jq("#newAvd"+counterIndex).val("");
+					 		jq("#newSign"+counterIndex).val("");
+							jq( this ).dialog( "close" ); 
 				 		}
 			 	 },
 	 	 		{

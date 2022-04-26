@@ -698,6 +698,7 @@ public class SkatExportHeaderController {
 		String opd=null;
 		String newAvd=null;
 		String newSign=null;
+		String fullCopy = null;
 		
 		Enumeration requestParameters = request.getParameterNames();
 	    while (requestParameters.hasMoreElements()) {
@@ -717,6 +718,8 @@ public class SkatExportHeaderController {
         				newSign = value;
         			}else if(element.startsWith("action")){
         				action = value;
+        			}else if(element.startsWith("fullCopy")){
+        				fullCopy = value;
         			}
         		}
 	    	}
@@ -731,7 +734,7 @@ public class SkatExportHeaderController {
 			//--------------------
 			logger.info("starting COPY record transaction...");
 			String BASE_URL = SkatExportUrlDataStore.SKAT_EXPORT_BASE_UPDATE_SPECIFIC_TOPIC_URL;
-			String urlRequestParamsKeys = this.getRequestUrlKeyParametersForCopy(avd, newAvd, newSign, opd, appUser);
+			String urlRequestParamsKeys = this.getRequestUrlKeyParametersForCopy(avd, newAvd, newSign, opd, appUser, fullCopy);
 			//for debug purposes in GUI
 			session.setAttribute(SkatConstants.ACTIVE_URL_RPG_SKAT, BASE_URL  + "==>params: " + urlRequestParamsKeys.toString()); 
 			
@@ -1459,7 +1462,7 @@ public class SkatExportHeaderController {
 	 * @param appUser
 	 * @return
 	 */
-	private String getRequestUrlKeyParametersForCopy(String avd, String newAvd, String newSign, String opd, SystemaWebUser appUser){
+	private String getRequestUrlKeyParametersForCopy(String avd, String newAvd, String newSign, String opd, SystemaWebUser appUser, String fullCopy){
 		//user=OSCAR&avd=1&newavd=2&opd=218&mode=C&newsign=OT 
 		final String MODE_COPY = "C";
 		StringBuffer urlRequestParamsKeys = new StringBuffer();
@@ -1470,7 +1473,9 @@ public class SkatExportHeaderController {
 		urlRequestParamsKeys.append(SkatConstants.URL_CHAR_DELIMETER_FOR_PARAMS_WITH_HTML_REQUEST + "opd=" + opd);
 		urlRequestParamsKeys.append(SkatConstants.URL_CHAR_DELIMETER_FOR_PARAMS_WITH_HTML_REQUEST + "mode=" + MODE_COPY);
 		urlRequestParamsKeys.append(SkatConstants.URL_CHAR_DELIMETER_FOR_PARAMS_WITH_HTML_REQUEST + "newsign=" + newSign);
-		
+		if(strMgr.isNotNull(fullCopy)){
+			urlRequestParamsKeys.append(SkatConstants.URL_CHAR_DELIMETER_FOR_PARAMS_WITH_HTML_REQUEST + "full=" + fullCopy);
+		}
 		
 		return urlRequestParamsKeys.toString();	
 	}

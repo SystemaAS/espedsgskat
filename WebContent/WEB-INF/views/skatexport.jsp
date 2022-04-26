@@ -338,6 +338,10 @@
 													</c:forEach> 
 												</select>
 											</td>
+											<td nowrap class="text14">&nbsp;&nbsp;
+												<input tabindex=-1 type="checkbox" name="fullCopy${counter.count}" id="fullCopy${counter.count}" value="1" >Fuld kopi
+											</td>
+											
 										</tr>
 									</table>
 								</form>
