@@ -103,6 +103,12 @@
 			 				<a tabindex=-1 href="renderLocalPdf.do?fn=SKAT_EDI_EDIFACT_rules_and_conditions_v4.xlsx" target="_blank">
 			 					<img valign="bottom" width="14px" height="14px" src="resources/images/pdf.png" border="0" alt="pdf">
 			 				</a>
+			 				<%-- SKAT_EDI_EDIFACT_cusres svarskoder --%>
+			 				&nbsp;&nbsp;&nbsp;<font class="text10">CUSRES-Svartekstkoder</font>
+			 				<a tabindex=-1 href="renderLocalPdf.do?fn=SKAT_CUSRES_Svartekstkoder_5.31.xls.pdf" target="_blank">
+			 					<img valign="bottom" width="14px" height="14px" src="resources/images/pdf.png" border="0" alt="pdf">
+			 				</a>
+			 				
 	                    </th>
 	               </tr> 
 	               </thead>
