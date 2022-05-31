@@ -281,6 +281,7 @@ public class SkatImportHeaderController {
 							logger.info("DKIH_02b (Afs.name) STEP 1: " + request.getParameter("dkih_02b"));
 						    binder.bind(request);
 				            this.adjustTollverdiFieldsAfterBind(request, jsonSkatImportSpecificTopicRecord);
+				            
 				            //test indicator, and recalculation
 				            jsonSkatImportSpecificTopicRecord.setDkih_0035(dkih_0035);
 				            jsonSkatImportSpecificTopicRecord.setDkih_genb(recalculationFlag);
@@ -1544,7 +1545,23 @@ public class SkatImportHeaderController {
 		if(YES.equals(t09b)){ jsonSkatImportSpecificTopicRecord.setDkih_t09b(t09b); }
 		
 	}
-	
+
+	/*private void adjustMottakerForPrivatePerson(HttpServletRequest request, JsonSkatImportSpecificTopicRecord topicRecord){
+		String PRIVATE_PERSON_CVR_CONSTANT = "DK09999981";
+		//We must replace as follows:
+		//(1) City(dkih_08e) must be moved to Country(dkih_08f)
+		//(2) Postnr(dkih_08d) must be moved to City(dkih_08e)
+		//(3) Postnr(dkih_08d) must be emptied (in order to EDIFACT to comply)
+		
+		if(PRIVATE_PERSON_CVR_CONSTANT.equals(topicRecord.getDkih_08a())){ 
+			topicRecord.setDkih_08f(topicRecord.getDkih_08e());
+			topicRecord.setDkih_08e(topicRecord.getDkih_08d());
+			//clean up
+			topicRecord.setDkih_08d("");
+		}
+		
+	}*/
+
 	/**
 	 * 
 	 * @param avd
