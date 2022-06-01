@@ -350,8 +350,8 @@ public class SkatImportHeaderController {
 							session.setAttribute(SkatConstants.ACTIVE_URL_RPG_SKAT, BASE_URL); 
 					    	
 							logger.info(Calendar.getInstance().getTime() + " CGI-start timestamp");
-					    	logger.info("URL: " + BASE_URL);
-					    	logger.info("URL PARAMS: " + urlRequestParams);
+					    	logger.warn("URL: " + BASE_URL);
+					    	logger.warn("URL PARAMS: " + urlRequestParams);
 					    	//----------------------------------------------------------------------------
 					    	//EXECUTE the UPDATE (RPG program) here (STEP [2] when creating a new record)
 					    	//----------------------------------------------------------------------------
