@@ -188,17 +188,17 @@ public class SkatImportHeaderController {
 				//FETCH RECORD
 				//-------------
 				if(SkatConstants.ACTION_FETCH.equals(action)){
-					logger.info("FETCH record transaction...");
-					//---------------------------
-					//get BASE URL = RPG-PROGRAM
-		            //---------------------------
-					String BASE_URL = SkatImportUrlDataStore.SKAT_IMPORT_BASE_FETCH_SPECIFIC_TOPIC_URL;
-					//url params
-					String urlRequestParamsKeys = this.getRequestUrlKeyParameters(action, avd, opd, sign, appUser);
-					//for debug purposes in GUI
-					session.setAttribute(SkatConstants.ACTIVE_URL_RPG_SKAT, BASE_URL  + "==>params: " + urlRequestParamsKeys.toString()); 
-					
-					logger.info(Calendar.getInstance().getTime() + " CGI-start timestamp");
+						logger.info("FETCH record transaction...");
+						//---------------------------
+						//get BASE URL = RPG-PROGRAM
+			            //---------------------------
+						String BASE_URL = SkatImportUrlDataStore.SKAT_IMPORT_BASE_FETCH_SPECIFIC_TOPIC_URL;
+						//url params
+						String urlRequestParamsKeys = this.getRequestUrlKeyParameters(action, avd, opd, sign, appUser);
+						//for debug purposes in GUI
+						session.setAttribute(SkatConstants.ACTIVE_URL_RPG_SKAT, BASE_URL  + "==>params: " + urlRequestParamsKeys.toString()); 
+						
+						logger.info(Calendar.getInstance().getTime() + " CGI-start timestamp");
 				    	logger.warn("URL: " + BASE_URL);
 				    	logger.warn("URL PARAMS: " + urlRequestParamsKeys);
 				    	//--------------------------------------
@@ -214,14 +214,14 @@ public class SkatImportHeaderController {
 				    		this.setCodeDropDownMgr(appUser, model);	
 				    		this.setDomainObjectsInView(session, model, jsonSkatImportSpecificTopicContainer, totalItemLinesObject);
 				    		successView.addObject(SkatConstants.DOMAIN_MODEL, model);
-						//put the doUpdate action since we are preparing the record for an update (when saving)
-						successView.addObject(SkatConstants.EDIT_ACTION_ON_TOPIC, SkatConstants.ACTION_UPDATE);
+				    		//put the doUpdate action since we are preparing the record for an update (when saving)
+				    		successView.addObject(SkatConstants.EDIT_ACTION_ON_TOPIC, SkatConstants.ACTION_UPDATE);
 				    		
 				    	}else{
-						logger.error("NO CONTENT on jsonPayload from URL... ??? <Null>");
-						return loginView;
-					}
-				    	logger.info(Calendar.getInstance().getTime() +  "END of FETCH");
+				    		logger.error("NO CONTENT on jsonPayload from URL... ??? <Null>");
+				    		return loginView;
+				    	}
+				    		logger.info(Calendar.getInstance().getTime() +  "END of FETCH");
 					
 			    	//----------------------------
 				//CREATE and/or UPDATE RECORD
@@ -240,10 +240,13 @@ public class SkatImportHeaderController {
 						recordToValidate.setSumOfAntalKolliInItemLines(totalItemLinesObject.getSumOfAntalKolliInItemLines());
 						recordToValidate.setSumOfAntalItemLines(totalItemLinesObject.getSumOfAntalItemLines());
 						recordToValidate.setSumTotalAmountItemLines(totalItemLinesObject.getSumTotalAmountItemLines());
+						this.adjustForPrivatePerson(request, recordToValidate);
+						
 					}else{
 						recordToValidate.setDkih_syav(avd);
 						recordToValidate.setDkih_sysg(sign);
 					}
+					
 					SkatImportHeaderValidator validator = new SkatImportHeaderValidator();
 					//required validation only for production avd
 					if( !"1".equals(recordToValidate.getTestAvdFlag()) ){
@@ -251,7 +254,7 @@ public class SkatImportHeaderController {
 					}
 					//test indicator in validation field
 					recordToValidate.setDkih_0035(dkih_0035);
-
+					
 					//----------------------------
 				    //check for validation ERRORS
 					//----------------------------
@@ -268,7 +271,7 @@ public class SkatImportHeaderController {
 					    	}
 
 				    }else{
-				    		JsonSkatImportSpecificTopicRecord jsonSkatImportSpecificTopicRecord = null;
+			    		JsonSkatImportSpecificTopicRecord jsonSkatImportSpecificTopicRecord = null;
 						String tuidRefNr = null;
 						
 						if(opd!=null && !"".equals(opd)){
@@ -281,7 +284,7 @@ public class SkatImportHeaderController {
 							logger.info("DKIH_02b (Afs.name) STEP 1: " + request.getParameter("dkih_02b"));
 						    binder.bind(request);
 				            this.adjustTollverdiFieldsAfterBind(request, jsonSkatImportSpecificTopicRecord);
-				            
+				            this.adjustForPrivatePerson(request, jsonSkatImportSpecificTopicRecord);
 				            //test indicator, and recalculation
 				            jsonSkatImportSpecificTopicRecord.setDkih_0035(dkih_0035);
 				            jsonSkatImportSpecificTopicRecord.setDkih_genb(recalculationFlag);
@@ -307,6 +310,7 @@ public class SkatImportHeaderController {
 					            binder.bind(request);
 					            //adjust fields in order to comply to the back-end requirements
 					            this.adjustTollverdiFieldsAfterBind(request, jsonSkatImportSpecificTopicRecord);
+					            this.adjustForPrivatePerson(request, jsonSkatImportSpecificTopicRecord);
 					            
 					            //Now set back with the generated values since the bind method above erases them...
 					            jsonSkatImportSpecificTopicRecord.setDkih_syav(avd);
@@ -1545,22 +1549,24 @@ public class SkatImportHeaderController {
 		if(YES.equals(t09b)){ jsonSkatImportSpecificTopicRecord.setDkih_t09b(t09b); }
 		
 	}
-
-	/*private void adjustMottakerForPrivatePerson(HttpServletRequest request, JsonSkatImportSpecificTopicRecord topicRecord){
+	/**
+	 * 
+	 * Private person
+	 * @param request
+	 * @param topicRecord
+	 * 
+	 */
+	
+	private void adjustForPrivatePerson(HttpServletRequest request, JsonSkatImportSpecificTopicRecord topicRecord){
 		String PRIVATE_PERSON_CVR_CONSTANT = "DK09999981";
-		//We must replace as follows:
-		//(1) City(dkih_08e) must be moved to Country(dkih_08f)
-		//(2) Postnr(dkih_08d) must be moved to City(dkih_08e)
-		//(3) Postnr(dkih_08d) must be emptied (in order to EDIFACT to comply)
 		
 		if(PRIVATE_PERSON_CVR_CONSTANT.equals(topicRecord.getDkih_08a())){ 
-			topicRecord.setDkih_08f(topicRecord.getDkih_08e());
-			topicRecord.setDkih_08e(topicRecord.getDkih_08d());
-			//clean up
-			topicRecord.setDkih_08d("");
+			//clean up since this must be empty on EDIFACT
+			topicRecord.setDkih_02f("");
+			topicRecord.setDkih_08f("");
 		}
 		
-	}*/
+	}
 
 	/**
 	 * 

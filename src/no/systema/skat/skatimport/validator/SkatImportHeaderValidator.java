@@ -4,6 +4,7 @@ import java.lang.reflect.Array;
 import java.util.*;
 
 import org.springframework.validation.Validator;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 
@@ -27,6 +28,7 @@ public class SkatImportHeaderValidator implements Validator {
 	final String ANG_ART_FUET_05 = "05";
 	final String ANG_ART_STF_07 = "07";
 	final String ANG_ART_STFT_08 = "08";
+	final String PRIVATE_PERSON_CVR_CONSTANT = "DK09999981";
 	
 	/**
 	 * 
@@ -108,7 +110,11 @@ public class SkatImportHeaderValidator implements Validator {
 			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "dkih_02c", "systema.skat.import.header.error.null.dkih_02c");
 			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "dkih_02d", "systema.skat.import.header.error.null.dkih_02d");
 			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "dkih_02e", "systema.skat.import.header.error.null.dkih_02e");
-			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "dkih_02f", "systema.skat.import.header.error.null.dkih_02f");
+			if(PRIVATE_PERSON_CVR_CONSTANT.equals(record.getDkih_08a())) {
+				//nothing
+			}else {
+				ValidationUtils.rejectIfEmptyOrWhitespace(errors, "dkih_02f", "systema.skat.import.header.error.null.dkih_02f");
+			}
 			
 		}else if( this.ANG_ART_FUE_04.equals(record.getDkih_aart()) ){
 			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "dkih_r012", "systema.skat.import.header.error.null.dkih_r012");
@@ -122,7 +128,11 @@ public class SkatImportHeaderValidator implements Validator {
 			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "dkih_02c", "systema.skat.import.header.error.null.dkih_02c");
 			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "dkih_02d", "systema.skat.import.header.error.null.dkih_02d");
 			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "dkih_02e", "systema.skat.import.header.error.null.dkih_02e");
-			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "dkih_02f", "systema.skat.import.header.error.null.dkih_02f");
+			if(PRIVATE_PERSON_CVR_CONSTANT.equals(record.getDkih_08a())) {
+				//nothing
+			}else {
+				ValidationUtils.rejectIfEmptyOrWhitespace(errors, "dkih_02f", "systema.skat.import.header.error.null.dkih_02f");
+			}
 			//Ref.nr could be null (since an external partner has already done a deklaration (MIO).
 			//In this case the user should register the ref.nr. [Ref.nr ACW]
 			/* Don't make this mandatory since it could be a problem to know which one is ALREADY registered...
@@ -151,7 +161,11 @@ public class SkatImportHeaderValidator implements Validator {
 			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "dkih_02c", "systema.skat.import.header.error.null.dkih_02c");
 			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "dkih_02d", "systema.skat.import.header.error.null.dkih_02d");
 			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "dkih_02e", "systema.skat.import.header.error.null.dkih_02e");
-			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "dkih_02f", "systema.skat.import.header.error.null.dkih_02f");
+			if(PRIVATE_PERSON_CVR_CONSTANT.equals(record.getDkih_08a())) {
+				//nothing
+			}else {
+				ValidationUtils.rejectIfEmptyOrWhitespace(errors, "dkih_02f", "systema.skat.import.header.error.null.dkih_02f");
+			}
 			
 		}else if(this.ANG_ART_STFT_08.equals(record.getDkih_aart())){
 			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "dkih_r012", "systema.skat.import.header.error.null.dkih_r012");
