@@ -377,8 +377,18 @@ public class SkatExportHeaderController {
 					    		this.setFatalError(model, rpgReturnResponseHandler, jsonSkatExportSpecificTopicRecord);
 					    		isValidCreatedRecordTransactionOnRPG = false;
 					    	}else{
-					    		//Update succefully done!
-					    		logger.info("[INFO] Record successfully updated, OK ");
+					    		//Update succesfully done!
+					    		logger.warn("[INFO] Record successfully updated, OK ");
+					    		//check if we need to create LRN for new DMS-system since LRN must be created by us and not by SKAT (as before DMS)
+					    		if(jsonSkatExportSpecificTopicRecord.getDkeh_07().isEmpty()) {
+					    			logger.warn("AA");
+					    			if(this.isDmsValidAngivelseArt(jsonSkatExportSpecificTopicRecord.getDkeh_aart()) ) {
+					    				logger.warn("BB");
+					    				String lrn = this.createDmsLrn(appUser.getUser(),avd,opd);
+					    				jsonSkatExportSpecificTopicRecord.setDkeh_07(lrn);
+						    		}
+				    			}
+					    		
 					    		//put domain objects
 					    		this.setDomainObjectsInView(session, model, jsonSkatExportSpecificTopicRecord, totalItemLinesObject );
 					    		if(totalItemLinesObject.getSumOfAntalItemLines()>0){
@@ -441,7 +451,48 @@ public class SkatExportHeaderController {
 		}
 	}
 	
-	
+	private boolean isDmsValidAngivelseArt(String value) {
+		boolean retval = false;
+		if(value!=null) {
+			if(value.startsWith("A") || value.startsWith("B") || value.startsWith("C") ) {
+				retval = true;
+			}
+		}
+			
+		
+		return retval;
+		
+	}
+	/**
+	 * https://gw.systema.no:65209/sycgip/TDKG001R.pgm?user=JOVO&avd=1&opd=9000065&mode=A
+	 * The method creates the LRN in DKEH_07 field (DKEH db-table)
+	 * @return
+	 */
+	private String createDmsLrn(String user, String avd, String opd) {
+		String retval = null;
+		
+		String BASE_URL = AppConstants.HTTP_ROOT_CGI + "/sycgip/TDKG001R.pgm";
+		StringBuilder urlRequestParams = new StringBuilder();
+		urlRequestParams.append("user=" + user + "&avd=" + avd + "&opd=" + opd + "&mode=A");
+		logger.warn("URL: " + BASE_URL);
+    	logger.warn("URL PARAMS: " + urlRequestParams);
+    	//Execute
+    	String rpgReturnPayload = this.urlCgiProxyService.getJsonContent(BASE_URL, urlRequestParams.toString());
+    	//Debug --> 
+    	logger.warn("Checking errMsg in rpgReturnPayload DMS-LRN-creation" + rpgReturnPayload);
+    	//we must evaluate a return RPG code in order to know if the Update was OK or not
+    	RpgReturnResponseHandler rpgReturnResponseHandler = new RpgReturnResponseHandler();
+    	rpgReturnResponseHandler.evaluateRpgResponseOnTopicUpdate(rpgReturnPayload);
+    	if(rpgReturnResponseHandler.getErrorMessage()!=null && !"".equals(rpgReturnResponseHandler.getErrorMessage())){
+    		rpgReturnResponseHandler.setErrorMessage("[ERROR] FATAL on LRN creation: " + rpgReturnResponseHandler.getErrorMessage());
+    		
+    	}else {
+    		retval = rpgReturnResponseHandler.getDkeh_07();
+    	}
+    	
+    	return retval;
+    	
+	}
 	
 	
 	/**

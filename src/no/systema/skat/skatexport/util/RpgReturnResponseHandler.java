@@ -77,6 +77,8 @@ public class RpgReturnResponseHandler {
 						this.user = keyValuePair[0] + ":" + keyValuePair[1] + ",";
 					}else if(keyValuePair[0].trim().equalsIgnoreCase("dkeh_syop")){
 						this.dkeh_syop = keyValuePair[0] + ":" + keyValuePair[1]+ ",";
+					}else if(keyValuePair[0].trim().equalsIgnoreCase("tullId")){
+						this.dkeh_07 = keyValuePair[1];
 					}
 				}
 			}
