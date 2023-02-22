@@ -64,7 +64,27 @@ public class SkatExportHeaderValidator implements Validator {
 		if(!this.ANG_ART_50_IE507.equals(record.getDkeh_aart()) ){
 			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "dkeh_r011", "systema.skat.export.header.error.null.dkeh_r011");
 			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "dkeh_aart", "systema.skat.export.header.error.null.dkeh_aart");
-		}		
+		}
+		//General for DMS Export
+		if(this.isDMSAngivelsesArt(record.getDkeh_aart())) {
+			if(record.getDkeh_r011().length() == 3) {
+				//OK
+			}else if (record.getDkeh_r011().equals("EX")) {
+				if(record.getDkeh_r012().equals("A") || record.getDkeh_r012().equals("D") ) {
+					//OK
+				}else {
+					errors.rejectValue("dkeh_r012", "systema.skat.export.header.error.rule.dms.aart");
+				}
+			}else {
+				errors.rejectValue("dkeh_r011", "systema.skat.export.header.error.rule.dms.aart"); 
+			}
+		//not DMS system	
+		}else {
+			if(record.getDkeh_r011().length() == 3) {
+				errors.rejectValue("dkeh_r011", "systema.skat.export.header.error.rule.dms.aart"); 
+			}
+		}
+		
 		
 		/*
 		//Check for Mandatory fields first
@@ -472,12 +492,17 @@ public class SkatExportHeaderValidator implements Validator {
 				//--------------
 				//Angivelsestyp
 				//--------------
-				if( record.getDkeh_17a()!=null && !"".equals(record.getDkeh_17a()) ){ 
-					if(!this.isValidAngivelseTypeForEftaCountry(record)){
-						errors.rejectValue("dkeh_17a", "systema.skat.export.header.error.rule.eftaCountriesAngType"); 
-					}
-					if(!this.isValidAngivelseTypeForNoneEftaCountry(record)){
-						errors.rejectValue("dkeh_17a", "systema.skat.export.header.error.rule.noneEftaCountriesAngType"); 
+				//General for DMS Export
+				if(this.isDMSAngivelsesArt(record.getDkeh_aart())) {
+					//TODO
+				}else {
+					if( record.getDkeh_17a()!=null && !"".equals(record.getDkeh_17a()) ){ 
+						if(!this.isValidAngivelseTypeForEftaCountry(record)){
+							errors.rejectValue("dkeh_17a", "systema.skat.export.header.error.rule.eftaCountriesAngType"); 
+						}
+						if(!this.isValidAngivelseTypeForNoneEftaCountry(record)){
+							errors.rejectValue("dkeh_17a", "systema.skat.export.header.error.rule.noneEftaCountriesAngType"); 
+						}
 					}
 				}
 				//-------------------
@@ -782,5 +807,13 @@ public class SkatExportHeaderValidator implements Validator {
 		return retval;
 	}
 	
+	private boolean isDMSAngivelsesArt(String aart) {
+		boolean retval = false;
+		//General for DMS Export
+		if(aart.startsWith("A") || aart.startsWith("B") || aart.startsWith("C")) {
+			retval = true;
+		}
 		
+		return retval;
+	}
 }
