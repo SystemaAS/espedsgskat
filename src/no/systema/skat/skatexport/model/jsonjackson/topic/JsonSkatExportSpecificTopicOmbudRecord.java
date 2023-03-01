@@ -19,4 +19,16 @@ public class JsonSkatExportSpecificTopicOmbudRecord {
 	public void setDkea_14b(String value) {  this.dkea_14b = value; }
 	public String getDkea_14b() {return this.dkea_14b;}
 	
+	private String dkea_14c = null;
+	public void setDkea_14c(String value) {  this.dkea_14c = value; }
+	public String getDkea_14c() {return this.dkea_14c;}
+	
+	private String dkea_14d = null;
+	public void setDkea_14d(String value) {  this.dkea_14d = value; }
+	public String getDkea_14d() {return this.dkea_14d;}
+	
+	private String dkea_14e = null;
+	public void setDkea_14e(String value) {  this.dkea_14e = value; }
+	public String getDkea_14e() {return this.dkea_14e;}
+	
 }

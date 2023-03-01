@@ -926,7 +926,10 @@
 							            
 							            <td class="text14" align="left" >&nbsp;
 							            <span title="dkeh_14b"><spring:message code="systema.skat.status"/></span></td>
-							             
+							            
+							            <td class="text14" align="left" >&nbsp;
+							            <span title="dkeh_14e">Email</span></td>
+							              
 							        </tr>
 							        <tr>
 							            <td align="left"><input type="text" class="inputTextMediumBlue" name="dkeh_14a" id="dkeh_14a" size="19" maxlength="10" value="${model.record.dkeh_14a}"></td>
@@ -942,6 +945,8 @@
 								  				<c:if test="${model.record.dkeh_14b == '3'}"> selected </c:if> >3-Indirekte repr.</option>
 											</select>
 										</td>
+										
+										<td align="left"><input type="text" class="inputTextMediumBlue" name="dkeh_14e" id="dkeh_14e" size="35" maxlength="70" value="${model.record.dkeh_14e}"></td>
 										
 							        </tr>
 							       

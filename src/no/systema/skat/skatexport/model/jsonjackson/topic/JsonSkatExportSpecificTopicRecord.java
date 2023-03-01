@@ -265,6 +265,14 @@ public class JsonSkatExportSpecificTopicRecord extends JsonAbstractGrandFatherRe
 	public void setDkeh_02f(String value) {  this.dkeh_02f = value; }
 	public String getDkeh_02f() {return this.dkeh_02f;}
 	
+	private String dkeh_02g = null;
+	public void setDkeh_02g(String value) {  this.dkeh_02g = value; }
+	public String getDkeh_02g() {return this.dkeh_02g;}
+	
+	private String dkeh_02h = null;
+	public void setDkeh_02h(String value) {  this.dkeh_02h = value; }
+	public String getDkeh_02h() {return this.dkeh_02h;}
+	
 	private String dkeh_brut = null;
 	public void setDkeh_brut(String value) {  this.dkeh_brut = value; }
 	public String getDkeh_brut() {return this.dkeh_brut;}
@@ -337,6 +345,14 @@ public class JsonSkatExportSpecificTopicRecord extends JsonAbstractGrandFatherRe
 	public void setDkeh_08f(String value) {  this.dkeh_08f = value; }
 	public String getDkeh_08f() {return this.dkeh_08f;}
 	
+	private String dkeh_08g = null;
+	public void setDkeh_08g(String value) {  this.dkeh_08g = value; }
+	public String getDkeh_08g() {return this.dkeh_08g;}
+	
+	private String dkeh_08h = null;
+	public void setDkeh_08h(String value) {  this.dkeh_08h = value; }
+	public String getDkeh_08h() {return this.dkeh_08h;}
+	
 	//------Representat
 	private String dkeh_rekn = null;
 	public void setDkeh_rekn(String value) {  this.dkeh_rekn = value; }
@@ -366,6 +382,15 @@ public class JsonSkatExportSpecificTopicRecord extends JsonAbstractGrandFatherRe
 	public void setDkeh_relk(String value) {  this.dkeh_relk = value; }
 	public String getDkeh_relk() {return this.dkeh_relk;}
 	
+	private String dkeh_retl = null;
+	public void setDkeh_retl(String value) {  this.dkeh_retl = value; }
+	public String getDkeh_retl() {return this.dkeh_retl;}
+	
+	private String dkeh_reep = null;
+	public void setDkeh_reep(String value) {  this.dkeh_reep = value; }
+	public String getDkeh_reep() {return this.dkeh_reep;}
+	
+	
 	//------Transportør
 	private String dkeh_trkn = null;
 	public void setDkeh_trkn(String value) {  this.dkeh_trkn = value; }
@@ -378,6 +403,14 @@ public class JsonSkatExportSpecificTopicRecord extends JsonAbstractGrandFatherRe
 	private String dkeh_zkp = null;
 	public void setDkeh_zkp(String value) {  this.dkeh_zkp = value; }
 	public String getDkeh_zkp() {return this.dkeh_zkp;}
+	
+	private String dkeh_trtl = null;
+	public void setDkeh_trtl(String value) {  this.dkeh_trtl = value; }
+	public String getDkeh_trtl() {return this.dkeh_trtl;}
+	
+	private String dkeh_trep = null;
+	public void setDkeh_trep(String value) {  this.dkeh_trep = value; }
+	public String getDkeh_trep() {return this.dkeh_trep;}
 	
 		
 	//rest of information	
@@ -392,6 +425,18 @@ public class JsonSkatExportSpecificTopicRecord extends JsonAbstractGrandFatherRe
 	private String dkeh_14b = null;
 	public void setDkeh_14b(String value) {  this.dkeh_14b = value; }
 	public String getDkeh_14b() { return this.dkeh_14b;}
+	
+	private String dkeh_14c = null;
+	public void setDkeh_14c(String value) {  this.dkeh_14c = value; }
+	public String getDkeh_14c() {return this.dkeh_14c;}
+	
+	private String dkeh_14d = null;
+	public void setDkeh_14d(String value) {  this.dkeh_14d = value; }
+	public String getDkeh_14d() {return this.dkeh_14d;}
+	
+	private String dkeh_14e = null;
+	public void setDkeh_14e(String value) {  this.dkeh_14e = value; }
+	public String getDkeh_14e() {return this.dkeh_14e;}
 	
 	private String dkeh_17a = null;
 	public void setDkeh_17a(String value) {  this.dkeh_17a = value; }
