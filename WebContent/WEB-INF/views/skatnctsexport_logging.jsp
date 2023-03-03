@@ -230,7 +230,16 @@
 		               		</a>
 		               	</td>
 		               	<td class="tableCell" >&nbsp;
-		               		
+		               		<c:choose>
+			               		<c:when test="${fn:containsIgnoreCase(record.wurl,'.xml')}">
+			               			<c:set var="renderType" value="renderXml" scope="request" />
+			               		</c:when>
+			               		<c:otherwise>
+			               			<c:set var="renderType" value="renderEdifact" scope="request" />
+		               		   	</c:otherwise>
+	               		   	</c:choose>
+	               		   	
+	               		   	
 	               		   	<c:choose>
 		              		<c:when test="${fn:startsWith(record.wurl, 'http')}">
 								<a <c:if test="${record.msr == 'R'}">style="color:#9F6000;"</c:if> href="${record.wurl}" target="_new" >
@@ -239,7 +248,7 @@
 		               			</a>		              
 		               		</c:when>
 		               		<c:otherwise>
-		               			<a <c:if test="${record.msr == 'R'}">style="color:#9F6000;"</c:if> href="skatncts_export_renderEdifact.do?fp=${record.wurl}" target="_new" >
+		               			<a <c:if test="${record.msr == 'R'}">style="color:#9F6000;"</c:if> href="skatncts_export_${renderType}.do?fp=${record.wurl}" target="_new" >
 			               			<img src="resources/images/list.gif" border="0" width="12px" height="12px" alt="Show file" >
 			               			&nbsp;${record.mmn}
 	               		   		</a>
