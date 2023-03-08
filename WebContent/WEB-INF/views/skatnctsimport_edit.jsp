@@ -192,7 +192,9 @@
 	            			<option value="J"<c:if test="${model.record.tienkl == 'J'}"> selected </c:if> >Forenklet</option>
 					  	<option value="N"<c:if test="${model.record.tienkl == 'N'}"> selected </c:if> >Normal</option>
 					</select>
-				
+					&nbsp;&nbsp;
+					<input type="checkbox" name="tivers" id="tivers" value="5" <c:if test="${model.record.tivers == '5'}"> checked </c:if> ><font class="text14MediumBlue"><b>NCTS 5</b></font>
+					
 					<div class="text11" style="position: relative;" align="left">
 					<span style="position:absolute; left:150; top:2px; width:250px;" id="status_info" class="popupWithInputText text11"  >
 			           		<br/>

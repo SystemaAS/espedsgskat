@@ -147,7 +147,7 @@ public class SkatNctsImportHeaderController {
 		String status = request.getParameter("status");
 		String datum = request.getParameter("datum");
 		String dknh_0035 = request.getParameter("dknh_0035"); //test indicator (only in production)
-		
+		String tivers = request.getParameter("tivers");
 		
 		//Action (doFetch, doUpdate, doCreate)
 		logger.info("Action:" + action);
@@ -229,6 +229,7 @@ public class SkatNctsImportHeaderController {
 					}
 					//test indicator in validation field
 					recordToValidate.setDknh_0035(dknh_0035);
+					recordToValidate.setTivers(tivers);
 
 					
 				    //check for ERRORS
@@ -257,6 +258,7 @@ public class SkatNctsImportHeaderController {
 				            logger.info("TIENKL [after bind]: " + jsonNctsImportSpecificTopicRecord.getTienkl());
 				            //test indicator in validation field
 				            jsonNctsImportSpecificTopicRecord.setDknh_0035(dknh_0035);
+				            jsonNctsImportSpecificTopicRecord.setTivers(tivers);
 	
 				            
 						}else{
@@ -284,6 +286,7 @@ public class SkatNctsImportHeaderController {
 					            jsonNctsImportSpecificTopicRecord.setTisg(sign);
 					            //test indicator in validation field
 					            jsonNctsImportSpecificTopicRecord.setDknh_0035(dknh_0035);
+					            jsonNctsImportSpecificTopicRecord.setTivers(tivers);
 		
 							}else{
 								//Some kind of error occurred. Set the transaction as invalid...

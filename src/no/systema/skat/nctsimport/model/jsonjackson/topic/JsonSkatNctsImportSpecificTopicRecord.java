@@ -164,6 +164,10 @@ public class JsonSkatNctsImportSpecificTopicRecord extends JsonAbstractGrandFath
 	public void setTialk(String value) {  this.tialk = value; }
 	public String getTialk() { return this.tialk;}
 	
+	private String tivers = null;
+	public void setTivers(String value) {  this.tivers = value; }
+	public String getTivers() { return this.tivers;}
+	
 
 	/**
 	 * Used for java reflection in other classes

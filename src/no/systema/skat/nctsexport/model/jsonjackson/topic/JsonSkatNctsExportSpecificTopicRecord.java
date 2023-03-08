@@ -421,6 +421,10 @@ public class JsonSkatNctsExportSpecificTopicRecord extends JsonAbstractGrandFath
 	public void setThvpos(String value) {  this.thvpos = value; }
 	public String getThvpos() { return this.thvpos;}
 	
+	private String thvers = null;
+	public void setThvers(String value) {  this.thvers = value; }
+	public String getThvers() { return this.thvers;}
+	
 	private String thntk = null;
 	public void setThntk(String value) {  this.thntk = value; }
 	public String getThntk() { return this.thntk;}

@@ -158,7 +158,7 @@ public class SkatNctsExportHeaderController {
 		String avd = request.getParameter("avd");
 		String sign = request.getParameter("sign");
 		String dkxh_0035 = request.getParameter("dkxh_0035"); //test indicator (only in production)
-		
+		String thvers = request.getParameter("thvers"); //test indicator
 		
 		//Action (doFetch, doUpdate, doCreate)
 		logger.info("Action:" + action);
@@ -236,6 +236,7 @@ public class SkatNctsExportHeaderController {
 					}
 					//test indicator in validation field
 					recordToValidate.setDkxh_0035(dkxh_0035);
+					recordToValidate.setThvers(thvers);
 					
 				    //check for ERRORS
 					if(bindingResult.hasErrors()){
@@ -263,6 +264,7 @@ public class SkatNctsExportHeaderController {
 				            binder.bind(request);
 				            //test indicator in validation field
 				            jsonNctsExportSpecificTopicRecord.setDkxh_0035(dkxh_0035);
+				            jsonNctsExportSpecificTopicRecord.setThvers(thvers);
 				            //binder.registerCustomEditor(...); // if needed
 							logger.info("THNAS [after bind]: " + jsonNctsExportSpecificTopicRecord.getThnas());
 							logger.info("THTUID [after bind]: " + jsonNctsExportSpecificTopicRecord.getThtuid());
@@ -300,6 +302,7 @@ public class SkatNctsExportHeaderController {
 					            jsonNctsExportSpecificTopicRecord.setThtuid(tuid);
 					            //test indicator in validation field
 					            jsonNctsExportSpecificTopicRecord.setDkxh_0035(dkxh_0035);
+					            jsonNctsExportSpecificTopicRecord.setThvers(thvers);
 								
 							}else{
 								//Some kind of error occurred. Set the transaction as invalid...

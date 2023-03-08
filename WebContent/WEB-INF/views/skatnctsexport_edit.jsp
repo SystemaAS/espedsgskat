@@ -367,6 +367,9 @@
 				 			<td>	
 				 				<input type="text" class="inputTextReadOnly" readonly name="thvpos" id="thvpos" size="8" maxlength="8" value='${model.record.thvpos}'>
 			 				</td>
+			 				<td>	
+				 			   <input type="checkbox" name="thvers" id="thvers" value="5" <c:if test="${model.record.thvers == '5'}"> checked </c:if> ><font class="text14MediumBlue"><b>NCTS 5</b></font>	
+			 				</td>
 			 			</tr>
 		 					
 		 				<tr height="10"><td></td></tr>
