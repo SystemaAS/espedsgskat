@@ -418,16 +418,22 @@
 			            </table>
 			            </td>
 		            </tr>
-	            
-	            </table>
-            </td>
-            
-            	<td width="50%"class="text14" valign="top">
-				<table width="100%" align="center" border="0" cellspacing="1" cellpadding="0">
-					<tr>
-						<td valign="top">
-						<table border="0" cellspacing="1" cellpadding="0">
-						<tr>
+		            
+		            <tr height="10"><td>&nbsp;</td></tr>
+		            
+		            <tr >
+					 	<td >
+						<table width="100%" class="formFrameHeader" border="0" cellspacing="1" cellpadding="0">
+					 		<tr height="15">
+					 			<td class="text14White">&nbsp;&nbsp;Egen ref/ Angivelse Sted&nbsp;</td>
+			 				</tr>
+			            </table>
+			            </td>
+		            </tr>
+		            <tr >
+					 	<td>
+						<table width="100%" class="formFrame" border="0" cellspacing="2" cellpadding="1">
+				 		<tr>
 				            <td >&nbsp;</td>
 				            <td >
 				            		<font class="text16RedBold" >*</font><span title="tign">Egen ref./Angiv.sted</span>
@@ -449,11 +455,8 @@
 									
 									</span>	
 								</div>
-				            	</td>
-				            <td colspan="3" ><input type="text" class="inputTextMediumBlueMandatoryField" name="tign" id="tign" size="36" maxlength="35" value="${model.record.tign}"></td>
-			            </tr>
-						<tr>
-				            <td >&nbsp;</td>
+				            </td>
+				            <td ><input type="text" class="inputTextMediumBlueMandatoryField" name="tign" id="tign" size="36" maxlength="35" value="${model.record.tign}"></td>
 				            <td ><font class="text16RedBold" >*</font><span title="tignsk">Sprogkode</span>&nbsp;</td>
 				            <td >
 					            <select class="inputTextMediumBlueMandatoryField" name="tignsk" id="tignsk">
@@ -466,11 +469,52 @@
 									<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
 								</a>
 				            </td>
+		            	</tr>
+			            
+		 				<tr>
+				            <td >&nbsp;</td>
+				            <td ><span title="tiga1">Angiv.Sted Adresse</span>&nbsp;</td>
+				            <td colspan="3">
+					            <input type="text" class="inputTextMediumBlue" name="tiga1" id="tiga1" size="36" maxlength="68" value="${model.record.tiga1}">
+					        </td> 
+					    </tr>
+					    <tr> 
+					    	<td >&nbsp;</td>      
+				        	<td>
+				            	<span title="tiga3">Angiv.Sted By</span>&nbsp;
+				            </td>
+				            <td colspan="3">	
+				            	<input type="text" class="inputTextMediumBlue" name="tiga3" id="tiga3" size="36" maxlength="35" value="${model.record.tiga3}">
+							</td>
+				        </tr>
+			            <tr>
+				            <td >&nbsp;</td>
+				            <td ><span title="tiga2">Angiv.Sted Postnr</span>&nbsp;</td>
+				            <td colspan="3">
+					            <input type="text" class="inputTextMediumBlue" name="tiga2" id="tiga2" size="10" maxlength="17" value="${model.record.tiga2}">
+				                &nbsp;Landkode
+					            <select class="inputTextMediumBlue" name="tiga4" id="tiga4">
+				            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
+				 				  	<c:forEach var="country" items="${model.countryCodeList}" >
+		                              	 	<option value="${country.dkkd_kd}"<c:if test="${model.record.tiga4 == country.dkkd_kd}"> selected </c:if> >${country.dkkd_kd}</option>
+									</c:forEach> 
+								</select>
+				            </td>
 			            </tr>
+		            	<tr height="10"><td>&nbsp;</td></tr>
+			            </table>
+			            </td>
+		            </tr>
+	            </table>
+            	</td>
+            
+            	<td width="50%"class="text14" valign="top">
+				<table align="left" border="0" cellspacing="1" cellpadding="0">
+						
 			            <tr>
 				            <td >&nbsp;</td>
 				            <td ><font class="text16RedBold" >*</font><span title="titrnr">MRN-nr</span></td>
-				            <td colspan="3" ><input type="text" class="inputTextMediumBlueMandatoryField" name="titrnr" id="titrnr" size="36" maxlength="18" value="${model.record.titrnr}"></td>
+				            <td colspan="6" ><input type="text" class="inputTextMediumBlueMandatoryField" name="titrnr" id="titrnr" size="36" maxlength="18" value="${model.record.titrnr}"></td>
 			            </tr>
 			            <tr>
 				            <td >&nbsp;</td>
@@ -491,10 +535,12 @@
 			            <tr>
 				            <td >&nbsp;</td>
 				            <td ><span title="tialsk">Aft.lag.sted (kode)</span></td>
-				            <td ><input type="text" class="inputText" name="tialsk" id="tialsk" size="17" maxlength="17" value="${model.record.tialsk}"></td>
-				            <td ><span title="tialss">Sprogkode</span>&nbsp;</td>
 				            <td >
-					            <select class="selectMediumBlueE2" name="tialss" id="tialss">
+				            	<input type="text" class="inputText" name="tialsk" id="tialsk" size="17" maxlength="17" value="${model.record.tialsk}">
+				            </td>
+				            <td>	
+				            	<span title="tialss">Sprogkode</span>
+				                <select class="selectMediumBlueE2" name="tialss" id="tialss">
 					            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 					 				  	<c:forEach var="code" items="${model.ncts012_Sprak_CodeList}" >
 				                             <option value="${code.tkkode}"<c:if test="${model.record.tialss == code.tkkode}"> selected </c:if> >${code.tkkode}</option>
@@ -502,7 +548,7 @@
 								</select>
 								<a tabindex="-1" id="tialssIdLink" OnClick="triggerChildWindowLanguageCodes(this)">
 										<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
-									</a>
+								</a>
 				            </td>
 			            </tr>
 			            <tr>
@@ -525,13 +571,15 @@
 			            <tr>
 				            <td >&nbsp;</td>
 				            <td ><font class="text16RedBold" >*</font><span title="titsb">Best.toldsted</span></td>
-				            <td ><input type="text" class="inputTextMediumBlueMandatoryField" name="titsb" id="titsb" size="10" maxlength="8" value="${model.record.titsb}">
+				            <td >
+				            	<input type="text" class="inputTextMediumBlueMandatoryField" name="titsb" id="titsb" size="10" maxlength="8" value="${model.record.titsb}">
 				            		<a id="titsbIdLink" OnClick="triggerChildWindowTullkontorCodes(this)">
 				            			<img style="cursor:pointer;" src="resources/images/find.png" width="14px" height="14px" border="0" alt="search" >
 				            		</a>
 				            </td>
-				            <td ><span title="tiskb">Sprogkode</span>&nbsp;</td>
-				            <td >
+				            <td>
+				            	<span title="tiskb">Sprogkode</span>
+				            
 					            <select class="selectMediumBlueE2" name="tiskb" id="tiskb">
 					            		<option value="">-<spring:message code="systema.skat.html.dropdown.select"/>-</option>
 					 				  	<c:forEach var="code" items="${model.ncts012_Sprak_CodeList}" >
@@ -540,7 +588,7 @@
 								</select>
 				 				<a tabindex="-1" id="tiskbIdLink" OnClick="triggerChildWindowLanguageCodes(this)">
 										<img style="cursor:pointer;vertical-align: middle;" src="resources/images/find.png" width="16px" height="16px" border="0" alt="search" >
-									</a>
+								</a>
 				            </td>
 			            </tr>
 			            <tr>
@@ -559,13 +607,11 @@
 			 				    <c:when test="${ model.record.tist == 'F' || model.record.tist == 'M' || empty model.record.tist}">
 			 				    <td class="text9BlueGreen" valign="bottom"  >
 				 				    	<input class="inputFormSubmit" type="submit" name="submit" id="submit" onclick="javascript: form.action='skatnctsimport_edit.do';" value='<spring:message code="systema.skat.ncts.import.createnew.submit"/>'/>
-				 				</td>    	
 				 				    	&nbsp;&nbsp;
 				 				    	<c:if test="${not empty model.record.titdn}">
-					 				    	<td colspan="2" class="text9BlueGreen" valign="bottom"  >
-					 				    		<input tabindex=-2 class="inputFormSubmit" type="submit" name="send" onclick="javascript: form.action='skatnctsimport_send.do';" value='<spring:message code="systema.skat.ncts.import.createnew.send"/>'/>
-					 				    	</td>	
-				 				    	</c:if>
+					 				    	<input tabindex=-2 class="inputFormSubmit" type="submit" name="send" onclick="javascript: form.action='skatnctsimport_send.do';" value='<spring:message code="systema.skat.ncts.import.createnew.send"/>'/>
+					 				    </c:if>
+				 				</td>    	
 			 				    </c:when>
 			 				    <c:otherwise>
 				 				    <td colspan="2" class="text9BlueGreen" valign="bottom"  >
@@ -574,11 +620,11 @@
 			 				    </c:otherwise>	
 		 				    </c:choose>
 				        </tr>
-				        </table>
-				        </td>
-			        </tr>
+		        </table>
+		        </td>
+		        </tr>
 			        
-	            </table>
+            </table>
             </td>
 		</tr>
 

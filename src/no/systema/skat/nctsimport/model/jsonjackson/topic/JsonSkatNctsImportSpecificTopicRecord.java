@@ -168,6 +168,24 @@ public class JsonSkatNctsImportSpecificTopicRecord extends JsonAbstractGrandFath
 	public void setTivers(String value) {  this.tivers = value; }
 	public String getTivers() { return this.tivers;}
 	
+	
+	private String tiga1 = null;
+	public void setTiga1(String value) {  this.tiga1 = value; }
+	public String getTiga1() { return this.tiga1;}
+	
+	private String tiga2 = null;
+	public void setTiga2(String value) {  this.tiga2 = value; }
+	public String getTiga2() { return this.tiga2;}
+	
+	private String tiga3 = null;
+	public void setTiga3(String value) {  this.tiga3 = value; }
+	public String getTiga3() { return this.tiga3;}
+	
+	private String tiga4 = null;
+	public void setTiga4(String value) {  this.tiga4 = value; }
+	public String getTiga4() { return this.tiga4;}
+	
+	
 
 	/**
 	 * Used for java reflection in other classes
