@@ -185,6 +185,58 @@ public class SkatNctsImportHeaderLoggingController {
 			
 	}	
 	
+	/**
+	 * 
+	 * @param session
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping(value="skatncts_import_renderXml.do", method={ RequestMethod.GET })
+	public ModelAndView doSkatNctsImportRenderXml(HttpSession session, HttpServletRequest request, HttpServletResponse response){
+		logger.info("Inside doSkatNctsImportRenderXml...");
+		SystemaWebUser appUser = (SystemaWebUser)session.getAttribute(AppConstants.SYSTEMA_WEB_USER_KEY);
+		
+		if(appUser==null){
+			return this.loginView;
+			
+		}else{
+			
+			//appUser.setActiveMenu(SystemaWebUser.ACTIVE_MENU_SIGN_PKI);
+			session.setAttribute(SkatConstants.ACTIVE_URL_RPG_SKAT, SkatConstants.ACTIVE_URL_RPG_INITVALUE); 
+			String filePath = request.getParameter("fp");
+			
+			if(filePath!=null && !"".equals(filePath)){
+                String absoluteFilePath = filePath;
+            		if(!filePath.startsWith("/")){
+            			absoluteFilePath = "/" + absoluteFilePath;
+            		}
+            
+        		if(!new IPAddressValidator().isValidAbsoluteFilePathFor_RenderFile(absoluteFilePath)){
+                	return (null);
+                }else{
+	                response.setContentType(AppConstants.HTML_CONTENTTYPE_TEXTXML);
+	                //--> with browser dialogbox: response.setHeader ("Content-disposition", "attachment; filename=\"edifactPayload.txt\"");
+	                response.setHeader ("Content-disposition", "filename=\"payload.txt\"");
+	                
+	                logger.info("Start flushing file payload...");
+	                //send the file output to the ServletOutputStream
+	                try{
+	                		payloadContentFlusher.flushServletOutput(response, absoluteFilePath);
+	                		
+	                	
+	                }catch (Exception e){
+	                		e.printStackTrace();
+	                		payloadContentFlusher.flushServletOutput(response, this.stackTraceUtil.printStackTrace(e).getBytes());
+	                }
+                }
+            }
+			//this to present the output in an independent window
+            return(null);
+			
+		}
+			
+	}	
+	
 	
 	/**
 	 * 
