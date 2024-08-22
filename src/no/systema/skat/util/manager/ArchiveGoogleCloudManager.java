@@ -341,21 +341,29 @@ public class ArchiveGoogleCloudManager {
 				logger.warn("Saas!");
 				logger.warn("local url:" + url);
 				if(!new File(url).exists()){
-					logger.info("File does not exists locally!...going to google cloud ...");
+					logger.warn("File does not exists locally!...going to google cloud ...");
 					String strToReplace = SAAS_ROOT_PATH_ON_FILE_SYSTEM;
 					if(url.startsWith(SAAS_ROOT_PATH_ON_FILE_SYSTEM_UPPERCASE)) { strToReplace = SAAS_ROOT_PATH_ON_FILE_SYSTEM_UPPERCASE; }
+					
+					//NEW Aug 2024 for A25
+					/*retval = GOOGLE_BUCKET_PREFIX_URL + this.adjustPdfApiSuffix(url, strToReplace);
+					logger.warn("api url:" + retval);
+					*/
 					
 					if(GOOGLE_BUCKET_PREFIX_URL.toLowerCase().contains(this.GOOGLE)) {
 						//do it
 						retval = GOOGLE_BUCKET_PREFIX_URL + this.adjustPdfSuffix(url, strToReplace);
-						logger.info("cloud url:" + retval);
+						logger.warn("cloud url:" + retval);
 						
 					}else if(GOOGLE_BUCKET_PREFIX_URL.toLowerCase().contains(this.SYSTEMA_HOST_IP) || GOOGLE_BUCKET_PREFIX_URL.toLowerCase().contains(this.SYSTEMA_HOST_DNS)) {
 						//implement other API in case the direct google API is not used. Probably an inhouse API (Vidars)
 						retval = GOOGLE_BUCKET_PREFIX_URL + this.adjustPdfApiSuffix(url, strToReplace);
-						logger.info("api url:" + retval);
+						logger.warn("api url:" + retval);
 						
 					}
+					
+				}else {
+					logger.warn("File exists! " + url);
 				}
 				
 			}else if(url.toLowerCase().startsWith(LOCALHOST_ROOT_PATH_ON_FILE_SYSTEM) && (appUser.getServletHostWithoutHttpPrefix().equals("localhost") || appUser.getServletHostWithoutHttpPrefix().equals("gw.systema.no"))) {
